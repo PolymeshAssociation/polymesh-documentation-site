@@ -406,7 +406,7 @@ Ok, now Alice has set up her portfolio for trading, gave a green light to SafeHa
       "ACME": {
           "from": {
               "identity": aliceDid,
-              "id": "tradingFolio.id.toString(10)
+              "id": tradingFolio.id.toString(10)
           }
       },
       "DEEPUSD": {
@@ -444,7 +444,7 @@ const legs = [
             // This is the view from SafeHands. What NextDaq see is a string like "0x55678..."
             "identity": aliceDid,
             // This is the view from SafeHands. What NextDaq see is a string like "1"
-            "id": "tradingFolio.id.toString(10)
+            "id": tradingFolio.id.toString(10)
         },
         "to": {
             // This is the view from OnTrust. What NextDaq see is a string like "0x39987..."
@@ -574,7 +574,7 @@ It returns previously-known information about `aliceOrderId` in the shape of:
     "amount": new BigNumber("1000"),
     "from": {
         "identity": aliceDid,
-        "id": "tradingFolio.id
+        "id": tradingFolio.id
     },
     "to": {
         "identity": safeHandsDid,

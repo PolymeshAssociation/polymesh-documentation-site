@@ -5,10 +5,7 @@ description: Discover Polymesh's compliant on-chain solution
 slug: /settlement/transferring-assets
 ---
 
-import OverviewBox from '../../src/components/OverviewBox';
-import ActionCard from '../../src/components/ActionCard';
-import ActionCardWrapper from '../../src/components/ActionCard/ActionCardWrapper';
-import OverviewVideoBox from '../../src/components/OverviewVideoBox';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <OverviewVideoBox title="Settlement & Custody" videoId="8sgIgPBdO7U">
 
@@ -34,7 +31,7 @@ What's inside?
 
 ---
 
-<OverviewBox title="Overview: Settlement and custody" linkHref="/settlement/settlement-process" linkText="Overview" imgSrc="/img/tmpAssets/illu-p-screen.svg">
+<OverviewBox title="Overview: Settlement and custody" linkHref="/settlement/settlement-process" linkText="Overview" imgSrc={useBaseUrl("/img/tmpAssets/illu-p-screen.svg")}>
 
 Discover how Polymesh handles multiparty transactions, instructions, KYC requirements, affirmations, and atomic executions.
 
@@ -62,7 +59,7 @@ Explore an example scenario. Building on the concepts from the introduction, let
   ></ActionCard>
 </ActionCardWrapper>
 
-<OverviewBox title="Dive into further resources" linkHref="https://docs.polymesh.live/polymesh/index.html" linkText="Explore" imgSrc="/img/tmpAssets/illu-p-code.svg">
+<OverviewBox title="Dive into further resources" linkHref="https://docs.polymesh.live/polymesh/index.html" linkText="Explore" imgSrc={useBaseUrl("/img/tmpAssets/illu-p-code.svg")}>
 
 A closer look at the detailed technical documentation to dive deeper?
 

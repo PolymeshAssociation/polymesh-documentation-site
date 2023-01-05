@@ -7,8 +7,7 @@ description: ''
 import OverviewBox from '../src/components/OverviewBox';
 import ActionCard from '../src/components/ActionCard';
 import ActionCardWrapper from '../src/components/ActionCard/ActionCardWrapper';
-// import LargeTableCardWrapper from '../src/components/LargeTableCardWrapper';
-// import LargeTableCard from '../src/components/LargeTableCard';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 The Polymesh Documentation site is the perfect place to start discovering the Polymesh universe.
 
@@ -31,7 +30,7 @@ The menu on the left organises the content and the exercises in the suggested ch
   title="Introduction"
   linkHref="/introduction/why-polymesh"
   linkText="Why Polymesh?"
-  imgSrc="/img/tmpAssets/illu-p-screen.svg"
+  imgSrc={useBaseUrl('/img/tmpAssets/illu-p-screen.svg')}
 >
   <p>
     Discover how Polymesh addresses compliance, identity, and governance. Learn
@@ -114,7 +113,7 @@ Service providers perform important services that business users rely on. Explor
   title="API Reference"
   linkHref="https://github.com/PolymeshAssociation/polymesh-sdk/wiki"
   linkText="Explore"
-  imgSrc="/img/tmpAssets/illu-p-code.svg"
+  imgSrc={useBaseUrl('/img/tmpAssets/illu-p-code.svg')}
   external="true"
 >
   <p>

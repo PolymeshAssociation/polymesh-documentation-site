@@ -19,8 +19,11 @@ const vsDarkTheme = require('prism-react-renderer/themes/vsDark');
 const config = {
   title: 'Polymesh Documentation Site',
   tagline: 'A blockchain for securities',
-  url: 'https://developers.polymesh.network/',
-  baseUrl: '/',
+  // url: 'https://developers.polymesh.network/',
+  // url: 'https://docs.polymesh.network/',
+  url: 'https://polymeshassociation.github.io/',
+  // baseUrl: '/',
+  baseUrl: '/polymesh-documentation-site',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/polymesh-symbol.svg',
@@ -30,7 +33,7 @@ const config = {
   organizationName: 'polymeshassociation', // Usually your GitHub org/user name.
   projectName: 'polymesh-documentation-site', // Usually your repo name.
   // deploymentBranch: '', // The name of the branch to deploy the static files to.
-
+  trailingSlash: true,
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
@@ -46,12 +49,13 @@ const config = {
       ({
         docs: {
           path: 'docs',
-          // routeBasePath: '/i-made-a-route', // Defaults to "docs"
+          // routeBasePath: '/docs', // Defaults to "docs"
           // sidebarPath: require.resolve('./sidebars.js'), // Defaults to sidebars.js
 
-          // editUrl:
-          //   'https://github.com/PolymeshAssociation/polymesh-documentation-site/edit/master',
+          editUrl:
+            'https://github.com/PolymeshAssociation/polymesh-documentation-site/edit/develop',
         },
+        blog: false, // disable the blog plugin
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -175,7 +179,11 @@ const config = {
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Polymesh Association, All Right Reserved`,
-        logo: { width: '150px', alt: 'Polymesh Logo', src: 'img/logo.svg' },
+        logo: {
+          width: '150px',
+          alt: 'Polymesh Logo',
+          src: '/img/logo.svg',
+        },
       },
       prism: {
         theme: vsDarkTheme,
