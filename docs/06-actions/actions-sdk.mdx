@@ -1,0 +1,434 @@
+---
+sidebar_position: 4
+title: With the SDK
+description: Corporate actions with the Polymesh SDK
+---
+
+In the previous exercise, after a good quarter, ACME distributed a simple dividend, and Alice collected her share of the dividend tokens, in this case STBL.
+
+The Polymesh Dashboard is constructed with the SDK. The SDK supports every process you see there, and more. Use the SDK to build integrations with internal systems. Fortunately, the SDK's methods are intelligible when you know what it is you intend to do.
+
+## Agent permissioning
+
+By default, the corporate actions (CA) agent is the token owner, or in our example ACME, represented by `apiCeo`:
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const signingManagerCeo: LocalSigningManager = await LocalSigningManager.create(
+  {
+    accounts: [
+      {
+        mnemonic: 'word31 word32 ...',
+      },
+    ],
+  }
+);
+const apiCeo: Polymesh = await Polymesh.connect({
+  nodeUrl: 'wss://testnet-rpc.polymesh.live', // or your preferred node
+  signingManager: signingManagerCeo,
+});
+const acme: Identity = await apiCeo.getSigningIdentity();
+const acmeDid: string = acme.did;
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+
+```js
+const signingManagerCeo = await LocalSigningManager.create({
+  accounts: [
+    {
+      mnemonic: 'word31 word32 ...',
+    },
+  ],
+});
+const apiCeo = await Polymesh.connect({
+  nodeUrl: 'wss://testnet-rpc.polymesh.live', // or your preferred node
+  signingManager: signingManagerCeo,
+});
+const acme = await apiCeo.getSigningIdentity();
+const acmeDid = acme.did;
+```
+
+</TabItem>
+</Tabs>
+
+Nonetheless, we are going to set up a separate account. So let's prepare it:
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const signingManagerCaAgent: LocalSigningManager =
+  await LocalSigningManager.create({
+    accounts: [
+      {
+        mnemonic: 'word61 word62 ...',
+      },
+    ],
+  });
+const apiCaAgent: Polymesh = await Polymesh.connect({
+  nodeUrl: 'wss://testnet-rpc.polymesh.live', // or your preferred node
+  signingManager: signingManagerCaAgent,
+});
+const caAgent: Identity = await apiCaAgent.getSigningIdentity();
+const caAgentDid: string = caAgent.did;
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+
+```js
+const signingManagerCaAgent = await LocalSigningManager.create({
+  accounts: [
+    {
+      mnemonic: 'word61 word62 ...',
+    },
+  ],
+});
+const apiCaAgent = await Polymesh.connect({
+  nodeUrl: 'wss://testnet-rpc.polymesh.live', // or your preferred node
+  signingManager: signingManagerCaAgent,
+});
+const caAgent = await apiCaAgent.getSigningIdentity();
+const caAgentDid = caAgent.did;
+```
+
+</TabItem>
+</Tabs>
+
+In our example, Alice the CEO is the one that is going to appoint the CA agent on the ACME security token.
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const acmeAsset: Asset = await apiCeo.assets.getAsset({
+  ticker: 'ACME',
+});
+const permissions: Permissions = acmeAsset.permissions;
+const inviteAgentQueue: TransactionQueue<void> = await permissions.inviteAgent({
+  target: caAgentDid,
+  permissions: {
+    transactions: {
+      type: PermissionType.Include,
+      values: [
+        ModuleName.CorporateAction,
+        ModuleName.CorporateBallot,
+        ModuleName.CapitalDistribution,
+      ],
+    },
+  },
+});
+await inviteAgentQueue.run();
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+
+```js
+const acmeAsset = await apiCeo.assets.getAsset({
+  ticker: 'ACME',
+});
+const permissions = acmeAsset.permissions;
+const inviteAgentQueue = await permissions.inviteAgent({
+  target: caAgentDid,
+  permissions: {
+    transactions: {
+      type: 'Include',
+      values: ['CorporateAction', 'CorporateBallot', 'CapitalDistribution'],
+    },
+  },
+});
+await inviteAgentQueue.run();
+```
+
+</TabItem>
+</Tabs>
+
+Is that all? No, as always, the target has to accept the responsibility, which is encapsulated in an authorisation request. So back to the `apiCaAgent` computer:
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const caAuthorizations: AuthorizationRequest[] =
+  await caAgent.authorizations.getReceived({
+    type: AuthorizationType.BecomeAgent,
+    includeExpired: false,
+  });
+const acmeCaAuthorization: AuthorizationRequest = caAuthorizations.find(
+  (pendingAuthorization: AuthorizationRequest) => {
+    return pendingAuthorization.issuer.did === acmeDid;
+  }
+);
+const acceptQueue: TransactionQueue<void> = await acmeCaAuthorization.accept();
+await acceptQueue.run();
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+
+```js
+const caAuthorizations = await caAgent.authorizations.getReceived({
+  type: 'BecomeAgent',
+  includeExpired: false,
+});
+const acmeCaAuthorization = caAuthorizations.find((pendingAuthorization) => {
+  return pendingAuthorization.issuer.did === acmeDid;
+});
+const acceptQueue = await acmeCaAuthorization.accept();
+await acceptQueue.run();
+```
+
+</TabItem>
+</Tabs>
+
+With this done, `apiCaAgent` now allows the agent to act as ACME's corporate actions agent.
+
+If ACME wanted to remove the CA agent, then, it would need a call to `acmeAsset.corporateActions.removeAgent()`.
+
+## Checkpointing
+
+As the dividend is distributed as per each investor's holding, Polymesh needs a set value for everyone. That's the role of a checkpoint. Let's create it before the company announces publicly that it will distribute a dividend. With `apiCeo`:
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const checkpointQueue: TransactionQueue<Checkpoint> =
+  await acmeAsset.checkpoints.create();
+const checkpoint: Checkpoint = await checkpointQueue.run();
+const preDividendCheckpointId: string = checkpoint.id.toString(10);
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+
+```js
+const checkpointQueue = await acmeAsset.checkpoints.create();
+const checkpoint = await checkpointQueue.run();
+const preDividendCheckpointId = checkpoint.id.toString(10);
+```
+
+</TabItem>
+</Tabs>
+
+## Prefunding
+
+Here we assume that the CA agent already has been funded the $5000 tokens that they will distribute as part of the dividend. If you are working on the Testnet, you can use STBL tokens as a placeholder for dollars, for instance. To get STBL, you can head to the Token Studio and participate in STBL's free Security Token Offering, in effect tap its faucet.
+
+For the purpose of this exercise, we assume that the CA agent has been funded on a `NumberedPortfolio` created for the purposes of managing ACME's corporate actions.
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const acmeCAFolioQueue: TransactionQueue<NumberedPortfolio> =
+  await apiCaAgent.identities.createPortfolio({
+    name: 'ACME Corporate Actions',
+  });
+const acmeCAFolio: NumberedPortfolio = await acmeCAFolioQueue.run();
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+
+```js
+const acmeCAFolioQueue = await apiCaAgent.identities.createPortfolio({
+  name: 'ACME Corporate Actions',
+});
+const acmeCAFolio = await acmeCAFolioQueue.run();
+```
+
+</TabItem>
+</Tabs>
+
+<!-- My STBL STO https://app.polymesh.live/?rpc=wss%3A%2F%2Falcyone-rpc.polymesh.live#/explorer/query/0xfd37d9b1fb481bcb01cacfc6ec1ca3f417df05f80a65fead4fa1990686302af2 -->
+
+## Dividend action preparing
+
+With the checkpoint done and the funds allocated, it is now time to prepare the action, on the CA agent's computer, with `apiCaAgent`. Because we are on another computer, we need to reinstantiate some elements:
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const acmeAsset: Asset = await apiCaAgent.assets.getAsset({
+  ticker: 'ACME',
+});
+const preDividendCheckpoint: Checkpoint = await acmeAsset.checkpoints.getOne({
+  id: new BigNumber(preDividendCheckpointId),
+});
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+
+```js
+const acmeAsset = await apiCaAgent.assets.getAsset({
+  ticker: 'ACME',
+});
+const preDividendCheckpoint = await acmeAsset.checkpoints.getOne({
+  id: new BigNumber(preDividendCheckpointId),
+});
+```
+
+</TabItem>
+</Tabs>
+
+With that, we can create the action:
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const distributions: Distributions = acmeAsset.corporateActions.distributions;
+const dividendActionQueue: TransactionQueue<DividendDistribution> = await distributions.configureDividendDistribution({
+    "description": "2022 Third Quarter",
+    "declarationDate": new Date(), // Here declared now, but can be any date.
+    "checkpoint": preDividendCheckpoint, // Good thing we created it. If not, it would create it automatically.
+    "paymentDate": new Date(2022, 8, 2, 23, 59), // Or whichever point at which ACME holders can claim their dividend.
+    "originPortfolio": acmeCAFolio, // Another well prepared item.
+    "currency": "STBL",
+    "maxAmount": new BigNumber("5000"), // This determines what will be locked.
+    "perShare": new BigNumber("0.25"), // Unlike with the Token Studio, you have to calculate it here.
+    "expiryDate": new Date(2023, 4, 1, 23, 59), // Sufficiently far in the future that holders have time to claim.
+    "targets": {
+        identities: [], // Nobody is excluded, i.e. everyone can claim a dividend.
+        treatment: TargetTreatment.Exclude;
+    },
+    "taxWithholdings": [], // Let's keep it simple.
+});
+const dividendAction: DividendDistribution = await dividendActionQueue.run();
+const dividendActionId: string = dividendAction.id.toString(10);
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+
+```js
+const distributions = acmeAsset.corporateActions.distributions;
+const dividendActionQueue = await distributions.configureDividendDistribution({
+    "description": "2022 Third Quarter",
+    "declarationDate": new Date(), // Here declared now, but can be any date.
+    "checkpoint": preDividendCheckpoint, // Good thing we created it. If not, it would create it automatically.
+    "paymentDate": new Date(2022, 8, 2, 23, 59), // Or whichever point at which ACME holders can claim their dividend.
+    "originPortfolio": acmeCAFolio, // Another well prepared item.
+    "currency": "STBL",
+    "maxAmount": new BigNumber("5000"), // This determines what will be locked.
+    "perShare": new BigNumber("0.25"), // Unlike with the Token Studio, you have to calculate it here.
+    "expiryDate": new Date(2023, 4, 1, 23, 59), // Sufficiently far in the future that holders have time to claim.
+    "targets": {
+        identities: [], // Nobody is excluded, i.e. everyone can claim a dividend.
+        treatment: TargetTreatment.Exclude;
+    },
+    "taxWithholdings": [], // Let's keep it simple.
+});
+const dividendAction = await dividendActionQueue.run();
+const dividendActionId = dividendAction.id.toString(10);
+```
+
+</TabItem>
+</Tabs>
+
+For the avoidance of doubt, dividend claimants can collect their dividends as per their holding of ACME at the time of the checkpoint, not at the time they claim the dividend.
+
+## Dividend claiming
+
+Alice the individual is one of the ACME holders, and as such, at, and after, the payment date, she is entitled to withdraw her dividend. If she has not done it before, she needs to publish an investor uniqueness claim with regard to STBL. With that, she first needs to reinstantiate the dividend action in the context of her `apiAlice`:
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const acmeAsset: Asset = await apiAlice.assets.getAsset({
+  ticker: 'ACME',
+});
+const acmeDividendWithDetails: DistributionWithDetails =
+  await acmeAsset.corporateActions.distributions.getOne({
+    id: new BigNumber(dividendActionId),
+  });
+const acmeDividend: DividendDistribution = acmeDividendWithDetails.distribution;
+const claimQueue: TransactionQueue<void> = await acmeDividend.claim(); // From the context of Alice, which is why we used apiAlice
+await claimQueue.run();
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+
+```js
+const acmeAsset = await apiAlice.assets.getAsset({
+  ticker: 'ACME',
+});
+const acmeDividendWithDetails =
+  await acmeAsset.corporateActions.distributions.getOne({
+    id: new BigNumber(dividendActionId),
+  });
+const acmeDividend = acmeDividendWithDetails.distribution;
+const claimQueue = await acmeDividend.claim(); // From the context of Alice, which is why we used apiAlice
+await claimQueue.run();
+```
+
+</TabItem>
+</Tabs>
+
+With that, Alice should now have her STBL tokens in her default portfolio.
+
+## Reclaiming unclaimed funds
+
+What if there are some funds left at the expiry? This can happen if a recipient does not care about it or lost a private key, for instance. Instead of leaving stranded funds indefinitely, the CA agent can reclaim them. Since this would happen at a later date, the agent has to reinstantiate the action like Alice did, but in the context of `apiCaAgent`:
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+
+
+const acmeDividend: DividendDistribution = ...; // Just like Alice did
+const reclaimQueue: TransactionQueue<void> = await acmeDividend.reclaimFunds();
+await reclaimQueue.run();
+```
+
+</TabItem>
+
+<TabItem value="js" label="JavaScript">
+
+```js
+
+const acmeDividend = ...; // Just like Alice did
+const reclaimQueue = await acmeDividend.reclaimFunds();
+await reclaimQueue.run();
+
+```
+
+</TabItem>
+</Tabs>
+
+For the avoidance of doubt, the CA agent that can reclaim is the agent that created the action. If the token owner changed CA agent in the mean time, it is the old CA agent who can reclaim.
+
+## Conclusion
+
+We saw that the lifecycle of a dividend corporate action includes:
+
+- Appointing a corporate actions agent.
+- Creating a checkpoint, either explicitly, or implicitly.
+- Collecting and placing the dividend funds in one portfolio of the CA agent's.
+- Publishing the dividen action itself.
+- Letting the recipients claim on their own.
+- Reclaiming any unclaimed funds at expiry.
+
+## Links
+
+- SDK: https://github.com/PolymeshAssociation/polymesh-sdk/wiki

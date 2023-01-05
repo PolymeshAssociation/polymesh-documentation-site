@@ -1,0 +1,45 @@
+.overview-box-wrapper {
+  display: flex;
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+}
+
+.content-floating {
+  padding-right: 5%;
+  width: 100%;
+  max-width: unset;
+}
+
+.img-floating {
+  float: right;
+  padding: 0 3%;
+  width: 41% !important;
+  margin-top: 50px;
+}
+
+.action-link {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link-img {
+  display: inline-block !important;
+  margin-bottom: -3px;
+  margin-left: 10px;
+}
+
+.content-left {
+  width: 60%;
+  padding-right: 5%;
+  width: 100%;
+  max-width: unset;
+}
+
+.img-right-container {
+  width: 40%;
+  max-width: 350px;
+  width: 100%;
+  max-width: unset;
+}

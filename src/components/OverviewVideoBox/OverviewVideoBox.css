@@ -1,0 +1,19 @@
+.overview-video-box-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ededed;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  margin-top: 20px;
+}
+
+.content-wrapper {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.video-wrapper {
+  width: 100%;
+}

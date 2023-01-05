@@ -1,0 +1,676 @@
+---
+sidebar_position: 6
+title: With the SDK
+description: Originating assets with the Polymesh SDK
+slug: /originate/sdk
+---
+
+In the previous exercise, we originated a simple asset, ACME Corp equity. As we did so, we discovered that there are many more **configurable properties** available to address common business requirements.
+
+The Polymesh Dashboard is constructed with the SDK. The SDK supports every process you see there, and more. Use the SDK to build integrations with internal systems. Fortunately, the SDK's methods are intelligible when you know what it is you intend to do.
+
+:::tip
+
+If you want to take a closer look at the SDK, a peek into the
+[SDK documentation](https://github.com/PolymeshAssociation/polymesh-sdk/wiki) is recommendable.
+
+:::
+
+The SDK is a comprehensive set of business-level methods for inspecting and interacting with the Polymesh network using either Javascript or Typescript, at the developer's discretion.
+
+You can find it here [@polymeshassociation/polymesh-sdk](https://www.npmjs.com/package/@polymeshassociation/polymesh-sdk)
+
+## Preconditions
+
+If you went through the Quick Start, we can assume that you have created an account (a public-private key pair) on the Polymesh Testnet, that you associated it with an account, and that you credited it with POLYX. We shall call this personal signing key `aliceKey`, and the personal account it represents `alice`.
+
+Here, we are going to follow along the Token Studio Dashboard exercise, and do the same _mistake_. whereby she creates the asset with her personal account, and which we will eventually fix. The credible simple reason why Alice created the asset with her personal account is that her and her co-founders wanted to act fast so as to have the ticker available before getting the company through CDD.
+
+To recap:
+
+- Alice, ACME's CEO and acting agent, already has an **individual** Polymesh account, named `alice`, tied to a primary private key named `aliceKey`;
+- `aliceKey`'s private key is based on the `"word1 word2 ..."` mnemonic;
+- A Polymesh client has been [instantiated](https://github.com/PolymeshAssociation/polymesh-sdk/wiki/api.client.Polymesh.Polymesh#connect) by Alice so she can do the next actions:
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const signingManagerAlice: LocalSigningManager =
+  await LocalSigningManager.create({
+    accounts: [
+      {
+        mnemonic: 'word1 word2 ...',
+      },
+    ],
+  });
+
+const apiAlice: Polymesh = await Polymesh.connect({
+  nodeUrl: 'wss://testnet-rpc.polymesh.live', // or your preferred node
+  signingManager: signingManagerAlice,
+});
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const signingManagerAlice = await LocalSigningManager.create({
+  accounts: [
+    {
+      mnemonic: 'word1 word2 ...',
+    },
+  ],
+});
+
+const apiAlice = await Polymesh.connect({
+  nodeUrl: 'wss://testnet-rpc.polymesh.live', // or your preferred node
+  signingManager: signingManagerAlice,
+});
+```
+
+</TabItem>
+
+</Tabs>
+
+## Ticker reservation
+
+Before creating the asset proper, Alice needs to [reserve](https://github.com/PolymeshAssociation/polymesh-sdk/wiki/api.client.Assets.Assets#reserveticker) the ACME ticker so that it is not squatted while the founders incorporate the company. Think of it on the same level as grabbing your `.com` domain as early as possible:
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const reservationQueue: TransactionQueue<TickerReservation> =
+  await apiAlice.assets.reserveTicker({
+    ticker: 'ACME',
+  });
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const reservationQueue = await apiAlice.assets.reserveTicker({
+  ticker: 'ACME',
+});
+```
+
+</TabItem>
+</Tabs>
+
+The `TransactionQueue` type is just that, a queue. The transaction(s) in it have not been launched. Notice that:
+
+- It is a generic type parameterised with `TickerReservation`. This means that, eventually, the queue yields an instance of `TickerReservation`;
+- The constructor of `TransactionQueue` expects a [`context`](https://developers.polymath.network/polymesh-sdk-api-reference/classes/transactionqueue#constructor); it is in this `context` object that `apiAlice` is referenced so it is understood that `aliceKey` is the private key to use for signing;
+- Each transaction in the queue has its own status;
+- The queue itself has its own [status](https://developers.polymath.network/polymesh-sdk-api-reference/classes/transactionqueue#status).
+
+:::info
+
+Of note, the reservation cost, at the time of writing, is of **2,500 POLYX**, before network fees.
+
+:::
+
+Let's [run](https://developers.polymath.network/polymesh-sdk-api-reference/classes/transactionqueue#run) it.
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const reservation: TickerReservation = await reservationQueue.run();
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const reservation = await reservationQueue.run();
+```
+
+</TabItem>
+</Tabs>
+
+It is at this point that the necessary signatures are collected for the transactions. `apiAlice` was created straight with the mnemonic, so the signature will be affixed automatically. However, if this was taking place in the browser, for instance in the Token Studio Dashboard and with the Polymesh Wallet extension, then there is a possibility that Alice will refuse to sign when prompted.
+
+:::tip
+
+You would need to `try .run() catch` it for errors. Here, we opted for clarity and omitted this _detail_.
+
+:::
+
+Also note that with `await reservationQueue.run()` we patiently wait for the queue to finalise all its transactions. However, a `TransactionQueue` can provide intermediate information about its changing status and that of its component transactions. If this is of interest to you, you can pass callbacks to [`onStatusChange`](https://developers.polymath.network/polymesh-sdk-api-reference/classes/transactionqueue#onstatuschange) and [`onTransactionStatusChange`](https://developers.polymath.network/polymesh-sdk-api-reference/classes/transactionqueue#ontransactionstatuschange).
+
+At this stage, Alice owns the reservation. You can confirm it with the following:
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const alice: Identity = await apiAlice.getSigningIdentity();
+const details: TickerReservationDetails = await reservation.details();
+const owner: Identity = details.owner;
+assert(owner.did === alice.did);
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const alice = await apiAlice.getSigningIdentity();
+const { owner } = await reservation.details();
+assert(owner.did === alice.did);
+```
+
+</TabItem>
+</Tabs>
+
+Something is not immediately apparent from the few lines of code above. It is nonetheless important to point it out.
+
+When we created `apiAlice` with `await Polymesh.connect()`, we passed a `signingManager` which was created with an `accountMnemonic` that allowed it to recreate the `aliceKey` private key. On chain the public key is expressed in [SS58 format](https://polkadot.js.org/docs/keyring/start/ss58/) and referred to as an "address" or "account". The account is then is associated with an identity, whether as a primary key, like here, or a secondary one. When the private key is used to sign a transaction, it is the **associated identity** that will be considered to be the one doing the action.
+
+This associated account information is **not embedded in the private key**. It is an association that is stored on the blockchain, may change in the future, and as such, it needs to be retrieved to be known.
+
+:::info
+
+So when we wrote `await` in `await apiAlice.getSigningIdentity()`, this is no accident. We indeed need to do a round trip to the blockchain to know what account our public key is associated with.
+
+:::
+
+## Ticker creation
+
+Now that the ticker is reserved, it is time to issue the asset.
+
+Oh wait! The reservation may have happened some time ago. After all a reservation remains valid for 60 days, for instance. And your `const reservation: TickerReservation` instance might no longer be in memory.
+
+How do you get it back? Use [`assets.getTickerReservation`](https://github.com/PolymeshAssociation/polymesh-sdk/wiki/api.client.Assets.Assets#gettickerreservation):
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const signingManagerAlice: LocalSigningManager = await LocalSigningManager.create({...});
+const apiAlice: Polymesh = await Polymesh.connect({...});
+const reservation: TickerReservation = await apiAlice.assets.getTickerReservation({
+    "ticker": "ACME"
+});
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const signingManagerAlice = await LocalSigningManager.create({...});
+const apiAlice = await Polymesh.connect({...});
+const reservation = await apiAlice.assets.getTickerReservation({
+    "ticker": "ACME"
+});
+```
+
+</TabItem>
+</Tabs>
+
+You will note that the class `TickerReservation`, just like the transaction queue, keeps a [`protected context: Context`](https://developers.polymath.network/polymesh-sdk-api-reference/classes/tickerreservation#properties-1). This `context` in turn keeps a [`polymeshApi`](https://developers.polymath.network/polymesh-sdk-api-reference/classes/context#properties-1). It is in there that we find the implicit knowledge that it is `alice`'s account that is asking for the next actions. If it were any other **account** that had called `assets.getTickerReservation`, this other account would not be able to follow up with a `.createAsset` command because it doesn't own the reservation.
+
+With our `reservation` in memory, and 10,000 POLYX in `alice`'s wallet, which is the cost of creation of one asset, we now can create it:
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const assetQueue: TransactionQueue<Asset> = await reservation.createAsset({
+  name: 'ACME Co',
+  assetType: KnownAssetType.EquityPreferred,
+  isDivisible: false,
+});
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const assetQueue = await reservation.createAsset({
+  name: 'ACME Co',
+  assetType: 'EquityPreferred',
+  isDivisible: false,
+});
+```
+
+</TabItem>
+</Tabs>
+
+We have another queue, so, as we did before:
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const asset: Asset = await assetQueue.run();
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const asset = await assetQueue.run();
+```
+
+</TabItem>
+</Tabs>
+
+Implicit in the creation of this asset is that Alice, as a private individual, is **both the asset's owner and its primary issuance agent (PIA)**. We were satisfied with this situation only up to this point. Now this needs to change.
+
+This `asset` instance will not always be in memory, so if we wanted to fetch it at a later date, we would do:
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const asset: Asset = await apiAlice.assets.getAsset({
+  ticker: 'ACME',
+});
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const asset = await apiAlice.assets.getAsset({
+  ticker: 'ACME',
+});
+```
+
+</TabItem>
+</Tabs>
+
+## Secondary Accounts
+
+Now we assume that ACME has gone through CDD and has an account, complete with a private key and its mnemonic, which, in a mirror fashion of that of Alice gives us:
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const signingManagerAcme: LocalSigningManager =
+  await LocalSigningManager.create({
+    accounts: [
+      {
+        mnemonic: 'word21 word22 ...',
+      },
+    ],
+  });
+const apiAcme: Polymesh = await Polymesh.connect({
+  nodeUrl: 'wss://testnet-rpc.polymesh.live', // or your preferred node
+  signingManager: signingManagerAcme,
+});
+const acme: Identity = await apiAcme.getSigningIdentity();
+const acmeDid: string = acme.did;
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const signingManagerAcme = await LocalSigningManager.create({
+  accounts: [
+    {
+      mnemonic: 'word21 word22 ...',
+    },
+  ],
+});
+const apiAcme = await Polymesh.connect({
+  nodeUrl: 'wss://testnet-rpc.polymesh.live', // or your preferred node
+  signingManager: signingManagerAcme,
+});
+const acme = await apiAcme.getSigningIdentity();
+const acmeDid = acme.did;
+```
+
+</TabItem>
+</Tabs>
+
+On her end, Alice, has created another mnemonic for a private key she intends to use when she acts as the CEO of ACME. Again:
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const signingManagerCeo: LocalSigningManager = await LocalSigningManager.create(
+  {
+    accounts: [
+      {
+        mnemonic: 'word31 word32 ...',
+      },
+    ],
+  }
+);
+const apiCeo: Polymesh = await Polymesh.connect({
+  nodeUrl: 'wss://testnet-rpc.polymesh.live', // or your preferred node
+  signingManager: signingManagerCeo,
+});
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const signingManagerCeo = await LocalSigningManager.create({
+  accounts: [
+    {
+      mnemonic: 'word31 word32 ...',
+    },
+  ],
+});
+const apiCeo = await Polymesh.connect({
+  nodeUrl: 'wss://testnet-rpc.polymesh.live', // or your preferred node
+  signingManager: signingManagerCeo,
+});
+```
+
+</TabItem>
+</Tabs>
+
+At this point, `apiCeo` has no associated account. It is a signing key in search of an account. Alice first needs to get her public key:
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const pubCeo: string = apiCeo.accountManagement.getAccount().address;
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const pubCeo = apiCeo.accountManagement.getAccount().address;
+```
+
+</TabItem>
+</Tabs>
+
+Then she needs to send this `pubCeo` information to `apiAcme`. When this is done, the company can invite her to be a secondary key:
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+await apiAcme.accountManagement.inviteAccount({
+  targetAccount: pubCeo,
+});
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+await apiAcme.accountManagement.inviteAccount({
+  targetAccount: pubCeo,
+});
+```
+
+</TabItem>
+</Tabs>
+
+With the invitation sent out into the blockchain, back at her computer, Alice, with knowledge of ACME account's number, `acmeDid`, can do:
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const ceoAccount: Account = apiCeo.accountManagement.getAccount();
+const pendingAuthorizations: AuthorizationRequest[] =
+  await ceoAccount.authorizations.getReceived();
+const acmeAuthorization: AuthorizationRequest = pendingAuthorizations.find(
+  (pendingAuthorization: AuthorizationRequest) => {
+    return pendingAuthorization.issuer.did === acmeDid;
+  }
+);
+const acceptQueue: TransactionQueue<void> = await acmeAuthorization.accept();
+await acceptQueue.run();
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const ceoAccount = apiCeo.getAccount();
+const pendingAuthorizations = await ceoAccount.authorizations.getReceived();
+const acmeAuthorization = pendingAuthorizations.find((pendingAuthorization) => {
+  pendingAuthorization.issuer.did === acmeDid;
+});
+const acceptQueue = await acmeAuthorization.accept();
+await acceptQueue.run();
+```
+
+</TabItem>
+</Tabs>
+
+With this done, `apiCeo` now allows Alice to properly act as the CEO, on behalf of ACME.
+
+## Asset ownership transfer
+
+With the keys and accounts finally set right, it is time for Alice to fix the asset situation, and transfer its ownership to ACME.
+
+Since it is Alice the individual who owns the asset, she has to go back to using her personal account.
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const asset: Asset = await apiAlice.assets.getAsset({
+  ticker: 'ACME',
+});
+const transferQueue: TransactionQueue<Asset> = await asset.transferOwnership({
+  target: acmeDid,
+});
+await transferQueue.run();
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const asset = await apiAlice.assets.getAsset({
+  ticker: 'ACME',
+});
+const transferQueue = await asset.transferOwnership({
+  target: acmeDid,
+});
+await transferQueue.run();
+```
+
+</TabItem>
+</Tabs>
+
+With the authorisation recorded in the blockchain, and on the way, Alice can stay on the same computer and switch from her personal identity to her identity as the CEO of ACME to accept the authorisation.
+
+She first needs to recall her personal account number, or `did`.
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const alice: Identity = await apiAlice.getSigningIdentity();
+const aliceDid: string = alice.did;
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const alice = await apiAlice.getSigningIdentity();
+const aliceDid string = alice.did;
+```
+
+</TabItem>
+</Tabs>
+
+So she can narrow down the authorisation, instead of blindly accepting whatever is in the pipeline.
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const pendingAuthorizations: AuthorizationRequest[] =
+  await ceoAccount.authorizations.getReceived();
+const transferAuthorization: AuthorizationRequest = pendingAuthorizations.find(
+  (pendingAuthorization: AuthorizationRequest) => {
+    return pendingAuthorization.issuer.did === aliceDid;
+  }
+);
+const acceptQueue: TransactionQueue<void> =
+  await transferAuthorization.accept();
+await acceptQueue.run();
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const pendingAuthorizations = await ceoAccount.authorizations.getReceived();
+const transferAuthorization = pendingAuthorizations.find(
+  (pendingAuthorization) => {
+    return pendingAuthorization.issuer.did === aliceDid;
+  }
+);
+const acceptQueue = await transferAuthorization.accept();
+await acceptQueue.run();
+```
+
+</TabItem>
+</Tabs>
+
+With this, the asset is rightfully owned by ACME the company.
+
+## Compliance
+
+We are not done yet with the asset, though.
+
+As the CEO, Alice still needs to do one more step, that is, to define the conditions of ownership. Namely, require any account who acquires the asset to not have a jurisdictional attestation of <span title="Elbonia doesn't appear in the CountryCode enum">Liechtenstein</span>. An exception will be made for the primary issuance agent, who is simply used as a conduit and can send to anyone.
+
+We use ACME's account as the KYC service provider, but realistically, it should be another account.
+
+<Tabs groupId="code-language">
+<TabItem value="ts" label="TypeScript">
+
+```ts
+const acmeCompliance: Compliance = asset.compliance;
+const acmeRequirements: Requirements = acmeCompliance.requirements;
+const acme: Identity = await apiCeo.getSigningIdentity();
+const setRequirementsQueue: TransactionQueue<Asset> =
+  await acmeRequirements.set({
+    requirements: [
+      [
+        {
+          target: ConditionTarget.Sender,
+          type: ConditionType.IsExternalAgent,
+        },
+      ],
+      [
+        {
+          target: ConditionTarget.Receiver,
+          type: ConditionType.IsPresent,
+          claim: {
+            type: ClaimType.KnowYourCustomer,
+            scope: {
+              type: ScopeType.Ticker,
+              value: asset.ticker,
+            },
+          },
+          trustedClaimIssuers: [
+            {
+              identity: acme.did,
+              trustedFor: [ClaimType.KnowYourCustomer],
+            },
+          ],
+        },
+        {
+          target: ConditionTarget.Receiver,
+          type: ConditionType.IsAbsent,
+          claim: {
+            type: ClaimType.Jurisdiction,
+            code: CountryCode.Li,
+            scope: {
+              type: ScopeType.Ticker,
+              value: asset.ticker,
+            },
+          },
+          trustedClaimIssuers: [
+            {
+              identity: acme.did,
+              trustedFor: [ClaimType.Jurisdiction],
+            },
+          ],
+        },
+      ],
+    ],
+  });
+const updatedAsset: Asset = await setRequirementsQueue.run();
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const acmeCompliance = asset.compliance;
+const acmeRequirements = acmeCompliance.requirements;
+const acme = await apiCeo.getSigningIdentity();
+const setRequirementsQueue = await acmeRequirements.set({
+  requirements: [
+    [
+      {
+        target: 'Sender',
+        type: 'IsExternalAgent',
+      },
+    ],
+    [
+      {
+        target: 'Receiver',
+        type: 'IsPresent',
+        claim: {
+          type: 'KnowYourCustomer',
+          scope: {
+            type: 'Ticker',
+            value: asset.ticker,
+          },
+        },
+        trustedClaimIssuers: [
+          {
+            identity: acme.did,
+            trustedFor: ['KnowYourCustomer'],
+          },
+        ],
+      },
+      {
+        target: 'Receiver',
+        type: 'IsAbsent',
+        claim: {
+          type: 'Jurisdiction',
+          code: 'Li',
+          scope: {
+            type: 'Ticker',
+            value: asset.ticker,
+          },
+        },
+        trustedClaimIssuers: [
+          {
+            identity: acme.did,
+            trustedFor: ['Jurisdiction'],
+          },
+        ],
+      },
+    ],
+  ],
+});
+const updatedAsset: Asset = await setRequirementsQueue.run();
+```
+
+</TabItem>
+</Tabs>
+
+With this, the asset is _originated_. Nobody, including Alice under her personal account, is yet a holder of any amount of the asset, though, we remedy that in the next chapter when we tackle **distribution**.
+
+## Links
+
+- SDK: https://github.com/PolymeshAssociation/polymesh-sdk/wiki
