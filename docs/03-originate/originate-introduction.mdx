@@ -60,7 +60,7 @@ Polymesh was built with such a vision in mind. A multi-signature account could, 
 
 ### The token external agents
 
-Given the scope of possible operations that affect a token over its lifecycle, and to limit the need to use the token owner with full permissions, it is only natural to delegate responsibilities to specialized parties that act on behalf of the token owner, a.k.a. external agents. Each external agent is entrusted with, and restricted to, certain specific operations. Well-defined responsibilities assigned to external agents map to real world roles, such as primary issuance agent (PIA) or corporate actions agent (CAA). Polymesh lets you tailor agents' responsibilities and permissions through [external agent permission groups](../settlement/settlement-agents).
+Given the scope of possible operations that affect a token over its lifecycle, and to limit the need to use the token owner with full permissions, it is only natural to delegate responsibilities to specialized parties that act on behalf of the token owner, a.k.a. external agents. Each external agent is entrusted with, and restricted to, certain specific operations. Well-defined responsibilities assigned to external agents map to real world roles, such as primary issuance agent (PIA) or corporate actions agent (CAA). Polymesh lets you tailor agents' responsibilities and permissions through [external agent permission groups](../settlement/settlement-agents/).
 
 There is a special permission group for external agents that gives all rights over a token. It helps discussion to call those assigned those permission the token owner. As previously discussed the originator of a token is the default owner. It is possible to assign full permissions to additional identities and also to remove those permissions for the originator. To avoid a case of _orphan_ tokens, there must always be at least one token owner.
 
@@ -83,7 +83,7 @@ As with so many actions in Polymesh, the targeted external agent account needs t
 
 :::info
 
-Whether an asset can be transferred, or owned at all, is called **compliance** and is automatically enforced on-chain by Polymesh. In effect, for an action to take place, all involved accounts must have attestations that satisfy the rules defined by the token originator for that action. Skip ahead to the section about [Compliance](compliance) for details about this.
+Whether an asset can be transferred, or owned at all, is called **compliance** and is automatically enforced on-chain by Polymesh. In effect, for an action to take place, all involved accounts must have attestations that satisfy the rules defined by the token originator for that action. Skip ahead to the section about [Compliance](./compliance/) for details about this.
 
 :::
 
