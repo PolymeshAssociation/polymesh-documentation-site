@@ -4,10 +4,7 @@ title: Know Your Customer
 description: Compliance matters
 ---
 
-import OverviewBox from '../../src/components/OverviewBox';
-import ActionCard from '../../src/components/ActionCard';
-import ActionCardWrapper from '../../src/components/ActionCard/ActionCardWrapper';
-import OverviewVideoBox from '../../src/components/OverviewVideoBox';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <OverviewVideoBox title="KYC & CDD in Polymesh" videoId="qd-0ZbA2YPM">
 
@@ -33,7 +30,7 @@ What is there to discover?
 
 ---
 
-<OverviewBox title="Overview: KYC" linkHref="/docs/kyc/know-your-customer" linkText="Overview" imgSrc="/img/tmpAssets/illu-p-screen.svg">
+<OverviewBox title="Overview: KYC" linkHref="/docs/kyc/know-your-customer" linkText="Overview" imgSrc={useBaseUrl("/img/tmpAssets/illu-p-screen.svg")}>
 
 KYC is at the heart of a compliant digital securities management. As a purpose-built blockchain, Polymesh addresses this market requirement.
 
@@ -65,7 +62,7 @@ For a better understanding of how KYC services are implemented in Polymesh, let'
   ></ActionCard>
 </ActionCardWrapper>
 
-<OverviewBox title="Dive into further resources" linkHref="https://github.com/PolymeshAssociation/polymesh-sdk/wiki" linkText="Explore" imgSrc="/img/tmpAssets/illu-p-code.svg" external="true">
+<OverviewBox title="Dive into further resources" linkHref="https://github.com/PolymeshAssociation/polymesh-sdk/wiki" linkText="Explore" imgSrc={useBaseUrl("/img/tmpAssets/illu-p-code.svg")} external="true">
 
 A closer look at the detailed technical documentation to dive deeper?
 
