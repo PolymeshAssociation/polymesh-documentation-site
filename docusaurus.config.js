@@ -23,7 +23,7 @@ const config = {
   // url: 'https://docs.polymesh.network/',
   url: 'https://polymeshassociation.github.io/',
   // baseUrl: '/',
-  baseUrl: '/polymesh-documentation-site',
+  baseUrl: '/polymesh-documentation-site/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/polymesh-symbol.svg',
