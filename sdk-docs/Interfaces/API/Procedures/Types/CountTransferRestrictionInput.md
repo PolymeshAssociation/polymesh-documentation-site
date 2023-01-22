@@ -1,0 +1,35 @@
+[api/procedures/types](../../../../Modules/API/Procedures/Types.md).CountTransferRestrictionInput
+
+## Hierarchy
+
+- `TransferRestrictionInputBase`
+
+  ↳ **`CountTransferRestrictionInput`**
+
+## Properties
+
+### count
+
+• **count**: `BigNumber`
+
+limit on the amount of different (unique) investors that can hold the Asset at once
+
+#### Defined in
+
+[api/procedures/types.ts:168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/15be87e8/src/api/procedures/types.ts#L168)
+
+___
+
+### exemptedIdentities
+
+• `Optional` **exemptedIdentities**: (`string` \| [`Identity`](../../../../Classes/API/Entities/Identity/Identity.md))[]
+
+array of Identities (or DIDs) that are exempted from the Restriction
+
+#### Inherited from
+
+TransferRestrictionInputBase.exemptedIdentities
+
+#### Defined in
+
+[api/procedures/types.ts:161](https://github.com/PolymeshAssociation/polymesh-sdk/blob/15be87e8/src/api/procedures/types.ts#L161)

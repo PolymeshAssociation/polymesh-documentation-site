@@ -73,11 +73,42 @@ const config = {
         // ... other options
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'sdk-docs',
+        path: 'sdk-docs',
+        routeBasePath: '/sdk-docs',
+      },
+    ],
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'appIDrequired',
+
+        // Public API key: it is safe to commit it
+        apiKey: 'apiKeyRequired',
+
+        indexName: 'indexNameNeeded',
+
+        // Optional: see doc section below
+        contextualSearch: true,
+
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        // externalUrlRegex: 'external\\.com|domain\\.com',
+
+        // Optional: Algolia search parameters
+        searchParameters: {},
+
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+
+        //... other Algolia params
+      },
       docs: {
         sidebar: {
           hideable: true,
@@ -96,9 +127,14 @@ const config = {
             label: 'Developer Docs',
           },
           {
-            to: '/polymesh-docs',
+            to: 'polymesh-docs',
             position: 'left',
             label: 'Polymesh Docs',
+          },
+          {
+            to: 'sdk-docs/moduleList',
+            position: 'left',
+            label: 'SDK API Docs',
           },
           {
             label: 'Polymesh SDK Docs',
