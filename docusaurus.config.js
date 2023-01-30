@@ -33,7 +33,7 @@ const config = {
   organizationName: 'polymeshassociation', // Usually your GitHub org/user name.
   projectName: 'polymesh-documentation-site', // Usually your repo name.
   // deploymentBranch: '', // The name of the branch to deploy the static files to.
-  trailingSlash: false,
+  trailingSlash: true,
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
