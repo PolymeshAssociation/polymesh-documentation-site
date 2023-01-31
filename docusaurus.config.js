@@ -33,7 +33,7 @@ const config = {
   organizationName: 'polymeshassociation', // Usually your GitHub org/user name.
   projectName: 'polymesh-documentation-site', // Usually your repo name.
   // deploymentBranch: '', // The name of the branch to deploy the static files to.
-  trailingSlash: false,
+  trailingSlash: true,
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
@@ -88,12 +88,12 @@ const config = {
     ({
       algolia: {
         // The application ID provided by Algolia
-        appId: 'appIDrequired',
+        appId: 'K25SRS7O1D',
 
         // Public API key: it is safe to commit it
-        apiKey: 'apiKeyRequired',
+        apiKey: '900353d5b5743c87de51a42fbcb266de',
 
-        indexName: 'indexNameNeeded',
+        indexName: 'polymeshassociation',
 
         // Optional: see doc section below
         contextualSearch: true,
