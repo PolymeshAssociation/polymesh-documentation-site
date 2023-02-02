@@ -4,8 +4,6 @@ title: "Enumeration: ModuleName"
 sidebar_label: "ModuleName"
 ---
 
-# Enumeration: ModuleName
-
 [generated/types](../../../../modules/Generated/Types/Types.md).ModuleName
 
 ## Enumeration Members

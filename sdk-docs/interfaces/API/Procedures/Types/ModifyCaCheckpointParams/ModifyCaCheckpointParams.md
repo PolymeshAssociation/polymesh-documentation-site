@@ -4,8 +4,6 @@ title: "Interface: ModifyCaCheckpointParams"
 sidebar_label: "ModifyCaCheckpointParams"
 ---
 
-# Interface: ModifyCaCheckpointParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).ModifyCaCheckpointParams
 
 ## Properties

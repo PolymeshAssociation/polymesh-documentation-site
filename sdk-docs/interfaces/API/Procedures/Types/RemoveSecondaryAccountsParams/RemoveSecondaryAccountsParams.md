@@ -4,8 +4,6 @@ title: "Interface: RemoveSecondaryAccountsParams"
 sidebar_label: "RemoveSecondaryAccountsParams"
 ---
 
-# Interface: RemoveSecondaryAccountsParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).RemoveSecondaryAccountsParams
 
 ## Properties

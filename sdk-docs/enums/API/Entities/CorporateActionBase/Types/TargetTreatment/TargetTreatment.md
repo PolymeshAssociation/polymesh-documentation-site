@@ -4,8 +4,6 @@ title: "Enumeration: TargetTreatment"
 sidebar_label: "TargetTreatment"
 ---
 
-# Enumeration: TargetTreatment
-
 [api/entities/CorporateActionBase/types](../../../../../../modules/API/Entities/CorporateActionBase/Types/Types.md).TargetTreatment
 
 ## Enumeration Members

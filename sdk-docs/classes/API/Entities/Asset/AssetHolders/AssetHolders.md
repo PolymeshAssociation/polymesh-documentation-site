@@ -4,8 +4,6 @@ title: "Class: AssetHolders"
 sidebar_label: "AssetHolders"
 ---
 
-# Class: AssetHolders
-
 [api/entities/Asset/AssetHolders](../../../../../modules/API/Entities/Asset/AssetHolders/AssetHolders.md).AssetHolders
 
 Handles all Asset Holders related functionality

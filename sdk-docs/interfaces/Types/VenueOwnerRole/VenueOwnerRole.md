@@ -4,8 +4,6 @@ title: "Interface: VenueOwnerRole"
 sidebar_label: "VenueOwnerRole"
 ---
 
-# Interface: VenueOwnerRole
-
 [types](../../../modules/Types/Types.md).VenueOwnerRole
 
 ## Properties

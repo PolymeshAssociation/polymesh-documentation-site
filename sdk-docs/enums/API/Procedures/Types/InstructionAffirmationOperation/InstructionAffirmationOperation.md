@@ -4,8 +4,6 @@ title: "Enumeration: InstructionAffirmationOperation"
 sidebar_label: "InstructionAffirmationOperation"
 ---
 
-# Enumeration: InstructionAffirmationOperation
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).InstructionAffirmationOperation
 
 ## Enumeration Members

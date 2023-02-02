@@ -4,8 +4,6 @@ title: "Class: AssetPermissions"
 sidebar_label: "AssetPermissions"
 ---
 
-# Class: AssetPermissions
-
 [api/entities/Identity/AssetPermissions](../../../../../modules/API/Entities/Identity/AssetPermissions/AssetPermissions.md).AssetPermissions
 
 Handles all Asset Permissions (External Agents) related functionality on the Identity side

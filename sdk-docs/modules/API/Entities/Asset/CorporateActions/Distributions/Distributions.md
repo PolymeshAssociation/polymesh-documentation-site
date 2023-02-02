@@ -1,10 +1,8 @@
 ---
 id: "Distributions"
-title: "Module: api/entities/Asset/CorporateActions/Distributions"
+title: "Module: Distributions"
 sidebar_label: "Distributions"
 ---
-
-# Module: api/entities/Asset/CorporateActions/Distributions
 
 ## Classes
 

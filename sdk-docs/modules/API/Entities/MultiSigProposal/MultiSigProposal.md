@@ -1,10 +1,8 @@
 ---
 id: "MultiSigProposal"
-title: "Module: api/entities/MultiSigProposal"
+title: "Module: MultiSigProposal"
 sidebar_label: "MultiSigProposal"
 ---
-
-# Module: api/entities/MultiSigProposal
 
 ## Classes
 

@@ -4,8 +4,6 @@ title: "Interface: CreateAssetWithTickerParams"
 sidebar_label: "CreateAssetWithTickerParams"
 ---
 
-# Interface: CreateAssetWithTickerParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).CreateAssetWithTickerParams
 
 ## Hierarchy

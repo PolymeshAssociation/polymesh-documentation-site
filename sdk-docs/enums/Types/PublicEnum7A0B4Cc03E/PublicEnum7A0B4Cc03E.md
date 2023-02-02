@@ -4,8 +4,6 @@ title: "Enumeration: PublicEnum7A0B4Cc03E"
 sidebar_label: "PublicEnum7A0B4Cc03E"
 ---
 
-# Enumeration: PublicEnum7A0B4Cc03E
-
 [types](../../../modules/Types/Types.md).PublicEnum7A0B4Cc03E
 
 \n@enumName ModuleIdEnum

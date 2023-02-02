@@ -4,8 +4,6 @@ title: "Enumeration: StatisticsTx"
 sidebar_label: "StatisticsTx"
 ---
 
-# Enumeration: StatisticsTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).StatisticsTx
 
 ## Enumeration Members

@@ -4,8 +4,6 @@ title: "Interface: ConditionCompliance"
 sidebar_label: "ConditionCompliance"
 ---
 
-# Interface: ConditionCompliance
-
 [types](../../../modules/Types/Types.md).ConditionCompliance
 
 ## Properties

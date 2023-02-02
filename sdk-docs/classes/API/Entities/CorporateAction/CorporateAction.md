@@ -4,8 +4,6 @@ title: "Class: CorporateAction"
 sidebar_label: "CorporateAction"
 ---
 
-# Class: CorporateAction
-
 [api/entities/CorporateAction](../../../../modules/API/Entities/CorporateAction/CorporateAction.md).CorporateAction
 
 Represents an action initiated by the issuer of an Asset which may affect the positions of

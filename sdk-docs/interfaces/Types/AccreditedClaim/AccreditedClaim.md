@@ -4,8 +4,6 @@ title: "Interface: AccreditedClaim"
 sidebar_label: "AccreditedClaim"
 ---
 
-# Interface: AccreditedClaim
-
 [types](../../../modules/Types/Types.md).AccreditedClaim
 
 ## Properties

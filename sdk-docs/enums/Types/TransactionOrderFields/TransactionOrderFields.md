@@ -4,8 +4,6 @@ title: "Enumeration: TransactionOrderFields"
 sidebar_label: "TransactionOrderFields"
 ---
 
-# Enumeration: TransactionOrderFields
-
 [types](../../../modules/Types/Types.md).TransactionOrderFields
 
 ## Enumeration Members

@@ -4,8 +4,6 @@ title: "Interface: ProcedureAuthorizationStatus"
 sidebar_label: "ProcedureAuthorizationStatus"
 ---
 
-# Interface: ProcedureAuthorizationStatus
-
 [types](../../../modules/Types/Types.md).ProcedureAuthorizationStatus
 
 ## Properties

@@ -1,10 +1,8 @@
 ---
 id: "Types"
-title: "Module: api/entities/MultiSig/types"
+title: "Module: MultiSig Types"
 sidebar_label: "Types"
 ---
-
-# Module: api/entities/MultiSig/types
 
 ## Interfaces
 

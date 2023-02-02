@@ -4,8 +4,6 @@ title: "Enumeration: IdentityTx"
 sidebar_label: "IdentityTx"
 ---
 
-# Enumeration: IdentityTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).IdentityTx
 
 ## Enumeration Members

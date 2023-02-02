@@ -4,8 +4,6 @@ title: "Enumeration: AuthTypeEnum"
 sidebar_label: "AuthTypeEnum"
 ---
 
-# Enumeration: AuthTypeEnum
-
 [types](../../../modules/Types/Types.md).AuthTypeEnum
 
 \n@enumName AuthTypeEnum

@@ -4,8 +4,6 @@ title: "Interface: ProcedureOpts"
 sidebar_label: "ProcedureOpts"
 ---
 
-# Interface: ProcedureOpts
-
 [types](../../../modules/Types/Types.md).ProcedureOpts
 
 ## Properties

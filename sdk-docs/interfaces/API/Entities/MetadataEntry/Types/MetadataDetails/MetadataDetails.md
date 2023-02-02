@@ -4,8 +4,6 @@ title: "Interface: MetadataDetails"
 sidebar_label: "MetadataDetails"
 ---
 
-# Interface: MetadataDetails
-
 [api/entities/MetadataEntry/types](../../../../../../modules/API/Entities/MetadataEntry/Types/Types.md).MetadataDetails
 
 ## Properties

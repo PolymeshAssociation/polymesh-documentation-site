@@ -4,8 +4,6 @@ title: "Enumeration: SessionTx"
 sidebar_label: "SessionTx"
 ---
 
-# Enumeration: SessionTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).SessionTx
 
 ## Enumeration Members

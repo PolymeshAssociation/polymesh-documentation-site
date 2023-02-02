@@ -4,8 +4,6 @@ title: "Class: PolymeshTransactionBatch<ReturnValue, TransformedReturnValue, Arg
 sidebar_label: "PolymeshTransactionBatch"
 ---
 
-# Class: PolymeshTransactionBatch<ReturnValue, TransformedReturnValue, Args\>
-
 [base/PolymeshTransactionBatch](../../../modules/Base/PolymeshTransactionBatch/PolymeshTransactionBatch.md).PolymeshTransactionBatch
 
 Wrapper class for a batch of Polymesh Transactions

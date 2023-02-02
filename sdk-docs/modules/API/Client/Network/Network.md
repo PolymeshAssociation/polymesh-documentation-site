@@ -1,10 +1,8 @@
 ---
 id: "Network"
-title: "Module: api/client/Network"
+title: "Module: Network"
 sidebar_label: "Network"
 ---
-
-# Module: api/client/Network
 
 ## Classes
 

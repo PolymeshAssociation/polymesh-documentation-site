@@ -4,8 +4,6 @@ title: "Enumeration: ClaimOperation"
 sidebar_label: "ClaimOperation"
 ---
 
-# Enumeration: ClaimOperation
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).ClaimOperation
 
 ## Enumeration Members

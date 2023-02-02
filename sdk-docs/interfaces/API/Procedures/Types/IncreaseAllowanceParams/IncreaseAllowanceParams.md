@@ -4,8 +4,6 @@ title: "Interface: IncreaseAllowanceParams"
 sidebar_label: "IncreaseAllowanceParams"
 ---
 
-# Interface: IncreaseAllowanceParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).IncreaseAllowanceParams
 
 ## Properties

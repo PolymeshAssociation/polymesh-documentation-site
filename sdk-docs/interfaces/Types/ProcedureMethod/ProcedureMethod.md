@@ -4,8 +4,6 @@ title: "Interface: ProcedureMethod<MethodArgs, ProcedureReturnValue, ReturnValue
 sidebar_label: "ProcedureMethod"
 ---
 
-# Interface: ProcedureMethod<MethodArgs, ProcedureReturnValue, ReturnValue\>
-
 [types](../../../modules/Types/Types.md).ProcedureMethod
 
 ## Type parameters

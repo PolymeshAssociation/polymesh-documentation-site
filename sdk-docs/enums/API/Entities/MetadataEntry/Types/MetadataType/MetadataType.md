@@ -4,8 +4,6 @@ title: "Enumeration: MetadataType"
 sidebar_label: "MetadataType"
 ---
 
-# Enumeration: MetadataType
-
 [api/entities/MetadataEntry/types](../../../../../../modules/API/Entities/MetadataEntry/Types/Types.md).MetadataType
 
 ## Enumeration Members

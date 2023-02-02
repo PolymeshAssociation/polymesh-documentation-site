@@ -4,8 +4,6 @@ title: "Interface: PermissionedAccount"
 sidebar_label: "PermissionedAccount"
 ---
 
-# Interface: PermissionedAccount
-
 [types](../../../modules/Types/Types.md).PermissionedAccount
 
 ## Properties

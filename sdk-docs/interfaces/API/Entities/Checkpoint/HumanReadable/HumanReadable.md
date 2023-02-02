@@ -4,8 +4,6 @@ title: "Interface: HumanReadable"
 sidebar_label: "HumanReadable"
 ---
 
-# Interface: HumanReadable
-
 [api/entities/Checkpoint](../../../../../modules/API/Entities/Checkpoint/Checkpoint.md).HumanReadable
 
 ## Properties

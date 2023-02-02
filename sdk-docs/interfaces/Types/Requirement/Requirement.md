@@ -4,8 +4,6 @@ title: "Interface: Requirement"
 sidebar_label: "Requirement"
 ---
 
-# Interface: Requirement
-
 [types](../../../modules/Types/Types.md).Requirement
 
 ## Properties

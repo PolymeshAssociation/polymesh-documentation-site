@@ -4,8 +4,6 @@ title: "Class: Settlements"
 sidebar_label: "Settlements"
 ---
 
-# Class: Settlements
-
 [api/entities/Asset/Settlements](../../../../../modules/API/Entities/Asset/Settlements/Settlements.md).Settlements
 
 Handles all Asset Settlements related functionality

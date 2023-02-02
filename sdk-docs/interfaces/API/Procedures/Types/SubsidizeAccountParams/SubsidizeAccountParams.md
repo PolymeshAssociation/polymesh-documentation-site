@@ -4,8 +4,6 @@ title: "Interface: SubsidizeAccountParams"
 sidebar_label: "SubsidizeAccountParams"
 ---
 
-# Interface: SubsidizeAccountParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).SubsidizeAccountParams
 
 ## Properties

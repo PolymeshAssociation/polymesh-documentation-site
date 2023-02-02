@@ -1,10 +1,8 @@
 ---
 id: "ClaimPercentage"
-title: "Module: api/entities/Asset/TransferRestrictions/ClaimPercentage"
+title: "Module: ClaimPercentage"
 sidebar_label: "ClaimPercentage"
 ---
-
-# Module: api/entities/Asset/TransferRestrictions/ClaimPercentage
 
 ## Classes
 

@@ -4,8 +4,6 @@ title: "Enumeration: ClaimTypeEnum"
 sidebar_label: "ClaimTypeEnum"
 ---
 
-# Enumeration: ClaimTypeEnum
-
 [types](../../../modules/Types/Types.md).ClaimTypeEnum
 
 \n@enumName ClaimTypeEnum

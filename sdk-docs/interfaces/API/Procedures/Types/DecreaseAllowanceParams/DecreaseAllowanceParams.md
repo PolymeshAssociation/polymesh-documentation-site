@@ -4,8 +4,6 @@ title: "Interface: DecreaseAllowanceParams"
 sidebar_label: "DecreaseAllowanceParams"
 ---
 
-# Interface: DecreaseAllowanceParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).DecreaseAllowanceParams
 
 ## Properties

@@ -4,8 +4,6 @@ title: "Interface: OfferingStatus"
 sidebar_label: "OfferingStatus"
 ---
 
-# Interface: OfferingStatus
-
 [api/entities/Offering/types](../../../../../../modules/API/Entities/Offering/Types/Types.md).OfferingStatus
 
 ## Properties

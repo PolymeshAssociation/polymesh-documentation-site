@@ -4,8 +4,6 @@ title: "Class: NumberedPortfolio"
 sidebar_label: "NumberedPortfolio"
 ---
 
-# Class: NumberedPortfolio
-
 [api/entities/NumberedPortfolio](../../../../modules/API/Entities/NumberedPortfolio/NumberedPortfolio.md).NumberedPortfolio
 
 Represents a numbered (non-default) Portfolio for an Identity

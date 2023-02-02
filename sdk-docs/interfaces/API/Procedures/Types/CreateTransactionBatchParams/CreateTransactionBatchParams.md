@@ -4,8 +4,6 @@ title: "Interface: CreateTransactionBatchParams<ReturnValues>"
 sidebar_label: "CreateTransactionBatchParams"
 ---
 
-# Interface: CreateTransactionBatchParams<ReturnValues\>
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).CreateTransactionBatchParams
 
 ## Type parameters

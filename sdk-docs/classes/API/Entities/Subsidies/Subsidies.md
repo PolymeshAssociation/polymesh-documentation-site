@@ -4,8 +4,6 @@ title: "Class: Subsidies"
 sidebar_label: "Subsidies"
 ---
 
-# Class: Subsidies
-
 [api/entities/Subsidies](../../../../modules/API/Entities/Subsidies/Subsidies.md).Subsidies
 
 Handles all Account Subsidies related functionality

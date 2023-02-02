@@ -4,8 +4,6 @@ title: "Interface: TaxWithholding"
 sidebar_label: "TaxWithholding"
 ---
 
-# Interface: TaxWithholding
-
 [api/entities/CorporateActionBase/types](../../../../../../modules/API/Entities/CorporateActionBase/Types/Types.md).TaxWithholding
 
 ## Properties

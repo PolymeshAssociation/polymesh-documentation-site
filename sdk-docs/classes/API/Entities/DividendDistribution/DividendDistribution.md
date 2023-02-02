@@ -4,8 +4,6 @@ title: "Class: DividendDistribution"
 sidebar_label: "DividendDistribution"
 ---
 
-# Class: DividendDistribution
-
 [api/entities/DividendDistribution](../../../../modules/API/Entities/DividendDistribution/DividendDistribution.md).DividendDistribution
 
 Represents a Corporate Action via which an Asset issuer wishes to distribute dividends

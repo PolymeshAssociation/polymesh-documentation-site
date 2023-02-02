@@ -4,8 +4,6 @@ title: "Interface: AddInvestorUniquenessClaimParams"
 sidebar_label: "AddInvestorUniquenessClaimParams"
 ---
 
-# Interface: AddInvestorUniquenessClaimParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).AddInvestorUniquenessClaimParams
 
 ## Properties

@@ -4,8 +4,6 @@ title: "Interface: PayDividendsParams"
 sidebar_label: "PayDividendsParams"
 ---
 
-# Interface: PayDividendsParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).PayDividendsParams
 
 ## Properties

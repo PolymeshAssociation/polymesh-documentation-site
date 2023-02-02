@@ -4,8 +4,6 @@ title: "Interface: MultiSigProposalDetails"
 sidebar_label: "MultiSigProposalDetails"
 ---
 
-# Interface: MultiSigProposalDetails
-
 [api/entities/MultiSigProposal/types](../../../../../../modules/API/Entities/MultiSigProposal/Types/Types.md).MultiSigProposalDetails
 
 ## Properties

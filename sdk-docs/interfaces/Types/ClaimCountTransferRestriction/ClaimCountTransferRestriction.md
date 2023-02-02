@@ -4,8 +4,6 @@ title: "Interface: ClaimCountTransferRestriction"
 sidebar_label: "ClaimCountTransferRestriction"
 ---
 
-# Interface: ClaimCountTransferRestriction
-
 [types](../../../modules/Types/Types.md).ClaimCountTransferRestriction
 
 ## Hierarchy

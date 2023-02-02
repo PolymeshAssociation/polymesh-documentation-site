@@ -4,8 +4,6 @@ title: "Enumeration: GrandpaTx"
 sidebar_label: "GrandpaTx"
 ---
 
-# Enumeration: GrandpaTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).GrandpaTx
 
 ## Enumeration Members

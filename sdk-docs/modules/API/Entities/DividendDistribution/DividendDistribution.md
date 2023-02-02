@@ -1,10 +1,8 @@
 ---
 id: "DividendDistribution"
-title: "Module: api/entities/DividendDistribution"
+title: "Module: DividendDistribution"
 sidebar_label: "DividendDistribution"
 ---
-
-# Module: api/entities/DividendDistribution
 
 ## Classes
 

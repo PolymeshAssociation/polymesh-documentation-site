@@ -4,8 +4,6 @@ title: "Class: PolymeshError"
 sidebar_label: "PolymeshError"
 ---
 
-# Class: PolymeshError
-
 [base/PolymeshError](../../../modules/Base/PolymeshError/PolymeshError.md).PolymeshError
 
 Wraps an error to give more information about its type

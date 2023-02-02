@@ -4,8 +4,6 @@ title: "Interface: SecurityIdentifier"
 sidebar_label: "SecurityIdentifier"
 ---
 
-# Interface: SecurityIdentifier
-
 [types](../../../modules/Types/Types.md).SecurityIdentifier
 
 Alphanumeric standardized security identifier

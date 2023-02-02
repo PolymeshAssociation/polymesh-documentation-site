@@ -1,10 +1,8 @@
 ---
 id: "PolymeshTransactionBatch"
-title: "Module: base/PolymeshTransactionBatch"
+title: "Module: PolymeshTransactionBatch"
 sidebar_label: "PolymeshTransactionBatch"
 ---
-
-# Module: base/PolymeshTransactionBatch
 
 ## Classes
 

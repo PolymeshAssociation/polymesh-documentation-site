@@ -4,8 +4,6 @@ title: "Interface: AssetWithGroup"
 sidebar_label: "AssetWithGroup"
 ---
 
-# Interface: AssetWithGroup
-
 [types](../../../modules/Types/Types.md).AssetWithGroup
 
 ## Properties

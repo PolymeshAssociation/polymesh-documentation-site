@@ -4,8 +4,6 @@ title: "Interface: PortfolioId"
 sidebar_label: "PortfolioId"
 ---
 
-# Interface: PortfolioId
-
 [types](../../../modules/Types/Types.md).PortfolioId
 
 ## Properties

@@ -4,8 +4,6 @@ title: "Interface: ResultSet<T>"
 sidebar_label: "ResultSet"
 ---
 
-# Interface: ResultSet<T\>
-
 [types](../../../modules/Types/Types.md).ResultSet
 
 ## Type parameters

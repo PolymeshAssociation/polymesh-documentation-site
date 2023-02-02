@@ -4,8 +4,6 @@ title: "Interface: RegisterIdentityParams"
 sidebar_label: "RegisterIdentityParams"
 ---
 
-# Interface: RegisterIdentityParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).RegisterIdentityParams
 
 ## Properties

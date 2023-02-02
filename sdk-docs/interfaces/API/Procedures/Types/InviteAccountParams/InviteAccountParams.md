@@ -4,8 +4,6 @@ title: "Interface: InviteAccountParams"
 sidebar_label: "InviteAccountParams"
 ---
 
-# Interface: InviteAccountParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).InviteAccountParams
 
 ## Properties

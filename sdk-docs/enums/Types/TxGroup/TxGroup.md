@@ -4,8 +4,6 @@ title: "Enumeration: TxGroup"
 sidebar_label: "TxGroup"
 ---
 
-# Enumeration: TxGroup
-
 [types](../../../modules/Types/Types.md).TxGroup
 
 Transaction Groups (for permissions purposes)

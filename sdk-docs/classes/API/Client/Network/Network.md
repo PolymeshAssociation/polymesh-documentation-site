@@ -4,8 +4,6 @@ title: "Class: Network"
 sidebar_label: "Network"
 ---
 
-# Class: Network
-
 [api/client/Network](../../../../modules/API/Client/Network/Network.md).Network
 
 Handles all Network related functionality, including querying for historical events from middleware

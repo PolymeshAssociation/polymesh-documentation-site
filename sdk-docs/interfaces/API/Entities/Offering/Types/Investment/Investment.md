@@ -4,8 +4,6 @@ title: "Interface: Investment"
 sidebar_label: "Investment"
 ---
 
-# Interface: Investment
-
 [api/entities/Offering/types](../../../../../../modules/API/Entities/Offering/Types/Types.md).Investment
 
 ## Properties

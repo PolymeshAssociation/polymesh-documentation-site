@@ -4,8 +4,6 @@ title: "Interface: SetCountTransferRestrictionsParams"
 sidebar_label: "SetCountTransferRestrictionsParams"
 ---
 
-# Interface: SetCountTransferRestrictionsParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).SetCountTransferRestrictionsParams
 
 ## Properties

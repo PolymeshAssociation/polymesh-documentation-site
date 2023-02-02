@@ -4,8 +4,6 @@ title: "Interface: JurisdictionClaim"
 sidebar_label: "JurisdictionClaim"
 ---
 
-# Interface: JurisdictionClaim
-
 [types](../../../modules/Types/Types.md).JurisdictionClaim
 
 ## Properties

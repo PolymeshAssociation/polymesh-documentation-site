@@ -4,8 +4,6 @@ title: "Enumeration: VenueType"
 sidebar_label: "VenueType"
 ---
 
-# Enumeration: VenueType
-
 [api/entities/Venue/types](../../../../../../modules/API/Entities/Venue/Types/Types.md).VenueType
 
 ## Enumeration Members

@@ -4,8 +4,6 @@ title: "Interface: HistoricSettlement"
 sidebar_label: "HistoricSettlement"
 ---
 
-# Interface: HistoricSettlement
-
 [api/entities/Portfolio/types](../../../../../../modules/API/Entities/Portfolio/Types/Types.md).HistoricSettlement
 
 ## Properties

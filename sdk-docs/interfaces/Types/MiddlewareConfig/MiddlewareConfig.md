@@ -4,8 +4,6 @@ title: "Interface: MiddlewareConfig"
 sidebar_label: "MiddlewareConfig"
 ---
 
-# Interface: MiddlewareConfig
-
 [types](../../../modules/Types/Types.md).MiddlewareConfig
 
 ## Properties

@@ -1,10 +1,8 @@
 ---
 id: "Types"
-title: "Module: api/procedures/types"
+title: "Module: Procedures Types"
 sidebar_label: "Types"
 ---
-
-# Module: api/procedures/types
 
 ## Enumerations
 

@@ -4,8 +4,6 @@ title: "Interface: TransferRestrictionResult"
 sidebar_label: "TransferRestrictionResult"
 ---
 
-# Interface: TransferRestrictionResult
-
 [api/entities/Asset/types](../../../../../../modules/API/Entities/Asset/Types/Types.md).TransferRestrictionResult
 
 ## Properties

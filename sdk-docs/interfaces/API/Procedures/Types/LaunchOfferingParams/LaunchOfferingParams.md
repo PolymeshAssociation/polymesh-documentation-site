@@ -4,8 +4,6 @@ title: "Interface: LaunchOfferingParams"
 sidebar_label: "LaunchOfferingParams"
 ---
 
-# Interface: LaunchOfferingParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).LaunchOfferingParams
 
 ## Properties

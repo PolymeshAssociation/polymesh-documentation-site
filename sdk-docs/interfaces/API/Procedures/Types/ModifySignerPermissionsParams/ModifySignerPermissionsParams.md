@@ -4,8 +4,6 @@ title: "Interface: ModifySignerPermissionsParams"
 sidebar_label: "ModifySignerPermissionsParams"
 ---
 
-# Interface: ModifySignerPermissionsParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).ModifySignerPermissionsParams
 
 ## Properties

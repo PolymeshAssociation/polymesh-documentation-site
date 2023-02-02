@@ -4,8 +4,6 @@ title: "Interface: CreateAssetParams"
 sidebar_label: "CreateAssetParams"
 ---
 
-# Interface: CreateAssetParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).CreateAssetParams
 
 ## Hierarchy

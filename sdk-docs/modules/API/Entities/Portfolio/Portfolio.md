@@ -1,10 +1,8 @@
 ---
 id: "Portfolio"
-title: "Module: api/entities/Portfolio"
+title: "Module: Portfolio"
 sidebar_label: "Portfolio"
 ---
-
-# Module: api/entities/Portfolio
 
 ## Classes
 

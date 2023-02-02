@@ -4,8 +4,6 @@ title: "Class: Assets"
 sidebar_label: "Assets"
 ---
 
-# Class: Assets
-
 [api/client/Assets](../../../../modules/API/Client/Assets/Assets.md).Assets
 
 Handles all Asset related functionality

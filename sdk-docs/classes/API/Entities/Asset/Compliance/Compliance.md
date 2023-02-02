@@ -4,8 +4,6 @@ title: "Class: Compliance"
 sidebar_label: "Compliance"
 ---
 
-# Class: Compliance
-
 [api/entities/Asset/Compliance](../../../../../modules/API/Entities/Asset/Compliance/Compliance.md).Compliance
 
 Handles all Asset Compliance related functionality

@@ -4,8 +4,6 @@ title: "Class: Offerings"
 sidebar_label: "Offerings"
 ---
 
-# Class: Offerings
-
 [api/entities/Asset/Offerings](../../../../../modules/API/Entities/Asset/Offerings/Offerings.md).Offerings
 
 Handles all Asset Offering related functionality

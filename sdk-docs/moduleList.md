@@ -1,11 +1,9 @@
 ---
 id: 'moduleList'
-title: '@polymeshassociation/polymesh-sdk'
+title: 'Polymesh SDK API Documents'
 sidebar_label: 'SDK Module List'
-sidebar_position: 0
+sidebar_position: 0.5
 ---
-
-# @polymeshassociation/polymesh-sdk
 
 ## Modules
 

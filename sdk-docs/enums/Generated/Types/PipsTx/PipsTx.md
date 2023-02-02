@@ -4,8 +4,6 @@ title: "Enumeration: PipsTx"
 sidebar_label: "PipsTx"
 ---
 
-# Enumeration: PipsTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).PipsTx
 
 ## Enumeration Members

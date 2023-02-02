@@ -4,8 +4,6 @@ title: "Class: Instruction"
 sidebar_label: "Instruction"
 ---
 
-# Class: Instruction
-
 [api/entities/Instruction](../../../../modules/API/Entities/Instruction/Instruction.md).Instruction
 
 Represents a settlement Instruction to be executed on a certain Venue

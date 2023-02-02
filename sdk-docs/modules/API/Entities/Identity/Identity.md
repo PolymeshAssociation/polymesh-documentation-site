@@ -1,10 +1,8 @@
 ---
 id: "Identity"
-title: "Module: api/entities/Identity"
+title: "Module: Identity"
 sidebar_label: "Identity"
 ---
-
-# Module: api/entities/Identity
 
 ## Classes
 

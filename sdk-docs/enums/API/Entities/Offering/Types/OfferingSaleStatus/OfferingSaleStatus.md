@@ -4,8 +4,6 @@ title: "Enumeration: OfferingSaleStatus"
 sidebar_label: "OfferingSaleStatus"
 ---
 
-# Enumeration: OfferingSaleStatus
-
 [api/entities/Offering/types](../../../../../../modules/API/Entities/Offering/Types/Types.md).OfferingSaleStatus
 
 ## Enumeration Members

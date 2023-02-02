@@ -4,8 +4,6 @@ title: "Class: Polymesh"
 sidebar_label: "Polymesh"
 ---
 
-# Class: Polymesh
-
 [api/client/Polymesh](../../../../modules/API/Client/Polymesh/Polymesh.md).Polymesh
 
 Main entry point of the Polymesh SDK

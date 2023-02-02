@@ -4,8 +4,6 @@ title: "Interface: ModifyCorporateActionsAgentParams"
 sidebar_label: "ModifyCorporateActionsAgentParams"
 ---
 
-# Interface: ModifyCorporateActionsAgentParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).ModifyCorporateActionsAgentParams
 
 ## Properties

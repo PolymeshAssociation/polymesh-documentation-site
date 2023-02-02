@@ -4,8 +4,6 @@ title: "Enumeration: ContractsTx"
 sidebar_label: "ContractsTx"
 ---
 
-# Enumeration: ContractsTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).ContractsTx
 
 ## Enumeration Members

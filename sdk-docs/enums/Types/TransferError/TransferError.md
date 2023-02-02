@@ -4,8 +4,6 @@ title: "Enumeration: TransferError"
 sidebar_label: "TransferError"
 ---
 
-# Enumeration: TransferError
-
 [types](../../../modules/Types/Types.md).TransferError
 
 Akin to TransferStatus, these are a bit more granular and specific. Every TransferError translates to

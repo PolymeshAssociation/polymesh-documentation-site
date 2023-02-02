@@ -4,8 +4,6 @@ title: "Interface: CalendarPeriodHumanReadable"
 sidebar_label: "CalendarPeriodHumanReadable"
 ---
 
-# Interface: CalendarPeriodHumanReadable
-
 [api/entities/CheckpointSchedule](../../../../../modules/API/Entities/CheckpointSchedule/CheckpointSchedule.md).CalendarPeriodHumanReadable
 
 ## Properties

@@ -4,8 +4,6 @@ title: "Enumeration: RewardsTx"
 sidebar_label: "RewardsTx"
 ---
 
-# Enumeration: RewardsTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).RewardsTx
 
 ## Enumeration Members

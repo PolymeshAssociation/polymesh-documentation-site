@@ -4,8 +4,6 @@ title: "Enumeration: SettlementTx"
 sidebar_label: "SettlementTx"
 ---
 
-# Enumeration: SettlementTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).SettlementTx
 
 ## Enumeration Members

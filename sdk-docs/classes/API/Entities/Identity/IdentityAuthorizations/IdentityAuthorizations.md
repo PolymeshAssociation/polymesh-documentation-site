@@ -4,8 +4,6 @@ title: "Class: IdentityAuthorizations"
 sidebar_label: "IdentityAuthorizations"
 ---
 
-# Class: IdentityAuthorizations
-
 [api/entities/Identity/IdentityAuthorizations](../../../../../modules/API/Entities/Identity/IdentityAuthorizations/IdentityAuthorizations.md).IdentityAuthorizations
 
 Handles all Identity Authorization related functionality

@@ -4,8 +4,6 @@ title: "Enumeration: AssetHoldersOrderBy"
 sidebar_label: "AssetHoldersOrderBy"
 ---
 
-# Enumeration: AssetHoldersOrderBy
-
 [types](../../../modules/Types/Types.md).AssetHoldersOrderBy
 
 Methods to use when ordering `AssetHolder`.

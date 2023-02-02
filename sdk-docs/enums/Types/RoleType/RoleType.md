@@ -4,8 +4,6 @@ title: "Enumeration: RoleType"
 sidebar_label: "RoleType"
 ---
 
-# Enumeration: RoleType
-
 [types](../../../modules/Types/Types.md).RoleType
 
 ## Enumeration Members

@@ -4,8 +4,6 @@ title: "Interface: DistributionWithDetails"
 sidebar_label: "DistributionWithDetails"
 ---
 
-# Interface: DistributionWithDetails
-
 [types](../../../modules/Types/Types.md).DistributionWithDetails
 
 ## Properties

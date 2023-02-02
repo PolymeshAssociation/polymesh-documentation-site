@@ -4,8 +4,6 @@ title: "Enumeration: AllowanceOperation"
 sidebar_label: "AllowanceOperation"
 ---
 
-# Enumeration: AllowanceOperation
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).AllowanceOperation
 
 ## Enumeration Members

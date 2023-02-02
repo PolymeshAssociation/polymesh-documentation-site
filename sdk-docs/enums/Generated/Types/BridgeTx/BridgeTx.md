@@ -4,8 +4,6 @@ title: "Enumeration: BridgeTx"
 sidebar_label: "BridgeTx"
 ---
 
-# Enumeration: BridgeTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).BridgeTx
 
 ## Enumeration Members

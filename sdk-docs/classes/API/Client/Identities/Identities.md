@@ -4,8 +4,6 @@ title: "Class: Identities"
 sidebar_label: "Identities"
 ---
 
-# Class: Identities
-
 [api/client/Identities](../../../../modules/API/Client/Identities/Identities.md).Identities
 
 Handles all Identity related functionality

@@ -1,10 +1,8 @@
 ---
 id: "AssetHolders"
-title: "Module: api/entities/Asset/AssetHolders"
+title: "Module: AssetHolders"
 sidebar_label: "AssetHolders"
 ---
-
-# Module: api/entities/Asset/AssetHolders
 
 ## Classes
 

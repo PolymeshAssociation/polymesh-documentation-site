@@ -4,8 +4,6 @@ title: "Interface: CreateTransactionBatchProcedureMethod"
 sidebar_label: "CreateTransactionBatchProcedureMethod"
 ---
 
-# Interface: CreateTransactionBatchProcedureMethod
-
 [types](../../../modules/Types/Types.md).CreateTransactionBatchProcedureMethod
 
 ## Callable

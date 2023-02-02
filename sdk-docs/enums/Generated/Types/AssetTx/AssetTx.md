@@ -4,8 +4,6 @@ title: "Enumeration: AssetTx"
 sidebar_label: "AssetTx"
 ---
 
-# Enumeration: AssetTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).AssetTx
 
 ## Enumeration Members

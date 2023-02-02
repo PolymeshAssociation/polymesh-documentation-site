@@ -1,10 +1,8 @@
 ---
 id: "Types"
-title: "Module: types"
+title: "Module: Types"
 sidebar_label: "Types"
 ---
-
-# Module: types
 
 ## Enumerations
 

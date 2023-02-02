@@ -4,8 +4,6 @@ title: "Interface: Tier"
 sidebar_label: "Tier"
 ---
 
-# Interface: Tier
-
 [api/entities/Offering/types](../../../../../../modules/API/Entities/Offering/Types/Types.md).Tier
 
 ## Hierarchy

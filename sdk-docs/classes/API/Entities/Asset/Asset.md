@@ -4,8 +4,6 @@ title: "Class: Asset"
 sidebar_label: "Asset"
 ---
 
-# Class: Asset
-
 [api/entities/Asset](../../../../modules/API/Entities/Asset/Asset.md).Asset
 
 Class used to manage all Asset functionality

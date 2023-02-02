@@ -4,8 +4,6 @@ title: "Interface: CreateGroupParams"
 sidebar_label: "CreateGroupParams"
 ---
 
-# Interface: CreateGroupParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).CreateGroupParams
 
 ## Properties

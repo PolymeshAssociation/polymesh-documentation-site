@@ -4,8 +4,6 @@ title: "Class: Entity<UniqueIdentifiers, HumanReadable>"
 sidebar_label: "Entity"
 ---
 
-# Class: Entity<UniqueIdentifiers, HumanReadable\>
-
 [api/entities/Entity](../../../../modules/API/Entities/Entity/Entity.md).Entity
 
 Represents an object or resource in the Polymesh Ecosystem with its own set of properties and functionality

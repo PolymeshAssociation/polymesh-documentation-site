@@ -4,8 +4,6 @@ title: "Interface: ArrayTransactionArgument"
 sidebar_label: "ArrayTransactionArgument"
 ---
 
-# Interface: ArrayTransactionArgument
-
 [types](../../../modules/Types/Types.md).ArrayTransactionArgument
 
 ## Properties

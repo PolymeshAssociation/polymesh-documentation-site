@@ -4,8 +4,6 @@ title: "Interface: Params"
 sidebar_label: "Params"
 ---
 
-# Interface: Params
-
 [api/entities/AuthorizationRequest](../../../../../modules/API/Entities/AuthorizationRequest/AuthorizationRequest.md).Params
 
 ## Properties

@@ -1,10 +1,8 @@
 ---
 id: "Offerings"
-title: "Module: api/entities/Asset/Offerings"
+title: "Module: Offerings"
 sidebar_label: "Offerings"
 ---
-
-# Module: api/entities/Asset/Offerings
 
 ## Classes
 

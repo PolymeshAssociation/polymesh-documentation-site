@@ -4,8 +4,6 @@ title: "Interface: SettlementLeg"
 sidebar_label: "SettlementLeg"
 ---
 
-# Interface: SettlementLeg
-
 [api/entities/Portfolio/types](../../../../../../modules/API/Entities/Portfolio/Types/Types.md).SettlementLeg
 
 ## Hierarchy

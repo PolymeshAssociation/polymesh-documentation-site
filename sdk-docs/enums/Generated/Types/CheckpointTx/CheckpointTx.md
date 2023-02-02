@@ -4,8 +4,6 @@ title: "Enumeration: CheckpointTx"
 sidebar_label: "CheckpointTx"
 ---
 
-# Enumeration: CheckpointTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).CheckpointTx
 
 ## Enumeration Members

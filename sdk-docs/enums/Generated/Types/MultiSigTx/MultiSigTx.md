@@ -4,8 +4,6 @@ title: "Enumeration: MultiSigTx"
 sidebar_label: "MultiSigTx"
 ---
 
-# Enumeration: MultiSigTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).MultiSigTx
 
 ## Enumeration Members

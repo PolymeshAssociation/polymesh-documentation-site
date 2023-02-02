@@ -4,8 +4,6 @@ title: "Enumeration: SignerType"
 sidebar_label: "SignerType"
 ---
 
-# Enumeration: SignerType
-
 [types](../../../modules/Types/Types.md).SignerType
 
 ## Enumeration Members

@@ -1,10 +1,8 @@
 ---
 id: "Authorizations"
-title: "Module: api/entities/common/namespaces/Authorizations"
+title: "Module: Authorizations"
 sidebar_label: "Authorizations"
 ---
-
-# Module: api/entities/common/namespaces/Authorizations
 
 ## Classes
 

@@ -4,8 +4,6 @@ title: "Interface: EventIdentifier"
 sidebar_label: "EventIdentifier"
 ---
 
-# Interface: EventIdentifier
-
 [types](../../../modules/Types/Types.md).EventIdentifier
 
 ## Properties

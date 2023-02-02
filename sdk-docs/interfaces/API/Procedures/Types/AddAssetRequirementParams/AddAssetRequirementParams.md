@@ -4,8 +4,6 @@ title: "Interface: AddAssetRequirementParams"
 sidebar_label: "AddAssetRequirementParams"
 ---
 
-# Interface: AddAssetRequirementParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).AddAssetRequirementParams
 
 ## Properties

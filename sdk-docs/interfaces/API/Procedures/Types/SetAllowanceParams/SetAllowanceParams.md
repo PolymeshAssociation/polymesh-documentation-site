@@ -4,8 +4,6 @@ title: "Interface: SetAllowanceParams"
 sidebar_label: "SetAllowanceParams"
 ---
 
-# Interface: SetAllowanceParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).SetAllowanceParams
 
 ## Properties

@@ -4,8 +4,6 @@ title: "Interface: WaivePermissionsParams"
 sidebar_label: "WaivePermissionsParams"
 ---
 
-# Interface: WaivePermissionsParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).WaivePermissionsParams
 
 ## Properties

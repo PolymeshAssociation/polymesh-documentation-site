@@ -4,8 +4,6 @@ title: "Class: DefaultPortfolio"
 sidebar_label: "DefaultPortfolio"
 ---
 
-# Class: DefaultPortfolio
-
 [api/entities/DefaultPortfolio](../../../../modules/API/Entities/DefaultPortfolio/DefaultPortfolio.md).DefaultPortfolio
 
 Represents the default Portfolio for an Identity

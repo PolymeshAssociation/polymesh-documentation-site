@@ -4,8 +4,6 @@ title: "Class: Permissions"
 sidebar_label: "Permissions"
 ---
 
-# Class: Permissions
-
 [api/entities/Asset/Permissions](../../../../../modules/API/Entities/Asset/Permissions/Permissions.md).Permissions
 
 Handles all Asset Permissions related functionality

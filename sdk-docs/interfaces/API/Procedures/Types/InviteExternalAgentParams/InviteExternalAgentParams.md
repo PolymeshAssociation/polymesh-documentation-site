@@ -4,8 +4,6 @@ title: "Interface: InviteExternalAgentParams"
 sidebar_label: "InviteExternalAgentParams"
 ---
 
-# Interface: InviteExternalAgentParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).InviteExternalAgentParams
 
 ## Properties

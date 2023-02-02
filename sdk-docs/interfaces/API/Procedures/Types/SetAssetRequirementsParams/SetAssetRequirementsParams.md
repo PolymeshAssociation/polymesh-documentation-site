@@ -4,8 +4,6 @@ title: "Interface: SetAssetRequirementsParams"
 sidebar_label: "SetAssetRequirementsParams"
 ---
 
-# Interface: SetAssetRequirementsParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).SetAssetRequirementsParams
 
 ## Properties

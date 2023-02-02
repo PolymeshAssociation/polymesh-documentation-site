@@ -4,8 +4,6 @@ title: "Interface: SetGroupPermissionsParams"
 sidebar_label: "SetGroupPermissionsParams"
 ---
 
-# Interface: SetGroupPermissionsParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).SetGroupPermissionsParams
 
 ## Properties

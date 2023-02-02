@@ -4,8 +4,6 @@ title: "Enumeration: ErrorCode"
 sidebar_label: "ErrorCode"
 ---
 
-# Enumeration: ErrorCode
-
 [types](../../../modules/Types/Types.md).ErrorCode
 
 Specifies possible types of errors in the SDK

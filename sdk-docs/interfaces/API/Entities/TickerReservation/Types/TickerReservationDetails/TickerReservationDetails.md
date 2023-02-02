@@ -4,8 +4,6 @@ title: "Interface: TickerReservationDetails"
 sidebar_label: "TickerReservationDetails"
 ---
 
-# Interface: TickerReservationDetails
-
 [api/entities/TickerReservation/types](../../../../../../modules/API/Entities/TickerReservation/Types/Types.md).TickerReservationDetails
 
 ## Properties

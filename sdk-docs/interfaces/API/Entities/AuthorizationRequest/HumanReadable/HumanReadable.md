@@ -4,8 +4,6 @@ title: "Interface: HumanReadable"
 sidebar_label: "HumanReadable"
 ---
 
-# Interface: HumanReadable
-
 [api/entities/AuthorizationRequest](../../../../../modules/API/Entities/AuthorizationRequest/AuthorizationRequest.md).HumanReadable
 
 ## Properties

@@ -4,8 +4,6 @@ title: "Enumeration: RelayerTx"
 sidebar_label: "RelayerTx"
 ---
 
-# Enumeration: RelayerTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).RelayerTx
 
 ## Enumeration Members

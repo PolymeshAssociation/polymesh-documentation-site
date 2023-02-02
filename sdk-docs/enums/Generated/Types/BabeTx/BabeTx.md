@@ -4,8 +4,6 @@ title: "Enumeration: BabeTx"
 sidebar_label: "BabeTx"
 ---
 
-# Enumeration: BabeTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).BabeTx
 
 ## Enumeration Members

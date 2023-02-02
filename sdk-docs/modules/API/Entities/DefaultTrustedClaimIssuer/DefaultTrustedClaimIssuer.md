@@ -1,10 +1,8 @@
 ---
 id: "DefaultTrustedClaimIssuer"
-title: "Module: api/entities/DefaultTrustedClaimIssuer"
+title: "Module: DefaultTrustedClaimIssuer"
 sidebar_label: "DefaultTrustedClaimIssuer"
 ---
-
-# Module: api/entities/DefaultTrustedClaimIssuer
 
 ## Classes
 

@@ -4,8 +4,6 @@ title: "Enumeration: PublicEnum8F5A39C8Ee"
 sidebar_label: "PublicEnum8F5A39C8Ee"
 ---
 
-# Enumeration: PublicEnum8F5A39C8Ee
-
 [types](../../../modules/Types/Types.md).PublicEnum8F5A39C8Ee
 
 \n@enumName EventIdEnum

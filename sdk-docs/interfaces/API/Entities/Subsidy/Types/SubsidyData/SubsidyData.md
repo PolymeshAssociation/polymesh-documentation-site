@@ -4,8 +4,6 @@ title: "Interface: SubsidyData"
 sidebar_label: "SubsidyData"
 ---
 
-# Interface: SubsidyData
-
 [api/entities/Subsidy/types](../../../../../../modules/API/Entities/Subsidy/Types/Types.md).SubsidyData
 
 ## Properties

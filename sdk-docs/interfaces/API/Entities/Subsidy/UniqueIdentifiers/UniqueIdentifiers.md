@@ -4,8 +4,6 @@ title: "Interface: UniqueIdentifiers"
 sidebar_label: "UniqueIdentifiers"
 ---
 
-# Interface: UniqueIdentifiers
-
 [api/entities/Subsidy](../../../../../modules/API/Entities/Subsidy/Subsidy.md).UniqueIdentifiers
 
 ## Properties

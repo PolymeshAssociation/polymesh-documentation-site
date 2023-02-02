@@ -4,8 +4,6 @@ title: "Enumeration: EventIdEnum"
 sidebar_label: "EventIdEnum"
 ---
 
-# Enumeration: EventIdEnum
-
 [types](../../../modules/Types/Types.md).EventIdEnum
 
 ## Enumeration Members

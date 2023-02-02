@@ -4,8 +4,6 @@ title: "Enumeration: ImOnlineTx"
 sidebar_label: "ImOnlineTx"
 ---
 
-# Enumeration: ImOnlineTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).ImOnlineTx
 
 ## Enumeration Members

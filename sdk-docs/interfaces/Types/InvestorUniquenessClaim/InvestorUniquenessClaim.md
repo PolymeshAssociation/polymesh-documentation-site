@@ -4,8 +4,6 @@ title: "Interface: InvestorUniquenessClaim"
 sidebar_label: "InvestorUniquenessClaim"
 ---
 
-# Interface: InvestorUniquenessClaim
-
 [types](../../../modules/Types/Types.md).InvestorUniquenessClaim
 
 ## Properties

@@ -4,8 +4,6 @@ title: "Class: ClaimPercentage"
 sidebar_label: "ClaimPercentage"
 ---
 
-# Class: ClaimPercentage
-
 [api/entities/Asset/TransferRestrictions/ClaimPercentage](../../../../../../modules/API/Entities/Asset/TransferRestrictions/ClaimPercentage/ClaimPercentage.md).ClaimPercentage
 
 Handles all Claim Percentage Transfer Restriction related functionality

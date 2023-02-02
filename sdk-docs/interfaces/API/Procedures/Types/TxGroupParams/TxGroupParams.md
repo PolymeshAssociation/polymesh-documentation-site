@@ -4,8 +4,6 @@ title: "Interface: TxGroupParams"
 sidebar_label: "TxGroupParams"
 ---
 
-# Interface: TxGroupParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).TxGroupParams
 
 ## Hierarchy

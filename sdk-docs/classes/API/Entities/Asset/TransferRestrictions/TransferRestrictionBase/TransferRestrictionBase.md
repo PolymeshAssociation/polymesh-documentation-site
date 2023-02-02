@@ -4,8 +4,6 @@ title: "Class: TransferRestrictionBase<T>"
 sidebar_label: "TransferRestrictionBase"
 ---
 
-# Class: TransferRestrictionBase<T\>
-
 [api/entities/Asset/TransferRestrictions/TransferRestrictionBase](../../../../../../modules/API/Entities/Asset/TransferRestrictions/TransferRestrictionBase/TransferRestrictionBase.md).TransferRestrictionBase
 
 Base class for managing Transfer Restrictions

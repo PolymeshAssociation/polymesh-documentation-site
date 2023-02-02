@@ -4,8 +4,6 @@ title: "Interface: CheckPermissionsResult<Type>"
 sidebar_label: "CheckPermissionsResult"
 ---
 
-# Interface: CheckPermissionsResult<Type\>
-
 [types](../../../modules/Types/Types.md).CheckPermissionsResult
 
 Result of a `checkPermissions` call. If `Type` is `Account`, represents whether the Account

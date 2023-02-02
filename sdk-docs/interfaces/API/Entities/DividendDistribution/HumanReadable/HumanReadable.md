@@ -4,8 +4,6 @@ title: "Interface: HumanReadable"
 sidebar_label: "HumanReadable"
 ---
 
-# Interface: HumanReadable
-
 [api/entities/DividendDistribution](../../../../../modules/API/Entities/DividendDistribution/DividendDistribution.md).HumanReadable
 
 ## Hierarchy

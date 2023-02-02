@@ -4,8 +4,6 @@ title: "Enumeration: CorporateActionTx"
 sidebar_label: "CorporateActionTx"
 ---
 
-# Enumeration: CorporateActionTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).CorporateActionTx
 
 ## Enumeration Members

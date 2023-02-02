@@ -4,8 +4,6 @@ title: "Interface: ControllerTransferParams"
 sidebar_label: "ControllerTransferParams"
 ---
 
-# Interface: ControllerTransferParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).ControllerTransferParams
 
 ## Properties

@@ -4,8 +4,6 @@ title: "Class: ClaimCount"
 sidebar_label: "ClaimCount"
 ---
 
-# Class: ClaimCount
-
 [api/entities/Asset/TransferRestrictions/ClaimCount](../../../../../../modules/API/Entities/Asset/TransferRestrictions/ClaimCount/ClaimCount.md).ClaimCount
 
 Handles all Claim Count Transfer Restriction related functionality

@@ -4,8 +4,6 @@ title: "Interface: SetCustodianParams"
 sidebar_label: "SetCustodianParams"
 ---
 
-# Interface: SetCustodianParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).SetCustodianParams
 
 ## Properties

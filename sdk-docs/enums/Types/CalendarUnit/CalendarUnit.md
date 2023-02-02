@@ -4,8 +4,6 @@ title: "Enumeration: CalendarUnit"
 sidebar_label: "CalendarUnit"
 ---
 
-# Enumeration: CalendarUnit
-
 [types](../../../modules/Types/Types.md).CalendarUnit
 
 ## Enumeration Members

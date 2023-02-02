@@ -4,8 +4,6 @@ title: "Interface: Fees"
 sidebar_label: "Fees"
 ---
 
-# Interface: Fees
-
 [types](../../../modules/Types/Types.md).Fees
 
 ## Properties

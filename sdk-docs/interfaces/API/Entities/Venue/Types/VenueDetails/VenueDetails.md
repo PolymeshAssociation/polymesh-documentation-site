@@ -4,8 +4,6 @@ title: "Interface: VenueDetails"
 sidebar_label: "VenueDetails"
 ---
 
-# Interface: VenueDetails
-
 [api/entities/Venue/types](../../../../../../modules/API/Entities/Venue/Types/Types.md).VenueDetails
 
 ## Properties

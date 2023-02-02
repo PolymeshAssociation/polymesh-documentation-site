@@ -4,8 +4,6 @@ title: "Class: Portfolios"
 sidebar_label: "Portfolios"
 ---
 
-# Class: Portfolios
-
 [api/entities/Identity/Portfolios](../../../../../modules/API/Entities/Identity/Portfolios/Portfolios.md).Portfolios
 
 Handles all Portfolio related functionality on the Identity side

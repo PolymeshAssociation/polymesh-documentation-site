@@ -4,8 +4,6 @@ title: "Interface: AgentWithGroup"
 sidebar_label: "AgentWithGroup"
 ---
 
-# Interface: AgentWithGroup
-
 [api/entities/Asset/types](../../../../../../modules/API/Entities/Asset/Types/Types.md).AgentWithGroup
 
 ## Properties

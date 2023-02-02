@@ -4,8 +4,6 @@ title: "Class: Metadata"
 sidebar_label: "Metadata"
 ---
 
-# Class: Metadata
-
 [api/entities/Asset/Metadata](../../../../../modules/API/Entities/Asset/Metadata/Metadata.md).Metadata
 
 Handles all Asset Metadata related functionality

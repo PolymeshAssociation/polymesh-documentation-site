@@ -4,8 +4,6 @@ title: "Interface: SetClaimPercentageTransferRestrictionsParams"
 sidebar_label: "SetClaimPercentageTransferRestrictionsParams"
 ---
 
-# Interface: SetClaimPercentageTransferRestrictionsParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).SetClaimPercentageTransferRestrictionsParams
 
 ## Properties

@@ -1,10 +1,8 @@
 ---
 id: "CorporateActionBase"
-title: "Module: api/entities/CorporateActionBase"
+title: "Module: CorporateActionBase"
 sidebar_label: "CorporateActionBase"
 ---
-
-# Module: api/entities/CorporateActionBase
 
 ## Classes
 

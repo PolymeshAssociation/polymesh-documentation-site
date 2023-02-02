@@ -4,8 +4,6 @@ title: "Enumeration: ProtocolFeeTx"
 sidebar_label: "ProtocolFeeTx"
 ---
 
-# Enumeration: ProtocolFeeTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).ProtocolFeeTx
 
 ## Enumeration Members

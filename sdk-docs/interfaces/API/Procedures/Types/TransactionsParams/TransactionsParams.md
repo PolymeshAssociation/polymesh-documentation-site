@@ -4,8 +4,6 @@ title: "Interface: TransactionsParams"
 sidebar_label: "TransactionsParams"
 ---
 
-# Interface: TransactionsParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).TransactionsParams
 
 ## Hierarchy

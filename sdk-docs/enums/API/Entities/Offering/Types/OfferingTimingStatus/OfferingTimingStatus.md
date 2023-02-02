@@ -4,8 +4,6 @@ title: "Enumeration: OfferingTimingStatus"
 sidebar_label: "OfferingTimingStatus"
 ---
 
-# Enumeration: OfferingTimingStatus
-
 [api/entities/Offering/types](../../../../../../modules/API/Entities/Offering/Types/Types.md).OfferingTimingStatus
 
 ## Enumeration Members

@@ -4,8 +4,6 @@ title: "Interface: ComplianceRequirements"
 sidebar_label: "ComplianceRequirements"
 ---
 
-# Interface: ComplianceRequirements
-
 [types](../../../modules/Types/Types.md).ComplianceRequirements
 
 ## Properties

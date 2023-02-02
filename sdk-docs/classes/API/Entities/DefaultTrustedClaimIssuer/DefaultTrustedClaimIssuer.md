@@ -4,8 +4,6 @@ title: "Class: DefaultTrustedClaimIssuer"
 sidebar_label: "DefaultTrustedClaimIssuer"
 ---
 
-# Class: DefaultTrustedClaimIssuer
-
 [api/entities/DefaultTrustedClaimIssuer](../../../../modules/API/Entities/DefaultTrustedClaimIssuer/DefaultTrustedClaimIssuer.md).DefaultTrustedClaimIssuer
 
 Represents a default trusted claim issuer for a specific Asset in the Polymesh blockchain

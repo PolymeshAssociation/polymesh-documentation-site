@@ -4,8 +4,6 @@ title: "Interface: Permissions"
 sidebar_label: "Permissions"
 ---
 
-# Interface: Permissions
-
 [types](../../../modules/Types/Types.md).Permissions
 
 Permissions a Secondary Key has over the Identity. A null value means the key has

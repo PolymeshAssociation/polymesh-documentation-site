@@ -4,8 +4,6 @@ title: "Interface: ClaimScope"
 sidebar_label: "ClaimScope"
 ---
 
-# Interface: ClaimScope
-
 [types](../../../modules/Types/Types.md).ClaimScope
 
 ## Properties

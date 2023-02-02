@@ -4,8 +4,6 @@ title: "Enumeration: SecurityIdentifierType"
 sidebar_label: "SecurityIdentifierType"
 ---
 
-# Enumeration: SecurityIdentifierType
-
 [types](../../../modules/Types/Types.md).SecurityIdentifierType
 
 ## Enumeration Members

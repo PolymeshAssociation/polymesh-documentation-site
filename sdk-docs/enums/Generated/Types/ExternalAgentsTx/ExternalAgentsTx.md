@@ -4,8 +4,6 @@ title: "Enumeration: ExternalAgentsTx"
 sidebar_label: "ExternalAgentsTx"
 ---
 
-# Enumeration: ExternalAgentsTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).ExternalAgentsTx
 
 ## Enumeration Members

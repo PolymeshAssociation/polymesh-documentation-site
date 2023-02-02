@@ -4,8 +4,6 @@ title: "Class: AccountManagement"
 sidebar_label: "AccountManagement"
 ---
 
-# Class: AccountManagement
-
 [api/client/AccountManagement](../../../../modules/API/Client/AccountManagement/AccountManagement.md).AccountManagement
 
 Handles functionality related to Account Management

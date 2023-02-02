@@ -1,10 +1,8 @@
 ---
 id: "Settlements"
-title: "Module: api/client/Settlements"
+title: "Module: Settlements"
 sidebar_label: "Settlements"
 ---
-
-# Module: api/client/Settlements
 
 ## Classes
 

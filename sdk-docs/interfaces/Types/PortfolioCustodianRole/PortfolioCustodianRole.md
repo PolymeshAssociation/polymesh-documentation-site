@@ -4,8 +4,6 @@ title: "Interface: PortfolioCustodianRole"
 sidebar_label: "PortfolioCustodianRole"
 ---
 
-# Interface: PortfolioCustodianRole
-
 [types](../../../modules/Types/Types.md).PortfolioCustodianRole
 
 ## Properties

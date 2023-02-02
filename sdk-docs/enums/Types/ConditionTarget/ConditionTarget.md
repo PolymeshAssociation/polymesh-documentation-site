@@ -4,8 +4,6 @@ title: "Enumeration: ConditionTarget"
 sidebar_label: "ConditionTarget"
 ---
 
-# Enumeration: ConditionTarget
-
 [types](../../../modules/Types/Types.md).ConditionTarget
 
 ## Enumeration Members

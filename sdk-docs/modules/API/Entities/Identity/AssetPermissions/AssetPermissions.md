@@ -1,10 +1,8 @@
 ---
 id: "AssetPermissions"
-title: "Module: api/entities/Identity/AssetPermissions"
+title: "Module: AssetPermissions"
 sidebar_label: "AssetPermissions"
 ---
-
-# Module: api/entities/Identity/AssetPermissions
 
 ## Classes
 

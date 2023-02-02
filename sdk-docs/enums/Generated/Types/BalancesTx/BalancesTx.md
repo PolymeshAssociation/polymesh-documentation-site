@@ -4,8 +4,6 @@ title: "Enumeration: BalancesTx"
 sidebar_label: "BalancesTx"
 ---
 
-# Enumeration: BalancesTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).BalancesTx
 
 ## Enumeration Members

@@ -4,8 +4,6 @@ title: "Interface: CountTransferRestrictionInput"
 sidebar_label: "CountTransferRestrictionInput"
 ---
 
-# Interface: CountTransferRestrictionInput
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).CountTransferRestrictionInput
 
 ## Hierarchy

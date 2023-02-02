@@ -1,10 +1,8 @@
 ---
 id: "TransferRestrictionBase"
-title: "Module: api/entities/Asset/TransferRestrictions/TransferRestrictionBase"
+title: "Module: TransferRestrictionBase"
 sidebar_label: "TransferRestrictionBase"
 ---
-
-# Module: api/entities/Asset/TransferRestrictions/TransferRestrictionBase
 
 ## Classes
 

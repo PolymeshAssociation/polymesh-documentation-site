@@ -4,8 +4,6 @@ title: "Enumeration: TransferComplianceTypeEnum"
 sidebar_label: "TransferComplianceTypeEnum"
 ---
 
-# Enumeration: TransferComplianceTypeEnum
-
 [types](../../../modules/Types/Types.md).TransferComplianceTypeEnum
 
 \n@enumName TransferComplianceTypeEnum

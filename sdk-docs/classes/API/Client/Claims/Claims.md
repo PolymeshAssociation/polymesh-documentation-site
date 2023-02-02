@@ -4,8 +4,6 @@ title: "Class: Claims"
 sidebar_label: "Claims"
 ---
 
-# Class: Claims
-
 [api/client/Claims](../../../../modules/API/Client/Claims/Claims.md).Claims
 
 Handles all Claims related functionality

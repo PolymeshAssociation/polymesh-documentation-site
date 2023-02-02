@@ -4,8 +4,6 @@ title: "Interface: AffirmInstructionParams"
 sidebar_label: "AffirmInstructionParams"
 ---
 
-# Interface: AffirmInstructionParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).AffirmInstructionParams
 
 ## Properties

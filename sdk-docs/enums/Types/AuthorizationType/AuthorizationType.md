@@ -4,8 +4,6 @@ title: "Enumeration: AuthorizationType"
 sidebar_label: "AuthorizationType"
 ---
 
-# Enumeration: AuthorizationType
-
 [types](../../../modules/Types/Types.md).AuthorizationType
 
 Type of Authorization Request

@@ -1,10 +1,8 @@
 ---
 id: "Types"
-title: "Module: api/entities/MetadataEntry/types"
+title: "Module: MetadataEntry Types"
 sidebar_label: "Types"
 ---
-
-# Module: api/entities/MetadataEntry/types
 
 ## Enumerations
 

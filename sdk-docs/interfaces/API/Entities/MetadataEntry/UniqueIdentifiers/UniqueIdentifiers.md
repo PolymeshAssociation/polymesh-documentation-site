@@ -4,8 +4,6 @@ title: "Interface: UniqueIdentifiers"
 sidebar_label: "UniqueIdentifiers"
 ---
 
-# Interface: UniqueIdentifiers
-
 [api/entities/MetadataEntry](../../../../../modules/API/Entities/MetadataEntry/MetadataEntry.md).UniqueIdentifiers
 
 ## Properties

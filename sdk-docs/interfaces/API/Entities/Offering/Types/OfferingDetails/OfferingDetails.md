@@ -4,8 +4,6 @@ title: "Interface: OfferingDetails"
 sidebar_label: "OfferingDetails"
 ---
 
-# Interface: OfferingDetails
-
 [api/entities/Offering/types](../../../../../../modules/API/Entities/Offering/Types/Types.md).OfferingDetails
 
 ## Properties

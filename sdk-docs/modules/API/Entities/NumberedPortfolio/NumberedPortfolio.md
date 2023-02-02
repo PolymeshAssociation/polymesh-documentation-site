@@ -1,10 +1,8 @@
 ---
 id: "NumberedPortfolio"
-title: "Module: api/entities/NumberedPortfolio"
+title: "Module: NumberedPortfolio"
 sidebar_label: "NumberedPortfolio"
 ---
-
-# Module: api/entities/NumberedPortfolio
 
 ## Classes
 

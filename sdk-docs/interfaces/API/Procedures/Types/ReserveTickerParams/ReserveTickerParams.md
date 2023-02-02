@@ -4,8 +4,6 @@ title: "Interface: ReserveTickerParams"
 sidebar_label: "ReserveTickerParams"
 ---
 
-# Interface: ReserveTickerParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).ReserveTickerParams
 
 ## Properties

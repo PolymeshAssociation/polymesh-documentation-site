@@ -1,10 +1,8 @@
 ---
 id: "Types"
-title: "Module: api/entities/Asset/Checkpoints/types"
+title: "Module: Checkpoints Types"
 sidebar_label: "Types"
 ---
-
-# Module: api/entities/Asset/Checkpoints/types
 
 ## Enumerations
 

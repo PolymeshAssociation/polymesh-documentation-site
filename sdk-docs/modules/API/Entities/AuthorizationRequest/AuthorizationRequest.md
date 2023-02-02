@@ -1,10 +1,8 @@
 ---
 id: "AuthorizationRequest"
-title: "Module: api/entities/AuthorizationRequest"
+title: "Module: AuthorizationRequest"
 sidebar_label: "AuthorizationRequest"
 ---
-
-# Module: api/entities/AuthorizationRequest
 
 ## Classes
 

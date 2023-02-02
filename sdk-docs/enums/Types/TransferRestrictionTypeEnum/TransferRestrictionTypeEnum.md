@@ -4,8 +4,6 @@ title: "Enumeration: TransferRestrictionTypeEnum"
 sidebar_label: "TransferRestrictionTypeEnum"
 ---
 
-# Enumeration: TransferRestrictionTypeEnum
-
 [types](../../../modules/Types/Types.md).TransferRestrictionTypeEnum
 
 \n@enumName TransferRestrictionTypeEnum

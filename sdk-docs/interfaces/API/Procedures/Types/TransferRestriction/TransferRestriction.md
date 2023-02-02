@@ -4,8 +4,6 @@ title: "Interface: TransferRestriction"
 sidebar_label: "TransferRestriction"
 ---
 
-# Interface: TransferRestriction
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).TransferRestriction
 
 ## Properties

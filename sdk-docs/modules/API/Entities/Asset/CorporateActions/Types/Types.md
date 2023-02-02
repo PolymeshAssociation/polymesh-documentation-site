@@ -1,10 +1,8 @@
 ---
 id: "Types"
-title: "Module: api/entities/Asset/CorporateActions/types"
+title: "Module: CorporateActions Types"
 sidebar_label: "Types"
 ---
-
-# Module: api/entities/Asset/CorporateActions/types
 
 ## Interfaces
 

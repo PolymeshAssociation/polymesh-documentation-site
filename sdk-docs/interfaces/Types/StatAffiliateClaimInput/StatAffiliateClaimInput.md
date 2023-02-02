@@ -4,8 +4,6 @@ title: "Interface: StatAffiliateClaimInput"
 sidebar_label: "StatAffiliateClaimInput"
 ---
 
-# Interface: StatAffiliateClaimInput
-
 [types](../../../modules/Types/Types.md).StatAffiliateClaimInput
 
 ## Properties

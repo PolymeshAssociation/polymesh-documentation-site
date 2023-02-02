@@ -4,8 +4,6 @@ title: "Enumeration: SettlementResultEnum"
 sidebar_label: "SettlementResultEnum"
 ---
 
-# Enumeration: SettlementResultEnum
-
 [types](../../../modules/Types/Types.md).SettlementResultEnum
 
 ## Enumeration Members

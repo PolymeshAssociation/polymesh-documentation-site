@@ -4,8 +4,6 @@ title: "Class: PolymeshTransactionBase<ReturnValue, TransformedReturnValue>"
 sidebar_label: "PolymeshTransactionBase"
 ---
 
-# Class: PolymeshTransactionBase<ReturnValue, TransformedReturnValue\>
-
 [base/PolymeshTransactionBase](../../../modules/Base/PolymeshTransactionBase/PolymeshTransactionBase.md).PolymeshTransactionBase
 
 Wrapper class for a Polymesh Transaction

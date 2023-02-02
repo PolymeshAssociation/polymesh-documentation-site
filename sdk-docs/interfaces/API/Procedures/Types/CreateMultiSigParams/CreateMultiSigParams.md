@@ -4,8 +4,6 @@ title: "Interface: CreateMultiSigParams"
 sidebar_label: "CreateMultiSigParams"
 ---
 
-# Interface: CreateMultiSigParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).CreateMultiSigParams
 
 ## Properties

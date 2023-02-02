@@ -1,10 +1,8 @@
 ---
 id: "Polymesh"
-title: "Module: api/client/Polymesh"
+title: "Module: Polymesh"
 sidebar_label: "Polymesh"
 ---
-
-# Module: api/client/Polymesh
 
 ## Classes
 

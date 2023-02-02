@@ -1,10 +1,8 @@
 ---
 id: "Requirements"
-title: "Module: api/entities/Asset/Compliance/Requirements"
+title: "Module: Requirements"
 sidebar_label: "Requirements"
 ---
-
-# Module: api/entities/Asset/Compliance/Requirements
 
 ## Classes
 

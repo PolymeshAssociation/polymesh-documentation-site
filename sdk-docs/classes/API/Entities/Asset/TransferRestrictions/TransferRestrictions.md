@@ -4,8 +4,6 @@ title: "Class: TransferRestrictions"
 sidebar_label: "TransferRestrictions"
 ---
 
-# Class: TransferRestrictions
-
 [api/entities/Asset/TransferRestrictions](../../../../../modules/API/Entities/Asset/TransferRestrictions/TransferRestrictions.md).TransferRestrictions
 
 Handles all Asset Transfer Restrictions related functionality

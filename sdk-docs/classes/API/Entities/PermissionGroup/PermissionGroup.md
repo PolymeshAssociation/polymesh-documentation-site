@@ -4,8 +4,6 @@ title: "Class: PermissionGroup"
 sidebar_label: "PermissionGroup"
 ---
 
-# Class: PermissionGroup
-
 [api/entities/PermissionGroup](../../../../modules/API/Entities/PermissionGroup/PermissionGroup.md).PermissionGroup
 
 Represents a group of permissions for an Asset

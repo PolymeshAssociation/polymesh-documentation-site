@@ -1,10 +1,8 @@
 ---
 id: "CorporateAction"
-title: "Module: api/entities/CorporateAction"
+title: "Module: CorporateAction"
 sidebar_label: "CorporateAction"
 ---
-
-# Module: api/entities/CorporateAction
 
 ## Classes
 

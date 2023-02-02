@@ -4,8 +4,6 @@ title: "Enumeration: UpgradeCommitteeTx"
 sidebar_label: "UpgradeCommitteeTx"
 ---
 
-# Enumeration: UpgradeCommitteeTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).UpgradeCommitteeTx
 
 ## Enumeration Members

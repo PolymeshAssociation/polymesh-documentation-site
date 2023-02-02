@@ -4,8 +4,6 @@ title: "Interface: UniqueIdentifiers"
 sidebar_label: "UniqueIdentifiers"
 ---
 
-# Interface: UniqueIdentifiers
-
 [api/entities/Identity](../../../../../modules/API/Entities/Identity/Identity.md).UniqueIdentifiers
 
 Properties that uniquely identify an Identity

@@ -1,10 +1,8 @@
 ---
 id: "Percentage"
-title: "Module: api/entities/Asset/TransferRestrictions/Percentage"
+title: "Module: Percentage"
 sidebar_label: "Percentage"
 ---
-
-# Module: api/entities/Asset/TransferRestrictions/Percentage
 
 ## Classes
 

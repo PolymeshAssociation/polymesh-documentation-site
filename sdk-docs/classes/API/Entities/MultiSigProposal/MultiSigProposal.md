@@ -4,8 +4,6 @@ title: "Class: MultiSigProposal"
 sidebar_label: "MultiSigProposal"
 ---
 
-# Class: MultiSigProposal
-
 [api/entities/MultiSigProposal](../../../../modules/API/Entities/MultiSigProposal/MultiSigProposal.md).MultiSigProposal
 
 A proposal for a MultiSig transaction. This is a wrapper around an extrinsic that will be executed when the amount of approvals reaches the signature threshold set on the MultiSig Account

@@ -4,8 +4,6 @@ title: "Interface: TrustedClaimIssuer<IsDefault>"
 sidebar_label: "TrustedClaimIssuer"
 ---
 
-# Interface: TrustedClaimIssuer<IsDefault\>
-
 [types](../../../modules/Types/Types.md).TrustedClaimIssuer
 
 ## Type parameters

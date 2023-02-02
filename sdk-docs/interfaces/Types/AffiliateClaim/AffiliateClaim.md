@@ -4,8 +4,6 @@ title: "Interface: AffiliateClaim"
 sidebar_label: "AffiliateClaim"
 ---
 
-# Interface: AffiliateClaim
-
 [types](../../../modules/Types/Types.md).AffiliateClaim
 
 ## Properties

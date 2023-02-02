@@ -4,8 +4,6 @@ title: "Interface: ConfigureDividendDistributionParams"
 sidebar_label: "ConfigureDividendDistributionParams"
 ---
 
-# Interface: ConfigureDividendDistributionParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).ConfigureDividendDistributionParams
 
 ## Properties

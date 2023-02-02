@@ -4,8 +4,6 @@ title: "Interface: MetadataSpec"
 sidebar_label: "MetadataSpec"
 ---
 
-# Interface: MetadataSpec
-
 [api/entities/MetadataEntry/types](../../../../../../modules/API/Entities/MetadataEntry/Types/Types.md).MetadataSpec
 
 ## Properties

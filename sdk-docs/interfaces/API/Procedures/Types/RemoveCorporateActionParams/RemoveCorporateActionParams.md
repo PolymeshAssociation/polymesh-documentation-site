@@ -4,8 +4,6 @@ title: "Interface: RemoveCorporateActionParams"
 sidebar_label: "RemoveCorporateActionParams"
 ---
 
-# Interface: RemoveCorporateActionParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).RemoveCorporateActionParams
 
 ## Properties

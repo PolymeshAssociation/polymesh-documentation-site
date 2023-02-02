@@ -4,8 +4,6 @@ title: "Class: Venue"
 sidebar_label: "Venue"
 ---
 
-# Class: Venue
-
 [api/entities/Venue](../../../../modules/API/Entities/Venue/Venue.md).Venue
 
 Represents a Venue through which settlements are handled

@@ -4,8 +4,6 @@ title: "Enumeration: TimestampTx"
 sidebar_label: "TimestampTx"
 ---
 
-# Enumeration: TimestampTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).TimestampTx
 
 ## Enumeration Members

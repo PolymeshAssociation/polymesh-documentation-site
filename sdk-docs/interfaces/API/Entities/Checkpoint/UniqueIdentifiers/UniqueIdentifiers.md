@@ -4,8 +4,6 @@ title: "Interface: UniqueIdentifiers"
 sidebar_label: "UniqueIdentifiers"
 ---
 
-# Interface: UniqueIdentifiers
-
 [api/entities/Checkpoint](../../../../../modules/API/Entities/Checkpoint/Checkpoint.md).UniqueIdentifiers
 
 ## Properties

@@ -4,8 +4,6 @@ title: "Interface: MultiClaimCondition"
 sidebar_label: "MultiClaimCondition"
 ---
 
-# Interface: MultiClaimCondition
-
 [types](../../../modules/Types/Types.md).MultiClaimCondition
 
 ## Properties

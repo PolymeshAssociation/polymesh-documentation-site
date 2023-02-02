@@ -4,8 +4,6 @@ title: "Enumeration: ModuleIdEnum"
 sidebar_label: "ModuleIdEnum"
 ---
 
-# Enumeration: ModuleIdEnum
-
 [types](../../../modules/Types/Types.md).ModuleIdEnum
 
 ## Enumeration Members

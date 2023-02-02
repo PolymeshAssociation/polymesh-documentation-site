@@ -4,8 +4,6 @@ title: "Class: Schedules"
 sidebar_label: "Schedules"
 ---
 
-# Class: Schedules
-
 [api/entities/Asset/Checkpoints/Schedules](../../../../../../modules/API/Entities/Asset/Checkpoints/Schedules/Schedules.md).Schedules
 
 Handles all Asset Checkpoint Schedules related functionality

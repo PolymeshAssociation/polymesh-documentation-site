@@ -4,8 +4,6 @@ title: "Interface: TransferPolyxParams"
 sidebar_label: "TransferPolyxParams"
 ---
 
-# Interface: TransferPolyxParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).TransferPolyxParams
 
 ## Properties

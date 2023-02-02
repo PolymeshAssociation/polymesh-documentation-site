@@ -4,8 +4,6 @@ title: "Enumeration: CorporateActionKind"
 sidebar_label: "CorporateActionKind"
 ---
 
-# Enumeration: CorporateActionKind
-
 [api/entities/CorporateActionBase/types](../../../../../../modules/API/Entities/CorporateActionBase/Types/Types.md).CorporateActionKind
 
 ## Enumeration Members

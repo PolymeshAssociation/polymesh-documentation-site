@@ -1,10 +1,8 @@
 ---
 id: "Types"
-title: "Module: api/entities/Instruction/types"
+title: "Module: Instruction Types"
 sidebar_label: "Types"
 ---
-
-# Module: api/entities/Instruction/types
 
 ## Enumerations
 

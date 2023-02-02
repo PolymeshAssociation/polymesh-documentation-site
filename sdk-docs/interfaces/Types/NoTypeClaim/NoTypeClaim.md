@@ -4,8 +4,6 @@ title: "Interface: NoTypeClaim"
 sidebar_label: "NoTypeClaim"
 ---
 
-# Interface: NoTypeClaim
-
 [types](../../../modules/Types/Types.md).NoTypeClaim
 
 ## Properties

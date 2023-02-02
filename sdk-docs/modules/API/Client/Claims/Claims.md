@@ -1,10 +1,8 @@
 ---
 id: "Claims"
-title: "Module: api/client/Claims"
+title: "Module: Claims"
 sidebar_label: "Claims"
 ---
-
-# Module: api/client/Claims
 
 ## Classes
 

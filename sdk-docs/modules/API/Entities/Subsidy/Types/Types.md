@@ -1,10 +1,8 @@
 ---
 id: "Types"
-title: "Module: api/entities/Subsidy/types"
+title: "Module: Subsidy Types"
 sidebar_label: "Types"
 ---
-
-# Module: api/entities/Subsidy/types
 
 ## Interfaces
 

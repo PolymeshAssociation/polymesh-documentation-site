@@ -1,10 +1,8 @@
 ---
 id: "AccountManagement"
-title: "Module: api/client/AccountManagement"
+title: "Module: AccountManagement"
 sidebar_label: "AccountManagement"
 ---
-
-# Module: api/client/AccountManagement
 
 ## Classes
 

@@ -4,8 +4,6 @@ title: "Class: Checkpoint"
 sidebar_label: "Checkpoint"
 ---
 
-# Class: Checkpoint
-
 [api/entities/Checkpoint](../../../../modules/API/Entities/Checkpoint/Checkpoint.md).Checkpoint
 
 Represents a snapshot of the Asset's holders and their respective balances

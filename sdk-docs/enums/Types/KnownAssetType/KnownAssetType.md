@@ -4,8 +4,6 @@ title: "Enumeration: KnownAssetType"
 sidebar_label: "KnownAssetType"
 ---
 
-# Enumeration: KnownAssetType
-
 [types](../../../modules/Types/Types.md).KnownAssetType
 
 ## Enumeration Members

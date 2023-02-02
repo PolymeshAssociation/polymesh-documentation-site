@@ -4,8 +4,6 @@ title: "Enumeration: TechnicalCommitteeTx"
 sidebar_label: "TechnicalCommitteeTx"
 ---
 
-# Enumeration: TechnicalCommitteeTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).TechnicalCommitteeTx
 
 ## Enumeration Members

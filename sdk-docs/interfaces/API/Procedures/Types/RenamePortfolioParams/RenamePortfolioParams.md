@@ -4,8 +4,6 @@ title: "Interface: RenamePortfolioParams"
 sidebar_label: "RenamePortfolioParams"
 ---
 
-# Interface: RenamePortfolioParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).RenamePortfolioParams
 
 ## Properties
