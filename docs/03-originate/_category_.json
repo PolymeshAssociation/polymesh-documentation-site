@@ -1,8 +1,4 @@
 {
   "label": "Originate an Asset",
-  "position": 3,
-  "link": {
-    "type": "generated-index",
-    "description": "Learn how an asset is originated with Polymesh"
-  }
+  "position": 3
 }
