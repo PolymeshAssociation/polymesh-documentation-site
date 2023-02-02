@@ -4,8 +4,6 @@ title: "Interface: CreateCheckpointScheduleParams"
 sidebar_label: "CreateCheckpointScheduleParams"
 ---
 
-# Interface: CreateCheckpointScheduleParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).CreateCheckpointScheduleParams
 
 ## Properties

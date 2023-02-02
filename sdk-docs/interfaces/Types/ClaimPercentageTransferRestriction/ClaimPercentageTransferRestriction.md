@@ -4,8 +4,6 @@ title: "Interface: ClaimPercentageTransferRestriction"
 sidebar_label: "ClaimPercentageTransferRestriction"
 ---
 
-# Interface: ClaimPercentageTransferRestriction
-
 [types](../../../modules/Types/Types.md).ClaimPercentageTransferRestriction
 
 ## Hierarchy

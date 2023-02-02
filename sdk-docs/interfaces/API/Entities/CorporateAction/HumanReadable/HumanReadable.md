@@ -4,8 +4,6 @@ title: "Interface: HumanReadable"
 sidebar_label: "HumanReadable"
 ---
 
-# Interface: HumanReadable
-
 [api/entities/CorporateAction](../../../../../modules/API/Entities/CorporateAction/CorporateAction.md).HumanReadable
 
 ## Hierarchy

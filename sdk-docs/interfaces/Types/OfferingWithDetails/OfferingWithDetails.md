@@ -4,8 +4,6 @@ title: "Interface: OfferingWithDetails"
 sidebar_label: "OfferingWithDetails"
 ---
 
-# Interface: OfferingWithDetails
-
 [types](../../../modules/Types/Types.md).OfferingWithDetails
 
 ## Properties

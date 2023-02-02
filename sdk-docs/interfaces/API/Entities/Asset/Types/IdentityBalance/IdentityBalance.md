@@ -4,8 +4,6 @@ title: "Interface: IdentityBalance"
 sidebar_label: "IdentityBalance"
 ---
 
-# Interface: IdentityBalance
-
 [api/entities/Asset/types](../../../../../../modules/API/Entities/Asset/Types/Types.md).IdentityBalance
 
 Represents the balance of an Asset Holder

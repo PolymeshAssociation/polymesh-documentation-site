@@ -4,8 +4,6 @@ title: "Interface: SellLockupClaim"
 sidebar_label: "SellLockupClaim"
 ---
 
-# Interface: SellLockupClaim
-
 [types](../../../modules/Types/Types.md).SellLockupClaim
 
 ## Properties

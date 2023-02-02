@@ -4,8 +4,6 @@ title: "Interface: SetPercentageTransferRestrictionsParams"
 sidebar_label: "SetPercentageTransferRestrictionsParams"
 ---
 
-# Interface: SetPercentageTransferRestrictionsParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).SetPercentageTransferRestrictionsParams
 
 ## Properties

@@ -4,8 +4,6 @@ title: "Class: Documents"
 sidebar_label: "Documents"
 ---
 
-# Class: Documents
-
 [api/entities/Asset/Documents](../../../../../modules/API/Entities/Asset/Documents/Documents.md).Documents
 
 Handles all Asset Document related functionality

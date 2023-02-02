@@ -4,8 +4,6 @@ title: "Interface: PayingAccountFees"
 sidebar_label: "PayingAccountFees"
 ---
 
-# Interface: PayingAccountFees
-
 [types](../../../modules/Types/Types.md).PayingAccountFees
 
 Breakdown of the fees that will be paid by a specific Account for a transaction, along

@@ -4,8 +4,6 @@ title: "Class: Requirements"
 sidebar_label: "Requirements"
 ---
 
-# Class: Requirements
-
 [api/entities/Asset/Compliance/Requirements](../../../../../../modules/API/Entities/Asset/Compliance/Requirements/Requirements.md).Requirements
 
 Handles all Asset Compliance Requirements related functionality

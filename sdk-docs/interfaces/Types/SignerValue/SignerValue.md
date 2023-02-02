@@ -4,8 +4,6 @@ title: "Interface: SignerValue"
 sidebar_label: "SignerValue"
 ---
 
-# Interface: SignerValue
-
 [types](../../../modules/Types/Types.md).SignerValue
 
 ## Properties

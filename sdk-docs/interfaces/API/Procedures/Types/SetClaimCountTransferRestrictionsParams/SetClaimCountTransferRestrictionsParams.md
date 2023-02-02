@@ -4,8 +4,6 @@ title: "Interface: SetClaimCountTransferRestrictionsParams"
 sidebar_label: "SetClaimCountTransferRestrictionsParams"
 ---
 
-# Interface: SetClaimCountTransferRestrictionsParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).SetClaimCountTransferRestrictionsParams
 
 ## Properties

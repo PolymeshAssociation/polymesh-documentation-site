@@ -4,8 +4,6 @@ title: "Enumeration: StatOpTypeEnum"
 sidebar_label: "StatOpTypeEnum"
 ---
 
-# Enumeration: StatOpTypeEnum
-
 [types](../../../modules/Types/Types.md).StatOpTypeEnum
 
 \n@enumName StatOpTypeEnum

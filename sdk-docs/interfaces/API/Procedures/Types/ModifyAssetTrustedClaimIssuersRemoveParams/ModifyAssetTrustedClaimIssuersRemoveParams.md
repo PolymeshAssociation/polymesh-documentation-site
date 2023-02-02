@@ -4,8 +4,6 @@ title: "Interface: ModifyAssetTrustedClaimIssuersRemoveParams"
 sidebar_label: "ModifyAssetTrustedClaimIssuersRemoveParams"
 ---
 
-# Interface: ModifyAssetTrustedClaimIssuersRemoveParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).ModifyAssetTrustedClaimIssuersRemoveParams
 
 ## Properties

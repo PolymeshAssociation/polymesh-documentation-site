@@ -4,8 +4,6 @@ title: "Enumeration: CorporateBallotTx"
 sidebar_label: "CorporateBallotTx"
 ---
 
-# Enumeration: CorporateBallotTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).CorporateBallotTx
 
 ## Enumeration Members

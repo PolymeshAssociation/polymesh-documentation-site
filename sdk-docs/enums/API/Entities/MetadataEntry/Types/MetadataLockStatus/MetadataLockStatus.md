@@ -4,8 +4,6 @@ title: "Enumeration: MetadataLockStatus"
 sidebar_label: "MetadataLockStatus"
 ---
 
-# Enumeration: MetadataLockStatus
-
 [api/entities/MetadataEntry/types](../../../../../../modules/API/Entities/MetadataEntry/Types/Types.md).MetadataLockStatus
 
 ## Enumeration Members

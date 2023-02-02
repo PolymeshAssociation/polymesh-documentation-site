@@ -1,10 +1,8 @@
 ---
 id: "Schedules"
-title: "Module: api/entities/Asset/Checkpoints/Schedules"
+title: "Module: Schedules"
 sidebar_label: "Schedules"
 ---
-
-# Module: api/entities/Asset/Checkpoints/Schedules
 
 ## Classes
 

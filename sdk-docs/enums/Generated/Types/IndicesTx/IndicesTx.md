@@ -4,8 +4,6 @@ title: "Enumeration: IndicesTx"
 sidebar_label: "IndicesTx"
 ---
 
-# Enumeration: IndicesTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).IndicesTx
 
 ## Enumeration Members

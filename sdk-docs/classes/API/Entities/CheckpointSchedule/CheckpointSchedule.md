@@ -4,8 +4,6 @@ title: "Class: CheckpointSchedule"
 sidebar_label: "CheckpointSchedule"
 ---
 
-# Class: CheckpointSchedule
-
 [api/entities/CheckpointSchedule](../../../../modules/API/Entities/CheckpointSchedule/CheckpointSchedule.md).CheckpointSchedule
 
 Represents a Checkpoint Schedule for an Asset. Schedules can be set up to create Checkpoints at regular intervals

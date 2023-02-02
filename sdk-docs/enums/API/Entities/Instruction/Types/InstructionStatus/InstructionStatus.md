@@ -4,8 +4,6 @@ title: "Enumeration: InstructionStatus"
 sidebar_label: "InstructionStatus"
 ---
 
-# Enumeration: InstructionStatus
-
 [api/entities/Instruction/types](../../../../../../modules/API/Entities/Instruction/Types/Types.md).InstructionStatus
 
 ## Enumeration Members

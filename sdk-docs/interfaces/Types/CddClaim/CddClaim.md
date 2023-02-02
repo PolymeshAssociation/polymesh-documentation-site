@@ -4,8 +4,6 @@ title: "Interface: CddClaim"
 sidebar_label: "CddClaim"
 ---
 
-# Interface: CddClaim
-
 [types](../../../modules/Types/Types.md).CddClaim
 
 ## Properties

@@ -4,8 +4,6 @@ title: "Interface: DividendDistributionDetails"
 sidebar_label: "DividendDistributionDetails"
 ---
 
-# Interface: DividendDistributionDetails
-
 [api/entities/DividendDistribution/types](../../../../../../modules/API/Entities/DividendDistribution/Types/Types.md).DividendDistributionDetails
 
 ## Properties

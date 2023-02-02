@@ -4,8 +4,6 @@ title: "Enumeration: CaCheckpointType"
 sidebar_label: "CaCheckpointType"
 ---
 
-# Enumeration: CaCheckpointType
-
 [api/entities/Asset/Checkpoints/types](../../../../../../../modules/API/Entities/Asset/Checkpoints/Types/Types.md).CaCheckpointType
 
 ## Enumeration Members

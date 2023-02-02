@@ -4,8 +4,6 @@ title: "Interface: ClaimCountRestrictionValue"
 sidebar_label: "ClaimCountRestrictionValue"
 ---
 
-# Interface: ClaimCountRestrictionValue
-
 [types](../../../modules/Types/Types.md).ClaimCountRestrictionValue
 
 ## Properties

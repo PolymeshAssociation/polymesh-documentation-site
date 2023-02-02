@@ -4,8 +4,6 @@ title: "Interface: CddProviderRole"
 sidebar_label: "CddProviderRole"
 ---
 
-# Interface: CddProviderRole
-
 [types](../../../modules/Types/Types.md).CddProviderRole
 
 ## Properties

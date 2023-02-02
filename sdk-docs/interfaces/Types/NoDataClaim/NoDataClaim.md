@@ -4,8 +4,6 @@ title: "Interface: NoDataClaim"
 sidebar_label: "NoDataClaim"
 ---
 
-# Interface: NoDataClaim
-
 [types](../../../modules/Types/Types.md).NoDataClaim
 
 ## Properties

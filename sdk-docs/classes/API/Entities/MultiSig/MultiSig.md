@@ -4,8 +4,6 @@ title: "Class: MultiSig"
 sidebar_label: "MultiSig"
 ---
 
-# Class: MultiSig
-
 [api/entities/MultiSig](../../../../modules/API/Entities/MultiSig/MultiSig.md).MultiSig
 
 Represents a MultiSig Account. A MultiSig Account is composed of one or more signing Accounts. In order to submit a transaction, a specific amount of those signing Accounts must approve it first

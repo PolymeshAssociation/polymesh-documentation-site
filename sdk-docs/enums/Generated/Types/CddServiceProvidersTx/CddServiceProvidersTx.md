@@ -4,8 +4,6 @@ title: "Enumeration: CddServiceProvidersTx"
 sidebar_label: "CddServiceProvidersTx"
 ---
 
-# Enumeration: CddServiceProvidersTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).CddServiceProvidersTx
 
 ## Enumeration Members

@@ -1,10 +1,8 @@
 ---
 id: "Types"
-title: "Module: api/entities/Asset/types"
+title: "Module: Asset Types"
 sidebar_label: "Types"
 ---
-
-# Module: api/entities/Asset/types
 
 ## Interfaces
 

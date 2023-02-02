@@ -1,10 +1,8 @@
 ---
 id: "PolymeshTransaction"
-title: "Module: base/PolymeshTransaction"
+title: "Module: PolymeshTransaction"
 sidebar_label: "PolymeshTransaction"
 ---
-
-# Module: base/PolymeshTransaction
 
 ## Classes
 

@@ -4,8 +4,6 @@ title: "Interface: CorporateActionDefaultConfig"
 sidebar_label: "CorporateActionDefaultConfig"
 ---
 
-# Interface: CorporateActionDefaultConfig
-
 [api/entities/Asset/CorporateActions/types](../../../../../../../modules/API/Entities/Asset/CorporateActions/Types/Types.md).CorporateActionDefaultConfig
 
 ## Properties

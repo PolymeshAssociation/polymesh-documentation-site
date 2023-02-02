@@ -4,8 +4,6 @@ title: "Enumeration: SettlementDirectionEnum"
 sidebar_label: "SettlementDirectionEnum"
 ---
 
-# Enumeration: SettlementDirectionEnum
-
 [types](../../../modules/Types/Types.md).SettlementDirectionEnum
 
 ## Enumeration Members

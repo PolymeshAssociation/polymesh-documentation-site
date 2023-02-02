@@ -4,8 +4,6 @@ title: "Interface: ScheduleWithDetails"
 sidebar_label: "ScheduleWithDetails"
 ---
 
-# Interface: ScheduleWithDetails
-
 [types](../../../modules/Types/Types.md).ScheduleWithDetails
 
 ## Properties

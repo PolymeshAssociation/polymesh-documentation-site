@@ -4,8 +4,6 @@ title: "Enumeration: SystemTx"
 sidebar_label: "SystemTx"
 ---
 
-# Enumeration: SystemTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).SystemTx
 
 ## Enumeration Members

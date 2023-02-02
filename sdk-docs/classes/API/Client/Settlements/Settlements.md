@@ -4,8 +4,6 @@ title: "Class: Settlements"
 sidebar_label: "Settlements"
 ---
 
-# Class: Settlements
-
 [api/client/Settlements](../../../../modules/API/Client/Settlements/Settlements.md).Settlements
 
 Handles all Settlement related functionality

@@ -4,8 +4,6 @@ title: "Interface: HumanReadable"
 sidebar_label: "HumanReadable"
 ---
 
-# Interface: HumanReadable
-
 [api/entities/MetadataEntry](../../../../../modules/API/Entities/MetadataEntry/MetadataEntry.md).HumanReadable
 
 ## Properties

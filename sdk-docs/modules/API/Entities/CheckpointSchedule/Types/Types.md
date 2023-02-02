@@ -1,10 +1,8 @@
 ---
 id: "Types"
-title: "Module: api/entities/CheckpointSchedule/types"
+title: "Module: CheckpointSchedule Types"
 sidebar_label: "Types"
 ---
-
-# Module: api/entities/CheckpointSchedule/types
 
 ## Interfaces
 

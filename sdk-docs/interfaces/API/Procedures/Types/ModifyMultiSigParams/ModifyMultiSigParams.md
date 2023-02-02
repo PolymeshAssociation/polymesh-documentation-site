@@ -4,8 +4,6 @@ title: "Interface: ModifyMultiSigParams"
 sidebar_label: "ModifyMultiSigParams"
 ---
 
-# Interface: ModifyMultiSigParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).ModifyMultiSigParams
 
 ## Properties

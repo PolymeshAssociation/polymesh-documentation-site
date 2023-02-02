@@ -4,8 +4,6 @@ title: "Enumeration: ProposalStatus"
 sidebar_label: "ProposalStatus"
 ---
 
-# Enumeration: ProposalStatus
-
 [api/entities/MultiSigProposal/types](../../../../../../modules/API/Entities/MultiSigProposal/Types/Types.md).ProposalStatus
 
 ## Enumeration Members

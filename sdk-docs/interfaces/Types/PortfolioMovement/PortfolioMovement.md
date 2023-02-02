@@ -4,8 +4,6 @@ title: "Interface: PortfolioMovement"
 sidebar_label: "PortfolioMovement"
 ---
 
-# Interface: PortfolioMovement
-
 [types](../../../modules/Types/Types.md).PortfolioMovement
 
 ## Properties

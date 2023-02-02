@@ -1,10 +1,8 @@
 ---
 id: "ClaimCount"
-title: "Module: api/entities/Asset/TransferRestrictions/ClaimCount"
+title: "Module: ClaimCount"
 sidebar_label: "ClaimCount"
 ---
-
-# Module: api/entities/Asset/TransferRestrictions/ClaimCount
 
 ## Classes
 

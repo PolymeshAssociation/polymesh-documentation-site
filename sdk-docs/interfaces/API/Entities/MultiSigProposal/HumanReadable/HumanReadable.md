@@ -4,8 +4,6 @@ title: "Interface: HumanReadable"
 sidebar_label: "HumanReadable"
 ---
 
-# Interface: HumanReadable
-
 [api/entities/MultiSigProposal](../../../../../modules/API/Entities/MultiSigProposal/MultiSigProposal.md).HumanReadable
 
 ## Properties

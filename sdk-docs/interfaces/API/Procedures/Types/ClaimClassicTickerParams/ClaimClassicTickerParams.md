@@ -4,8 +4,6 @@ title: "Interface: ClaimClassicTickerParams"
 sidebar_label: "ClaimClassicTickerParams"
 ---
 
-# Interface: ClaimClassicTickerParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).ClaimClassicTickerParams
 
 ## Properties

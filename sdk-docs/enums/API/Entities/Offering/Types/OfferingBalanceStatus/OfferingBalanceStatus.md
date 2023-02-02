@@ -4,8 +4,6 @@ title: "Enumeration: OfferingBalanceStatus"
 sidebar_label: "OfferingBalanceStatus"
 ---
 
-# Enumeration: OfferingBalanceStatus
-
 [api/entities/Offering/types](../../../../../../modules/API/Entities/Offering/Types/Types.md).OfferingBalanceStatus
 
 ## Enumeration Members

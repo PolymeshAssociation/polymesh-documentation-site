@@ -1,10 +1,8 @@
 ---
 id: "Checkpoint"
-title: "Module: api/entities/Checkpoint"
+title: "Module: Checkpoint"
 sidebar_label: "Checkpoint"
 ---
-
-# Module: api/entities/Checkpoint
 
 ## Classes
 

@@ -4,8 +4,6 @@ title: "Interface: Leg"
 sidebar_label: "Leg"
 ---
 
-# Interface: Leg
-
 [api/entities/Instruction/types](../../../../../../modules/API/Entities/Instruction/Types/Types.md).Leg
 
 ## Hierarchy

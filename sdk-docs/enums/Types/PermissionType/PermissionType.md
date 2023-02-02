@@ -4,8 +4,6 @@ title: "Enumeration: PermissionType"
 sidebar_label: "PermissionType"
 ---
 
-# Enumeration: PermissionType
-
 [types](../../../modules/Types/Types.md).PermissionType
 
 ## Enumeration Members

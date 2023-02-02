@@ -4,8 +4,6 @@ title: "Class: Subsidy"
 sidebar_label: "Subsidy"
 ---
 
-# Class: Subsidy
-
 [api/entities/Subsidy](../../../../modules/API/Entities/Subsidy/Subsidy.md).Subsidy
 
 Represents a Subsidy relationship on chain

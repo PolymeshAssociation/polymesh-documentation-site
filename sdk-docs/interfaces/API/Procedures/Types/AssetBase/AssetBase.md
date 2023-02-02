@@ -4,8 +4,6 @@ title: "Interface: AssetBase"
 sidebar_label: "AssetBase"
 ---
 
-# Interface: AssetBase
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).AssetBase
 
 ## Hierarchy

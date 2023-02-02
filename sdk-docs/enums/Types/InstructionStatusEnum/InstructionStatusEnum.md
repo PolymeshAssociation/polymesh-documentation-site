@@ -4,8 +4,6 @@ title: "Enumeration: InstructionStatusEnum"
 sidebar_label: "InstructionStatusEnum"
 ---
 
-# Enumeration: InstructionStatusEnum
-
 [types](../../../modules/Types/Types.md).InstructionStatusEnum
 
 \n@enumName InstructionStatusEnum

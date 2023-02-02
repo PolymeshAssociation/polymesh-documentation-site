@@ -1,10 +1,8 @@
 ---
 id: "Types"
-title: "Module: api/entities/MultiSigProposal/types"
+title: "Module: MultiSigProposal Types"
 sidebar_label: "Types"
 ---
-
-# Module: api/entities/MultiSigProposal/types
 
 ## Enumerations
 

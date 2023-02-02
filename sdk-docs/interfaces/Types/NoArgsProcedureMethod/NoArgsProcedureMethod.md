@@ -4,8 +4,6 @@ title: "Interface: NoArgsProcedureMethod<ProcedureReturnValue, ReturnValue>"
 sidebar_label: "NoArgsProcedureMethod"
 ---
 
-# Interface: NoArgsProcedureMethod<ProcedureReturnValue, ReturnValue\>
-
 [types](../../../modules/Types/Types.md).NoArgsProcedureMethod
 
 ## Type parameters

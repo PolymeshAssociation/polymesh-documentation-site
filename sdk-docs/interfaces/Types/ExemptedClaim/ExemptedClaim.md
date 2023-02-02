@@ -4,8 +4,6 @@ title: "Interface: ExemptedClaim"
 sidebar_label: "ExemptedClaim"
 ---
 
-# Interface: ExemptedClaim
-
 [types](../../../modules/Types/Types.md).ExemptedClaim
 
 ## Properties

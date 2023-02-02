@@ -4,8 +4,6 @@ title: "Interface: TransferTickerOwnershipParams"
 sidebar_label: "TransferTickerOwnershipParams"
 ---
 
-# Interface: TransferTickerOwnershipParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).TransferTickerOwnershipParams
 
 ## Properties

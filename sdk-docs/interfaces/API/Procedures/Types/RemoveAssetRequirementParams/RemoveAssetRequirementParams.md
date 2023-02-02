@@ -4,8 +4,6 @@ title: "Interface: RemoveAssetRequirementParams"
 sidebar_label: "RemoveAssetRequirementParams"
 ---
 
-# Interface: RemoveAssetRequirementParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).RemoveAssetRequirementParams
 
 ## Properties

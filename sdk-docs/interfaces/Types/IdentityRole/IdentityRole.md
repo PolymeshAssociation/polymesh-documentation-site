@@ -4,8 +4,6 @@ title: "Interface: IdentityRole"
 sidebar_label: "IdentityRole"
 ---
 
-# Interface: IdentityRole
-
 [types](../../../modules/Types/Types.md).IdentityRole
 
 ## Properties

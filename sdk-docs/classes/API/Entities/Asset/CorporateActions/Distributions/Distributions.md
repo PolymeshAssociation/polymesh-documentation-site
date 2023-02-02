@@ -4,8 +4,6 @@ title: "Class: Distributions"
 sidebar_label: "Distributions"
 ---
 
-# Class: Distributions
-
 [api/entities/Asset/CorporateActions/Distributions](../../../../../../modules/API/Entities/Asset/CorporateActions/Distributions/Distributions.md).Distributions
 
 Handles all Asset Distributions related functionality

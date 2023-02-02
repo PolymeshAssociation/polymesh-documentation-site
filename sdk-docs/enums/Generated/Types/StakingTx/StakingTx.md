@@ -4,8 +4,6 @@ title: "Enumeration: StakingTx"
 sidebar_label: "StakingTx"
 ---
 
-# Enumeration: StakingTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).StakingTx
 
 ## Enumeration Members

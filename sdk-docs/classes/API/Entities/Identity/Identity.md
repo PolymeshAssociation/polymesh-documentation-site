@@ -4,8 +4,6 @@ title: "Class: Identity"
 sidebar_label: "Identity"
 ---
 
-# Class: Identity
-
 [api/entities/Identity](../../../../modules/API/Entities/Identity/Identity.md).Identity
 
 Represents an Identity in the Polymesh blockchain

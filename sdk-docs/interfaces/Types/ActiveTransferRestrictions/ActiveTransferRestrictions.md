@@ -4,8 +4,6 @@ title: "Interface: ActiveTransferRestrictions<Restriction>"
 sidebar_label: "ActiveTransferRestrictions"
 ---
 
-# Interface: ActiveTransferRestrictions<Restriction\>
-
 [types](../../../modules/Types/Types.md).ActiveTransferRestrictions
 
 ## Type parameters

@@ -4,8 +4,6 @@ title: "Interface: ConnectParams"
 sidebar_label: "ConnectParams"
 ---
 
-# Interface: ConnectParams
-
 [api/client/Polymesh](../../../../../modules/API/Client/Polymesh/Polymesh.md).ConnectParams
 
 ## Properties

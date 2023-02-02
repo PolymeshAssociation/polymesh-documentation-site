@@ -4,8 +4,6 @@ title: "Enumeration: PermissionGroupType"
 sidebar_label: "PermissionGroupType"
 ---
 
-# Enumeration: PermissionGroupType
-
 [types](../../../modules/Types/Types.md).PermissionGroupType
 
 ## Enumeration Members

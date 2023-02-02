@@ -4,8 +4,6 @@ title: "Interface: CalendarPeriod"
 sidebar_label: "CalendarPeriod"
 ---
 
-# Interface: CalendarPeriod
-
 [types](../../../modules/Types/Types.md).CalendarPeriod
 
 Represents a period of time measured in a specific unit (e.g. 20 days)

@@ -4,8 +4,6 @@ title: "Interface: TxData<Args>"
 sidebar_label: "TxData"
 ---
 
-# Interface: TxData<Args\>
-
 [types](../../../modules/Types/Types.md).TxData
 
 Transaction data for display purposes

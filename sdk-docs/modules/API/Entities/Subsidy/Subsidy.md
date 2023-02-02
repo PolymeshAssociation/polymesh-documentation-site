@@ -1,10 +1,8 @@
 ---
 id: "Subsidy"
-title: "Module: api/entities/Subsidy"
+title: "Module: Subsidy"
 sidebar_label: "Subsidy"
 ---
-
-# Module: api/entities/Subsidy
 
 ## Classes
 

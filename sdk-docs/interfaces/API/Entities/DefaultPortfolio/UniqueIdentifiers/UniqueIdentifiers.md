@@ -4,8 +4,6 @@ title: "Interface: UniqueIdentifiers"
 sidebar_label: "UniqueIdentifiers"
 ---
 
-# Interface: UniqueIdentifiers
-
 [api/entities/DefaultPortfolio](../../../../../modules/API/Entities/DefaultPortfolio/DefaultPortfolio.md).UniqueIdentifiers
 
 ## Properties

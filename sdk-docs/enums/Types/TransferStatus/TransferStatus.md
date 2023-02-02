@@ -4,8 +4,6 @@ title: "Enumeration: TransferStatus"
 sidebar_label: "TransferStatus"
 ---
 
-# Enumeration: TransferStatus
-
 [types](../../../modules/Types/Types.md).TransferStatus
 
 ERC1400 compliant transfer status

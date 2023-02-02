@@ -4,8 +4,6 @@ title: "Class: Account"
 sidebar_label: "Account"
 ---
 
-# Class: Account
-
 [api/entities/Account](../../../../modules/API/Entities/Account/Account.md).Account
 
 Represents an Account in the Polymesh blockchain. Accounts can hold POLYX, control Identities and vote on proposals (among other things)

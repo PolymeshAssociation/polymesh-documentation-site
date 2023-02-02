@@ -4,8 +4,6 @@ title: "Enumeration: AuthorshipTx"
 sidebar_label: "AuthorshipTx"
 ---
 
-# Enumeration: AuthorshipTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).AuthorshipTx
 
 ## Enumeration Members

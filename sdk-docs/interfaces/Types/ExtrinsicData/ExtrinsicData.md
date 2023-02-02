@@ -4,8 +4,6 @@ title: "Interface: ExtrinsicData"
 sidebar_label: "ExtrinsicData"
 ---
 
-# Interface: ExtrinsicData
-
 [types](../../../modules/Types/Types.md).ExtrinsicData
 
 ## Hierarchy

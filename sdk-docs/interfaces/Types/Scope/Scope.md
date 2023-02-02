@@ -4,8 +4,6 @@ title: "Interface: Scope"
 sidebar_label: "Scope"
 ---
 
-# Interface: Scope
-
 [types](../../../modules/Types/Types.md).Scope
 
 ## Properties

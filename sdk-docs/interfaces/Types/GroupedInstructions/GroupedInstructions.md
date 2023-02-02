@@ -4,8 +4,6 @@ title: "Interface: GroupedInstructions"
 sidebar_label: "GroupedInstructions"
 ---
 
-# Interface: GroupedInstructions
-
 [types](../../../modules/Types/Types.md).GroupedInstructions
 
 ## Properties

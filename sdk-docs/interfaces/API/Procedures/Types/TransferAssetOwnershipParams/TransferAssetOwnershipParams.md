@@ -4,8 +4,6 @@ title: "Interface: TransferAssetOwnershipParams"
 sidebar_label: "TransferAssetOwnershipParams"
 ---
 
-# Interface: TransferAssetOwnershipParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).TransferAssetOwnershipParams
 
 ## Properties

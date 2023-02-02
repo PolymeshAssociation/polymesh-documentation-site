@@ -4,8 +4,6 @@ title: "Interface: InstructionAffirmation"
 sidebar_label: "InstructionAffirmation"
 ---
 
-# Interface: InstructionAffirmation
-
 [api/entities/Instruction/types](../../../../../../modules/API/Entities/Instruction/Types/Types.md).InstructionAffirmation
 
 ## Properties

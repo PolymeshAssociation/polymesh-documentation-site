@@ -4,8 +4,6 @@ title: "Interface: ExtrinsicDataWithFees"
 sidebar_label: "ExtrinsicDataWithFees"
 ---
 
-# Interface: ExtrinsicDataWithFees
-
 [types](../../../modules/Types/Types.md).ExtrinsicDataWithFees
 
 ## Hierarchy

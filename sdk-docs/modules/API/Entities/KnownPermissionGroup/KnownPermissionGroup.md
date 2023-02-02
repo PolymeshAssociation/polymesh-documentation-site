@@ -1,10 +1,8 @@
 ---
 id: "KnownPermissionGroup"
-title: "Module: api/entities/KnownPermissionGroup"
+title: "Module: KnownPermissionGroup"
 sidebar_label: "KnownPermissionGroup"
 ---
-
-# Module: api/entities/KnownPermissionGroup
 
 ## Classes
 

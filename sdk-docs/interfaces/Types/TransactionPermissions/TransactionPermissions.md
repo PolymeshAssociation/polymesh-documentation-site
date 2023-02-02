@@ -4,8 +4,6 @@ title: "Interface: TransactionPermissions"
 sidebar_label: "TransactionPermissions"
 ---
 
-# Interface: TransactionPermissions
-
 [types](../../../modules/Types/Types.md).TransactionPermissions
 
 Permissions related to Transactions. Can include/exclude individual transactions or entire modules

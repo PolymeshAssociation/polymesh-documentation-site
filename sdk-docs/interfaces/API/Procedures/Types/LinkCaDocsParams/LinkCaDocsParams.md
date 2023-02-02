@@ -4,8 +4,6 @@ title: "Interface: LinkCaDocsParams"
 sidebar_label: "LinkCaDocsParams"
 ---
 
-# Interface: LinkCaDocsParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).LinkCaDocsParams
 
 ## Properties

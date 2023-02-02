@@ -4,8 +4,6 @@ title: "Interface: AddInstructionWithVenueIdParams"
 sidebar_label: "AddInstructionWithVenueIdParams"
 ---
 
-# Interface: AddInstructionWithVenueIdParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).AddInstructionWithVenueIdParams
 
 ## Hierarchy

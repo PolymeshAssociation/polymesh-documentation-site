@@ -4,8 +4,6 @@ title: "Class: Authorizations<Parent>"
 sidebar_label: "Authorizations"
 ---
 
-# Class: Authorizations<Parent\>
-
 [api/entities/common/namespaces/Authorizations](../../../../../../modules/API/Entities/Common/Namespaces/Authorizations/Authorizations.md).Authorizations
 
 Handles all Authorization related functionality

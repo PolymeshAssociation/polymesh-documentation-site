@@ -1,10 +1,8 @@
 ---
 id: "Types"
-title: "Module: base/types"
+title: "Module: Base Types"
 sidebar_label: "Types"
 ---
-
-# Module: base/types
 
 ## Type Aliases
 

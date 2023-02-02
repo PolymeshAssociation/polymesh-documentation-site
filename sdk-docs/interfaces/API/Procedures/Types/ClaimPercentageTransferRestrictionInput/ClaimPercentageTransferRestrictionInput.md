@@ -4,8 +4,6 @@ title: "Interface: ClaimPercentageTransferRestrictionInput"
 sidebar_label: "ClaimPercentageTransferRestrictionInput"
 ---
 
-# Interface: ClaimPercentageTransferRestrictionInput
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).ClaimPercentageTransferRestrictionInput
 
 ## Hierarchy

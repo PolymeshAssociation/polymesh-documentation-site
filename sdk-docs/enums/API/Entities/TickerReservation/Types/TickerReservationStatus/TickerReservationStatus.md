@@ -4,8 +4,6 @@ title: "Enumeration: TickerReservationStatus"
 sidebar_label: "TickerReservationStatus"
 ---
 
-# Enumeration: TickerReservationStatus
-
 [api/entities/TickerReservation/types](../../../../../../modules/API/Entities/TickerReservation/Types/Types.md).TickerReservationStatus
 
 ## Enumeration Members

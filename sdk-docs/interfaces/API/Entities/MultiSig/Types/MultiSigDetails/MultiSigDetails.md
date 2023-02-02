@@ -4,8 +4,6 @@ title: "Interface: MultiSigDetails"
 sidebar_label: "MultiSigDetails"
 ---
 
-# Interface: MultiSigDetails
-
 [api/entities/MultiSig/types](../../../../../../modules/API/Entities/MultiSig/Types/Types.md).MultiSigDetails
 
 ## Properties

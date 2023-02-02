@@ -4,8 +4,6 @@ title: "Interface: HumanReadable"
 sidebar_label: "HumanReadable"
 ---
 
-# Interface: HumanReadable
-
 [api/entities/Portfolio](../../../../../modules/API/Entities/Portfolio/Portfolio.md).HumanReadable
 
 ## Properties

@@ -1,10 +1,8 @@
 ---
 id: "Count"
-title: "Module: api/entities/Asset/TransferRestrictions/Count"
+title: "Module: Count"
 sidebar_label: "Count"
 ---
-
-# Module: api/entities/Asset/TransferRestrictions/Count
 
 ## Classes
 

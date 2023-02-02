@@ -4,8 +4,6 @@ title: "Interface: PermissionGroups"
 sidebar_label: "PermissionGroups"
 ---
 
-# Interface: PermissionGroups
-
 [types](../../../modules/Types/Types.md).PermissionGroups
 
 All Permission Groups of a specific Asset, separated by `known` and `custom`

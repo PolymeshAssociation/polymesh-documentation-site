@@ -4,8 +4,6 @@ title: "Enumeration: UtilityTx"
 sidebar_label: "UtilityTx"
 ---
 
-# Enumeration: UtilityTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).UtilityTx
 
 ## Enumeration Members

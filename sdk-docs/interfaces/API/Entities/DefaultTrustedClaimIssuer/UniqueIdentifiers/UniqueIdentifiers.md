@@ -4,8 +4,6 @@ title: "Interface: UniqueIdentifiers"
 sidebar_label: "UniqueIdentifiers"
 ---
 
-# Interface: UniqueIdentifiers
-
 [api/entities/DefaultTrustedClaimIssuer](../../../../../modules/API/Entities/DefaultTrustedClaimIssuer/DefaultTrustedClaimIssuer.md).UniqueIdentifiers
 
 ## Properties

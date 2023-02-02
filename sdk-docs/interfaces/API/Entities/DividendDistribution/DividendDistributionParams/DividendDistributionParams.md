@@ -4,8 +4,6 @@ title: "Interface: DividendDistributionParams"
 sidebar_label: "DividendDistributionParams"
 ---
 
-# Interface: DividendDistributionParams
-
 [api/entities/DividendDistribution](../../../../../modules/API/Entities/DividendDistribution/DividendDistribution.md).DividendDistributionParams
 
 ## Properties

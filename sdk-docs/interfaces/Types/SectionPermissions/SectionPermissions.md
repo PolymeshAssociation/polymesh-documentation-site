@@ -4,8 +4,6 @@ title: "Interface: SectionPermissions<T>"
 sidebar_label: "SectionPermissions"
 ---
 
-# Interface: SectionPermissions<T\>
-
 [types](../../../modules/Types/Types.md).SectionPermissions
 
 Signer/agent permissions for a specific type

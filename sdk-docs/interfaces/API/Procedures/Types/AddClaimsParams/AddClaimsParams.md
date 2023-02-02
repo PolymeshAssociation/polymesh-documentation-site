@@ -4,8 +4,6 @@ title: "Interface: AddClaimsParams"
 sidebar_label: "AddClaimsParams"
 ---
 
-# Interface: AddClaimsParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).AddClaimsParams
 
 ## Properties

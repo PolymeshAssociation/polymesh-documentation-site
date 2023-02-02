@@ -4,8 +4,6 @@ title: "Interface: ModifyInstructionAffirmationParams"
 sidebar_label: "ModifyInstructionAffirmationParams"
 ---
 
-# Interface: ModifyInstructionAffirmationParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).ModifyInstructionAffirmationParams
 
 ## Properties

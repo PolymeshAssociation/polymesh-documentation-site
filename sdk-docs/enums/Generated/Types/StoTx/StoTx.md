@@ -4,8 +4,6 @@ title: "Enumeration: StoTx"
 sidebar_label: "StoTx"
 ---
 
-# Enumeration: StoTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).StoTx
 
 ## Enumeration Members

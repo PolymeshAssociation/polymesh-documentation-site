@@ -4,8 +4,6 @@ title: "Interface: StatClaimIssuer"
 sidebar_label: "StatClaimIssuer"
 ---
 
-# Interface: StatClaimIssuer
-
 [types](../../../modules/Types/Types.md).StatClaimIssuer
 
 ## Properties

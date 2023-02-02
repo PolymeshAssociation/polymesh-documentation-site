@@ -4,8 +4,6 @@ title: "Interface: UniqueIdentifiers"
 sidebar_label: "UniqueIdentifiers"
 ---
 
-# Interface: UniqueIdentifiers
-
 [api/entities/Offering](../../../../../modules/API/Entities/Offering/Offering.md).UniqueIdentifiers
 
 ## Properties

@@ -4,8 +4,6 @@ title: "Interface: DistributionParticipant"
 sidebar_label: "DistributionParticipant"
 ---
 
-# Interface: DistributionParticipant
-
 [api/entities/DividendDistribution/types](../../../../../../modules/API/Entities/DividendDistribution/Types/Types.md).DistributionParticipant
 
 ## Properties

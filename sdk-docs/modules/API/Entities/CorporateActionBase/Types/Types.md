@@ -1,10 +1,8 @@
 ---
 id: "Types"
-title: "Module: api/entities/CorporateActionBase/types"
+title: "Module: CorporateActionBase Types"
 sidebar_label: "Types"
 ---
-
-# Module: api/entities/CorporateActionBase/types
 
 ## Enumerations
 

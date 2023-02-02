@@ -1,10 +1,8 @@
 ---
 id: "Compliance"
-title: "Module: api/entities/Asset/Compliance"
+title: "Module: Compliance"
 sidebar_label: "Compliance"
 ---
-
-# Module: api/entities/Asset/Compliance
 
 ## Classes
 

@@ -4,8 +4,6 @@ title: "Interface: PortfolioBalance"
 sidebar_label: "PortfolioBalance"
 ---
 
-# Interface: PortfolioBalance
-
 [api/entities/Portfolio/types](../../../../../../modules/API/Entities/Portfolio/Types/Types.md).PortfolioBalance
 
 ## Hierarchy

@@ -4,8 +4,6 @@ title: "Interface: PaginationOptions"
 sidebar_label: "PaginationOptions"
 ---
 
-# Interface: PaginationOptions
-
 [types](../../../modules/Types/Types.md).PaginationOptions
 
 ## Properties

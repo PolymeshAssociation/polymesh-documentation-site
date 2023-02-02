@@ -4,8 +4,6 @@ title: "Interface: PercentageTransferRestriction"
 sidebar_label: "PercentageTransferRestriction"
 ---
 
-# Interface: PercentageTransferRestriction
-
 [types](../../../modules/Types/Types.md).PercentageTransferRestriction
 
 ## Hierarchy

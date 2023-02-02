@@ -4,8 +4,6 @@ title: "Interface: AddInstructionsParams"
 sidebar_label: "AddInstructionsParams"
 ---
 
-# Interface: AddInstructionsParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).AddInstructionsParams
 
 ## Properties

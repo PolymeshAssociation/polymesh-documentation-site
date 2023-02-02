@@ -4,8 +4,6 @@ title: "Interface: StatAccreditedClaimInput"
 sidebar_label: "StatAccreditedClaimInput"
 ---
 
-# Interface: StatAccreditedClaimInput
-
 [types](../../../modules/Types/Types.md).StatAccreditedClaimInput
 
 ## Properties

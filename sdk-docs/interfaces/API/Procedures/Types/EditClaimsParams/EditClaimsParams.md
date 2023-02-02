@@ -4,8 +4,6 @@ title: "Interface: EditClaimsParams"
 sidebar_label: "EditClaimsParams"
 ---
 
-# Interface: EditClaimsParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).EditClaimsParams
 
 ## Properties

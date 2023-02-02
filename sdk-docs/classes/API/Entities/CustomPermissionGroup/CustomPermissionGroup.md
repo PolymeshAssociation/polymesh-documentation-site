@@ -4,8 +4,6 @@ title: "Class: CustomPermissionGroup"
 sidebar_label: "CustomPermissionGroup"
 ---
 
-# Class: CustomPermissionGroup
-
 [api/entities/CustomPermissionGroup](../../../../modules/API/Entities/CustomPermissionGroup/CustomPermissionGroup.md).CustomPermissionGroup
 
 Represents a group of custom permissions for an Asset

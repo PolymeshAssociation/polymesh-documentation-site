@@ -4,8 +4,6 @@ title: "Enumeration: TestUtilsTx"
 sidebar_label: "TestUtilsTx"
 ---
 
-# Enumeration: TestUtilsTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).TestUtilsTx
 
 ## Enumeration Members

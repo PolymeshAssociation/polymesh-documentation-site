@@ -4,8 +4,6 @@ title: "Interface: PlainTransactionArgument"
 sidebar_label: "PlainTransactionArgument"
 ---
 
-# Interface: PlainTransactionArgument
-
 [types](../../../modules/Types/Types.md).PlainTransactionArgument
 
 ## Properties

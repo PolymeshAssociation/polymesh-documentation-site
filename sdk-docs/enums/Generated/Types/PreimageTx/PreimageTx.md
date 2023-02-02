@@ -4,8 +4,6 @@ title: "Enumeration: PreimageTx"
 sidebar_label: "PreimageTx"
 ---
 
-# Enumeration: PreimageTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).PreimageTx
 
 ## Enumeration Members

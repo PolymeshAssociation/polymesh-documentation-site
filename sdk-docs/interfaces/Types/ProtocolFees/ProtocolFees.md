@@ -4,8 +4,6 @@ title: "Interface: ProtocolFees"
 sidebar_label: "ProtocolFees"
 ---
 
-# Interface: ProtocolFees
-
 [types](../../../modules/Types/Types.md).ProtocolFees
 
 ## Properties

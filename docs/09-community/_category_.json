@@ -1,8 +1,4 @@
 {
   "label": "Community",
-  "position": 9,
-  "link": {
-    "type": "generated-index",
-    "description": "Community links and Bug Bounty Program"
-  }
+  "position": 9
 }

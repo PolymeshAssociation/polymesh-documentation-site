@@ -1,10 +1,8 @@
 ---
 id: "IdentityAuthorizations"
-title: "Module: api/entities/Identity/IdentityAuthorizations"
+title: "Module: IdentityAuthorizations"
 sidebar_label: "IdentityAuthorizations"
 ---
-
-# Module: api/entities/Identity/IdentityAuthorizations
 
 ## Classes
 

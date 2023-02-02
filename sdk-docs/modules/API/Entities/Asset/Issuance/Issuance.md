@@ -1,10 +1,8 @@
 ---
 id: "Issuance"
-title: "Module: api/entities/Asset/Issuance"
+title: "Module: Issuance"
 sidebar_label: "Issuance"
 ---
-
-# Module: api/entities/Asset/Issuance
 
 ## Classes
 

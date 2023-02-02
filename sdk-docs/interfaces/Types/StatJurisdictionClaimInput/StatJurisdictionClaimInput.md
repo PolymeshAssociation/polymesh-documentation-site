@@ -4,8 +4,6 @@ title: "Interface: StatJurisdictionClaimInput"
 sidebar_label: "StatJurisdictionClaimInput"
 ---
 
-# Interface: StatJurisdictionClaimInput
-
 [types](../../../modules/Types/Types.md).StatJurisdictionClaimInput
 
 ## Properties

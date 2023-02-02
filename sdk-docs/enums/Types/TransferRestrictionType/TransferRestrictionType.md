@@ -4,8 +4,6 @@ title: "Enumeration: TransferRestrictionType"
 sidebar_label: "TransferRestrictionType"
 ---
 
-# Enumeration: TransferRestrictionType
-
 [types](../../../modules/Types/Types.md).TransferRestrictionType
 
 ## Enumeration Members

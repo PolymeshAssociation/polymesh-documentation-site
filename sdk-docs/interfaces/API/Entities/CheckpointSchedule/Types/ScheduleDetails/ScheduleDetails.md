@@ -4,8 +4,6 @@ title: "Interface: ScheduleDetails"
 sidebar_label: "ScheduleDetails"
 ---
 
-# Interface: ScheduleDetails
-
 [api/entities/CheckpointSchedule/types](../../../../../../modules/API/Entities/CheckpointSchedule/Types/Types.md).ScheduleDetails
 
 ## Properties

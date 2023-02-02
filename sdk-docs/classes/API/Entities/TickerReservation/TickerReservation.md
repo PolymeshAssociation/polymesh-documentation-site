@@ -4,8 +4,6 @@ title: "Class: TickerReservation"
 sidebar_label: "TickerReservation"
 ---
 
-# Class: TickerReservation
-
 [api/entities/TickerReservation](../../../../modules/API/Entities/TickerReservation/TickerReservation.md).TickerReservation
 
 Represents a reserved Asset symbol in the Polymesh blockchain. Ticker reservations expire

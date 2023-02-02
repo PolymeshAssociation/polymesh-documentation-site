@@ -4,8 +4,6 @@ title: "Interface: Balance"
 sidebar_label: "Balance"
 ---
 
-# Interface: Balance
-
 [types](../../../modules/Types/Types.md).Balance
 
 ## Hierarchy

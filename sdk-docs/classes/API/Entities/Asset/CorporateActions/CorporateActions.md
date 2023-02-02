@@ -4,8 +4,6 @@ title: "Class: CorporateActions"
 sidebar_label: "CorporateActions"
 ---
 
-# Class: CorporateActions
-
 [api/entities/Asset/CorporateActions](../../../../../modules/API/Entities/Asset/CorporateActions/CorporateActions.md).CorporateActions
 
 Handles all Asset Corporate Actions related functionality

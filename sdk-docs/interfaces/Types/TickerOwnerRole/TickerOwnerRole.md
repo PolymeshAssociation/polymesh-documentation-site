@@ -4,8 +4,6 @@ title: "Interface: TickerOwnerRole"
 sidebar_label: "TickerOwnerRole"
 ---
 
-# Interface: TickerOwnerRole
-
 [types](../../../modules/Types/Types.md).TickerOwnerRole
 
 ## Properties

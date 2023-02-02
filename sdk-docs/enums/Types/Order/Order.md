@@ -4,8 +4,6 @@ title: "Enumeration: Order"
 sidebar_label: "Order"
 ---
 
-# Enumeration: Order
-
 [types](../../../modules/Types/Types.md).Order
 
 ## Enumeration Members

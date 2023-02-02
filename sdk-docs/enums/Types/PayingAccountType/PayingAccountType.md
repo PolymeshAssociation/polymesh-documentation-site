@@ -4,8 +4,6 @@ title: "Enumeration: PayingAccountType"
 sidebar_label: "PayingAccountType"
 ---
 
-# Enumeration: PayingAccountType
-
 [types](../../../modules/Types/Types.md).PayingAccountType
 
 Type of relationship between a paying account and a beneficiary

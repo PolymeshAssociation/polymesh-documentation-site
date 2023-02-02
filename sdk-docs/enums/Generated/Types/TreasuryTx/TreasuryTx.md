@@ -4,8 +4,6 @@ title: "Enumeration: TreasuryTx"
 sidebar_label: "TreasuryTx"
 ---
 
-# Enumeration: TreasuryTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).TreasuryTx
 
 ## Enumeration Members

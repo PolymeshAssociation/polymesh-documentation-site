@@ -4,8 +4,6 @@ title: "Interface: RemoveCheckpointScheduleParams"
 sidebar_label: "RemoveCheckpointScheduleParams"
 ---
 
-# Interface: RemoveCheckpointScheduleParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).RemoveCheckpointScheduleParams
 
 ## Properties

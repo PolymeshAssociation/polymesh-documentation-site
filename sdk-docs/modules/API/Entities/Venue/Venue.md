@@ -1,10 +1,8 @@
 ---
 id: "Venue"
-title: "Module: api/entities/Venue"
+title: "Module: Venue"
 sidebar_label: "Venue"
 ---
-
-# Module: api/entities/Venue
 
 ## Classes
 

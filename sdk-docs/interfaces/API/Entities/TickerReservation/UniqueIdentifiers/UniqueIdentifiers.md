@@ -4,8 +4,6 @@ title: "Interface: UniqueIdentifiers"
 sidebar_label: "UniqueIdentifiers"
 ---
 
-# Interface: UniqueIdentifiers
-
 [api/entities/TickerReservation](../../../../../modules/API/Entities/TickerReservation/TickerReservation.md).UniqueIdentifiers
 
 Properties that uniquely identify a TickerReservation

@@ -4,8 +4,6 @@ title: "Class: Checkpoints"
 sidebar_label: "Checkpoints"
 ---
 
-# Class: Checkpoints
-
 [api/entities/Asset/Checkpoints](../../../../../modules/API/Entities/Asset/Checkpoints/Checkpoints.md).Checkpoints
 
 Handles all Asset Checkpoints related functionality

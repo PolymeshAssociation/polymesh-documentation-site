@@ -4,8 +4,6 @@ title: "Interface: ClaimPercentageRestrictionValue"
 sidebar_label: "ClaimPercentageRestrictionValue"
 ---
 
-# Interface: ClaimPercentageRestrictionValue
-
 [types](../../../modules/Types/Types.md).ClaimPercentageRestrictionValue
 
 ## Properties

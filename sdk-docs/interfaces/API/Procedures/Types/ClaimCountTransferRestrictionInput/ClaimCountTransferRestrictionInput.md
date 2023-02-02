@@ -4,8 +4,6 @@ title: "Interface: ClaimCountTransferRestrictionInput"
 sidebar_label: "ClaimCountTransferRestrictionInput"
 ---
 
-# Interface: ClaimCountTransferRestrictionInput
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).ClaimCountTransferRestrictionInput
 
 ## Hierarchy

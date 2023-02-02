@@ -4,8 +4,6 @@ title: "Interface: Compliance"
 sidebar_label: "Compliance"
 ---
 
-# Interface: Compliance
-
 [types](../../../modules/Types/Types.md).Compliance
 
 ## Properties

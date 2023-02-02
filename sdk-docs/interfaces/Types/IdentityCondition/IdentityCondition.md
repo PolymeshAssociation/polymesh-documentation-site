@@ -4,8 +4,6 @@ title: "Interface: IdentityCondition"
 sidebar_label: "IdentityCondition"
 ---
 
-# Interface: IdentityCondition
-
 [types](../../../modules/Types/Types.md).IdentityCondition
 
 ## Properties

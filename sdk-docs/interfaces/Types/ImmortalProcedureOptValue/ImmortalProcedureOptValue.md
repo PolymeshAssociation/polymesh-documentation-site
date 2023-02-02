@@ -4,8 +4,6 @@ title: "Interface: ImmortalProcedureOptValue"
 sidebar_label: "ImmortalProcedureOptValue"
 ---
 
-# Interface: ImmortalProcedureOptValue
-
 [types](../../../modules/Types/Types.md).ImmortalProcedureOptValue
 
 This transaction will never expire

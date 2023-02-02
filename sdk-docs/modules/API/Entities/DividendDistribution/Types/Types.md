@@ -1,10 +1,8 @@
 ---
 id: "Types"
-title: "Module: api/entities/DividendDistribution/types"
+title: "Module: DividendDistribution Types"
 sidebar_label: "Types"
 ---
-
-# Module: api/entities/DividendDistribution/types
 
 ## Interfaces
 

@@ -4,8 +4,6 @@ title: "Enumeration: AffirmationStatus"
 sidebar_label: "AffirmationStatus"
 ---
 
-# Enumeration: AffirmationStatus
-
 [api/entities/Instruction/types](../../../../../../modules/API/Entities/Instruction/Types/Types.md).AffirmationStatus
 
 ## Enumeration Members

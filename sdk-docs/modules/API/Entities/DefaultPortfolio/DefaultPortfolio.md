@@ -1,10 +1,8 @@
 ---
 id: "DefaultPortfolio"
-title: "Module: api/entities/DefaultPortfolio"
+title: "Module: DefaultPortfolio"
 sidebar_label: "DefaultPortfolio"
 ---
-
-# Module: api/entities/DefaultPortfolio
 
 ## Classes
 

@@ -4,8 +4,6 @@ title: "Interface: ExternalAgentCondition"
 sidebar_label: "ExternalAgentCondition"
 ---
 
-# Interface: ExternalAgentCondition
-
 [types](../../../modules/Types/Types.md).ExternalAgentCondition
 
 ## Properties

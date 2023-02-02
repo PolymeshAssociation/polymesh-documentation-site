@@ -4,8 +4,6 @@ title: "Interface: UniqueIdentifiers"
 sidebar_label: "UniqueIdentifiers"
 ---
 
-# Interface: UniqueIdentifiers
-
 [api/entities/CorporateAction](../../../../../modules/API/Entities/CorporateAction/CorporateAction.md).UniqueIdentifiers
 
 ## Properties

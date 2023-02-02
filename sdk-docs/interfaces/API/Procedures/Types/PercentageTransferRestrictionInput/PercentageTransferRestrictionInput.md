@@ -4,8 +4,6 @@ title: "Interface: PercentageTransferRestrictionInput"
 sidebar_label: "PercentageTransferRestrictionInput"
 ---
 
-# Interface: PercentageTransferRestrictionInput
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).PercentageTransferRestrictionInput
 
 ## Hierarchy

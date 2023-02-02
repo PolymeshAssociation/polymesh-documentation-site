@@ -4,8 +4,6 @@ title: "Enumeration: CapitalDistributionTx"
 sidebar_label: "CapitalDistributionTx"
 ---
 
-# Enumeration: CapitalDistributionTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).CapitalDistributionTx
 
 ## Enumeration Members

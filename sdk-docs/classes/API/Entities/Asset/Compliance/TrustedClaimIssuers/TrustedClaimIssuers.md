@@ -4,8 +4,6 @@ title: "Class: TrustedClaimIssuers"
 sidebar_label: "TrustedClaimIssuers"
 ---
 
-# Class: TrustedClaimIssuers
-
 [api/entities/Asset/Compliance/TrustedClaimIssuers](../../../../../../modules/API/Entities/Asset/Compliance/TrustedClaimIssuers/TrustedClaimIssuers.md).TrustedClaimIssuers
 
 Handles all Asset Default Trusted Claim Issuers related functionality

@@ -4,8 +4,6 @@ title: "Enumeration: ProposalStateEnum"
 sidebar_label: "ProposalStateEnum"
 ---
 
-# Enumeration: ProposalStateEnum
-
 [types](../../../modules/Types/Types.md).ProposalStateEnum
 
 \n@enumName ProposalStateEnum

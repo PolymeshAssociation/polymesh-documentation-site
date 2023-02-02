@@ -4,8 +4,6 @@ title: "Interface: CheckRolesResult"
 sidebar_label: "CheckRolesResult"
 ---
 
-# Interface: CheckRolesResult
-
 [types](../../../modules/Types/Types.md).CheckRolesResult
 
 Result of a `checkRoles` call

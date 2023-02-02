@@ -4,8 +4,6 @@ title: "Interface: AssetDetails"
 sidebar_label: "AssetDetails"
 ---
 
-# Interface: AssetDetails
-
 [api/entities/Asset/types](../../../../../../modules/API/Entities/Asset/Types/Types.md).AssetDetails
 
 ## Properties

@@ -4,8 +4,6 @@ title: "Interface: AssetDocument"
 sidebar_label: "AssetDocument"
 ---
 
-# Interface: AssetDocument
-
 [types](../../../modules/Types/Types.md).AssetDocument
 
 Document attached to a token

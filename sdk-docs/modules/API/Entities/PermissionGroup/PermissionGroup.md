@@ -1,10 +1,8 @@
 ---
 id: "PermissionGroup"
-title: "Module: api/entities/PermissionGroup"
+title: "Module: PermissionGroup"
 sidebar_label: "PermissionGroup"
 ---
-
-# Module: api/entities/PermissionGroup
 
 ## Classes
 

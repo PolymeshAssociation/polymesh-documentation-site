@@ -4,8 +4,6 @@ title: "Enumeration: PortfolioTx"
 sidebar_label: "PortfolioTx"
 ---
 
-# Enumeration: PortfolioTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).PortfolioTx
 
 ## Enumeration Members

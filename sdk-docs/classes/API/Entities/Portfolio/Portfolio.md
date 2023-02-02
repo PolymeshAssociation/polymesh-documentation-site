@@ -4,8 +4,6 @@ title: "Class: Portfolio"
 sidebar_label: "Portfolio"
 ---
 
-# Class: Portfolio
-
 [api/entities/Portfolio](../../../../modules/API/Entities/Portfolio/Portfolio.md).Portfolio
 
 Represents a base Portfolio for a specific Identity in the Polymesh blockchain

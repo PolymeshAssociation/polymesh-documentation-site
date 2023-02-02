@@ -4,8 +4,6 @@ title: "Interface: RemoveExternalAgentParams"
 sidebar_label: "RemoveExternalAgentParams"
 ---
 
-# Interface: RemoveExternalAgentParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).RemoveExternalAgentParams
 
 ## Properties

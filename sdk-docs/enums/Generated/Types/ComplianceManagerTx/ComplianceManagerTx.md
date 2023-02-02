@@ -4,8 +4,6 @@ title: "Enumeration: ComplianceManagerTx"
 sidebar_label: "ComplianceManagerTx"
 ---
 
-# Enumeration: ComplianceManagerTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).ComplianceManagerTx
 
 ## Enumeration Members

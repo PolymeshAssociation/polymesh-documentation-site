@@ -4,8 +4,6 @@ title: "Interface: MortalProcedureOptValue"
 sidebar_label: "MortalProcedureOptValue"
 ---
 
-# Interface: MortalProcedureOptValue
-
 [types](../../../modules/Types/Types.md).MortalProcedureOptValue
 
 This transaction will be rejected if not included in a block after a while (default: ~5 minutes)

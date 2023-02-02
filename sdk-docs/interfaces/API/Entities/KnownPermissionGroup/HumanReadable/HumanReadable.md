@@ -4,8 +4,6 @@ title: "Interface: HumanReadable"
 sidebar_label: "HumanReadable"
 ---
 
-# Interface: HumanReadable
-
 [api/entities/KnownPermissionGroup](../../../../../modules/API/Entities/KnownPermissionGroup/KnownPermissionGroup.md).HumanReadable
 
 ## Properties

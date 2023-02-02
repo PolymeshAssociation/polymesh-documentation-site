@@ -4,8 +4,6 @@ title: "Interface: ClaimData<ClaimType>"
 sidebar_label: "ClaimData"
 ---
 
-# Interface: ClaimData<ClaimType\>
-
 [types](../../../modules/Types/Types.md).ClaimData
 
 ## Type parameters

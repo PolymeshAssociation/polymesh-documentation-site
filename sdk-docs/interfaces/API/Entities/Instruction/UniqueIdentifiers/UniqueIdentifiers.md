@@ -4,8 +4,6 @@ title: "Interface: UniqueIdentifiers"
 sidebar_label: "UniqueIdentifiers"
 ---
 
-# Interface: UniqueIdentifiers
-
 [api/entities/Instruction](../../../../../modules/API/Entities/Instruction/Instruction.md).UniqueIdentifiers
 
 ## Properties

@@ -4,8 +4,6 @@ title: "Enumeration: PolymeshContractsTx"
 sidebar_label: "PolymeshContractsTx"
 ---
 
-# Enumeration: PolymeshContractsTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).PolymeshContractsTx
 
 ## Enumeration Members

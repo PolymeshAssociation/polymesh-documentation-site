@@ -4,8 +4,6 @@ title: "Class: KnownPermissionGroup"
 sidebar_label: "KnownPermissionGroup"
 ---
 
-# Class: KnownPermissionGroup
-
 [api/entities/KnownPermissionGroup](../../../../modules/API/Entities/KnownPermissionGroup/KnownPermissionGroup.md).KnownPermissionGroup
 
 Represents a pre-defined group of permissions for an Asset

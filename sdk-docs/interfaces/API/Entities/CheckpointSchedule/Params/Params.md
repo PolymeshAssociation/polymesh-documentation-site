@@ -4,8 +4,6 @@ title: "Interface: Params"
 sidebar_label: "Params"
 ---
 
-# Interface: Params
-
 [api/entities/CheckpointSchedule](../../../../../modules/API/Entities/CheckpointSchedule/CheckpointSchedule.md).Params
 
 ## Properties

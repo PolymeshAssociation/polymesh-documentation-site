@@ -4,8 +4,6 @@ title: "Enumeration: SchedulerTx"
 sidebar_label: "SchedulerTx"
 ---
 
-# Enumeration: SchedulerTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).SchedulerTx
 
 ## Enumeration Members

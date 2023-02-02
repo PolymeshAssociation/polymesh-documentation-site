@@ -4,8 +4,6 @@ title: "Interface: CorporateActionTargets"
 sidebar_label: "CorporateActionTargets"
 ---
 
-# Interface: CorporateActionTargets
-
 [api/entities/CorporateActionBase/types](../../../../../../modules/API/Entities/CorporateActionBase/Types/Types.md).CorporateActionTargets
 
 ## Properties

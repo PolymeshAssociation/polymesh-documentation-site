@@ -4,8 +4,6 @@ title: "Interface: BlockedClaim"
 sidebar_label: "BlockedClaim"
 ---
 
-# Interface: BlockedClaim
-
 [types](../../../modules/Types/Types.md).BlockedClaim
 
 ## Properties

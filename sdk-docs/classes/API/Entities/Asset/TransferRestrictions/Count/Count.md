@@ -4,8 +4,6 @@ title: "Class: Count"
 sidebar_label: "Count"
 ---
 
-# Class: Count
-
 [api/entities/Asset/TransferRestrictions/Count](../../../../../../modules/API/Entities/Asset/TransferRestrictions/Count/Count.md).Count
 
 Handles all Count Transfer Restriction related functionality

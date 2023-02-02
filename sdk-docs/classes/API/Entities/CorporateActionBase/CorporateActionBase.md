@@ -4,8 +4,6 @@ title: "Class: CorporateActionBase"
 sidebar_label: "CorporateActionBase"
 ---
 
-# Class: CorporateActionBase
-
 [api/entities/CorporateActionBase](../../../../modules/API/Entities/CorporateActionBase/CorporateActionBase.md).CorporateActionBase
 
 Represents an action initiated by the issuer of an Asset which may affect the positions of

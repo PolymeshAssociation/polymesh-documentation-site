@@ -4,8 +4,6 @@ title: "Interface: CreateVenueParams"
 sidebar_label: "CreateVenueParams"
 ---
 
-# Interface: CreateVenueParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).CreateVenueParams
 
 ## Properties

@@ -4,8 +4,6 @@ title: "Interface: InvestInOfferingParams"
 sidebar_label: "InvestInOfferingParams"
 ---
 
-# Interface: InvestInOfferingParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).InvestInOfferingParams
 
 ## Properties

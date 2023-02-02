@@ -4,8 +4,6 @@ title: "Interface: RevokeClaimsParams"
 sidebar_label: "RevokeClaimsParams"
 ---
 
-# Interface: RevokeClaimsParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).RevokeClaimsParams
 
 ## Properties

@@ -4,8 +4,6 @@ title: "Class: Offering"
 sidebar_label: "Offering"
 ---
 
-# Class: Offering
-
 [api/entities/Offering](../../../../modules/API/Entities/Offering/Offering.md).Offering
 
 Represents an Asset Offering in the Polymesh blockchain

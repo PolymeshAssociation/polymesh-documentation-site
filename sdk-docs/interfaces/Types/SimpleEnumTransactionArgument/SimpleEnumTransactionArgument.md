@@ -4,8 +4,6 @@ title: "Interface: SimpleEnumTransactionArgument"
 sidebar_label: "SimpleEnumTransactionArgument"
 ---
 
-# Interface: SimpleEnumTransactionArgument
-
 [types](../../../modules/Types/Types.md).SimpleEnumTransactionArgument
 
 ## Properties

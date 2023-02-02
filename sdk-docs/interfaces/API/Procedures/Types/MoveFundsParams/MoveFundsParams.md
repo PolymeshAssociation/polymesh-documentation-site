@@ -4,8 +4,6 @@ title: "Interface: MoveFundsParams"
 sidebar_label: "MoveFundsParams"
 ---
 
-# Interface: MoveFundsParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).MoveFundsParams
 
 ## Properties

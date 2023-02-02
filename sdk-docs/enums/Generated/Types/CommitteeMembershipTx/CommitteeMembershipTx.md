@@ -4,8 +4,6 @@ title: "Enumeration: CommitteeMembershipTx"
 sidebar_label: "CommitteeMembershipTx"
 ---
 
-# Enumeration: CommitteeMembershipTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).CommitteeMembershipTx
 
 ## Enumeration Members

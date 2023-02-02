@@ -4,8 +4,6 @@ title: "Interface: ClaimTarget"
 sidebar_label: "ClaimTarget"
 ---
 
-# Interface: ClaimTarget
-
 [types](../../../modules/Types/Types.md).ClaimTarget
 
 ## Properties

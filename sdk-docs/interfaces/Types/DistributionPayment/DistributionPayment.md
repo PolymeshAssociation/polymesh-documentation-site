@@ -4,8 +4,6 @@ title: "Interface: DistributionPayment"
 sidebar_label: "DistributionPayment"
 ---
 
-# Interface: DistributionPayment
-
 [types](../../../modules/Types/Types.md).DistributionPayment
 
 ## Properties

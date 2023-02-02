@@ -4,8 +4,6 @@ title: "Class: Issuance"
 sidebar_label: "Issuance"
 ---
 
-# Class: Issuance
-
 [api/entities/Asset/Issuance](../../../../../modules/API/Entities/Asset/Issuance/Issuance.md).Issuance
 
 Handles all Asset Issuance related functionality

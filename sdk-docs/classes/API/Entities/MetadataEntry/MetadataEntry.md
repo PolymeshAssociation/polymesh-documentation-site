@@ -4,8 +4,6 @@ title: "Class: MetadataEntry"
 sidebar_label: "MetadataEntry"
 ---
 
-# Class: MetadataEntry
-
 [api/entities/MetadataEntry](../../../../modules/API/Entities/MetadataEntry/MetadataEntry.md).MetadataEntry
 
 Represents an Asset MetadataEntry in the Polymesh blockchain

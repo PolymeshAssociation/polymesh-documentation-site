@@ -4,8 +4,6 @@ title: "Enumeration: SudoTx"
 sidebar_label: "SudoTx"
 ---
 
-# Enumeration: SudoTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).SudoTx
 
 ## Enumeration Members

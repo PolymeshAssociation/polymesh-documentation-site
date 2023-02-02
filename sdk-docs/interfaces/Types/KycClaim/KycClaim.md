@@ -4,8 +4,6 @@ title: "Interface: KycClaim"
 sidebar_label: "KycClaim"
 ---
 
-# Interface: KycClaim
-
 [types](../../../modules/Types/Types.md).KycClaim
 
 ## Properties

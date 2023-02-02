@@ -4,8 +4,6 @@ title: "Interface: NetworkProperties"
 sidebar_label: "NetworkProperties"
 ---
 
-# Interface: NetworkProperties
-
 [types](../../../modules/Types/Types.md).NetworkProperties
 
 ## Properties

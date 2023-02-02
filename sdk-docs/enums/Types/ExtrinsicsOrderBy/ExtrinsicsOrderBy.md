@@ -4,8 +4,6 @@ title: "Enumeration: ExtrinsicsOrderBy"
 sidebar_label: "ExtrinsicsOrderBy"
 ---
 
-# Enumeration: ExtrinsicsOrderBy
-
 [types](../../../modules/Types/Types.md).ExtrinsicsOrderBy
 
 Methods to use when ordering `Extrinsic`.

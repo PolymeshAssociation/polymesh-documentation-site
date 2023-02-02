@@ -4,8 +4,6 @@ title: "Interface: TransferBreakdown"
 sidebar_label: "TransferBreakdown"
 ---
 
-# Interface: TransferBreakdown
-
 [api/entities/Asset/types](../../../../../../modules/API/Entities/Asset/Types/Types.md).TransferBreakdown
 
 Object containing every reason why a specific Asset transfer would fail

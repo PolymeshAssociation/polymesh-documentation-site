@@ -4,8 +4,6 @@ title: "Interface: CheckpointWithData"
 sidebar_label: "CheckpointWithData"
 ---
 
-# Interface: CheckpointWithData
-
 [types](../../../modules/Types/Types.md).CheckpointWithData
 
 ## Properties

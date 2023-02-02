@@ -4,8 +4,6 @@ title: "Enumeration: TransactionStatus"
 sidebar_label: "TransactionStatus"
 ---
 
-# Enumeration: TransactionStatus
-
 [types](../../../modules/Types/Types.md).TransactionStatus
 
 ## Enumeration Members

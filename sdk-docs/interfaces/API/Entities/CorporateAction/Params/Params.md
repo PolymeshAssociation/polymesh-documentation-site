@@ -4,8 +4,6 @@ title: "Interface: Params"
 sidebar_label: "Params"
 ---
 
-# Interface: Params
-
 [api/entities/CorporateAction](../../../../../modules/API/Entities/CorporateAction/CorporateAction.md).Params
 
 ## Properties

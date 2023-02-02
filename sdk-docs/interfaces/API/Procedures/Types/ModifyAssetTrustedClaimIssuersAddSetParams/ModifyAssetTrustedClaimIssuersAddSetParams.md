@@ -4,8 +4,6 @@ title: "Interface: ModifyAssetTrustedClaimIssuersAddSetParams"
 sidebar_label: "ModifyAssetTrustedClaimIssuersAddSetParams"
 ---
 
-# Interface: ModifyAssetTrustedClaimIssuersAddSetParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).ModifyAssetTrustedClaimIssuersAddSetParams
 
 ## Properties

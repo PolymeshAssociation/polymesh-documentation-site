@@ -4,8 +4,6 @@ title: "Interface: CountTransferRestriction"
 sidebar_label: "CountTransferRestriction"
 ---
 
-# Interface: CountTransferRestriction
-
 [types](../../../modules/Types/Types.md).CountTransferRestriction
 
 ## Hierarchy

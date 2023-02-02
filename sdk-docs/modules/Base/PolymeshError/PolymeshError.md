@@ -1,10 +1,8 @@
 ---
 id: "PolymeshError"
-title: "Module: base/PolymeshError"
+title: "Module: PolymeshError"
 sidebar_label: "PolymeshError"
 ---
-
-# Module: base/PolymeshError
 
 ## Classes
 

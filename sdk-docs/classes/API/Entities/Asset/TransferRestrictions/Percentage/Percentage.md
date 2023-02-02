@@ -4,8 +4,6 @@ title: "Class: Percentage"
 sidebar_label: "Percentage"
 ---
 
-# Class: Percentage
-
 [api/entities/Asset/TransferRestrictions/Percentage](../../../../../../modules/API/Entities/Asset/TransferRestrictions/Percentage/Percentage.md).Percentage
 
 Handles all Percentage Transfer Restriction related functionality

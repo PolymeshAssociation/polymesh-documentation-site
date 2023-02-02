@@ -4,8 +4,6 @@ title: "Interface: SubsidyWithAllowance"
 sidebar_label: "SubsidyWithAllowance"
 ---
 
-# Interface: SubsidyWithAllowance
-
 [api/entities/Subsidy/types](../../../../../../modules/API/Entities/Subsidy/Types/Types.md).SubsidyWithAllowance
 
 ## Properties

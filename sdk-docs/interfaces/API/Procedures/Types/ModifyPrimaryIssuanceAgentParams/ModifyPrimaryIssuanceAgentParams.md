@@ -4,8 +4,6 @@ title: "Interface: ModifyPrimaryIssuanceAgentParams"
 sidebar_label: "ModifyPrimaryIssuanceAgentParams"
 ---
 
-# Interface: ModifyPrimaryIssuanceAgentParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).ModifyPrimaryIssuanceAgentParams
 
 ## Properties

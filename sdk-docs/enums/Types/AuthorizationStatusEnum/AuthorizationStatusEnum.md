@@ -4,8 +4,6 @@ title: "Enumeration: AuthorizationStatusEnum"
 sidebar_label: "AuthorizationStatusEnum"
 ---
 
-# Enumeration: AuthorizationStatusEnum
-
 [types](../../../modules/Types/Types.md).AuthorizationStatusEnum
 
 \n@enumName AuthorizationStatusEnum

@@ -4,8 +4,6 @@ title: "Interface: ConditionBase"
 sidebar_label: "ConditionBase"
 ---
 
-# Interface: ConditionBase
-
 [types](../../../modules/Types/Types.md).ConditionBase
 
 ## Properties

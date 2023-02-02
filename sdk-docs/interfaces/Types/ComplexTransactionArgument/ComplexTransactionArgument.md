@@ -4,8 +4,6 @@ title: "Interface: ComplexTransactionArgument"
 sidebar_label: "ComplexTransactionArgument"
 ---
 
-# Interface: ComplexTransactionArgument
-
 [types](../../../modules/Types/Types.md).ComplexTransactionArgument
 
 ## Properties

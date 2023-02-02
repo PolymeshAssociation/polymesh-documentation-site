@@ -1,10 +1,8 @@
 ---
 id: "Documents"
-title: "Module: api/entities/Asset/Documents"
+title: "Module: Documents"
 sidebar_label: "Documents"
 ---
-
-# Module: api/entities/Asset/Documents
 
 ## Classes
 

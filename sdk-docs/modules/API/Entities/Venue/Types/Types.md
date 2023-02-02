@@ -1,10 +1,8 @@
 ---
 id: "Types"
-title: "Module: api/entities/Venue/types"
+title: "Module: Venue Types"
 sidebar_label: "Types"
 ---
-
-# Module: api/entities/Venue/types
 
 ## Enumerations
 

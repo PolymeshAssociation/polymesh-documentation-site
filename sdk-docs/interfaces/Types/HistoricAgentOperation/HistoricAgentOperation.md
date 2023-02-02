@@ -4,8 +4,6 @@ title: "Interface: HistoricAgentOperation"
 sidebar_label: "HistoricAgentOperation"
 ---
 
-# Interface: HistoricAgentOperation
-
 [types](../../../modules/Types/Types.md).HistoricAgentOperation
 
 Events triggered by transactions performed by an Agent Identity, related to the Token's configuration

@@ -4,8 +4,6 @@ title: "Interface: SimplePermissions"
 sidebar_label: "SimplePermissions"
 ---
 
-# Interface: SimplePermissions
-
 [types](../../../modules/Types/Types.md).SimplePermissions
 
 This represents positive permissions (i.e. only "includes"). It is used

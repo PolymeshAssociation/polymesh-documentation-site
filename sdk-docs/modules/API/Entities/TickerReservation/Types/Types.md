@@ -1,10 +1,8 @@
 ---
 id: "Types"
-title: "Module: api/entities/TickerReservation/types"
+title: "Module: TickerReservation Types"
 sidebar_label: "Types"
 ---
-
-# Module: api/entities/TickerReservation/types
 
 ## Enumerations
 

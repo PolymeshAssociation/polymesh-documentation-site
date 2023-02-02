@@ -4,8 +4,6 @@ title: "Enumeration: ClaimType"
 sidebar_label: "ClaimType"
 ---
 
-# Enumeration: ClaimType
-
 [types](../../../modules/Types/Types.md).ClaimType
 
 ## Enumeration Members

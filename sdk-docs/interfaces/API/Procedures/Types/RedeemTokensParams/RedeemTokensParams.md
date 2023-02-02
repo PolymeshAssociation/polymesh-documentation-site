@@ -4,8 +4,6 @@ title: "Interface: RedeemTokensParams"
 sidebar_label: "RedeemTokensParams"
 ---
 
-# Interface: RedeemTokensParams
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).RedeemTokensParams
 
 ## Properties

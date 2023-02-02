@@ -4,8 +4,6 @@ title: "Interface: IdentityWithClaims"
 sidebar_label: "IdentityWithClaims"
 ---
 
-# Interface: IdentityWithClaims
-
 [types](../../../modules/Types/Types.md).IdentityWithClaims
 
 ## Properties

@@ -1,10 +1,8 @@
 ---
 id: "TickerReservation"
-title: "Module: api/entities/TickerReservation"
+title: "Module: TickerReservation"
 sidebar_label: "TickerReservation"
 ---
-
-# Module: api/entities/TickerReservation
 
 ## Classes
 

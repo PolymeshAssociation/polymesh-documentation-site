@@ -4,8 +4,6 @@ title: "Enumeration: PolymeshCommitteeTx"
 sidebar_label: "PolymeshCommitteeTx"
 ---
 
-# Enumeration: PolymeshCommitteeTx
-
 [generated/types](../../../../modules/Generated/Types/Types.md).PolymeshCommitteeTx
 
 ## Enumeration Members

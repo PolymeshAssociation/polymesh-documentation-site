@@ -1,10 +1,8 @@
 ---
 id: "MetadataEntry"
-title: "Module: api/entities/MetadataEntry"
+title: "Module: MetadataEntry"
 sidebar_label: "MetadataEntry"
 ---
-
-# Module: api/entities/MetadataEntry
 
 ## Classes
 

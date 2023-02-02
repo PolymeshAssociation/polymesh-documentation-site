@@ -4,8 +4,6 @@ title: "Class: AuthorizationRequest"
 sidebar_label: "AuthorizationRequest"
 ---
 
-# Class: AuthorizationRequest
-
 [api/entities/AuthorizationRequest](../../../../modules/API/Entities/AuthorizationRequest/AuthorizationRequest.md).AuthorizationRequest
 
 Represents a request made by an Identity to another Identity (or Account) for some sort of authorization. This has multiple uses. For example, if Alice

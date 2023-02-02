@@ -4,8 +4,6 @@ title: "Interface: UniqueIdentifiers"
 sidebar_label: "UniqueIdentifiers"
 ---
 
-# Interface: UniqueIdentifiers
-
 [api/entities/CustomPermissionGroup](../../../../../modules/API/Entities/CustomPermissionGroup/CustomPermissionGroup.md).UniqueIdentifiers
 
 ## Properties

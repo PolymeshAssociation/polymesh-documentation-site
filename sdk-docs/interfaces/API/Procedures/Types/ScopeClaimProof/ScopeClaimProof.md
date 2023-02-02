@@ -4,8 +4,6 @@ title: "Interface: ScopeClaimProof"
 sidebar_label: "ScopeClaimProof"
 ---
 
-# Interface: ScopeClaimProof
-
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).ScopeClaimProof
 
 ## Properties

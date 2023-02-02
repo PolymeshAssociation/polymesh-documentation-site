@@ -4,8 +4,6 @@ title: "Enumeration: TransactionArgumentType"
 sidebar_label: "TransactionArgumentType"
 ---
 
-# Enumeration: TransactionArgumentType
-
 [types](../../../modules/Types/Types.md).TransactionArgumentType
 
 ## Enumeration Members

@@ -1,8 +1,4 @@
 {
   "label": "Settlement",
-  "position": 5,
-  "link": {
-    "type": "generated-index",
-    "description": "Learn how asset settlement works on Polymesh"
-  }
+  "position": 5
 }

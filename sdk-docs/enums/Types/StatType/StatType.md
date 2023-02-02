@@ -4,8 +4,6 @@ title: "Enumeration: StatType"
 sidebar_label: "StatType"
 ---
 
-# Enumeration: StatType
-
 [types](../../../modules/Types/Types.md).StatType
 
 Represents the StatType from the `statistics` module.

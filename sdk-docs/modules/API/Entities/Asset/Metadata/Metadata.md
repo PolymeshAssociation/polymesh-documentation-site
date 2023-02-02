@@ -1,10 +1,8 @@
 ---
 id: "Metadata"
-title: "Module: api/entities/Asset/Metadata"
+title: "Module: Metadata"
 sidebar_label: "Metadata"
 ---
-
-# Module: api/entities/Asset/Metadata
 
 ## Classes
 

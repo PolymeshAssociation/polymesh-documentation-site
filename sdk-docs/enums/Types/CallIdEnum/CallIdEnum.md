@@ -4,11 +4,7 @@ title: "Enumeration: CallIdEnum"
 sidebar_label: "CallIdEnum"
 ---
 
-# Enumeration: CallIdEnum
-
 [types](../../../modules/Types/Types.md).CallIdEnum
-
-\n@enumName CallIdEnum
 
 ## Enumeration Members
 

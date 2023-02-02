@@ -4,8 +4,6 @@ title: "Enumeration: ScopeType"
 sidebar_label: "ScopeType"
 ---
 
-# Enumeration: ScopeType
-
 [types](../../../modules/Types/Types.md).ScopeType
 
 ## Enumeration Members

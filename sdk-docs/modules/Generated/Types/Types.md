@@ -1,10 +1,8 @@
 ---
 id: "Types"
-title: "Module: generated/types"
+title: "Module: Generated Types"
 sidebar_label: "Types"
 ---
-
-# Module: generated/types
 
 ## Enumerations
 

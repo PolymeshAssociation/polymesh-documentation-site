@@ -4,8 +4,6 @@ title: "Interface: AddCountStatInput"
 sidebar_label: "AddCountStatInput"
 ---
 
-# Interface: AddCountStatInput
-
 [types](../../../modules/Types/Types.md).AddCountStatInput
 
 ## Properties

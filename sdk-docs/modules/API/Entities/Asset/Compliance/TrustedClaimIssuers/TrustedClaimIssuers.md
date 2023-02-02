@@ -1,10 +1,8 @@
 ---
 id: "TrustedClaimIssuers"
-title: "Module: api/entities/Asset/Compliance/TrustedClaimIssuers"
+title: "Module: TrustedClaimIssuers"
 sidebar_label: "TrustedClaimIssuers"
 ---
-
-# Module: api/entities/Asset/Compliance/TrustedClaimIssuers
 
 ## Classes
 

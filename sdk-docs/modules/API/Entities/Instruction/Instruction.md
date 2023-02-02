@@ -1,10 +1,8 @@
 ---
 id: "Instruction"
-title: "Module: api/entities/Instruction"
+title: "Module: Instruction"
 sidebar_label: "Instruction"
 ---
-
-# Module: api/entities/Instruction
 
 ## Classes
 

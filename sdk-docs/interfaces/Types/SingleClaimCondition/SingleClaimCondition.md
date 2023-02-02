@@ -4,8 +4,6 @@ title: "Interface: SingleClaimCondition"
 sidebar_label: "SingleClaimCondition"
 ---
 
-# Interface: SingleClaimCondition
-
 [types](../../../modules/Types/Types.md).SingleClaimCondition
 
 ## Properties

@@ -4,8 +4,6 @@ title: "Interface: HumanReadable"
 sidebar_label: "HumanReadable"
 ---
 
-# Interface: HumanReadable
-
 [api/entities/Offering](../../../../../modules/API/Entities/Offering/Offering.md).HumanReadable
 
 ## Properties

@@ -4,8 +4,6 @@ title: "Enumeration: ConditionType"
 sidebar_label: "ConditionType"
 ---
 
-# Enumeration: ConditionType
-
 [types](../../../modules/Types/Types.md).ConditionType
 
 ## Enumeration Members
