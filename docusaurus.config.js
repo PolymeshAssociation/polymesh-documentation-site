@@ -163,11 +163,11 @@ const config = {
               },
               {
                 label: 'Network Docs',
-                to: '/polymesh-docs/category/network',
+                to: '/polymesh-docs#network',
               },
               {
                 label: 'Polymesh Primitive Docs',
-                to: '/polymesh-docs/category/primitives',
+                to: '/polymesh-docs#primitives',
               },
             ],
           },
