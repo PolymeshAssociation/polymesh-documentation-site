@@ -79,6 +79,7 @@ const config = {
         id: 'sdk-docs',
         path: 'sdk-docs',
         routeBasePath: '/sdk-docs',
+        includeCurrentVersion: false,
       },
     ],
   ],
@@ -132,13 +133,19 @@ const config = {
             label: 'Polymesh Docs',
           },
           {
-            to: 'sdk-docs/moduleList',
+            to: 'sdk-docs',
             position: 'left',
             label: 'SDK API Docs',
           },
           {
-            label: 'Polymesh SDK Docs',
-            href: 'https://github.com/PolymeshAssociation/polymesh-sdk/wiki',
+            type: 'docsVersionDropdown',
+            position: 'left',
+            label: 'Dropdown',
+            dropdownItemsBefore: [
+              { type: 'html', value: '<div>SDK Docs Version</div>' },
+            ],
+            docsPluginId: 'sdk-docs',
+            dropdownActiveClassDisabled: false,
           },
           {
             label: 'Polymesh Rust Docs',
