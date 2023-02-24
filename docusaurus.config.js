@@ -17,8 +17,8 @@ const vsDarkTheme = require('prism-react-renderer/themes/vsDark');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Polymesh Documentation Site',
-  tagline: 'A blockchain for securities',
+  title: 'Polymesh Documentation Portal',
+  tagline: 'The perfect place to discover the open source Polymesh universe',
   // url: 'https://developers.polymesh.network/',
   // url: 'https://docs.polymesh.network/',
   url: 'https://polymeshassociation.github.io/',
@@ -217,6 +217,10 @@ const config = {
               {
                 label: 'GitHub',
                 href: 'https://github.com/PolymeshAssociation',
+              },
+              {
+                label: 'Contact Us',
+                href: 'https://polymesh.network/contact-us',
               },
             ],
           },

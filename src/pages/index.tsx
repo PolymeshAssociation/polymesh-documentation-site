@@ -16,7 +16,7 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link className="button button--secondary button--lg" to="/docs">
-            Go to Documentation
+            Go to Documents
           </Link>
         </div>
       </div>
@@ -30,7 +30,7 @@ export default function Home(): JSX.Element {
     <Layout
       title={`${siteConfig.title}`}
       // Description will go into a meta tag in <head />
-      description="A guide to the Polymesh Blockchain"
+      description="Educational resources for the Polymesh Blockchain"
     >
       <HomepageHeader />
       <main>
