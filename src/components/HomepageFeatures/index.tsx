@@ -4,45 +4,58 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  Svg?: React.ComponentType<React.ComponentProps<'svg'>>;
+  pngPath?: string;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Welcome to Polymesh',
     Svg: require('@site/static/img/polymesh-symbol.svg').default,
     description: (
       <>
-        This text and image should be replaced with something more interesting.
+        Discover the secure, purpose-built blockchain for regulated assets.
+        Explore how Polymesh is reshaping the financial industry with
+        unparalleled compliance and governance features.
       </>
     ),
   },
   {
     title: 'Focus on What Matters',
-    Svg: require('@site/static/img/polymesh-symbol.svg').default,
+    pngPath: require('@site/static/img/pillars_200x200.png').default,
     description: (
       <>
-        This text and image should be replaced with something more interesting.
+        Learn about the unique features that set Polymesh apart from other
+        blockchains. From identity management to customizable compliance rules,
+        Polymesh offers a suite of tools for businesses looking to issue and
+        manage regulated assets.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/polymesh-symbol.svg').default,
+    title: 'Getting Started with Polymesh',
+    pngPath: require('@site/static/img/getting-started_200x200.png').default,
     description: (
       <>
-        This text and image should be replaced with something more interesting.
+        Ready to start building on Polymesh? Get started with our developer
+        resources and community forums. Connect with like-minded individuals and
+        stay up-to-date on the latest developments in the world of regulated
+        assets.
       </>
     ),
   },
 ];
 
-function Feature({ title, Svg, description }: FeatureItem) {
+function Feature({ title, Svg, pngPath, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        {Svg ? (
+          <Svg className={styles.featureImg} role="img" />
+        ) : (
+          <img className={styles.featureImg} src={pngPath} alt={title} />
+        )}
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
