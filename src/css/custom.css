@@ -52,3 +52,30 @@
   position: absolute;
   border: 0px;
 }
+
+main {
+  padding-left: 34px; /* Change this value to adjust the padding */
+}
+
+@media (max-width: 996px) {
+  main {
+    padding-left: 0px; /* Change this value to adjust the mobile padding */
+  }
+}
+
+.navbar {
+  height: auto;
+  max-height: calc(var(--ifm-navbar-height) * 2);
+}
+
+.navbar__brand {
+  min-width: fit-content;
+}
+
+.hero__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.hero__subtitle {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
