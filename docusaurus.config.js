@@ -148,8 +148,23 @@ const config = {
             dropdownActiveClassDisabled: false,
           },
           {
-            label: 'Polymesh Rust Docs',
-            href: 'https://docs.polymesh.live/polymesh/index.html',
+            type: 'dropdown',
+            position: 'left',
+            label: 'Rust Docs',
+            items: [
+              {
+                label: 'Polymesh Runtime',
+                href: 'https://docs.polymesh.live/polymesh/index.html',
+              },
+              {
+                label: 'Polymesh Client API',
+                href: 'https://docs.rs/polymesh-api/0.3.9/polymesh_api/',
+              },
+              {
+                label: 'ink! Contracts API',
+                href: 'https://docs.rs/polymesh-ink/0.5.7/polymesh_ink/',
+              },
+            ],
           },
           {
             href: 'https://github.com/PolymeshAssociation',
