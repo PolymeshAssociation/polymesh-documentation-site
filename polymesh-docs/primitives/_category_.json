@@ -1,8 +1,6 @@
 {
   "label": "Primitives",
   "position": 3,
-  "link": {
-    "type": "generated-index",
-    "description": "This section contains information relating to Polymesh Primitives."
-  }
+  "collapsible": true,
+  "collapsed": false
 }

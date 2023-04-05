@@ -17,8 +17,8 @@ const vsDarkTheme = require('prism-react-renderer/themes/vsDark');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Polymesh Documentation Site',
-  tagline: 'A blockchain for securities',
+  title: 'Polymesh Documentation Portal',
+  tagline: 'The perfect place to discover the open source Polymesh universe',
   // url: 'https://developers.polymesh.network/',
   // url: 'https://docs.polymesh.network/',
   url: 'https://polymeshassociation.github.io/',
@@ -33,7 +33,7 @@ const config = {
   organizationName: 'polymeshassociation', // Usually your GitHub org/user name.
   projectName: 'polymesh-documentation-site', // Usually your repo name.
   // deploymentBranch: '', // The name of the branch to deploy the static files to.
-  trailingSlash: false,
+  trailingSlash: true,
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
@@ -73,11 +73,43 @@ const config = {
         // ... other options
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'sdk-docs',
+        path: 'sdk-docs',
+        routeBasePath: '/sdk-docs',
+        includeCurrentVersion: false,
+      },
+    ],
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'K25SRS7O1D',
+
+        // Public API key: it is safe to commit it
+        apiKey: '900353d5b5743c87de51a42fbcb266de',
+
+        indexName: 'polymeshassociation',
+
+        // Optional: see doc section below
+        contextualSearch: true,
+
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        // externalUrlRegex: 'external\\.com|domain\\.com',
+
+        // Optional: Algolia search parameters
+        searchParameters: {},
+
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+
+        //... other Algolia params
+      },
       docs: {
         sidebar: {
           hideable: true,
@@ -96,13 +128,24 @@ const config = {
             label: 'Developer Docs',
           },
           {
-            to: '/polymesh-docs',
+            to: 'polymesh-docs',
             position: 'left',
             label: 'Polymesh Docs',
           },
           {
-            label: 'Polymesh SDK Docs',
-            href: 'https://github.com/PolymeshAssociation/polymesh-sdk/wiki',
+            to: 'sdk-docs',
+            position: 'left',
+            label: 'SDK API Docs',
+          },
+          {
+            type: 'docsVersionDropdown',
+            position: 'left',
+            label: 'Dropdown',
+            dropdownItemsBefore: [
+              { type: 'html', value: '<div>SDK Docs Version</div>' },
+            ],
+            docsPluginId: 'sdk-docs',
+            dropdownActiveClassDisabled: false,
           },
           {
             label: 'Polymesh Rust Docs',
@@ -127,11 +170,11 @@ const config = {
               },
               {
                 label: 'Network Docs',
-                to: '/polymesh-docs/category/network',
+                to: '/polymesh-docs#network',
               },
               {
                 label: 'Polymesh Primitive Docs',
-                to: '/polymesh-docs/category/primitives',
+                to: '/polymesh-docs#primitives',
               },
             ],
           },
@@ -174,6 +217,10 @@ const config = {
               {
                 label: 'GitHub',
                 href: 'https://github.com/PolymeshAssociation',
+              },
+              {
+                label: 'Contact Us',
+                href: 'https://polymesh.network/contact-us',
               },
             ],
           },
