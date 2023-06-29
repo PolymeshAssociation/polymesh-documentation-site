@@ -26,7 +26,7 @@ const config = {
   baseUrl: '/polymesh-documentation-site/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/polymesh-symbol.svg',
+  favicon: 'img/favicon.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
