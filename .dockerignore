@@ -1,0 +1,12 @@
+Dockerfile
+.dockerignore
+.git/
+.gitignore
+.github/
+.cache-loader/
+.docusaurus/
+.yarn/
+build/
+node_modules/
+Jenkinsfile
+README.md
