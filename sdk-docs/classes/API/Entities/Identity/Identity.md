@@ -24,7 +24,7 @@ Represents an Identity in the Polymesh blockchain
 
 #### Defined in
 
-[api/entities/Identity/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Identity/index.ts#L114)
+[api/entities/Identity/index.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Identity/index.ts#L110)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/Identity/index.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Identity/index.ts#L112)
+[api/entities/Identity/index.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Identity/index.ts#L108)
 
 ___
 
@@ -46,7 +46,7 @@ Identity ID as stored in the blockchain
 
 #### Defined in
 
-[api/entities/Identity/index.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Identity/index.ts#L109)
+[api/entities/Identity/index.ts:105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Identity/index.ts#L105)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[api/entities/Identity/index.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Identity/index.ts#L113)
+[api/entities/Identity/index.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Identity/index.ts#L109)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -180,35 +180,6 @@ ___
 ### getHeldAssets
 
 ▸ **getHeldAssets**(`opts?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`Asset`](../Asset/Asset.md)\>\>
-
-Retrieve a list of all Assets which were held at one point by this Identity
-
-**`Note`**
-
- uses the middleware
-
-**`Note`**
-
- supports pagination
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `opts` | `Object` |
-| `opts.order?` | [`Order`](../../../../enums/Types/Order/Order.md) |
-| `opts.size?` | `BigNumber` |
-| `opts.start?` | `BigNumber` |
-
-#### Returns
-
-`Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`Asset`](../Asset/Asset.md)\>\>
-
-___
-
-### getHeldAssetsV2
-
-▸ **getHeldAssetsV2**(`opts?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`Asset`](../Asset/Asset.md)\>\>
 
 Retrieve a list of all Assets which were held at one point by this Identity
 
@@ -325,31 +296,6 @@ Retrieve the primary Account associated with the Identity
 
 ___
 
-### getScopeId
-
-▸ **getScopeId**(`args`): `Promise`<``null`` \| `string`\>
-
-Retrieve the Scope ID associated to this Identity's Investor Uniqueness Claim for a specific Asset, or null
-  if there is none
-
-**`Note`**
-
- more on Investor Uniqueness [here](https://developers.polymesh.network/introduction/identity#polymesh-unique-identity-system-puis) and
-  [here](https://developers.polymesh.network/polymesh-docs/primitives/confidential-identity)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `args` | `Object` |
-| `args.asset` | `string` \| [`Asset`](../Asset/Asset.md) |
-
-#### Returns
-
-`Promise`<``null`` \| `string`\>
-
-___
-
 ### getSecondaryAccounts
 
 ▸ **getSecondaryAccounts**(`paginationOpts?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`PermissionedAccount`](../../../../interfaces/Types/PermissionedAccount/PermissionedAccount.md)\>\>
@@ -409,22 +355,6 @@ Get the list of Assets for which this Identity is a trusted claim issuer
 
 **`Note`**
 
- uses the middleware
-
-#### Returns
-
-`Promise`<[`Asset`](../Asset/Asset.md)[]\>
-
-___
-
-### getTrustingAssetsV2
-
-▸ **getTrustingAssetsV2**(): `Promise`<[`Asset`](../Asset/Asset.md)[]\>
-
-Get the list of Assets for which this Identity is a trusted claim issuer
-
-**`Note`**
-
  uses the middlewareV2
 
 #### Returns
@@ -446,18 +376,6 @@ Retrieve all Venues created by this Identity
 #### Returns
 
 `Promise`<[`Venue`](../Venue/Venue.md)[]\>
-
-▸ **getVenues**(`callback`): `Promise`<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `callback` | [`SubCallback`](../../../../modules/Types/Types.md#subcallback)<[`Venue`](../Venue/Venue.md)[]\> |
-
-#### Returns
-
-`Promise`<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
 
 ___
 

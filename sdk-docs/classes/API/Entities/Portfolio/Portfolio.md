@@ -28,7 +28,7 @@ Identity of the Portfolio's owner
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Portfolio/index.ts#L82)
+[api/entities/Portfolio/index.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Portfolio/index.ts#L71)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -99,37 +99,7 @@ ___
 
 ### getTransactionHistory
 
-▸ **getTransactionHistory**(`filters?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`HistoricSettlement`](../../../../interfaces/API/Entities/Portfolio/Types/HistoricSettlement/HistoricSettlement.md)\>\>
-
-Retrieve a list of transactions where this portfolio was involved. Can be filtered using parameters
-
-**`Note`**
-
- supports pagination
-
-**`Note`**
-
- uses the middleware
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filters` | `Object` | - |
-| `filters.account?` | `string` | Account involved in the settlement |
-| `filters.size?` | `BigNumber` | page size |
-| `filters.start?` | `BigNumber` | page offset |
-| `filters.ticker?` | `string` | ticker involved in the transaction |
-
-#### Returns
-
-`Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`HistoricSettlement`](../../../../interfaces/API/Entities/Portfolio/Types/HistoricSettlement/HistoricSettlement.md)\>\>
-
-___
-
-### getTransactionHistoryV2
-
-▸ **getTransactionHistoryV2**(`filters?`): `Promise`<[`HistoricSettlement`](../../../../interfaces/API/Entities/Portfolio/Types/HistoricSettlement/HistoricSettlement.md)[]\>
+▸ **getTransactionHistory**(`filters?`): `Promise`<[`HistoricSettlement`](../../../../interfaces/API/Entities/Portfolio/Types/HistoricSettlement/HistoricSettlement.md)[]\>
 
 Retrieve a list of transactions where this portfolio was involved. Can be filtered using parameters
 

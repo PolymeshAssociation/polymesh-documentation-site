@@ -98,7 +98,7 @@ ___
 
 ▸ **getAccount**(`args`): `Promise`<[`Account`](../../Entities/Account/Account.md) \| [`MultiSig`](../../Entities/Account/MultiSig/MultiSig.md)\>
 
-Return an Account instance from an address. If the Account has multiSig signers, the returned value will be a api/entities/MultiSig!MultiSig instance
+Return an Account instance from an address. If the Account has multiSig signers, the returned value will be a [MultiSig](../../Entities/Account/MultiSig/MultiSig.md) instance
 
 #### Parameters
 

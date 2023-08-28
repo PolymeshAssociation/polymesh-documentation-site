@@ -18,7 +18,7 @@ optional message explaining the reason for failure in special cases
 
 #### Defined in
 
-[types/index.ts:1046](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1046)
+[types/index.ts:1009](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1009)
 
 ___
 
@@ -30,7 +30,7 @@ required roles which the Identity *DOESN'T* have. Only present if `result` is `f
 
 #### Defined in
 
-[types/index.ts:1038](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1038)
+[types/index.ts:1001](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1001)
 
 ___
 
@@ -42,4 +42,4 @@ whether the signer possesses all the required roles or not
 
 #### Defined in
 
-[types/index.ts:1042](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1042)
+[types/index.ts:1005](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1005)

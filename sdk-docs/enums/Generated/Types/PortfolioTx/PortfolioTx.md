@@ -14,7 +14,7 @@ sidebar_label: "PortfolioTx"
 
 #### Defined in
 
-[generated/types.ts:602](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L602)
+[generated/types.ts:611](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/generated/types.ts#L611)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:597](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L597)
+[generated/types.ts:606](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/generated/types.ts#L606)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:598](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L598)
+[generated/types.ts:607](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/generated/types.ts#L607)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:599](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L599)
+[generated/types.ts:608](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/generated/types.ts#L608)
 
 ___
 
@@ -54,7 +54,17 @@ ___
 
 #### Defined in
 
-[generated/types.ts:603](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L603)
+[generated/types.ts:612](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/generated/types.ts#L612)
+
+___
+
+### PreApprovePortfolio
+
+• **PreApprovePortfolio** = ``"portfolio.preApprovePortfolio"``
+
+#### Defined in
+
+[generated/types.ts:613](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/generated/types.ts#L613)
 
 ___
 
@@ -64,7 +74,17 @@ ___
 
 #### Defined in
 
-[generated/types.ts:601](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L601)
+[generated/types.ts:610](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/generated/types.ts#L610)
+
+___
+
+### RemovePortfolioPreApproval
+
+• **RemovePortfolioPreApproval** = ``"portfolio.removePortfolioPreApproval"``
+
+#### Defined in
+
+[generated/types.ts:614](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/generated/types.ts#L614)
 
 ___
 
@@ -74,4 +94,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:600](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L600)
+[generated/types.ts:609](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/generated/types.ts#L609)

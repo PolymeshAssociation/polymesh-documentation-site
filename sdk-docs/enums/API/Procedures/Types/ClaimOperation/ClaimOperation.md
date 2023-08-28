@@ -14,7 +14,7 @@ sidebar_label: "ClaimOperation"
 
 #### Defined in
 
-[api/procedures/types.ts:332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L332)
+[api/procedures/types.ts:332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/procedures/types.ts#L332)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:333](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L333)
+[api/procedures/types.ts:333](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/procedures/types.ts#L333)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:331](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L331)
+[api/procedures/types.ts:331](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/procedures/types.ts#L331)

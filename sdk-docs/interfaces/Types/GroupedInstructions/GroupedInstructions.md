@@ -16,7 +16,7 @@ Instructions that have already been affirmed by the Identity
 
 #### Defined in
 
-[types/index.ts:1563](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1563)
+[types/index.ts:1508](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1508)
 
 ___
 
@@ -30,7 +30,7 @@ Instructions that failed in their execution (can be rescheduled).
 
 #### Defined in
 
-[types/index.ts:1573](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1573)
+[types/index.ts:1518](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1518)
 
 ___
 
@@ -42,4 +42,4 @@ Instructions that still need to be affirmed/rejected by the Identity
 
 #### Defined in
 
-[types/index.ts:1567](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1567)
+[types/index.ts:1512](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1512)

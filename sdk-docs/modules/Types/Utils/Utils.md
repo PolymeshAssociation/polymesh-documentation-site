@@ -20,13 +20,13 @@ Less strict version of `Parameters<T>`
 
 #### Defined in
 
-[types/utils/index.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/utils/index.ts#L29)
+[types/utils/index.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/utils/index.ts#L29)
 
 ___
 
 ### Ensured
 
-Ƭ **Ensured**<`T`, `K`\>: `Required`<`Pick`<`T`, `K`\>\>
+Ƭ **Ensured**<`T`, `K`\>: `Required`<`Pick`<`T`, `K`\>\> & { [SubKey in K]: NonNullable<T[SubKey]\> }
 
 Pick a single property from T and ensure it is defined
 
@@ -39,24 +39,7 @@ Pick a single property from T and ensure it is defined
 
 #### Defined in
 
-[types/utils/index.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/utils/index.ts#L87)
-
-___
-
-### EnsuredV2
-
-Ƭ **EnsuredV2**<`T`, `K`\>: `Required`<`Pick`<`T`, `K`\>\> & { [SubKey in K]: NonNullable<T[SubKey]\> }
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | `T` |
-| `K` | extends keyof `T` |
-
-#### Defined in
-
-[types/utils/index.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/utils/index.ts#L89)
+[types/utils/index.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/utils/index.ts#L87)
 
 ___
 
@@ -75,7 +58,7 @@ Recursively traverse a type and transform its Entity properties into their
 
 #### Defined in
 
-[types/utils/index.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/utils/index.ts#L35)
+[types/utils/index.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/utils/index.ts#L35)
 
 ___
 
@@ -94,7 +77,7 @@ Override T with the properties of R
 
 #### Defined in
 
-[types/utils/index.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/utils/index.ts#L76)
+[types/utils/index.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/utils/index.ts#L76)
 
 ___
 
@@ -110,7 +93,7 @@ ___
 
 #### Defined in
 
-[types/utils/index.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/utils/index.ts#L93)
+[types/utils/index.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/utils/index.ts#L91)
 
 ___
 
@@ -127,7 +110,7 @@ ___
 
 #### Defined in
 
-[types/utils/index.ts:98](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/utils/index.ts#L98)
+[types/utils/index.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/utils/index.ts#L96)
 
 ___
 
@@ -146,4 +129,4 @@ Ensure a specific property of T is defined
 
 #### Defined in
 
-[types/utils/index.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/utils/index.ts#L82)
+[types/utils/index.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/utils/index.ts#L82)

@@ -14,7 +14,7 @@ sidebar_label: "RelayerTx"
 
 #### Defined in
 
-[generated/types.ts:697](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L697)
+[generated/types.ts:721](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/generated/types.ts#L721)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:701](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L701)
+[generated/types.ts:725](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/generated/types.ts#L725)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:700](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L700)
+[generated/types.ts:724](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/generated/types.ts#L724)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:698](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L698)
+[generated/types.ts:722](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/generated/types.ts#L722)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:696](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L696)
+[generated/types.ts:720](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/generated/types.ts#L720)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:699](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L699)
+[generated/types.ts:723](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/generated/types.ts#L723)

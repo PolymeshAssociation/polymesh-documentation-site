@@ -12,4 +12,5 @@ sidebar_label: "Types"
 ## Interfaces
 
 - [AccountTypeInfo](../../../../../interfaces/API/Entities/Account/Types/AccountTypeInfo/AccountTypeInfo.md)
+- [HistoricPolyxTransaction](../../../../../interfaces/API/Entities/Account/Types/HistoricPolyxTransaction/HistoricPolyxTransaction.md)
 - [MultiSigDetails](../../../../../interfaces/API/Entities/Account/Types/MultiSigDetails/MultiSigDetails.md)

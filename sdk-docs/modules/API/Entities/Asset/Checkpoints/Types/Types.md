@@ -16,4 +16,4 @@ sidebar_label: "Types"
 
 #### Defined in
 
-[api/entities/Asset/Checkpoints/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/Checkpoints/types.ts#L10)
+[api/entities/Asset/Checkpoints/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/Checkpoints/types.ts#L10)

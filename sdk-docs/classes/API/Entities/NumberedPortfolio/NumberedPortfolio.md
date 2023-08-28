@@ -24,7 +24,7 @@ Portfolio identifier number
 
 #### Defined in
 
-[api/entities/NumberedPortfolio.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/NumberedPortfolio.ts#L42)
+[api/entities/NumberedPortfolio.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/NumberedPortfolio.ts#L40)
 
 ___
 
@@ -40,7 +40,7 @@ Identity of the Portfolio's owner
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Portfolio/index.ts#L82)
+[api/entities/Portfolio/index.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Portfolio/index.ts#L71)
 
 ___
 
@@ -54,33 +54,13 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
 ### createdAt
 
 ▸ **createdAt**(): `Promise`<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
-
-Retrieve the identifier data (block number, date and event index) of the event that was emitted when this Portfolio was created
-
-**`Note`**
-
- uses the middleware
-
-**`Note`**
-
- there is a possibility that the data is not ready by the time it is requested. In that case, `null` is returned
-
-#### Returns
-
-`Promise`<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
-
-___
-
-### createdAtV2
-
-▸ **createdAtV2**(): `Promise`<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
 
 Retrieve the identifier data (block number, date and event index) of the event that was emitted when this Portfolio was created
 
@@ -171,41 +151,7 @@ ___
 
 ### getTransactionHistory
 
-▸ **getTransactionHistory**(`filters?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`HistoricSettlement`](../../../../interfaces/API/Entities/Portfolio/Types/HistoricSettlement/HistoricSettlement.md)\>\>
-
-Retrieve a list of transactions where this portfolio was involved. Can be filtered using parameters
-
-**`Note`**
-
- supports pagination
-
-**`Note`**
-
- uses the middleware
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filters` | `Object` | - |
-| `filters.account?` | `string` | Account involved in the settlement |
-| `filters.size?` | `BigNumber` | page size |
-| `filters.start?` | `BigNumber` | page offset |
-| `filters.ticker?` | `string` | ticker involved in the transaction |
-
-#### Returns
-
-`Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`HistoricSettlement`](../../../../interfaces/API/Entities/Portfolio/Types/HistoricSettlement/HistoricSettlement.md)\>\>
-
-#### Inherited from
-
-[Portfolio](../Portfolio/Portfolio.md).[getTransactionHistory](../Portfolio/Portfolio.md#gettransactionhistory)
-
-___
-
-### getTransactionHistoryV2
-
-▸ **getTransactionHistoryV2**(`filters?`): `Promise`<[`HistoricSettlement`](../../../../interfaces/API/Entities/Portfolio/Types/HistoricSettlement/HistoricSettlement.md)[]\>
+▸ **getTransactionHistory**(`filters?`): `Promise`<[`HistoricSettlement`](../../../../interfaces/API/Entities/Portfolio/Types/HistoricSettlement/HistoricSettlement.md)[]\>
 
 Retrieve a list of transactions where this portfolio was involved. Can be filtered using parameters
 
@@ -227,7 +173,7 @@ Retrieve a list of transactions where this portfolio was involved. Can be filter
 
 #### Inherited from
 
-[Portfolio](../Portfolio/Portfolio.md).[getTransactionHistoryV2](../Portfolio/Portfolio.md#gettransactionhistoryv2)
+[Portfolio](../Portfolio/Portfolio.md).[getTransactionHistory](../Portfolio/Portfolio.md#gettransactionhistory)
 
 ___
 

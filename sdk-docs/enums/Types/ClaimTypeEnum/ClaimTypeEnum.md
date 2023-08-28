@@ -19,7 +19,7 @@ sidebar_label: "ClaimTypeEnum"
 
 #### Defined in
 
-[middleware/typesV2.ts:29284](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29284)
+[middleware/types.ts:30106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L30106)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29285](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29285)
+[middleware/types.ts:30107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L30107)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29286](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29286)
+[middleware/types.ts:30108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L30108)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29287](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29287)
+[middleware/types.ts:30109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L30109)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29288](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29288)
+[middleware/types.ts:30110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L30110)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29289](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29289)
+[middleware/types.ts:30111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L30111)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29290](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29290)
+[middleware/types.ts:30112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L30112)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29291](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29291)
+[middleware/types.ts:30113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L30113)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29292](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29292)
+[middleware/types.ts:30114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L30114)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29293](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29293)
+[middleware/types.ts:30115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L30115)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29294](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29294)
+[middleware/types.ts:30116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L30116)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29295](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29295)
+[middleware/types.ts:30117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L30117)
 
 ___
 
@@ -139,4 +139,4 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29296](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29296)
+[middleware/types.ts:30118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L30118)

@@ -14,7 +14,7 @@ sidebar_label: "UniqueIdentifiers"
 
 #### Defined in
 
-[api/entities/CustomPermissionGroup.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CustomPermissionGroup.ts#L21)
+[api/entities/CustomPermissionGroup.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/CustomPermissionGroup.ts#L21)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/CustomPermissionGroup.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CustomPermissionGroup.ts#L22)
+[api/entities/CustomPermissionGroup.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/CustomPermissionGroup.ts#L22)

@@ -26,7 +26,7 @@ Polymesh-specific address of the Account. Serves as an identifier
 
 #### Defined in
 
-[api/entities/Account/index.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Account/index.ts#L81)
+[api/entities/Account/index.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Account/index.ts#L76)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[api/entities/Account/index.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Account/index.ts#L90)
+[api/entities/Account/index.ts:85](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Account/index.ts#L85)
 
 ___
 
@@ -49,7 +49,7 @@ Substrate chains, while the address depends on the chain as well.
 
 #### Defined in
 
-[api/entities/Account/index.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Account/index.ts#L87)
+[api/entities/Account/index.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Account/index.ts#L82)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[api/entities/Account/index.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Account/index.ts#L91)
+[api/entities/Account/index.ts:86](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Account/index.ts#L86)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -193,6 +193,30 @@ Retrieve the Permissions this Account has as a Permissioned Account for its corr
 
 ___
 
+### getPolyxTransactions
+
+▸ **getPolyxTransactions**(`filters`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`HistoricPolyxTransaction`](../../../../interfaces/API/Entities/Account/Types/HistoricPolyxTransaction/HistoricPolyxTransaction.md)\>\>
+
+Returns POLYX transactions associated with this account
+
+**`Note`**
+
+ uses the middleware
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `filters` | `Object` | - |
+| `filters.size?` | `BigNumber` | page size |
+| `filters.start?` | `BigNumber` | page offset |
+
+#### Returns
+
+`Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`HistoricPolyxTransaction`](../../../../interfaces/API/Entities/Account/Types/HistoricPolyxTransaction/HistoricPolyxTransaction.md)\>\>
+
+___
+
 ### getSubsidy
 
 ▸ **getSubsidy**(): `Promise`<``null`` \| [`SubsidyWithAllowance`](../../../../interfaces/API/Entities/Subsidy/Types/SubsidyWithAllowance/SubsidyWithAllowance.md)\>
@@ -234,44 +258,13 @@ Retrieve a list of transactions signed by this Account. Can be filtered using pa
 
 **`Note`**
 
- if both `blockNumber` and `blockHash` are passed, only `blockNumber` is taken into account
+ if both `blockNumber` and `blockHash` are passed, only `blockNumber` is taken into account.
+Also, for ordering by block_id, one should pass `ExtrinsicsOrderBy.CreatedAtAsc` or `ExtrinsicsOrderBy.CreatedAtDesc`
+in order of their choice (since block ID is a string field in middleware v2)
 
 **`Note`**
 
- uses the middleware
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filters` | `Object` | - |
-| `filters.blockHash?` | `string` | - |
-| `filters.blockNumber?` | `BigNumber` | - |
-| `filters.orderBy?` | [`TransactionOrderByInput`](../../../../modules/Types/Types.md#transactionorderbyinput) | - |
-| `filters.size?` | `BigNumber` | page size |
-| `filters.start?` | `BigNumber` | page offset |
-| `filters.success?` | `boolean` | whether the transaction was successful or not |
-| `filters.tag?` | [`TxTag`](../../../../modules/Generated/Types/Types.md#txtag) | tag associated with the transaction |
-
-#### Returns
-
-`Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`ExtrinsicData`](../../../../interfaces/Types/ExtrinsicData/ExtrinsicData.md)\>\>
-
-___
-
-### getTransactionHistoryV2
-
-▸ **getTransactionHistoryV2**(`filters?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`ExtrinsicData`](../../../../interfaces/Types/ExtrinsicData/ExtrinsicData.md)\>\>
-
-Retrieve a list of transactions signed by this Account. Can be filtered using parameters
-
-**`Note`**
-
- if both `blockNumber` and `blockHash` are passed, only `blockNumber` is taken into account
-
-**`Note`**
-
- uses the middlewareV2
+ uses the middleware v2
 
 #### Parameters
 

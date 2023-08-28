@@ -14,7 +14,7 @@ sidebar_label: "UniqueIdentifiers"
 
 #### Defined in
 
-[api/entities/DefaultTrustedClaimIssuer.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/DefaultTrustedClaimIssuer.ts#L18)
+[api/entities/DefaultTrustedClaimIssuer.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/DefaultTrustedClaimIssuer.ts#L14)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/DefaultTrustedClaimIssuer.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/DefaultTrustedClaimIssuer.ts#L19)
+[api/entities/DefaultTrustedClaimIssuer.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/DefaultTrustedClaimIssuer.ts#L15)

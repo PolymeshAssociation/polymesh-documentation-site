@@ -20,7 +20,7 @@ Assets over which this key has permissions
 
 #### Defined in
 
-[types/index.ts:983](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L983)
+[types/index.ts:946](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L946)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:997](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L997)
+[types/index.ts:960](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L960)
 
 ___
 
@@ -46,7 +46,7 @@ NOTE: If transactions is null, ignore this value
 
 #### Defined in
 
-[types/index.ts:995](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L995)
+[types/index.ts:958](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L958)
 
 ___
 
@@ -58,4 +58,4 @@ Transactions this key can execute
 
 #### Defined in
 
-[types/index.ts:987](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L987)
+[types/index.ts:950](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L950)

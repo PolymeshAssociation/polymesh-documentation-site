@@ -16,29 +16,15 @@ Handles all Asset Checkpoint Schedules related functionality
 
 ## Methods
 
-### complexityOf
-
-▸ **complexityOf**(`period`): `BigNumber`
-
-Calculate an abstract measure of the complexity of a given Calendar Period
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `period` | [`CalendarPeriod`](../../../../../../interfaces/Types/CalendarPeriod/CalendarPeriod.md) |
-
-#### Returns
-
-`BigNumber`
-
-___
-
 ### create
 
 ▸ **create**(`args`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`CheckpointSchedule`](../../../CheckpointSchedule/CheckpointSchedule.md), [`CheckpointSchedule`](../../../CheckpointSchedule/CheckpointSchedule.md)\>\>
 
 Create a schedule for Checkpoint creation (e.g. "Create a checkpoint every week for 5 weeks, starting next tuesday")
+
+**`Note`**
+
+ ⚠️ Chain v6 introduces changes in how checkpoints are created. Only a set amount of points can be specified, infinitely repeating schedules are deprecated
 
 **`Note`**
 
@@ -61,19 +47,6 @@ Create a schedule for Checkpoint creation (e.g. "Create a checkpoint every week 
 #### Returns
 
 `Promise`<[`GenericPolymeshTransaction`](../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`CheckpointSchedule`](../../../CheckpointSchedule/CheckpointSchedule.md), [`CheckpointSchedule`](../../../CheckpointSchedule/CheckpointSchedule.md)\>\>
-
-___
-
-### currentComplexity
-
-▸ **currentComplexity**(): `Promise`<`BigNumber`\>
-
-Calculate the sum of the complexity of all current Checkpoint Schedules for this Asset.
-  The number cannot exceed the Asset's maximum complexity (obtained via [maxComplexity](Schedules.md#maxcomplexity))
-
-#### Returns
-
-`Promise`<`BigNumber`\>
 
 ___
 

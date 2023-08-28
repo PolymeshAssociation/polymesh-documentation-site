@@ -16,7 +16,7 @@ Instructions where the Identity is the custodian of the leg portfolios
 
 #### Defined in
 
-[types/index.ts:1587](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1587)
+[types/index.ts:1532](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1532)
 
 ___
 
@@ -28,4 +28,4 @@ Instructions where the Identity is the owner of the leg portfolios
 
 #### Defined in
 
-[types/index.ts:1591](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1591)
+[types/index.ts:1536](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1536)

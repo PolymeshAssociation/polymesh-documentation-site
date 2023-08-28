@@ -22,7 +22,7 @@ Class used to manage all Asset functionality
 
 #### Defined in
 
-[api/entities/Asset/index.ts:118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/index.ts#L118)
+[api/entities/Asset/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/index.ts#L114)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:123](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/index.ts#L123)
+[api/entities/Asset/index.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/index.ts#L119)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/index.ts#L120)
+[api/entities/Asset/index.ts:116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/index.ts#L116)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:124](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/index.ts#L124)
+[api/entities/Asset/index.ts:120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/index.ts#L120)
 
 ___
 
@@ -64,7 +64,7 @@ Identity ID of the Asset (used for Claims)
 
 #### Defined in
 
-[api/entities/Asset/index.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/index.ts#L108)
+[api/entities/Asset/index.ts:104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/index.ts#L104)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/index.ts#L116)
+[api/entities/Asset/index.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/index.ts#L112)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/index.ts#L119)
+[api/entities/Asset/index.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/index.ts#L115)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/index.ts#L126)
+[api/entities/Asset/index.ts:122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/index.ts#L122)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/index.ts#L122)
+[api/entities/Asset/index.ts:118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/index.ts#L118)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:125](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/index.ts#L125)
+[api/entities/Asset/index.ts:121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/index.ts#L121)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/index.ts#L117)
+[api/entities/Asset/index.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/index.ts#L113)
 
 ___
 
@@ -136,7 +136,7 @@ ticker of the Asset
 
 #### Defined in
 
-[api/entities/Asset/index.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/index.ts#L113)
+[api/entities/Asset/index.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/index.ts#L109)
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/index.ts#L121)
+[api/entities/Asset/index.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/index.ts#L117)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -191,26 +191,6 @@ ___
 ### createdAt
 
 ▸ **createdAt**(): `Promise`<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
-
-Retrieve the identifier data (block number, date and event index) of the event that was emitted when the token was created
-
-**`Note`**
-
- uses the middleware
-
-**`Note`**
-
- there is a possibility that the data is not ready by the time it is requested. In that case, `null` is returned
-
-#### Returns
-
-`Promise`<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
-
-___
-
-### createdAtV2
-
-▸ **createdAtV2**(): `Promise`<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
 
 Retrieve the identifier data (block number, date and event index) of the event that was emitted when the token was created
 
@@ -363,26 +343,6 @@ Retrieve this Asset's Operation History
 
 **`Note`**
 
- uses the middleware
-
-#### Returns
-
-`Promise`<[`HistoricAgentOperation`](../../../../interfaces/Types/HistoricAgentOperation/HistoricAgentOperation.md)[]\>
-
-___
-
-### getOperationHistoryV2
-
-▸ **getOperationHistoryV2**(): `Promise`<[`HistoricAgentOperation`](../../../../interfaces/Types/HistoricAgentOperation/HistoricAgentOperation.md)[]\>
-
-Retrieve this Asset's Operation History
-
-**`Note`**
-
- Operations are grouped by the agent Identity who performed them
-
-**`Note`**
-
  uses the middlewareV2
 
 #### Returns
@@ -420,12 +380,6 @@ ___
 ▸ **investorCount**(): `Promise`<`BigNumber`\>
 
 Retrieve the amount of unique investors that hold this Asset
-
-**`Note`**
-
- this takes into account the Scope ID of Investor Uniqueness Claims. If an investor holds balances
-  of this Asset in two or more different Identities, but they all have Investor Uniqueness Claims with the same
-  Scope ID, then they will only be counted once for the purposes of this result
 
 #### Returns
 

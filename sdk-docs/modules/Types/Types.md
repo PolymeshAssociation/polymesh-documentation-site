@@ -10,8 +10,10 @@ sidebar_label: "Types"
 - [AuthTypeEnum](../../enums/Types/AuthTypeEnum/AuthTypeEnum.md)
 - [AuthorizationStatusEnum](../../enums/Types/AuthorizationStatusEnum/AuthorizationStatusEnum.md)
 - [AuthorizationType](../../enums/Types/AuthorizationType/AuthorizationType.md)
+- [BalanceTypeEnum](../../enums/Types/BalanceTypeEnum/BalanceTypeEnum.md)
 - [CalendarUnit](../../enums/Types/CalendarUnit/CalendarUnit.md)
 - [CallIdEnum](../../enums/Types/CallIdEnum/CallIdEnum.md)
+- [ClaimScopeTypeEnum](../../enums/Types/ClaimScopeTypeEnum/ClaimScopeTypeEnum.md)
 - [ClaimType](../../enums/Types/ClaimType/ClaimType.md)
 - [ClaimTypeEnum](../../enums/Types/ClaimTypeEnum/ClaimTypeEnum.md)
 - [ConditionTarget](../../enums/Types/ConditionTarget/ConditionTarget.md)
@@ -21,14 +23,12 @@ sidebar_label: "Types"
 - [ExtrinsicsOrderBy](../../enums/Types/ExtrinsicsOrderBy/ExtrinsicsOrderBy.md)
 - [InstructionStatusEnum](../../enums/Types/InstructionStatusEnum/InstructionStatusEnum.md)
 - [KnownAssetType](../../enums/Types/KnownAssetType/KnownAssetType.md)
+- [LegTypeEnum](../../enums/Types/LegTypeEnum/LegTypeEnum.md)
 - [ModuleIdEnum](../../enums/Types/ModuleIdEnum/ModuleIdEnum.md)
-- [Order](../../enums/Types/Order/Order.md)
 - [PayingAccountType](../../enums/Types/PayingAccountType/PayingAccountType.md)
 - [PermissionGroupType](../../enums/Types/PermissionGroupType/PermissionGroupType.md)
 - [PermissionType](../../enums/Types/PermissionType/PermissionType.md)
 - [ProposalStateEnum](../../enums/Types/ProposalStateEnum/ProposalStateEnum.md)
-- [PublicEnum7A0B4Cc03E](../../enums/Types/PublicEnum7A0B4Cc03E/PublicEnum7A0B4Cc03E.md)
-- [PublicEnum8F5A39C8Ee](../../enums/Types/PublicEnum8F5A39C8Ee/PublicEnum8F5A39C8Ee.md)
 - [RoleType](../../enums/Types/RoleType/RoleType.md)
 - [ScopeType](../../enums/Types/ScopeType/ScopeType.md)
 - [SecurityIdentifierType](../../enums/Types/SecurityIdentifierType/SecurityIdentifierType.md)
@@ -39,7 +39,6 @@ sidebar_label: "Types"
 - [StatType](../../enums/Types/StatType/StatType.md)
 - [StoStatus](../../enums/Types/StoStatus/StoStatus.md)
 - [TransactionArgumentType](../../enums/Types/TransactionArgumentType/TransactionArgumentType.md)
-- [TransactionOrderFields](../../enums/Types/TransactionOrderFields/TransactionOrderFields.md)
 - [TransactionStatus](../../enums/Types/TransactionStatus/TransactionStatus.md)
 - [TransferComplianceTypeEnum](../../enums/Types/TransferComplianceTypeEnum/TransferComplianceTypeEnum.md)
 - [TransferError](../../enums/Types/TransferError/TransferError.md)
@@ -95,8 +94,6 @@ sidebar_label: "Types"
 - [IdentityRole](../../interfaces/Types/IdentityRole/IdentityRole.md)
 - [IdentityWithClaims](../../interfaces/Types/IdentityWithClaims/IdentityWithClaims.md)
 - [ImmortalProcedureOptValue](../../interfaces/Types/ImmortalProcedureOptValue/ImmortalProcedureOptValue.md)
-- [InvestorUniquenessClaim](../../interfaces/Types/InvestorUniquenessClaim/InvestorUniquenessClaim.md)
-- [InvestorUniquenessV2Claim](../../interfaces/Types/InvestorUniquenessV2Claim/InvestorUniquenessV2Claim.md)
 - [JurisdictionClaim](../../interfaces/Types/JurisdictionClaim/JurisdictionClaim.md)
 - [KycClaim](../../interfaces/Types/KycClaim/KycClaim.md)
 - [MiddlewareConfig](../../interfaces/Types/MiddlewareConfig/MiddlewareConfig.md)
@@ -105,8 +102,6 @@ sidebar_label: "Types"
 - [MultiClaimCondition](../../interfaces/Types/MultiClaimCondition/MultiClaimCondition.md)
 - [NetworkProperties](../../interfaces/Types/NetworkProperties/NetworkProperties.md)
 - [NoArgsProcedureMethod](../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md)
-- [NoDataClaim](../../interfaces/Types/NoDataClaim/NoDataClaim.md)
-- [NoTypeClaim](../../interfaces/Types/NoTypeClaim/NoTypeClaim.md)
 - [OfferingWithDetails](../../interfaces/Types/OfferingWithDetails/OfferingWithDetails.md)
 - [OptionalArgsProcedureMethod](../../interfaces/Types/OptionalArgsProcedureMethod/OptionalArgsProcedureMethod.md)
 - [PaginationOptions](../../interfaces/Types/PaginationOptions/PaginationOptions.md)
@@ -135,6 +130,7 @@ sidebar_label: "Types"
 - [SimpleEnumTransactionArgument](../../interfaces/Types/SimpleEnumTransactionArgument/SimpleEnumTransactionArgument.md)
 - [SimplePermissions](../../interfaces/Types/SimplePermissions/SimplePermissions.md)
 - [SingleClaimCondition](../../interfaces/Types/SingleClaimCondition/SingleClaimCondition.md)
+- [SpWeightV2](../../interfaces/Types/SpWeightV2/SpWeightV2.md)
 - [StatAccreditedClaimInput](../../interfaces/Types/StatAccreditedClaimInput/StatAccreditedClaimInput.md)
 - [StatAffiliateClaimInput](../../interfaces/Types/StatAffiliateClaimInput/StatAffiliateClaimInput.md)
 - [StatClaimIssuer](../../interfaces/Types/StatClaimIssuer/StatClaimIssuer.md)
@@ -1425,7 +1421,7 @@ Re-exports [WaivePermissionsParams](../../interfaces/API/Procedures/Types/WaiveP
 
 #### Defined in
 
-[types/index.ts:738](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L738)
+[types/index.ts:701](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L701)
 
 ___
 
@@ -1442,7 +1438,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1125](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1125)
+[types/index.ts:1088](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1088)
 
 ___
 
@@ -1459,7 +1455,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1096](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1096)
+[types/index.ts:1059](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1059)
 
 ___
 
@@ -1471,7 +1467,7 @@ Authorization request data corresponding to type
 
 #### Defined in
 
-[types/index.ts:1146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1146)
+[types/index.ts:1109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1109)
 
 ___
 
@@ -1488,7 +1484,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1120)
+[types/index.ts:1083](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1083)
 
 ___
 
@@ -1498,7 +1494,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:314](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L314)
+[types/index.ts:277](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L277)
 
 ___
 
@@ -1508,7 +1504,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1412](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1412)
+[types/index.ts:1375](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1375)
 
 ___
 
@@ -1518,7 +1514,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:476](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L476)
+[types/index.ts:439](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L439)
 
 ___
 
@@ -1535,7 +1531,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1130)
+[types/index.ts:1093](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1093)
 
 ___
 
@@ -1552,7 +1548,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1650](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1650)
+[types/index.ts:1595](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1595)
 
 ___
 
@@ -1564,7 +1560,7 @@ Asset permissions shared by agents in a group
 
 #### Defined in
 
-[types/index.ts:1003](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1003)
+[types/index.ts:966](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L966)
 
 ___
 
@@ -1574,7 +1570,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:484](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L484)
+[types/index.ts:447](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L447)
 
 ___
 
@@ -1584,7 +1580,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:447](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L447)
+[types/index.ts:410](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L410)
 
 ___
 
@@ -1596,7 +1592,7 @@ Targets of a corporate action in a flexible structure for input purposes
 
 #### Defined in
 
-[types/index.ts:1633](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1633)
+[types/index.ts:1578](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1578)
 
 ___
 
@@ -1608,7 +1604,7 @@ Per-Identity tax withholdings of a corporate action in a flexible structure for 
 
 #### Defined in
 
-[types/index.ts:1643](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1643)
+[types/index.ts:1588](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1588)
 
 ___
 
@@ -1618,7 +1614,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:510](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L510)
+[types/index.ts:473](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L473)
 
 ___
 
@@ -1628,7 +1624,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:342](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L342)
+[types/index.ts:305](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L305)
 
 ___
 
@@ -1638,7 +1634,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:347](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L347)
+[types/index.ts:310](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L310)
 
 ___
 
@@ -1648,7 +1644,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:423](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L423)
+[types/index.ts:386](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L386)
 
 ___
 
@@ -1658,7 +1654,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1576](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1576)
+[types/index.ts:1521](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1521)
 
 ___
 
@@ -1675,7 +1671,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1110)
+[types/index.ts:1073](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1073)
 
 ___
 
@@ -1693,7 +1689,17 @@ Apply the [TxData](../../interfaces/Types/TxData/TxData.md) type to all args in 
 
 #### Defined in
 
-[types/index.ts:1687](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1687)
+[types/index.ts:1632](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1632)
+
+___
+
+### MiddlewareScope
+
+Ƭ **MiddlewareScope**: [`Scalars`](Types.md#scalars)[``"JSON"``]
+
+#### Defined in
+
+[middleware/typesV1.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/typesV1.ts#L9)
 
 ___
 
@@ -1703,7 +1709,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1513](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1513)
+[types/index.ts:1458](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1458)
 
 ___
 
@@ -1713,7 +1719,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:745](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L745)
+[types/index.ts:708](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L708)
 
 ___
 
@@ -1725,7 +1731,7 @@ Data representing the Account responsible for paying fees for a transaction
 
 #### Defined in
 
-[types/index.ts:799](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L799)
+[types/index.ts:762](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L762)
 
 ___
 
@@ -1743,7 +1749,7 @@ Permissions to grant to a Signer over an Identity
 
 #### Defined in
 
-[types/index.ts:1245](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1245)
+[types/index.ts:1208](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1208)
 
 ___
 
@@ -1760,7 +1766,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1115)
+[types/index.ts:1078](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1078)
 
 ___
 
@@ -1770,7 +1776,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1231](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1231)
+[types/index.ts:1194](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1194)
 
 ___
 
@@ -1782,7 +1788,7 @@ URI|mnemonic|hex representation of a private key
 
 #### Defined in
 
-[types/index.ts:1619](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1619)
+[types/index.ts:1564](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1564)
 
 ___
 
@@ -1792,7 +1798,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:132](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L132)
+[types/index.ts:120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L120)
 
 ___
 
@@ -1808,7 +1814,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1101)
+[types/index.ts:1064](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1064)
 
 ___
 
@@ -1825,17 +1831,44 @@ ___
 
 #### Defined in
 
-[types/index.ts:1105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1105)
+[types/index.ts:1068](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1068)
+
+___
+
+### Scalars
+
+Ƭ **Scalars**: `Object`
+
+All built-in and custom scalars, mapped to their actual values
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `BigFloat` | `any` |
+| `Boolean` | `boolean` |
+| `Cursor` | `any` |
+| `Date` | `any` |
+| `Datetime` | `any` |
+| `Float` | `number` |
+| `ID` | `string` |
+| `Int` | `number` |
+| `JSON` | `any` |
+| `String` | `string` |
+
+#### Defined in
+
+[middleware/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L7)
 
 ___
 
 ### ScopedClaim
 
-Ƭ **ScopedClaim**: [`JurisdictionClaim`](../../interfaces/Types/JurisdictionClaim/JurisdictionClaim.md) \| [`InvestorUniquenessClaim`](../../interfaces/Types/InvestorUniquenessClaim/InvestorUniquenessClaim.md) \| [`AccreditedClaim`](../../interfaces/Types/AccreditedClaim/AccreditedClaim.md) \| [`AffiliateClaim`](../../interfaces/Types/AffiliateClaim/AffiliateClaim.md) \| [`BuyLockupClaim`](../../interfaces/Types/BuyLockupClaim/BuyLockupClaim.md) \| [`SellLockupClaim`](../../interfaces/Types/SellLockupClaim/SellLockupClaim.md) \| [`KycClaim`](../../interfaces/Types/KycClaim/KycClaim.md) \| [`ExemptedClaim`](../../interfaces/Types/ExemptedClaim/ExemptedClaim.md) \| [`BlockedClaim`](../../interfaces/Types/BlockedClaim/BlockedClaim.md)
+Ƭ **ScopedClaim**: [`JurisdictionClaim`](../../interfaces/Types/JurisdictionClaim/JurisdictionClaim.md) \| [`AccreditedClaim`](../../interfaces/Types/AccreditedClaim/AccreditedClaim.md) \| [`AffiliateClaim`](../../interfaces/Types/AffiliateClaim/AffiliateClaim.md) \| [`BuyLockupClaim`](../../interfaces/Types/BuyLockupClaim/BuyLockupClaim.md) \| [`SellLockupClaim`](../../interfaces/Types/SellLockupClaim/SellLockupClaim.md) \| [`KycClaim`](../../interfaces/Types/KycClaim/KycClaim.md) \| [`ExemptedClaim`](../../interfaces/Types/ExemptedClaim/ExemptedClaim.md) \| [`BlockedClaim`](../../interfaces/Types/BlockedClaim/BlockedClaim.md)
 
 #### Defined in
 
-[types/index.ts:301](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L301)
+[types/index.ts:265](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L265)
 
 ___
 
@@ -1845,7 +1878,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1213)
+[types/index.ts:1176](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1176)
 
 ___
 
@@ -1855,7 +1888,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:325](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L325)
+[types/index.ts:288](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L288)
 
 ___
 
@@ -1885,7 +1918,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:707](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L707)
+[types/index.ts:670](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L670)
 
 ___
 
@@ -1895,7 +1928,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1202)
+[types/index.ts:1165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1165)
 
 ___
 
@@ -1911,24 +1944,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1654](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1654)
-
-___
-
-### TransactionOrderByInput
-
-Ƭ **TransactionOrderByInput**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `field` | [`TransactionOrderFields`](../../enums/Types/TransactionOrderFields/TransactionOrderFields.md) |
-| `order` | [`Order`](../../enums/Types/Order/Order.md) |
-
-#### Defined in
-
-[middleware/types.ts:1753](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/types.ts#L1753)
+[types/index.ts:1599](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1599)
 
 ___
 
@@ -1938,17 +1954,17 @@ ___
 
 #### Defined in
 
-[types/index.ts:1374](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1374)
+[types/index.ts:1337](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1337)
 
 ___
 
 ### UnscopedClaim
 
-Ƭ **UnscopedClaim**: [`NoDataClaim`](../../interfaces/Types/NoDataClaim/NoDataClaim.md) \| [`NoTypeClaim`](../../interfaces/Types/NoTypeClaim/NoTypeClaim.md) \| [`CddClaim`](../../interfaces/Types/CddClaim/CddClaim.md) \| [`InvestorUniquenessV2Claim`](../../interfaces/Types/InvestorUniquenessV2Claim/InvestorUniquenessV2Claim.md)
+Ƭ **UnscopedClaim**: [`CddClaim`](../../interfaces/Types/CddClaim/CddClaim.md)
 
 #### Defined in
 
-[types/index.ts:312](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L312)
+[types/index.ts:275](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L275)
 
 ___
 
@@ -1966,14 +1982,14 @@ ___
 
 #### Defined in
 
-[types/index.ts:709](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L709)
+[types/index.ts:672](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L672)
 
 ## Variables
 
-### middlewareV2EnumMap
+### middlewareEnumMap
 
-• `Const` **middlewareV2EnumMap**: `Record`<`string`, `string`\>
+• `Const` **middlewareEnumMap**: `Record`<`string`, `string`\>
 
 #### Defined in
 
-[middleware/enumsV2.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/enumsV2.ts#L18)
+[middleware/enums.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/enums.ts#L21)

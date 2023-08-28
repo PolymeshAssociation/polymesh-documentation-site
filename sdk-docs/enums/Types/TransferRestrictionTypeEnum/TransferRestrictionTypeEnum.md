@@ -19,7 +19,7 @@ sidebar_label: "TransferRestrictionTypeEnum"
 
 #### Defined in
 
-[middleware/typesV2.ts:29133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29133)
+[middleware/types.ts:29920](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L29920)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29134)
+[middleware/types.ts:29921](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L29921)

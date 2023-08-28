@@ -45,34 +45,6 @@ Retrieve the identifier data (block number, date and event index) of the event t
 
 **`Note`**
 
- uses the middleware
-
-**`Note`**
-
- there is a possibility that the data is not ready by the time it is requested. In that case, `null` is returned
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `__namedParameters` | `Object` |
-| `__namedParameters.asset` | `string` \| [`Asset`](../../Asset/Asset.md) |
-
-#### Returns
-
-`Promise`<``null`` \| [`EventIdentifier`](../../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
-
-___
-
-### enabledAtV2
-
-▸ **enabledAtV2**(`__namedParameters`): `Promise`<``null`` \| [`EventIdentifier`](../../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
-
-Retrieve the identifier data (block number, date and event index) of the event that was emitted when this Identity was enabled/added as
-  an Agent with permissions over a specific Asset
-
-**`Note`**
-
  uses the middlewareV2
 
 **`Note`**
@@ -131,7 +103,7 @@ Retrieve all Events triggered by Operations this Identity has performed on a spe
 
 **`Note`**
 
- uses the middleware
+ uses the middlewareV2
 
 **`Note`**
 
@@ -145,37 +117,6 @@ Retrieve all Events triggered by Operations this Identity has performed on a spe
 | `opts.asset` | `string` \| [`Asset`](../../Asset/Asset.md) | - |
 | `opts.eventId?` | [`EventIdEnum`](../../../../../enums/Types/EventIdEnum/EventIdEnum.md) | filters results by event |
 | `opts.moduleId?` | [`ModuleIdEnum`](../../../../../enums/Types/ModuleIdEnum/ModuleIdEnum.md) | filters results by module |
-| `opts.size?` | `BigNumber` | page size |
-| `opts.start?` | `BigNumber` | page offset |
-
-#### Returns
-
-`Promise`<[`ResultSet`](../../../../../interfaces/Types/ResultSet/ResultSet.md)<[`EventIdentifier`](../../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>\>
-
-___
-
-### getOperationHistoryV2
-
-▸ **getOperationHistoryV2**(`opts`): `Promise`<[`ResultSet`](../../../../../interfaces/Types/ResultSet/ResultSet.md)<[`EventIdentifier`](../../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>\>
-
-Retrieve all Events triggered by Operations this Identity has performed on a specific Asset
-
-**`Note`**
-
- uses the middlewareV2
-
-**`Note`**
-
- supports pagination
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `Object` | - |
-| `opts.asset` | `string` \| [`Asset`](../../Asset/Asset.md) | - |
-| `opts.eventId?` | [`PublicEnum8F5A39C8Ee`](../../../../../enums/Types/PublicEnum8F5A39C8Ee/PublicEnum8F5A39C8Ee.md) | filters results by event |
-| `opts.moduleId?` | [`PublicEnum7A0B4Cc03E`](../../../../../enums/Types/PublicEnum7A0B4Cc03E/PublicEnum7A0B4Cc03E.md) | filters results by module |
 | `opts.size?` | `BigNumber` | page size |
 | `opts.start?` | `BigNumber` | page offset |
 

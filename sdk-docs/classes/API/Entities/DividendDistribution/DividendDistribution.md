@@ -29,7 +29,7 @@ Asset affected by this Corporate Action
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CorporateActionBase/index.ts#L80)
+[api/entities/CorporateActionBase/index.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/CorporateActionBase/index.ts#L82)
 
 ___
 
@@ -41,7 +41,7 @@ ticker of the currency in which dividends are being distributed
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/DividendDistribution/index.ts#L102)
+[api/entities/DividendDistribution/index.ts:97](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/DividendDistribution/index.ts#L97)
 
 ___
 
@@ -57,7 +57,7 @@ date at which the Corporate Action was created
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:85](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CorporateActionBase/index.ts#L85)
+[api/entities/CorporateActionBase/index.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/CorporateActionBase/index.ts#L87)
 
 ___
 
@@ -73,7 +73,7 @@ default percentage (0-100) of tax withholding for this Corporate Action
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CorporateActionBase/index.ts#L101)
+[api/entities/CorporateActionBase/index.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/CorporateActionBase/index.ts#L103)
 
 ___
 
@@ -89,7 +89,7 @@ brief text description of the Corporate Action
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CorporateActionBase/index.ts#L90)
+[api/entities/CorporateActionBase/index.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/CorporateActionBase/index.ts#L92)
 
 ___
 
@@ -101,7 +101,7 @@ date after which dividends can no longer be paid/reclaimed. A null value means t
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/DividendDistribution/index.ts#L118)
+[api/entities/DividendDistribution/index.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/DividendDistribution/index.ts#L113)
 
 ___
 
@@ -117,7 +117,7 @@ internal Corporate Action ID
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:75](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CorporateActionBase/index.ts#L75)
+[api/entities/CorporateActionBase/index.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/CorporateActionBase/index.ts#L77)
 
 ___
 
@@ -130,7 +130,7 @@ maximum amount of `currency` to be distributed. Distributions are "first come, f
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/DividendDistribution/index.ts#L113)
+[api/entities/DividendDistribution/index.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/DividendDistribution/index.ts#L108)
 
 ___
 
@@ -142,7 +142,7 @@ Portfolio from which the dividends will be distributed
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:97](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/DividendDistribution/index.ts#L97)
+[api/entities/DividendDistribution/index.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/DividendDistribution/index.ts#L92)
 
 ___
 
@@ -154,7 +154,7 @@ date starting from which dividends can be paid/reclaimed
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:123](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/DividendDistribution/index.ts#L123)
+[api/entities/DividendDistribution/index.ts:118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/DividendDistribution/index.ts#L118)
 
 ___
 
@@ -166,7 +166,7 @@ amount of `currency` to pay for each share held by the Asset Holders
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/DividendDistribution/index.ts#L107)
+[api/entities/DividendDistribution/index.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/DividendDistribution/index.ts#L102)
 
 ___
 
@@ -183,7 +183,7 @@ Asset Holder Identities related to this Corporate action. If the treatment is `E
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CorporateActionBase/index.ts#L96)
+[api/entities/CorporateActionBase/index.ts:98](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/CorporateActionBase/index.ts#L98)
 
 ___
 
@@ -200,7 +200,7 @@ percentage (0-100) of tax withholding per Identity. Any Identity not present
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CorporateActionBase/index.ts#L107)
+[api/entities/CorporateActionBase/index.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/CorporateActionBase/index.ts#L109)
 
 ___
 
@@ -214,7 +214,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -345,34 +345,6 @@ Retrieve the payment history for this Distribution
 
 **`Note`**
 
- uses the middleware
-
-**`Note`**
-
- supports pagination
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `opts` | `Object` |
-| `opts.size?` | `BigNumber` |
-| `opts.start?` | `BigNumber` |
-
-#### Returns
-
-`Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`DistributionPayment`](../../../../interfaces/Types/DistributionPayment/DistributionPayment.md)\>\>
-
-___
-
-### getPaymentHistoryV2
-
-▸ **getPaymentHistoryV2**(`opts?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`DistributionPayment`](../../../../interfaces/Types/DistributionPayment/DistributionPayment.md)\>\>
-
-Retrieve the payment history for this Distribution
-
-**`Note`**
-
  uses the middleware V2
 
 **`Note`**
@@ -396,22 +368,6 @@ ___
 ### getWithheldTax
 
 ▸ **getWithheldTax**(): `Promise`<`BigNumber`\>
-
-Retrieve the amount of taxes that have been withheld up to this point in this Distribution
-
-**`Note`**
-
- uses the middleware
-
-#### Returns
-
-`Promise`<`BigNumber`\>
-
-___
-
-### getWithheldTaxV2
-
-▸ **getWithheldTaxV2**(): `Promise`<`BigNumber`\>
 
 Retrieve the amount of taxes that have been withheld up to this point in this Distribution
 

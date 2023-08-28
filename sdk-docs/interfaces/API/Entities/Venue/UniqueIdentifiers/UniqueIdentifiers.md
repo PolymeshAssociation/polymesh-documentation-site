@@ -14,4 +14,4 @@ sidebar_label: "UniqueIdentifiers"
 
 #### Defined in
 
-[api/entities/Venue/index.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Venue/index.ts#L32)
+[api/entities/Venue/index.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Venue/index.ts#L32)

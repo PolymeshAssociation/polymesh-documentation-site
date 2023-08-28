@@ -22,7 +22,7 @@ Handles all Asset Checkpoints related functionality
 
 #### Defined in
 
-[api/entities/Asset/Checkpoints/index.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/Checkpoints/index.ts#L29)
+[api/entities/Asset/Checkpoints/index.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/Checkpoints/index.ts#L29)
 
 ## Methods
 

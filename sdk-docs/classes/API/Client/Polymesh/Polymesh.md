@@ -18,7 +18,7 @@ A set of methods for managing a Polymesh Identity's Accounts and their permissio
 
 #### Defined in
 
-[api/client/Polymesh.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L108)
+[api/client/Polymesh.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/client/Polymesh.ts#L91)
 
 ___
 
@@ -30,7 +30,7 @@ A set of methods for interacting with Assets
 
 #### Defined in
 
-[api/client/Polymesh.ts:116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L116)
+[api/client/Polymesh.ts:99](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/client/Polymesh.ts#L99)
 
 ___
 
@@ -42,7 +42,7 @@ A set of methods to deal with Claims
 
 #### Defined in
 
-[api/client/Polymesh.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L96)
+[api/client/Polymesh.ts:79](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/client/Polymesh.ts#L79)
 
 ___
 
@@ -54,7 +54,7 @@ A set of methods for interacting with Polymesh Identities.
 
 #### Defined in
 
-[api/client/Polymesh.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L112)
+[api/client/Polymesh.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/client/Polymesh.ts#L95)
 
 ___
 
@@ -66,7 +66,7 @@ A set of methods to interact with the Polymesh network. This includes transferri
 
 #### Defined in
 
-[api/client/Polymesh.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L100)
+[api/client/Polymesh.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/client/Polymesh.ts#L83)
 
 ___
 
@@ -78,21 +78,9 @@ A set of methods for exchanging Assets
 
 #### Defined in
 
-[api/client/Polymesh.ts:104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L104)
+[api/client/Polymesh.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/client/Polymesh.ts#L87)
 
 ## Accessors
-
-### \_middlewareApi
-
-• `get` **_middlewareApi**(): `ApolloClient`<`NormalizedCacheObject`\>
-
-Middleware client
-
-#### Returns
-
-`ApolloClient`<`NormalizedCacheObject`\>
-
-___
 
 ### \_middlewareApiV2
 

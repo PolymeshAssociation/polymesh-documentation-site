@@ -14,7 +14,7 @@ sidebar_label: "HumanReadable"
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CheckpointSchedule/index.ts#L31)
+[api/entities/CheckpointSchedule/index.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/CheckpointSchedule/index.ts#L31)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:30](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CheckpointSchedule/index.ts#L30)
+[api/entities/CheckpointSchedule/index.ts:30](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/CheckpointSchedule/index.ts#L30)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CheckpointSchedule/index.ts#L26)
+[api/entities/CheckpointSchedule/index.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/CheckpointSchedule/index.ts#L26)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CheckpointSchedule/index.ts#L28)
+[api/entities/CheckpointSchedule/index.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/CheckpointSchedule/index.ts#L28)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CheckpointSchedule/index.ts#L29)
+[api/entities/CheckpointSchedule/index.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/CheckpointSchedule/index.ts#L29)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CheckpointSchedule/index.ts#L27)
+[api/entities/CheckpointSchedule/index.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/CheckpointSchedule/index.ts#L27)

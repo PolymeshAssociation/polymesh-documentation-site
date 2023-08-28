@@ -24,7 +24,7 @@ Unique identifier number of the instruction
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Instruction/index.ts#L89)
+[api/entities/Instruction/index.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Instruction/index.ts#L89)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -82,7 +82,7 @@ ___
 
 ▸ **executeManually**(`args?`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
 
-Executes an Instruction of type `SettleManual`
+Executes an Instruction either of type `SettleManual` or a `Failed` instruction
 
 **`Note`**
 
@@ -184,22 +184,6 @@ ___
 ### getStatus
 
 ▸ **getStatus**(): `Promise`<[`InstructionStatusResult`](../../../../modules/API/Entities/Instruction/Types/Types.md#instructionstatusresult)\>
-
-Retrieve current status of this Instruction
-
-**`Note`**
-
- uses the middleware
-
-#### Returns
-
-`Promise`<[`InstructionStatusResult`](../../../../modules/API/Entities/Instruction/Types/Types.md#instructionstatusresult)\>
-
-___
-
-### getStatusV2
-
-▸ **getStatusV2**(): `Promise`<[`InstructionStatusResult`](../../../../modules/API/Entities/Instruction/Types/Types.md#instructionstatusresult)\>
 
 Retrieve current status of this Instruction
 
@@ -332,6 +316,10 @@ Reschedules a failed Instruction to be tried again
 **`Throws`**
 
  if the Instruction status is not `InstructionStatus.Failed`
+
+**`Deprecated`**
+
+ chain v6 will allow executeManually to be used instead
 
 **`Note`**
 

@@ -14,7 +14,7 @@ sidebar_label: "ClaimType"
 
 #### Defined in
 
-[types/index.ts:220](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L220)
+[types/index.ts:208](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L208)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:221](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L221)
+[types/index.ts:209](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L209)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:228](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L228)
+[types/index.ts:216](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L216)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L222)
+[types/index.ts:210](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L210)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L224)
+[types/index.ts:212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L212)
 
 ___
 
@@ -64,27 +64,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:227](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L227)
-
-___
-
-### InvestorUniqueness
-
-• **InvestorUniqueness** = ``"InvestorUniqueness"``
-
-#### Defined in
-
-[types/index.ts:229](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L229)
-
-___
-
-### InvestorUniquenessV2
-
-• **InvestorUniquenessV2** = ``"InvestorUniquenessV2"``
-
-#### Defined in
-
-[types/index.ts:232](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L232)
+[types/index.ts:215](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L215)
 
 ___
 
@@ -94,7 +74,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:226](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L226)
+[types/index.ts:214](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L214)
 
 ___
 
@@ -104,27 +84,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L225)
-
-___
-
-### NoData
-
-• **NoData** = ``"NoData"``
-
-#### Defined in
-
-[types/index.ts:231](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L231)
-
-___
-
-### NoType
-
-• **NoType** = ``"NoType"``
-
-#### Defined in
-
-[types/index.ts:230](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L230)
+[types/index.ts:213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L213)
 
 ___
 
@@ -134,4 +94,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:223](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L223)
+[types/index.ts:211](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L211)

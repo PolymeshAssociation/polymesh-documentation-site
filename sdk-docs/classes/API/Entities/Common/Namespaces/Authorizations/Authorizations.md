@@ -24,6 +24,36 @@ Handles all Authorization related functionality
 
 ## Methods
 
+### getHistoricalAuthorizations
+
+▸ **getHistoricalAuthorizations**(`opts?`): `Promise`<[`ResultSet`](../../../../../../interfaces/Types/ResultSet/ResultSet.md)<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)\>\>
+
+Fetch all historical Authorization Requests for which this Signer is the target
+
+**`Note`**
+
+ supports pagination
+
+**`Note`**
+
+ uses the middlewareV2
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts` | `Object` | - |
+| `opts.size?` | `BigNumber` | page size |
+| `opts.start?` | `BigNumber` | page offset |
+| `opts.status?` | [`AuthorizationStatusEnum`](../../../../../../enums/Types/AuthorizationStatusEnum/AuthorizationStatusEnum.md) | fetch only authorizations with this status. Fetches all statuses if not passed |
+| `opts.type?` | [`AuthTypeEnum`](../../../../../../enums/Types/AuthTypeEnum/AuthTypeEnum.md) | fetch only authorizations of this type. Fetches all types if not passed |
+
+#### Returns
+
+`Promise`<[`ResultSet`](../../../../../../interfaces/Types/ResultSet/ResultSet.md)<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)\>\>
+
+___
+
 ### getOne
 
 ▸ **getOne**(`args`): `Promise`<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)\>

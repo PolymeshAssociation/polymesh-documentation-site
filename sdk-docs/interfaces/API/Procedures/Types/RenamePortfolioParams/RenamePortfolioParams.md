@@ -14,4 +14,4 @@ sidebar_label: "RenamePortfolioParams"
 
 #### Defined in
 
-[api/procedures/types.ts:951](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L951)
+[api/procedures/types.ts:951](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/procedures/types.ts#L951)

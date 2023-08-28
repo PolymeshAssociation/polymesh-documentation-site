@@ -10,6 +10,8 @@ sidebar_label: "EventIdentifier"
 
 - **`EventIdentifier`**
 
+  ↳ [`HistoricPolyxTransaction`](../../API/Entities/Account/Types/HistoricPolyxTransaction/HistoricPolyxTransaction.md)
+
   ↳ [`HistoricAssetTransaction`](../../API/Entities/Asset/Types/HistoricAssetTransaction/HistoricAssetTransaction.md)
 
 ## Properties
@@ -20,7 +22,7 @@ sidebar_label: "EventIdentifier"
 
 #### Defined in
 
-[types/index.ts:719](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L719)
+[types/index.ts:682](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L682)
 
 ___
 
@@ -30,7 +32,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:718](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L718)
+[types/index.ts:681](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L681)
 
 ___
 
@@ -40,7 +42,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:717](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L717)
+[types/index.ts:680](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L680)
 
 ___
 
@@ -50,4 +52,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:720](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L720)
+[types/index.ts:683](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L683)

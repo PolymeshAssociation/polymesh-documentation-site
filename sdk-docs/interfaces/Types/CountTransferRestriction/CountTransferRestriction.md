@@ -20,7 +20,7 @@ sidebar_label: "CountTransferRestriction"
 
 #### Defined in
 
-[types/index.ts:1311](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1311)
+[types/index.ts:1274](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1274)
 
 ___
 
@@ -42,4 +42,4 @@ TransferRestrictionBase.exemptedIds
 
 #### Defined in
 
-[types/index.ts:1307](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1307)
+[types/index.ts:1270](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L1270)

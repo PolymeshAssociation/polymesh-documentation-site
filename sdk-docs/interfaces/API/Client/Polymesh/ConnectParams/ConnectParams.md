@@ -8,27 +8,13 @@ sidebar_label: "ConnectParams"
 
 ## Properties
 
-### middleware
-
-• `Optional` **middleware**: [`MiddlewareConfig`](../../../../Types/MiddlewareConfig/MiddlewareConfig.md)
-
-**`Deprecated`**
-
- in favour of middlewareV2
-
-#### Defined in
-
-[api/client/Polymesh.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L44)
-
-___
-
 ### middlewareV2
 
 • `Optional` **middlewareV2**: [`MiddlewareConfig`](../../../../Types/MiddlewareConfig/MiddlewareConfig.md)
 
 #### Defined in
 
-[api/client/Polymesh.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L45)
+[api/client/Polymesh.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/client/Polymesh.ts#L38)
 
 ___
 
@@ -38,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/client/Polymesh.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L39)
+[api/client/Polymesh.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/client/Polymesh.ts#L36)
 
 ___
 
@@ -48,4 +34,4 @@ ___
 
 #### Defined in
 
-[api/client/Polymesh.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L40)
+[api/client/Polymesh.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/client/Polymesh.ts#L37)

@@ -34,7 +34,7 @@ at least 50% of the supply.
 
 #### Defined in
 
-[api/entities/Asset/TransferRestrictions/ClaimPercentage.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/TransferRestrictions/ClaimPercentage.ts#L31)
+[api/entities/Asset/TransferRestrictions/ClaimPercentage.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/TransferRestrictions/ClaimPercentage.ts#L31)
 
 ___
 
@@ -55,7 +55,7 @@ involving the Asset, disabling unused stats will reduce gas fees for investors
 
 #### Defined in
 
-[api/entities/Asset/TransferRestrictions/ClaimPercentage.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/TransferRestrictions/ClaimPercentage.ts#L68)
+[api/entities/Asset/TransferRestrictions/ClaimPercentage.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/TransferRestrictions/ClaimPercentage.ts#L68)
 
 ___
 
@@ -72,7 +72,7 @@ that limit the total ownership the Asset's supply
 
 #### Defined in
 
-[api/entities/Asset/TransferRestrictions/ClaimPercentage.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/TransferRestrictions/ClaimPercentage.ts#L60)
+[api/entities/Asset/TransferRestrictions/ClaimPercentage.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/TransferRestrictions/ClaimPercentage.ts#L60)
 
 ___
 
@@ -102,7 +102,7 @@ Retrieve all active Claim Percentage Transfer Restrictions
 
 #### Defined in
 
-[api/entities/Asset/TransferRestrictions/ClaimPercentage.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/TransferRestrictions/ClaimPercentage.ts#L77)
+[api/entities/Asset/TransferRestrictions/ClaimPercentage.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/TransferRestrictions/ClaimPercentage.ts#L77)
 
 ___
 
@@ -122,7 +122,7 @@ Removes all Claim Percentage Transfer Restrictions from this Asset
 
 #### Defined in
 
-[api/entities/Asset/TransferRestrictions/ClaimPercentage.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/TransferRestrictions/ClaimPercentage.ts#L54)
+[api/entities/Asset/TransferRestrictions/ClaimPercentage.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/TransferRestrictions/ClaimPercentage.ts#L54)
 
 ___
 
@@ -147,4 +147,4 @@ but not passed into this call then it will be removed
 
 #### Defined in
 
-[api/entities/Asset/TransferRestrictions/ClaimPercentage.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/TransferRestrictions/ClaimPercentage.ts#L44)
+[api/entities/Asset/TransferRestrictions/ClaimPercentage.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/TransferRestrictions/ClaimPercentage.ts#L44)

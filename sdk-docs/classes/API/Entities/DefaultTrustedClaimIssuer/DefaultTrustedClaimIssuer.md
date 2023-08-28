@@ -24,7 +24,7 @@ Asset for which this Identity is a Default Trusted Claim Issuer
 
 #### Defined in
 
-[api/entities/DefaultTrustedClaimIssuer.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/DefaultTrustedClaimIssuer.ts#L39)
+[api/entities/DefaultTrustedClaimIssuer.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/DefaultTrustedClaimIssuer.ts#L35)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[api/entities/Identity/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Identity/index.ts#L114)
+[api/entities/Identity/index.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Identity/index.ts#L110)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[api/entities/Identity/index.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Identity/index.ts#L112)
+[api/entities/Identity/index.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Identity/index.ts#L108)
 
 ___
 
@@ -68,7 +68,7 @@ Identity ID as stored in the blockchain
 
 #### Defined in
 
-[api/entities/Identity/index.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Identity/index.ts#L109)
+[api/entities/Identity/index.ts:105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Identity/index.ts#L105)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[api/entities/Identity/index.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Identity/index.ts#L113)
+[api/entities/Identity/index.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Identity/index.ts#L109)
 
 ___
 
@@ -96,33 +96,13 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
 ### addedAt
 
 ▸ **addedAt**(): `Promise`<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
-
-Retrieve the identifier data (block number, date and event index) of the event that was emitted when the trusted claim issuer was added
-
-**`Note`**
-
- uses the middleware
-
-**`Note`**
-
- there is a possibility that the data is not ready by the time it is requested. In that case, `null` is returned
-
-#### Returns
-
-`Promise`<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
-
-___
-
-### addedAtV2
-
-▸ **addedAtV2**(): `Promise`<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
 
 Retrieve the identifier data (block number, date and event index) of the event that was emitted when the trusted claim issuer was added
 
@@ -271,39 +251,6 @@ Retrieve a list of all Assets which were held at one point by this Identity
 
 **`Note`**
 
- uses the middleware
-
-**`Note`**
-
- supports pagination
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `opts` | `Object` |
-| `opts.order?` | [`Order`](../../../../enums/Types/Order/Order.md) |
-| `opts.size?` | `BigNumber` |
-| `opts.start?` | `BigNumber` |
-
-#### Returns
-
-`Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`Asset`](../Asset/Asset.md)\>\>
-
-#### Inherited from
-
-[Identity](../Identity/Identity.md).[getHeldAssets](../Identity/Identity.md#getheldassets)
-
-___
-
-### getHeldAssetsV2
-
-▸ **getHeldAssetsV2**(`opts?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`Asset`](../Asset/Asset.md)\>\>
-
-Retrieve a list of all Assets which were held at one point by this Identity
-
-**`Note`**
-
  uses the middlewareV2
 
 **`Note`**
@@ -325,7 +272,7 @@ Retrieve a list of all Assets which were held at one point by this Identity
 
 #### Inherited from
 
-[Identity](../Identity/Identity.md).[getHeldAssetsV2](../Identity/Identity.md#getheldassetsv2)
+[Identity](../Identity/Identity.md).[getHeldAssets](../Identity/Identity.md#getheldassets)
 
 ___
 
@@ -443,35 +390,6 @@ Retrieve the primary Account associated with the Identity
 
 ___
 
-### getScopeId
-
-▸ **getScopeId**(`args`): `Promise`<``null`` \| `string`\>
-
-Retrieve the Scope ID associated to this Identity's Investor Uniqueness Claim for a specific Asset, or null
-  if there is none
-
-**`Note`**
-
- more on Investor Uniqueness [here](https://developers.polymesh.network/introduction/identity#polymesh-unique-identity-system-puis) and
-  [here](https://developers.polymesh.network/polymesh-docs/primitives/confidential-identity)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `args` | `Object` |
-| `args.asset` | `string` \| [`Asset`](../Asset/Asset.md) |
-
-#### Returns
-
-`Promise`<``null`` \| `string`\>
-
-#### Inherited from
-
-[Identity](../Identity/Identity.md).[getScopeId](../Identity/Identity.md#getscopeid)
-
-___
-
 ### getSecondaryAccounts
 
 ▸ **getSecondaryAccounts**(`paginationOpts?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`PermissionedAccount`](../../../../interfaces/Types/PermissionedAccount/PermissionedAccount.md)\>\>
@@ -543,26 +461,6 @@ Get the list of Assets for which this Identity is a trusted claim issuer
 
 **`Note`**
 
- uses the middleware
-
-#### Returns
-
-`Promise`<[`Asset`](../Asset/Asset.md)[]\>
-
-#### Inherited from
-
-[Identity](../Identity/Identity.md).[getTrustingAssets](../Identity/Identity.md#gettrustingassets)
-
-___
-
-### getTrustingAssetsV2
-
-▸ **getTrustingAssetsV2**(): `Promise`<[`Asset`](../Asset/Asset.md)[]\>
-
-Get the list of Assets for which this Identity is a trusted claim issuer
-
-**`Note`**
-
  uses the middlewareV2
 
 #### Returns
@@ -571,7 +469,7 @@ Get the list of Assets for which this Identity is a trusted claim issuer
 
 #### Inherited from
 
-[Identity](../Identity/Identity.md).[getTrustingAssetsV2](../Identity/Identity.md#gettrustingassetsv2)
+[Identity](../Identity/Identity.md).[getTrustingAssets](../Identity/Identity.md#gettrustingassets)
 
 ___
 
@@ -588,22 +486,6 @@ Retrieve all Venues created by this Identity
 #### Returns
 
 `Promise`<[`Venue`](../Venue/Venue.md)[]\>
-
-#### Inherited from
-
-[Identity](../Identity/Identity.md).[getVenues](../Identity/Identity.md#getvenues)
-
-▸ **getVenues**(`callback`): `Promise`<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `callback` | [`SubCallback`](../../../../modules/Types/Types.md#subcallback)<[`Venue`](../Venue/Venue.md)[]\> |
-
-#### Returns
-
-`Promise`<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
 
 #### Inherited from
 

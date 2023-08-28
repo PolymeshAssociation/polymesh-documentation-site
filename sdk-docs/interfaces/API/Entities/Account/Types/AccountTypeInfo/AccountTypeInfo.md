@@ -18,7 +18,7 @@ The type of Account
 
 #### Defined in
 
-[api/entities/Account/types.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Account/types.ts#L57)
+[api/entities/Account/types.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Account/types.ts#L58)
 
 ___
 
@@ -30,4 +30,4 @@ How or if the account is associated to an Identity
 
 #### Defined in
 
-[api/entities/Account/types.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Account/types.ts#L61)
+[api/entities/Account/types.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Account/types.ts#L62)

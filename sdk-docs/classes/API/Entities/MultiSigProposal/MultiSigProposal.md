@@ -22,7 +22,7 @@ A proposal for a MultiSig transaction. This is a wrapper around an extrinsic tha
 
 #### Defined in
 
-[api/entities/MultiSigProposal/index.ts:30](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/MultiSigProposal/index.ts#L30)
+[api/entities/MultiSigProposal/index.ts:30](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/MultiSigProposal/index.ts#L30)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[api/entities/MultiSigProposal/index.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/MultiSigProposal/index.ts#L29)
+[api/entities/MultiSigProposal/index.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/MultiSigProposal/index.ts#L29)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Entity.ts#L46)
 
 ## Methods
 

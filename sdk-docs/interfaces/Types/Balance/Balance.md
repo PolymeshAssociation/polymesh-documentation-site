@@ -22,7 +22,7 @@ balance available for transferring and paying fees
 
 #### Defined in
 
-[types/index.ts:727](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L727)
+[types/index.ts:690](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L690)
 
 ___
 
@@ -34,7 +34,7 @@ unavailable balance, either bonded for staking or locked for some other purpose
 
 #### Defined in
 
-[types/index.ts:731](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L731)
+[types/index.ts:694](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L694)
 
 ___
 
@@ -46,4 +46,4 @@ free + locked
 
 #### Defined in
 
-[types/index.ts:735](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L735)
+[types/index.ts:698](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/types/index.ts#L698)

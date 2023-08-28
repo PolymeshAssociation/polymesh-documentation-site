@@ -22,7 +22,7 @@ Handles all Asset Corporate Actions related functionality
 
 #### Defined in
 
-[api/entities/Asset/CorporateActions/index.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/CorporateActions/index.ts#L26)
+[api/entities/Asset/CorporateActions/index.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Asset/CorporateActions/index.ts#L26)
 
 ## Methods
 

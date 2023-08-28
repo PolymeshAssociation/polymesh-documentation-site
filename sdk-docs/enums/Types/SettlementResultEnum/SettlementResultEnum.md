@@ -6,6 +6,11 @@ sidebar_label: "SettlementResultEnum"
 
 [types](../../../modules/Types/Types.md).SettlementResultEnum
 
+**`Enum Name`**
+
+ SettlementResultEnum
+ Represents all possible states of a Settlement
+
 ## Enumeration Members
 
 ### Executed
@@ -14,7 +19,7 @@ sidebar_label: "SettlementResultEnum"
 
 #### Defined in
 
-[middleware/types.ts:1666](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/types.ts#L1666)
+[middleware/types.ts:28765](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L28765)
 
 ___
 
@@ -24,7 +29,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:1667](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/types.ts#L1667)
+[middleware/types.ts:28766](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L28766)
 
 ___
 
@@ -34,7 +39,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:1665](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/types.ts#L1665)
+[middleware/types.ts:28767](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L28767)
 
 ___
 
@@ -44,4 +49,4 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:1668](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/types.ts#L1668)
+[middleware/types.ts:28768](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/middleware/types.ts#L28768)

@@ -79,7 +79,13 @@ const config = {
         id: 'sdk-docs',
         path: 'sdk-docs',
         routeBasePath: '/sdk-docs',
-        includeCurrentVersion: false,
+        includeCurrentVersion: true,
+        versions: {
+          current: {
+            label: '22.0.0-beta.1',
+            path: '22.0.0-beta.1',
+          },
+        },
       },
     ],
   ],

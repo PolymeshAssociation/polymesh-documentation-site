@@ -24,7 +24,7 @@ Asset being offered
 
 #### Defined in
 
-[api/entities/Offering/index.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Offering/index.ts#L67)
+[api/entities/Offering/index.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Offering/index.ts#L65)
 
 ___
 
@@ -36,7 +36,7 @@ identifier number of the Offering
 
 #### Defined in
 
-[api/entities/Offering/index.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Offering/index.ts#L62)
+[api/entities/Offering/index.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Offering/index.ts#L60)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/acc2284c/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -147,34 +147,6 @@ ___
 ### getInvestments
 
 ▸ **getInvestments**(`opts?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`Investment`](../../../../interfaces/API/Entities/Offering/Types/Investment/Investment.md)\>\>
-
-Retrieve all investments made on this Offering
-
-**`Note`**
-
- supports pagination
-
-**`Note`**
-
- uses the middleware
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `Object` | - |
-| `opts.size?` | `BigNumber` | page size |
-| `opts.start?` | `BigNumber` | page offset |
-
-#### Returns
-
-`Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`Investment`](../../../../interfaces/API/Entities/Offering/Types/Investment/Investment.md)\>\>
-
-___
-
-### getInvestmentsV2
-
-▸ **getInvestmentsV2**(`opts?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`Investment`](../../../../interfaces/API/Entities/Offering/Types/Investment/Investment.md)\>\>
 
 Retrieve all investments made on this Offering
 
