@@ -14,7 +14,7 @@ sidebar_label: "TreasuryTx"
 
 #### Defined in
 
-[generated/types.ts:673](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L673)
+[generated/types.ts:673](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L673)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:674](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L674)
+[generated/types.ts:674](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L674)

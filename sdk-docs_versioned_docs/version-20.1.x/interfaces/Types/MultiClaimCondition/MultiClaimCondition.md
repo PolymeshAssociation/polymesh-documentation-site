@@ -14,7 +14,7 @@ sidebar_label: "MultiClaimCondition"
 
 #### Defined in
 
-[types/index.ts:441](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L441)
+[types/index.ts:441](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L441)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:440](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L440)
+[types/index.ts:440](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L440)

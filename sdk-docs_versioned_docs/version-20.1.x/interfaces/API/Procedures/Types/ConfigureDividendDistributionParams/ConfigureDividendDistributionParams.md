@@ -17,7 +17,7 @@ checkpoint to be used to calculate Dividends. If a Schedule is passed, the next 
 
 #### Defined in
 
-[api/procedures/types.ts:666](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L666)
+[api/procedures/types.ts:666](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L666)
 
 ___
 
@@ -29,7 +29,7 @@ ticker of the currency in which Dividends will be distributed
 
 #### Defined in
 
-[api/procedures/types.ts:674](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L674)
+[api/procedures/types.ts:674](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L674)
 
 ___
 
@@ -41,7 +41,7 @@ date at which the issuer publicly declared the Dividend Distribution. Optional, 
 
 #### Defined in
 
-[api/procedures/types.ts:645](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L645)
+[api/procedures/types.ts:645](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L645)
 
 ___
 
@@ -53,7 +53,7 @@ default percentage (0-100) of the Benefits to be held for tax purposes
 
 #### Defined in
 
-[api/procedures/types.ts:656](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L656)
+[api/procedures/types.ts:656](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L656)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:646](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L646)
+[api/procedures/types.ts:646](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L646)
 
 ___
 
@@ -75,7 +75,7 @@ optional, defaults to never expiring
 
 #### Defined in
 
-[api/procedures/types.ts:690](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L690)
+[api/procedures/types.ts:690](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L690)
 
 ___
 
@@ -87,7 +87,7 @@ maximum amount of `currency` to distribute in total
 
 #### Defined in
 
-[api/procedures/types.ts:682](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L682)
+[api/procedures/types.ts:682](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L682)
 
 ___
 
@@ -99,7 +99,7 @@ portfolio from which the Dividends will be distributed. Optional, defaults to th
 
 #### Defined in
 
-[api/procedures/types.ts:670](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L670)
+[api/procedures/types.ts:670](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L670)
 
 ___
 
@@ -111,7 +111,7 @@ date from which Asset Holders can claim their Dividends
 
 #### Defined in
 
-[api/procedures/types.ts:686](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L686)
+[api/procedures/types.ts:686](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L686)
 
 ___
 
@@ -123,7 +123,7 @@ amount of `currency` to distribute per each share of the Asset that a target hol
 
 #### Defined in
 
-[api/procedures/types.ts:678](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L678)
+[api/procedures/types.ts:678](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L678)
 
 ___
 
@@ -137,7 +137,7 @@ Asset Holder Identities to be included (or excluded) from the Dividend Distribut
 
 #### Defined in
 
-[api/procedures/types.ts:652](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L652)
+[api/procedures/types.ts:652](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L652)
 
 ___
 
@@ -150,4 +150,4 @@ percentage (0-100) of the Benefits to be held for tax purposes from individual A
 
 #### Defined in
 
-[api/procedures/types.ts:661](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L661)
+[api/procedures/types.ts:661](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L661)

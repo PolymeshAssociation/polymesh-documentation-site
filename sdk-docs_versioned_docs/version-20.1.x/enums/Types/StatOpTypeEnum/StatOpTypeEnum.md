@@ -19,7 +19,7 @@ sidebar_label: "StatOpTypeEnum"
 
 #### Defined in
 
-[middleware/typesV2.ts:26591](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L26591)
+[middleware/typesV2.ts:26591](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L26591)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:26592](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L26592)
+[middleware/typesV2.ts:26592](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L26592)

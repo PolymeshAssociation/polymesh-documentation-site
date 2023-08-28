@@ -14,7 +14,7 @@ sidebar_label: "PreimageTx"
 
 #### Defined in
 
-[generated/types.ts:728](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L728)
+[generated/types.ts:728](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L728)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:730](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L730)
+[generated/types.ts:730](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L730)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:729](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L729)
+[generated/types.ts:729](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L729)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:731](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L731)
+[generated/types.ts:731](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L731)

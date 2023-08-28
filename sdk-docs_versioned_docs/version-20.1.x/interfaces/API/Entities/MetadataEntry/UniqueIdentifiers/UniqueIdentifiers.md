@@ -14,7 +14,7 @@ sidebar_label: "UniqueIdentifiers"
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:21](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/MetadataEntry/index.ts#L21)
+[api/entities/MetadataEntry/index.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/MetadataEntry/index.ts#L21)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:19](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/MetadataEntry/index.ts#L19)
+[api/entities/MetadataEntry/index.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/MetadataEntry/index.ts#L19)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:20](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/MetadataEntry/index.ts#L20)
+[api/entities/MetadataEntry/index.ts:20](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/MetadataEntry/index.ts#L20)

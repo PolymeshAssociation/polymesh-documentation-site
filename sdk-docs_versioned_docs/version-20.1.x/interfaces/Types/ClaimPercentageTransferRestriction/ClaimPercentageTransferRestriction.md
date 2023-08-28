@@ -22,7 +22,7 @@ The type of investors this restriction applies to. e.g. Canadian investor
 
 #### Defined in
 
-[types/index.ts:1310](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1310)
+[types/index.ts:1310](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1310)
 
 ___
 
@@ -44,7 +44,7 @@ TransferRestrictionBase.exemptedIds
 
 #### Defined in
 
-[types/index.ts:1277](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1277)
+[types/index.ts:1277](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1277)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1320](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1320)
+[types/index.ts:1320](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1320)
 
 ___
 
@@ -66,7 +66,7 @@ The maximum percentage of the total supply that investors meeting the Claim crit
 
 #### Defined in
 
-[types/index.ts:1318](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1318)
+[types/index.ts:1318](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1318)
 
 ___
 
@@ -78,4 +78,4 @@ The minimum percentage of the total supply that investors meeting the Claim crit
 
 #### Defined in
 
-[types/index.ts:1314](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1314)
+[types/index.ts:1314](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1314)

@@ -14,7 +14,7 @@ sidebar_label: "IdentityWithClaims"
 
 #### Defined in
 
-[types/index.ts:352](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L352)
+[types/index.ts:352](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L352)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:351](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L351)
+[types/index.ts:351](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L351)

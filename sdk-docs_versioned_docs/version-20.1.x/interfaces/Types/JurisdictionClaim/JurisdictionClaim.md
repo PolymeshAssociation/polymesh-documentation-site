@@ -14,7 +14,7 @@ sidebar_label: "JurisdictionClaim"
 
 #### Defined in
 
-[types/index.ts:245](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L245)
+[types/index.ts:245](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L245)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:246](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L246)
+[types/index.ts:246](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L246)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:244](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L244)
+[types/index.ts:244](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L244)

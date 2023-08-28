@@ -14,7 +14,7 @@ sidebar_label: "PolymeshCommitteeTx"
 
 #### Defined in
 
-[generated/types.ts:345](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L345)
+[generated/types.ts:345](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L345)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:344](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L344)
+[generated/types.ts:344](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L344)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:343](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L343)
+[generated/types.ts:343](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L343)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:347](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L347)
+[generated/types.ts:347](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L347)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:346](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L346)
+[generated/types.ts:346](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L346)

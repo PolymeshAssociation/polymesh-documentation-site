@@ -14,7 +14,7 @@ sidebar_label: "TickerOwnerRole"
 
 #### Defined in
 
-[types/index.ts:83](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L83)
+[types/index.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L83)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:82](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L82)
+[types/index.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L82)

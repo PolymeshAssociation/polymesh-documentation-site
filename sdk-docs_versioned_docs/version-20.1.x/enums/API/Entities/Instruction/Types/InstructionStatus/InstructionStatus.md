@@ -14,7 +14,7 @@ sidebar_label: "InstructionStatus"
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:8](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Instruction/types.ts#L8)
+[api/entities/Instruction/types.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Instruction/types.ts#L8)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:9](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Instruction/types.ts#L9)
+[api/entities/Instruction/types.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Instruction/types.ts#L9)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:7](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Instruction/types.ts#L7)
+[api/entities/Instruction/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Instruction/types.ts#L7)

@@ -14,7 +14,7 @@ sidebar_label: "EventIdentifier"
 
 #### Defined in
 
-[types/index.ts:696](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L696)
+[types/index.ts:696](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L696)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:695](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L695)
+[types/index.ts:695](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L695)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:694](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L694)
+[types/index.ts:694](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L694)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:697](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L697)
+[types/index.ts:697](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L697)

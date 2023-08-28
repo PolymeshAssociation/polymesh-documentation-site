@@ -14,7 +14,7 @@ sidebar_label: "KnownAssetType"
 
 #### Defined in
 
-[types/index.ts:120](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L120)
+[types/index.ts:120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L120)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:126](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L126)
+[types/index.ts:126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L126)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:118](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L118)
+[types/index.ts:118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L118)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:119](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L119)
+[types/index.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L119)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:121](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L121)
+[types/index.ts:121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L121)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:123](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L123)
+[types/index.ts:123](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L123)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:122](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L122)
+[types/index.ts:122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L122)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:124](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L124)
+[types/index.ts:124](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L124)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:127](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L127)
+[types/index.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L127)
 
 ___
 
@@ -104,4 +104,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:125](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L125)
+[types/index.ts:125](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L125)

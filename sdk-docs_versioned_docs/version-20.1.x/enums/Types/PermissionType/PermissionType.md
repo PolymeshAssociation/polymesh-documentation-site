@@ -14,7 +14,7 @@ sidebar_label: "PermissionType"
 
 #### Defined in
 
-[types/index.ts:919](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L919)
+[types/index.ts:919](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L919)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:918](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L918)
+[types/index.ts:918](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L918)

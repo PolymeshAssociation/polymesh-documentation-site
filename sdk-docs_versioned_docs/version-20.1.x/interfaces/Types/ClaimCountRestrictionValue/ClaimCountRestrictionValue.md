@@ -14,7 +14,7 @@ sidebar_label: "ClaimCountRestrictionValue"
 
 #### Defined in
 
-[types/index.ts:1363](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1363)
+[types/index.ts:1363](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1363)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1362](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1362)
+[types/index.ts:1362](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1362)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1361](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1361)
+[types/index.ts:1361](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1361)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:1360](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1360)
+[types/index.ts:1360](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1360)

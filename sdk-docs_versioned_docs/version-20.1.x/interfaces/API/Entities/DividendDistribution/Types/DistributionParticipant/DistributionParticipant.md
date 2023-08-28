@@ -14,7 +14,7 @@ sidebar_label: "DistributionParticipant"
 
 #### Defined in
 
-[api/entities/DividendDistribution/types.ts:15](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/DividendDistribution/types.ts#L15)
+[api/entities/DividendDistribution/types.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/DividendDistribution/types.ts#L15)
 
 ___
 
@@ -26,7 +26,7 @@ amount to be paid to the participant after tax deductions
 
 #### Defined in
 
-[api/entities/DividendDistribution/types.ts:23](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/DividendDistribution/types.ts#L23)
+[api/entities/DividendDistribution/types.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/DividendDistribution/types.ts#L23)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[api/entities/DividendDistribution/types.ts:14](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/DividendDistribution/types.ts#L14)
+[api/entities/DividendDistribution/types.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/DividendDistribution/types.ts#L14)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[api/entities/DividendDistribution/types.ts:24](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/DividendDistribution/types.ts#L24)
+[api/entities/DividendDistribution/types.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/DividendDistribution/types.ts#L24)
 
 ___
 
@@ -58,4 +58,4 @@ percentage (0-100) of tax withholding for this participant
 
 #### Defined in
 
-[api/entities/DividendDistribution/types.ts:19](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/DividendDistribution/types.ts#L19)
+[api/entities/DividendDistribution/types.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/DividendDistribution/types.ts#L19)

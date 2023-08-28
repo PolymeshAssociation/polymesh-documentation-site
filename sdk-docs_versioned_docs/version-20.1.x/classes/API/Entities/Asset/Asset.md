@@ -22,7 +22,7 @@ Class used to manage all Asset functionality
 
 #### Defined in
 
-[api/entities/Asset/index.ts:109](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/index.ts#L109)
+[api/entities/Asset/index.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/index.ts#L109)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:114](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/index.ts#L114)
+[api/entities/Asset/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/index.ts#L114)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:111](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/index.ts#L111)
+[api/entities/Asset/index.ts:111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/index.ts#L111)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:115](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/index.ts#L115)
+[api/entities/Asset/index.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/index.ts#L115)
 
 ___
 
@@ -64,7 +64,7 @@ Identity ID of the Asset (used for Claims)
 
 #### Defined in
 
-[api/entities/Asset/index.ts:99](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/index.ts#L99)
+[api/entities/Asset/index.ts:99](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/index.ts#L99)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:107](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/index.ts#L107)
+[api/entities/Asset/index.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/index.ts#L107)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:110](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/index.ts#L110)
+[api/entities/Asset/index.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/index.ts#L110)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:117](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/index.ts#L117)
+[api/entities/Asset/index.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/index.ts#L117)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:113](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/index.ts#L113)
+[api/entities/Asset/index.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/index.ts#L113)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:116](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/index.ts#L116)
+[api/entities/Asset/index.ts:116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/index.ts#L116)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:108](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/index.ts#L108)
+[api/entities/Asset/index.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/index.ts#L108)
 
 ___
 
@@ -136,7 +136,7 @@ ticker of the Asset
 
 #### Defined in
 
-[api/entities/Asset/index.ts:104](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/index.ts#L104)
+[api/entities/Asset/index.ts:104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/index.ts#L104)
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/index.ts:112](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/index.ts#L112)
+[api/entities/Asset/index.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/index.ts#L112)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Entity.ts#L46)
 
 ## Methods
 

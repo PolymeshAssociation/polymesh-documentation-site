@@ -18,7 +18,7 @@ The Account is one of many signers for a MultiSig
 
 #### Defined in
 
-[api/entities/Account/types.ts:47](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Account/types.ts#L47)
+[api/entities/Account/types.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Account/types.ts#L47)
 
 ___
 
@@ -30,7 +30,7 @@ The Account is the Identity's primary key (i.e. it has full permission)
 
 #### Defined in
 
-[api/entities/Account/types.ts:39](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Account/types.ts#L39)
+[api/entities/Account/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Account/types.ts#L39)
 
 ___
 
@@ -42,7 +42,7 @@ The Account is a Secondary account. There are associated permissions that may li
 
 #### Defined in
 
-[api/entities/Account/types.ts:43](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Account/types.ts#L43)
+[api/entities/Account/types.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Account/types.ts#L43)
 
 ___
 
@@ -54,4 +54,4 @@ The Account is not associated to any Identity
 
 #### Defined in
 
-[api/entities/Account/types.ts:35](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Account/types.ts#L35)
+[api/entities/Account/types.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Account/types.ts#L35)

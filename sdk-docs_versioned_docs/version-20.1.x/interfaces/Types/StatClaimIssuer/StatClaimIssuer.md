@@ -14,7 +14,7 @@ sidebar_label: "StatClaimIssuer"
 
 #### Defined in
 
-[types/index.ts:1379](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1379)
+[types/index.ts:1379](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1379)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:1378](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1378)
+[types/index.ts:1378](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1378)

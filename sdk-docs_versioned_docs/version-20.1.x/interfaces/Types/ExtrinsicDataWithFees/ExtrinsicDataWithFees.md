@@ -26,7 +26,7 @@ public key of the signer. Unsigned transactions have no signer, in which case th
 
 #### Defined in
 
-[types/index.ts:362](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L362)
+[types/index.ts:362](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L362)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:356](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L356)
+[types/index.ts:356](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L356)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:357](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L357)
+[types/index.ts:357](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L357)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:371](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L371)
+[types/index.ts:371](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L371)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:358](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L358)
+[types/index.ts:358](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L358)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:375](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L375)
+[types/index.ts:375](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L375)
 
 ___
 
@@ -108,7 +108,7 @@ nonce of the transaction. Null for unsigned transactions where address is null
 
 #### Defined in
 
-[types/index.ts:366](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L366)
+[types/index.ts:366](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L366)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:368](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L368)
+[types/index.ts:368](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L368)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:370](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L370)
+[types/index.ts:370](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L370)
 
 ___
 
@@ -150,7 +150,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:369](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L369)
+[types/index.ts:369](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L369)
 
 ___
 
@@ -164,4 +164,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:367](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L367)
+[types/index.ts:367](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L367)

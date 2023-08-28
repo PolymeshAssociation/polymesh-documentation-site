@@ -24,7 +24,7 @@ Asset for which this Identity is a Default Trusted Claim Issuer
 
 #### Defined in
 
-[api/entities/DefaultTrustedClaimIssuer.ts:39](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/DefaultTrustedClaimIssuer.ts#L39)
+[api/entities/DefaultTrustedClaimIssuer.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/DefaultTrustedClaimIssuer.ts#L39)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[api/entities/Identity/index.ts:110](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Identity/index.ts#L110)
+[api/entities/Identity/index.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Identity/index.ts#L110)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[api/entities/Identity/index.ts:108](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Identity/index.ts#L108)
+[api/entities/Identity/index.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Identity/index.ts#L108)
 
 ___
 
@@ -68,7 +68,7 @@ Identity ID as stored in the blockchain
 
 #### Defined in
 
-[api/entities/Identity/index.ts:105](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Identity/index.ts#L105)
+[api/entities/Identity/index.ts:105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Identity/index.ts#L105)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[api/entities/Identity/index.ts:109](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Identity/index.ts#L109)
+[api/entities/Identity/index.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Identity/index.ts#L109)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Entity.ts#L46)
 
 ## Methods
 

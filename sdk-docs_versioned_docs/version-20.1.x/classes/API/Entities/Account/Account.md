@@ -26,7 +26,7 @@ Polymesh-specific address of the Account. Serves as an identifier
 
 #### Defined in
 
-[api/entities/Account/index.ts:81](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Account/index.ts#L81)
+[api/entities/Account/index.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Account/index.ts#L81)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[api/entities/Account/index.ts:90](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Account/index.ts#L90)
+[api/entities/Account/index.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Account/index.ts#L90)
 
 ___
 
@@ -49,7 +49,7 @@ Substrate chains, while the address depends on the chain as well.
 
 #### Defined in
 
-[api/entities/Account/index.ts:87](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Account/index.ts#L87)
+[api/entities/Account/index.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Account/index.ts#L87)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[api/entities/Account/index.ts:91](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Account/index.ts#L91)
+[api/entities/Account/index.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Account/index.ts#L91)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Entity.ts#L46)
 
 ## Methods
 

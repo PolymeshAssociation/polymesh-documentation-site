@@ -14,7 +14,7 @@ sidebar_label: "BabeTx"
 
 #### Defined in
 
-[generated/types.ts:273](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L273)
+[generated/types.ts:273](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L273)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:271](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L271)
+[generated/types.ts:271](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L271)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:272](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L272)
+[generated/types.ts:272](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L272)

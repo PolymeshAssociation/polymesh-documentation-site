@@ -19,7 +19,7 @@ sidebar_label: "AuthTypeEnum"
 
 #### Defined in
 
-[middleware/typesV2.ts:27743](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27743)
+[middleware/typesV2.ts:27743](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27743)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27744](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27744)
+[middleware/typesV2.ts:27744](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27744)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27745](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27745)
+[middleware/typesV2.ts:27745](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27745)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27746](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27746)
+[middleware/typesV2.ts:27746](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27746)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27747](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27747)
+[middleware/typesV2.ts:27747](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27747)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27748](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27748)
+[middleware/typesV2.ts:27748](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27748)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27749](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27749)
+[middleware/typesV2.ts:27749](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27749)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27750](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27750)
+[middleware/typesV2.ts:27750](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27750)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27751](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27751)
+[middleware/typesV2.ts:27751](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27751)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27752](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27752)
+[middleware/typesV2.ts:27752](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27752)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27753](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27753)
+[middleware/typesV2.ts:27753](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27753)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27754](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27754)
+[middleware/typesV2.ts:27754](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27754)
 
 ___
 
@@ -139,4 +139,4 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27755](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27755)
+[middleware/typesV2.ts:27755](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27755)

@@ -26,7 +26,7 @@ internal identifier for the Request (used to accept/reject/cancel)
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:98](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/AuthorizationRequest.ts#L98)
+[api/entities/AuthorizationRequest.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/AuthorizationRequest.ts#L100)
 
 ___
 
@@ -51,7 +51,7 @@ Authorization Request data corresponding to type of Authorization
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:87](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/AuthorizationRequest.ts#L87)
+[api/entities/AuthorizationRequest.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/AuthorizationRequest.ts#L89)
 
 ___
 
@@ -64,7 +64,7 @@ date at which the Authorization Request expires and can no longer be accepted.
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:93](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/AuthorizationRequest.ts#L93)
+[api/entities/AuthorizationRequest.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/AuthorizationRequest.ts#L95)
 
 ___
 
@@ -76,7 +76,7 @@ Identity that emitted the request
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:69](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/AuthorizationRequest.ts#L69)
+[api/entities/AuthorizationRequest.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/AuthorizationRequest.ts#L71)
 
 ___
 
@@ -88,7 +88,7 @@ Identity or Account to which the request was emitted
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:64](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/AuthorizationRequest.ts#L64)
+[api/entities/AuthorizationRequest.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/AuthorizationRequest.ts#L66)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Entity.ts#L46)
 
 ## Methods
 

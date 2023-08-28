@@ -14,7 +14,7 @@ sidebar_label: "BuyLockupClaim"
 
 #### Defined in
 
-[types/index.ts:225](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L225)
+[types/index.ts:225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L225)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:224](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L224)
+[types/index.ts:224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L224)

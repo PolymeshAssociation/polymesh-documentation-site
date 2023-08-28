@@ -36,7 +36,7 @@ hash of the block where this transaction resides (status: `Succeeded`, `Failed`)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:92](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/base/PolymeshTransactionBase.ts#L92)
+[base/PolymeshTransactionBase.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/base/PolymeshTransactionBase.ts#L92)
 
 ___
 
@@ -52,7 +52,7 @@ number of the block where this transaction resides (status: `Succeeded`, `Failed
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:97](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/base/PolymeshTransactionBase.ts#L97)
+[base/PolymeshTransactionBase.ts:97](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/base/PolymeshTransactionBase.ts#L97)
 
 ___
 
@@ -68,7 +68,7 @@ stores errors thrown while running the transaction (status: `Failed`, `Aborted`)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:72](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/base/PolymeshTransactionBase.ts#L72)
+[base/PolymeshTransactionBase.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/base/PolymeshTransactionBase.ts#L72)
 
 ___
 
@@ -84,7 +84,7 @@ stores the transaction receipt (if successful)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:77](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/base/PolymeshTransactionBase.ts#L77)
+[base/PolymeshTransactionBase.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/base/PolymeshTransactionBase.ts#L77)
 
 ___
 
@@ -100,7 +100,7 @@ current status of the transaction
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:67](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/base/PolymeshTransactionBase.ts#L67)
+[base/PolymeshTransactionBase.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/base/PolymeshTransactionBase.ts#L67)
 
 ___
 
@@ -116,7 +116,7 @@ transaction hash (status: `Running`, `Succeeded`, `Failed`)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:82](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/base/PolymeshTransactionBase.ts#L82)
+[base/PolymeshTransactionBase.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/base/PolymeshTransactionBase.ts#L82)
 
 ___
 
@@ -132,7 +132,7 @@ transaction index within its block (status: `Succeeded`, `Failed`)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:87](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/base/PolymeshTransactionBase.ts#L87)
+[base/PolymeshTransactionBase.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/base/PolymeshTransactionBase.ts#L87)
 
 ## Accessors
 

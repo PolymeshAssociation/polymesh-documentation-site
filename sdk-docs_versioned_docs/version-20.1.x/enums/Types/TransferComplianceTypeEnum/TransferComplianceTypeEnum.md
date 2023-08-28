@@ -19,7 +19,7 @@ sidebar_label: "TransferComplianceTypeEnum"
 
 #### Defined in
 
-[middleware/typesV2.ts:27601](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27601)
+[middleware/typesV2.ts:27601](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27601)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27602](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27602)
+[middleware/typesV2.ts:27602](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27602)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27603](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27603)
+[middleware/typesV2.ts:27603](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27603)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27604](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27604)
+[middleware/typesV2.ts:27604](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27604)

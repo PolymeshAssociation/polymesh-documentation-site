@@ -18,7 +18,7 @@ More information can be found [here](https://wiki.polkadot.network/docs/build-pr
 
 #### Defined in
 
-[types/index.ts:1459](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1459)
+[types/index.ts:1459](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1459)
 
 ___
 
@@ -36,7 +36,7 @@ An [Account](../../../classes/API/Entities/Account/Account.md) can directly fetc
 
 #### Defined in
 
-[types/index.ts:1452](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1452)
+[types/index.ts:1452](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1452)
 
 ___
 
@@ -48,4 +48,4 @@ Account or address of a signing key to replace the current one (for this procedu
 
 #### Defined in
 
-[types/index.ts:1443](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1443)
+[types/index.ts:1443](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1443)

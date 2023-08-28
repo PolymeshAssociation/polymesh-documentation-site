@@ -14,7 +14,7 @@ sidebar_label: "AssetWithGroup"
 
 #### Defined in
 
-[types/index.ts:1533](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1533)
+[types/index.ts:1533](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1533)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:1534](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1534)
+[types/index.ts:1534](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1534)

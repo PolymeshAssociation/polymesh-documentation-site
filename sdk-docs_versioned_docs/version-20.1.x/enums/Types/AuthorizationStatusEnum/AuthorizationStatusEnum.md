@@ -19,7 +19,7 @@ sidebar_label: "AuthorizationStatusEnum"
 
 #### Defined in
 
-[middleware/typesV2.ts:27671](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27671)
+[middleware/typesV2.ts:27671](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27671)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27672](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27672)
+[middleware/typesV2.ts:27672](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27672)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27673](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27673)
+[middleware/typesV2.ts:27673](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27673)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27674](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27674)
+[middleware/typesV2.ts:27674](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27674)

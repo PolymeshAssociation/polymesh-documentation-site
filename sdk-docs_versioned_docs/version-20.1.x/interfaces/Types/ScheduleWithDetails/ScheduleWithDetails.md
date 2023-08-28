@@ -14,7 +14,7 @@ sidebar_label: "ScheduleWithDetails"
 
 #### Defined in
 
-[types/index.ts:1419](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1419)
+[types/index.ts:1419](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1419)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:1418](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1418)
+[types/index.ts:1418](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1418)

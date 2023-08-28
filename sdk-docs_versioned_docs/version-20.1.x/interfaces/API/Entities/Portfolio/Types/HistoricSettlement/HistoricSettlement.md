@@ -16,7 +16,7 @@ Array of Accounts that participated by affirming the settlement
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:25](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Portfolio/types.ts#L25)
+[api/entities/Portfolio/types.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Portfolio/types.ts#L25)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:20](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Portfolio/types.ts#L20)
+[api/entities/Portfolio/types.ts:20](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Portfolio/types.ts#L20)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:19](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Portfolio/types.ts#L19)
+[api/entities/Portfolio/types.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Portfolio/types.ts#L19)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:26](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Portfolio/types.ts#L26)
+[api/entities/Portfolio/types.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Portfolio/types.ts#L26)
 
 ___
 
@@ -56,4 +56,4 @@ ___
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:21](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Portfolio/types.ts#L21)
+[api/entities/Portfolio/types.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Portfolio/types.ts#L21)

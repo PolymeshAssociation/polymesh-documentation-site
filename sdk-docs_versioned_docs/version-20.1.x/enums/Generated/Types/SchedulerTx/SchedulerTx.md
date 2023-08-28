@@ -14,7 +14,7 @@ sidebar_label: "SchedulerTx"
 
 #### Defined in
 
-[generated/types.ts:613](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L613)
+[generated/types.ts:613](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L613)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:615](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L615)
+[generated/types.ts:615](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L615)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:612](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L612)
+[generated/types.ts:612](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L612)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:616](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L616)
+[generated/types.ts:616](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L616)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:614](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L614)
+[generated/types.ts:614](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L614)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:617](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L617)
+[generated/types.ts:617](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L617)

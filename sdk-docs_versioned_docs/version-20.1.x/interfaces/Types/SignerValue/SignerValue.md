@@ -16,7 +16,7 @@ whether the signer is an Account or Identity
 
 #### Defined in
 
-[types/index.ts:824](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L824)
+[types/index.ts:824](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L824)
 
 ___
 
@@ -28,4 +28,4 @@ address or DID (depending on whether the signer is an Account or Identity)
 
 #### Defined in
 
-[types/index.ts:828](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L828)
+[types/index.ts:828](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L828)

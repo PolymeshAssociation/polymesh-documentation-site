@@ -19,7 +19,7 @@ sidebar_label: "StoStatus"
 
 #### Defined in
 
-[middleware/typesV2.ts:27565](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27565)
+[middleware/typesV2.ts:27565](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27565)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27566](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27566)
+[middleware/typesV2.ts:27566](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27566)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27567](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27567)
+[middleware/typesV2.ts:27567](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27567)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:27568](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/typesV2.ts#L27568)
+[middleware/typesV2.ts:27568](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/typesV2.ts#L27568)

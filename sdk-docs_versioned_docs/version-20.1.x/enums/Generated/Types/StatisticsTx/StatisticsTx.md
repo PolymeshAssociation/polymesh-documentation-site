@@ -14,7 +14,7 @@ sidebar_label: "StatisticsTx"
 
 #### Defined in
 
-[generated/types.ts:655](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L655)
+[generated/types.ts:655](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L655)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:653](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L653)
+[generated/types.ts:653](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L653)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:660](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L660)
+[generated/types.ts:660](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L660)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:656](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L656)
+[generated/types.ts:656](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L656)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:654](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L654)
+[generated/types.ts:654](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L654)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:659](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L659)
+[generated/types.ts:659](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L659)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:657](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L657)
+[generated/types.ts:657](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L657)
 
 ___
 
@@ -84,4 +84,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:658](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L658)
+[generated/types.ts:658](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L658)

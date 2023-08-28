@@ -14,7 +14,7 @@ sidebar_label: "Params"
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:50](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/CorporateActionBase/index.ts#L50)
+[api/entities/CorporateActionBase/index.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/CorporateActionBase/index.ts#L50)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:53](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/CorporateActionBase/index.ts#L53)
+[api/entities/CorporateActionBase/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/CorporateActionBase/index.ts#L53)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:51](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/CorporateActionBase/index.ts#L51)
+[api/entities/CorporateActionBase/index.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/CorporateActionBase/index.ts#L51)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:49](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/CorporateActionBase/index.ts#L49)
+[api/entities/CorporateActionBase/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/CorporateActionBase/index.ts#L49)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:52](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/CorporateActionBase/index.ts#L52)
+[api/entities/CorporateActionBase/index.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/CorporateActionBase/index.ts#L52)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:54](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/CorporateActionBase/index.ts#L54)
+[api/entities/CorporateActionBase/index.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/CorporateActionBase/index.ts#L54)

@@ -18,7 +18,7 @@ sidebar_label: "ConnectParams"
 
 #### Defined in
 
-[api/client/Polymesh.ts:36](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/client/Polymesh.ts#L36)
+[api/client/Polymesh.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/client/Polymesh.ts#L36)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[api/client/Polymesh.ts:37](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/client/Polymesh.ts#L37)
+[api/client/Polymesh.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/client/Polymesh.ts#L37)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[api/client/Polymesh.ts:31](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/client/Polymesh.ts#L31)
+[api/client/Polymesh.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/client/Polymesh.ts#L31)
 
 ___
 
@@ -48,4 +48,4 @@ ___
 
 #### Defined in
 
-[api/client/Polymesh.ts:32](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/client/Polymesh.ts#L32)
+[api/client/Polymesh.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/client/Polymesh.ts#L32)

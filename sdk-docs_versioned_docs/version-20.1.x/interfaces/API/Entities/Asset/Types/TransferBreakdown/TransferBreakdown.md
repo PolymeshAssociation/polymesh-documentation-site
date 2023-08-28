@@ -18,7 +18,7 @@ how the transfer adheres to the asset's compliance rules
 
 #### Defined in
 
-[api/entities/Asset/types.ts:43](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/types.ts#L43)
+[api/entities/Asset/types.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/types.ts#L43)
 
 ___
 
@@ -30,7 +30,7 @@ list of general transfer errors
 
 #### Defined in
 
-[api/entities/Asset/types.ts:39](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/types.ts#L39)
+[api/entities/Asset/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/types.ts#L39)
 
 ___
 
@@ -42,7 +42,7 @@ list of transfer restrictions and whether the transfer satisfies each one
 
 #### Defined in
 
-[api/entities/Asset/types.ts:47](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/types.ts#L47)
+[api/entities/Asset/types.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/types.ts#L47)
 
 ___
 
@@ -54,4 +54,4 @@ true if the transfer is possible
 
 #### Defined in
 
-[api/entities/Asset/types.ts:51](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/types.ts#L51)
+[api/entities/Asset/types.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/types.ts#L51)

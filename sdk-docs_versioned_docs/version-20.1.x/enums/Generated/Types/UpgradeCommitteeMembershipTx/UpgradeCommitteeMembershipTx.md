@@ -14,7 +14,7 @@ sidebar_label: "UpgradeCommitteeMembershipTx"
 
 #### Defined in
 
-[generated/types.ts:393](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L393)
+[generated/types.ts:393](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L393)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:389](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L389)
+[generated/types.ts:389](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L389)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:388](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L388)
+[generated/types.ts:388](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L388)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:390](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L390)
+[generated/types.ts:390](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L390)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:392](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L392)
+[generated/types.ts:392](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L392)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:387](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L387)
+[generated/types.ts:387](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L387)
 
 ___
 
@@ -74,4 +74,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:391](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/generated/types.ts#L391)
+[generated/types.ts:391](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/generated/types.ts#L391)

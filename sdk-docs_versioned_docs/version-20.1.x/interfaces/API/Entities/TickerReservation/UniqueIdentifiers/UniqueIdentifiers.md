@@ -16,4 +16,4 @@ Properties that uniquely identify a TickerReservation
 
 #### Defined in
 
-[api/entities/TickerReservation/index.ts:31](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/TickerReservation/index.ts#L31)
+[api/entities/TickerReservation/index.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/TickerReservation/index.ts#L31)

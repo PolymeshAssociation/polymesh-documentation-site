@@ -14,7 +14,7 @@ sidebar_label: "DistributionPayment"
 
 #### Defined in
 
-[types/index.ts:1432](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1432)
+[types/index.ts:1432](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1432)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1429](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1429)
+[types/index.ts:1429](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1429)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1428](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1428)
+[types/index.ts:1428](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1428)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1430](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1430)
+[types/index.ts:1430](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1430)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1431](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1431)
+[types/index.ts:1431](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1431)
 
 ___
 
@@ -66,4 +66,4 @@ percentage (0-100) of tax withholding for the `target` identity
 
 #### Defined in
 
-[types/index.ts:1436](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1436)
+[types/index.ts:1436](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1436)

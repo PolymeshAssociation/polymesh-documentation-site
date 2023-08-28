@@ -20,7 +20,7 @@ Less strict version of `Parameters<T>`
 
 #### Defined in
 
-[types/utils/index.ts:29](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/utils/index.ts#L29)
+[types/utils/index.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/utils/index.ts#L29)
 
 ___
 
@@ -39,7 +39,7 @@ Pick a single property from T and ensure it is defined
 
 #### Defined in
 
-[types/utils/index.ts:87](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/utils/index.ts#L87)
+[types/utils/index.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/utils/index.ts#L87)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[types/utils/index.ts:89](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/utils/index.ts#L89)
+[types/utils/index.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/utils/index.ts#L89)
 
 ___
 
@@ -75,7 +75,7 @@ Recursively traverse a type and transform its Entity properties into their
 
 #### Defined in
 
-[types/utils/index.ts:35](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/utils/index.ts#L35)
+[types/utils/index.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/utils/index.ts#L35)
 
 ___
 
@@ -94,7 +94,7 @@ Override T with the properties of R
 
 #### Defined in
 
-[types/utils/index.ts:76](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/utils/index.ts#L76)
+[types/utils/index.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/utils/index.ts#L76)
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[types/utils/index.ts:93](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/utils/index.ts#L93)
+[types/utils/index.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/utils/index.ts#L93)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[types/utils/index.ts:98](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/utils/index.ts#L98)
+[types/utils/index.ts:98](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/utils/index.ts#L98)
 
 ___
 
@@ -146,4 +146,4 @@ Ensure a specific property of T is defined
 
 #### Defined in
 
-[types/utils/index.ts:82](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/utils/index.ts#L82)
+[types/utils/index.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/utils/index.ts#L82)

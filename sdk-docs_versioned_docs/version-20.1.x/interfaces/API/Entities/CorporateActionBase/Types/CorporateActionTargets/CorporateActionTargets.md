@@ -14,7 +14,7 @@ sidebar_label: "CorporateActionTargets"
 
 #### Defined in
 
-[api/entities/CorporateActionBase/types.ts:12](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/CorporateActionBase/types.ts#L12)
+[api/entities/CorporateActionBase/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/CorporateActionBase/types.ts#L12)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/types.ts:13](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/CorporateActionBase/types.ts#L13)
+[api/entities/CorporateActionBase/types.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/CorporateActionBase/types.ts#L13)

@@ -20,7 +20,7 @@ Assets over which this key has permissions
 
 #### Defined in
 
-[types/index.ts:960](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L960)
+[types/index.ts:960](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L960)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:974](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L974)
+[types/index.ts:974](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L974)
 
 ___
 
@@ -46,7 +46,7 @@ NOTE: If transactions is null, ignore this value
 
 #### Defined in
 
-[types/index.ts:972](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L972)
+[types/index.ts:972](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L972)
 
 ___
 
@@ -58,4 +58,4 @@ Transactions this key can execute
 
 #### Defined in
 
-[types/index.ts:964](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L964)
+[types/index.ts:964](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L964)

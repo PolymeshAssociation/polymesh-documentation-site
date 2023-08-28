@@ -14,7 +14,7 @@ sidebar_label: "AccreditedClaim"
 
 #### Defined in
 
-[types/index.ts:215](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L215)
+[types/index.ts:215](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L215)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:214](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L214)
+[types/index.ts:214](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L214)

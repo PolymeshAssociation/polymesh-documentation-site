@@ -14,7 +14,7 @@ sidebar_label: "RedeemTokensParams"
 
 #### Defined in
 
-[api/procedures/types.ts:526](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L526)
+[api/procedures/types.ts:526](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L526)
 
 ___
 
@@ -26,4 +26,4 @@ portfolio (or portfolio ID) from which Assets will be redeemed (optional, defaul
 
 #### Defined in
 
-[api/procedures/types.ts:530](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L530)
+[api/procedures/types.ts:530](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L530)

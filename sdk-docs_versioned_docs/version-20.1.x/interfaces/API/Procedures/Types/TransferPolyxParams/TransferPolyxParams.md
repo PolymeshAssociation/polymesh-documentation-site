@@ -16,7 +16,7 @@ amount of POLYX to be transferred
 
 #### Defined in
 
-[api/procedures/types.ts:395](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L395)
+[api/procedures/types.ts:395](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L395)
 
 ___
 
@@ -28,7 +28,7 @@ identifier string to help differentiate transfers
 
 #### Defined in
 
-[api/procedures/types.ts:399](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L399)
+[api/procedures/types.ts:399](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L399)
 
 ___
 
@@ -40,4 +40,4 @@ Account that will receive the POLYX
 
 #### Defined in
 
-[api/procedures/types.ts:391](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L391)
+[api/procedures/types.ts:391](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L391)

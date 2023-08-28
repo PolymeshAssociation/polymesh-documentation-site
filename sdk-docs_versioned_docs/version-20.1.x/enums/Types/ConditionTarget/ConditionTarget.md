@@ -14,7 +14,7 @@ sidebar_label: "ConditionTarget"
 
 #### Defined in
 
-[types/index.ts:182](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L182)
+[types/index.ts:182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L182)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:181](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L181)
+[types/index.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L181)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:180](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L180)
+[types/index.ts:180](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L180)

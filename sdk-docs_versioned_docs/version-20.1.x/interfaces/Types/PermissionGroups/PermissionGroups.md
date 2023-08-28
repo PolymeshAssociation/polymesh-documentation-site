@@ -16,7 +16,7 @@ All Permission Groups of a specific Asset, separated by `known` and `custom`
 
 #### Defined in
 
-[types/index.ts:987](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L987)
+[types/index.ts:987](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L987)
 
 ___
 
@@ -26,4 +26,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:986](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L986)
+[types/index.ts:986](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L986)

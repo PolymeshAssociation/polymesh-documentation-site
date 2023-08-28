@@ -14,7 +14,7 @@ sidebar_label: "SignerType"
 
 #### Defined in
 
-[types/index.ts:816](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L816)
+[types/index.ts:816](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L816)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:815](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L815)
+[types/index.ts:815](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L815)

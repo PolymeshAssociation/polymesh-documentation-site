@@ -22,7 +22,7 @@ The type of investors this restriction applies to. e.g. non-accredited
 
 #### Defined in
 
-[types/index.ts:1294](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1294)
+[types/index.ts:1294](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1294)
 
 ___
 
@@ -44,7 +44,7 @@ TransferRestrictionBase.exemptedIds
 
 #### Defined in
 
-[types/index.ts:1277](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1277)
+[types/index.ts:1277](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1277)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1304](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1304)
+[types/index.ts:1304](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1304)
 
 ___
 
@@ -66,7 +66,7 @@ The maximum amount of investors that must meet the Claim criteria
 
 #### Defined in
 
-[types/index.ts:1302](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1302)
+[types/index.ts:1302](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1302)
 
 ___
 
@@ -78,4 +78,4 @@ The minimum amount of investors the must meet the Claim criteria
 
 #### Defined in
 
-[types/index.ts:1298](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L1298)
+[types/index.ts:1298](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L1298)

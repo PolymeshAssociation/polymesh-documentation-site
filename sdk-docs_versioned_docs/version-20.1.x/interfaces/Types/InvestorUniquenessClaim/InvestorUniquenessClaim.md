@@ -14,7 +14,7 @@ sidebar_label: "InvestorUniquenessClaim"
 
 #### Defined in
 
-[types/index.ts:262](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L262)
+[types/index.ts:262](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L262)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:261](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L261)
+[types/index.ts:261](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L261)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:263](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L263)
+[types/index.ts:263](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L263)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:260](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L260)
+[types/index.ts:260](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L260)

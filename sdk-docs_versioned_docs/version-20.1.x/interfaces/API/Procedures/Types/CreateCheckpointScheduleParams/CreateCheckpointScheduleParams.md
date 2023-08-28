@@ -20,7 +20,7 @@ The cadence with which to make Checkpoints.
 
 #### Defined in
 
-[api/procedures/types.ts:550](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L550)
+[api/procedures/types.ts:550](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L550)
 
 ___
 
@@ -32,7 +32,7 @@ The number of snapshots to take. A null value indicates snapshots should be made
 
 #### Defined in
 
-[api/procedures/types.ts:554](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L554)
+[api/procedures/types.ts:554](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L554)
 
 ___
 
@@ -44,4 +44,4 @@ The date from which to begin creating snapshots. A null value indicates immediat
 
 #### Defined in
 
-[api/procedures/types.ts:545](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/procedures/types.ts#L545)
+[api/procedures/types.ts:545](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/procedures/types.ts#L545)

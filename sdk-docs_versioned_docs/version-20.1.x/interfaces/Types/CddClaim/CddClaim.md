@@ -14,7 +14,7 @@ sidebar_label: "CddClaim"
 
 #### Defined in
 
-[types/index.ts:235](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L235)
+[types/index.ts:235](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L235)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:234](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L234)
+[types/index.ts:234](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L234)

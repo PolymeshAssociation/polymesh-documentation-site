@@ -14,7 +14,7 @@ sidebar_label: "AssetDetails"
 
 #### Defined in
 
-[api/entities/Asset/types.ts:7](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/types.ts#L7)
+[api/entities/Asset/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/types.ts#L7)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/types.ts:12](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/types.ts#L12)
+[api/entities/Asset/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/types.ts#L12)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/types.ts:8](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/types.ts#L8)
+[api/entities/Asset/types.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/types.ts#L8)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/types.ts:9](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/types.ts#L9)
+[api/entities/Asset/types.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/types.ts#L9)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/types.ts:10](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/types.ts#L10)
+[api/entities/Asset/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/types.ts#L10)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/types.ts:16](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/types.ts#L16)
+[api/entities/Asset/types.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/types.ts#L16)
 
 ___
 
@@ -78,4 +78,4 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/types.ts:11](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Asset/types.ts#L11)
+[api/entities/Asset/types.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Asset/types.ts#L11)

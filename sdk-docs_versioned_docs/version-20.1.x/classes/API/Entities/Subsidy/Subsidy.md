@@ -24,7 +24,7 @@ Account whose transactions are being paid for
 
 #### Defined in
 
-[api/entities/Subsidy/index.ts:54](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Subsidy/index.ts#L54)
+[api/entities/Subsidy/index.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Subsidy/index.ts#L54)
 
 ___
 
@@ -36,7 +36,7 @@ Account that is paying for the transactions
 
 #### Defined in
 
-[api/entities/Subsidy/index.ts:58](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Subsidy/index.ts#L58)
+[api/entities/Subsidy/index.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Subsidy/index.ts#L58)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/api/entities/Entity.ts#L46)
 
 ## Methods
 

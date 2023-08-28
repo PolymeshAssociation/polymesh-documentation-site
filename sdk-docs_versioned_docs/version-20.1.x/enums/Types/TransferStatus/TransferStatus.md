@@ -16,7 +16,7 @@ ERC1400 compliant transfer status
 
 #### Defined in
 
-[types/index.ts:601](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L601)
+[types/index.ts:601](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L601)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:597](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L597)
+[types/index.ts:597](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L597)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:604](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L604)
+[types/index.ts:604](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L604)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:586](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L586)
+[types/index.ts:586](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L586)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:602](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L602)
+[types/index.ts:602](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L602)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:591](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L591)
+[types/index.ts:591](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L591)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:589](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L589)
+[types/index.ts:589](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L589)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:588](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L588)
+[types/index.ts:588](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L588)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:599](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L599)
+[types/index.ts:599](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L599)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:594](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L594)
+[types/index.ts:594](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L594)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:593](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L593)
+[types/index.ts:593](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L593)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:596](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L596)
+[types/index.ts:596](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L596)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:592](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L592)
+[types/index.ts:592](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L592)
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:595](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L595)
+[types/index.ts:595](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L595)
 
 ___
 
@@ -156,7 +156,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:603](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L603)
+[types/index.ts:603](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L603)
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:605](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L605)
+[types/index.ts:605](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L605)
 
 ___
 
@@ -176,7 +176,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:598](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L598)
+[types/index.ts:598](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L598)
 
 ___
 
@@ -186,7 +186,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:587](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L587)
+[types/index.ts:587](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L587)
 
 ___
 
@@ -196,7 +196,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:606](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L606)
+[types/index.ts:606](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L606)
 
 ___
 
@@ -206,7 +206,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:590](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L590)
+[types/index.ts:590](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L590)
 
 ___
 
@@ -216,4 +216,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:600](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L600)
+[types/index.ts:600](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L600)

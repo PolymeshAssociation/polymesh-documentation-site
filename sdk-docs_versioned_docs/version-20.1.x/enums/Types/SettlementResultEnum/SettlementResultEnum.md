@@ -14,7 +14,7 @@ sidebar_label: "SettlementResultEnum"
 
 #### Defined in
 
-[middleware/types.ts:1666](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/types.ts#L1666)
+[middleware/types.ts:1666](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/types.ts#L1666)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:1667](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/types.ts#L1667)
+[middleware/types.ts:1667](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/types.ts#L1667)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:1665](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/types.ts#L1665)
+[middleware/types.ts:1665](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/types.ts#L1665)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:1668](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/middleware/types.ts#L1668)
+[middleware/types.ts:1668](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/middleware/types.ts#L1668)

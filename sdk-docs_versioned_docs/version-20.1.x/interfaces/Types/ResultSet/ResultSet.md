@@ -24,7 +24,7 @@ sidebar_label: "ResultSet"
 
 #### Defined in
 
-[types/index.ts:730](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L730)
+[types/index.ts:730](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L730)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:725](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L725)
+[types/index.ts:725](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L725)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:726](https://github.com/F-OBrien/polymesh-sdk/blob/012f1745/src/types/index.ts#L726)
+[types/index.ts:726](https://github.com/PolymeshAssociation/polymesh-sdk/blob/07a4c5b0/src/types/index.ts#L726)
