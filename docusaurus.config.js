@@ -154,15 +154,15 @@ const config = {
             items: [
               {
                 label: 'Polymesh Runtime',
-                href: 'https://docs.polymesh.live/polymesh/index.html',
+                href: 'https://docs.polymesh.live/polymesh',
               },
               {
                 label: 'Polymesh Client API',
-                href: 'https://docs.rs/polymesh-api/0.3.9/polymesh_api/',
+                href: 'https://docs.rs/polymesh-api/latest/polymesh_api/',
               },
               {
                 label: 'ink! Contracts API',
-                href: 'https://docs.rs/polymesh-ink/0.5.7/polymesh_ink/',
+                href: 'https://docs.rs/polymesh-ink/latest/polymesh_ink/',
               },
             ],
           },
