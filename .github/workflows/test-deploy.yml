@@ -18,6 +18,8 @@ jobs:
           node-version: 18
           cache: yarn
 
+      - name: Increase Node.js memory allocation
+        run: echo "export NODE_OPTIONS=--max_old_space_size=4096" >> $GITHUB_ENV
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Test build website
