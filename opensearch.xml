@@ -4,8 +4,8 @@
   <ShortName>Polymesh Documentation Portal</ShortName>
   <Description>Search Polymesh Documentation Portal</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://developers.polymesh.network/img/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://developers.polymesh.network/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://developers.polymesh.network/opensearch.xml" />
-  <moz:SearchForm>https://developers.polymesh.network/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://polymeshassociation.github.io/polymesh-documentation-site/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://polymeshassociation.github.io/polymesh-documentation-site/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://polymeshassociation.github.io/polymesh-documentation-site/opensearch.xml" />
+  <moz:SearchForm>https://polymeshassociation.github.io/polymesh-documentation-site/</moz:SearchForm>
 </OpenSearchDescription>
