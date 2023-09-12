@@ -28,7 +28,7 @@ jobs:
           sed -i 's#baseUrl: '\''/'\''#baseUrl: '\''/polymesh-documentation-site/'\''#' docusaurus.config.js
 
       - name: Build website
-        run: export NODE_OPTIONS="--max_old_space_size=8192" && yarn build
+        run: yarn build
 
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
