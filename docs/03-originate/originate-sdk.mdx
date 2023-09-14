@@ -12,7 +12,7 @@ The Polymesh Dashboard is constructed with the SDK. The SDK supports every proce
 :::tip
 
 If you want to take a closer look at the SDK, a peek into the
-[SDK documentation](https://github.com/PolymeshAssociation/polymesh-sdk/wiki) is recommendable.
+[SDK documentation](/sdk-docs/) is recommendable.
 
 :::
 
@@ -30,7 +30,7 @@ To recap:
 
 - Alice, ACME's CEO and acting agent, already has an **individual** Polymesh account, named `alice`, tied to a primary private key named `aliceKey`;
 - `aliceKey`'s private key is based on the `"word1 word2 ..."` mnemonic;
-- A Polymesh client has been [instantiated](https://github.com/PolymeshAssociation/polymesh-sdk/wiki/api.client.Polymesh.Polymesh#connect) by Alice so she can do the next actions:
+- A Polymesh client has been [instantiated](/sdk-docs/classes/API/Client/Polymesh/#connect) by Alice so she can do the next actions:
 
 <Tabs groupId="code-language">
 <TabItem value="ts" label="TypeScript">
@@ -75,7 +75,7 @@ const apiAlice = await Polymesh.connect({
 
 ## Ticker reservation
 
-Before creating the asset proper, Alice needs to [reserve](https://github.com/PolymeshAssociation/polymesh-sdk/wiki/api.client.Assets.Assets#reserveticker) the ACME ticker so that it is not squatted while the founders incorporate the company. Think of it on the same level as grabbing your `.com` domain as early as possible:
+Before creating the asset proper, Alice needs to [reserve](/sdk-docs/classes/API/Client/Assets/#reserveticker) the ACME ticker so that it is not squatted while the founders incorporate the company. Think of it on the same level as grabbing your `.com` domain as early as possible:
 
 <Tabs groupId="code-language">
 <TabItem value="ts" label="TypeScript">
@@ -183,7 +183,7 @@ Now that the ticker is reserved, it is time to issue the asset.
 
 Oh wait! The reservation may have happened some time ago. After all a reservation remains valid for 60 days, for instance. And your `const reservation: TickerReservation` instance might no longer be in memory.
 
-How do you get it back? Use [`assets.getTickerReservation`](https://github.com/PolymeshAssociation/polymesh-sdk/wiki/api.client.Assets.Assets#gettickerreservation):
+How do you get it back? Use [`assets.getTickerReservation`](/sdk-docs/classes/API/Client/Assets/#gettickerreservation):
 
 <Tabs groupId="code-language">
 <TabItem value="ts" label="TypeScript">
@@ -673,4 +673,4 @@ With this, the asset is _originated_. Nobody, including Alice under her personal
 
 ## Links
 
-- SDK: https://github.com/PolymeshAssociation/polymesh-sdk/wiki
+- [SDK Documents](/sdk-docs/)

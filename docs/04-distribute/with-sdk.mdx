@@ -14,7 +14,7 @@ We assume that:
 
 - ACME, the company, already has a Polymesh account, `acme`;
 - Alice, ACME Co's CEO and acting agent, holds a secondary private key for `acme` that allows her to act on its behalf;
-- Alice the CEO can [instantiate](https://github.com/PolymeshAssociation/polymesh-sdk/wiki/api.client.Polymesh.Polymesh#connect) a Polymesh client whenever she needs to act with:
+- Alice the CEO can [instantiate](/sdk-docs/classes/API/Client/Polymesh/#connect) a Polymesh client whenever she needs to act with:
 
 <Tabs groupId="code-language">
 
@@ -85,7 +85,7 @@ const asset = await apiCeo.assets.getAsset({
 
 - `acme` is the owner of the ACME token. `acme` will also be the token's primary issuance agent;
 - Alice has an account, `alice`, that represents her as an individual;
-- Alice the individual also can [instantiate](https://github.com/PolymeshAssociation/polymesh-sdk/wiki/api.client.Polymesh.Polymesh#connect) a Polymesh client whenever she needs to act with:
+- Alice the individual also can [instantiate](/sdk-docs/classes/API/Client/Polymesh/#connect) a Polymesh client whenever she needs to act with:
 
 <Tabs groupId="code-language">
 
@@ -443,7 +443,7 @@ const distributionVenueId = distributionVenue.id.toString();
 
 We keep `distributionVenueId`, the string id of the venue, for later as this is information that will need to be shared with the ultimate recipient.
 
-Now that we have the venue, let's have the CEO [issue](https://github.com/PolymeshAssociation/polymesh-sdk/wiki/api.entities.Asset.Issuance.Issuance#issue) enough shares to later transfer to Alice. Of course, if the CEO planned on issuing shares for all founders of ACME Corp, she would issue more.
+Now that we have the venue, let's have the CEO [issue](/sdk-docs/classes/API/Entities/Asset/Issuance/#issue) enough shares to later transfer to Alice. Of course, if the CEO planned on issuing shares for all founders of ACME Corp, she would issue more.
 
 <Tabs groupId="code-language">
 
@@ -470,7 +470,7 @@ const issuance = asset.issuance;
 </TabItem>
 </Tabs>
 
-Here too, in `issuance`, the context is still `apiCeo`. In fact, its [`parent`](https://github.com/PolymeshAssociation/polymesh-sdk/wiki/api.entities.Asset.Issuance.Issuance#hierarchy) is the `asset` itself.
+Here too, in `issuance`, the context is still `apiCeo`. In fact, its [`parent`](/sdk-docs/classes/API/Entities/Asset/Issuance/#hierarchy) is the `asset` itself.
 
 <Tabs groupId="code-language">
 
@@ -507,7 +507,7 @@ At this point, ACME, has 20,000 received shares. We still need to send them over
 
 ## In which portfolio?
 
-Now, Alice doesn't want to receive her ACME shares into her default portfolio. Instead, she wants to have them sent to a new "cold store" portfolio, she first needs to [create](https://github.com/PolymeshAssociation/polymesh-sdk/wiki/api.client.Identities.Identities#createportfolio) the portfolio.
+Now, Alice doesn't want to receive her ACME shares into her default portfolio. Instead, she wants to have them sent to a new "cold store" portfolio, she first needs to [create](/sdk-docs/classes/API/Client/Identities/#createportfolio) the portfolio.
 
 Here we are talking about Alice, the eventual owner, not the CEO, so we are going to use _her_ Polymesh client instance `apiAlice`:
 
@@ -537,9 +537,9 @@ const coldStore = await portfolioQueue.run();
 </TabItem>
 </Tabs>
 
-To [retrieve](https://github.com/PolymeshAssociation/polymesh-sdk/wiki/api.entities.Identity.Portfolios.Portfolios#getportfolio) the portfolio at a later date, anyone can use the string `coldStore.id`, or find the portfolio by name.
+To [retrieve](/sdk-docs/classes/API/Entities/Identity/Portfolios/#getportfolio) the portfolio at a later date, anyone can use the string `coldStore.id`, or find the portfolio by name.
 
-Time to [move](https://github.com/PolymeshAssociation/polymesh-sdk/wiki/api.entities.Portfolio.Portfolio#movefunds) the shares.
+Time to [move](/sdk-docs/classes/API/Entities/Portfolio/#movefunds) the shares.
 
 Now that Alice has created the portfolio in which she wishes to receive her shares, she needs to prepare some information for her alter ego, the CEO:
 
@@ -924,4 +924,4 @@ const carolAcmeBalanceAtDistribution = await postDistributionCheckpoint.balance(
 
 ## Links
 
-- SDK: https://github.com/PolymeshAssociation/polymesh-sdk/wiki
+- [SDK documents](/sdk-docs/)
