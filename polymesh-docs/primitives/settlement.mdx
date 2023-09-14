@@ -13,7 +13,7 @@ It requires all counterparties of a transaction to affirm (agree) an instruction
 
 Any counterparty to the instruction can unilaterally reject the instruction.
 
-If an instruction is fully affirmed, but settlement fails (for example as a result of compliance rules) the instruction can be re-settled again at a later date by any one of the counterparties, once the failure cause has been remediated.
+If an instruction is fully affirmed, but settlement fails (for example as a result of compliance rules) the instruction can be manually executed again at a later date by any one of the counterparties, once the failure cause has been remediated.
 
 Once an instruction has been affirmed by a counterparty, the associated assets are locked in the counterparties account. If the instruction is subsequently rejected, these assets are unlocked and can be used in another settlement instruction.
 
@@ -23,7 +23,7 @@ Instructions can be settled either via:
 
 - an off-chain payment receipt
 
-Payment receipts are small pieces of data signed by an authorised signatory (determined by the venue on which the instruction is settling) which allege that the corresponding assets have moved off-chain.
+Payment receipts are small pieces of data signed by an authorised signatory (determined by the venue on which the instruction is settling) which allege that the corresponding assets have moved off-chain. They can only be used for instruction legs that do not correspond to on-chain tickers.
 
 ## Roles
 
@@ -69,11 +69,17 @@ Any counterparty to an instruction can reject it, marking it as rejected immedia
 
 A counterpartys' authorisation is only valid if they either lock the relevant amount of assets to the instruction to cover any of their obligations across all legs, or provide a signed receipt that the transaction has occurred off-chain.
 
-Receipts which are used to authorise an instruction are marked as locked globally.
+Payment receipts which are used to authorise an instruction are specific to a given instruction, and cannot be used for other instructions.
 
-If an instruction fails, is rejected or expires, all asset locks are removed (and receipts marked as unused).
+If an instruction fails, is rejected or expires, all asset locks are removed.
 
-If an instruction is executed, assets are transferred between counterparties, and receipts are marked as used.
+If an instruction is executed, assets are transferred between counterparties for on-chain assets (i.e. excluding legs which are settled via a payment receipt that can only reference off-chain assets).
+
+## Exempt Assets
+
+For certain types of assets, e.g. stable coins, it may not be appropriate to require all users to explicitly affirm transactions where they receive the asset (either directly or via their custodian).
+
+In this case Polymesh allows users to "pre-approve" certain tickers meaning that explicit affirmations are no longer required. Certain tickers can also be excluded from requiring affirmation on receipt globally via the Polymesh governing council.
 
 ## Affirming and Custody
 

@@ -17,7 +17,7 @@ Identities in Polymesh are controlled via keys - each identity must have a singl
 
 Identities are a collection of claims and assets and controlled via keys.
 
-A user can have multiple identities, which provide for confidential identity whilst allowing asset issuers to enforce entity level compliance.
+A user can have multiple identities, which allows them a degree of privacy with respect to their total asset holdings.
 
 Each identity is referenced via a decentralised identifier - its DID. A DID is a pseudo-anonymous identifier such as `0xfc0d2fc058d02c0a89c2cc2ff11726971dd39886a0b80ecfaa80fa3f196d65ce`.
 
@@ -58,7 +58,7 @@ The primary key of an identity has full permissions to that identity and can add
 A secondary key can also sign transactions on behalf of its identity, but can have its permissions limited to only certain actions, portfolios or assets. It can also be removed by the primary key of its identity at any time.
 
 For more information on our public / private key cryptography please see:
-<https://substrate.dev/docs/en/knowledgebase/advanced/cryptography>
+https://substrate.dev/docs/en/knowledgebase/advanced/cryptography
 
 ## Key Types
 

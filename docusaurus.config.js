@@ -256,6 +256,7 @@ const config = {
       prism: {
         theme: vsDarkTheme,
         darkTheme: nightOwlTheme,
+        additionalLanguages: ['rust'],
       },
     }),
 };
