@@ -21,7 +21,7 @@ The primary key of the creating identity can add / remove signers from the Multi
 
 In this tutorial we will create a 2 of 3 MultiSig and set it as the primary key of our Polymesh identity.
 
-To begin, we create three new keys, called `MULTISIG_SIGNER_1/2/3`. In practice these can be created and secured by three different parties.
+To begin, we create three new keys, called `ITN_ORG_MULTISIG_SIGNER_1/2/3`. In practice these can be created and secured by three different parties.
 
 ![MultiSig Signers](../images/multisig/1_multisig_accounts.png)
 
@@ -31,7 +31,7 @@ These keys can be created in the Polymesh Wallet, or using the Polymesh App (htt
 
 We now create the MultiSig key, by calling the `multiSig::createMultisig` extrinsic. This can only be called by a Primary Key of an existing Identity.
 
-In this tutorial, `POLY_ORG` is the Primary Key of our identity, so we use this key to submit the `createMultisig` transaction.
+In this tutorial, `ITN_ORG` is the Primary Key of our identity, so we use this key to submit the `createMultisig` transaction.
 
 This requires us to pass in the initial set of signers for the MultiSig, and specify how many of those signers are required to agree in order to execute a transaction. We specify the three new keys created in Step 1. here.
 
@@ -73,7 +73,7 @@ In this tutorial we will rotate the Primary Key of our identity to the new Multi
 
 Your MultiSig is now the Primary Key of your identity and as a result can hold funds (POLYX).
 
-Note that the original Primary Key (`POLY_ORG`) is no longer attached to an Identity (since it was replaced by our new MultiSig). This means that any POLYX on the key will be locked until it is attached to a new CDD'ed Identity.
+Note that the original Primary Key (`ITN_ORG`) is no longer attached to an Identity (since it was replaced by our new MultiSig). This means that any POLYX on the key will be locked until it is attached to a new CDD'ed Identity.
 
 ### Step 5 - Funding The MultiSig
 
