@@ -31,7 +31,7 @@ pub enum AuthorizationData<AccountId> {
     /// Add a signer to multisig
     /// Must be issued to the identity that created the ms (and therefore owns it permanently)
     AddMultiSigSigner(AccountId),
-    /// Authorization to transfer a asset's ownership
+    /// Authorization to transfer a token's ownership
     /// Must be issued by the current owner of the asset
     TransferAssetOwnership(Ticker),
     /// Authorization to join an Identity
@@ -45,6 +45,9 @@ pub enum AuthorizationData<AccountId> {
     /// Must be issued by the paying key.
     /// `AddRelayerPayingKey(user_key, paying_key, polyx_limit)`
     AddRelayerPayingKey(AccountId, AccountId, Balance),
+    /// Authorization to change primary key and leave it as a secondary key
+    /// with the given permissions.
+    RotatePrimaryKeyToSecondary(Permissions),
 }
 ```
 
@@ -52,16 +55,20 @@ Each of these authorisations are issued by an identity, but take different param
 
 ## Payment for Authorisation
 
-In some cases it may not be possible for the approver (or rejected) of an authorisation to pay for the transaction to do so. When a key is joining a new identity, it may not have any POLYX funds to pay for the transaction, and cannot receive POLYX as it is not yet associated with an identity (with a valid CDD claim).
+In some cases it may not be possible for the approver (or rejector) of an authorisation to pay for the transaction to do so. When a key is joining a new identity, it may not have any POLYX funds to pay for the transaction, and cannot receive POLYX as it is not yet associated with an identity (with a valid CDD claim).
 
 When a multisig signer is proposing or approving a multisig transaction it may similarily not have POLYX (a multisig signer cannot receive POLYX as it is not directly connected to an identity).
 
 So for the certain types of authorisation below, the transaction is paid for by the issuer of the authorisation, in particular the primary key of the identity that issued the authorisation.
 
 Authorisations types where the authorisation issuer pays are:
-
-- JoinIdentity
-
-- RotatePrimaryKey
-
-- AddMultiSigSigner
+```
+    AcceptMultiSigSigner,
+    AcceptRelayerPayingKey,
+    AcceptIdentitySecondary,
+    AcceptIdentityPrimary,
+    RotatePrimaryToSecondary,
+    /// Matches any call to `remove_authorization`,
+    /// where the authorization is available for `auth.authorized_by` payer redirection.
+    RemoveAuthorization,
+```
