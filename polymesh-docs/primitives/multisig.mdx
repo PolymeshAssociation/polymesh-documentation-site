@@ -7,7 +7,7 @@ subsite: polymesh-docs
 
 ## Overview
 
-Instead of using an external address as a primary or secondary key on your Polymesh Identity, it is possible to use a MultiSig.
+Instead of using an public/private key pair address as a primary or secondary key on your Polymesh Identity, it is possible to use a MultiSig.
 
 MultiSig keys can specify a set of associated signers (`n` signers) or which a subset (`m` signers) must agree in order to execute an on-chain action.
 
@@ -61,7 +61,9 @@ Once you have the authorization ID you can call `multiSig::acceptMultisigSignerA
 
 ![Signer Accepting](../images/multisig/9_accept_multisig.png)
 
-NB - when accepting these authorisations, the current primary key of the creating identity will pay for the transactions.
+:::info
+When accepting these authorisations, the current primary key of the creating identity will pay for the transactions.
+:::
 
 At this point your MultiSig is created, and three signing addresses have been associated with it. However your MultiSig has not been associated as a primary or secondary key with an identity yet.
 

@@ -58,21 +58,21 @@ The primary key of an identity has full permissions to that identity and can add
 A secondary key can also sign transactions on behalf of its identity, but can have its permissions limited to only certain actions, portfolios or assets. It can also be removed by the primary key of its identity at any time.
 
 For more information on our public / private key cryptography please see:
-https://substrate.dev/docs/en/knowledgebase/advanced/cryptography
+https://docs.substrate.io/learn/cryptography/
 
 ## Key Types
 
 There are three types of keys that can be used in Polymesh:
 
 - Public / Private key pairs
-
 - Multisigs
+- Smart Contracts
 
 Polymesh is generally agnostic as to the type of key being used, and treats each key type consistently (e.g. for permissioning).
 
 ### Public / Private Key Pairs
 
-Polymesh uses public-key cryptography based on the [Ed25519](https://substrate.dev/docs/en/knowledgebase/advanced/cryptography#ed25519) curve, and allows keys that use either the Ed25519 or SR25519 constructions.
+Polymesh uses public-key cryptography based on the [Ed25519 curve](https://docs.substrate.io/learn/cryptography/#elliptic-curve), and allows keys that use either the Ed25519 or SR25519 constructions.
 
 These types of keys can be held on hardware wallets, or can be generated off-line and stored as paper wallets.
 
@@ -86,13 +86,13 @@ A multisig is a single key which is controlled by one or more people. A _n_ of _
 
 - Creator Identity: the identity that created the MultiSig - this is fixed and can't be modified
 
-- Acting Identity: the identity that the MultiSig acts through, by virtue of being attached as a Signing / Master Key.
+- Acting Identity: the identity that the MultiSig acts through, by virtue of being attached as a Primary / Secondary Key.
 
 - MultiSig Signers => MultiSig is mapped through `KeyToMultiSig`
 
 - MultiSig => Creator Identity is mapped through `MultiSigToIdentity`
 
-- MultiSig => Acting Identity is mapped through `KeyToIdentityIds` (None if MultiSig is not a Primary / Secondary Key)
+- MultiSig => Acting Identity and assigned permissions (if applicable) are mapped through `KeyRecords` (None if MultiSig is not a Primary / Secondary Key)
 
 This has the consequence that MultiSig Signers can not send / receive POLYX (since they are not directly associated with an identity).
 
@@ -113,6 +113,12 @@ When a MultiSig executes a proposal, we have:
 - CDD check done on Acting Identity (on dispatch)
 
 - Payment made by Creator Identity
+
+### Smart Contracts
+
+While not conventionally considered key types, Smart Contracts are represented by a public address on Polymesh, akin to other key types, making them a unique type of key. Like other key types, smart contracts must be joined to an identity as either a primary or a secondary key to be able to transact on chain.
+
+Smart Contracts allow developers to define custom logic, rules, records, and functions. They are vital tools for automating intricate processes, including the facilitation of decentralized applications, and expanding the network's capabilities. Smart contracts, like other keys, can hold POLYX tokens but require external key interaction to initiate actions. These contracts seamlessly interact with Polymesh through chain extensions, granting access to blockchain data and functionalities, thereby supporting diverse decentralized applications and use cases.
 
 ## Permissions
 

@@ -49,7 +49,7 @@ Authorisation can be via an on-chain transaction, or signed data.
 
 Once an instruction is authorised by a counterparty, their assets are locked, and the instruction will settle once all counterparties have authorised.
 
-A counterparty can cancel a pending instruction. If any counterparty cancels, the entire instruction should be marked as cancelled (and everyones assets unlocked).
+A counterparty can cancel a pending instruction. If any counterparty cancels, the entire instruction should be marked as cancelled (and everyone's assets unlocked).
 
 ## Legs, Instructions and Venues
 
@@ -67,7 +67,7 @@ Once all counterparties have authorised an instruction, it is automatically exec
 
 Any counterparty to an instruction can reject it, marking it as rejected immediately, or simply wait until it expires.
 
-A counterpartys' authorisation is only valid if they either lock the relevant amount of assets to the instruction to cover any of their obligations across all legs, or provide a signed receipt that the transaction has occurred off-chain.
+A counterparty's authorisation is only valid if they either lock the relevant amount of assets to the instruction to cover any of their obligations across all legs, or provide a signed receipt that the transaction has occurred off-chain.
 
 Payment receipts which are used to authorise an instruction are specific to a given instruction, and cannot be used for other instructions.
 
@@ -95,7 +95,7 @@ Alice wants to transfer 10 ACME tokens to Bob as a gift.
 
 She uses her “default” venue (or any venue that she has previously created) to generate an instruction, with a single leg.
 
-If Bob has provided pre-authorisation via signed data to Alice, she can submit it alongside the transaction as Bobs authorisation, and her own authorisation is implicit (since she is creating the instruction). Alices ACME tokens are locked until Bob authorises the instruction (or Alice cancels), assuming he has not pre-authorised.
+If Bob has provided pre-authorisation via signed data to Alice, she can submit it alongside the transaction as Bobs authorisation, and her own authorisation is implicit (since she is creating the instruction). Alice's ACME tokens are locked until Bob authorises the instruction (or Alice cancels), assuming he has not pre-authorised.
 
 Once the instruction has been fully authorised (which can happen upon creation if pre-authorised) it settles with Bob receiving 10 ACME tokens.
 

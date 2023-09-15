@@ -32,7 +32,7 @@ Every asset on Polymesh has a unique ticker - a 12 character identifier for the 
 
 Users can register a ticker, and then when they are ready create an asset associated with that registered ticker.
 
-Ticker registrations can be transferred between identities and have an expiry date, currently set to 6 months from their initial registration.
+Ticker registrations can be transferred between identities and have an expiry date, currently set to 60 days from their initial registration.
 
 Registering a ticker ensures no other user can issue an asset with that ticker whilst the registration is valid (i.e. has not expired), and has a protocol fee associated with it (currently 500 POLYX).
 
@@ -40,7 +40,7 @@ Registering a ticker ensures no other user can issue an asset with that ticker w
 
 Having registered a ticker, users can then create their asset, specifying the type of the asset (e.g. Equity, Bond, Fund).
 
-The asset is initially created with a zero total supply. For the initial issuance of the asset, see the Issuance section.
+The asset is initially created with a zero total supply. For the initial issuance of the asset, see the [Issuance section](#issuance).
 
 As well as being identified via a unique ticker, assets can be associated with additional external identifiers, such as ISINs, CUSIPs, CINs, LEIs and DTIs, with Polymesh validating that these identifiers are consistent (i.e. that their checksums match).
 
@@ -56,13 +56,13 @@ Documentation can only be updated or modified by the identity that issued the co
 
 ## Ownership
 
-All asset ownership in Polymesh is at the identity granularity. Whilst an investor can organise their assets into different portfolios under their [identity](../identity/), compliance is enforced at the identity level, so in order to pay or receive a particular assets token, the relevant identity must have claims that match the [compliance](../compliance/) rules specified by the asset issuer for the asset.
+All asset ownership in Polymesh is at the identity level. Whilst an investor can organise their assets into different portfolios under their [identity](../identity/), compliance is enforced at the identity level, so in order to send or receive a particular assets token, the relevant identity must have claims that match the [compliance](../compliance/) rules specified by the asset issuer for the asset.
 
 ## Asset Issuers
 
 The asset issuer is the identity which registered the ticker and created the asset. The asset issuer can transfer ownership of an asset to another identity by issuing a `TransferAsset` authorisation which must be accepted by the target identity.
 
-The asset issuer also has some additional controls which are soley accessible to them. These include:
+The asset issuer also has some additional controls which are solely accessible to them. These include:
 
 - updating documentation and identifiers for their asset
 
