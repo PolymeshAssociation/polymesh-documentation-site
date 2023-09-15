@@ -9,6 +9,14 @@ subsite: polymesh-docs
 
 Polymesh includes on-chain governance to manage network upgrades, changing parameters of the network (e.g. slashing percentages), permissioning network roles and distributing treasury funds.
 
+:::info Network Treasury
+
+Polymesh has a special account, designated as the network treasury. POLYX can only be disbursed from the treasury using the governance process, in particular by the submission and ratification of a [PIP](#polymesh-improvement-proposals) which represents a disbursement from the treasury to a specified account.
+
+The intention is that treasury funds are disbursed to facilitate the adoption and development of Polymesh - it may be used for grants, direct payments to identities who perform specified actions for the network or any other purpose that the governance process deems reasonable.
+
+:::
+
 The governance system is designed to allow both community members and technical experts to collaborate on improving Polymesh and managing network changes.
 
 There are three main groups of actors in Polymesh governance:
@@ -31,7 +39,7 @@ In addition to the Governing Council there are other committees (e.g. Technical 
 
 ## Polymesh Improvement Proposals
 
-Polymesh Improvement Proposals (PIPs) represent an on-chain action that the community or a committee is recomending to the Governing Council.
+Polymesh Improvement Proposals (PIPs) represent an on-chain action that the community or a committee is recommending to the Governing Council.
 
 Polymesh Improvement Proposals (PIPs) represent any of change to the network, and can be created both by dedicated committees as well as any POLYX token holder and are actioned by the Governing Council.
 
@@ -39,7 +47,7 @@ A PIP is an on-chain dispatchable function w/ parameters alongside some metadata
 
 These PIP dispatchables can only be executed by the Governing Council and not an individual user.
 
-PIPs are also used to permission certain on-chain identities to have special priviledged roles. This includes adding and removing permissioned operators and CDD service providers.
+PIPs are also used to permission certain on-chain identities to have special privileged roles. This includes adding and removing permissioned operators and CDD service providers.
 
 Some common examples include:
 
@@ -57,7 +65,7 @@ Some common examples include:
 
 It is important that PIPs are curated by community members (POLYX token holders) to provide feedback to the Governing Council on the relative importance to the community of different PIPs.
 
-Any POLYX token holder, in addition to being able to submit a PIP for consideration, can signal their view on other community submitted PIPS, both postiviely or negatively, by bonding POLYX to the relevant PIP. The POLYX token holders signal is proportional to the amount of POLYX bonded by that community member.
+Any POLYX token holder, in addition to being able to submit a PIP for consideration, can signal their view on other community submitted PIPS, both positively or negatively, by bonding POLYX to the relevant PIP. The POLYX token holders signal is proportional to the amount of POLYX bonded by that community member.
 
 When the Governing Council triggers a PIP snapshot, we take these signals and use them to order the community submitted PIPs for consideration by the Governing Council.
 
@@ -73,7 +81,7 @@ Associated with each committee is a voting threshold - for example, if the commi
 
 Committees can submit PIPs which are included and then put in front of the Governance Council for consideration. The Governing Council can choose to ratify, reject or ignore a committee submitted PIP.
 
-Unlike community submitted PIPs, a committee submitted PIP is not subject to signalling from the community of POLYX token holders, and is always eligable for actioning by the Governing Council.
+Unlike community submitted PIPs, a committee submitted PIP is not subject to signalling from the community of POLYX token holders, and is always eligible for actioning by the Governing Council.
 
 ## Governing Council
 
@@ -81,17 +89,17 @@ The Polymesh Governing Council is ultimately responsible for actioning PIPs whic
 
 Any member of the governing council can trigger a PIP snapshot. The snapshot summarises the current list of PIPs (both from the community and committees) and orders community based PIPs based on their signal.
 
-The Governing Council then meet to discuss the PIPs included in the snapshot. For community currated PIPs, the Governing Council must work through them based on their curated order, choosing whether to ratify, reject or skip each PIP in turn.
+The Governing Council then meet to discuss the PIPs included in the snapshot. For community curated PIPs, the Governing Council must work through them based on their curated order, choosing whether to ratify, reject or skip each PIP in turn.
 
 For PIPs which are skipped, we track how many times they have been skipped, and limit the Governing Council to skipping a particular PIP too many times. This is designed to give the Governing Council the flexibility they need to reasonable govern the evolution of the Polymesh network, as well as ensuring that community signalling of the relative importance of PIPs is closely considered by the Governing Council.
 
 For PIPs submitted by committees rather than through the community curation process, the Governing Council is free to ratify or reject these PIPs in any order.
 
-The Governance Concil can be thought of as a multisig controlled by its members, and has an associated voting threshold that must be reached in order to execute an action through the Governing Council. This applies both for PIP management as well as some additional non-PIP related actions that the Governing Council may need to execute.
+The Governance Council can be thought of as a multisig controlled by its members, and has an associated voting threshold that must be reached in order to execute an action through the Governing Council. This applies both for PIP management as well as some additional non-PIP related actions that the Governing Council may need to execute.
 
 These non-PIP actions include managing the membership of the Governing Council itself, with existing members needing to agree and vote on the addition or removal of members, as well as changes to the voting structure, for example the voting threshold.
 
-The Goverance Council is also able to issue a [Customer Due Diligence](/polymesh-docs/primitives/cdd) claim should the need arise.
+The Governing Council is also able to issue a [Customer Due Diligence](/polymesh-docs/primitives/cdd) claim should the need arise.
 
 ## Release Coordinator
 

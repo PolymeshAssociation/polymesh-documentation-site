@@ -19,38 +19,40 @@ For convenience the Polymesh Association offers precompiled Docker container ima
 
 ---
 
-This guide was written based on Ubuntu 20.04, but the instructions should be similar for other platforms and assumes Docker is already installed. If Docker is not yet installed follow the official [docker installation instructions](https://docs.docker.com/engine/install/ubuntu/) to install. This guide assumes you are logged in as a non-root user with sudo privileges. For security it is recommended root user login is disabled.
+This guide was written based on Ubuntu 22.04, but the instructions should be similar for other platforms and assumes Docker is already installed. If Docker is not yet installed follow the official [docker installation instructions](https://docs.docker.com/engine/install/ubuntu/) to install. This guide assumes you are logged in as a non-root user with sudo privileges. For security it is recommended root user login is disabled.
 
 For additional information related to docker commands refer to [Docker Docs](https://docs.docker.com/engine/reference/run/).
 
 ## Getting the Polymesh Image
 
-Images are available for mainnet, testnet, staging and develop chains. There are two flavours available for each: debian and distroless. The distroless version has no shell and thus provides a reduced attack surface, whereas the debian versions shell can help with debugging during the initial setup. The images are tagged with <version\>-<chain\>-<flavour\>.
+Images are available for mainnet, testnet, staging and develop chains. There are two flavours available for each: debian and distroless. The distroless version has no shell and thus provides a reduced attack surface, whereas the debian versions shell can help with debugging during the initial setup. The images are tagged with `<version>-<chain>-<flavour>`.
 
-The version, chain and flavour are required for mainnet and testnet chains to ensure deterministic versioning. For staging and develop the version can be omitted. When omitted docker will pull the latest release for that chain and flavour combination.
+The version, chain and flavour are required for all chains. The version can be specified as `latest` which will pull the most recent image for that `<chain>-<flavour>` combination.
+
+It is recommend to use a specific `version` number for deterministic versioning. If `latest` is used for the version you may wish to set your image pull policy to `--pull=always` to ensure the latest image is always pulled from the repository when starting the container.
 
 **Note: The specified Docker container health checks will not work with the distroless image, but it's more lightweight and safer.**
 
 Refer to the [Polymesh Association Docker Hub repository](https://hub.docker.com/r/polymeshassociation/polymesh/tags) for the available release tags. Your desired release tag can be pulled with the command:
 
 ```bash
-sudo docker pull polymeshassociation/polymesh:5.2.0-testnet-distroless
+sudo docker pull polymeshassociation/polymesh:6.0.0-testnet-distroless
 ```
 
-The tag `:5.2.0-testnet-distroless` should be replaced with the desired release tag.
+The tag `:6.0.0-testnet-distroless` should be replaced with the desired release tag.
 
 The Polymesh Association does not publish a `:latest` build. If a release tag is omitted the docker pull command will error.
 
 By default, if the Polymesh container image has not previously been pulled from the repository, it will be pulled when first attempting to run it. You can verify the version installed by running the following command:
 
 ```bash
-sudo docker run --rm polymeshassociation/polymesh:5.2.0-testnet-distroless --version
+sudo docker run --rm polymeshassociation/polymesh:6.0.0-testnet-distroless --version
 ```
 
-**All available Polymesh [FLAGS], [OPTIONS] and <SUBCOMMAND\> commands can be viewed by calling:**
+**All available Polymesh [FLAGS], [OPTIONS] and <COMMAND\> commands can be viewed by calling:**
 
 ```bash
-sudo docker run --rm polymeshassociation/polymesh:5.2.0-testnet-distroless --help
+sudo docker run --rm polymeshassociation/polymesh:6.0.0-testnet-distroless --help
 ```
 
 ## Running a node
@@ -58,7 +60,7 @@ sudo docker run --rm polymeshassociation/polymesh:5.2.0-testnet-distroless --hel
 With the image downloaded you can now run your first testnet node:
 
 ```bash
-sudo docker run -u root --rm -it polymeshassociation/polymesh:5.2.0-testnet-distroless --chain testnet
+sudo docker run -u root --rm -it polymeshassociation/polymesh:6.0.0-testnet-distroless --chain testnet
 ```
 
 Note: the above command is required to be run as the root user with the flag `-u` or `--user root` in order for the user to have suitable permissions to successfully run the node.
@@ -90,7 +92,7 @@ sudo docker run \
 -u root \
 --rm -it \
 --volume=/var/lib/polymesh/:/var/lib/polymesh/ \
-polymeshassociation/polymesh:5.2.0-testnet-distroless \
+polymeshassociation/polymesh:6.0.0-testnet-distroless \
 --chain testnet \
 --base-path /var/lib/polymesh/
 ```
@@ -122,7 +124,7 @@ sudo docker run \
 --user $(id -u polymesh):$(id -g polymesh) \
 --rm -it \
 --volume=/var/lib/polymesh/:/var/lib/polymesh/ \
-polymeshassociation/polymesh:5.2.0-testnet-distroless \
+polymeshassociation/polymesh:6.0.0-testnet-distroless \
 --chain testnet \
 --base-path /var/lib/polymesh/
 ```
@@ -137,7 +139,7 @@ sudo docker run \
 --user $(id -u polymesh):$(id -g polymesh) \
 --rm -it \
 --volume=/var/lib/polymesh/:/var/lib/polymesh/ \
-polymeshassociation/polymesh:5.2.0-testnet-distroless \
+polymeshassociation/polymesh:6.0.0-testnet-distroless \
 --chain testnet \
 --name my-node-name \
 --base-path /var/lib/polymesh/
@@ -164,7 +166,7 @@ sudo docker run \
 --restart always \
 -it \
 --volume=/var/lib/polymesh/:/var/lib/polymesh/ \
-polymeshassociation/polymesh:5.2.0-testnet-distroless \
+polymeshassociation/polymesh:6.0.0-testnet-distroless \
 --chain testnet \
 --name my-node-name \
 --base-path /var/lib/polymesh/
@@ -217,9 +219,9 @@ There are 4 main ports you may wish to expose for your node, depending on your a
 
 ### Bridged Network
 
-By default, a Docker container creates a separate network stack which is bridged to the host network (`--network=bridge`). An IP address will be allocated for containers on the bridge's network and traffic will be routed through this bridge to the container. To communicate with the container network the required ports must be exposed. Ports are exposed using the `-p` or `--publish` flag in the format <hostPort\>:<containerPort\>. It is best practice to only expose required ports. E.g. add `-p 30333:30333` to the Docker run command to expose the libp2p port.
+By default, a Docker container creates a separate network stack which is bridged to the host network (`--network=bridge`). An IP address will be allocated for containers on the bridge's network and traffic will be routed through this bridge to the container. To communicate with the container network the required ports must be exposed. Ports are exposed using the `-p` or `--publish` flag in the format `<hostPort>:<containerPort>`. It is best practice to only expose required ports. E.g. add `-p 30333:30333` to the Docker run command to expose the libp2p port.
 
-The default configuration for RPC, WS and Prometheus is to allow traffic from localhost only. As, by default, Docker creates a separate network from the host network, connections from local host will be refused even if the required ports are published. To allow the host system to communicate with the containerized Polymesh instance, the `--rpc-external`, `--ws-external` or `--prometheus-external` flags must be added as applicable. Additionally, for RPC & WS connections the `--rpc-cors <ORIGINS>` flag should be added, Where, <ORIGINS\> is a comma separated list of origins (protocol://domain e.g. https://mainnet-app.polymesh.network/) allowed to access the HTTP & WS RPC server. Value of `all` will disable origin validation. When running in --dev mode the default is to allow all origins.
+The default configuration for RPC, WS and Prometheus is to allow traffic from localhost only. As, by default, Docker creates a separate network from the host network, connections from local host will be refused even if the required ports are published. To allow the host system to communicate with the containerized Polymesh instance, the `--rpc-external`, `--ws-external` or `--prometheus-external` flags must be added as applicable. Additionally, for RPC & WS connections the `--rpc-cors <ORIGINS>` flag should be added, Where, `<ORIGINS>` is a comma separated list of origins (protocol://domain e.g. https://mainnet-app.polymesh.network/) allowed to access the HTTP & WS RPC server. Value of `all` will disable origin validation. When running in --dev mode the default is to allow all origins.
 
 Note: adding these flags allows access from outside your host network. Ensure your firewall is configured to allow or block traffic on these ports as required. If running an [operator node](#running-an-operator-node) it is not recommended to expose RPC and WS externally.
 
@@ -236,7 +238,7 @@ sudo docker run \
 -p 9933:9933 \
 -p 9944:9944 \
 -p 9615:9615 \
-polymeshassociation/polymesh:5.2.0-testnet-distroless \
+polymeshassociation/polymesh:6.0.0-testnet-distroless \
 --chain testnet \
 --name my-node-name \
 --base-path /var/lib/polymesh/ \
@@ -262,7 +264,7 @@ sudo docker run \
 -it \
 --volume=/var/lib/polymesh/:/var/lib/polymesh/ \
 --network=host \
-polymeshassociation/polymesh:5.2.0-testnet-distroless \
+polymeshassociation/polymesh:6.0.0-testnet-distroless \
 --chain testnet \
 --name my-node-name \
 --base-path /var/lib/polymesh/
@@ -293,7 +295,7 @@ sudo docker run \
 -u $(id -u polymesh):$(id -g polymesh) \
 --rm -it \
 -v /var/lib/polymesh/:/var/lib/polymesh/ \
-polymeshassociation/polymesh:5.2.0-testnet-distroless \
+polymeshassociation/polymesh:6.0.0-testnet-distroless \
 purge-chain \
 --chain testnet  \
 --base-path /var/lib/polymesh/
@@ -330,13 +332,14 @@ sudo docker run \
 -p 30333:30333 \
 -p 9615:9615 \
 --ulimit nofile=1024:10240 \
-polymeshassociation/polymesh:5.2.0-testnet-distroless \
+polymeshassociation/polymesh:6.0.0-testnet-distroless \
 --chain testnet \
 --operator \
 --name my-node-name \
 --base-path /var/lib/polymesh/ \
 --wasm-execution compiled \
 --db-cache 4096 \
+--db-max-total-wal-size 1024 \
 --prometheus-external
 ```
 
