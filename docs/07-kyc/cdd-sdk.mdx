@@ -11,7 +11,7 @@ You ought to look at the previous chapter on _KYC with the SDK_ first.
 
 :::
 
-Although, a CDD service provider is a privileged KYC service provider, adding a CDD claim is an entirely different proposition. A CDD service provider has access to the Polymesh Unique Identity System (PUIS) and is entrusted with publishing cryptographic commitments.
+A CDD service provider is a privileged KYC service provider with a permissioned role to create DID's and add CDD claims to DID's.
 
 :::tip
 
@@ -22,10 +22,9 @@ See the [introduction on identity](/docs/introduction/identity/) for a refresher
 In particular:
 
 1. For **brand new users** of Polymesh, the CDD provider needs to:
-   1. Record a new entry in the PUIS, and return to the user their unique off-chain identifier, or **uID**;
-   2. Create a new account controlled by the primary key asked by the user, and return the **Did** to the user;
-2. For **existing users** that need a new CDD attestation, the CDD provider needs to ask or retrieve the user's uID in the PUIS;
-3. When the CDD service provider publishes a CDD attestation associated with an account, the attached **CddId** needs to be cryptographically calculated using the user's uID and the account's DID. This is needed so that an account can later on self-publish an investor uniqueness claim.
+   1. Create a new account controlled by the primary key asked by the user, and return the **DID** to the user;
+   2. Add a CDD claim to that DID to verify they have gone through verification with them;
+2. For **existing users** that need a new CDD attestation, the CDD provider needs to re-verify the individual or entity and attach a new CDD claim to their existing DID;
 
 :::tip
 
@@ -206,93 +205,7 @@ Additionally, the address needs some POLYX to pay for transaction fees. Bob can 
 
 ## The CDD attestation
 
-Now that Bob has an account on Polymesh, the CDD provider needs to add a CDD attestation to the account. To calculate the cryptographic CddId to include in the attestation, we are going to inspire ourselves from this [example script](https://github.com/PolymeshAssociation/CDD-Scripts/blob/83ff952ab88b0aeaeaaed9cda35556dc1cc79f74/index.js#L72-L77). Let's first clearly identify what is off-chain and what is on-chain:
-
-- Off-chain:
-  - investor's uID, which is Bob's, unique identifier in the PUIS system, and
-  - CDD service provider's private key, obviously.
-- On-chain:
-  - `bob.did`: the account number the CDD provider created to identify (one of) Bob's account on-chain,
-  - CddId: the identifier the CDD provider will publish after Bob has completed the CDD process, and
-  - CDD service provider's address, or primary public key for the service provider's account.
-
-The difficulty here is how to actually calculate the CddId.
-
-### Prepare your code
-
-We need to do some extra work because, at its base, the [confidential identity](https://github.com/PolymeshAssociation/cryptography/tree/afed507/confidential-identity) library is coded in Rust, like the rest of Polymesh's codebase, and compiled in WebAssembly (WASM), for use in NodeJs. So go ahead:
-
-- Copy the [whole library folder](https://github.com/PolymeshAssociation/CDD-Scripts/tree/83ff952ab88b0aeaeaaed9cda35556dc1cc79f74/pkg). This includes the external declarations for NodeJs;
-- [Import it](https://github.com/PolymeshAssociation/CDD-Scripts/blob/83ff952ab88b0aeaeaaed9cda35556dc1cc79f74/index.js#L10) in your file;
-- And also [import some Polkadot utilities](https://github.com/PolymeshAssociation/CDD-Scripts/blob/83ff952ab88b0aeaeaaed9cda35556dc1cc79f74/index.js#L11).
-
-### Calculate off-chain
-
-Bob already has his uID, it was either retrieved from the PUIS by the CDD provider, or saved on file or in the Polymesh Wallet at the time of his first CDD. Either way, the CDD service provider obtained it:
-
-<Tabs groupId="code-language">
-<TabItem value="ts" label="TypeScript">
-
-```ts
-const uIDv4: string = '21d18606-5971-4136-90c1-decdef95fc1e'; // For example
-const uID: string = `0x${uIDv4.replace(/-/g, '')}`; // Results in 0x21d186065971413690c1decdef95fc1e
-```
-
-</TabItem>
-<TabItem
- value="js" label="JavaScript">
-
-```js
-const uIDv4 = '21d18606-5971-4136-90c1-decdef95fc1e'; // For example
-const uID = `0x${uIDv4.replace(/-/g, '')}`; // Results in 0x21d186065971413690c1decdef95fc1e
-```
-
-</TabItem>
-</Tabs>
-
-Because of this delegation to WebAssembly, we have to painstakingly format parameters in hexadecimal. This explains the convoluted lines above and below.
-
-`bob.did` already comes formatted in hexadecimal.
-
-With those in hand, let's calculate the CddId off-chain. Using the imports mentioned above:
-
-<Tabs groupId="code-language">
-<TabItem value="ts" label="TypeScript">
-
-```ts
-const cddIdOutputString: string = confidential_identity.process_create_cdd_id(
-  JSON.stringify({
-    investor_did: Array.from(hexToU8a(bob.did)),
-    investor_unique_id: Array.from(hexToU8a(uID)),
-  })
-);
-const cddIdOutput: JSON = JSON.parse(cddIdOutputString);
-const cddId: string = `0x${createHexString(cddIdOutput.cdd_id)}`;
-```
-
-</TabItem>
-<TabItem
- value="js" label="JavaScript">
-
-```js
-const cddIdOutputString = confidential_identity.process_create_cdd_id(
-  JSON.stringify({
-    investor_did: Array.from(hexToU8a(bob.did)),
-    investor_unique_id: Array.from(hexToU8a(uID)),
-  })
-);
-const cddIdOutput = JSON.parse(cddIdOutputString);
-const cddId = `0x${createHexString(cddIdOutput.cdd_id)}`;
-```
-
-</TabItem>
-</Tabs>
-
-Not excessively difficult. We have all the arguments we need to go ahead and publish the result.
-
-### Publish the CDD attestation
-
-And we are back to familiar territory.
+Before an account can transact on chain it requires a valid CDD claim to be added to the DID. The CDD provider constructs a transaction to add a claim type of `CustomerDueDiligence` providing Bob's DID as the target and an expiry date for the claim. The claim can include an optional `cddId` should the CDD provider wish to use it as a reference.
 
 <Tabs groupId="code-language">
 <TabItem value="ts" label="TypeScript">
@@ -340,19 +253,14 @@ await cddClaimQueue.run();
 </TabItem>
 </Tabs>
 
-With this Bob is now _CDD'd_ and can transact in materially-significant ways, including, as mentioned earlier by accepting the authorisation request.
-
-## Transact in ACME
-
-If Bob wants to transact with ACME securities, have a look at his adding an [investor uniqueness claim](/docs/distribute/with-sdk#publish-the-investor-uniqueness-claims).
+With this transaction submitted Bob is now _CDD'd_ and can transact in materially-significant ways, including, as mentioned earlier by accepting the authorisation request.
 
 ## Conclusion
 
 We have seen how a CDD service provider needs to:
 
-- access the PUIS and generate a uID,
 - create new accounts on Polymesh, and
-- publish carefully crafted CDD attestations.
+- publish CDD attestations.
 
 ## Links
 

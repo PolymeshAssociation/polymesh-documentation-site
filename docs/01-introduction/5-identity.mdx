@@ -15,7 +15,7 @@ Just as proverbial fish seldom think about water, we seldom find ourselves ponde
 
 Let's avoid confusion about fundamental concepts by deconstructing what was said, consider the challenge of proving it, and the way Polymesh solves the problem.
 
-## Polymesh uID: "Who are you?"
+## Polymesh ID: "Who are you?"
 
 ![natural person](images/16_polymath_uid.png)
 
@@ -27,11 +27,11 @@ Intuitively, you know that someone wrote the words, possibly a team of people. B
 
 In the legal and corporate world, corporations are "persons" meaning (approximately) that organisations can own things and do things. Thus, organisations and business entities are often referred to as a **juridical person**, a legal entity that is not an individual **natural person**. The people who work for organisations are generally not individually responsible for things the organisation does. They work within the organisation and they usually have limited authority to act on the organisation's behalf. Indeed, given that an organisation is a legal construct, we can surmise that whenever an organisation acts, it is probably executed by one or more people acting on its behalf or possibly an automated system, that is owned by the organisation and operated by the people who work there.
 
-A **Polymesh "uID"** (unique ID) can be an individual or an organisation.
+A **Polymesh ID** can be an individual or an organisation.
 
 This brings us to the first important pillar that will support our understanding of Polymesh Identities:
 
-> A **uID** represents an individual or an organisation. A uID may control more than one account but no one should have more than one uID.
+> An **ID** represents an individual or an organisation. A ID may control more than one account but no individual or organization should have more than one real world ID.
 
 ## Polymesh account: "What is/are your username(s)?"
 
@@ -135,28 +135,6 @@ In the most stringent case, the allowable actions are the intersection of the **
 
 ![permission](./images/12_permission.png)
 
-## Polymesh Unique Identity System (PUIS)
-
-Of particular importance in the world of regulated securities is the repelling of so-called **Sybil attacks**. The name is inspired by the 1976 movie of the same name. The main character in the film is a woman who suffers from a multiple personality disorder. The creation of multiple accounts by a single individual in order to circumvent restrictions is known as a Sybil attack.
-
-An example of a Sybil attack in the realm of regulated securities could be a single entity accumulating a sizeable stake in the security with the use of multiple Polymesh accounts, while avoiding reporting requirements. The **Polymesh Unique Identity System (PUIS)** is designed to repel this type of attack.
-
-There is no prohibition against operating multiple Polymesh accounts with distinct Polymesh DIDs. There are, however, regulatory compliance obligations that fall on investors, depending on jurisdiction. Suffice it say that it is generally not permissible to use multiple accounts to obfuscate reportable holdings of a regulated security. Polymesh provides a mechanism of self-reporting linkage between multiple accounts as well a means of detection.
-
-The PUIS is an off-chain process which allows CDD providers to coordinate and determine a **unique identifier** for each entity (individual or organisation) that is onboarded to Polymesh. This database can only be accessed by CDD providers. CDD providers can insert new customers, or query for existing ones by using so-called identity _fingerprints_ unique to their customer. In this PUIS, the CDD customer's unique identifier, or uID, is a v4 UUID generated once when the customer is onboarded for the first time. It is by this uID that customers are indexed in the PUIS system which is off-chain.
-
-Only a Pedersen (cryptographic hash) commitment of the uID is published on-chain as part of the CDD claim. Polymesh users do know their uID and can use this knowledge to reveal to asset issuers if they, the unique entity are investing in an asset under multiple Polymesh DIDs.
-
-In this way, the PUIS and CDD process lets investors use multiple Polymesh accounts and maintain a high level of confidentiality while supporting compliance for asset issuers that rely on knowing the unique entities that are invested in their asset.
-
-![PUIS](images/18_polymesh_unique_id_system.png)
-
-:::tip
-
-To take a closer look at how identity and confidentiality play together in Polymesh, this documentation on [confidential identity](/polymesh-docs/primitives/confidential-identity/) includes some more information on PUIS, CDD claims, and the linking of identities.
-
-:::
-
 ## Know your customer (KYC)
 
 While efforts are underway to establish a worldwide standard, there is no universally accepted process for identifying and vetting individuals and organisations or representing attestations.
@@ -192,7 +170,6 @@ For a more in-depth look at CDD on Polymesh, dive right into [Polymesh's CDD](/d
 ## Links
 
 - [Primitives: Identity](/polymesh-docs/primitives/identity/)
-- [Primitives: Confidential Identity](/polymesh-docs/primitives/confidential-identity/)
 - [Primitives: Customer due diligence](/polymesh-docs/primitives/cdd/)
 - [Primitives: Portfolios and Custody](/polymesh-docs/primitives/portfolios-custody/)
 - [Primitives: Compliance](/polymesh-docs/primitives/compliance/)

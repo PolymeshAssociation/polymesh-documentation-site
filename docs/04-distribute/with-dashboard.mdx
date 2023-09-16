@@ -63,18 +63,6 @@ When the tokens have been issued, they will be in the **custody of the distribut
 
 Now it is time for the distribution agent, which is ACME, to distribute the tokens. Click `Distribute`.
 
-Each investor has a unique uID scope which the system suggests for you. The Polymesh Unique ID System records investor uniqueness claims. This is to detect cases where an individual attempts to use multiple accounts to avoid reporting requirements. These on-chain uniqueness claims work in concert with CDD and records, on chain, hashes that don't leak metadata about the investors but aim to identity accounts that are, in fact, controlled by the same investor. As a matter of course, each holder of a given token will create a "uID scope" for each token in their portfolio.
-
-Click on `Create uID`.
-
-![create uID](images/10-investor-uid.png)
-
-In a few moments the process is confirmed.
-
-![uID scope success](images/11-success-uid.png)
-
-Now we will create a distribution event.
-
 **Multiple distributions can be logically grouped into a single event**, for example "Founder distributions". Since Alice and only Alice will receive shares, let's call this event "Alice's founder's shares".
 
 Click on `+ Add new distribution event`, give the event a name, and click `Add`.
@@ -104,12 +92,6 @@ Unlike most blockchains where transfers are final, a security token cannot be tr
 Switch to Alice's personal Polymesh account by bringing her personal primary key into focus in the wallet. Navigate to the dashboard `Portfolios` tab where Alice's incoming transfer is displayed.
 
 ![incoming](images/18-incoming.png)
-
-Alice needs to create a uID Scope. Click `Manage uID scopes` and create a uID scope for the symbol you choose for the ACME shares.
-
-The Polymesh Unique ID system helps prevent Sybil attacks on tokens, such as creating multiple accounts under the control of a single entity for the purpose of evading reporting requirements.
-
-![create uid scope](images/26-scope.png)
 
 These shares are of upmost importance to Alice and she doesn't want to hold them in her default portfolio. Instead, she wants to create a special portfolio for them - **Portfolios** are _logical containers that help manage permission or organise holdings_.
 

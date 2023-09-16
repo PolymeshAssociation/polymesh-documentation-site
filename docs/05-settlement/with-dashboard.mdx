@@ -74,22 +74,6 @@ Alice will transfer some of her shares to another user. For this to work, we wil
 
 ![bob](images/01c2-bob.png)
 
-<!--- Not sure this is needed because Bob should be able to create the necessary uID when he affirms the incoming transfer.
-
-### Create a uID scope
-
-Every user must have a uID scope for the securities in their portfolios. As Bob, navigate to `Portfolios` on the Dashboard and click `Manage uID scopes`.
-
-![manage scopes](images/01d-manage-scope.png)
-
-Create a uID scope Bob and ACME, using the symbol you chose for your ACME shares.
-
-![create scope](images/01e-create-scope.png)
-
-We will need some information from the blockchain.
-
---->
-
 ## Polymesh Substrate App
 
 Recall that [Polymesh is built with Substrate](/docs/introduction/tech-stack/), which is a set of modules for creating a blockchain. Substrate provides tools that offer low-level access to everything that happens on a Substrate network and these tools work with Polymesh.
@@ -103,23 +87,6 @@ Open the Polymesh Substrate App at https://mainnet-app.polymesh.network/. It ope
 ![polymesh explorer](images/01-explorer.png)
 
 Peruse recent blocks and see that the extrinsics **describe the methods and parameters that were signed and the results of the transactions**, but don't be alarmed if it seems technical. This information is of interest to developers who create automated systems and user-friendly interfaces.
-
-<!--- Discover ACME's venue. Alice will create one, instead.
-
-### Reveal the venue number
-
-Every settlement takes place within a venue. When we created the ACME token and performed the distribution, the Token Studio created a default venue for us, so we weren't burdened with this step. Now, we will need the venue number. What is it? How can we find out?
-
-As you might imagine, every fact is recorded on the blockchain so we only need to know where to look. Navigate to `Developers`, `Chain State`.
-
-- Under `selected query state` choose `settlement`;
-- To the right, select `userVenues(Identityid): Vec<u64>`;
-- Press entirely.
-
-Here, the system responded, `78`. You will need the number that applies to _your token_.
-
-![venue](images/01b-venue.png)
--->
 
 ## Create a venue
 
@@ -228,7 +195,7 @@ Bob has one incoming transfer. It is 1,000 ACME shares.
 
 Accept the transfer and receive the shares.
 
-Since this is the first time Bob has received ACME shares, Bob will create a uID scope for ACME. The system leads Bob through the process. Also, Bob may wish to move some or all of his shares to another portfolio.
+Once received, Bob may wish to move some or all of his shares to another portfolio.
 
 :::tip
 
