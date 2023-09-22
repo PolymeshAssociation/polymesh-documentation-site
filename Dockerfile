@@ -24,5 +24,6 @@ FROM nginx:stable-alpine-slim
 ################################################################
 
 COPY --from=builder --chown=root:root /home/node/build/ /usr/share/nginx/html/
+COPY --chown=root:root nginx.conf /etc/nginx/conf.d/default.conf
 
 ################################################################
