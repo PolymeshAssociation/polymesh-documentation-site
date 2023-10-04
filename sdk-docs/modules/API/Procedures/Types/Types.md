@@ -97,7 +97,7 @@ sidebar_label: "Types"
 
 #### Defined in
 
-[api/procedures/types.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L115)
+[api/procedures/types.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L115)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L107)
+[api/procedures/types.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L107)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:203](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L203)
+[api/procedures/types.ts:203](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L203)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L111)
+[api/procedures/types.ts:111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L111)
 
 ___
 
@@ -137,7 +137,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:207](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L207)
+[api/procedures/types.ts:207](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L207)
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:99](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L99)
+[api/procedures/types.ts:99](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L99)
 
 ___
 
@@ -157,7 +157,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:195](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L195)
+[api/procedures/types.ts:195](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L195)
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:494](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L494)
+[api/procedures/types.ts:494](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L494)
 
 ___
 
@@ -177,7 +177,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:538](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L538)
+[api/procedures/types.ts:538](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L538)
 
 ___
 
@@ -193,7 +193,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L103)
+[api/procedures/types.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L103)
 
 ___
 
@@ -203,7 +203,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:199](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L199)
+[api/procedures/types.ts:199](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L199)
 
 ___
 
@@ -219,7 +219,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L60)
+[api/procedures/types.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L60)
 
 ___
 
@@ -235,7 +235,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:559](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L559)
+[api/procedures/types.ts:559](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L559)
 
 ___
 
@@ -247,7 +247,7 @@ Global key must be registered. local keys must provide a specification as they a
 
 #### Defined in
 
-[api/procedures/types.ts:343](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L343)
+[api/procedures/types.ts:343](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L343)
 
 ___
 
@@ -257,7 +257,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:580](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L580)
+[api/procedures/types.ts:580](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L580)
 
 ___
 
@@ -273,7 +273,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L82)
+[api/procedures/types.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L82)
 
 ___
 
@@ -290,7 +290,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:638](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L638)
+[api/procedures/types.ts:638](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L638)
 
 ___
 
@@ -300,7 +300,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:603](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L603)
+[api/procedures/types.ts:603](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L603)
 
 ___
 
@@ -310,7 +310,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:744](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L744)
+[api/procedures/types.ts:744](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L744)
 
 ___
 
@@ -320,7 +320,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:411](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L411)
+[api/procedures/types.ts:411](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L411)
 
 ___
 
@@ -337,7 +337,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:693](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L693)
+[api/procedures/types.ts:693](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L693)
 
 ___
 
@@ -347,7 +347,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:568](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L568)
+[api/procedures/types.ts:568](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L568)
 
 ___
 
@@ -357,7 +357,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:967](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L967)
+[api/procedures/types.ts:967](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L967)
 
 ___
 
@@ -367,7 +367,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:915](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L915)
+[api/procedures/types.ts:915](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L915)
 
 ___
 
@@ -385,7 +385,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:632](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L632)
+[api/procedures/types.ts:632](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L632)
 
 ___
 
@@ -395,7 +395,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:1086](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L1086)
+[api/procedures/types.ts:1086](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L1086)
 
 ___
 
@@ -411,7 +411,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:552](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L552)
+[api/procedures/types.ts:552](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L552)
 
 ___
 
@@ -421,7 +421,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L92)
+[api/procedures/types.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L92)
 
 ___
 
@@ -437,7 +437,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L126)
+[api/procedures/types.ts:126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L126)
 
 ___
 
@@ -453,7 +453,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L122)
+[api/procedures/types.ts:122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L122)
 
 ___
 
@@ -463,7 +463,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L134)
+[api/procedures/types.ts:134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L134)
 
 ___
 
@@ -473,7 +473,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L130)
+[api/procedures/types.ts:130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L130)
 
 ___
 
@@ -489,7 +489,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:138](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L138)
+[api/procedures/types.ts:138](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L138)
 
 ___
 
@@ -499,7 +499,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:1082](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L1082)
+[api/procedures/types.ts:1082](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L1082)
 
 ___
 
@@ -515,7 +515,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L71)
+[api/procedures/types.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L71)
 
 ___
 
@@ -533,4 +533,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:1098](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L1098)
+[api/procedures/types.ts:1098](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L1098)

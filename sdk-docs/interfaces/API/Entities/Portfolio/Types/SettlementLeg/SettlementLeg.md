@@ -24,7 +24,7 @@ sidebar_label: "SettlementLeg"
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Instruction/types.ts#L50)
+[api/entities/Instruction/types.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Instruction/types.ts#L50)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Instruction/types.ts#L51)
+[api/entities/Instruction/types.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Instruction/types.ts#L51)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Portfolio/types.ts#L13)
+[api/entities/Portfolio/types.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Portfolio/types.ts#L13)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Instruction/types.ts#L48)
+[api/entities/Instruction/types.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Instruction/types.ts#L48)
 
 ___
 
@@ -76,4 +76,4 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Instruction/types.ts#L49)
+[api/entities/Instruction/types.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Instruction/types.ts#L49)

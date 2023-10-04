@@ -24,7 +24,7 @@ type of security that the Asset represents (e.g. Equity, Debt, Commodity). Commo
 
 #### Defined in
 
-[api/procedures/types.ts:299](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L299)
+[api/procedures/types.ts:299](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L299)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:308](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L308)
+[api/procedures/types.ts:308](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L308)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:307](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L307)
+[api/procedures/types.ts:307](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L307)
 
 ___
 
@@ -67,7 +67,7 @@ the appropriate namespace
 
 #### Defined in
 
-[api/procedures/types.ts:322](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L322)
+[api/procedures/types.ts:322](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L322)
 
 ___
 
@@ -79,7 +79,7 @@ amount of Asset tokens that will be minted on creation (optional, default doesn'
 
 #### Defined in
 
-[api/procedures/types.ts:285](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L285)
+[api/procedures/types.ts:285](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L285)
 
 ___
 
@@ -91,7 +91,7 @@ whether a single Asset token can be divided into decimal parts
 
 #### Defined in
 
-[api/procedures/types.ts:293](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L293)
+[api/procedures/types.ts:293](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L293)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L281)
+[api/procedures/types.ts:281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L281)
 
 ___
 
@@ -113,7 +113,7 @@ portfolio to which the Asset tokens will be issued on creation (optional, defaul
 
 #### Defined in
 
-[api/procedures/types.ts:289](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L289)
+[api/procedures/types.ts:289](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L289)
 
 ___
 
@@ -125,4 +125,4 @@ array of domestic or international alphanumeric security identifiers for the Ass
 
 #### Defined in
 
-[api/procedures/types.ts:303](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L303)
+[api/procedures/types.ts:303](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L303)

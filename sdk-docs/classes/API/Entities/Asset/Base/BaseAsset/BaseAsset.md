@@ -26,7 +26,7 @@ Class used to manage functionality common to all assets.
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Asset/Base/BaseAsset.ts#L54)
+[api/entities/Asset/Base/BaseAsset.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/Base/BaseAsset.ts#L54)
 
 ___
 
@@ -38,7 +38,7 @@ Identity ID of the Asset (used for Claims)
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Asset/Base/BaseAsset.ts#L62)
+[api/entities/Asset/Base/BaseAsset.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/Base/BaseAsset.ts#L62)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Asset/Base/BaseAsset.ts#L55)
+[api/entities/Asset/Base/BaseAsset.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/Base/BaseAsset.ts#L55)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Asset/Base/BaseAsset.ts#L56)
+[api/entities/Asset/Base/BaseAsset.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/Base/BaseAsset.ts#L56)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Asset/Base/BaseAsset.ts#L57)
+[api/entities/Asset/Base/BaseAsset.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/Base/BaseAsset.ts#L57)
 
 ___
 
@@ -80,7 +80,7 @@ ticker of the Asset
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Asset/Base/BaseAsset.ts#L67)
+[api/entities/Asset/Base/BaseAsset.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/Base/BaseAsset.ts#L67)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Entity.ts#L46)
 
 ## Methods
 

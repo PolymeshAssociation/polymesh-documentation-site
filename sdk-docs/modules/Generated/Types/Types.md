@@ -61,7 +61,7 @@ sidebar_label: "Types"
 
 #### Defined in
 
-[generated/types.ts:823](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/generated/types.ts#L823)
+[generated/types.ts:823](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/generated/types.ts#L823)
 
 ## Variables
 
@@ -120,4 +120,4 @@ sidebar_label: "Types"
 
 #### Defined in
 
-[generated/types.ts:870](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/generated/types.ts#L870)
+[generated/types.ts:870](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/generated/types.ts#L870)

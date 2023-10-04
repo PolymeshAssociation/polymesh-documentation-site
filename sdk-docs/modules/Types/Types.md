@@ -1499,7 +1499,7 @@ Re-exports [WaivePermissionsParams](../../interfaces/API/Procedures/Types/WaiveP
 
 #### Defined in
 
-[types/index.ts:744](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L744)
+[types/index.ts:744](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L744)
 
 ___
 
@@ -1516,7 +1516,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1131)
+[types/index.ts:1131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1131)
 
 ___
 
@@ -1533,7 +1533,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1102)
+[types/index.ts:1102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1102)
 
 ___
 
@@ -1545,7 +1545,7 @@ Authorization request data corresponding to type
 
 #### Defined in
 
-[types/index.ts:1152](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1152)
+[types/index.ts:1152](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1152)
 
 ___
 
@@ -1562,7 +1562,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1126)
+[types/index.ts:1126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1126)
 
 ___
 
@@ -1572,7 +1572,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:285](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L285)
+[types/index.ts:285](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L285)
 
 ___
 
@@ -1582,7 +1582,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1418](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1418)
+[types/index.ts:1418](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1418)
 
 ___
 
@@ -1592,7 +1592,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:448](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L448)
+[types/index.ts:448](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L448)
 
 ___
 
@@ -1609,7 +1609,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1136](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1136)
+[types/index.ts:1136](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1136)
 
 ___
 
@@ -1626,7 +1626,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1638](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1638)
+[types/index.ts:1638](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1638)
 
 ___
 
@@ -1638,7 +1638,7 @@ Asset permissions shared by agents in a group
 
 #### Defined in
 
-[types/index.ts:1009](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1009)
+[types/index.ts:1009](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1009)
 
 ___
 
@@ -1648,7 +1648,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:456](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L456)
+[types/index.ts:456](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L456)
 
 ___
 
@@ -1658,7 +1658,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:419](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L419)
+[types/index.ts:419](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L419)
 
 ___
 
@@ -1670,7 +1670,7 @@ Targets of a corporate action in a flexible structure for input purposes
 
 #### Defined in
 
-[types/index.ts:1621](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1621)
+[types/index.ts:1621](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1621)
 
 ___
 
@@ -1682,7 +1682,7 @@ Per-Identity tax withholdings of a corporate action in a flexible structure for 
 
 #### Defined in
 
-[types/index.ts:1631](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1631)
+[types/index.ts:1631](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1631)
 
 ___
 
@@ -1692,7 +1692,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:482](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L482)
+[types/index.ts:482](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L482)
 
 ___
 
@@ -1702,7 +1702,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:313](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L313)
+[types/index.ts:313](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L313)
 
 ___
 
@@ -1712,7 +1712,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:318](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L318)
+[types/index.ts:318](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L318)
 
 ___
 
@@ -1722,7 +1722,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:395](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L395)
+[types/index.ts:395](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L395)
 
 ___
 
@@ -1732,7 +1732,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1564](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1564)
+[types/index.ts:1564](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1564)
 
 ___
 
@@ -1749,7 +1749,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1116)
+[types/index.ts:1116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1116)
 
 ___
 
@@ -1767,7 +1767,7 @@ Apply the [TxData](../../interfaces/Types/TxData/TxData.md) type to all args in 
 
 #### Defined in
 
-[types/index.ts:1675](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1675)
+[types/index.ts:1675](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1675)
 
 ___
 
@@ -1777,7 +1777,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV1.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/middleware/typesV1.ts#L9)
+[middleware/typesV1.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/typesV1.ts#L9)
 
 ___
 
@@ -1787,7 +1787,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1501](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1501)
+[types/index.ts:1501](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1501)
 
 ___
 
@@ -1797,7 +1797,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:751](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L751)
+[types/index.ts:751](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L751)
 
 ___
 
@@ -1809,7 +1809,7 @@ Data representing the Account responsible for paying fees for a transaction
 
 #### Defined in
 
-[types/index.ts:805](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L805)
+[types/index.ts:805](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L805)
 
 ___
 
@@ -1827,7 +1827,7 @@ Permissions to grant to a Signer over an Identity
 
 #### Defined in
 
-[types/index.ts:1251](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1251)
+[types/index.ts:1251](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1251)
 
 ___
 
@@ -1844,7 +1844,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1121)
+[types/index.ts:1121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1121)
 
 ___
 
@@ -1854,7 +1854,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1237](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1237)
+[types/index.ts:1237](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1237)
 
 ___
 
@@ -1866,7 +1866,7 @@ URI|mnemonic|hex representation of a private key
 
 #### Defined in
 
-[types/index.ts:1607](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1607)
+[types/index.ts:1607](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1607)
 
 ___
 
@@ -1876,7 +1876,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L122)
+[types/index.ts:122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L122)
 
 ___
 
@@ -1892,7 +1892,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1107)
+[types/index.ts:1107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1107)
 
 ___
 
@@ -1909,7 +1909,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1111)
+[types/index.ts:1111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1111)
 
 ___
 
@@ -1936,7 +1936,7 @@ All built-in and custom scalars, mapped to their actual values
 
 #### Defined in
 
-[middleware/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/middleware/types.ts#L7)
+[middleware/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L7)
 
 ___
 
@@ -1946,7 +1946,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:273](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L273)
+[types/index.ts:273](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L273)
 
 ___
 
@@ -1956,7 +1956,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1219](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1219)
+[types/index.ts:1219](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1219)
 
 ___
 
@@ -1966,7 +1966,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:296](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L296)
+[types/index.ts:296](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L296)
 
 ___
 
@@ -1996,7 +1996,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:679](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L679)
+[types/index.ts:679](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L679)
 
 ___
 
@@ -2006,7 +2006,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1208](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1208)
+[types/index.ts:1208](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1208)
 
 ___
 
@@ -2022,7 +2022,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1642](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1642)
+[types/index.ts:1642](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1642)
 
 ___
 
@@ -2032,7 +2032,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1380](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L1380)
+[types/index.ts:1380](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1380)
 
 ___
 
@@ -2042,7 +2042,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:283](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L283)
+[types/index.ts:283](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L283)
 
 ___
 
@@ -2060,7 +2060,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:681](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L681)
+[types/index.ts:681](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L681)
 
 ## Variables
 
@@ -2070,4 +2070,4 @@ ___
 
 #### Defined in
 
-[middleware/enums.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/middleware/enums.ts#L21)
+[middleware/enums.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/enums.ts#L21)

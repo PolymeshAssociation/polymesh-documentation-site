@@ -26,7 +26,7 @@ Represents a child identity
 
 #### Defined in
 
-[api/entities/Identity/index.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Identity/index.ts#L115)
+[api/entities/Identity/index.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Identity/index.ts#L115)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[api/entities/Identity/index.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Identity/index.ts#L113)
+[api/entities/Identity/index.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Identity/index.ts#L113)
 
 ___
 
@@ -56,7 +56,7 @@ Identity ID as stored in the blockchain
 
 #### Defined in
 
-[api/entities/Identity/index.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Identity/index.ts#L110)
+[api/entities/Identity/index.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Identity/index.ts#L110)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[api/entities/Identity/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Identity/index.ts#L114)
+[api/entities/Identity/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Identity/index.ts#L114)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Entity.ts#L46)
 
 ## Methods
 

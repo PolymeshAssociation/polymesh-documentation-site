@@ -25,7 +25,7 @@ Asset whose balances are being recorded in this Checkpoint
 
 #### Defined in
 
-[api/entities/Checkpoint.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Checkpoint.ts#L52)
+[api/entities/Checkpoint.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Checkpoint.ts#L52)
 
 ___
 
@@ -37,7 +37,7 @@ Checkpoint identifier number
 
 #### Defined in
 
-[api/entities/Checkpoint.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Checkpoint.ts#L47)
+[api/entities/Checkpoint.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Checkpoint.ts#L47)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Entity.ts#L46)
 
 ## Methods
 

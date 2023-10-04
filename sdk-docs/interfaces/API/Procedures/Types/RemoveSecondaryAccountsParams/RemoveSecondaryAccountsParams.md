@@ -14,4 +14,4 @@ sidebar_label: "RemoveSecondaryAccountsParams"
 
 #### Defined in
 
-[api/procedures/types.ts:266](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/procedures/types.ts#L266)
+[api/procedures/types.ts:266](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L266)

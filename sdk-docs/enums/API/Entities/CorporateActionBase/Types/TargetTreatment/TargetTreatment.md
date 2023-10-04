@@ -14,7 +14,7 @@ sidebar_label: "TargetTreatment"
 
 #### Defined in
 
-[api/entities/CorporateActionBase/types.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/CorporateActionBase/types.ts#L8)
+[api/entities/CorporateActionBase/types.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/CorporateActionBase/types.ts#L8)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/CorporateActionBase/types.ts#L7)
+[api/entities/CorporateActionBase/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/CorporateActionBase/types.ts#L7)

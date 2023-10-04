@@ -37,7 +37,7 @@ const metadata = {
 
 #### Defined in
 
-[types/index.ts:707](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L707)
+[types/index.ts:707](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L707)
 
 ___
 
@@ -49,7 +49,7 @@ set to `true` to disable polkadot start up warnings
 
 #### Defined in
 
-[types/index.ts:712](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L712)
+[types/index.ts:712](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L712)
 
 ___
 
@@ -65,4 +65,4 @@ allows for types to be provided for multiple chain specs at once
 
 #### Defined in
 
-[types/index.ts:719](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L719)
+[types/index.ts:719](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L719)

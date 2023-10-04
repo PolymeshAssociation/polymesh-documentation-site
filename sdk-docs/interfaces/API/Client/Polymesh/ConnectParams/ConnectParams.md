@@ -16,7 +16,7 @@ Allows for historical data to be queried. Required for some methods to work
 
 #### Defined in
 
-[api/client/Polymesh.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/client/Polymesh.ts#L47)
+[api/client/Polymesh.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/client/Polymesh.ts#L47)
 
 ___
 
@@ -28,7 +28,7 @@ The websocket URL for the Polymesh node to connect to
 
 #### Defined in
 
-[api/client/Polymesh.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/client/Polymesh.ts#L39)
+[api/client/Polymesh.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/client/Polymesh.ts#L39)
 
 ___
 
@@ -40,7 +40,7 @@ Advanced options that will be used with the underling polkadot.js instance
 
 #### Defined in
 
-[api/client/Polymesh.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/client/Polymesh.ts#L51)
+[api/client/Polymesh.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/client/Polymesh.ts#L51)
 
 ___
 
@@ -52,4 +52,4 @@ Handles signing of transactions. Required to be set before submitting transactio
 
 #### Defined in
 
-[api/client/Polymesh.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/client/Polymesh.ts#L43)
+[api/client/Polymesh.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/client/Polymesh.ts#L43)

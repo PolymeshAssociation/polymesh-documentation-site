@@ -17,7 +17,7 @@ see https://github.com/paritytech/substrate/blob/master/primitives/transaction-p
 
 #### Defined in
 
-[types/index.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L78)
+[types/index.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L78)
 
 ___
 
@@ -29,7 +29,7 @@ the transaction's execution failed due to a an on-chain validation error, insuff
 
 #### Defined in
 
-[types/index.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L73)
+[types/index.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L73)
 
 ___
 
@@ -41,7 +41,7 @@ the transaction is prepped to run
 
 #### Defined in
 
-[types/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L53)
+[types/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L53)
 
 ___
 
@@ -53,7 +53,7 @@ the transaction was rejected by the signer
 
 #### Defined in
 
-[types/index.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L65)
+[types/index.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L65)
 
 ___
 
@@ -65,7 +65,7 @@ the transaction is being executed
 
 #### Defined in
 
-[types/index.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L61)
+[types/index.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L61)
 
 ___
 
@@ -77,7 +77,7 @@ the transaction was run successfully
 
 #### Defined in
 
-[types/index.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L69)
+[types/index.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L69)
 
 ___
 
@@ -89,4 +89,4 @@ the transaction is waiting for the user's signature
 
 #### Defined in
 
-[types/index.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L57)
+[types/index.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L57)
