@@ -26,7 +26,7 @@ reserved ticker
 
 #### Defined in
 
-[api/entities/TickerReservation/index.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/TickerReservation/index.ts#L54)
+[api/entities/TickerReservation/index.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/TickerReservation/index.ts#L54)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Entity.ts#L46)
 
 ## Methods
 

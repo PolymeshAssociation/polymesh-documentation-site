@@ -22,7 +22,7 @@ Class used to manage Nft functionality
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/Nft.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Asset/NonFungible/Nft.ts#L25)
+[api/entities/Asset/NonFungible/Nft.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/NonFungible/Nft.ts#L25)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/Nft.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Asset/NonFungible/Nft.ts#L23)
+[api/entities/Asset/NonFungible/Nft.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/NonFungible/Nft.ts#L23)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/Nft.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Asset/NonFungible/Nft.ts#L21)
+[api/entities/Asset/NonFungible/Nft.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/NonFungible/Nft.ts#L21)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Entity.ts#L46)
 
 ## Methods
 

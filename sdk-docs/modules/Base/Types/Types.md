@@ -12,7 +12,7 @@ sidebar_label: "Types"
 
 #### Defined in
 
-[base/types.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/base/types.ts#L17)
+[base/types.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/base/types.ts#L17)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[base/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/base/types.ts#L7)
+[base/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/base/types.ts#L7)
 
 ___
 
@@ -48,4 +48,4 @@ ___
 
 #### Defined in
 
-[base/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/base/types.ts#L12)
+[base/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/base/types.ts#L12)

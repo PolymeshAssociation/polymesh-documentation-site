@@ -20,7 +20,7 @@ sidebar_label: "HistoricPolyxTransaction"
 
 #### Defined in
 
-[api/entities/Account/types.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Account/types.ts#L87)
+[api/entities/Account/types.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Account/types.ts#L87)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:725](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L725)
+[types/index.ts:725](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L725)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:724](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L724)
+[types/index.ts:724](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L724)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:723](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L723)
+[types/index.ts:723](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L723)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[api/entities/Account/types.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Account/types.ts#L95)
+[api/entities/Account/types.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Account/types.ts#L95)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[api/entities/Account/types.ts:97](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Account/types.ts#L97)
+[api/entities/Account/types.ts:97](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Account/types.ts#L97)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:726](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/types/index.ts#L726)
+[types/index.ts:726](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L726)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[api/entities/Account/types.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Account/types.ts#L93)
+[api/entities/Account/types.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Account/types.ts#L93)
 
 ___
 
@@ -122,7 +122,7 @@ Account from which the POLYX transaction has been initiated/deducted in case of 
 
 #### Defined in
 
-[api/entities/Account/types.ts:75](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Account/types.ts#L75)
+[api/entities/Account/types.ts:75](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Account/types.ts#L75)
 
 ___
 
@@ -138,7 +138,7 @@ Identity from which the POLYX transaction has been initiated/deducted in case of
 
 #### Defined in
 
-[api/entities/Account/types.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Account/types.ts#L70)
+[api/entities/Account/types.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Account/types.ts#L70)
 
 ___
 
@@ -150,7 +150,7 @@ identifier string to help differentiate transfers
 
 #### Defined in
 
-[api/entities/Account/types.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Account/types.ts#L92)
+[api/entities/Account/types.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Account/types.ts#L92)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[api/entities/Account/types.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Account/types.ts#L96)
+[api/entities/Account/types.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Account/types.ts#L96)
 
 ___
 
@@ -176,7 +176,7 @@ Account in which the POLYX amount was deposited.
 
 #### Defined in
 
-[api/entities/Account/types.ts:85](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Account/types.ts#L85)
+[api/entities/Account/types.ts:85](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Account/types.ts#L85)
 
 ___
 
@@ -192,7 +192,7 @@ Identity in which the POLYX amount was deposited.
 
 #### Defined in
 
-[api/entities/Account/types.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Account/types.ts#L80)
+[api/entities/Account/types.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Account/types.ts#L80)
 
 ___
 
@@ -202,4 +202,4 @@ ___
 
 #### Defined in
 
-[api/entities/Account/types.ts:88](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Account/types.ts#L88)
+[api/entities/Account/types.ts:88](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Account/types.ts#L88)

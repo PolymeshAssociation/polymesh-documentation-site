@@ -41,4 +41,4 @@ Re-exports [InputCaCheckpoint](../Fungible/Checkpoints/Types/Types.md#inputcache
 
 #### Defined in
 
-[api/entities/Asset/types.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Asset/types.ts#L89)
+[api/entities/Asset/types.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/types.ts#L89)

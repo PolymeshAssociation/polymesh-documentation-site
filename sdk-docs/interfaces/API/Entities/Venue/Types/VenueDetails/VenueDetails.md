@@ -14,7 +14,7 @@ sidebar_label: "VenueDetails"
 
 #### Defined in
 
-[api/entities/Venue/types.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Venue/types.ts#L26)
+[api/entities/Venue/types.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Venue/types.ts#L26)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/Venue/types.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Venue/types.ts#L25)
+[api/entities/Venue/types.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Venue/types.ts#L25)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[api/entities/Venue/types.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Venue/types.ts#L24)
+[api/entities/Venue/types.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Venue/types.ts#L24)

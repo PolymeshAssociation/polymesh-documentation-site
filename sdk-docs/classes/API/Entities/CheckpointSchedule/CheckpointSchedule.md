@@ -24,7 +24,7 @@ Asset for which Checkpoints are scheduled
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/CheckpointSchedule/index.ts#L48)
+[api/entities/CheckpointSchedule/index.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/CheckpointSchedule/index.ts#L48)
 
 ___
 
@@ -36,7 +36,7 @@ date at which the last Checkpoint will be created with this Schedule.
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/CheckpointSchedule/index.ts#L58)
+[api/entities/CheckpointSchedule/index.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/CheckpointSchedule/index.ts#L58)
 
 ___
 
@@ -48,7 +48,7 @@ schedule identifier number
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/CheckpointSchedule/index.ts#L43)
+[api/entities/CheckpointSchedule/index.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/CheckpointSchedule/index.ts#L43)
 
 ___
 
@@ -60,7 +60,7 @@ dates in the future where checkpoints are schedule to be created
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/CheckpointSchedule/index.ts#L53)
+[api/entities/CheckpointSchedule/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/CheckpointSchedule/index.ts#L53)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Entity.ts#L46)
 
 ## Methods
 

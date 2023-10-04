@@ -19,7 +19,7 @@ sidebar_label: "TransferComplianceTypeEnum"
 
 #### Defined in
 
-[middleware/types.ts:29884](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/middleware/types.ts#L29884)
+[middleware/types.ts:29884](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L29884)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:29885](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/middleware/types.ts#L29885)
+[middleware/types.ts:29885](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L29885)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:29886](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/middleware/types.ts#L29886)
+[middleware/types.ts:29886](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L29886)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:29887](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/middleware/types.ts#L29887)
+[middleware/types.ts:29887](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L29887)

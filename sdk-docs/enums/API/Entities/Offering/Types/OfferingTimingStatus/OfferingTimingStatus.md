@@ -16,7 +16,7 @@ End date reached
 
 #### Defined in
 
-[api/entities/Offering/types.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Offering/types.ts#L17)
+[api/entities/Offering/types.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Offering/types.ts#L17)
 
 ___
 
@@ -28,7 +28,7 @@ Start date not reached yet
 
 #### Defined in
 
-[api/entities/Offering/types.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Offering/types.ts#L9)
+[api/entities/Offering/types.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Offering/types.ts#L9)
 
 ___
 
@@ -40,4 +40,4 @@ Between start and end date
 
 #### Defined in
 
-[api/entities/Offering/types.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Offering/types.ts#L13)
+[api/entities/Offering/types.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Offering/types.ts#L13)

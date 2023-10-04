@@ -34,7 +34,7 @@ passed, different regulations may apply. Count Transfer Restriction can ensure s
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L38)
+[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L38)
 
 ___
 
@@ -55,7 +55,7 @@ involving the Asset, disabling unused stats will reduce gas fees for investors w
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L82)
+[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L82)
 
 ___
 
@@ -81,7 +81,7 @@ versions of the chain may expose a new extrinsic to avoid this issue
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L74)
+[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L74)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L93)
+[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L93)
 
 ___
 
@@ -140,7 +140,7 @@ creation and try again if a race occurred. Future versions of the chain should i
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L102)
+[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L102)
 
 ___
 
@@ -160,7 +160,7 @@ Removes all Count Transfer Restrictions from this Asset
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L61)
+[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L61)
 
 ___
 
@@ -185,4 +185,4 @@ but not passed into this call then it will be removed
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L51)
+[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L51)

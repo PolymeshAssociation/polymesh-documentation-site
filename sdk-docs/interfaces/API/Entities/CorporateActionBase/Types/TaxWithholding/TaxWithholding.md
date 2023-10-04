@@ -14,7 +14,7 @@ sidebar_label: "TaxWithholding"
 
 #### Defined in
 
-[api/entities/CorporateActionBase/types.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/CorporateActionBase/types.ts#L17)
+[api/entities/CorporateActionBase/types.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/CorporateActionBase/types.ts#L17)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/types.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/CorporateActionBase/types.ts#L18)
+[api/entities/CorporateActionBase/types.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/CorporateActionBase/types.ts#L18)

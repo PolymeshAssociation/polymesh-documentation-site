@@ -14,7 +14,7 @@ sidebar_label: "SubsidyWithAllowance"
 
 #### Defined in
 
-[api/entities/Subsidy/types.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Subsidy/types.ts#L22)
+[api/entities/Subsidy/types.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Subsidy/types.ts#L22)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/Subsidy/types.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/de58d40fd/src/api/entities/Subsidy/types.ts#L21)
+[api/entities/Subsidy/types.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Subsidy/types.ts#L21)
