@@ -5,11 +5,11 @@ description: ''
 subsite: polymesh-docs
 ---
 
-# Non-Fungible Token 
+# Non-Fungible Tokens 
 
 ## Overview
 
-The NFT pallet extends the Asset pallet allowing users to create NFT collections, issue unique tokens and redeem (i.e. burn) existing non-fungible tokens. The documentation for the NFT crate can be found [here](https://docs.polymesh.live/pallet_nft/index.html).
+The Non-Fungible Token (NFT) pallet extends the Asset pallet allowing users to create NFT collections, issue unique tokens and redeem (i.e. burn) existing non-fungible tokens. The documentation for the NFT crate can be found [here](https://docs.polymesh.live/pallet_nft/index.html).
 
 ## NFT Collection
 
@@ -18,10 +18,10 @@ All non-fungible tokens are linked to a unique NFT collection, which is tied to 
 ### Creating an NFT Collection
 
 In order to successfully create an NFT collection, the dispatchable [`create_nft_collection`](https://docs.polymesh.live/pallet_nft/struct.Module.html#arguments) must be called, and the following conditions must hold:
-* If the asset already exists, it must be of type `NonFungible` and the caller must have the proper permission for the asset. Otherwise, the `create_nft_collection` dispatchable will also create one non-fungible asset using the values passed as `ticker` and `nft_type`; 
+* If the asset already exists, it must be of type `NonFungible` and the caller must have the proper permission for the asset. If the asset does not already exist, the `create_nft_collection` dispatchable will also create one non-fungible asset using the values passed as `ticker` and `nft_type`; 
 * This must be the first collection associated to the given `ticker` (i.e. only one collection per ticker is allowed);
 * The number of metadata keys associated to the collection must be less or equal to [MaxNumberOfCollectionKeys](https://docs.polymesh.live/pallet_nft/trait.Config.html#associatedtype.MaxNumberOfCollectionKeys);
-* All metadata keys must be registered. This implies that when using local metadata keys, one must call `create_asset` and `register_asset_metadata_local_type` before calling `create_nft_collection`;
+* All metadata keys must be registered prior to the creation of the collection. This implies that when using local metadata keys, one must call `create_asset` and `register_asset_metadata_local_type` before calling `create_nft_collection`;
 
 Once the dispatchable succeeds, a unique ID is tied to the NFT collection.
 
@@ -31,7 +31,7 @@ After creating the collection, tokens can be issued with the [`issue_nft`](https
 * An NFT collection associated with `ticker` must exist;
 * The caller must have the proper permission for the `Asset`;
 * The `portfolio_kind` of the caller must be valid;
-* All metadata keys specified in the NFT collection must be set when issuing the token. Attempting to issue a token with metadata keys not defined in the collection will also fail;
+* All metadata keys specified in the NFT collection have a value set when issuing the token. Attempting to issue a token with metadata keys not defined in the collection will also fail;
   
 Once the dispatchable succeeds, a unique non-fungible token is linked to the specified portfolio. 
 
