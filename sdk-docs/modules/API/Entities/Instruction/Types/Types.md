@@ -12,8 +12,9 @@ sidebar_label: "Types"
 
 ## Interfaces
 
+- [FungibleLeg](../../../../../interfaces/API/Entities/Instruction/Types/FungibleLeg/FungibleLeg.md)
 - [InstructionAffirmation](../../../../../interfaces/API/Entities/Instruction/Types/InstructionAffirmation/InstructionAffirmation.md)
-- [Leg](../../../../../interfaces/API/Entities/Instruction/Types/Leg/Leg.md)
+- [NftLeg](../../../../../interfaces/API/Entities/Instruction/Types/NftLeg/NftLeg.md)
 
 ## Type Aliases
 
@@ -23,7 +24,7 @@ sidebar_label: "Types"
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Instruction/types.ts#L32)
+[api/entities/Instruction/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Instruction/types.ts#L39)
 
 ___
 
@@ -33,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Instruction/types.ts#L19)
+[api/entities/Instruction/types.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Instruction/types.ts#L26)
 
 ___
 
@@ -43,4 +44,14 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Instruction/types.ts#L65)
+[api/entities/Instruction/types.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Instruction/types.ts#L81)
+
+___
+
+### Leg
+
+Ƭ **Leg**: [`FungibleLeg`](../../../../../interfaces/API/Entities/Instruction/Types/FungibleLeg/FungibleLeg.md) \| [`NftLeg`](../../../../../interfaces/API/Entities/Instruction/Types/NftLeg/NftLeg.md)
+
+#### Defined in
+
+[api/entities/Instruction/types.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Instruction/types.ts#L68)

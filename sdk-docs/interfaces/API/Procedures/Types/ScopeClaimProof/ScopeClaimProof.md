@@ -22,7 +22,7 @@ sidebar_label: "ScopeClaimProof"
 
 #### Defined in
 
-[api/procedures/types.ts:415](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L415)
+[api/procedures/types.ts:417](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L417)
 
 ___
 
@@ -32,4 +32,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:414](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L414)
+[api/procedures/types.ts:416](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L416)

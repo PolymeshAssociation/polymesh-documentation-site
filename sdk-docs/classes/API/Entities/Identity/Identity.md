@@ -26,7 +26,7 @@ Represents an Identity in the Polymesh blockchain
 
 #### Defined in
 
-[api/entities/Identity/index.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Identity/index.ts#L115)
+[api/entities/Identity/index.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Identity/index.ts#L115)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[api/entities/Identity/index.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Identity/index.ts#L113)
+[api/entities/Identity/index.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Identity/index.ts#L113)
 
 ___
 
@@ -48,7 +48,7 @@ Identity ID as stored in the blockchain
 
 #### Defined in
 
-[api/entities/Identity/index.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Identity/index.ts#L110)
+[api/entities/Identity/index.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Identity/index.ts#L110)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[api/entities/Identity/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Identity/index.ts#L114)
+[api/entities/Identity/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Identity/index.ts#L114)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -432,6 +432,18 @@ ___
 ▸ **isCddProvider**(): `Promise`<`boolean`\>
 
 Check whether this Identity is a CDD provider
+
+#### Returns
+
+`Promise`<`boolean`\>
+
+___
+
+### isChild
+
+▸ **isChild**(): `Promise`<`boolean`\>
+
+Check whether this Identity is a child Identity
 
 #### Returns
 

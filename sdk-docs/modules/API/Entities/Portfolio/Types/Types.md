@@ -8,4 +8,14 @@ sidebar_label: "Types"
 
 - [HistoricSettlement](../../../../../interfaces/API/Entities/Portfolio/Types/HistoricSettlement/HistoricSettlement.md)
 - [PortfolioBalance](../../../../../interfaces/API/Entities/Portfolio/Types/PortfolioBalance/PortfolioBalance.md)
-- [SettlementLeg](../../../../../interfaces/API/Entities/Portfolio/Types/SettlementLeg/SettlementLeg.md)
+- [PortfolioCollection](../../../../../interfaces/API/Entities/Portfolio/Types/PortfolioCollection/PortfolioCollection.md)
+
+## Type Aliases
+
+### SettlementLeg
+
+Ƭ **SettlementLeg**: [`Leg`](../../Instruction/Types/Types.md#leg) & { `direction`: [`SettlementDirectionEnum`](../../../../../enums/Types/SettlementDirectionEnum/SettlementDirectionEnum.md)  }
+
+#### Defined in
+
+[api/entities/Portfolio/types.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Portfolio/types.ts#L28)

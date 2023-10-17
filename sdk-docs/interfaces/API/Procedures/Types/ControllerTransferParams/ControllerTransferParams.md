@@ -16,7 +16,7 @@ amount of Asset tokens to transfer
 
 #### Defined in
 
-[api/procedures/types.ts:600](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L600)
+[api/procedures/types.ts:613](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L613)
 
 ___
 
@@ -28,4 +28,4 @@ portfolio (or portfolio ID) from which Assets will be transferred
 
 #### Defined in
 
-[api/procedures/types.ts:596](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L596)
+[api/procedures/types.ts:609](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L609)

@@ -16,7 +16,7 @@ sidebar_label: "AcceptPrimaryKeyRotationParams"
 
 #### Defined in
 
-[api/procedures/types.ts:252](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L252)
+[api/procedures/types.ts:254](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L254)
 
 ___
 
@@ -28,4 +28,4 @@ Authorization from the owner who initiated the change
 
 #### Defined in
 
-[api/procedures/types.ts:248](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L248)
+[api/procedures/types.ts:250](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L250)

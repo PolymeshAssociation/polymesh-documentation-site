@@ -108,6 +108,42 @@ Retrieve all scopes in which claims have been made for the target Identity.
 
 ___
 
+### getCustomClaimTypeById
+
+▸ **getCustomClaimTypeById**(`id`): `Promise`<``null`` \| [`CustomClaimType`](../../../../modules/Types/Types.md#customclaimtype)\>
+
+Retrieves a custom claim type based on its ID
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `id` | `BigNumber` | The ID of the custom claim type to retrieve |
+
+#### Returns
+
+`Promise`<``null`` \| [`CustomClaimType`](../../../../modules/Types/Types.md#customclaimtype)\>
+
+___
+
+### getCustomClaimTypeByName
+
+▸ **getCustomClaimTypeByName**(`name`): `Promise`<``null`` \| [`CustomClaimType`](../../../../modules/Types/Types.md#customclaimtype)\>
+
+Retrieves a custom claim type based on its name
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `name` | `string` | The name of the custom claim type to retrieve |
+
+#### Returns
+
+`Promise`<``null`` \| [`CustomClaimType`](../../../../modules/Types/Types.md#customclaimtype)\>
+
+___
+
 ### getIdentitiesWithClaims
 
 ▸ **getIdentitiesWithClaims**(`opts?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`IdentityWithClaims`](../../../../interfaces/Types/IdentityWithClaims/IdentityWithClaims.md)\>\>

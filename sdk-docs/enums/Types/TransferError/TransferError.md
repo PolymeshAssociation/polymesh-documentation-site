@@ -12,6 +12,20 @@ Akin to TransferStatus, these are a bit more granular and specific. Every Transf
 
 ## Enumeration Members
 
+### ComplianceFailure
+
+• **ComplianceFailure** = ``"ComplianceFailure"``
+
+translates to TransferStatus.ComplianceFailure
+
+occurs if some compliance rule would prevent the transfer
+
+#### Defined in
+
+[types/index.ts:679](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L679)
+
+___
+
 ### InsufficientBalance
 
 • **InsufficientBalance** = ``"InsufficientBalance"``
@@ -22,7 +36,7 @@ occurs if the sender Identity does not have enough balance to cover the amount
 
 #### Defined in
 
-[types/index.ts:646](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L646)
+[types/index.ts:648](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L648)
 
 ___
 
@@ -36,7 +50,7 @@ occurs if the sender Portfolio does not have enough balance to cover the amount
 
 #### Defined in
 
-[types/index.ts:670](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L670)
+[types/index.ts:672](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L672)
 
 ___
 
@@ -50,7 +64,7 @@ occurs if attempting to transfer decimal amounts of a non-divisible token
 
 #### Defined in
 
-[types/index.ts:615](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L615)
+[types/index.ts:617](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L617)
 
 ___
 
@@ -64,7 +78,7 @@ occurs if the receiver Identity doesn't have a valid CDD claim
 
 #### Defined in
 
-[types/index.ts:627](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L627)
+[types/index.ts:629](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L629)
 
 ___
 
@@ -78,7 +92,7 @@ occurs if the receiver Portfolio doesn't exist
 
 #### Defined in
 
-[types/index.ts:664](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L664)
+[types/index.ts:666](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L666)
 
 ___
 
@@ -92,7 +106,7 @@ occurs if the receiver Identity doesn't have a valid CDD claim
 
 #### Defined in
 
-[types/index.ts:633](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L633)
+[types/index.ts:635](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L635)
 
 ___
 
@@ -106,7 +120,7 @@ occurs if the sender Portfolio doesn't exist
 
 #### Defined in
 
-[types/index.ts:658](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L658)
+[types/index.ts:660](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L660)
 
 ___
 
@@ -121,7 +135,7 @@ occurs if one of the participants doesn't have a valid Investor Uniqueness Claim
 
 #### Defined in
 
-[types/index.ts:640](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L640)
+[types/index.ts:642](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L642)
 
 ___
 
@@ -135,7 +149,7 @@ occurs if the origin and destination Identities are the same
 
 #### Defined in
 
-[types/index.ts:621](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L621)
+[types/index.ts:623](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L623)
 
 ___
 
@@ -149,4 +163,4 @@ occurs if the Asset's transfers are frozen
 
 #### Defined in
 
-[types/index.ts:652](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L652)
+[types/index.ts:654](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L654)

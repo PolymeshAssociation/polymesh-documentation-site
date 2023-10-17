@@ -19,7 +19,7 @@ sidebar_label: "LegTypeEnum"
 
 #### Defined in
 
-[middleware/types.ts:29954](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L29954)
+[middleware/types.ts:29954](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/middleware/types.ts#L29954)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:29955](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L29955)
+[middleware/types.ts:29955](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/middleware/types.ts#L29955)
 
 ___
 
@@ -39,4 +39,4 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:29956](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L29956)
+[middleware/types.ts:29956](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/middleware/types.ts#L29956)

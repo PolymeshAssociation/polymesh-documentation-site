@@ -16,7 +16,7 @@ Array of Accounts that participated by affirming the settlement
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Portfolio/types.ts#L23)
+[api/entities/Portfolio/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Portfolio/types.ts#L39)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Portfolio/types.ts#L18)
+[api/entities/Portfolio/types.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Portfolio/types.ts#L34)
 
 ___
 
@@ -36,17 +36,17 @@ ___
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Portfolio/types.ts#L17)
+[api/entities/Portfolio/types.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Portfolio/types.ts#L33)
 
 ___
 
 ### legs
 
-• **legs**: [`SettlementLeg`](../SettlementLeg/SettlementLeg.md)[]
+• **legs**: [`SettlementLeg`](../../../../../../modules/API/Entities/Portfolio/Types/Types.md#settlementleg)[]
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Portfolio/types.ts#L24)
+[api/entities/Portfolio/types.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Portfolio/types.ts#L40)
 
 ___
 
@@ -56,4 +56,4 @@ ___
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Portfolio/types.ts#L19)
+[api/entities/Portfolio/types.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Portfolio/types.ts#L35)

@@ -28,7 +28,7 @@ Identity of the Portfolio's owner
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Portfolio/index.ts#L76)
+[api/entities/Portfolio/index.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Portfolio/index.ts#L80)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -66,14 +66,14 @@ ___
 
 ▸ **getAssetBalances**(`args?`): `Promise`<[`PortfolioBalance`](../../../../interfaces/API/Entities/Portfolio/Types/PortfolioBalance/PortfolioBalance.md)[]\>
 
-Retrieve the balances of all Assets in this Portfolio
+Retrieve the balances of all fungible assets in this Portfolio
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `args?` | `Object` | - |
-| `args.assets` | (`string` \| [`FungibleAsset`](../Asset/Fungible/FungibleAsset.md))[] | array of Assets (or tickers) for which to fetch balances (optional, all balances are retrieved if not passed) |
+| `args.assets` | (`string` \| [`FungibleAsset`](../Asset/Fungible/FungibleAsset.md))[] | array of FungibleAssets (or tickers) for which to fetch balances (optional, all balances are retrieved if not passed) |
 
 #### Returns
 
@@ -82,6 +82,29 @@ Retrieve the balances of all Assets in this Portfolio
 #### Inherited from
 
 [Portfolio](../Portfolio/Portfolio.md).[getAssetBalances](../Portfolio/Portfolio.md#getassetbalances)
+
+___
+
+### getCollections
+
+▸ **getCollections**(`args?`): `Promise`<[`PortfolioCollection`](../../../../interfaces/API/Entities/Portfolio/Types/PortfolioCollection/PortfolioCollection.md)[]\>
+
+Retrieve the NFTs held in this portfolio
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args?` | `Object` |
+| `args.collections` | (`string` \| [`NftCollection`](../Asset/NonFungible/NftCollection/NftCollection.md))[] |
+
+#### Returns
+
+`Promise`<[`PortfolioCollection`](../../../../interfaces/API/Entities/Portfolio/Types/PortfolioCollection/PortfolioCollection.md)[]\>
+
+#### Inherited from
+
+[Portfolio](../Portfolio/Portfolio.md).[getCollections](../Portfolio/Portfolio.md#getcollections)
 
 ___
 

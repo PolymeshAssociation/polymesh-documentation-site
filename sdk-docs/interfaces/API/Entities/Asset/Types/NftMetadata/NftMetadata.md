@@ -12,9 +12,11 @@ sidebar_label: "NftMetadata"
 
 • **key**: [`MetadataKeyId`](../../../../../../modules/API/Entities/Asset/Types/Types.md#metadatakeyid)
 
+The metadata key this value is intended for
+
 #### Defined in
 
-[api/entities/Asset/types.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/types.ts#L101)
+[api/entities/Asset/types.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/types.ts#L108)
 
 ___
 
@@ -22,6 +24,8 @@ ___
 
 • **value**: `string`
 
+The value the particular NFT has for the metadata
+
 #### Defined in
 
-[api/entities/Asset/types.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/types.ts#L102)
+[api/entities/Asset/types.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/types.ts#L112)

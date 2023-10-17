@@ -26,7 +26,7 @@ internal identifier for the Request (used to accept/reject/cancel)
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/AuthorizationRequest.ts#L100)
+[api/entities/AuthorizationRequest.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/AuthorizationRequest.ts#L100)
 
 ___
 
@@ -51,7 +51,7 @@ Authorization Request data corresponding to type of Authorization
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/AuthorizationRequest.ts#L89)
+[api/entities/AuthorizationRequest.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/AuthorizationRequest.ts#L89)
 
 ___
 
@@ -64,7 +64,7 @@ date at which the Authorization Request expires and can no longer be accepted.
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/AuthorizationRequest.ts#L95)
+[api/entities/AuthorizationRequest.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/AuthorizationRequest.ts#L95)
 
 ___
 
@@ -76,7 +76,7 @@ Identity that emitted the request
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/AuthorizationRequest.ts#L71)
+[api/entities/AuthorizationRequest.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/AuthorizationRequest.ts#L71)
 
 ___
 
@@ -88,7 +88,7 @@ Identity or Account to which the request was emitted
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/AuthorizationRequest.ts#L66)
+[api/entities/AuthorizationRequest.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/AuthorizationRequest.ts#L66)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Entity.ts#L46)
 
 ## Methods
 

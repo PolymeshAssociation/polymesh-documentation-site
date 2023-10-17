@@ -16,7 +16,7 @@ The required metadata values each NFT in the collection will have
 
 #### Defined in
 
-[api/procedures/types.ts:366](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L366)
+[api/procedures/types.ts:368](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L368)
 
 ___
 
@@ -28,7 +28,7 @@ Links to off chain documents related to the NftCollection
 
 #### Defined in
 
-[api/procedures/types.ts:370](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L370)
+[api/procedures/types.ts:372](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L372)
 
 ___
 
@@ -40,7 +40,7 @@ The collection name. defaults to `ticker`
 
 #### Defined in
 
-[api/procedures/types.ts:353](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L353)
+[api/procedures/types.ts:355](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L355)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:358](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L358)
+[api/procedures/types.ts:360](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L360)
 
 ___
 
@@ -70,7 +70,7 @@ array of domestic or international alphanumeric security identifiers for the Ass
 
 #### Defined in
 
-[api/procedures/types.ts:362](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L362)
+[api/procedures/types.ts:364](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L364)
 
 ___
 
@@ -82,4 +82,4 @@ The primary identifier for the collection. The ticker must either be free, or th
 
 #### Defined in
 
-[api/procedures/types.ts:349](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L349)
+[api/procedures/types.ts:351](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L351)

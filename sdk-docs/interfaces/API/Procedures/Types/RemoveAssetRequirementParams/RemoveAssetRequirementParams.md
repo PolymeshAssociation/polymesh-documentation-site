@@ -14,4 +14,4 @@ sidebar_label: "RemoveAssetRequirementParams"
 
 #### Defined in
 
-[api/procedures/types.ts:707](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L707)
+[api/procedures/types.ts:727](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L727)

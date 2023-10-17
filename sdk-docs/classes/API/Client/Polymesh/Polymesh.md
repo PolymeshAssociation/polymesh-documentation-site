@@ -18,7 +18,7 @@ A set of methods for managing a Polymesh Identity's Accounts and their permissio
 
 #### Defined in
 
-[api/client/Polymesh.ts:104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/client/Polymesh.ts#L104)
+[api/client/Polymesh.ts:104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/client/Polymesh.ts#L104)
 
 ___
 
@@ -30,7 +30,7 @@ A set of methods for interacting with Assets
 
 #### Defined in
 
-[api/client/Polymesh.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/client/Polymesh.ts#L112)
+[api/client/Polymesh.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/client/Polymesh.ts#L112)
 
 ___
 
@@ -42,7 +42,7 @@ A set of methods to deal with Claims
 
 #### Defined in
 
-[api/client/Polymesh.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/client/Polymesh.ts#L92)
+[api/client/Polymesh.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/client/Polymesh.ts#L92)
 
 ___
 
@@ -54,7 +54,7 @@ A set of methods for interacting with Polymesh Identities.
 
 #### Defined in
 
-[api/client/Polymesh.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/client/Polymesh.ts#L108)
+[api/client/Polymesh.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/client/Polymesh.ts#L108)
 
 ___
 
@@ -66,7 +66,7 @@ A set of methods to interact with the Polymesh network. This includes transferri
 
 #### Defined in
 
-[api/client/Polymesh.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/client/Polymesh.ts#L96)
+[api/client/Polymesh.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/client/Polymesh.ts#L96)
 
 ___
 
@@ -78,7 +78,7 @@ A set of methods for exchanging Assets
 
 #### Defined in
 
-[api/client/Polymesh.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/client/Polymesh.ts#L100)
+[api/client/Polymesh.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/client/Polymesh.ts#L100)
 
 ## Accessors
 

@@ -24,7 +24,7 @@ Unique identifier number of the instruction
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Instruction/index.ts#L87)
+[api/entities/Instruction/index.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Instruction/index.ts#L90)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -161,7 +161,7 @@ ___
 
 ### getLegs
 
-▸ **getLegs**(`paginationOpts?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`Leg`](../../../../interfaces/API/Entities/Instruction/Types/Leg/Leg.md)\>\>
+▸ **getLegs**(`paginationOpts?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`Leg`](../../../../modules/API/Entities/Instruction/Types/Types.md#leg)\>\>
 
 Retrieve all legs of this Instruction
 
@@ -177,7 +177,7 @@ Retrieve all legs of this Instruction
 
 #### Returns
 
-`Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`Leg`](../../../../interfaces/API/Entities/Instruction/Types/Leg/Leg.md)\>\>
+`Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`Leg`](../../../../modules/API/Entities/Instruction/Types/Types.md#leg)\>\>
 
 ___
 
