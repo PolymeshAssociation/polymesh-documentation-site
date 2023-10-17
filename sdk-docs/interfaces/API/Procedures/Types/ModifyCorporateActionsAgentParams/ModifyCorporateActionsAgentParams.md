@@ -16,7 +16,7 @@ date at which the authorization request to modify the Corporate Actions Agent ex
 
 #### Defined in
 
-[api/procedures/types.ts:741](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L741)
+[api/procedures/types.ts:761](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L761)
 
 ___
 
@@ -28,4 +28,4 @@ Identity to be set as Corporate Actions Agent
 
 #### Defined in
 
-[api/procedures/types.ts:737](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L737)
+[api/procedures/types.ts:757](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L757)

@@ -14,4 +14,4 @@ sidebar_label: "AddCountStatInput"
 
 #### Defined in
 
-[types/index.ts:1410](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1410)
+[types/index.ts:1429](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1429)

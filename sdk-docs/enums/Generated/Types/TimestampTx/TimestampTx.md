@@ -14,4 +14,4 @@ sidebar_label: "TimestampTx"
 
 #### Defined in
 
-[generated/types.ts:277](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/generated/types.ts#L277)
+[generated/types.ts:277](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/generated/types.ts#L277)

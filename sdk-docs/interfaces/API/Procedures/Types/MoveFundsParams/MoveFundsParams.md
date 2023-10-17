@@ -10,13 +10,13 @@ sidebar_label: "MoveFundsParams"
 
 ### items
 
-• **items**: [`PortfolioMovement`](../../../../Types/PortfolioMovement/PortfolioMovement.md)[]
+• **items**: [`PortfolioMovement`](../../../../../modules/Types/Types.md#portfoliomovement)[]
 
 list of Assets (and the corresponding token amounts) that will be moved
 
 #### Defined in
 
-[api/procedures/types.ts:1059](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L1059)
+[api/procedures/types.ts:1079](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L1079)
 
 ___
 
@@ -28,4 +28,4 @@ portfolio (or portfolio ID) that will receive the funds. Optional, if no value i
 
 #### Defined in
 
-[api/procedures/types.ts:1055](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L1055)
+[api/procedures/types.ts:1075](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L1075)

@@ -1,18 +1,18 @@
 ---
-id: "Settlements"
-title: "Class: Settlements"
-sidebar_label: "Settlements"
+id: "FungibleSettlements"
+title: "Class: FungibleSettlements"
+sidebar_label: "FungibleSettlements"
 ---
 
-[api/entities/Asset/Fungible/Settlements](../../../../../../modules/API/Entities/Asset/Fungible/Settlements/Settlements.md).Settlements
+[api/entities/Asset/Base/Settlements](../../../../../../modules/API/Entities/Asset/Base/Settlements/Settlements.md).FungibleSettlements
 
 Handles all Asset Settlements related functionality
 
 ## Hierarchy
 
-- `Namespace`<[`FungibleAsset`](../FungibleAsset.md)\>
+- `BaseSettlements`<[`FungibleAsset`](../../Fungible/FungibleAsset.md)\>
 
-  ↳ **`Settlements`**
+  ↳ **`FungibleSettlements`**
 
 ## Methods
 

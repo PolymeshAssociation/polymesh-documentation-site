@@ -27,7 +27,7 @@ Transactions to be exempted from inclusion/exclusion. This allows more granulari
 
 #### Defined in
 
-[types/index.ts:977](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L977)
+[types/index.ts:986](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L986)
 
 ___
 
@@ -43,7 +43,7 @@ Whether the permissions are inclusive or exclusive
 
 #### Defined in
 
-[types/index.ts:964](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L964)
+[types/index.ts:973](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L973)
 
 ___
 
@@ -59,4 +59,4 @@ Values to be included/excluded
 
 #### Defined in
 
-[types/index.ts:960](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L960)
+[types/index.ts:969](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L969)

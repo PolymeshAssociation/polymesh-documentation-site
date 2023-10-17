@@ -20,7 +20,7 @@ Represents the StatType from the `statistics` module.
 
 #### Defined in
 
-[types/index.ts:334](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L334)
+[types/index.ts:336](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L336)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:333](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L333)
+[types/index.ts:335](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L335)
 
 ___
 
@@ -42,7 +42,7 @@ ScopedPercentage is an SDK only type, on chain it is `Balance` with a claimType 
 
 #### Defined in
 
-[types/index.ts:342](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L342)
+[types/index.ts:344](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L344)
 
 ___
 
@@ -54,4 +54,4 @@ ScopedCount is an SDK only type, on chain it is `Count` with a claimType option 
 
 #### Defined in
 
-[types/index.ts:338](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L338)
+[types/index.ts:340](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L340)

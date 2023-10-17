@@ -30,6 +30,12 @@ Re-exports [CaCheckpointType](../../../../enums/API/Entities/Asset/Fungible/Chec
 
 ___
 
+### CollectionMetadata
+
+Re-exports [CollectionMetadata](Types/Types.md#collectionmetadata)
+
+___
+
 ### CorporateActionDefaultConfig
 
 Re-exports [CorporateActionDefaultConfig](../../../../interfaces/API/Entities/Asset/Fungible/CorporateActions/Types/CorporateActionDefaultConfig/CorporateActionDefaultConfig.md)
@@ -45,6 +51,12 @@ ___
 ### HistoricAssetTransaction
 
 Re-exports [HistoricAssetTransaction](../../../../interfaces/API/Entities/Asset/Types/HistoricAssetTransaction/HistoricAssetTransaction.md)
+
+___
+
+### HumanReadable
+
+Re-exports [HumanReadable](../../../../interfaces/API/Entities/Asset/NonFungible/Nft/HumanReadable/HumanReadable.md)
 
 ___
 

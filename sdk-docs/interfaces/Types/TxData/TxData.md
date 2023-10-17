@@ -24,7 +24,7 @@ arguments with which the transaction will be called
 
 #### Defined in
 
-[types/index.ts:1659](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1659)
+[types/index.ts:1678](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1678)
 
 ___
 
@@ -36,4 +36,4 @@ transaction string identifier
 
 #### Defined in
 
-[types/index.ts:1655](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/types/index.ts#L1655)
+[types/index.ts:1674](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1674)

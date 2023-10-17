@@ -26,7 +26,7 @@ Asset over which the Identity will be granted permissions
 
 #### Defined in
 
-[api/procedures/types.ts:1015](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L1015)
+[api/procedures/types.ts:1035](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L1035)
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:1026](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/procedures/types.ts#L1026)
+[api/procedures/types.ts:1046](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L1046)

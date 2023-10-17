@@ -10,7 +10,7 @@ Class used to manage Nft functionality
 
 ## Hierarchy
 
-- [`Entity`](../../../Entity/Entity.md)<[`NftUniqueIdentifiers`](../../../../../../modules/API/Entities/Asset/NonFungible/Nft/Nft.md#nftuniqueidentifiers), `string`\>
+- [`Entity`](../../../Entity/Entity.md)<[`NftUniqueIdentifiers`](../../../../../../modules/API/Entities/Asset/NonFungible/Nft/Nft.md#nftuniqueidentifiers), [`HumanReadable`](../../../../../../interfaces/API/Entities/Asset/NonFungible/Nft/HumanReadable/HumanReadable.md)\>
 
   ↳ **`Nft`**
 
@@ -22,7 +22,7 @@ Class used to manage Nft functionality
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/Nft.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/NonFungible/Nft.ts#L25)
+[api/entities/Asset/NonFungible/Nft.ts:30](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/NonFungible/Nft.ts#L30)
 
 ___
 
@@ -32,17 +32,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/Nft.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/NonFungible/Nft.ts#L23)
-
-___
-
-### ticker
-
-• **ticker**: `string`
-
-#### Defined in
-
-[api/entities/Asset/NonFungible/Nft.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/NonFungible/Nft.ts#L21)
+[api/entities/Asset/NonFungible/Nft.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/NonFungible/Nft.ts#L28)
 
 ___
 
@@ -56,7 +46,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -111,6 +101,30 @@ Determine whether this Entity is the same as another one
 #### Inherited from
 
 [Entity](../../../Entity/Entity.md).[isEqual](../../../Entity/Entity.md#isequal)
+
+___
+
+### redeem
+
+▸ **redeem**(`args?`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+
+Redeem (or "burns") the NFT
+
+**`Note`**
+
+ this method is of type [OptionalArgsProcedureMethod](../../../../../../interfaces/Types/OptionalArgsProcedureMethod/OptionalArgsProcedureMethod.md), which means you can call [redeem.checkAuthorization](../../../../../../interfaces/Types/OptionalArgsProcedureMethod/OptionalArgsProcedureMethod.md#checkauthorization)
+  on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args?` | [`RedeemNftParams`](../../../../../../interfaces/API/Procedures/Types/RedeemNftParams/RedeemNftParams.md) |
+| `opts?` | [`ProcedureOpts`](../../../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+
+#### Returns
+
+`Promise`<[`GenericPolymeshTransaction`](../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
 
 ___
 

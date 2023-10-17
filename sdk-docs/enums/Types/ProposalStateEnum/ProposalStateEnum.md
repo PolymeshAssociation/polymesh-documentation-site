@@ -19,7 +19,7 @@ sidebar_label: "ProposalStateEnum"
 
 #### Defined in
 
-[middleware/types.ts:29327](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L29327)
+[middleware/types.ts:29327](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/middleware/types.ts#L29327)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:29328](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L29328)
+[middleware/types.ts:29328](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/middleware/types.ts#L29328)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:29329](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L29329)
+[middleware/types.ts:29329](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/middleware/types.ts#L29329)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:29330](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L29330)
+[middleware/types.ts:29330](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/middleware/types.ts#L29330)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:29331](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L29331)
+[middleware/types.ts:29331](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/middleware/types.ts#L29331)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:29332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L29332)
+[middleware/types.ts:29332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/middleware/types.ts#L29332)
 
 ___
 
@@ -79,4 +79,4 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:29333](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L29333)
+[middleware/types.ts:29333](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/middleware/types.ts#L29333)

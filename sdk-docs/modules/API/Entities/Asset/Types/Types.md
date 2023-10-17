@@ -35,10 +35,28 @@ Re-exports [InputCaCheckpoint](../Fungible/Checkpoints/Types/Types.md#inputcache
 
 ## Type Aliases
 
+### CollectionMetadata
+
+Ƭ **CollectionMetadata**: [`MetadataKeyId`](Types.md#metadatakeyid) & [`MetadataDetails`](../../../../../interfaces/API/Entities/MetadataEntry/Types/MetadataDetails/MetadataDetails.md)
+
+A metadata entry for which each NFT in the collection must have an entry for
+
+**`Note`**
+
+ each NFT **must** have an entry for each metadata value, the entry **should** comply with the relevant spec
+
+#### Defined in
+
+[api/entities/Asset/types.ts:120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/types.ts#L120)
+
+___
+
 ### MetadataKeyId
 
 Ƭ **MetadataKeyId**: { `id`: `BigNumber` ; `type`: [`Global`](../../../../../enums/API/Entities/MetadataEntry/Types/MetadataType/MetadataType.md#global)  } \| { `id`: `BigNumber` ; `ticker`: `string` ; `type`: [`Local`](../../../../../enums/API/Entities/MetadataEntry/Types/MetadataType/MetadataType.md#local)  }
 
+The data needed to uniquely identify a metadata specification
+
 #### Defined in
 
-[api/entities/Asset/types.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/api/entities/Asset/types.ts#L89)
+[api/entities/Asset/types.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/types.ts#L93)

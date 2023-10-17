@@ -19,7 +19,7 @@ sidebar_label: "BalanceTypeEnum"
 
 #### Defined in
 
-[middleware/types.ts:29290](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L29290)
+[middleware/types.ts:29290](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/middleware/types.ts#L29290)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:29291](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L29291)
+[middleware/types.ts:29291](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/middleware/types.ts#L29291)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:29292](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L29292)
+[middleware/types.ts:29292](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/middleware/types.ts#L29292)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:29293](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L29293)
+[middleware/types.ts:29293](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/middleware/types.ts#L29293)
 
 ___
 
@@ -59,4 +59,4 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:29294](https://github.com/PolymeshAssociation/polymesh-sdk/blob/d4e2c127f/src/middleware/types.ts#L29294)
+[middleware/types.ts:29294](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/middleware/types.ts#L29294)
