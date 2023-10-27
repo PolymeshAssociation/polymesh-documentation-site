@@ -71,11 +71,10 @@ The Token URI can be specified in various ways:
 In both cases, the metadata value can include `{tokenId}` which will be substituted by a client with the corresponding `tokenId` of the individual NFT being referenced.
 
 The full process to determine the Token URI of an individual NFT is:
-* if the individual NFT has a `tokenURI` value set, use that
+* if the individual NFT has a `tokenURI` value set, return this
 * else if the NFT collection has a `baseTokenURI` value set then:
-  * if the `baseTokenURI` does not already include `{tokenId}` append `/{tokenId}` and use that (e.g. the resolved URI is {baseTokenUri}/{tokenId})
-  * otherwise use the unmodified `baseTokenURI`
-* substitute any `{tokenId}` references with the underlying `tokenId` of the individual NFT
+  * if the `baseTokenURI` does not already include `{tokenId}` append `/{tokenId}` (e.g. the resolved URI is {baseTokenUri}/{tokenId})
+  * substitute any `{tokenId}` references with the underlying `tokenId` of the individual NFT, return this
 
 The JSON blob referenced by an individual NFTs Token URI should confirm to the JSON schema below:
 ```json
@@ -90,10 +89,6 @@ The JSON blob referenced by an individual NFTs Token URI should confirm to the J
         "description": {
             "type": "string",
             "description": "Describes the asset which this token represents"
-        },
-        "image": {
-            "type": "string",
-            "description": "A URI pointing to a resource with mime type image/* representing the asset to which this token represents. Consider making any images at a width between 320 and 1080 pixels and aspect ratio between 1.91:1 and 4:5 inclusive."
         },
         "properties": {
             "type": "object",
@@ -116,11 +111,10 @@ The Image URI can be specified in various ways:
 In both cases, the metadata value can include `{tokenId}` which will be substituted by a client with the corresponding `tokenId` of the individual NFT being referenced.
 
 The full process to determine the Image URI of an individual NFT is:
-* if the individual NFT has a `imageURI` value set, use that
+* if the individual NFT has a `imageURI` value set, return this
 * else if the NFT collection has a `baseImageURI` value set then:
-  * if the `baseImageURI` does not already include `{tokenId}` append `/{tokenId}` and use that (e.g. the resolved URI is {baseImageURI}/{tokenId})
-  * otherwise use the unmodified `baseImageURI`
-* substitute any `{tokenId}` references with the underlying `tokenId` of the individual NFT
+  * if the `baseImageURI` does not already include `{tokenId}` append `/{tokenId}` (e.g. the resolved URI is {baseImageURI}/{tokenId})
+  * substitute any `{tokenId}` references with the underlying `tokenId` of the individual NFT, return this
 
 This logic is equivalent to the above logic for [Token URI](#token-uri).
 
