@@ -124,8 +124,10 @@ The full process to determine the Image URI of an individual NFT is:
 
 This logic is equivalent to the above logic for [Token URI](#token-uri).
 
-:::Note
+:::Notes
 
 When using `baseImageURI`, it is highly recommended to include `{tokenId}` to ensure a file extension is included in the URI. Without the file extension, there may be ambiguity in how the image is handled, which can lead to display issues or incorrect handling by applications reading the file.
+
+The above specification means that an image can either be specified via the [Image URI](#image-uri) or via an `image` tag in the [Token URI](#token-uri). The recommended approach is to look for a dedicated [Image URI](#image-uri) first, and then fall back to the [Token URI](#token-uri).
 
 :::
