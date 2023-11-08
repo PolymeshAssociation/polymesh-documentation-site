@@ -14,7 +14,7 @@ sidebar_label: "AddInvestorUniquenessClaimParams"
 
 #### Defined in
 
-[api/procedures/types.ts:426](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L426)
+[api/procedures/types.ts:429](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L429)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:429](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L429)
+[api/procedures/types.ts:432](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L432)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:427](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L427)
+[api/procedures/types.ts:430](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L430)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:425](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L425)
+[api/procedures/types.ts:428](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L428)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:428](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L428)
+[api/procedures/types.ts:431](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L431)

@@ -20,7 +20,7 @@ Less strict version of `Parameters<T>`
 
 #### Defined in
 
-[types/utils/index.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/utils/index.ts#L29)
+[types/utils/index.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/utils/index.ts#L29)
 
 ___
 
@@ -39,7 +39,7 @@ Pick a single property from T and ensure it is defined
 
 #### Defined in
 
-[types/utils/index.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/utils/index.ts#L87)
+[types/utils/index.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/utils/index.ts#L87)
 
 ___
 
@@ -58,7 +58,7 @@ Recursively traverse a type and transform its Entity properties into their
 
 #### Defined in
 
-[types/utils/index.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/utils/index.ts#L35)
+[types/utils/index.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/utils/index.ts#L35)
 
 ___
 
@@ -77,7 +77,7 @@ Override T with the properties of R
 
 #### Defined in
 
-[types/utils/index.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/utils/index.ts#L76)
+[types/utils/index.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/utils/index.ts#L76)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[types/utils/index.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/utils/index.ts#L91)
+[types/utils/index.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/utils/index.ts#L91)
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[types/utils/index.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/utils/index.ts#L96)
+[types/utils/index.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/utils/index.ts#L96)
 
 ___
 
@@ -129,4 +129,4 @@ Ensure a specific property of T is defined
 
 #### Defined in
 
-[types/utils/index.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/utils/index.ts#L82)
+[types/utils/index.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/utils/index.ts#L82)

@@ -14,7 +14,7 @@ sidebar_label: "TransferRestrictionType"
 
 #### Defined in
 
-[types/index.ts:1395](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1395)
+[types/index.ts:1402](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1402)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1396](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1396)
+[types/index.ts:1403](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1403)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1393](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1393)
+[types/index.ts:1400](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1400)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:1394](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1394)
+[types/index.ts:1401](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1401)

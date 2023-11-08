@@ -14,7 +14,7 @@ sidebar_label: "ProtocolFees"
 
 #### Defined in
 
-[types/index.ts:377](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L377)
+[types/index.ts:384](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L384)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:376](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L376)
+[types/index.ts:383](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L383)

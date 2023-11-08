@@ -14,7 +14,7 @@ sidebar_label: "ClaimScope"
 
 #### Defined in
 
-[types/index.ts:381](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L381)
+[types/index.ts:388](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L388)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:382](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L382)
+[types/index.ts:389](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L389)

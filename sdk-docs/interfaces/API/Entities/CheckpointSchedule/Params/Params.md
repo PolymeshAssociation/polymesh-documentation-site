@@ -14,4 +14,4 @@ sidebar_label: "Params"
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/CheckpointSchedule/index.ts#L21)
+[api/entities/CheckpointSchedule/index.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/CheckpointSchedule/index.ts#L21)

@@ -14,7 +14,7 @@ sidebar_label: "IdentityCondition"
 
 #### Defined in
 
-[types/index.ts:443](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L443)
+[types/index.ts:450](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L450)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:442](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L442)
+[types/index.ts:449](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L449)

@@ -54,4 +54,4 @@ sidebar_label: "ProcedureMethod"
 
 #### Defined in
 
-[types/index.ts:1541](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1541)
+[types/index.ts:1548](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1548)

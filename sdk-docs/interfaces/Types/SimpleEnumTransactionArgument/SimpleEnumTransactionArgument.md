@@ -14,7 +14,7 @@ sidebar_label: "SimpleEnumTransactionArgument"
 
 #### Defined in
 
-[types/index.ts:1206](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1206)
+[types/index.ts:1213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1213)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:1205](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1205)
+[types/index.ts:1212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1212)

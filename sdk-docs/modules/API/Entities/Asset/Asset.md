@@ -12,6 +12,12 @@ Re-exports [AgentWithGroup](../../../../interfaces/API/Entities/Asset/Types/Agen
 
 ___
 
+### Asset
+
+Re-exports [Asset](Types/Types.md#asset)
+
+___
+
 ### AssetDetails
 
 Re-exports [AssetDetails](../../../../interfaces/API/Entities/Asset/Types/AssetDetails/AssetDetails.md)
@@ -30,9 +36,9 @@ Re-exports [CaCheckpointType](../../../../enums/API/Entities/Asset/Fungible/Chec
 
 ___
 
-### CollectionMetadata
+### CollectionKey
 
-Re-exports [CollectionMetadata](Types/Types.md#collectionmetadata)
+Re-exports [CollectionKey](Types/Types.md#collectionkey)
 
 ___
 

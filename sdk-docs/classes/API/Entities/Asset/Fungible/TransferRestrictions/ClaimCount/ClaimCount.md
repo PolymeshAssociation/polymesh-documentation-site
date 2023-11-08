@@ -38,7 +38,7 @@ are non accredited, or ensure all holders are of a certain nationality
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L31)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L31)
 
 ___
 
@@ -59,7 +59,7 @@ involving the Asset, disabling unused stats will reduce gas fees for investors
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L77)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L77)
 
 ___
 
@@ -87,7 +87,7 @@ versions of the chain may expose a new extrinsic to avoid this issue
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L69)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L69)
 
 ___
 
@@ -117,7 +117,7 @@ Retrieve all active Claim Count Transfer Restrictions
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:86](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L86)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:86](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L86)
 
 ___
 
@@ -137,7 +137,7 @@ Removes all Claim Count Transfer Restrictions from this Asset
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L54)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L54)
 
 ___
 
@@ -162,4 +162,4 @@ but not passed into this call then it will be removed
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L44)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L44)

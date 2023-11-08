@@ -24,7 +24,7 @@ date at which the authorization request for invitation expires (optional)
 
 #### Defined in
 
-[api/procedures/types.ts:907](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L907)
+[api/procedures/types.ts:910](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L910)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:892](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L892)
+[api/procedures/types.ts:895](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L895)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:891](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L891)
+[api/procedures/types.ts:894](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L894)

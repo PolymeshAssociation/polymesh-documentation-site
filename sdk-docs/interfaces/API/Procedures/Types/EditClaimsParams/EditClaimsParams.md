@@ -16,7 +16,7 @@ array of claims to be edited
 
 #### Defined in
 
-[api/procedures/types.ts:401](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L401)
+[api/procedures/types.ts:404](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L404)
 
 ___
 
@@ -26,4 +26,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:402](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L402)
+[api/procedures/types.ts:405](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L405)

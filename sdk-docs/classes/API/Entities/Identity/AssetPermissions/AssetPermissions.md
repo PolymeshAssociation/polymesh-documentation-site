@@ -56,7 +56,7 @@ Retrieve the identifier data (block number, date and event index) of the event t
 | Name | Type |
 | :------ | :------ |
 | `__namedParameters` | `Object` |
-| `__namedParameters.asset` | `string` \| [`FungibleAsset`](../../Asset/Fungible/FungibleAsset.md) |
+| `__namedParameters.asset` | `string` \| [`FungibleAsset`](../../Asset/Fungible/FungibleAsset.md) \| [`NftCollection`](../../Asset/NonFungible/NftCollection/NftCollection.md) |
 
 #### Returns
 
@@ -115,8 +115,8 @@ Retrieve all Events triggered by Operations this Identity has performed on a spe
 | :------ | :------ | :------ |
 | `opts` | `Object` | - |
 | `opts.asset` | `string` \| [`FungibleAsset`](../../Asset/Fungible/FungibleAsset.md) | - |
-| `opts.eventId?` | [`EventIdEnum`](../../../../../enums/Types/EventIdEnum/EventIdEnum.md) | filters results by event |
-| `opts.moduleId?` | [`ModuleIdEnum`](../../../../../enums/Types/ModuleIdEnum/ModuleIdEnum.md) | filters results by module |
+| `opts.eventId?` | `EventIdEnum` | filters results by event |
+| `opts.moduleId?` | `ModuleIdEnum` | filters results by module |
 | `opts.size?` | `BigNumber` | page size |
 | `opts.start?` | `BigNumber` | page offset |
 

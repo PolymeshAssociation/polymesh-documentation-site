@@ -90,9 +90,32 @@ Retrieve all the Assets on chain
 
 ___
 
+### getAsset
+
+▸ **getAsset**(`args`): `Promise`<[`Asset`](../../../../modules/API/Entities/Asset/Types/Types.md#asset)\>
+
+Retrieve a FungibleAsset or NftCollection
+
+**`Note`**
+
+ `getFungibleAsset` and `getNftCollection` are similar to this method, but return a more specific type
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args` | `Object` |
+| `args.ticker` | `string` |
+
+#### Returns
+
+`Promise`<[`Asset`](../../../../modules/API/Entities/Asset/Types/Types.md#asset)\>
+
+___
+
 ### getAssets
 
-▸ **getAssets**(`args?`): `Promise`<([`FungibleAsset`](../../Entities/Asset/Fungible/FungibleAsset.md) \| [`NftCollection`](../../Entities/Asset/NonFungible/NftCollection/NftCollection.md))[]\>
+▸ **getAssets**(`args?`): `Promise`<[`Asset`](../../../../modules/API/Entities/Asset/Types/Types.md#asset)[]\>
 
 Retrieve all of the Assets owned by an Identity
 
@@ -109,7 +132,7 @@ Retrieve all of the Assets owned by an Identity
 
 #### Returns
 
-`Promise`<([`FungibleAsset`](../../Entities/Asset/Fungible/FungibleAsset.md) \| [`NftCollection`](../../Entities/Asset/NonFungible/NftCollection/NftCollection.md))[]\>
+`Promise`<[`Asset`](../../../../modules/API/Entities/Asset/Types/Types.md#asset)[]\>
 
 ___
 

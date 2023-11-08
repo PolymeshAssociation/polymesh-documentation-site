@@ -20,7 +20,7 @@ Assets over which this key has permissions
 
 #### Defined in
 
-[types/index.ts:998](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L998)
+[types/index.ts:1005](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1005)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1012](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1012)
+[types/index.ts:1019](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1019)
 
 ___
 
@@ -46,7 +46,7 @@ NOTE: If transactions is null, ignore this value
 
 #### Defined in
 
-[types/index.ts:1010](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1010)
+[types/index.ts:1017](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1017)
 
 ___
 
@@ -58,4 +58,4 @@ Transactions this key can execute
 
 #### Defined in
 
-[types/index.ts:1002](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1002)
+[types/index.ts:1009](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1009)

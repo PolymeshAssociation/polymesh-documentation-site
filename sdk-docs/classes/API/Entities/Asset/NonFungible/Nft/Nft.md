@@ -6,7 +6,7 @@ sidebar_label: "Nft"
 
 [api/entities/Asset/NonFungible/Nft](../../../../../../modules/API/Entities/Asset/NonFungible/Nft/Nft.md).Nft
 
-Class used to manage Nft functionality
+Class used to manage Nft functionality. Each NFT belongs to an NftCollection, which specifies the expected metadata values for each NFT
 
 ## Hierarchy
 
@@ -20,9 +20,11 @@ Class used to manage Nft functionality
 
 • **collection**: [`NftCollection`](../NftCollection/NftCollection.md)
 
+The [NftCollection](../../../../../../modules/API/Entities/Asset/NonFungible/NftCollection/NftCollection.md) this NFT belongs to
+
 #### Defined in
 
-[api/entities/Asset/NonFungible/Nft.ts:30](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/NonFungible/Nft.ts#L30)
+[api/entities/Asset/NonFungible/Nft.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/NonFungible/Nft.ts#L40)
 
 ___
 
@@ -32,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/Nft.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/NonFungible/Nft.ts#L28)
+[api/entities/Asset/NonFungible/Nft.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/NonFungible/Nft.ts#L35)
 
 ___
 
@@ -46,7 +48,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -70,6 +72,31 @@ Determine if the NFT exists on chain
 
 ___
 
+### getImageUri
+
+▸ **getImageUri**(): `Promise`<``null`` \| `string`\>
+
+Get the conventional image URI for the NFT
+
+This function will check for a token level value and a collection level value. Token level values take precedence over base values in case of a conflict.
+
+When creating a collection an issuer can either require per token images by specifying global metadata key `imageUri` as a collection key or by
+setting a collection base image URL by setting a value on the collection corresponding to the global metadata key `baseImageUri`.
+
+This method may return `null` if the NFT issuer did not configure the collection according to the convention.
+
+Per token URIs provide the most flexibility, but require more chain space to store, increasing the POLYX fee to issue each token.
+
+The URI values can include `{tokenId}` that will be replaced with the NFTs ID. If a base URI does not specify this the ID will be appended onto the URL. Examples:
+ - `https://example.com/nfts/{tokenId}/image.png` becomes `https://example.com/nfts/1/image.png`
+ - `https://example.com/nfts` becomes `https://example.com/nfts/1` if used a base value, but remain unchanged as a local value
+
+#### Returns
+
+`Promise`<``null`` \| `string`\>
+
+___
+
 ### getMetadata
 
 ▸ **getMetadata**(): `Promise`<[`NftMetadata`](../../../../../../interfaces/API/Entities/Asset/Types/NftMetadata/NftMetadata.md)[]\>
@@ -79,6 +106,31 @@ Get metadata associated with this token
 #### Returns
 
 `Promise`<[`NftMetadata`](../../../../../../interfaces/API/Entities/Asset/Types/NftMetadata/NftMetadata.md)[]\>
+
+___
+
+### getTokenUri
+
+▸ **getTokenUri**(): `Promise`<``null`` \| `string`\>
+
+Get the conventional token URI for the NFT
+
+This function will check for a token level value and a collection level value. Token level values take precedence over base values in case of a conflict.
+
+When creating a collection an issuer can either require per token URL by specifying global metadata key `tokenURI` as a collection key or by
+setting a collection base URL by setting a value on the collection corresponding to the global metadata key `baseTokenUri` on the collection.
+
+This method may return `null` if the NFT issuer did not configure the collection to according to the convention.
+
+Per token URIs provide the most flexibility, but require more chain space to store, increasing the POLYX fee to issue each token.
+
+The URI values can include `{tokenId}` that will be replaced with the NFTs ID. If a base URI does not specify this the ID will be appended onto the URL. Examples:
+ - `https://example.com/nfts/{tokenId}/info.json` becomes `https://example.com/nfts/1/info.json`
+ - `https://example.com/nfts` becomes `https://example.com/nfts/1` if used a base value, but remain unchanged as a local value
+
+#### Returns
+
+`Promise`<``null`` \| `string`\>
 
 ___
 
@@ -108,7 +160,7 @@ ___
 
 ▸ **redeem**(`args?`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
 
-Redeem (or "burns") the NFT
+Redeem (or "burns") the NFT, removing it from circulation
 
 **`Note`**
 

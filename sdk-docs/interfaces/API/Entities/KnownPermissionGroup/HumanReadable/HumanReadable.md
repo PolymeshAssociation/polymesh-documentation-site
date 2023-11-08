@@ -14,7 +14,7 @@ sidebar_label: "HumanReadable"
 
 #### Defined in
 
-[api/entities/KnownPermissionGroup.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/KnownPermissionGroup.ts#L8)
+[api/entities/KnownPermissionGroup.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/KnownPermissionGroup.ts#L8)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/KnownPermissionGroup.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/KnownPermissionGroup.ts#L7)
+[api/entities/KnownPermissionGroup.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/KnownPermissionGroup.ts#L7)

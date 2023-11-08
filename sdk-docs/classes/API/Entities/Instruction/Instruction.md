@@ -24,7 +24,7 @@ Unique identifier number of the instruction
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Instruction/index.ts#L90)
+[api/entities/Instruction/index.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Instruction/index.ts#L89)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Entity.ts#L46)
 
 ## Methods
 

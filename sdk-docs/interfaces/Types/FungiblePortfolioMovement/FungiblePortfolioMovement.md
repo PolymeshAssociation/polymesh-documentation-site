@@ -14,7 +14,7 @@ sidebar_label: "FungiblePortfolioMovement"
 
 #### Defined in
 
-[types/index.ts:1283](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1283)
+[types/index.ts:1290](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1290)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1282](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1282)
+[types/index.ts:1289](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1289)
 
 ___
 
@@ -36,4 +36,4 @@ identifier string to help differentiate transfers
 
 #### Defined in
 
-[types/index.ts:1287](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1287)
+[types/index.ts:1294](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1294)

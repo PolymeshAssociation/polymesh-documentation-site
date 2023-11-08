@@ -20,7 +20,7 @@ sidebar_label: "ClaimData"
 
 #### Defined in
 
-[types/index.ts:295](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L295)
+[types/index.ts:302](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L302)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:294](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L294)
+[types/index.ts:301](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L301)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:292](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L292)
+[types/index.ts:299](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L299)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:291](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L291)
+[types/index.ts:298](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L298)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:293](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L293)
+[types/index.ts:300](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L300)
 
 ___
 
@@ -70,4 +70,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:290](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L290)
+[types/index.ts:297](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L297)

@@ -14,7 +14,7 @@ sidebar_label: "HumanReadable"
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/CorporateActionBase/index.ts#L36)
+[api/entities/CorporateActionBase/index.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/CorporateActionBase/index.ts#L36)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/CorporateActionBase/index.ts#L39)
+[api/entities/CorporateActionBase/index.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/CorporateActionBase/index.ts#L39)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/CorporateActionBase/index.ts#L37)
+[api/entities/CorporateActionBase/index.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/CorporateActionBase/index.ts#L37)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/CorporateActionBase/index.ts#L34)
+[api/entities/CorporateActionBase/index.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/CorporateActionBase/index.ts#L34)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/CorporateActionBase/index.ts#L38)
+[api/entities/CorporateActionBase/index.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/CorporateActionBase/index.ts#L38)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/CorporateActionBase/index.ts#L40)
+[api/entities/CorporateActionBase/index.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/CorporateActionBase/index.ts#L40)
 
 ___
 
@@ -81,4 +81,4 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/CorporateActionBase/index.ts#L35)
+[api/entities/CorporateActionBase/index.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/CorporateActionBase/index.ts#L35)

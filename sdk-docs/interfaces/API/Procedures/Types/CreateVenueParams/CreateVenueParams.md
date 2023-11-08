@@ -14,7 +14,7 @@ sidebar_label: "CreateVenueParams"
 
 #### Defined in
 
-[api/procedures/types.ts:601](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L601)
+[api/procedures/types.ts:604](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L604)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:602](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L602)
+[api/procedures/types.ts:605](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L605)

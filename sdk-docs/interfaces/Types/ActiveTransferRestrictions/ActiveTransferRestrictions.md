@@ -22,7 +22,7 @@ amount of restrictions that can be added before reaching the shared limit
 
 #### Defined in
 
-[types/index.ts:1389](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1389)
+[types/index.ts:1396](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1396)
 
 ___
 
@@ -32,4 +32,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:1385](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1385)
+[types/index.ts:1392](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1392)

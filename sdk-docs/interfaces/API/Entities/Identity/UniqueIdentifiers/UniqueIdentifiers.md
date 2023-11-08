@@ -16,4 +16,4 @@ Properties that uniquely identify an Identity
 
 #### Defined in
 
-[api/entities/Identity/index.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Identity/index.ts#L90)
+[api/entities/Identity/index.ts:94](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Identity/index.ts#L94)

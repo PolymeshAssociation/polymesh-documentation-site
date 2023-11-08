@@ -21,7 +21,7 @@ list of Token Operation Events that were triggered by the Agent Identity
 
 #### Defined in
 
-[types/index.ts:1620](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1620)
+[types/index.ts:1627](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1627)
 
 ___
 
@@ -33,4 +33,4 @@ Agent Identity that performed the operations
 
 #### Defined in
 
-[types/index.ts:1616](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1616)
+[types/index.ts:1623](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1623)

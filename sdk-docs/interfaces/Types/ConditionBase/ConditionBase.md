@@ -14,7 +14,7 @@ sidebar_label: "ConditionBase"
 
 #### Defined in
 
-[types/index.ts:414](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L414)
+[types/index.ts:421](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L421)
 
 ___
 
@@ -26,4 +26,4 @@ if undefined, the default trusted claim issuers for the Asset are used
 
 #### Defined in
 
-[types/index.ts:418](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L418)
+[types/index.ts:425](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L425)

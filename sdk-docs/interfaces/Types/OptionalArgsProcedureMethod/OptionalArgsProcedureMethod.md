@@ -54,4 +54,4 @@ sidebar_label: "OptionalArgsProcedureMethod"
 
 #### Defined in
 
-[types/index.ts:1555](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1555)
+[types/index.ts:1562](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1562)

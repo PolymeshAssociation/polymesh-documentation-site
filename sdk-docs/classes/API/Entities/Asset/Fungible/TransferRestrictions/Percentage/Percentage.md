@@ -33,7 +33,7 @@ a single investor can acquire without an exemption
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L28)
+[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L28)
 
 ___
 
@@ -54,7 +54,7 @@ involving the Asset, disabling unused stats will reduce gas fees for investors w
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L65)
+[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L65)
 
 ___
 
@@ -71,7 +71,7 @@ that limit the total ownership of the Assets' supply
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L57)
+[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L57)
 
 ___
 
@@ -101,7 +101,7 @@ Retrieve all active Percentage Transfer Restrictions
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L74)
+[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L74)
 
 ___
 
@@ -121,7 +121,7 @@ Removes all Percentage Transfer Restrictions from this Asset
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L51)
+[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L51)
 
 ___
 
@@ -146,4 +146,4 @@ but not passed into this call then it will be removed
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:41](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L41)
+[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:41](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L41)

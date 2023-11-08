@@ -14,7 +14,7 @@ sidebar_label: "CheckpointWithData"
 
 #### Defined in
 
-[types/index.ts:1236](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1236)
+[types/index.ts:1243](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1243)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1237](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1237)
+[types/index.ts:1244](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1244)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:1238](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1238)
+[types/index.ts:1245](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1245)

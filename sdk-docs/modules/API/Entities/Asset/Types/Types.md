@@ -35,9 +35,22 @@ Re-exports [InputCaCheckpoint](../Fungible/Checkpoints/Types/Types.md#inputcache
 
 ## Type Aliases
 
-### CollectionMetadata
+### Asset
 
-Ƭ **CollectionMetadata**: [`MetadataKeyId`](Types.md#metadatakeyid) & [`MetadataDetails`](../../../../../interfaces/API/Entities/MetadataEntry/Types/MetadataDetails/MetadataDetails.md)
+Ƭ **Asset**: [`FungibleAsset`](../../../../../classes/API/Entities/Asset/Fungible/FungibleAsset.md) \| [`NftCollection`](../../../../../classes/API/Entities/Asset/NonFungible/NftCollection/NftCollection.md)
+
+Represents a generic asset on chain. Common functionality (e.g. documents) can be interacted with directly. For type specific functionality (e.g. issue) the type can
+be narrowed via `instanceof` operator, or by using a more specific getter
+
+#### Defined in
+
+[api/entities/Asset/types.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/types.ts#L26)
+
+___
+
+### CollectionKey
+
+Ƭ **CollectionKey**: [`MetadataKeyId`](Types.md#metadatakeyid) & [`MetadataDetails`](../../../../../interfaces/API/Entities/MetadataEntry/Types/MetadataDetails/MetadataDetails.md)
 
 A metadata entry for which each NFT in the collection must have an entry for
 
@@ -47,7 +60,7 @@ A metadata entry for which each NFT in the collection must have an entry for
 
 #### Defined in
 
-[api/entities/Asset/types.ts:120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/types.ts#L120)
+[api/entities/Asset/types.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/types.ts#L127)
 
 ___
 
@@ -59,4 +72,4 @@ The data needed to uniquely identify a metadata specification
 
 #### Defined in
 
-[api/entities/Asset/types.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/types.ts#L93)
+[api/entities/Asset/types.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/types.ts#L100)

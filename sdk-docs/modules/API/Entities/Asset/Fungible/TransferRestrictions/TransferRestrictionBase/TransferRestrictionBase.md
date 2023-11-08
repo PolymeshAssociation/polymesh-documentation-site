@@ -22,7 +22,7 @@ sidebar_label: "TransferRestrictionBase"
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts#L51)
+[api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts#L51)
 
 ___
 
@@ -32,4 +32,4 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts#L44)
+[api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts#L44)

@@ -16,7 +16,7 @@ The metadata key this value is intended for
 
 #### Defined in
 
-[api/entities/Asset/types.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/types.ts#L108)
+[api/entities/Asset/types.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/types.ts#L115)
 
 ___
 
@@ -28,4 +28,4 @@ The value the particular NFT has for the metadata
 
 #### Defined in
 
-[api/entities/Asset/types.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/types.ts#L112)
+[api/entities/Asset/types.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/types.ts#L119)

@@ -14,7 +14,7 @@ sidebar_label: "SettlementDirectionEnum"
 
 #### Defined in
 
-[middleware/typesV1.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/middleware/typesV1.ts#L13)
+[middleware/typesV1.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/middleware/typesV1.ts#L13)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV1.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/middleware/typesV1.ts#L12)
+[middleware/typesV1.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/middleware/typesV1.ts#L12)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[middleware/typesV1.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/middleware/typesV1.ts#L14)
+[middleware/typesV1.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/middleware/typesV1.ts#L14)

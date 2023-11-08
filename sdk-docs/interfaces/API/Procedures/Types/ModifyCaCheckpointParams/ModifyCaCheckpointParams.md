@@ -14,4 +14,4 @@ sidebar_label: "ModifyCaCheckpointParams"
 
 #### Defined in
 
-[api/procedures/types.ts:922](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L922)
+[api/procedures/types.ts:925](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L925)

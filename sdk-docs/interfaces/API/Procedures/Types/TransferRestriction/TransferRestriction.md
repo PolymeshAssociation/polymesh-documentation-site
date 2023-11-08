@@ -14,7 +14,7 @@ sidebar_label: "TransferRestriction"
 
 #### Defined in
 
-[api/procedures/types.ts:159](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L159)
+[api/procedures/types.ts:159](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L159)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:160](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L160)
+[api/procedures/types.ts:160](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L160)

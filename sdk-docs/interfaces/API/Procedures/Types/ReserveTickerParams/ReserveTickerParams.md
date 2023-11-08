@@ -14,7 +14,7 @@ sidebar_label: "ReserveTickerParams"
 
 #### Defined in
 
-[api/procedures/types.ts:380](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L380)
+[api/procedures/types.ts:383](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L383)
 
 ___
 
@@ -26,4 +26,4 @@ ticker symbol to reserve
 
 #### Defined in
 
-[api/procedures/types.ts:379](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L379)
+[api/procedures/types.ts:382](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L382)

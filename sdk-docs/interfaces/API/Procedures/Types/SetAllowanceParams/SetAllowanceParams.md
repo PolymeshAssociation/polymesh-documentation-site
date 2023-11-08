@@ -16,7 +16,7 @@ amount of POLYX to set the allowance to
 
 #### Defined in
 
-[api/procedures/types.ts:983](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L983)
+[api/procedures/types.ts:986](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L986)
 
 ___
 
@@ -26,4 +26,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:984](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L984)
+[api/procedures/types.ts:987](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L987)

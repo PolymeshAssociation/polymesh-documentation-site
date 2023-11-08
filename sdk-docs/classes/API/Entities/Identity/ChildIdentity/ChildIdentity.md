@@ -26,7 +26,7 @@ Represents a child identity
 
 #### Defined in
 
-[api/entities/Identity/index.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Identity/index.ts#L115)
+[api/entities/Identity/index.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Identity/index.ts#L119)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[api/entities/Identity/index.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Identity/index.ts#L113)
+[api/entities/Identity/index.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Identity/index.ts#L117)
 
 ___
 
@@ -56,7 +56,7 @@ Identity ID as stored in the blockchain
 
 #### Defined in
 
-[api/entities/Identity/index.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Identity/index.ts#L110)
+[api/entities/Identity/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Identity/index.ts#L114)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[api/entities/Identity/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Identity/index.ts#L114)
+[api/entities/Identity/index.ts:118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Identity/index.ts#L118)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -241,6 +241,39 @@ Retrieve a list of all Assets which were held at one point by this Identity
 #### Inherited from
 
 [Identity](../Identity.md).[getHeldAssets](../Identity.md#getheldassets)
+
+___
+
+### getHeldNfts
+
+▸ **getHeldNfts**(`opts?`): `Promise`<[`ResultSet`](../../../../../interfaces/Types/ResultSet/ResultSet.md)<[`HeldNfts`](../../../../../interfaces/Types/HeldNfts/HeldNfts.md)\>\>
+
+Retrieve a list of all NftCollections which were held at one point by this Identity
+
+**`Note`**
+
+ uses the middlewareV2
+
+**`Note`**
+
+ supports pagination
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `opts` | `Object` |
+| `opts.order?` | `NftHoldersOrderBy` |
+| `opts.size?` | `BigNumber` |
+| `opts.start?` | `BigNumber` |
+
+#### Returns
+
+`Promise`<[`ResultSet`](../../../../../interfaces/Types/ResultSet/ResultSet.md)<[`HeldNfts`](../../../../../interfaces/Types/HeldNfts/HeldNfts.md)\>\>
+
+#### Inherited from
+
+[Identity](../Identity.md).[getHeldNfts](../Identity.md#getheldnfts)
 
 ___
 

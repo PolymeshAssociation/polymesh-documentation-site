@@ -14,7 +14,7 @@ sidebar_label: "IndicesTx"
 
 #### Defined in
 
-[generated/types.ts:281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/generated/types.ts#L281)
+[generated/types.ts:281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/generated/types.ts#L281)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:284](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/generated/types.ts#L284)
+[generated/types.ts:284](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/generated/types.ts#L284)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:283](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/generated/types.ts#L283)
+[generated/types.ts:283](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/generated/types.ts#L283)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:285](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/generated/types.ts#L285)
+[generated/types.ts:285](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/generated/types.ts#L285)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:282](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/generated/types.ts#L282)
+[generated/types.ts:282](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/generated/types.ts#L282)
