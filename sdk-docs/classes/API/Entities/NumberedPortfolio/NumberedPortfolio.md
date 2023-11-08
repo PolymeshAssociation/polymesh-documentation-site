@@ -24,7 +24,7 @@ Portfolio identifier number
 
 #### Defined in
 
-[api/entities/NumberedPortfolio.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/NumberedPortfolio.ts#L39)
+[api/entities/NumberedPortfolio.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/NumberedPortfolio.ts#L39)
 
 ___
 
@@ -40,7 +40,7 @@ Identity of the Portfolio's owner
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Portfolio/index.ts#L80)
+[api/entities/Portfolio/index.ts:79](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Portfolio/index.ts#L79)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Entity.ts#L46)
 
 ## Methods
 

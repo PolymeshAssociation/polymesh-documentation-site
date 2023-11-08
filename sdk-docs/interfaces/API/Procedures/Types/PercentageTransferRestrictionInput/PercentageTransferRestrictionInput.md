@@ -26,7 +26,7 @@ TransferRestrictionInputBase.exemptedIdentities
 
 #### Defined in
 
-[api/procedures/types.ts:167](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L167)
+[api/procedures/types.ts:167](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L167)
 
 ___
 
@@ -38,4 +38,4 @@ maximum percentage (0-100) of the total supply of the Asset that can be held by 
 
 #### Defined in
 
-[api/procedures/types.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L181)
+[api/procedures/types.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L181)

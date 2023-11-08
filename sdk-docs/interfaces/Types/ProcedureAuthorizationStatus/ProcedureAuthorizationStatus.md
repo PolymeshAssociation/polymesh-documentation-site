@@ -16,7 +16,7 @@ whether the Account is frozen (i.e. can't perform any transactions)
 
 #### Defined in
 
-[types/index.ts:1316](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1316)
+[types/index.ts:1323](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1323)
 
 ___
 
@@ -28,7 +28,7 @@ whether the Identity complies with all required Agent permissions
 
 #### Defined in
 
-[types/index.ts:1304](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1304)
+[types/index.ts:1311](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1311)
 
 ___
 
@@ -41,7 +41,7 @@ true only if the Procedure requires an Identity but the signing Account
 
 #### Defined in
 
-[types/index.ts:1321](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1321)
+[types/index.ts:1328](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1328)
 
 ___
 
@@ -53,7 +53,7 @@ whether the Identity complies with all required Roles
 
 #### Defined in
 
-[types/index.ts:1312](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1312)
+[types/index.ts:1319](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1319)
 
 ___
 
@@ -65,4 +65,4 @@ whether the Account complies with all required Signer permissions
 
 #### Defined in
 
-[types/index.ts:1308](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1308)
+[types/index.ts:1315](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1315)

@@ -14,7 +14,7 @@ sidebar_label: "SessionTx"
 
 #### Defined in
 
-[generated/types.ts:482](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/generated/types.ts#L482)
+[generated/types.ts:482](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/generated/types.ts#L482)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:481](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/generated/types.ts#L481)
+[generated/types.ts:481](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/generated/types.ts#L481)

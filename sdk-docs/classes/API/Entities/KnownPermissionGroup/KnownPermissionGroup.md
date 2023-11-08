@@ -28,7 +28,7 @@ Asset for which this group specifies permissions
 
 #### Defined in
 
-[api/entities/PermissionGroup.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/PermissionGroup.ts#L19)
+[api/entities/PermissionGroup.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/PermissionGroup.ts#L19)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[api/entities/KnownPermissionGroup.ts:30](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/KnownPermissionGroup.ts#L30)
+[api/entities/KnownPermissionGroup.ts:30](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/KnownPermissionGroup.ts#L30)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Entity.ts#L46)
 
 ## Methods
 

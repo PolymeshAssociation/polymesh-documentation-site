@@ -29,7 +29,7 @@ Asset affected by this Corporate Action
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:75](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/CorporateActionBase/index.ts#L75)
+[api/entities/CorporateActionBase/index.ts:75](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/CorporateActionBase/index.ts#L75)
 
 ___
 
@@ -41,7 +41,7 @@ date at which the Corporate Action was created
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/CorporateActionBase/index.ts#L80)
+[api/entities/CorporateActionBase/index.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/CorporateActionBase/index.ts#L80)
 
 ___
 
@@ -53,7 +53,7 @@ default percentage (0-100) of tax withholding for this Corporate Action
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/CorporateActionBase/index.ts#L96)
+[api/entities/CorporateActionBase/index.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/CorporateActionBase/index.ts#L96)
 
 ___
 
@@ -65,7 +65,7 @@ brief text description of the Corporate Action
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:85](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/CorporateActionBase/index.ts#L85)
+[api/entities/CorporateActionBase/index.ts:85](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/CorporateActionBase/index.ts#L85)
 
 ___
 
@@ -77,7 +77,7 @@ internal Corporate Action ID
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/CorporateActionBase/index.ts#L70)
+[api/entities/CorporateActionBase/index.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/CorporateActionBase/index.ts#L70)
 
 ___
 
@@ -90,7 +90,7 @@ Asset Holder Identities related to this Corporate action. If the treatment is `E
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/CorporateActionBase/index.ts#L91)
+[api/entities/CorporateActionBase/index.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/CorporateActionBase/index.ts#L91)
 
 ___
 
@@ -103,7 +103,7 @@ percentage (0-100) of tax withholding per Identity. Any Identity not present
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/CorporateActionBase/index.ts#L102)
+[api/entities/CorporateActionBase/index.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/CorporateActionBase/index.ts#L102)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Entity.ts#L46)
 
 ## Methods
 

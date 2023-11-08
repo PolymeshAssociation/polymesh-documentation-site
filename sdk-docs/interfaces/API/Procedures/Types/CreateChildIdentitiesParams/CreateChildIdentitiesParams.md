@@ -16,7 +16,7 @@ Expiry date of the signed authorization
 
 #### Defined in
 
-[api/procedures/types.ts:1139](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L1139)
+[api/procedures/types.ts:1142](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L1142)
 
 ___
 
@@ -28,4 +28,4 @@ The secondary keys that will become the primary keys of the new child Identities
 
 #### Defined in
 
-[api/procedures/types.ts:1135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L1135)
+[api/procedures/types.ts:1138](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L1138)

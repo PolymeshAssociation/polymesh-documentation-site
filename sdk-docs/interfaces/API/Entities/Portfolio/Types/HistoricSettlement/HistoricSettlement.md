@@ -16,7 +16,7 @@ Array of Accounts that participated by affirming the settlement
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Portfolio/types.ts#L39)
+[api/entities/Portfolio/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Portfolio/types.ts#L39)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Portfolio/types.ts#L34)
+[api/entities/Portfolio/types.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Portfolio/types.ts#L34)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Portfolio/types.ts#L33)
+[api/entities/Portfolio/types.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Portfolio/types.ts#L33)
 
 ___
 
@@ -46,14 +46,14 @@ ___
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Portfolio/types.ts#L40)
+[api/entities/Portfolio/types.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Portfolio/types.ts#L40)
 
 ___
 
 ### status
 
-• **status**: [`SettlementResultEnum`](../../../../../../enums/Types/SettlementResultEnum/SettlementResultEnum.md)
+• **status**: `SettlementResultEnum`
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Portfolio/types.ts#L35)
+[api/entities/Portfolio/types.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Portfolio/types.ts#L35)

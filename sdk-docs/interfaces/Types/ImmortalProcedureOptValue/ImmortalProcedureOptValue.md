@@ -16,4 +16,4 @@ This transaction will never expire
 
 #### Defined in
 
-[types/index.ts:1503](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1503)
+[types/index.ts:1510](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1510)

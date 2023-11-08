@@ -45,8 +45,8 @@ Fetch all historical Authorization Requests for which this Signer is the target
 | `opts` | `Object` | - |
 | `opts.size?` | `BigNumber` | page size |
 | `opts.start?` | `BigNumber` | page offset |
-| `opts.status?` | [`AuthorizationStatusEnum`](../../../../../../enums/Types/AuthorizationStatusEnum/AuthorizationStatusEnum.md) | fetch only authorizations with this status. Fetches all statuses if not passed |
-| `opts.type?` | [`AuthTypeEnum`](../../../../../../enums/Types/AuthTypeEnum/AuthTypeEnum.md) | fetch only authorizations of this type. Fetches all types if not passed |
+| `opts.status?` | `AuthorizationStatusEnum` | fetch only authorizations with this status. Fetches all statuses if not passed |
+| `opts.type?` | `AuthTypeEnum` | fetch only authorizations of this type. Fetches all types if not passed |
 
 #### Returns
 

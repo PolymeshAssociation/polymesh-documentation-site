@@ -24,7 +24,7 @@ Asset being offered
 
 #### Defined in
 
-[api/entities/Offering/index.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Offering/index.ts#L65)
+[api/entities/Offering/index.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Offering/index.ts#L65)
 
 ___
 
@@ -36,7 +36,7 @@ identifier number of the Offering
 
 #### Defined in
 
-[api/entities/Offering/index.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Offering/index.ts#L60)
+[api/entities/Offering/index.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Offering/index.ts#L60)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Entity.ts#L46)
 
 ## Methods
 

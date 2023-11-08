@@ -16,4 +16,4 @@ The secondary key that will become the primary key of the new child Identity
 
 #### Defined in
 
-[api/procedures/types.ts:1128](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L1128)
+[api/procedures/types.ts:1131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L1131)

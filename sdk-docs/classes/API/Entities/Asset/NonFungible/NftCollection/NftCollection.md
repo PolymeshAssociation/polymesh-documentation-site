@@ -6,7 +6,7 @@ sidebar_label: "NftCollection"
 
 [api/entities/Asset/NonFungible/NftCollection](../../../../../../modules/API/Entities/Asset/NonFungible/NftCollection/NftCollection.md).NftCollection
 
-Class used to manage Nft functionality
+Class used to manage NFT functionality
 
 ## Hierarchy
 
@@ -26,7 +26,7 @@ Class used to manage Nft functionality
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Base/BaseAsset.ts#L54)
+[api/entities/Asset/Base/BaseAsset.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Base/BaseAsset.ts#L54)
 
 ___
 
@@ -42,7 +42,7 @@ Identity ID of the Asset (used for Claims)
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Base/BaseAsset.ts#L62)
+[api/entities/Asset/Base/BaseAsset.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Base/BaseAsset.ts#L62)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Base/BaseAsset.ts#L55)
+[api/entities/Asset/Base/BaseAsset.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Base/BaseAsset.ts#L55)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Base/BaseAsset.ts#L56)
+[api/entities/Asset/Base/BaseAsset.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Base/BaseAsset.ts#L56)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Base/BaseAsset.ts#L57)
+[api/entities/Asset/Base/BaseAsset.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Base/BaseAsset.ts#L57)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/NftCollection.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/NonFungible/NftCollection.ts#L50)
+[api/entities/Asset/NonFungible/NftCollection.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/NonFungible/NftCollection.ts#L50)
 
 ___
 
@@ -110,7 +110,7 @@ ticker of the Asset
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/Base/BaseAsset.ts#L67)
+[api/entities/Asset/Base/BaseAsset.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/Base/BaseAsset.ts#L67)
 
 ___
 
@@ -124,24 +124,24 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
-### collectionMetadata
+### collectionKeys
 
-▸ **collectionMetadata**(): `Promise`<[`CollectionMetadata`](../../../../../../modules/API/Entities/Asset/Types/Types.md#collectionmetadata)[]\>
+▸ **collectionKeys**(): `Promise`<[`CollectionKey`](../../../../../../modules/API/Entities/Asset/Types/Types.md#collectionkey)[]\>
 
-Get the metadata that each NFT in the collection must have
+Retrieve the metadata that defines the NFT collection. Every `issue` call for this collection must provide a value for each element returned
 
 **`Note`**
 
- Each NFT **must** have an entry for each value, it **should** comply with the spec
-the SDK validates only presence of metadata keys, additional validation may be needed for issuers
+ Each NFT **must** have an entry for each value, it **should** comply with the spec.
+In other words, the SDK only validates the presence of metadata keys, additional validation should be used when issuing
 
 #### Returns
 
-`Promise`<[`CollectionMetadata`](../../../../../../modules/API/Entities/Asset/Types/Types.md#collectionmetadata)[]\>
+`Promise`<[`CollectionKey`](../../../../../../modules/API/Entities/Asset/Types/Types.md#collectionkey)[]\>
 
 ___
 
@@ -248,7 +248,7 @@ ___
 
 ▸ **getCollectionId**(): `Promise`<`BigNumber`\>
 
-Returns the collection id
+Returns the collection's on chain numeric ID. Used primarily to access NFT specific storage values
 
 #### Returns
 
@@ -289,6 +289,29 @@ Retrieve the Asset's identifiers list
 #### Inherited from
 
 [BaseAsset](../../Base/BaseAsset/BaseAsset.md).[getIdentifiers](../../Base/BaseAsset/BaseAsset.md#getidentifiers)
+
+___
+
+### getNft
+
+▸ **getNft**(`args`): `Promise`<[`Nft`](../Nft/Nft.md)\>
+
+Get an NFT belonging to this collection
+
+**`Throws`**
+
+ if the given NFT does not exist
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args` | `Object` |
+| `args.id` | `BigNumber` |
+
+#### Returns
+
+`Promise`<[`Nft`](../Nft/Nft.md)\>
 
 ___
 
@@ -370,7 +393,7 @@ Issues a new NFT for the collection
 
 **`Note`**
 
- Each NFT requires metadata for each value returned by `collectionMetadata`. The SDK and chain only validate the presence of these fields. Additional validation may be needed to ensure each value is compliant with the expected specification
+ Each NFT requires metadata for each value returned by `collectionKeys`. The SDK and chain only validate the presence of these fields. Additional validation may be needed to ensure each value complies with the specification.
 
 **`Note`**
 

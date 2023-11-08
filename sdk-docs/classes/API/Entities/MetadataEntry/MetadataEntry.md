@@ -18,13 +18,13 @@ Represents an Asset MetadataEntry in the Polymesh blockchain
 
 ### asset
 
-• **asset**: [`FungibleAsset`](../Asset/Fungible/FungibleAsset.md)
+• **asset**: [`BaseAsset`](../Asset/Base/BaseAsset/BaseAsset.md)
 
 Asset for which this is the metadata
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/MetadataEntry/index.ts#L37)
+[api/entities/MetadataEntry/index.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/MetadataEntry/index.ts#L37)
 
 ___
 
@@ -36,7 +36,7 @@ identifier number of the MetadataEntry
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/MetadataEntry/index.ts#L47)
+[api/entities/MetadataEntry/index.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/MetadataEntry/index.ts#L47)
 
 ___
 
@@ -48,7 +48,7 @@ Type of metadata represented by this instance
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/MetadataEntry/index.ts#L42)
+[api/entities/MetadataEntry/index.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/MetadataEntry/index.ts#L42)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Entity.ts#L46)
 
 ## Methods
 

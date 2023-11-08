@@ -32,7 +32,7 @@ arguments for the transaction in SCALE format (polkadot.js Codec)
 
 #### Defined in
 
-[base/PolymeshTransaction.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/base/PolymeshTransaction.ts#L39)
+[base/PolymeshTransaction.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/base/PolymeshTransaction.ts#L39)
 
 ___
 
@@ -48,7 +48,7 @@ hash of the block where this transaction resides (status: `Succeeded`, `Failed`)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/base/PolymeshTransactionBase.ts#L90)
+[base/PolymeshTransactionBase.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/base/PolymeshTransactionBase.ts#L90)
 
 ___
 
@@ -64,7 +64,7 @@ number of the block where this transaction resides (status: `Succeeded`, `Failed
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/base/PolymeshTransactionBase.ts#L95)
+[base/PolymeshTransactionBase.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/base/PolymeshTransactionBase.ts#L95)
 
 ___
 
@@ -80,7 +80,7 @@ stores errors thrown while running the transaction (status: `Failed`, `Aborted`)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/base/PolymeshTransactionBase.ts#L70)
+[base/PolymeshTransactionBase.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/base/PolymeshTransactionBase.ts#L70)
 
 ___
 
@@ -96,7 +96,7 @@ stores the transaction receipt (if successful)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:75](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/base/PolymeshTransactionBase.ts#L75)
+[base/PolymeshTransactionBase.ts:75](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/base/PolymeshTransactionBase.ts#L75)
 
 ___
 
@@ -112,7 +112,7 @@ current status of the transaction
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/base/PolymeshTransactionBase.ts#L65)
+[base/PolymeshTransactionBase.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/base/PolymeshTransactionBase.ts#L65)
 
 ___
 
@@ -124,7 +124,7 @@ type of transaction represented by this instance (mostly for display purposes)
 
 #### Defined in
 
-[base/PolymeshTransaction.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/base/PolymeshTransaction.ts#L44)
+[base/PolymeshTransaction.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/base/PolymeshTransaction.ts#L44)
 
 ___
 
@@ -140,7 +140,7 @@ transaction hash (status: `Running`, `Succeeded`, `Failed`)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/base/PolymeshTransactionBase.ts#L80)
+[base/PolymeshTransactionBase.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/base/PolymeshTransactionBase.ts#L80)
 
 ___
 
@@ -156,7 +156,7 @@ transaction index within its block (status: `Succeeded`, `Failed`)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:85](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/base/PolymeshTransactionBase.ts#L85)
+[base/PolymeshTransactionBase.ts:85](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/base/PolymeshTransactionBase.ts#L85)
 
 ## Accessors
 

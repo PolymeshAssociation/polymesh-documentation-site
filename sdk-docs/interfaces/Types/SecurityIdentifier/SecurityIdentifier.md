@@ -16,7 +16,7 @@ Alphanumeric standardized security identifier
 
 #### Defined in
 
-[types/index.ts:165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L165)
+[types/index.ts:164](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L164)
 
 ___
 
@@ -26,4 +26,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:166](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L166)
+[types/index.ts:165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L165)

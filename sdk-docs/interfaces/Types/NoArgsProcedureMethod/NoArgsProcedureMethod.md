@@ -51,4 +51,4 @@ sidebar_label: "NoArgsProcedureMethod"
 
 #### Defined in
 
-[types/index.ts:1563](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1563)
+[types/index.ts:1570](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1570)

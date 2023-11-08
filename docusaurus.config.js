@@ -82,8 +82,8 @@ const config = {
         includeCurrentVersion: true,
         versions: {
           current: {
-            label: '23.0.0-alpha.18',
-            path: '23.0.0-alpha.18',
+            label: '23.0.0-alpha.27',
+            path: '23.0.0-alpha.27',
           },
         },
       },

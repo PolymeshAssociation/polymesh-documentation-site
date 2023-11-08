@@ -14,7 +14,7 @@ sidebar_label: "GrandpaTx"
 
 #### Defined in
 
-[generated/types.ts:488](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/generated/types.ts#L488)
+[generated/types.ts:488](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/generated/types.ts#L488)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:486](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/generated/types.ts#L486)
+[generated/types.ts:486](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/generated/types.ts#L486)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:487](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/generated/types.ts#L487)
+[generated/types.ts:487](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/generated/types.ts#L487)

@@ -58,4 +58,4 @@ sidebar_label: "CreateTransactionBatchProcedureMethod"
 
 #### Defined in
 
-[types/index.ts:1527](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1527)
+[types/index.ts:1534](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1534)

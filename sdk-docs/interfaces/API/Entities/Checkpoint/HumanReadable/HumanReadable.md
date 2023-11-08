@@ -14,7 +14,7 @@ sidebar_label: "HumanReadable"
 
 #### Defined in
 
-[api/entities/Checkpoint.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Checkpoint.ts#L25)
+[api/entities/Checkpoint.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Checkpoint.ts#L25)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/Checkpoint.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Checkpoint.ts#L26)
+[api/entities/Checkpoint.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Checkpoint.ts#L26)

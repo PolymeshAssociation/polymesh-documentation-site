@@ -14,7 +14,7 @@ sidebar_label: "MetadataLockStatus"
 
 #### Defined in
 
-[api/entities/MetadataEntry/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/MetadataEntry/types.ts#L10)
+[api/entities/MetadataEntry/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/MetadataEntry/types.ts#L10)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/MetadataEntry/types.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/MetadataEntry/types.ts#L11)
+[api/entities/MetadataEntry/types.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/MetadataEntry/types.ts#L11)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[api/entities/MetadataEntry/types.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/MetadataEntry/types.ts#L9)
+[api/entities/MetadataEntry/types.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/MetadataEntry/types.ts#L9)

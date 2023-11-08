@@ -14,4 +14,4 @@ sidebar_label: "UniqueIdentifiers"
 
 #### Defined in
 
-[api/entities/DefaultPortfolio.ts:4](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/DefaultPortfolio.ts#L4)
+[api/entities/DefaultPortfolio.ts:4](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/DefaultPortfolio.ts#L4)

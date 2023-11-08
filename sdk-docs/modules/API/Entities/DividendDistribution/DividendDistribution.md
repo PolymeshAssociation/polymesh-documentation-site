@@ -21,4 +21,4 @@ sidebar_label: "DividendDistribution"
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/DividendDistribution/index.ts#L80)
+[api/entities/DividendDistribution/index.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/DividendDistribution/index.ts#L80)

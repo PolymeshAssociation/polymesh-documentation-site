@@ -14,7 +14,7 @@ sidebar_label: "TransferRestrictionResult"
 
 #### Defined in
 
-[api/entities/Asset/types.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/types.ts#L50)
+[api/entities/Asset/types.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/types.ts#L57)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/types.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/Asset/types.ts#L51)
+[api/entities/Asset/types.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/Asset/types.ts#L58)

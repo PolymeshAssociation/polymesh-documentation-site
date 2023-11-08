@@ -28,7 +28,7 @@ Renames and re-exports [Params](../../../../../interfaces/API/Entities/Corporate
 
 #### Defined in
 
-[api/entities/CorporateActionBase/types.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/CorporateActionBase/types.ts#L21)
+[api/entities/CorporateActionBase/types.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/CorporateActionBase/types.ts#L21)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/types.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/entities/CorporateActionBase/types.ts#L28)
+[api/entities/CorporateActionBase/types.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/entities/CorporateActionBase/types.ts#L28)

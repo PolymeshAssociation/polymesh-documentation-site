@@ -22,7 +22,7 @@ limit on the amount of different (unique) investors that can hold the Asset at o
 
 #### Defined in
 
-[api/procedures/types.ts:174](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L174)
+[api/procedures/types.ts:174](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L174)
 
 ___
 
@@ -38,4 +38,4 @@ TransferRestrictionInputBase.exemptedIdentities
 
 #### Defined in
 
-[api/procedures/types.ts:167](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L167)
+[api/procedures/types.ts:167](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L167)

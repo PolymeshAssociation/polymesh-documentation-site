@@ -16,7 +16,7 @@ portfolio from which funds will be withdrawn to pay for the Asset tokens
 
 #### Defined in
 
-[api/procedures/types.ts:1012](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L1012)
+[api/procedures/types.ts:1015](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L1015)
 
 ___
 
@@ -28,7 +28,7 @@ maximum average price to pay per Asset token (optional)
 
 #### Defined in
 
-[api/procedures/types.ts:1020](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L1020)
+[api/procedures/types.ts:1023](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L1023)
 
 ___
 
@@ -40,7 +40,7 @@ amount of Asset tokens to purchase
 
 #### Defined in
 
-[api/procedures/types.ts:1016](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L1016)
+[api/procedures/types.ts:1019](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L1019)
 
 ___
 
@@ -52,4 +52,4 @@ portfolio in which the purchased Asset tokens will be stored
 
 #### Defined in
 
-[api/procedures/types.ts:1008](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L1008)
+[api/procedures/types.ts:1011](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L1011)

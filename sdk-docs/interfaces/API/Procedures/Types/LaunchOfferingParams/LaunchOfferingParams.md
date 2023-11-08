@@ -16,7 +16,7 @@ end date of the Offering (optional, defaults to never)
 
 #### Defined in
 
-[api/procedures/types.ts:868](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L868)
+[api/procedures/types.ts:871](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L871)
 
 ___
 
@@ -28,7 +28,7 @@ minimum amount that can be spent on this offering
 
 #### Defined in
 
-[api/procedures/types.ts:877](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L877)
+[api/procedures/types.ts:880](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L880)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:860](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L860)
+[api/procedures/types.ts:863](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L863)
 
 ___
 
@@ -50,7 +50,7 @@ portfolio in which the Asset tokens to be sold are stored
 
 #### Defined in
 
-[api/procedures/types.ts:844](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L844)
+[api/procedures/types.ts:847](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L847)
 
 ___
 
@@ -63,7 +63,7 @@ ticker symbol of the currency in which the funds are being raised (e.g. 'USD' or
 
 #### Defined in
 
-[api/procedures/types.ts:853](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L853)
+[api/procedures/types.ts:856](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L856)
 
 ___
 
@@ -75,7 +75,7 @@ portfolio in which the raised funds will be stored
 
 #### Defined in
 
-[api/procedures/types.ts:848](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L848)
+[api/procedures/types.ts:851](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L851)
 
 ___
 
@@ -87,7 +87,7 @@ start date of the Offering (optional, defaults to right now)
 
 #### Defined in
 
-[api/procedures/types.ts:864](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L864)
+[api/procedures/types.ts:867](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L867)
 
 ___
 
@@ -100,7 +100,7 @@ array of sale tiers. Each tier consists of an amount of Assets to be sold at a c
 
 #### Defined in
 
-[api/procedures/types.ts:873](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L873)
+[api/procedures/types.ts:876](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L876)
 
 ___
 
@@ -114,4 +114,4 @@ venue through which all offering related trades will be settled
 
 #### Defined in
 
-[api/procedures/types.ts:859](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L859)
+[api/procedures/types.ts:862](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L862)

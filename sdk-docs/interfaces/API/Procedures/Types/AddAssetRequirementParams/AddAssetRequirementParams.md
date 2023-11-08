@@ -18,4 +18,4 @@ array of conditions that form the requirement that must be added.
 
 #### Defined in
 
-[api/procedures/types.ts:710](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/api/procedures/types.ts#L710)
+[api/procedures/types.ts:713](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/api/procedures/types.ts#L713)

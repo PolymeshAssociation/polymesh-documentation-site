@@ -16,7 +16,7 @@ This transaction will be rejected if not included in a block after a while (defa
 
 #### Defined in
 
-[types/index.ts:1510](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1510)
+[types/index.ts:1517](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1517)
 
 ___
 
@@ -36,4 +36,4 @@ The number of blocks the for which the transaction remains valid. Target block t
 
 #### Defined in
 
-[types/index.ts:1517](https://github.com/PolymeshAssociation/polymesh-sdk/blob/b6f9fb883/src/types/index.ts#L1517)
+[types/index.ts:1524](https://github.com/PolymeshAssociation/polymesh-sdk/blob/372a67e5d/src/types/index.ts#L1524)

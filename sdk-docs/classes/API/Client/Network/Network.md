@@ -28,8 +28,8 @@ Retrieve a single event by any of its indexed arguments. Can be filtered using p
 | `opts.eventArg0?` | `string` | event parameter value to filter by in position 0 |
 | `opts.eventArg1?` | `string` | event parameter value to filter by in position 1 |
 | `opts.eventArg2?` | `string` | event parameter value to filter by in position 2 |
-| `opts.eventId` | [`EventIdEnum`](../../../../enums/Types/EventIdEnum/EventIdEnum.md) | type of the event to fetch |
-| `opts.moduleId` | [`ModuleIdEnum`](../../../../enums/Types/ModuleIdEnum/ModuleIdEnum.md) | type of the module to fetch |
+| `opts.eventId` | `EventIdEnum` | type of the event to fetch |
+| `opts.moduleId` | `ModuleIdEnum` | type of the module to fetch |
 
 #### Returns
 
@@ -55,8 +55,8 @@ Retrieve a list of events. Can be filtered using parameters
 | `opts.eventArg0?` | `string` | event parameter value to filter by in position 0 |
 | `opts.eventArg1?` | `string` | event parameter value to filter by in position 1 |
 | `opts.eventArg2?` | `string` | event parameter value to filter by in position 2 |
-| `opts.eventId` | [`EventIdEnum`](../../../../enums/Types/EventIdEnum/EventIdEnum.md) | type of the event to fetch |
-| `opts.moduleId` | [`ModuleIdEnum`](../../../../enums/Types/ModuleIdEnum/ModuleIdEnum.md) | type of the module to fetch |
+| `opts.eventId` | `EventIdEnum` | type of the event to fetch |
+| `opts.moduleId` | `ModuleIdEnum` | type of the module to fetch |
 | `opts.size?` | `BigNumber` | page size |
 | `opts.start?` | `BigNumber` | page offset |
 
