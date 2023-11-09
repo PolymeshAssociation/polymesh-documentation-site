@@ -70,16 +70,16 @@ The Token URI of an NFT is intended to point towards an off-chain URI containing
 
 The Token URI can be specified in various ways:
 
-- via the global metadata key `tokenURI` defined for an individual NFT
-- via the global metadata key `baseTokenURI` defined for the whole NFT collection
+- via the global metadata key `tokenUri` defined for an individual NFT
+- via the global metadata key `baseTokenUri` defined for the whole NFT collection
 
 In both cases, the metadata value can include `{tokenId}` which will be substituted by a client with the corresponding `tokenId` of the individual NFT being referenced.
 
 The full process to determine the Token URI of an individual NFT is:
 
-- if the individual NFT has a `tokenURI` value set, return this
-- else if the NFT collection has a `baseTokenURI` value set then:
-  - if the `baseTokenURI` does not already include `{tokenId}` append `/{tokenId}` (e.g. the resolved URI is {baseTokenUri}/{tokenId})
+- if the individual NFT has a `tokenUri` value set, return this
+- else if the NFT collection has a `baseTokenUri` value set then:
+  - if the `baseTokenUri` does not already include `{tokenId}` append `/{tokenId}` (e.g. the resolved URI is {baseTokenUri}/{tokenId})
   - substitute any `{tokenId}` references with the underlying `tokenId` of the individual NFT, return this
 
 The JSON blob referenced by an individual NFTs Token URI should confirm to the JSON schema below:
@@ -113,23 +113,23 @@ The Image URI of an NFT is intended to point towards an off-chain URI containing
 
 The Image URI can be specified in various ways:
 
-- via the global metadata key `imageURI` defined for an individual NFT
-- via the global metadata key `baseImageURI` defined for the whole NFT collection
+- via the global metadata key `imageUri` defined for an individual NFT
+- via the global metadata key `baseImageUri` defined for the whole NFT collection
 
 In both cases, the metadata value can include `{tokenId}` which will be substituted by a client with the corresponding `tokenId` of the individual NFT being referenced.
 
 The full process to determine the Image URI of an individual NFT is:
 
-- if the individual NFT has a `imageURI` value set, return this
-- else if the NFT collection has a `baseImageURI` value set then:
-  - if the `baseImageURI` does not already include `{tokenId}` append `/{tokenId}` (e.g. the resolved URI is {baseImageURI}/{tokenId})
+- if the individual NFT has a `imageUri` value set, return this
+- else if the NFT collection has a `baseImageUri` value set then:
+  - if the `baseImageUri` does not already include `{tokenId}` append `/{tokenId}` (e.g. the resolved URI is {baseImageUri}/{tokenId})
   - substitute any `{tokenId}` references with the underlying `tokenId` of the individual NFT, return this
 
 This logic is equivalent to the above logic for [Token URI](#token-uri).
 
 :::note Notes
 
-- When using `baseImageURI`, it is highly recommended to include `{tokenId}` to ensure a file extension is included in the URI. Without the file extension, there may be ambiguity in how the image is handled, which can lead to display issues or incorrect handling by applications reading the file.
+- When using `baseImageUri`, it is highly recommended to include `{tokenId}` to ensure a file extension is included in the URI. Without the file extension, there may be ambiguity in how the image is handled, which can lead to display issues or incorrect handling by applications reading the file.
 
 - The above specification allows an image to be specified either via the [Image URI](#image-uri) or through an `image` tag in the JSON data linked by the [Token URI](#token-uri). The recommended approach is to first look for a dedicated [Image URI](#image-uri) and then, if not found, fall back to the image tag in the data stored at the [Token URI](#token-uri).
 
