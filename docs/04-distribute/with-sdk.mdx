@@ -175,7 +175,7 @@ const distributionVenueId = distributionVenue.id.toString();
 
 We keep `distributionVenueId`, the string id of the venue, for later as this is information that will need to be shared with the ultimate recipient.
 
-Now that we have the venue, let's have the CEO [issue](/sdk-docs/classes/API/Entities/Asset/Issuance/#issue) enough shares to later transfer to Alice. Of course, if the CEO planned on issuing shares for all founders of ACME Corp, she would issue more.
+Now that we have the venue, let's have the CEO [issue](/sdk-docs/classes/API/Entities/Asset/Fungible/Issuance/#issue) enough shares to later transfer to Alice. Of course, if the CEO planned on issuing shares for all founders of ACME Corp, she would issue more.
 
 <Tabs groupId="code-language">
 
@@ -202,7 +202,7 @@ const issuance = asset.issuance;
 </TabItem>
 </Tabs>
 
-Here too, in `issuance`, the context is still `apiCeo`. In fact, its [`parent`](/sdk-docs/classes/API/Entities/Asset/Issuance/#hierarchy) is the `asset` itself.
+Here too, in `issuance`, the context is still `apiCeo`. In fact, its [`parent`](/sdk-docs/classes/API/Entities/Asset/Fungible/Issuance/#hierarchy) is the `asset` itself.
 
 <Tabs groupId="code-language">
 
