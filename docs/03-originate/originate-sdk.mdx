@@ -108,7 +108,7 @@ The `TransactionQueue` type is just that, a queue. The transaction(s) in it have
 
 :::info
 
-Of note, the reservation cost, at the time of writing, is of **2,500 POLYX**, before network fees.
+Of note, the reservation cost, at the time of writing, is of **1,000 POLYX**, before network fees.
 
 :::
 
@@ -212,7 +212,7 @@ const reservation = await apiAlice.assets.getTickerReservation({
 
 You will note that the class `TickerReservation`, just like the transaction queue, keeps a [`protected context: Context`](https://developers.polymath.network/polymesh-sdk-api-reference/classes/tickerreservation#properties-1). This `context` in turn keeps a [`polymeshApi`](https://developers.polymath.network/polymesh-sdk-api-reference/classes/context#properties-1). It is in there that we find the implicit knowledge that it is `alice`'s account that is asking for the next actions. If it were any other **account** that had called `assets.getTickerReservation`, this other account would not be able to follow up with a `.createAsset` command because it doesn't own the reservation.
 
-With our `reservation` in memory, and 10,000 POLYX in `alice`'s wallet, which is the cost of creation of one asset, we now can create it:
+With our `reservation` in memory we now can create it:
 
 <Tabs groupId="code-language">
 <TabItem value="ts" label="TypeScript">

@@ -91,11 +91,10 @@ In addition to transaction fees, certain on-chain transactions carry additional 
 
 The transactions that carry these additional protocol fees are configurable and can be updated via the governance process - modifying both the transactions that carry these fees, as well as the fee amounts for each transaction.
 
-Currently only two types of transactions carry additional fees - these are:
+Currently only one types of transaction carries additional fees - this is:
 
-- registering a new ticker: this has a 500 POLYX fee
-- creating a new asset: this has a 2,500 POLYX fee
+- registering a new ticker: this has a 1000 POLYX fee. Note this fee is also charged if directly creating an asset without first registering a ticker in a separate transaction.
 
 Both transaction and protocol fees are paid to the operator that produces a block that includes the relevant transactions.
 
-Protocol fees are only paid by a user if their action is successful - for example if you try and register a ticker that has already been registered, you won't be charged the 500 POLYX protocol fee.
+Protocol fees are only paid by a user if their action is successful - for example if you try and register a ticker that has already been registered, you won't be charged the 1000 POLYX protocol fee.
