@@ -21,11 +21,11 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      # Modify docusaurus.config.js
+      # Modify docusaurus.config.ts
       - name: Modify Docusaurus config
         run: |
-          sed -i 's#url: '\''https://developers.polymesh.network'\''#url: '\''https://polymeshassociation.github.io'\''#' docusaurus.config.js
-          sed -i 's#baseUrl: '\''/'\''#baseUrl: '\''/polymesh-documentation-site/'\''#' docusaurus.config.js
+          sed -i 's#url: '\''https://developers.polymesh.network'\''#url: '\''https://polymeshassociation.github.io'\''#' docusaurus.config.ts
+          sed -i 's#baseUrl: '\''/'\''#baseUrl: '\''/polymesh-documentation-site/'\''#' docusaurus.config.ts
 
       - name: Build website
         run: yarn build
