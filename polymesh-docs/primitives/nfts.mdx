@@ -79,7 +79,7 @@ The full process to determine the Token URI of an individual NFT is:
 
 - if the individual NFT has a `tokenUri` value set, return this
 - else if the NFT collection has a `baseTokenUri` value set then:
-  - if the `baseTokenUri` does not already include `{tokenId}` append `/{tokenId}` (e.g. the resolved URI is {baseTokenUri}/{tokenId})
+  - if the `baseTokenUri` does not already include `{tokenId}` append `/{tokenId}` (e.g. the resolved URI is \{baseTokenUri}/\{tokenId})
   - substitute any `{tokenId}` references with the underlying `tokenId` of the individual NFT, return this
 
 The JSON blob referenced by an individual NFTs Token URI should confirm to the JSON schema below:
@@ -122,7 +122,7 @@ The full process to determine the Image URI of an individual NFT is:
 
 - if the individual NFT has a `imageUri` value set, return this
 - else if the NFT collection has a `baseImageUri` value set then:
-  - if the `baseImageUri` does not already include `{tokenId}` append `/{tokenId}` (e.g. the resolved URI is {baseImageUri}/{tokenId})
+  - if the `baseImageUri` does not already include `{tokenId}` append `/{tokenId}` (e.g. the resolved URI is \{baseImageUri}/\{tokenId})
   - substitute any `{tokenId}` references with the underlying `tokenId` of the individual NFT, return this
 
 This logic is equivalent to the above logic for [Token URI](#token-uri).
