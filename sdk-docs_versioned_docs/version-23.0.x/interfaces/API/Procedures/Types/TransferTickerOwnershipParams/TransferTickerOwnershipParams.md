@@ -16,7 +16,7 @@ date at which the authorization request for transfer expires (optional)
 
 #### Defined in
 
-[api/procedures/types.ts:957](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L957)
+[api/procedures/types.ts:957](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/procedures/types.ts#L957)
 
 ___
 
@@ -26,4 +26,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:953](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L953)
+[api/procedures/types.ts:953](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/procedures/types.ts#L953)

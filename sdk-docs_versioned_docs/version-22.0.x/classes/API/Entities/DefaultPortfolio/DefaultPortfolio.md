@@ -1,7 +1,7 @@
 ---
-id: "DefaultPortfolio"
-title: "Class: DefaultPortfolio"
-sidebar_label: "DefaultPortfolio"
+id: 'DefaultPortfolio'
+title: 'Class: DefaultPortfolio'
+sidebar_label: 'DefaultPortfolio'
 ---
 
 [api/entities/DefaultPortfolio](../../../../modules/API/Entities/DefaultPortfolio/DefaultPortfolio.md).DefaultPortfolio
@@ -28,9 +28,9 @@ Identity of the Portfolio's owner
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Portfolio/index.ts#L71)
+[api/entities/Portfolio/index.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Portfolio/index.ts#L71)
 
-___
+---
 
 ### uuid
 
@@ -42,119 +42,139 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
 ### exists
 
-▸ **exists**(): `Promise`<`boolean`\>
+▸ **exists**(): `Promise`\<`boolean`\>
 
 Determine whether this Portfolio exists on chain
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Overrides
 
 [Portfolio](../Portfolio/Portfolio.md).[exists](../Portfolio/Portfolio.md#exists)
 
-___
+#### Defined in
+
+[api/entities/DefaultPortfolio.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/DefaultPortfolio.ts#L22)
+
+---
 
 ### getAssetBalances
 
-▸ **getAssetBalances**(`args?`): `Promise`<[`PortfolioBalance`](../../../../interfaces/API/Entities/Portfolio/Types/PortfolioBalance/PortfolioBalance.md)[]\>
+▸ **getAssetBalances**(`args?`): `Promise`\<[`PortfolioBalance`](../../../../interfaces/API/Entities/Portfolio/Types/PortfolioBalance/PortfolioBalance.md)[]\>
 
 Retrieve the balances of all Assets in this Portfolio
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `args?` | `Object` | - |
+| Name          | Type                                         | Description                                                                                                   |
+| :------------ | :------------------------------------------- | :------------------------------------------------------------------------------------------------------------ |
+| `args?`       | `Object`                                     | -                                                                                                             |
 | `args.assets` | (`string` \| [`Asset`](../Asset/Asset.md))[] | array of Assets (or tickers) for which to fetch balances (optional, all balances are retrieved if not passed) |
 
 #### Returns
 
-`Promise`<[`PortfolioBalance`](../../../../interfaces/API/Entities/Portfolio/Types/PortfolioBalance/PortfolioBalance.md)[]\>
+`Promise`\<[`PortfolioBalance`](../../../../interfaces/API/Entities/Portfolio/Types/PortfolioBalance/PortfolioBalance.md)[]\>
 
 #### Inherited from
 
 [Portfolio](../Portfolio/Portfolio.md).[getAssetBalances](../Portfolio/Portfolio.md#getassetbalances)
 
-___
+#### Defined in
+
+[api/entities/Portfolio/index.ts:137](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Portfolio/index.ts#L137)
+
+---
 
 ### getCustodian
 
-▸ **getCustodian**(): `Promise`<[`Identity`](../Identity/Identity.md)\>
+▸ **getCustodian**(): `Promise`\<[`Identity`](../Identity/Identity.md)\>
 
 Retrieve the custodian Identity of this Portfolio
 
-**`Note`**
-
- if no custodian is set, the owner Identity is returned
-
 #### Returns
 
-`Promise`<[`Identity`](../Identity/Identity.md)\>
+`Promise`\<[`Identity`](../Identity/Identity.md)\>
+
+**`Note`**
+
+if no custodian is set, the owner Identity is returned
 
 #### Inherited from
 
 [Portfolio](../Portfolio/Portfolio.md).[getCustodian](../Portfolio/Portfolio.md#getcustodian)
 
-___
+#### Defined in
+
+[api/entities/Portfolio/index.ts:259](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Portfolio/index.ts#L259)
+
+---
 
 ### getTransactionHistory
 
-▸ **getTransactionHistory**(`filters?`): `Promise`<[`HistoricSettlement`](../../../../interfaces/API/Entities/Portfolio/Types/HistoricSettlement/HistoricSettlement.md)[]\>
+▸ **getTransactionHistory**(`filters?`): `Promise`\<[`HistoricSettlement`](../../../../interfaces/API/Entities/Portfolio/Types/HistoricSettlement/HistoricSettlement.md)[]\>
 
 Retrieve a list of transactions where this portfolio was involved. Can be filtered using parameters
 
-**`Note`**
-
- uses the middlewareV2
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filters` | `Object` | - |
+| Name               | Type     | Description                        |
+| :----------------- | :------- | :--------------------------------- |
+| `filters`          | `Object` | -                                  |
 | `filters.account?` | `string` | Account involved in the settlement |
-| `filters.ticker?` | `string` | ticker involved in the transaction |
+| `filters.ticker?`  | `string` | ticker involved in the transaction |
 
 #### Returns
 
-`Promise`<[`HistoricSettlement`](../../../../interfaces/API/Entities/Portfolio/Types/HistoricSettlement/HistoricSettlement.md)[]\>
+`Promise`\<[`HistoricSettlement`](../../../../interfaces/API/Entities/Portfolio/Types/HistoricSettlement/HistoricSettlement.md)[]\>
+
+**`Note`**
+
+uses the middlewareV2
 
 #### Inherited from
 
 [Portfolio](../Portfolio/Portfolio.md).[getTransactionHistory](../Portfolio/Portfolio.md#gettransactionhistory)
 
-___
+#### Defined in
+
+[api/entities/Portfolio/index.ts:301](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Portfolio/index.ts#L301)
+
+---
 
 ### isCustodiedBy
 
-▸ **isCustodiedBy**(`args?`): `Promise`<`boolean`\>
+▸ **isCustodiedBy**(`args?`): `Promise`\<`boolean`\>
 
 Return whether an Identity is the Portfolio custodian
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `args?` | `Object` | - |
+| Name            | Type                                              | Description                                |
+| :-------------- | :------------------------------------------------ | :----------------------------------------- |
+| `args?`         | `Object`                                          | -                                          |
 | `args.identity` | `string` \| [`Identity`](../Identity/Identity.md) | optional, defaults to the signing Identity |
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Inherited from
 
 [Portfolio](../Portfolio/Portfolio.md).[isCustodiedBy](../Portfolio/Portfolio.md#iscustodiedby)
 
-___
+#### Defined in
+
+[api/entities/Portfolio/index.ts:121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Portfolio/index.ts#L121)
+
+---
 
 ### isEqual
 
@@ -164,9 +184,9 @@ Determine whether this Entity is the same as another one
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `entity` | [`Entity`](../Entity/Entity.md)<`unknown`, `unknown`\> |
+| Name     | Type                                                    |
+| :------- | :------------------------------------------------------ |
+| `entity` | [`Entity`](../Entity/Entity.md)\<`unknown`, `unknown`\> |
 
 #### Returns
 
@@ -176,134 +196,157 @@ Determine whether this Entity is the same as another one
 
 [Portfolio](../Portfolio/Portfolio.md).[isEqual](../Portfolio/Portfolio.md#isequal)
 
-___
+#### Defined in
+
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L61)
+
+---
 
 ### isOwnedBy
 
-▸ **isOwnedBy**(`args?`): `Promise`<`boolean`\>
+▸ **isOwnedBy**(`args?`): `Promise`\<`boolean`\>
 
 Return whether an Identity is the Portfolio owner
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `args?` | `Object` | - |
+| Name            | Type                                              | Description                      |
+| :-------------- | :------------------------------------------------ | :------------------------------- |
+| `args?`         | `Object`                                          | -                                |
 | `args.identity` | `string` \| [`Identity`](../Identity/Identity.md) | defaults to the signing Identity |
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Inherited from
 
 [Portfolio](../Portfolio/Portfolio.md).[isOwnedBy](../Portfolio/Portfolio.md#isownedby)
 
-___
+#### Defined in
+
+[api/entities/Portfolio/index.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Portfolio/index.ts#L108)
+
+---
 
 ### moveFunds
 
-▸ **moveFunds**(`args`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+▸ **moveFunds**(`args`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
 Moves funds from this Portfolio to another one owned by the same Identity
 
-**`Note`**
-
- required role:
-  - Portfolio Custodian
-
-**`Note`**
-
- this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [moveFunds.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | [`MoveFundsParams`](../../../../interfaces/API/Procedures/Types/MoveFundsParams/MoveFundsParams.md) |
-| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+| Name    | Type                                                                                                |
+| :------ | :-------------------------------------------------------------------------------------------------- |
+| `args`  | [`MoveFundsParams`](../../../../interfaces/API/Procedures/Types/MoveFundsParams/MoveFundsParams.md) |
+| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md)                      |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
+
+**`Note`**
+
+required role:
+
+- Portfolio Custodian
+
+**`Note`**
+
+this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [moveFunds.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
 
 #### Inherited from
 
 [Portfolio](../Portfolio/Portfolio.md).[moveFunds](../Portfolio/Portfolio.md#movefunds)
 
-___
+#### Defined in
+
+[api/entities/Portfolio/index.ts:237](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Portfolio/index.ts#L237)
+
+---
 
 ### quitCustody
 
-▸ **quitCustody**(`opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+▸ **quitCustody**(`opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
 Returns the custody of the portfolio to the portfolio owner unilaterally
 
-**`Note`**
-
- required role:
-  - Portfolio Custodian
-
-**`Note`**
-
- this method is of type [NoArgsProcedureMethod](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md), which means you can call [quitCustody.checkAuthorization](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type                                                                           |
+| :------ | :----------------------------------------------------------------------------- |
 | `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
+
+**`Note`**
+
+required role:
+
+- Portfolio Custodian
+
+**`Note`**
+
+this method is of type [NoArgsProcedureMethod](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md), which means you can call [quitCustody.checkAuthorization](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
 
 #### Inherited from
 
 [Portfolio](../Portfolio/Portfolio.md).[quitCustody](../Portfolio/Portfolio.md#quitcustody)
 
-___
+#### Defined in
+
+[api/entities/Portfolio/index.ts:250](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Portfolio/index.ts#L250)
+
+---
 
 ### setCustodian
 
-▸ **setCustodian**(`args`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`AuthorizationRequest`](../AuthorizationRequest/AuthorizationRequest.md), [`AuthorizationRequest`](../AuthorizationRequest/AuthorizationRequest.md)\>\>
+▸ **setCustodian**(`args`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`AuthorizationRequest`](../AuthorizationRequest/AuthorizationRequest.md), [`AuthorizationRequest`](../AuthorizationRequest/AuthorizationRequest.md)\>\>
 
 Send an invitation to an Identity to assign it as custodian for this Portfolio
 
-**`Note`**
-
- this will create an [Authorization Request](../AuthorizationRequest/AuthorizationRequest.md) which has to be accepted by the `targetIdentity`.
-  An [Account](../Account/Account.md) or [Identity](../Identity/Identity.md) can fetch its pending Authorization Requests by calling [authorizations.getReceived](../Common/Namespaces/Authorizations/Authorizations.md#getreceived).
-  Also, an Account or Identity can directly fetch the details of an Authorization Request by calling [authorizations.getOne](../Common/Namespaces/Authorizations/Authorizations.md#getone)
-
-**`Note`**
-
- required role:
-  - Portfolio Custodian
-
-**`Note`**
-
- this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [setCustodian.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | [`SetCustodianParams`](../../../../interfaces/API/Procedures/Types/SetCustodianParams/SetCustodianParams.md) |
-| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+| Name    | Type                                                                                                         |
+| :------ | :----------------------------------------------------------------------------------------------------------- |
+| `args`  | [`SetCustodianParams`](../../../../interfaces/API/Procedures/Types/SetCustodianParams/SetCustodianParams.md) |
+| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md)                               |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`AuthorizationRequest`](../AuthorizationRequest/AuthorizationRequest.md), [`AuthorizationRequest`](../AuthorizationRequest/AuthorizationRequest.md)\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`AuthorizationRequest`](../AuthorizationRequest/AuthorizationRequest.md), [`AuthorizationRequest`](../AuthorizationRequest/AuthorizationRequest.md)\>\>
+
+**`Note`**
+
+this will create an [Authorization Request](../AuthorizationRequest/AuthorizationRequest.md) which has to be accepted by the `targetIdentity`.
+An [Account](../Account/Account.md) or [Identity](../Identity/Identity.md) can fetch its pending Authorization Requests by calling [authorizations.getReceived](../Common/Namespaces/Authorizations/Authorizations.md#getreceived).
+Also, an Account or Identity can directly fetch the details of an Authorization Request by calling [authorizations.getOne](../Common/Namespaces/Authorizations/Authorizations.md#getone)
+
+**`Note`**
+
+required role:
+
+- Portfolio Custodian
+
+**`Note`**
+
+this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [setCustodian.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
 
 #### Inherited from
 
 [Portfolio](../Portfolio/Portfolio.md).[setCustodian](../Portfolio/Portfolio.md#setcustodian)
 
-___
+#### Defined in
+
+[api/entities/Portfolio/index.ts:224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Portfolio/index.ts#L224)
+
+---
 
 ### toHuman
 
@@ -319,24 +362,28 @@ Return the Portfolio ID and owner DID
 
 [Portfolio](../Portfolio/Portfolio.md).[toHuman](../Portfolio/Portfolio.md#tohuman)
 
-___
+#### Defined in
+
+[api/entities/Portfolio/index.ts:418](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Portfolio/index.ts#L418)
+
+---
 
 ### generateUuid
 
-▸ `Static` **generateUuid**<`Identifiers`\>(`identifiers`): `string`
+▸ `Static` **generateUuid**\<`Identifiers`\>(`identifiers`): `string`
 
 Generate the Entity's UUID from its identifying properties
 
 #### Type parameters
 
-| Name |
-| :------ |
+| Name          |
+| :------------ |
 | `Identifiers` |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name          | Type          |
+| :------------ | :------------ |
 | `identifiers` | `Identifiers` |
 
 #### Returns
@@ -347,24 +394,28 @@ Generate the Entity's UUID from its identifying properties
 
 [Portfolio](../Portfolio/Portfolio.md).[generateUuid](../Portfolio/Portfolio.md#generateuuid)
 
-___
+#### Defined in
+
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L14)
+
+---
 
 ### unserialize
 
-▸ `Static` **unserialize**<`Identifiers`\>(`serialized`): `Identifiers`
+▸ `Static` **unserialize**\<`Identifiers`\>(`serialized`): `Identifiers`
 
 Unserialize a UUID into its Unique Identifiers
 
 #### Type parameters
 
-| Name |
-| :------ |
+| Name          |
+| :------------ |
 | `Identifiers` |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name         | Type     | Description         |
+| :----------- | :------- | :------------------ |
 | `serialized` | `string` | UUID to unserialize |
 
 #### Returns
@@ -374,3 +425,7 @@ Unserialize a UUID into its Unique Identifiers
 #### Inherited from
 
 [Portfolio](../Portfolio/Portfolio.md).[unserialize](../Portfolio/Portfolio.md#unserialize)
+
+#### Defined in
+
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L23)

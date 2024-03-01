@@ -18,9 +18,11 @@ sidebar_label: "HistoricAssetTransaction"
 
 • **amount**: `BigNumber`
 
+Amount of the fungible tokens involved in the transaction
+
 #### Defined in
 
-[api/entities/Asset/types.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Asset/types.ts#L90)
+[api/entities/Asset/types.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/types.ts#L107)
 
 ___
 
@@ -30,7 +32,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/types.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Asset/types.ts#L89)
+[api/entities/Asset/types.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/types.ts#L89)
 
 ___
 
@@ -44,7 +46,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:755](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L755)
+[types/index.ts:761](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L761)
 
 ___
 
@@ -58,7 +60,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:754](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L754)
+[types/index.ts:760](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L760)
 
 ___
 
@@ -72,7 +74,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:753](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L753)
+[types/index.ts:759](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L759)
 
 ___
 
@@ -80,9 +82,11 @@ ___
 
 • **event**: [`EventIdEnum`](../../../../../../enums/Types/EventIdEnum/EventIdEnum.md)
 
+Event identifying the type of transaction
+
 #### Defined in
 
-[api/entities/Asset/types.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Asset/types.ts#L93)
+[api/entities/Asset/types.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/types.ts#L102)
 
 ___
 
@@ -96,7 +100,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:756](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L756)
+[types/index.ts:762](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L762)
 
 ___
 
@@ -104,9 +108,11 @@ ___
 
 • **extrinsicIndex**: `BigNumber`
 
+Index value of the extrinsic which led to the Asset transaction within the `blockNumber` block
+
 #### Defined in
 
-[api/entities/Asset/types.ts:94](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Asset/types.ts#L94)
+[api/entities/Asset/types.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/types.ts#L112)
 
 ___
 
@@ -114,9 +120,47 @@ ___
 
 • **from**: ``null`` \| [`NumberedPortfolio`](../../../../../../classes/API/Entities/NumberedPortfolio/NumberedPortfolio.md) \| [`DefaultPortfolio`](../../../../../../classes/API/Entities/DefaultPortfolio/DefaultPortfolio.md)
 
+Origin portfolio involved in the transaction. This value will be null when the `event` value is `Issued`
+
 #### Defined in
 
-[api/entities/Asset/types.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Asset/types.ts#L91)
+[api/entities/Asset/types.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/types.ts#L93)
+
+___
+
+### fundingRound
+
+• `Optional` **fundingRound**: `string`
+
+Name of the funding round (if provided while issuing the Asset). This value is present only when the value of `event` is `Issued`
+
+#### Defined in
+
+[api/entities/Asset/types.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/types.ts#L117)
+
+___
+
+### instructionId
+
+• `Optional` **instructionId**: `BigNumber`
+
+ID of the instruction being executed. This value is present only when the value of `event` is `Transfer`
+
+#### Defined in
+
+[api/entities/Asset/types.ts:121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/types.ts#L121)
+
+___
+
+### instructionMemo
+
+• `Optional` **instructionMemo**: `string`
+
+Memo provided against the executed instruction. This value is present only when the value of `event` is `Transfer`
+
+#### Defined in
+
+[api/entities/Asset/types.ts:125](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/types.ts#L125)
 
 ___
 
@@ -124,6 +168,8 @@ ___
 
 • **to**: ``null`` \| [`NumberedPortfolio`](../../../../../../classes/API/Entities/NumberedPortfolio/NumberedPortfolio.md) \| [`DefaultPortfolio`](../../../../../../classes/API/Entities/DefaultPortfolio/DefaultPortfolio.md)
 
+Destination portfolio involved in the transaction . This value will be null when the `event` value is `Redeemed`
+
 #### Defined in
 
-[api/entities/Asset/types.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Asset/types.ts#L92)
+[api/entities/Asset/types.ts:97](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/types.ts#L97)

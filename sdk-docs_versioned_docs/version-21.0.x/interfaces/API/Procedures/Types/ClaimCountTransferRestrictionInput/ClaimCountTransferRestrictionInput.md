@@ -20,7 +20,7 @@ sidebar_label: "ClaimCountTransferRestrictionInput"
 
 #### Defined in
 
-[api/procedures/types.ts:183](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L183)
+[api/procedures/types.ts:183](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L183)
 
 ___
 
@@ -36,7 +36,7 @@ TransferRestrictionInputBase.exemptedIdentities
 
 #### Defined in
 
-[api/procedures/types.ts:162](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L162)
+[api/procedures/types.ts:162](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L162)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L182)
+[api/procedures/types.ts:182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L182)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L181)
+[api/procedures/types.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L181)
 
 ___
 
@@ -66,4 +66,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:180](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L180)
+[api/procedures/types.ts:180](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L180)

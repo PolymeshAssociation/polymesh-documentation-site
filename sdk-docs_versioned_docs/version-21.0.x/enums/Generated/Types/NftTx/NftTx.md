@@ -14,7 +14,7 @@ sidebar_label: "NftTx"
 
 #### Defined in
 
-[generated/types.ts:747](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L747)
+[generated/types.ts:747](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/generated/types.ts#L747)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:748](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L748)
+[generated/types.ts:748](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/generated/types.ts#L748)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:749](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L749)
+[generated/types.ts:749](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/generated/types.ts#L749)

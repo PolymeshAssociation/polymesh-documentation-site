@@ -14,7 +14,7 @@ sidebar_label: "SetClaimCountTransferRestrictionsParams"
 
 #### Defined in
 
-[api/procedures/types.ts:231](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L231)
+[api/procedures/types.ts:231](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/procedures/types.ts#L231)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:232](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L232)
+[api/procedures/types.ts:232](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/procedures/types.ts#L232)

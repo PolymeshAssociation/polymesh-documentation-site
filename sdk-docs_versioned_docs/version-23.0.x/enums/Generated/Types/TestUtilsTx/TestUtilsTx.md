@@ -14,7 +14,7 @@ sidebar_label: "TestUtilsTx"
 
 #### Defined in
 
-[generated/types.ts:744](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L744)
+[generated/types.ts:745](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L745)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:743](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L743)
+[generated/types.ts:744](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L744)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:742](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L742)
+[generated/types.ts:743](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L743)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:741](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L741)
+[generated/types.ts:742](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L742)

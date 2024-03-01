@@ -14,7 +14,7 @@ sidebar_label: "StatJurisdictionClaimInput"
 
 #### Defined in
 
-[types/index.ts:293](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L293)
+[types/index.ts:293](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L293)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:292](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L292)
+[types/index.ts:292](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L292)

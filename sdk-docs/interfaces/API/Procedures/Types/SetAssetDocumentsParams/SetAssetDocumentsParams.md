@@ -16,4 +16,4 @@ list of documents
 
 #### Defined in
 
-[api/procedures/types.ts:840](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L840)
+[api/procedures/types.ts:861](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/procedures/types.ts#L861)

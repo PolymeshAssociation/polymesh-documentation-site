@@ -20,11 +20,11 @@ sidebar_label: "ResultSet"
 
 **`Note`**
 
- methods will have `count` defined when middleware is configured, but be undefined otherwise. This happens when the chain node is queried directly
+methods will have `count` defined when middleware is configured, but be undefined otherwise. This happens when the chain node is queried directly
 
 #### Defined in
 
-[types/index.ts:789](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L789)
+[types/index.ts:789](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/types/index.ts#L789)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:784](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L784)
+[types/index.ts:784](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/types/index.ts#L784)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:785](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L785)
+[types/index.ts:785](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/types/index.ts#L785)

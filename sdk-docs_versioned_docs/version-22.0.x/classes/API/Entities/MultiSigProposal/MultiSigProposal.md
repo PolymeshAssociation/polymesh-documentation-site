@@ -10,7 +10,7 @@ A proposal for a MultiSig transaction. This is a wrapper around an extrinsic tha
 
 ## Hierarchy
 
-- [`Entity`](../Entity/Entity.md)<`UniqueIdentifiers`, [`HumanReadable`](../../../../interfaces/API/Entities/MultiSigProposal/HumanReadable/HumanReadable.md)\>
+- [`Entity`](../Entity/Entity.md)\<`UniqueIdentifiers`, [`HumanReadable`](../../../../interfaces/API/Entities/MultiSigProposal/HumanReadable/HumanReadable.md)\>
 
   ↳ **`MultiSigProposal`**
 
@@ -22,7 +22,7 @@ A proposal for a MultiSig transaction. This is a wrapper around an extrinsic tha
 
 #### Defined in
 
-[api/entities/MultiSigProposal/index.ts:30](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/MultiSigProposal/index.ts#L30)
+[api/entities/MultiSigProposal/index.ts:30](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/MultiSigProposal/index.ts#L30)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[api/entities/MultiSigProposal/index.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/MultiSigProposal/index.ts#L29)
+[api/entities/MultiSigProposal/index.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/MultiSigProposal/index.ts#L29)
 
 ___
 
@@ -46,35 +46,43 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
 ### details
 
-▸ **details**(): `Promise`<[`MultiSigProposalDetails`](../../../../interfaces/API/Entities/MultiSigProposal/Types/MultiSigProposalDetails/MultiSigProposalDetails.md)\>
+▸ **details**(): `Promise`\<[`MultiSigProposalDetails`](../../../../interfaces/API/Entities/MultiSigProposal/Types/MultiSigProposalDetails/MultiSigProposalDetails.md)\>
 
 Fetches the details of the Proposal. This includes the amount of approvals and rejections, the expiry, and details of the wrapped extrinsic
 
 #### Returns
 
-`Promise`<[`MultiSigProposalDetails`](../../../../interfaces/API/Entities/MultiSigProposal/Types/MultiSigProposalDetails/MultiSigProposalDetails.md)\>
+`Promise`\<[`MultiSigProposalDetails`](../../../../interfaces/API/Entities/MultiSigProposal/Types/MultiSigProposalDetails/MultiSigProposalDetails.md)\>
+
+#### Defined in
+
+[api/entities/MultiSigProposal/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/MultiSigProposal/index.ts#L49)
 
 ___
 
 ### exists
 
-▸ **exists**(): `Promise`<`boolean`\>
+▸ **exists**(): `Promise`\<`boolean`\>
 
 Determines whether this Proposal exists on chain
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Overrides
 
 [Entity](../Entity/Entity.md).[exists](../Entity/Entity.md#exists)
+
+#### Defined in
+
+[api/entities/MultiSigProposal/index.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/MultiSigProposal/index.ts#L108)
 
 ___
 
@@ -88,7 +96,7 @@ Determine whether this Entity is the same as another one
 
 | Name | Type |
 | :------ | :------ |
-| `entity` | [`Entity`](../Entity/Entity.md)<`unknown`, `unknown`\> |
+| `entity` | [`Entity`](../Entity/Entity.md)\<`unknown`, `unknown`\> |
 
 #### Returns
 
@@ -97,6 +105,10 @@ Determine whether this Entity is the same as another one
 #### Inherited from
 
 [Entity](../Entity/Entity.md).[isEqual](../Entity/Entity.md#isequal)
+
+#### Defined in
+
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -114,11 +126,15 @@ Returns a human readable representation
 
 [Entity](../Entity/Entity.md).[toHuman](../Entity/Entity.md#tohuman)
 
+#### Defined in
+
+[api/entities/MultiSigProposal/index.ts:130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/MultiSigProposal/index.ts#L130)
+
 ___
 
 ### generateUuid
 
-▸ `Static` **generateUuid**<`Identifiers`\>(`identifiers`): `string`
+▸ `Static` **generateUuid**\<`Identifiers`\>(`identifiers`): `string`
 
 Generate the Entity's UUID from its identifying properties
 
@@ -142,6 +158,10 @@ Generate the Entity's UUID from its identifying properties
 
 [Entity](../Entity/Entity.md).[generateUuid](../Entity/Entity.md#generateuuid)
 
+#### Defined in
+
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L14)
+
 ___
 
 ### isUniqueIdentifiers
@@ -164,11 +184,15 @@ Typeguard that checks whether the object passed corresponds to the unique identi
 
 [Entity](../Entity/Entity.md).[isUniqueIdentifiers](../Entity/Entity.md#isuniqueidentifiers)
 
+#### Defined in
+
+[api/entities/Entity.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L42)
+
 ___
 
 ### unserialize
 
-▸ `Static` **unserialize**<`Identifiers`\>(`serialized`): `Identifiers`
+▸ `Static` **unserialize**\<`Identifiers`\>(`serialized`): `Identifiers`
 
 Unserialize a UUID into its Unique Identifiers
 
@@ -191,3 +215,7 @@ Unserialize a UUID into its Unique Identifiers
 #### Inherited from
 
 [Entity](../Entity/Entity.md).[unserialize](../Entity/Entity.md#unserialize)
+
+#### Defined in
+
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L23)

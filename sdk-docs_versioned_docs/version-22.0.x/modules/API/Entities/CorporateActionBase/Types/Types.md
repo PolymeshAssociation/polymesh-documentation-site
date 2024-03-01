@@ -1,7 +1,7 @@
 ---
-id: "Types"
-title: "Module: CorporateActionBase Types"
-sidebar_label: "Types"
+id: 'Types'
+title: 'Module: CorporateActionBase Types'
+sidebar_label: 'Types'
 ---
 
 ## Enumerations
@@ -24,18 +24,18 @@ Renames and re-exports [Params](../../../../../interfaces/API/Entities/Corporate
 
 ### InputTargets
 
-Ƭ **InputTargets**: [`Modify`](../../../../Types/Utils/Utils.md#modify)<[`CorporateActionTargets`](../../../../../interfaces/API/Entities/CorporateActionBase/Types/CorporateActionTargets/CorporateActionTargets.md), { `identities`: (`string` \| [`Identity`](../../../../../classes/API/Entities/Identity/Identity.md))[]  }\>
+Ƭ **InputTargets**: [`Modify`](../../../../Types/Utils/Utils.md#modify) \<[`CorporateActionTargets`](../../../../../interfaces/API/Entities/CorporateActionBase/Types/CorporateActionTargets/CorporateActionTargets.md), \{ `identities`: (`string` \| [`Identity`](../../../../../classes/API/Entities/Identity/Identity.md))[] }\>
 
 #### Defined in
 
-[api/entities/CorporateActionBase/types.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateActionBase/types.ts#L21)
+[api/entities/CorporateActionBase/types.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/types.ts#L21)
 
-___
+---
 
 ### InputTaxWithholding
 
-Ƭ **InputTaxWithholding**: [`Modify`](../../../../Types/Utils/Utils.md#modify)<[`TaxWithholding`](../../../../../interfaces/API/Entities/CorporateActionBase/Types/TaxWithholding/TaxWithholding.md), { `identity`: `string` \| [`Identity`](../../../../../classes/API/Entities/Identity/Identity.md)  }\>
+Ƭ **InputTaxWithholding**: [`Modify`](../../../../Types/Utils/Utils.md#modify) \<[`TaxWithholding`](../../../../../interfaces/API/Entities/CorporateActionBase/Types/TaxWithholding/TaxWithholding.md), \{ `identity`: `string` \| [`Identity`](../../../../../classes/API/Entities/Identity/Identity.md) }\>
 
 #### Defined in
 
-[api/entities/CorporateActionBase/types.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateActionBase/types.ts#L28)
+[api/entities/CorporateActionBase/types.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/types.ts#L28)

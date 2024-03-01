@@ -10,8 +10,8 @@ sidebar_label: "SetGroupPermissionsParams"
 
 ### permissions
 
-• **permissions**: { `transactions`: [`TransactionPermissions`](../../../../Types/TransactionPermissions/TransactionPermissions.md)  } \| { `transactionGroups`: [`TxGroup`](../../../../../enums/Types/TxGroup/TxGroup.md)[]  }
+• **permissions**: \{ `transactions`: [`TransactionPermissions`](../../../../Types/TransactionPermissions/TransactionPermissions.md)  } \| \{ `transactionGroups`: [`TxGroup`](../../../../../enums/Types/TxGroup/TxGroup.md)[]  }
 
 #### Defined in
 
-[api/procedures/types.ts:853](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/procedures/types.ts#L853)
+[api/procedures/types.ts:853](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/procedures/types.ts#L853)

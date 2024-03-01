@@ -18,7 +18,7 @@ how the transfer adheres to the asset's compliance rules
 
 #### Defined in
 
-[api/entities/Asset/types.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Asset/types.ts#L72)
+[api/entities/Asset/types.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/types.ts#L72)
 
 ___
 
@@ -30,7 +30,7 @@ list of general transfer errors
 
 #### Defined in
 
-[api/entities/Asset/types.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Asset/types.ts#L68)
+[api/entities/Asset/types.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/types.ts#L68)
 
 ___
 
@@ -42,7 +42,7 @@ list of transfer restrictions and whether the transfer satisfies each one
 
 #### Defined in
 
-[api/entities/Asset/types.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Asset/types.ts#L76)
+[api/entities/Asset/types.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/types.ts#L76)
 
 ___
 
@@ -54,4 +54,4 @@ true if the transfer is possible
 
 #### Defined in
 
-[api/entities/Asset/types.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Asset/types.ts#L80)
+[api/entities/Asset/types.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/types.ts#L80)

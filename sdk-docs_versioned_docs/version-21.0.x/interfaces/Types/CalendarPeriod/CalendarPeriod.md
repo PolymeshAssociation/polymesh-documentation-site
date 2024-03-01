@@ -16,7 +16,7 @@ Represents a period of time measured in a specific unit (e.g. 20 days)
 
 #### Defined in
 
-[types/index.ts:1444](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1444)
+[types/index.ts:1444](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/types/index.ts#L1444)
 
 ___
 
@@ -26,4 +26,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:1443](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1443)
+[types/index.ts:1443](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/types/index.ts#L1443)

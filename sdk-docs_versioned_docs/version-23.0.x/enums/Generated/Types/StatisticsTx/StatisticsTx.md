@@ -14,7 +14,7 @@ sidebar_label: "StatisticsTx"
 
 #### Defined in
 
-[generated/types.ts:681](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L681)
+[generated/types.ts:681](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L681)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:679](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L679)
+[generated/types.ts:679](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L679)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:686](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L686)
+[generated/types.ts:686](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L686)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:682](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L682)
+[generated/types.ts:682](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L682)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:680](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L680)
+[generated/types.ts:680](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L680)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:685](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L685)
+[generated/types.ts:685](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L685)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:683](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L683)
+[generated/types.ts:683](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L683)
 
 ___
 
@@ -84,4 +84,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:684](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L684)
+[generated/types.ts:684](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L684)

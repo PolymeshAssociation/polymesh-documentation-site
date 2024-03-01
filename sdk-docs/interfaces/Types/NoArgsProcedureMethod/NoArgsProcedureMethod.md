@@ -17,7 +17,7 @@ sidebar_label: "NoArgsProcedureMethod"
 
 ### NoArgsProcedureMethod
 
-▸ **NoArgsProcedureMethod**(`opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../modules/Types/Types.md#genericpolymeshtransaction)<`ProcedureReturnValue`, `ReturnValue`\>\>
+▸ **NoArgsProcedureMethod**(`opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../modules/Types/Types.md#genericpolymeshtransaction)\<`ProcedureReturnValue`, `ReturnValue`\>\>
 
 #### Parameters
 
@@ -27,17 +27,21 @@ sidebar_label: "NoArgsProcedureMethod"
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../modules/Types/Types.md#genericpolymeshtransaction)<`ProcedureReturnValue`, `ReturnValue`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../modules/Types/Types.md#genericpolymeshtransaction)\<`ProcedureReturnValue`, `ReturnValue`\>\>
+
+#### Defined in
+
+[types/index.ts:1589](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L1589)
 
 ## Properties
 
 ### checkAuthorization
 
-• **checkAuthorization**: (`opts?`: [`ProcedureOpts`](../ProcedureOpts/ProcedureOpts.md)) => `Promise`<[`ProcedureAuthorizationStatus`](../ProcedureAuthorizationStatus/ProcedureAuthorizationStatus.md)\>
+• **checkAuthorization**: (`opts?`: [`ProcedureOpts`](../ProcedureOpts/ProcedureOpts.md)) => `Promise`\<[`ProcedureAuthorizationStatus`](../ProcedureAuthorizationStatus/ProcedureAuthorizationStatus.md)\>
 
 #### Type declaration
 
-▸ (`opts?`): `Promise`<[`ProcedureAuthorizationStatus`](../ProcedureAuthorizationStatus/ProcedureAuthorizationStatus.md)\>
+▸ (`opts?`): `Promise`\<[`ProcedureAuthorizationStatus`](../ProcedureAuthorizationStatus/ProcedureAuthorizationStatus.md)\>
 
 ##### Parameters
 
@@ -47,8 +51,8 @@ sidebar_label: "NoArgsProcedureMethod"
 
 ##### Returns
 
-`Promise`<[`ProcedureAuthorizationStatus`](../ProcedureAuthorizationStatus/ProcedureAuthorizationStatus.md)\>
+`Promise`\<[`ProcedureAuthorizationStatus`](../ProcedureAuthorizationStatus/ProcedureAuthorizationStatus.md)\>
 
 #### Defined in
 
-[types/index.ts:1584](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L1584)
+[types/index.ts:1590](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L1590)

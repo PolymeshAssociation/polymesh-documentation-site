@@ -14,7 +14,7 @@ sidebar_label: "HumanReadable"
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MetadataEntry/index.ts#L25)
+[api/entities/MetadataEntry/index.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MetadataEntry/index.ts#L34)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MetadataEntry/index.ts#L26)
+[api/entities/MetadataEntry/index.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MetadataEntry/index.ts#L35)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MetadataEntry/index.ts#L27)
+[api/entities/MetadataEntry/index.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MetadataEntry/index.ts#L36)

@@ -16,8 +16,8 @@ sidebar_label: "CreateTransactionBatchParams"
 
 ### transactions
 
-• **transactions**: `Readonly`<[`TransactionArray`](../../../../../modules/Types/Types.md#transactionarray)<`ReturnValues`\>\>
+• **transactions**: `Readonly`\<[`TransactionArray`](../../../../../modules/Types/Types.md#transactionarray)\<`ReturnValues`\>\>
 
 #### Defined in
 
-[api/procedures/types.ts:1086](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L1086)
+[api/procedures/types.ts:1086](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/procedures/types.ts#L1086)

@@ -14,7 +14,7 @@ sidebar_label: "CddServiceProvidersTx"
 
 #### Defined in
 
-[generated/types.ts:342](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/generated/types.ts#L342)
+[generated/types.ts:342](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/generated/types.ts#L342)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:338](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/generated/types.ts#L338)
+[generated/types.ts:338](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/generated/types.ts#L338)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:337](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/generated/types.ts#L337)
+[generated/types.ts:337](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/generated/types.ts#L337)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:339](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/generated/types.ts#L339)
+[generated/types.ts:339](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/generated/types.ts#L339)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:341](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/generated/types.ts#L341)
+[generated/types.ts:341](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/generated/types.ts#L341)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:336](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/generated/types.ts#L336)
+[generated/types.ts:336](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/generated/types.ts#L336)
 
 ___
 
@@ -74,4 +74,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:340](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/generated/types.ts#L340)
+[generated/types.ts:340](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/generated/types.ts#L340)

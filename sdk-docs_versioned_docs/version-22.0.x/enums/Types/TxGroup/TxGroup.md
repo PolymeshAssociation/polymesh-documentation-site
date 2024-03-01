@@ -21,7 +21,7 @@ Transaction Groups (for permissions purposes)
 
 #### Defined in
 
-[types/index.ts:882](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L882)
+[types/index.ts:882](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L882)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:875](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L875)
+[types/index.ts:875](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L875)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:905](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L905)
+[types/index.ts:905](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L905)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:913](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L913)
+[types/index.ts:913](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L913)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:923](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L923)
+[types/index.ts:923](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L923)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:891](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L891)
+[types/index.ts:891](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L891)
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:895](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L895)
+[types/index.ts:895](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L895)
 
 ___
 
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:867](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L867)
+[types/index.ts:867](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L867)
 
 ___
 
@@ -153,7 +153,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:935](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L935)
+[types/index.ts:935](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L935)
 
 ___
 
@@ -166,4 +166,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:900](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L900)
+[types/index.ts:900](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L900)

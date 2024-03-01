@@ -14,7 +14,17 @@ sidebar_label: "InstructionAffirmationOperation"
 
 #### Defined in
 
-[api/procedures/types.ts:563](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L563)
+[api/procedures/types.ts:567](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/procedures/types.ts#L567)
+
+___
+
+### AffirmAsMediator
+
+• **AffirmAsMediator** = ``"AffirmAsMediator"``
+
+#### Defined in
+
+[api/procedures/types.ts:570](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/procedures/types.ts#L570)
 
 ___
 
@@ -24,7 +34,17 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:565](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L565)
+[api/procedures/types.ts:569](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/procedures/types.ts#L569)
+
+___
+
+### RejectAsMediator
+
+• **RejectAsMediator** = ``"RejectAsMediator"``
+
+#### Defined in
+
+[api/procedures/types.ts:572](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/procedures/types.ts#L572)
 
 ___
 
@@ -34,4 +54,14 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:564](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L564)
+[api/procedures/types.ts:568](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/procedures/types.ts#L568)
+
+___
+
+### WithdrawAsMediator
+
+• **WithdrawAsMediator** = ``"WithdrawAsMediator"``
+
+#### Defined in
+
+[api/procedures/types.ts:571](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/procedures/types.ts#L571)

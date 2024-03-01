@@ -14,7 +14,7 @@ sidebar_label: "AffirmationStatus"
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Instruction/types.ts#L73)
+[api/entities/Instruction/types.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Instruction/types.ts#L73)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Instruction/types.ts#L72)
+[api/entities/Instruction/types.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Instruction/types.ts#L72)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Instruction/types.ts#L71)
+[api/entities/Instruction/types.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Instruction/types.ts#L71)

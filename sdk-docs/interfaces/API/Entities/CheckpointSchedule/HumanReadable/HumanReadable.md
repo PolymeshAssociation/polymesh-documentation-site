@@ -14,7 +14,7 @@ sidebar_label: "HumanReadable"
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/CheckpointSchedule/index.ts#L17)
+[api/entities/CheckpointSchedule/index.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/CheckpointSchedule/index.ts#L17)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/CheckpointSchedule/index.ts#L14)
+[api/entities/CheckpointSchedule/index.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/CheckpointSchedule/index.ts#L14)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/CheckpointSchedule/index.ts#L16)
+[api/entities/CheckpointSchedule/index.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/CheckpointSchedule/index.ts#L16)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/CheckpointSchedule/index.ts#L15)
+[api/entities/CheckpointSchedule/index.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/CheckpointSchedule/index.ts#L15)

@@ -16,7 +16,7 @@ Handles all Authorization related functionality
 
 ## Hierarchy
 
-- `Namespace`<`Parent`\>
+- `Namespace`\<`Parent`\>
 
   ↳ **`Authorizations`**
 
@@ -26,13 +26,9 @@ Handles all Authorization related functionality
 
 ### getOne
 
-▸ **getOne**(`args`): `Promise`<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)\>
+▸ **getOne**(`args`): `Promise`\<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)\>
 
 Retrieve a single Authorization Request targeting this Signer by its ID
-
-**`Throws`**
-
- if there is no Authorization Request with the passed ID targeting this Signer
 
 #### Parameters
 
@@ -43,13 +39,21 @@ Retrieve a single Authorization Request targeting this Signer by its ID
 
 #### Returns
 
-`Promise`<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)\>
+`Promise`\<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)\>
+
+**`Throws`**
+
+if there is no Authorization Request with the passed ID targeting this Signer
+
+#### Defined in
+
+[api/entities/common/namespaces/Authorizations.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/common/namespaces/Authorizations.ts#L65)
 
 ___
 
 ### getReceived
 
-▸ **getReceived**(`opts?`): `Promise`<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)[]\>
+▸ **getReceived**(`opts?`): `Promise`\<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)[]\>
 
 Fetch all pending Authorization Requests for which this Signer is the target
 
@@ -63,4 +67,8 @@ Fetch all pending Authorization Requests for which this Signer is the target
 
 #### Returns
 
-`Promise`<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)[]\>
+`Promise`\<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)[]\>
+
+#### Defined in
+
+[api/entities/common/namespaces/Authorizations.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/common/namespaces/Authorizations.ts#L29)

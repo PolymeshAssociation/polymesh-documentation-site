@@ -14,4 +14,4 @@ sidebar_label: "UniqueIdentifiers"
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/AuthorizationRequest.ts#L29)
+[api/entities/AuthorizationRequest.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/AuthorizationRequest.ts#L29)

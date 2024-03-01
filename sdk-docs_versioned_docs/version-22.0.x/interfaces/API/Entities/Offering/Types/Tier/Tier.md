@@ -24,7 +24,7 @@ sidebar_label: "Tier"
 
 #### Defined in
 
-[api/entities/Offering/types.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Offering/types.ts#L63)
+[api/entities/Offering/types.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Offering/types.ts#L63)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[api/entities/Offering/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Offering/types.ts#L64)
+[api/entities/Offering/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Offering/types.ts#L64)
 
 ___
 
@@ -48,4 +48,4 @@ ___
 
 #### Defined in
 
-[api/entities/Offering/types.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Offering/types.ts#L68)
+[api/entities/Offering/types.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Offering/types.ts#L68)

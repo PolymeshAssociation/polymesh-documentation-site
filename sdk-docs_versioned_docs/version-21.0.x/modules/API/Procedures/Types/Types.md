@@ -86,91 +86,91 @@ sidebar_label: "Types"
 
 ### AddAssetStatParams
 
-Ƭ **AddAssetStatParams**: { `ticker`: `string`  } & [`AddCountStatParams`](Types.md#addcountstatparams) \| [`AddPercentageStatParams`](Types.md#addpercentagestatparams) \| [`AddClaimCountStatParams`](Types.md#addclaimcountstatparams) \| [`AddClaimPercentageStatParams`](Types.md#addclaimpercentagestatparams)
+Ƭ **AddAssetStatParams**: \{ `ticker`: `string`  } & [`AddCountStatParams`](Types.md#addcountstatparams) \| [`AddPercentageStatParams`](Types.md#addpercentagestatparams) \| [`AddClaimCountStatParams`](Types.md#addclaimcountstatparams) \| [`AddClaimPercentageStatParams`](Types.md#addclaimpercentagestatparams)
 
 #### Defined in
 
-[api/procedures/types.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L112)
+[api/procedures/types.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L112)
 
 ___
 
 ### AddClaimCountStatParams
 
-Ƭ **AddClaimCountStatParams**: [`ClaimCountStatInput`](../../../Types/Types.md#claimcountstatinput) & { `type`: [`ScopedCount`](../../../../enums/Types/StatType/StatType.md#scopedcount)  }
+Ƭ **AddClaimCountStatParams**: [`ClaimCountStatInput`](../../../Types/Types.md#claimcountstatinput) & \{ `type`: [`ScopedCount`](../../../../enums/Types/StatType/StatType.md#scopedcount)  }
 
 #### Defined in
 
-[api/procedures/types.ts:104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L104)
+[api/procedures/types.ts:104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L104)
 
 ___
 
 ### AddClaimCountTransferRestrictionParams
 
-Ƭ **AddClaimCountTransferRestrictionParams**: [`ClaimCountTransferRestrictionInput`](../../../../interfaces/API/Procedures/Types/ClaimCountTransferRestrictionInput/ClaimCountTransferRestrictionInput.md) & { `type`: [`ClaimCount`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#claimcount)  }
+Ƭ **AddClaimCountTransferRestrictionParams**: [`ClaimCountTransferRestrictionInput`](../../../../interfaces/API/Procedures/Types/ClaimCountTransferRestrictionInput/ClaimCountTransferRestrictionInput.md) & \{ `type`: [`ClaimCount`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#claimcount)  }
 
 #### Defined in
 
-[api/procedures/types.ts:200](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L200)
+[api/procedures/types.ts:200](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L200)
 
 ___
 
 ### AddClaimPercentageStatParams
 
-Ƭ **AddClaimPercentageStatParams**: [`StatClaimIssuer`](../../../../interfaces/Types/StatClaimIssuer/StatClaimIssuer.md) & { `type`: [`ScopedBalance`](../../../../enums/Types/StatType/StatType.md#scopedbalance)  }
+Ƭ **AddClaimPercentageStatParams**: [`StatClaimIssuer`](../../../../interfaces/Types/StatClaimIssuer/StatClaimIssuer.md) & \{ `type`: [`ScopedBalance`](../../../../enums/Types/StatType/StatType.md#scopedbalance)  }
 
 #### Defined in
 
-[api/procedures/types.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L108)
+[api/procedures/types.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L108)
 
 ___
 
 ### AddClaimPercentageTransferRestrictionParams
 
-Ƭ **AddClaimPercentageTransferRestrictionParams**: [`ClaimPercentageTransferRestrictionInput`](../../../../interfaces/API/Procedures/Types/ClaimPercentageTransferRestrictionInput/ClaimPercentageTransferRestrictionInput.md) & { `type`: [`ClaimPercentage`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#claimpercentage)  }
+Ƭ **AddClaimPercentageTransferRestrictionParams**: [`ClaimPercentageTransferRestrictionInput`](../../../../interfaces/API/Procedures/Types/ClaimPercentageTransferRestrictionInput/ClaimPercentageTransferRestrictionInput.md) & \{ `type`: [`ClaimPercentage`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#claimpercentage)  }
 
 #### Defined in
 
-[api/procedures/types.ts:204](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L204)
+[api/procedures/types.ts:204](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L204)
 
 ___
 
 ### AddCountStatParams
 
-Ƭ **AddCountStatParams**: [`AddCountStatInput`](../../../../interfaces/Types/AddCountStatInput/AddCountStatInput.md) & { `type`: [`Count`](../../../../enums/Types/StatType/StatType.md#count)  }
+Ƭ **AddCountStatParams**: [`AddCountStatInput`](../../../../interfaces/Types/AddCountStatInput/AddCountStatInput.md) & \{ `type`: [`Count`](../../../../enums/Types/StatType/StatType.md#count)  }
 
 #### Defined in
 
-[api/procedures/types.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L96)
+[api/procedures/types.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L96)
 
 ___
 
 ### AddCountTransferRestrictionParams
 
-Ƭ **AddCountTransferRestrictionParams**: [`CountTransferRestrictionInput`](../../../../interfaces/API/Procedures/Types/CountTransferRestrictionInput/CountTransferRestrictionInput.md) & { `type`: [`Count`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#count)  }
+Ƭ **AddCountTransferRestrictionParams**: [`CountTransferRestrictionInput`](../../../../interfaces/API/Procedures/Types/CountTransferRestrictionInput/CountTransferRestrictionInput.md) & \{ `type`: [`Count`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#count)  }
 
 #### Defined in
 
-[api/procedures/types.ts:192](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L192)
+[api/procedures/types.ts:192](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L192)
 
 ___
 
 ### AddInstructionParams
 
-Ƭ **AddInstructionParams**: { `legs`: { `amount`: `BigNumber` ; `asset`: `string` \| [`Asset`](../../../../classes/API/Entities/Asset/Asset.md) ; `from`: [`PortfolioLike`](../../../Types/Types.md#portfoliolike) ; `to`: [`PortfolioLike`](../../../Types/Types.md#portfoliolike)  }[] ; `memo?`: `string` ; `tradeDate?`: `Date` ; `valueDate?`: `Date`  } & { `endBlock?`: `BigNumber`  } \| { `endAfterBlock?`: `BigNumber`  }
+Ƭ **AddInstructionParams**: \{ `legs`: \{ `amount`: `BigNumber` ; `asset`: `string` \| [`Asset`](../../../../classes/API/Entities/Asset/Asset.md) ; `from`: [`PortfolioLike`](../../../Types/Types.md#portfoliolike) ; `to`: [`PortfolioLike`](../../../Types/Types.md#portfoliolike)  }[] ; `memo?`: `string` ; `tradeDate?`: `Date` ; `valueDate?`: `Date`  } & \{ `endBlock?`: `BigNumber`  } \| \{ `endAfterBlock?`: `BigNumber`  }
 
 #### Defined in
 
-[api/procedures/types.ts:443](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L443)
+[api/procedures/types.ts:443](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L443)
 
 ___
 
 ### AddInstructionWithVenueIdParams
 
-Ƭ **AddInstructionWithVenueIdParams**: [`AddInstructionParams`](Types.md#addinstructionparams) & { `venueId`: `BigNumber`  }
+Ƭ **AddInstructionWithVenueIdParams**: [`AddInstructionParams`](Types.md#addinstructionparams) & \{ `venueId`: `BigNumber`  }
 
 #### Defined in
 
-[api/procedures/types.ts:487](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L487)
+[api/procedures/types.ts:487](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L487)
 
 ___
 
@@ -186,23 +186,23 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L100)
+[api/procedures/types.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L100)
 
 ___
 
 ### AddPercentageTransferRestrictionParams
 
-Ƭ **AddPercentageTransferRestrictionParams**: [`PercentageTransferRestrictionInput`](../../../../interfaces/API/Procedures/Types/PercentageTransferRestrictionInput/PercentageTransferRestrictionInput.md) & { `type`: [`Percentage`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#percentage)  }
+Ƭ **AddPercentageTransferRestrictionParams**: [`PercentageTransferRestrictionInput`](../../../../interfaces/API/Procedures/Types/PercentageTransferRestrictionInput/PercentageTransferRestrictionInput.md) & \{ `type`: [`Percentage`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#percentage)  }
 
 #### Defined in
 
-[api/procedures/types.ts:196](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L196)
+[api/procedures/types.ts:196](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L196)
 
 ___
 
 ### AddRestrictionParams
 
-Ƭ **AddRestrictionParams**<`T`\>: `Omit`<`T` extends [`Count`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#count) ? [`AddCountTransferRestrictionParams`](Types.md#addcounttransferrestrictionparams) : `T` extends [`Percentage`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#percentage) ? [`AddPercentageTransferRestrictionParams`](Types.md#addpercentagetransferrestrictionparams) : `T` extends [`ClaimCount`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#claimcount) ? [`AddClaimCountTransferRestrictionParams`](Types.md#addclaimcounttransferrestrictionparams) : [`AddClaimPercentageTransferRestrictionParams`](Types.md#addclaimpercentagetransferrestrictionparams), ``"type"``\>
+Ƭ **AddRestrictionParams**\<`T`\>: `Omit`\<`T` extends [`Count`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#count) ? [`AddCountTransferRestrictionParams`](Types.md#addcounttransferrestrictionparams) : `T` extends [`Percentage`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#percentage) ? [`AddPercentageTransferRestrictionParams`](Types.md#addpercentagetransferrestrictionparams) : `T` extends [`ClaimCount`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#claimcount) ? [`AddClaimCountTransferRestrictionParams`](Types.md#addclaimcounttransferrestrictionparams) : [`AddClaimPercentageTransferRestrictionParams`](Types.md#addclaimpercentagetransferrestrictionparams), ``"type"``\>
 
 #### Type parameters
 
@@ -212,7 +212,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L57)
+[api/procedures/types.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L57)
 
 ___
 
@@ -224,27 +224,27 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `portfolios?` | [`PortfolioLike`](../../../Types/Types.md#portfoliolike)[] | (optional) Portfolios that the signer controls and wants to affirm the instruction or withdraw affirmation  **`Note`**   if empty, all the legs containing any custodied Portfolios of the signer will be affirmed/affirmation will be withdrawn, based on the operation. |
+| `portfolios?` | [`PortfolioLike`](../../../Types/Types.md#portfoliolike)[] | (optional) Portfolios that the signer controls and wants to affirm the instruction or withdraw affirmation **`Note`** if empty, all the legs containing any custodied Portfolios of the signer will be affirmed/affirmation will be withdrawn, based on the operation. |
 
 #### Defined in
 
-[api/procedures/types.ts:508](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L508)
+[api/procedures/types.ts:508](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L508)
 
 ___
 
 ### ExecuteManualInstructionParams
 
-Ƭ **ExecuteManualInstructionParams**: [`InstructionIdParams`](../../../../interfaces/API/Procedures/Types/InstructionIdParams/InstructionIdParams.md) & { `skipAffirmationCheck?`: `boolean`  }
+Ƭ **ExecuteManualInstructionParams**: [`InstructionIdParams`](../../../../interfaces/API/Procedures/Types/InstructionIdParams/InstructionIdParams.md) & \{ `skipAffirmationCheck?`: `boolean`  }
 
 #### Defined in
 
-[api/procedures/types.ts:529](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L529)
+[api/procedures/types.ts:529](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L529)
 
 ___
 
 ### GetTransferRestrictionReturnType
 
-Ƭ **GetTransferRestrictionReturnType**<`T`\>: [`ActiveTransferRestrictions`](../../../../interfaces/Types/ActiveTransferRestrictions/ActiveTransferRestrictions.md)<`T` extends [`Count`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#count) ? [`CountTransferRestriction`](../../../../interfaces/Types/CountTransferRestriction/CountTransferRestriction.md) : `T` extends [`Percentage`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#percentage) ? [`PercentageTransferRestriction`](../../../../interfaces/Types/PercentageTransferRestriction/PercentageTransferRestriction.md) : `T` extends [`ClaimCount`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#claimcount) ? [`ClaimCountTransferRestriction`](../../../../interfaces/Types/ClaimCountTransferRestriction/ClaimCountTransferRestriction.md) : [`ClaimPercentageTransferRestriction`](../../../../interfaces/Types/ClaimPercentageTransferRestriction/ClaimPercentageTransferRestriction.md)\>
+Ƭ **GetTransferRestrictionReturnType**\<`T`\>: [`ActiveTransferRestrictions`](../../../../interfaces/Types/ActiveTransferRestrictions/ActiveTransferRestrictions.md)\<`T` extends [`Count`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#count) ? [`CountTransferRestriction`](../../../../interfaces/Types/CountTransferRestriction/CountTransferRestriction.md) : `T` extends [`Percentage`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#percentage) ? [`PercentageTransferRestriction`](../../../../interfaces/Types/PercentageTransferRestriction/PercentageTransferRestriction.md) : `T` extends [`ClaimCount`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#claimcount) ? [`ClaimCountTransferRestriction`](../../../../interfaces/Types/ClaimCountTransferRestriction/ClaimCountTransferRestriction.md) : [`ClaimPercentageTransferRestriction`](../../../../interfaces/Types/ClaimPercentageTransferRestriction/ClaimPercentageTransferRestriction.md)\>
 
 #### Type parameters
 
@@ -254,27 +254,27 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:79](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L79)
+[api/procedures/types.ts:79](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L79)
 
 ___
 
 ### ModifyAssetParams
 
-Ƭ **ModifyAssetParams**: { `fundingRound?`: `string` ; `identifiers?`: [`SecurityIdentifier`](../../../../interfaces/Types/SecurityIdentifier/SecurityIdentifier.md)[] ; `makeDivisible?`: ``true`` ; `name`: `string`  } \| { `fundingRound?`: `string` ; `identifiers?`: [`SecurityIdentifier`](../../../../interfaces/Types/SecurityIdentifier/SecurityIdentifier.md)[] ; `makeDivisible`: ``true`` ; `name?`: `string`  } \| { `fundingRound`: `string` ; `identifiers?`: [`SecurityIdentifier`](../../../../interfaces/Types/SecurityIdentifier/SecurityIdentifier.md)[] ; `makeDivisible?`: ``true`` ; `name?`: `string`  } \| { `fundingRound?`: `string` ; `identifiers`: [`SecurityIdentifier`](../../../../interfaces/Types/SecurityIdentifier/SecurityIdentifier.md)[] ; `makeDivisible?`: ``true`` ; `name?`: `string`  }
+Ƭ **ModifyAssetParams**: \{ `fundingRound?`: `string` ; `identifiers?`: [`SecurityIdentifier`](../../../../interfaces/Types/SecurityIdentifier/SecurityIdentifier.md)[] ; `makeDivisible?`: ``true`` ; `name`: `string`  } \| \{ `fundingRound?`: `string` ; `identifiers?`: [`SecurityIdentifier`](../../../../interfaces/Types/SecurityIdentifier/SecurityIdentifier.md)[] ; `makeDivisible`: ``true`` ; `name?`: `string`  } \| \{ `fundingRound`: `string` ; `identifiers?`: [`SecurityIdentifier`](../../../../interfaces/Types/SecurityIdentifier/SecurityIdentifier.md)[] ; `makeDivisible?`: ``true`` ; `name?`: `string`  } \| \{ `fundingRound?`: `string` ; `identifiers`: [`SecurityIdentifier`](../../../../interfaces/Types/SecurityIdentifier/SecurityIdentifier.md)[] ; `makeDivisible?`: ``true`` ; `name?`: `string`  }
 
 #### Defined in
 
-[api/procedures/types.ts:552](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L552)
+[api/procedures/types.ts:552](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L552)
 
 ___
 
 ### ModifyCaDefaultConfigParams
 
-Ƭ **ModifyCaDefaultConfigParams**: { `defaultTaxWithholding`: `BigNumber` ; `targets?`: [`InputTargets`](../../Entities/CorporateActionBase/Types/Types.md#inputtargets) ; `taxWithholdings?`: [`InputTaxWithholding`](../../Entities/CorporateActionBase/Types/Types.md#inputtaxwithholding)[]  } \| { `defaultTaxWithholding?`: `BigNumber` ; `targets`: [`InputTargets`](../../Entities/CorporateActionBase/Types/Types.md#inputtargets) ; `taxWithholdings?`: [`InputTaxWithholding`](../../Entities/CorporateActionBase/Types/Types.md#inputtaxwithholding)[]  } \| { `defaultTaxWithholding?`: `BigNumber` ; `targets?`: [`InputTargets`](../../Entities/CorporateActionBase/Types/Types.md#inputtargets) ; `taxWithholdings`: [`InputTaxWithholding`](../../Entities/CorporateActionBase/Types/Types.md#inputtaxwithholding)[]  }
+Ƭ **ModifyCaDefaultConfigParams**: \{ `defaultTaxWithholding`: `BigNumber` ; `targets?`: [`InputTargets`](../../Entities/CorporateActionBase/Types/Types.md#inputtargets) ; `taxWithholdings?`: [`InputTaxWithholding`](../../Entities/CorporateActionBase/Types/Types.md#inputtaxwithholding)[]  } \| \{ `defaultTaxWithholding?`: `BigNumber` ; `targets`: [`InputTargets`](../../Entities/CorporateActionBase/Types/Types.md#inputtargets) ; `taxWithholdings?`: [`InputTaxWithholding`](../../Entities/CorporateActionBase/Types/Types.md#inputtaxwithholding)[]  } \| \{ `defaultTaxWithholding?`: `BigNumber` ; `targets?`: [`InputTargets`](../../Entities/CorporateActionBase/Types/Types.md#inputtargets) ; `taxWithholdings`: [`InputTaxWithholding`](../../Entities/CorporateActionBase/Types/Types.md#inputtaxwithholding)[]  }
 
 #### Defined in
 
-[api/procedures/types.ts:691](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L691)
+[api/procedures/types.ts:691](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L691)
 
 ___
 
@@ -284,7 +284,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:360](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L360)
+[api/procedures/types.ts:360](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L360)
 
 ___
 
@@ -296,52 +296,52 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `conditions` | [`InputCondition`](../../../Types/Types.md#inputcondition)[] | array of conditions to replace the existing array of conditions for the requirement (identified by `id`).   Conditions within a requirement are *AND* between them. This means that in order   for a transfer to comply with this requirement, it must fulfill *ALL* conditions |
+| `conditions` | [`InputCondition`](../../../Types/Types.md#inputcondition)[] | array of conditions to replace the existing array of conditions for the requirement (identified by `id`). Conditions within a requirement are *AND* between them. This means that in order for a transfer to comply with this requirement, it must fulfill *ALL* conditions |
 | `id` | `BigNumber` | ID of the Compliance Requirement |
 
 #### Defined in
 
-[api/procedures/types.ts:640](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L640)
+[api/procedures/types.ts:640](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L640)
 
 ___
 
 ### ModifyInstructionAffirmationParams
 
-Ƭ **ModifyInstructionAffirmationParams**: [`InstructionIdParams`](../../../../interfaces/API/Procedures/Types/InstructionIdParams/InstructionIdParams.md) & { `operation`: [`Affirm`](../../../../enums/API/Procedures/Types/InstructionAffirmationOperation/InstructionAffirmationOperation.md#affirm) \| [`Withdraw`](../../../../enums/API/Procedures/Types/InstructionAffirmationOperation/InstructionAffirmationOperation.md#withdraw)  } & [`AffirmOrWithdrawInstructionParams`](Types.md#affirmorwithdrawinstructionparams) \| { `operation`: [`Reject`](../../../../enums/API/Procedures/Types/InstructionAffirmationOperation/InstructionAffirmationOperation.md#reject)  } & [`RejectInstructionParams`](Types.md#rejectinstructionparams)
+Ƭ **ModifyInstructionAffirmationParams**: [`InstructionIdParams`](../../../../interfaces/API/Procedures/Types/InstructionIdParams/InstructionIdParams.md) & \{ `operation`: [`Affirm`](../../../../enums/API/Procedures/Types/InstructionAffirmationOperation/InstructionAffirmationOperation.md#affirm) \| [`Withdraw`](../../../../enums/API/Procedures/Types/InstructionAffirmationOperation/InstructionAffirmationOperation.md#withdraw)  } & [`AffirmOrWithdrawInstructionParams`](Types.md#affirmorwithdrawinstructionparams) \| \{ `operation`: [`Reject`](../../../../enums/API/Procedures/Types/InstructionAffirmationOperation/InstructionAffirmationOperation.md#reject)  } & [`RejectInstructionParams`](Types.md#rejectinstructionparams)
 
 #### Defined in
 
-[api/procedures/types.ts:517](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L517)
+[api/procedures/types.ts:517](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L517)
 
 ___
 
 ### ModifyOfferingTimesParams
 
-Ƭ **ModifyOfferingTimesParams**: { `end`: `Date` \| ``null`` ; `start?`: `Date`  } \| { `end?`: `Date` \| ``null`` ; `start`: `Date`  } \| { `end`: `Date` \| ``null`` ; `start`: `Date`  }
+Ƭ **ModifyOfferingTimesParams**: \{ `end`: `Date` \| ``null`` ; `start?`: `Date`  } \| \{ `end?`: `Date` \| ``null`` ; `start`: `Date`  } \| \{ `end`: `Date` \| ``null`` ; `start`: `Date`  }
 
 #### Defined in
 
-[api/procedures/types.ts:914](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L914)
+[api/procedures/types.ts:914](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L914)
 
 ___
 
 ### ModifyVenueParams
 
-Ƭ **ModifyVenueParams**: { `description?`: `string` ; `type`: [`VenueType`](../../../../enums/API/Entities/Venue/Types/VenueType/VenueType.md)  } \| { `description`: `string` ; `type?`: [`VenueType`](../../../../enums/API/Entities/Venue/Types/VenueType/VenueType.md)  } \| { `description`: `string` ; `type`: [`VenueType`](../../../../enums/API/Entities/Venue/Types/VenueType/VenueType.md)  }
+Ƭ **ModifyVenueParams**: \{ `description?`: `string` ; `type`: [`VenueType`](../../../../enums/API/Entities/Venue/Types/VenueType/VenueType.md)  } \| \{ `description`: `string` ; `type?`: [`VenueType`](../../../../enums/API/Entities/Venue/Types/VenueType/VenueType.md)  } \| \{ `description`: `string` ; `type`: [`VenueType`](../../../../enums/API/Entities/Venue/Types/VenueType/VenueType.md)  }
 
 #### Defined in
 
-[api/procedures/types.ts:862](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L862)
+[api/procedures/types.ts:862](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L862)
 
 ___
 
 ### RegisterMetadataParams
 
-Ƭ **RegisterMetadataParams**: { `name`: `string` ; `specs`: [`MetadataSpec`](../../../../interfaces/API/Entities/MetadataEntry/Types/MetadataSpec/MetadataSpec.md)  } \| { `details?`: [`MetadataValueDetails`](../../Entities/MetadataEntry/Types/Types.md#metadatavaluedetails) ; `name`: `string` ; `specs`: [`MetadataSpec`](../../../../interfaces/API/Entities/MetadataEntry/Types/MetadataSpec/MetadataSpec.md) ; `value`: `string`  }
+Ƭ **RegisterMetadataParams**: \{ `name`: `string` ; `specs`: [`MetadataSpec`](../../../../interfaces/API/Entities/MetadataEntry/Types/MetadataSpec/MetadataSpec.md)  } \| \{ `details?`: [`MetadataValueDetails`](../../Entities/MetadataEntry/Types/Types.md#metadatavaluedetails) ; `name`: `string` ; `specs`: [`MetadataSpec`](../../../../interfaces/API/Entities/MetadataEntry/Types/MetadataSpec/MetadataSpec.md) ; `value`: `string`  }
 
 #### Defined in
 
-[api/procedures/types.ts:1033](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L1033)
+[api/procedures/types.ts:1033](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L1033)
 
 ___
 
@@ -357,17 +357,17 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:501](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L501)
+[api/procedures/types.ts:501](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L501)
 
 ___
 
 ### RemoveAssetStatParams
 
-Ƭ **RemoveAssetStatParams**: { `ticker`: `string`  } & [`RemoveCountStatParams`](Types.md#removecountstatparams) \| [`RemoveBalanceStatParams`](Types.md#removebalancestatparams) \| [`RemoveScopedCountParams`](Types.md#removescopedcountparams) \| [`RemoveScopedBalanceParams`](Types.md#removescopedbalanceparams)
+Ƭ **RemoveAssetStatParams**: \{ `ticker`: `string`  } & [`RemoveCountStatParams`](Types.md#removecountstatparams) \| [`RemoveBalanceStatParams`](Types.md#removebalancestatparams) \| [`RemoveScopedCountParams`](Types.md#removescopedcountparams) \| [`RemoveScopedBalanceParams`](Types.md#removescopedbalanceparams)
 
 #### Defined in
 
-[api/procedures/types.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L89)
+[api/procedures/types.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L89)
 
 ___
 
@@ -383,7 +383,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:123](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L123)
+[api/procedures/types.ts:123](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L123)
 
 ___
 
@@ -399,33 +399,33 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L119)
+[api/procedures/types.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L119)
 
 ___
 
 ### RemoveScopedBalanceParams
 
-Ƭ **RemoveScopedBalanceParams**: [`StatClaimIssuer`](../../../../interfaces/Types/StatClaimIssuer/StatClaimIssuer.md) & { `type`: [`ScopedBalance`](../../../../enums/Types/StatType/StatType.md#scopedbalance)  }
+Ƭ **RemoveScopedBalanceParams**: [`StatClaimIssuer`](../../../../interfaces/Types/StatClaimIssuer/StatClaimIssuer.md) & \{ `type`: [`ScopedBalance`](../../../../enums/Types/StatType/StatType.md#scopedbalance)  }
 
 #### Defined in
 
-[api/procedures/types.ts:131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L131)
+[api/procedures/types.ts:131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L131)
 
 ___
 
 ### RemoveScopedCountParams
 
-Ƭ **RemoveScopedCountParams**: [`StatClaimIssuer`](../../../../interfaces/Types/StatClaimIssuer/StatClaimIssuer.md) & { `type`: [`ScopedCount`](../../../../enums/Types/StatType/StatType.md#scopedcount)  }
+Ƭ **RemoveScopedCountParams**: [`StatClaimIssuer`](../../../../interfaces/Types/StatClaimIssuer/StatClaimIssuer.md) & \{ `type`: [`ScopedCount`](../../../../enums/Types/StatType/StatType.md#scopedcount)  }
 
 #### Defined in
 
-[api/procedures/types.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L127)
+[api/procedures/types.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L127)
 
 ___
 
 ### SetAssetStatParams
 
-Ƭ **SetAssetStatParams**<`T`\>: `Omit`<`T` extends [`Count`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#count) ? [`AddCountStatParams`](Types.md#addcountstatparams) : `T` extends [`Percentage`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#percentage) ? [`AddPercentageStatParams`](Types.md#addpercentagestatparams) : `T` extends [`ClaimCount`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#claimcount) ? [`AddClaimCountStatParams`](Types.md#addclaimcountstatparams) : [`AddClaimPercentageStatParams`](Types.md#addclaimpercentagestatparams), ``"type"``\>
+Ƭ **SetAssetStatParams**\<`T`\>: `Omit`\<`T` extends [`Count`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#count) ? [`AddCountStatParams`](Types.md#addcountstatparams) : `T` extends [`Percentage`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#percentage) ? [`AddPercentageStatParams`](Types.md#addpercentagestatparams) : `T` extends [`ClaimCount`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#claimcount) ? [`AddClaimCountStatParams`](Types.md#addclaimcountstatparams) : [`AddClaimPercentageStatParams`](Types.md#addclaimpercentagestatparams), ``"type"``\>
 
 #### Type parameters
 
@@ -435,23 +435,23 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L135)
+[api/procedures/types.ts:135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L135)
 
 ___
 
 ### SetMetadataParams
 
-Ƭ **SetMetadataParams**: { `details?`: [`MetadataValueDetails`](../../Entities/MetadataEntry/Types/Types.md#metadatavaluedetails) ; `value`: `string`  } \| { `details`: [`MetadataValueDetails`](../../Entities/MetadataEntry/Types/Types.md#metadatavaluedetails)  }
+Ƭ **SetMetadataParams**: \{ `details?`: [`MetadataValueDetails`](../../Entities/MetadataEntry/Types/Types.md#metadatavaluedetails) ; `value`: `string`  } \| \{ `details`: [`MetadataValueDetails`](../../Entities/MetadataEntry/Types/Types.md#metadatavaluedetails)  }
 
 #### Defined in
 
-[api/procedures/types.ts:1029](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L1029)
+[api/procedures/types.ts:1029](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L1029)
 
 ___
 
 ### SetRestrictionsParams
 
-Ƭ **SetRestrictionsParams**<`T`\>: `Omit`<`T` extends [`Count`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#count) ? [`SetCountTransferRestrictionsParams`](../../../../interfaces/API/Procedures/Types/SetCountTransferRestrictionsParams/SetCountTransferRestrictionsParams.md) : `T` extends [`Percentage`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#percentage) ? [`SetPercentageTransferRestrictionsParams`](../../../../interfaces/API/Procedures/Types/SetPercentageTransferRestrictionsParams/SetPercentageTransferRestrictionsParams.md) : `T` extends [`ClaimCount`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#claimcount) ? [`SetClaimCountTransferRestrictionsParams`](../../../../interfaces/API/Procedures/Types/SetClaimCountTransferRestrictionsParams/SetClaimCountTransferRestrictionsParams.md) : [`SetClaimPercentageTransferRestrictionsParams`](../../../../interfaces/API/Procedures/Types/SetClaimPercentageTransferRestrictionsParams/SetClaimPercentageTransferRestrictionsParams.md), ``"type"``\>
+Ƭ **SetRestrictionsParams**\<`T`\>: `Omit`\<`T` extends [`Count`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#count) ? [`SetCountTransferRestrictionsParams`](../../../../interfaces/API/Procedures/Types/SetCountTransferRestrictionsParams/SetCountTransferRestrictionsParams.md) : `T` extends [`Percentage`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#percentage) ? [`SetPercentageTransferRestrictionsParams`](../../../../interfaces/API/Procedures/Types/SetPercentageTransferRestrictionsParams/SetPercentageTransferRestrictionsParams.md) : `T` extends [`ClaimCount`](../../../../enums/API/Procedures/Types/TransferRestrictionType/TransferRestrictionType.md#claimcount) ? [`SetClaimCountTransferRestrictionsParams`](../../../../interfaces/API/Procedures/Types/SetClaimCountTransferRestrictionsParams/SetClaimCountTransferRestrictionsParams.md) : [`SetClaimPercentageTransferRestrictionsParams`](../../../../interfaces/API/Procedures/Types/SetClaimPercentageTransferRestrictionsParams/SetClaimPercentageTransferRestrictionsParams.md), ``"type"``\>
 
 #### Type parameters
 
@@ -461,7 +461,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L68)
+[api/procedures/types.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L68)
 
 ___
 
@@ -479,4 +479,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:1045](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L1045)
+[api/procedures/types.ts:1045](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L1045)

@@ -14,7 +14,7 @@ sidebar_label: "AssetTx"
 
 #### Defined in
 
-[generated/types.ts:505](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L505)
+[generated/types.ts:505](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L505)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:504](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L504)
+[generated/types.ts:504](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L504)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:513](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L513)
+[generated/types.ts:513](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L513)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:517](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L517)
+[generated/types.ts:517](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L517)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:519](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L519)
+[generated/types.ts:519](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L519)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:506](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L506)
+[generated/types.ts:506](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L506)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:521](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L521)
+[generated/types.ts:521](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L521)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:531](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L531)
+[generated/types.ts:531](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L531)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:507](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L507)
+[generated/types.ts:507](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L507)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:510](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L510)
+[generated/types.ts:510](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L510)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:512](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L512)
+[generated/types.ts:512](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L512)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:533](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L533)
+[generated/types.ts:533](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L533)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:511](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L511)
+[generated/types.ts:511](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L511)
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:527](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L527)
+[generated/types.ts:527](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L527)
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:524](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L524)
+[generated/types.ts:524](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L524)
 
 ___
 
@@ -164,7 +164,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:526](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L526)
+[generated/types.ts:526](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L526)
 
 ___
 
@@ -174,7 +174,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:525](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L525)
+[generated/types.ts:525](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L525)
 
 ___
 
@@ -184,7 +184,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:520](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L520)
+[generated/types.ts:520](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L520)
 
 ___
 
@@ -194,7 +194,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:503](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L503)
+[generated/types.ts:503](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L503)
 
 ___
 
@@ -204,7 +204,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:514](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L514)
+[generated/types.ts:514](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L514)
 
 ___
 
@@ -214,7 +214,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:529](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L529)
+[generated/types.ts:529](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L529)
 
 ___
 
@@ -224,7 +224,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:530](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L530)
+[generated/types.ts:530](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L530)
 
 ___
 
@@ -234,7 +234,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:532](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L532)
+[generated/types.ts:532](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L532)
 
 ___
 
@@ -244,7 +244,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:534](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L534)
+[generated/types.ts:534](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L534)
 
 ___
 
@@ -254,7 +254,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:509](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L509)
+[generated/types.ts:509](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L509)
 
 ___
 
@@ -264,7 +264,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:518](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L518)
+[generated/types.ts:518](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L518)
 
 ___
 
@@ -274,7 +274,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:522](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L522)
+[generated/types.ts:522](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L522)
 
 ___
 
@@ -284,7 +284,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:523](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L523)
+[generated/types.ts:523](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L523)
 
 ___
 
@@ -294,7 +294,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:515](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L515)
+[generated/types.ts:515](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L515)
 
 ___
 
@@ -304,7 +304,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:508](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L508)
+[generated/types.ts:508](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L508)
 
 ___
 
@@ -314,7 +314,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:528](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L528)
+[generated/types.ts:528](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L528)
 
 ___
 
@@ -324,4 +324,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:516](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L516)
+[generated/types.ts:516](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L516)

@@ -1,7 +1,7 @@
 ---
-id: "Documents"
-title: "Class: Documents"
-sidebar_label: "Documents"
+id: 'Documents'
+title: 'Class: Documents'
+sidebar_label: 'Documents'
 ---
 
 [api/entities/Asset/Base/Documents](../../../../../../modules/API/Entities/Asset/Base/Documents/Documents.md).Documents
@@ -10,7 +10,7 @@ Handles all Asset Document related functionality
 
 ## Hierarchy
 
-- `Namespace`<[`BaseAsset`](../BaseAsset/BaseAsset.md)\>
+- `Namespace`\<[`BaseAsset`](../BaseAsset/BaseAsset.md)\>
 
   ↳ **`Documents`**
 
@@ -18,44 +18,52 @@ Handles all Asset Document related functionality
 
 ### get
 
-▸ **get**(`paginationOpts?`): `Promise`<[`ResultSet`](../../../../../../interfaces/Types/ResultSet/ResultSet.md)<[`AssetDocument`](../../../../../../interfaces/Types/AssetDocument/AssetDocument.md)\>\>
+▸ **get**(`paginationOpts?`): `Promise`\<[`ResultSet`](../../../../../../interfaces/Types/ResultSet/ResultSet.md) \<[`AssetDocument`](../../../../../../interfaces/Types/AssetDocument/AssetDocument.md)\>\>
 
 Retrieve all documents linked to the Asset
 
-**`Note`**
-
- supports pagination
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name              | Type                                                                                             |
+| :---------------- | :----------------------------------------------------------------------------------------------- |
 | `paginationOpts?` | [`PaginationOptions`](../../../../../../interfaces/Types/PaginationOptions/PaginationOptions.md) |
 
 #### Returns
 
-`Promise`<[`ResultSet`](../../../../../../interfaces/Types/ResultSet/ResultSet.md)<[`AssetDocument`](../../../../../../interfaces/Types/AssetDocument/AssetDocument.md)\>\>
-
-___
-
-### set
-
-▸ **set**(`args`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
-
-Assign a new list of documents to the Asset by replacing the existing list of documents with the ones passed in the parameters
+`Promise`\<[`ResultSet`](../../../../../../interfaces/Types/ResultSet/ResultSet.md) \<[`AssetDocument`](../../../../../../interfaces/Types/AssetDocument/AssetDocument.md)\>\>
 
 **`Note`**
 
- this method is of type [ProcedureMethod](../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [set.checkAuthorization](../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
+supports pagination
+
+#### Defined in
+
+[api/entities/Asset/Base/Documents/index.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Asset/Base/Documents/index.ts#L47)
+
+---
+
+### set
+
+▸ **set**(`args`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
+
+Assign a new list of documents to the Asset by replacing the existing list of documents with the ones passed in the parameters
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | [`SetAssetDocumentsParams`](../../../../../../interfaces/API/Procedures/Types/SetAssetDocumentsParams/SetAssetDocumentsParams.md) |
-| `opts?` | [`ProcedureOpts`](../../../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+| Name    | Type                                                                                                                              |
+| :------ | :-------------------------------------------------------------------------------------------------------------------------------- |
+| `args`  | [`SetAssetDocumentsParams`](../../../../../../interfaces/API/Procedures/Types/SetAssetDocumentsParams/SetAssetDocumentsParams.md) |
+| `opts?` | [`ProcedureOpts`](../../../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md)                                              |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
+
+**`Note`**
+
+this method is of type [ProcedureMethod](../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [set.checkAuthorization](../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/Asset/Base/Documents/index.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Asset/Base/Documents/index.ts#L38)

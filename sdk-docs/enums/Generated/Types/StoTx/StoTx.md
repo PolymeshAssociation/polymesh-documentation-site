@@ -14,7 +14,7 @@ sidebar_label: "StoTx"
 
 #### Defined in
 
-[generated/types.ts:690](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L690)
+[generated/types.ts:697](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/generated/types.ts#L697)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:692](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L692)
+[generated/types.ts:699](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/generated/types.ts#L699)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:691](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L691)
+[generated/types.ts:698](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/generated/types.ts#L698)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:694](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L694)
+[generated/types.ts:701](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/generated/types.ts#L701)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:695](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L695)
+[generated/types.ts:702](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/generated/types.ts#L702)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:693](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L693)
+[generated/types.ts:700](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/generated/types.ts#L700)

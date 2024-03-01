@@ -14,7 +14,7 @@ sidebar_label: "HumanReadable"
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateActionBase/index.ts#L43)
+[api/entities/CorporateActionBase/index.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/index.ts#L43)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateActionBase/index.ts#L46)
+[api/entities/CorporateActionBase/index.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/index.ts#L46)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateActionBase/index.ts#L44)
+[api/entities/CorporateActionBase/index.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/index.ts#L44)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:41](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateActionBase/index.ts#L41)
+[api/entities/CorporateActionBase/index.ts:41](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/index.ts#L41)
 
 ___
 
@@ -61,17 +61,17 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateActionBase/index.ts#L45)
+[api/entities/CorporateActionBase/index.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/index.ts#L45)
 
 ___
 
 ### taxWithholdings
 
-• **taxWithholdings**: { `identity`: `string` ; `percentage`: `string`  }[]
+• **taxWithholdings**: \{ `identity`: `string` ; `percentage`: `string`  }[]
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateActionBase/index.ts#L47)
+[api/entities/CorporateActionBase/index.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/index.ts#L47)
 
 ___
 
@@ -81,4 +81,4 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateActionBase/index.ts#L42)
+[api/entities/CorporateActionBase/index.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/index.ts#L42)

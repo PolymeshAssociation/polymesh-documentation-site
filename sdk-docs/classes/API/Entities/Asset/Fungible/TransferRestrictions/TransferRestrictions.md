@@ -10,7 +10,7 @@ Handles all Asset Transfer Restrictions related functionality
 
 ## Hierarchy
 
-- `Namespace`<[`FungibleAsset`](../FungibleAsset.md)\>
+- `Namespace`\<[`FungibleAsset`](../FungibleAsset.md)\>
 
   ↳ **`TransferRestrictions`**
 
@@ -22,7 +22,7 @@ Handles all Asset Transfer Restrictions related functionality
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/index.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L14)
+[api/entities/Asset/Fungible/TransferRestrictions/index.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L14)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/index.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L15)
+[api/entities/Asset/Fungible/TransferRestrictions/index.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L15)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/index.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L12)
+[api/entities/Asset/Fungible/TransferRestrictions/index.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L12)
 
 ___
 
@@ -52,4 +52,4 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/index.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L13)
+[api/entities/Asset/Fungible/TransferRestrictions/index.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L13)

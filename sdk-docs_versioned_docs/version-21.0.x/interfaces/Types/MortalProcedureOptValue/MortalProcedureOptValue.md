@@ -16,7 +16,7 @@ This transaction will be rejected if not included in a block after a while (defa
 
 #### Defined in
 
-[types/index.ts:1503](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1503)
+[types/index.ts:1503](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/types/index.ts#L1503)
 
 ___
 
@@ -28,12 +28,12 @@ The number of blocks the for which the transaction remains valid. Target block t
 
 **`Note`**
 
- this value will get rounded up to the closest power of 2, e.g. `65` rounds up to `128`
+this value will get rounded up to the closest power of 2, e.g. `65` rounds up to `128`
 
 **`Note`**
 
- this value should not exceed 4096, which is the chain's `BlockHashCount` as the lesser of the two will be used.
+this value should not exceed 4096, which is the chain's `BlockHashCount` as the lesser of the two will be used.
 
 #### Defined in
 
-[types/index.ts:1510](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1510)
+[types/index.ts:1510](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/types/index.ts#L1510)

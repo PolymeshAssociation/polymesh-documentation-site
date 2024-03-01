@@ -14,7 +14,7 @@ sidebar_label: "HumanReadable"
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/Nft.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Asset/NonFungible/Nft.ts#L28)
+[api/entities/Asset/NonFungible/Nft.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Asset/NonFungible/Nft.ts#L28)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/Nft.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Asset/NonFungible/Nft.ts#L27)
+[api/entities/Asset/NonFungible/Nft.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Asset/NonFungible/Nft.ts#L27)

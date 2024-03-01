@@ -20,7 +20,7 @@ sidebar_label: "HumanReadable"
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/DividendDistribution/index.ts#L64)
+[api/entities/DividendDistribution/index.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/DividendDistribution/index.ts#L64)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateAction.ts#L23)
+[api/entities/CorporateAction.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateAction.ts#L23)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateAction.ts#L26)
+[api/entities/CorporateAction.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateAction.ts#L26)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateAction.ts#L24)
+[api/entities/CorporateAction.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateAction.ts#L24)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/DividendDistribution/index.ts#L67)
+[api/entities/DividendDistribution/index.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/DividendDistribution/index.ts#L67)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateAction.ts#L21)
+[api/entities/CorporateAction.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateAction.ts#L21)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/DividendDistribution/index.ts#L66)
+[api/entities/DividendDistribution/index.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/DividendDistribution/index.ts#L66)
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/DividendDistribution/index.ts#L63)
+[api/entities/DividendDistribution/index.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/DividendDistribution/index.ts#L63)
 
 ___
 
@@ -123,7 +123,7 @@ ___
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/DividendDistribution/index.ts#L68)
+[api/entities/DividendDistribution/index.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/DividendDistribution/index.ts#L68)
 
 ___
 
@@ -133,7 +133,7 @@ ___
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/DividendDistribution/index.ts#L65)
+[api/entities/DividendDistribution/index.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/DividendDistribution/index.ts#L65)
 
 ___
 
@@ -154,13 +154,13 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateAction.ts#L25)
+[api/entities/CorporateAction.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateAction.ts#L25)
 
 ___
 
 ### taxWithholdings
 
-• **taxWithholdings**: { `identity`: `string` ; `percentage`: `string`  }[]
+• **taxWithholdings**: \{ `identity`: `string` ; `percentage`: `string`  }[]
 
 #### Inherited from
 
@@ -168,7 +168,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateAction.ts#L27)
+[api/entities/CorporateAction.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateAction.ts#L27)
 
 ___
 
@@ -182,4 +182,4 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateAction.ts#L22)
+[api/entities/CorporateAction.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateAction.ts#L22)

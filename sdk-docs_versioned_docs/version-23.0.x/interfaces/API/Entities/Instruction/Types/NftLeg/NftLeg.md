@@ -14,7 +14,7 @@ sidebar_label: "NftLeg"
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Instruction/types.ts#L65)
+[api/entities/Instruction/types.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Instruction/types.ts#L65)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Instruction/types.ts#L62)
+[api/entities/Instruction/types.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Instruction/types.ts#L62)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Instruction/types.ts#L64)
+[api/entities/Instruction/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Instruction/types.ts#L64)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Instruction/types.ts#L63)
+[api/entities/Instruction/types.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Instruction/types.ts#L63)

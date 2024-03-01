@@ -18,7 +18,7 @@ sidebar_label: "OptionalArgsProcedureMethod"
 
 ### OptionalArgsProcedureMethod
 
-▸ **OptionalArgsProcedureMethod**(`args?`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../modules/Types/Types.md#genericpolymeshtransaction)<`ProcedureReturnValue`, `ReturnValue`\>\>
+▸ **OptionalArgsProcedureMethod**(`args?`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../modules/Types/Types.md#genericpolymeshtransaction)\<`ProcedureReturnValue`, `ReturnValue`\>\>
 
 #### Parameters
 
@@ -29,17 +29,21 @@ sidebar_label: "OptionalArgsProcedureMethod"
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../modules/Types/Types.md#genericpolymeshtransaction)<`ProcedureReturnValue`, `ReturnValue`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../modules/Types/Types.md#genericpolymeshtransaction)\<`ProcedureReturnValue`, `ReturnValue`\>\>
+
+#### Defined in
+
+[types/index.ts:1573](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/types/index.ts#L1573)
 
 ## Properties
 
 ### checkAuthorization
 
-• **checkAuthorization**: (`args?`: `MethodArgs`, `opts?`: [`ProcedureOpts`](../ProcedureOpts/ProcedureOpts.md)) => `Promise`<[`ProcedureAuthorizationStatus`](../ProcedureAuthorizationStatus/ProcedureAuthorizationStatus.md)\>
+• **checkAuthorization**: (`args?`: `MethodArgs`, `opts?`: [`ProcedureOpts`](../ProcedureOpts/ProcedureOpts.md)) => `Promise`\<[`ProcedureAuthorizationStatus`](../ProcedureAuthorizationStatus/ProcedureAuthorizationStatus.md)\>
 
 #### Type declaration
 
-▸ (`args?`, `opts?`): `Promise`<[`ProcedureAuthorizationStatus`](../ProcedureAuthorizationStatus/ProcedureAuthorizationStatus.md)\>
+▸ (`args?`, `opts?`): `Promise`\<[`ProcedureAuthorizationStatus`](../ProcedureAuthorizationStatus/ProcedureAuthorizationStatus.md)\>
 
 ##### Parameters
 
@@ -50,8 +54,8 @@ sidebar_label: "OptionalArgsProcedureMethod"
 
 ##### Returns
 
-`Promise`<[`ProcedureAuthorizationStatus`](../ProcedureAuthorizationStatus/ProcedureAuthorizationStatus.md)\>
+`Promise`\<[`ProcedureAuthorizationStatus`](../ProcedureAuthorizationStatus/ProcedureAuthorizationStatus.md)\>
 
 #### Defined in
 
-[types/index.ts:1576](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L1576)
+[types/index.ts:1576](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/types/index.ts#L1576)

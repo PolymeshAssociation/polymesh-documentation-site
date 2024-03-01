@@ -18,7 +18,7 @@ A set of methods for managing a Polymesh Identity's Accounts and their permissio
 
 #### Defined in
 
-[api/client/Polymesh.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L108)
+[api/client/Polymesh.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L108)
 
 ___
 
@@ -30,7 +30,7 @@ A set of methods for interacting with Assets
 
 #### Defined in
 
-[api/client/Polymesh.ts:116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L116)
+[api/client/Polymesh.ts:116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L116)
 
 ___
 
@@ -42,7 +42,7 @@ A set of methods to deal with Claims
 
 #### Defined in
 
-[api/client/Polymesh.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L96)
+[api/client/Polymesh.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L96)
 
 ___
 
@@ -54,7 +54,7 @@ A set of methods for interacting with Polymesh Identities.
 
 #### Defined in
 
-[api/client/Polymesh.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L112)
+[api/client/Polymesh.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L112)
 
 ___
 
@@ -66,7 +66,7 @@ A set of methods to interact with the Polymesh network. This includes transferri
 
 #### Defined in
 
-[api/client/Polymesh.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L100)
+[api/client/Polymesh.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L100)
 
 ___
 
@@ -78,31 +78,39 @@ A set of methods for exchanging Assets
 
 #### Defined in
 
-[api/client/Polymesh.ts:104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L104)
+[api/client/Polymesh.ts:104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L104)
 
 ## Accessors
 
 ### \_middlewareApi
 
-• `get` **_middlewareApi**(): `ApolloClient`<`NormalizedCacheObject`\>
+• `get` **_middlewareApi**(): `ApolloClient`\<`NormalizedCacheObject`\>
 
 Middleware client
 
 #### Returns
 
-`ApolloClient`<`NormalizedCacheObject`\>
+`ApolloClient`\<`NormalizedCacheObject`\>
+
+#### Defined in
+
+[api/client/Polymesh.ts:358](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L358)
 
 ___
 
 ### \_middlewareApiV2
 
-• `get` **_middlewareApiV2**(): `ApolloClient`<`NormalizedCacheObject`\>
+• `get` **_middlewareApiV2**(): `ApolloClient`\<`NormalizedCacheObject`\>
 
 MiddlewareV2 client
 
 #### Returns
 
-`ApolloClient`<`NormalizedCacheObject`\>
+`ApolloClient`\<`NormalizedCacheObject`\>
+
+#### Defined in
+
+[api/client/Polymesh.ts:366](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L366)
 
 ___
 
@@ -116,6 +124,10 @@ Polkadot client
 
 `ApiPromise`
 
+#### Defined in
+
+[api/client/Polymesh.ts:342](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L342)
+
 ___
 
 ### \_signingAddress
@@ -128,19 +140,40 @@ signing address (to manually submit transactions with the polkadot API)
 
 `string`
 
+#### Defined in
+
+[api/client/Polymesh.ts:350](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L350)
+
 ## Methods
 
 ### createTransactionBatch
 
-▸ **createTransactionBatch**<`ReturnValues`\>(`args`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`ReturnValues`, `ReturnValues`\>\>
+▸ **createTransactionBatch**\<`ReturnValues`\>(`args`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`ReturnValues`, `ReturnValues`\>\>
 
 Create a batch transaction from a list of separate transactions. The list can contain batch transactions as well.
   The result of running this transaction will be an array of the results of each transaction in the list, in the same order.
   Transactions with no return value will produce `undefined` in the resulting array
 
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `ReturnValues` | extends readonly `unknown`[] |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args` | [`CreateTransactionBatchParams`](../../../../interfaces/API/Procedures/Types/CreateTransactionBatchParams/CreateTransactionBatchParams.md)\<`ReturnValues`\> |
+| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`ReturnValues`, `ReturnValues`\>\>
+
 **`Example`**
 
- Batching 3 ticker reservation transactions
+Batching 3 ticker reservation transactions
 
 ```typescript
 const tx1 = await sdk.assets.reserveTicker({ ticker: 'FOO' });
@@ -154,7 +187,7 @@ const [res1, res2, res3] = await batch.run();
 
 **`Example`**
 
- Specifying the signer account for the whole batch
+Specifying the signer account for the whole batch
 
 ```typescript
 const batch = sdk.createTransactionBatch({ transactions: [tx1, tx2, tx3] as const }, { signingAccount: 'someAddress' });
@@ -164,73 +197,68 @@ const [res1, res2, res3] = await batch.run();
 
 **`Note`**
 
- it is mandatory to use the `as const` type assertion when passing in the transaction array to the method in order to get the correct types
+it is mandatory to use the `as const` type assertion when passing in the transaction array to the method in order to get the correct types
   for the results of running the batch
 
 **`Note`**
 
- if a signing Account is not specified, the default one will be used (the one returned by `sdk.accountManagement.getSigningAccount()`)
+if a signing Account is not specified, the default one will be used (the one returned by `sdk.accountManagement.getSigningAccount()`)
 
 **`Note`**
 
- all fees in the resulting batch must be paid by the calling Account, regardless of any exceptions that would normally be made for
+all fees in the resulting batch must be paid by the calling Account, regardless of any exceptions that would normally be made for
   the individual transactions (such as subsidies or accepting invitations to join an Identity)
 
 **`Note`**
 
- this method is of type [CreateTransactionBatchProcedureMethod](../../../../interfaces/Types/CreateTransactionBatchProcedureMethod/CreateTransactionBatchProcedureMethod.md), which means you can call [createTransactionBatch.checkAuthorization](../../../../interfaces/Types/CreateTransactionBatchProcedureMethod/CreateTransactionBatchProcedureMethod.md#checkauthorization)
+this method is of type [CreateTransactionBatchProcedureMethod](../../../../interfaces/Types/CreateTransactionBatchProcedureMethod/CreateTransactionBatchProcedureMethod.md), which means you can call [createTransactionBatch.checkAuthorization](../../../../interfaces/Types/CreateTransactionBatchProcedureMethod/CreateTransactionBatchProcedureMethod.md#checkauthorization)
   on it to see whether the signing Account and Identity have the required roles and permissions to run it
 
-#### Type parameters
+#### Defined in
 
-| Name | Type |
-| :------ | :------ |
-| `ReturnValues` | extends readonly `unknown`[] |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `args` | [`CreateTransactionBatchParams`](../../../../interfaces/API/Procedures/Types/CreateTransactionBatchParams/CreateTransactionBatchParams.md)<`ReturnValues`\> |
-| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
-
-#### Returns
-
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`ReturnValues`, `ReturnValues`\>\>
+[api/client/Polymesh.ts:333](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L333)
 
 ___
 
 ### disconnect
 
-▸ **disconnect**(): `Promise`<`void`\>
+▸ **disconnect**(): `Promise`\<`void`\>
 
 Disconnect the client and close all open connections and subscriptions
 
+#### Returns
+
+`Promise`\<`void`\>
+
 **`Note`**
 
- the SDK will become unusable after this operation. It will throw an error when attempting to
+the SDK will become unusable after this operation. It will throw an error when attempting to
   access any chain or middleware data. If you wish to continue using the SDK, you must
   create a new instance by calling [connect](Polymesh.md#connect)
 
-#### Returns
+#### Defined in
 
-`Promise`<`void`\>
+[api/client/Polymesh.ts:275](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L275)
 
 ___
 
 ### getSigningIdentity
 
-▸ **getSigningIdentity**(): `Promise`<``null`` \| [`Identity`](../../Entities/Identity/Identity.md)\>
+▸ **getSigningIdentity**(): `Promise`\<``null`` \| [`Identity`](../../Entities/Identity/Identity.md)\>
 
 Retrieve the Identity associated to the signing Account (null if there is none)
 
-**`Throws`**
-
- if there is no signing Account associated to the SDK
-
 #### Returns
 
-`Promise`<``null`` \| [`Identity`](../../Entities/Identity/Identity.md)\>
+`Promise`\<``null`` \| [`Identity`](../../Entities/Identity/Identity.md)\>
+
+**`Throws`**
+
+if there is no signing Account associated to the SDK
+
+#### Defined in
+
+[api/client/Polymesh.ts:230](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L230)
 
 ___
 
@@ -252,6 +280,10 @@ Handle connection errors
 
 an unsubscribe callback
 
+#### Defined in
+
+[api/client/Polymesh.ts:239](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L239)
+
 ___
 
 ### onDisconnect
@@ -272,17 +304,17 @@ Handle disconnection
 
 an unsubscribe callback
 
+#### Defined in
+
+[api/client/Polymesh.ts:256](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L256)
+
 ___
 
 ### setSigningAccount
 
-▸ **setSigningAccount**(`signer`): `Promise`<`void`\>
+▸ **setSigningAccount**(`signer`): `Promise`\<`void`\>
 
 Set the SDK's signing Account to the provided one
-
-**`Throws`**
-
- if the passed Account is not present in the Signing Manager (or there is no Signing Manager)
 
 #### Parameters
 
@@ -292,19 +324,23 @@ Set the SDK's signing Account to the provided one
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
+
+**`Throws`**
+
+if the passed Account is not present in the Signing Manager (or there is no Signing Manager)
+
+#### Defined in
+
+[api/client/Polymesh.ts:284](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L284)
 
 ___
 
 ### setSigningManager
 
-▸ **setSigningManager**(`signingManager`): `Promise`<`void`\>
+▸ **setSigningManager**(`signingManager`): `Promise`\<`void`\>
 
 Set the SDK's Signing Manager to the provided one.
-
-**`Note`**
-
- Pass `null` to unset the current signing manager
 
 #### Parameters
 
@@ -314,13 +350,21 @@ Set the SDK's Signing Manager to the provided one.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
+
+**`Note`**
+
+Pass `null` to unset the current signing manager
+
+#### Defined in
+
+[api/client/Polymesh.ts:293](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L293)
 
 ___
 
 ### connect
 
-▸ `Static` **connect**(`params`): `Promise`<[`Polymesh`](Polymesh.md)\>
+▸ `Static` **connect**(`params`): `Promise`\<[`Polymesh`](Polymesh.md)\>
 
 Create an SDK instance and connect to a Polymesh node
 
@@ -332,4 +376,8 @@ Create an SDK instance and connect to a Polymesh node
 
 #### Returns
 
-`Promise`<[`Polymesh`](Polymesh.md)\>
+`Promise`\<[`Polymesh`](Polymesh.md)\>
+
+#### Defined in
+
+[api/client/Polymesh.ts:149](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L149)

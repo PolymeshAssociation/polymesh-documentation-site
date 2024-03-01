@@ -14,7 +14,7 @@ sidebar_label: "CorporateActionDefaultConfig"
 
 #### Defined in
 
-[api/entities/Asset/CorporateActions/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/CorporateActions/types.ts#L7)
+[api/entities/Asset/CorporateActions/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Asset/CorporateActions/types.ts#L7)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/CorporateActions/types.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/CorporateActions/types.ts#L6)
+[api/entities/Asset/CorporateActions/types.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Asset/CorporateActions/types.ts#L6)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/CorporateActions/types.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/CorporateActions/types.ts#L8)
+[api/entities/Asset/CorporateActions/types.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Asset/CorporateActions/types.ts#L8)

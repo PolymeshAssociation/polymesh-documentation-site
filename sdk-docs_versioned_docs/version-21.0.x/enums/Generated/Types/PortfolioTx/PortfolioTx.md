@@ -14,7 +14,7 @@ sidebar_label: "PortfolioTx"
 
 #### Defined in
 
-[generated/types.ts:602](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L602)
+[generated/types.ts:602](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/generated/types.ts#L602)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:597](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L597)
+[generated/types.ts:597](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/generated/types.ts#L597)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:598](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L598)
+[generated/types.ts:598](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/generated/types.ts#L598)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:599](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L599)
+[generated/types.ts:599](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/generated/types.ts#L599)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:603](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L603)
+[generated/types.ts:603](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/generated/types.ts#L603)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:601](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L601)
+[generated/types.ts:601](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/generated/types.ts#L601)
 
 ___
 
@@ -74,4 +74,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:600](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L600)
+[generated/types.ts:600](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/generated/types.ts#L600)

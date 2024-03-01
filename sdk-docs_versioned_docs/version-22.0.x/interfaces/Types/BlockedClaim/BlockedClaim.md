@@ -14,7 +14,7 @@ sidebar_label: "BlockedClaim"
 
 #### Defined in
 
-[types/index.ts:263](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L263)
+[types/index.ts:263](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L263)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:262](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L262)
+[types/index.ts:262](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L262)

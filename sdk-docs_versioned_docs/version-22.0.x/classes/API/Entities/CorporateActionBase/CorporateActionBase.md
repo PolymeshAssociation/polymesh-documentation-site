@@ -1,17 +1,17 @@
 ---
-id: "CorporateActionBase"
-title: "Class: CorporateActionBase"
-sidebar_label: "CorporateActionBase"
+id: 'CorporateActionBase'
+title: 'Class: CorporateActionBase'
+sidebar_label: 'CorporateActionBase'
 ---
 
 [api/entities/CorporateActionBase](../../../../modules/API/Entities/CorporateActionBase/CorporateActionBase.md).CorporateActionBase
 
 Represents an action initiated by the issuer of an Asset which may affect the positions of
-  the Asset Holders
+the Asset Holders
 
 ## Hierarchy
 
-- [`Entity`](../Entity/Entity.md)<[`UniqueIdentifiers`](../../../../interfaces/API/Entities/CorporateActionBase/UniqueIdentifiers/UniqueIdentifiers.md), `unknown`\>
+- [`Entity`](../Entity/Entity.md) \<[`UniqueIdentifiers`](../../../../interfaces/API/Entities/CorporateActionBase/UniqueIdentifiers/UniqueIdentifiers.md), `unknown`\>
 
   ↳ **`CorporateActionBase`**
 
@@ -29,9 +29,9 @@ Asset affected by this Corporate Action
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateActionBase/index.ts#L82)
+[api/entities/CorporateActionBase/index.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/index.ts#L82)
 
-___
+---
 
 ### declarationDate
 
@@ -41,9 +41,9 @@ date at which the Corporate Action was created
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateActionBase/index.ts#L87)
+[api/entities/CorporateActionBase/index.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/index.ts#L87)
 
-___
+---
 
 ### defaultTaxWithholding
 
@@ -53,9 +53,9 @@ default percentage (0-100) of tax withholding for this Corporate Action
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateActionBase/index.ts#L103)
+[api/entities/CorporateActionBase/index.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/index.ts#L103)
 
-___
+---
 
 ### description
 
@@ -65,9 +65,9 @@ brief text description of the Corporate Action
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateActionBase/index.ts#L92)
+[api/entities/CorporateActionBase/index.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/index.ts#L92)
 
-___
+---
 
 ### id
 
@@ -77,35 +77,35 @@ internal Corporate Action ID
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateActionBase/index.ts#L77)
+[api/entities/CorporateActionBase/index.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/index.ts#L77)
 
-___
+---
 
 ### targets
 
 • **targets**: [`CorporateActionTargets`](../../../../interfaces/API/Entities/CorporateActionBase/Types/CorporateActionTargets/CorporateActionTargets.md)
 
 Asset Holder Identities related to this Corporate action. If the treatment is `Exclude`, the Identities
-  in the array will not be targeted by the Action, Identities not in the array will be targeted, and vice versa
+in the array will not be targeted by the Action, Identities not in the array will be targeted, and vice versa
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:98](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateActionBase/index.ts#L98)
+[api/entities/CorporateActionBase/index.ts:98](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/index.ts#L98)
 
-___
+---
 
 ### taxWithholdings
 
 • **taxWithholdings**: [`TaxWithholding`](../../../../interfaces/API/Entities/CorporateActionBase/Types/TaxWithholding/TaxWithholding.md)[]
 
 percentage (0-100) of tax withholding per Identity. Any Identity not present
-  in this array uses the default tax withholding percentage
+in this array uses the default tax withholding percentage
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CorporateActionBase/index.ts#L109)
+[api/entities/CorporateActionBase/index.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/index.ts#L109)
 
-___
+---
 
 ### uuid
 
@@ -117,39 +117,47 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
 ### checkpoint
 
-▸ **checkpoint**(): `Promise`<``null`` \| [`CheckpointSchedule`](../CheckpointSchedule/CheckpointSchedule.md) \| [`Checkpoint`](../Checkpoint/Checkpoint.md)\>
+▸ **checkpoint**(): `Promise`\<`null` \| [`CheckpointSchedule`](../CheckpointSchedule/CheckpointSchedule.md) \| [`Checkpoint`](../Checkpoint/Checkpoint.md)\>
 
 Retrieve the Checkpoint associated with this Corporate Action. If the Checkpoint is scheduled and has
-  not been created yet, the corresponding CheckpointSchedule is returned instead. A null value means
-  the Corporate Action was created without an associated Checkpoint
+not been created yet, the corresponding CheckpointSchedule is returned instead. A null value means
+the Corporate Action was created without an associated Checkpoint
 
 #### Returns
 
-`Promise`<``null`` \| [`CheckpointSchedule`](../CheckpointSchedule/CheckpointSchedule.md) \| [`Checkpoint`](../Checkpoint/Checkpoint.md)\>
+`Promise`\<`null` \| [`CheckpointSchedule`](../CheckpointSchedule/CheckpointSchedule.md) \| [`Checkpoint`](../Checkpoint/Checkpoint.md)\>
 
-___
+#### Defined in
+
+[api/entities/CorporateActionBase/index.ts:188](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/index.ts#L188)
+
+---
 
 ### exists
 
-▸ **exists**(): `Promise`<`boolean`\>
+▸ **exists**(): `Promise`\<`boolean`\>
 
 Determine whether this Corporate Action exists on chain
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Overrides
 
 [Entity](../Entity/Entity.md).[exists](../Entity/Entity.md#exists)
 
-___
+#### Defined in
+
+[api/entities/CorporateActionBase/index.ts:177](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/index.ts#L177)
+
+---
 
 ### isEqual
 
@@ -159,9 +167,9 @@ Determine whether this Entity is the same as another one
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `entity` | [`Entity`](../Entity/Entity.md)<`unknown`, `unknown`\> |
+| Name     | Type                                                    |
+| :------- | :------------------------------------------------------ |
+| `entity` | [`Entity`](../Entity/Entity.md)\<`unknown`, `unknown`\> |
 
 #### Returns
 
@@ -171,59 +179,71 @@ Determine whether this Entity is the same as another one
 
 [Entity](../Entity/Entity.md).[isEqual](../Entity/Entity.md#isequal)
 
-___
+#### Defined in
+
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L61)
+
+---
 
 ### linkDocuments
 
-▸ **linkDocuments**(`args`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+▸ **linkDocuments**(`args`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
 Link a list of documents to this corporate action
 
-**`Note`**
-
- any previous links are removed in favor of the new list
-
-**`Note`**
-
- this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [linkDocuments.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | [`LinkCaDocsParams`](../../../../interfaces/API/Procedures/Types/LinkCaDocsParams/LinkCaDocsParams.md) |
-| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+| Name    | Type                                                                                                   |
+| :------ | :----------------------------------------------------------------------------------------------------- |
+| `args`  | [`LinkCaDocsParams`](../../../../interfaces/API/Procedures/Types/LinkCaDocsParams/LinkCaDocsParams.md) |
+| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md)                         |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
-___
+**`Note`**
+
+any previous links are removed in favor of the new list
+
+**`Note`**
+
+this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [linkDocuments.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/CorporateActionBase/index.ts:157](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/index.ts#L157)
+
+---
 
 ### modifyCheckpoint
 
-▸ `Abstract` **modifyCheckpoint**(`args`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+▸ `Abstract` **modifyCheckpoint**(`args`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
 Modify the Corporate Action's Checkpoint
 
-**`Note`**
-
- this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [modifyCheckpoint.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | [`Modify`](../../../../modules/Types/Utils/Utils.md#modify)<[`ModifyCaCheckpointParams`](../../../../interfaces/API/Procedures/Types/ModifyCaCheckpointParams/ModifyCaCheckpointParams.md), { `checkpoint`: [`InputCaCheckpoint`](../../../../modules/API/Entities/Asset/Checkpoints/Types/Types.md#inputcacheckpoint)  }\> |
-| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+| Name    | Type                                                                                                                                                                                                                                                                                                                          |
+| :------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `args`  | [`Modify`](../../../../modules/Types/Utils/Utils.md#modify) \<[`ModifyCaCheckpointParams`](../../../../interfaces/API/Procedures/Types/ModifyCaCheckpointParams/ModifyCaCheckpointParams.md), \{ `checkpoint`: [`InputCaCheckpoint`](../../../../modules/API/Entities/Asset/Checkpoints/Types/Types.md#inputcacheckpoint) }\> |
+| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md)                                                                                                                                                                                                                                                |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
-___
+**`Note`**
+
+this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [modifyCheckpoint.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/CorporateActionBase/index.ts:167](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/index.ts#L167)
+
+---
 
 ### toHuman
 
@@ -239,24 +259,28 @@ Return the Corporate Action's static data
 
 [Entity](../Entity/Entity.md).[toHuman](../Entity/Entity.md#tohuman)
 
-___
+#### Defined in
+
+[api/entities/CorporateActionBase/index.ts:299](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CorporateActionBase/index.ts#L299)
+
+---
 
 ### generateUuid
 
-▸ `Static` **generateUuid**<`Identifiers`\>(`identifiers`): `string`
+▸ `Static` **generateUuid**\<`Identifiers`\>(`identifiers`): `string`
 
 Generate the Entity's UUID from its identifying properties
 
 #### Type parameters
 
-| Name |
-| :------ |
+| Name          |
+| :------------ |
 | `Identifiers` |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name          | Type          |
+| :------------ | :------------ |
 | `identifiers` | `Identifiers` |
 
 #### Returns
@@ -267,24 +291,28 @@ Generate the Entity's UUID from its identifying properties
 
 [Entity](../Entity/Entity.md).[generateUuid](../Entity/Entity.md#generateuuid)
 
-___
+#### Defined in
+
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L14)
+
+---
 
 ### unserialize
 
-▸ `Static` **unserialize**<`Identifiers`\>(`serialized`): `Identifiers`
+▸ `Static` **unserialize**\<`Identifiers`\>(`serialized`): `Identifiers`
 
 Unserialize a UUID into its Unique Identifiers
 
 #### Type parameters
 
-| Name |
-| :------ |
+| Name          |
+| :------------ |
 | `Identifiers` |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name         | Type     | Description         |
+| :----------- | :------- | :------------------ |
 | `serialized` | `string` | UUID to unserialize |
 
 #### Returns
@@ -294,3 +322,7 @@ Unserialize a UUID into its Unique Identifiers
 #### Inherited from
 
 [Entity](../Entity/Entity.md).[unserialize](../Entity/Entity.md#unserialize)
+
+#### Defined in
+
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L23)

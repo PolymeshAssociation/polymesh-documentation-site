@@ -14,7 +14,7 @@ sidebar_label: "CreateMultiSigParams"
 
 #### Defined in
 
-[api/procedures/types.ts:1091](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L1091)
+[api/procedures/types.ts:1112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/procedures/types.ts#L1112)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:1090](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L1090)
+[api/procedures/types.ts:1111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/procedures/types.ts#L1111)

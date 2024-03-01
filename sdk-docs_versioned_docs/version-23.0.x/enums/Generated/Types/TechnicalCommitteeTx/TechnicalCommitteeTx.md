@@ -14,7 +14,7 @@ sidebar_label: "TechnicalCommitteeTx"
 
 #### Defined in
 
-[generated/types.ts:366](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L366)
+[generated/types.ts:366](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L366)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:365](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L365)
+[generated/types.ts:365](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L365)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:364](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L364)
+[generated/types.ts:364](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L364)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:368](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L368)
+[generated/types.ts:368](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L368)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:367](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L367)
+[generated/types.ts:367](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/generated/types.ts#L367)

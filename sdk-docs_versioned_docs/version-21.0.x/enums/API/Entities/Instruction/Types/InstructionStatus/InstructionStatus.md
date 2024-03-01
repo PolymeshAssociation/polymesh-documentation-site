@@ -14,7 +14,7 @@ sidebar_label: "InstructionStatus"
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Instruction/types.ts#L8)
+[api/entities/Instruction/types.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Instruction/types.ts#L8)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Instruction/types.ts#L9)
+[api/entities/Instruction/types.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Instruction/types.ts#L9)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Instruction/types.ts#L7)
+[api/entities/Instruction/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Instruction/types.ts#L7)

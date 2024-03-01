@@ -14,7 +14,7 @@ sidebar_label: "PortfolioCustodianRole"
 
 #### Defined in
 
-[types/index.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L113)
+[types/index.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L113)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L112)
+[types/index.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L112)

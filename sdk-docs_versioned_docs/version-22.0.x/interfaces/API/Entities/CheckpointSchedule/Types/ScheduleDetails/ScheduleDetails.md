@@ -14,7 +14,7 @@ sidebar_label: "ScheduleDetails"
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CheckpointSchedule/types.ts#L7)
+[api/entities/CheckpointSchedule/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CheckpointSchedule/types.ts#L7)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/types.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CheckpointSchedule/types.ts#L6)
+[api/entities/CheckpointSchedule/types.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CheckpointSchedule/types.ts#L6)

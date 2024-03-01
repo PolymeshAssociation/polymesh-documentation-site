@@ -16,7 +16,7 @@ beneficiary address
 
 #### Defined in
 
-[api/entities/Subsidy/index.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Subsidy/index.ts#L28)
+[api/entities/Subsidy/index.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Subsidy/index.ts#L28)
 
 ___
 
@@ -28,4 +28,4 @@ subsidizer address
 
 #### Defined in
 
-[api/entities/Subsidy/index.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Subsidy/index.ts#L32)
+[api/entities/Subsidy/index.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Subsidy/index.ts#L32)

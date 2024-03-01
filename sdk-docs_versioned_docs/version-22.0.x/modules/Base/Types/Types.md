@@ -12,13 +12,13 @@ sidebar_label: "Types"
 
 #### Defined in
 
-[base/types.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/base/types.ts#L17)
+[base/types.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/base/types.ts#L17)
 
 ___
 
 ### PolymeshTransaction
 
-Ƭ **PolymeshTransaction**<`ReturnValue`, `TransformedReturnValue`, `Args`\>: [`PolymeshTransaction`](../../../classes/Base/PolymeshTransaction/PolymeshTransaction.md)<`ReturnValue`, `TransformedReturnValue`, `Args`\>
+Ƭ **PolymeshTransaction**\<`ReturnValue`, `TransformedReturnValue`, `Args`\>: [`PolymeshTransaction`](../../../classes/Base/PolymeshTransaction/PolymeshTransaction.md)\<`ReturnValue`, `TransformedReturnValue`, `Args`\>
 
 #### Type parameters
 
@@ -30,13 +30,13 @@ ___
 
 #### Defined in
 
-[base/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/base/types.ts#L7)
+[base/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/base/types.ts#L7)
 
 ___
 
 ### PolymeshTransactionBatch
 
-Ƭ **PolymeshTransactionBatch**<`ReturnValue`, `TransformedReturnValue`, `Args`\>: [`PolymeshTransactionBatch`](../../../classes/Base/PolymeshTransactionBatch/PolymeshTransactionBatch.md)<`ReturnValue`, `TransformedReturnValue`, `Args`\>
+Ƭ **PolymeshTransactionBatch**\<`ReturnValue`, `TransformedReturnValue`, `Args`\>: [`PolymeshTransactionBatch`](../../../classes/Base/PolymeshTransactionBatch/PolymeshTransactionBatch.md)\<`ReturnValue`, `TransformedReturnValue`, `Args`\>
 
 #### Type parameters
 
@@ -48,4 +48,4 @@ ___
 
 #### Defined in
 
-[base/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/base/types.ts#L12)
+[base/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/base/types.ts#L12)

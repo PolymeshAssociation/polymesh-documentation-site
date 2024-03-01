@@ -20,3 +20,7 @@ sidebar_label: "Utils"
 #### Returns
 
 [`TransactionArgument`](../../Types/Types.md#transactionargument)
+
+#### Defined in
+
+[base/utils.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/base/utils.ts#L56)

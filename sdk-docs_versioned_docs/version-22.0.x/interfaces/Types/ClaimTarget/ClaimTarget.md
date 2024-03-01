@@ -14,7 +14,7 @@ sidebar_label: "ClaimTarget"
 
 #### Defined in
 
-[types/index.ts:667](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L667)
+[types/index.ts:667](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L667)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:668](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L668)
+[types/index.ts:668](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L668)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:666](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L666)
+[types/index.ts:666](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L666)

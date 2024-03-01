@@ -14,7 +14,7 @@ sidebar_label: "StatAccreditedClaimInput"
 
 #### Defined in
 
-[types/index.ts:298](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L298)
+[types/index.ts:298](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L298)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:297](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L297)
+[types/index.ts:297](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L297)

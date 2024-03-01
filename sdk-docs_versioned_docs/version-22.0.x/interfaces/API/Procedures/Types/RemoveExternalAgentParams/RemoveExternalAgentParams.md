@@ -14,4 +14,4 @@ sidebar_label: "RemoveExternalAgentParams"
 
 #### Defined in
 
-[api/procedures/types.ts:838](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/procedures/types.ts#L838)
+[api/procedures/types.ts:838](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/procedures/types.ts#L838)

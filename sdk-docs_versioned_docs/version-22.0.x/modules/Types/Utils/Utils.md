@@ -8,7 +8,7 @@ sidebar_label: "Utils"
 
 ### ArgsType
 
-Ƭ **ArgsType**<`T`\>: `T` extends (...`args`: infer A) => `unknown` ? `A` : `never`
+Ƭ **ArgsType**\<`T`\>: `T` extends (...`args`: infer A) => `unknown` ? `A` : `never`
 
 Less strict version of `Parameters<T>`
 
@@ -20,13 +20,13 @@ Less strict version of `Parameters<T>`
 
 #### Defined in
 
-[types/utils/index.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/utils/index.ts#L29)
+[types/utils/index.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/utils/index.ts#L29)
 
 ___
 
 ### Ensured
 
-Ƭ **Ensured**<`T`, `K`\>: `Required`<`Pick`<`T`, `K`\>\> & { [SubKey in K]: NonNullable<T[SubKey]\> }
+Ƭ **Ensured**\<`T`, `K`\>: `Required`\<`Pick`\<`T`, `K`\>\> & \{ [SubKey in K]: NonNullable\<T[SubKey]\> }
 
 Pick a single property from T and ensure it is defined
 
@@ -39,13 +39,13 @@ Pick a single property from T and ensure it is defined
 
 #### Defined in
 
-[types/utils/index.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/utils/index.ts#L87)
+[types/utils/index.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/utils/index.ts#L87)
 
 ___
 
 ### HumanReadableType
 
-Ƭ **HumanReadableType**<`T`\>: `T` extends [`Entity`](../../../classes/API/Entities/Entity/Entity.md)<`unknown`, infer H\> ? [`HumanReadableType`](Utils.md#humanreadabletype)<`H`\> : `T` extends `BigNumber` ? `string` : `T` extends `Date` ? `string` : `T` extends `object` ? { [K in keyof T]: T[K] extends Entity<unknown, infer E\> ? HumanReadableType<E\> : HumanReadableType<T[K]\> } : `T`
+Ƭ **HumanReadableType**\<`T`\>: `T` extends [`Entity`](../../../classes/API/Entities/Entity/Entity.md)\<`unknown`, infer H\> ? [`HumanReadableType`](Utils.md#humanreadabletype)\<`H`\> : `T` extends `BigNumber` ? `string` : `T` extends `Date` ? `string` : `T` extends `object` ? \{ [K in keyof T]: T[K] extends Entity\<unknown, infer E\> ? HumanReadableType\<E\> : HumanReadableType\<T[K]\> } : `T`
 
 Recursively traverse a type and transform its Entity properties into their
   human readable version (as if `.toHuman` had been called on all of them)
@@ -58,13 +58,13 @@ Recursively traverse a type and transform its Entity properties into their
 
 #### Defined in
 
-[types/utils/index.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/utils/index.ts#L35)
+[types/utils/index.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/utils/index.ts#L35)
 
 ___
 
 ### Modify
 
-Ƭ **Modify**<`T`, `R`\>: `Omit`<`T`, keyof `R`\> & `R`
+Ƭ **Modify**\<`T`, `R`\>: `Omit`\<`T`, keyof `R`\> & `R`
 
 Override T with the properties of R
 
@@ -77,13 +77,13 @@ Override T with the properties of R
 
 #### Defined in
 
-[types/utils/index.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/utils/index.ts#L76)
+[types/utils/index.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/utils/index.ts#L76)
 
 ___
 
 ### PaginatedQueryArgs
 
-Ƭ **PaginatedQueryArgs**<`T`\>: `T` & { `size?`: `number` ; `start?`: `number`  }
+Ƭ **PaginatedQueryArgs**\<`T`\>: `T` & \{ `size?`: `number` ; `start?`: `number`  }
 
 #### Type parameters
 
@@ -93,13 +93,13 @@ ___
 
 #### Defined in
 
-[types/utils/index.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/utils/index.ts#L91)
+[types/utils/index.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/utils/index.ts#L91)
 
 ___
 
 ### QueryArgs
 
-Ƭ **QueryArgs**<`T`, `K`\>: { [P in K]?: T[P] }
+Ƭ **QueryArgs**\<`T`, `K`\>: \{ [P in K]?: T[P] }
 
 #### Type parameters
 
@@ -110,13 +110,13 @@ ___
 
 #### Defined in
 
-[types/utils/index.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/utils/index.ts#L96)
+[types/utils/index.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/utils/index.ts#L96)
 
 ___
 
 ### WithRequired
 
-Ƭ **WithRequired**<`T`, `K`\>: `T` & { [P in K]-?: T[P] }
+Ƭ **WithRequired**\<`T`, `K`\>: `T` & \{ [P in K]-?: T[P] }
 
 Ensure a specific property of T is defined
 
@@ -129,4 +129,4 @@ Ensure a specific property of T is defined
 
 #### Defined in
 
-[types/utils/index.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/utils/index.ts#L82)
+[types/utils/index.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/utils/index.ts#L82)

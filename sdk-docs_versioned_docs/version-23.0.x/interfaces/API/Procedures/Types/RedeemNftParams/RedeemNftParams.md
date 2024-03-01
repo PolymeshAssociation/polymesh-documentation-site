@@ -16,4 +16,4 @@ portfolio (or portfolio ID) from which Assets will be redeemed (optional, defaul
 
 #### Defined in
 
-[api/procedures/types.ts:682](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L682)
+[api/procedures/types.ts:682](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/procedures/types.ts#L682)

@@ -16,7 +16,7 @@ amount of POLYX to be subsidized. This can be increased/decreased later on
 
 #### Defined in
 
-[api/procedures/types.ts:274](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L274)
+[api/procedures/types.ts:274](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L274)
 
 ___
 
@@ -28,4 +28,4 @@ Account to subsidize
 
 #### Defined in
 
-[api/procedures/types.ts:270](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L270)
+[api/procedures/types.ts:270](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L270)

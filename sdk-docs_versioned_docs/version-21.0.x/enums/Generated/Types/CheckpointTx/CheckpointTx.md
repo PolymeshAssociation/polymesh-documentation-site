@@ -14,7 +14,7 @@ sidebar_label: "CheckpointTx"
 
 #### Defined in
 
-[generated/types.ts:537](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L537)
+[generated/types.ts:537](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/generated/types.ts#L537)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:539](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L539)
+[generated/types.ts:539](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/generated/types.ts#L539)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:540](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L540)
+[generated/types.ts:540](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/generated/types.ts#L540)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:538](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/generated/types.ts#L538)
+[generated/types.ts:538](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/generated/types.ts#L538)

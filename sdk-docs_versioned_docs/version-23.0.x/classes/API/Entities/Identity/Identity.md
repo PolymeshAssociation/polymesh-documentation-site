@@ -1,7 +1,7 @@
 ---
-id: "Identity"
-title: "Class: Identity"
-sidebar_label: "Identity"
+id: 'Identity'
+title: 'Class: Identity'
+sidebar_label: 'Identity'
 ---
 
 [api/entities/Identity](../../../../modules/API/Entities/Identity/Identity.md).Identity
@@ -10,7 +10,7 @@ Represents an Identity in the Polymesh blockchain
 
 ## Hierarchy
 
-- [`Entity`](../Entity/Entity.md)<[`UniqueIdentifiers`](../../../../interfaces/API/Entities/Identity/UniqueIdentifiers/UniqueIdentifiers.md), `string`\>
+- [`Entity`](../Entity/Entity.md) \<[`UniqueIdentifiers`](../../../../interfaces/API/Entities/Identity/UniqueIdentifiers/UniqueIdentifiers.md), `string`\>
 
   ↳ **`Identity`**
 
@@ -26,9 +26,9 @@ Represents an Identity in the Polymesh blockchain
 
 #### Defined in
 
-[api/entities/Identity/index.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Identity/index.ts#L119)
+[api/entities/Identity/index.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L119)
 
-___
+---
 
 ### authorizations
 
@@ -36,9 +36,9 @@ ___
 
 #### Defined in
 
-[api/entities/Identity/index.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Identity/index.ts#L117)
+[api/entities/Identity/index.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L117)
 
-___
+---
 
 ### did
 
@@ -48,9 +48,9 @@ Identity ID as stored in the blockchain
 
 #### Defined in
 
-[api/entities/Identity/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Identity/index.ts#L114)
+[api/entities/Identity/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L114)
 
-___
+---
 
 ### portfolios
 
@@ -58,9 +58,9 @@ ___
 
 #### Defined in
 
-[api/entities/Identity/index.ts:118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Identity/index.ts#L118)
+[api/entities/Identity/index.ts:118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L118)
 
-___
+---
 
 ### uuid
 
@@ -72,413 +72,509 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
 ### areSecondaryAccountsFrozen
 
-▸ **areSecondaryAccountsFrozen**(): `Promise`<`boolean`\>
+▸ **areSecondaryAccountsFrozen**(): `Promise`\<`boolean`\>
 
 Check whether secondary Accounts are frozen
 
-**`Note`**
-
- can be subscribed to
-
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
-▸ **areSecondaryAccountsFrozen**(`callback`): `Promise`<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
+**`Note`**
+
+can be subscribed to
+
+#### Defined in
+
+[api/entities/Identity/index.ts:658](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L658)
+
+▸ **areSecondaryAccountsFrozen**(`callback`): `Promise`\<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `callback` | [`SubCallback`](../../../../modules/Types/Types.md#subcallback)<`boolean`\> |
+| Name       | Type                                                                         |
+| :--------- | :--------------------------------------------------------------------------- |
+| `callback` | [`SubCallback`](../../../../modules/Types/Types.md#subcallback)\<`boolean`\> |
 
 #### Returns
 
-`Promise`<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
+`Promise`\<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
 
-___
+#### Defined in
+
+[api/entities/Identity/index.ts:659](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L659)
+
+---
 
 ### checkRoles
 
-▸ **checkRoles**(`roles`): `Promise`<[`CheckRolesResult`](../../../../interfaces/Types/CheckRolesResult/CheckRolesResult.md)\>
+▸ **checkRoles**(`roles`): `Promise`\<[`CheckRolesResult`](../../../../interfaces/Types/CheckRolesResult/CheckRolesResult.md)\>
 
 Check whether this Identity possesses all specified roles
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type                                                |
+| :------ | :-------------------------------------------------- |
 | `roles` | [`Role`](../../../../modules/Types/Types.md#role)[] |
 
 #### Returns
 
-`Promise`<[`CheckRolesResult`](../../../../interfaces/Types/CheckRolesResult/CheckRolesResult.md)\>
+`Promise`\<[`CheckRolesResult`](../../../../interfaces/Types/CheckRolesResult/CheckRolesResult.md)\>
 
-___
+#### Defined in
+
+[api/entities/Identity/index.ts:441](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L441)
+
+---
 
 ### exists
 
-▸ **exists**(): `Promise`<`boolean`\>
+▸ **exists**(): `Promise`\<`boolean`\>
 
 Determine whether this Identity exists on chain
 
-**`Note`**
-
- asset Identities aren't considered to exist for this check
-
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
+
+**`Note`**
+
+asset Identities aren't considered to exist for this check
 
 #### Overrides
 
 [Entity](../Entity/Entity.md).[exists](../Entity/Entity.md#exists)
 
-___
+#### Defined in
+
+[api/entities/Identity/index.ts:824](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L824)
+
+---
 
 ### getAssetBalance
 
-▸ **getAssetBalance**(`args`): `Promise`<`BigNumber`\>
+▸ **getAssetBalance**(`args`): `Promise`\<`BigNumber`\>
 
 Retrieve the balance of a particular Asset
 
+#### Parameters
+
+| Name          | Type     |
+| :------------ | :------- |
+| `args`        | `Object` |
+| `args.ticker` | `string` |
+
+#### Returns
+
+`Promise`\<`BigNumber`\>
+
 **`Note`**
 
- can be subscribed to
+can be subscribed to
+
+#### Defined in
+
+[api/entities/Identity/index.ts:195](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L195)
+
+▸ **getAssetBalance**(`args`, `callback`): `Promise`\<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Object` |
-| `args.ticker` | `string` |
+| Name          | Type                                                                           |
+| :------------ | :----------------------------------------------------------------------------- |
+| `args`        | `Object`                                                                       |
+| `args.ticker` | `string`                                                                       |
+| `callback`    | [`SubCallback`](../../../../modules/Types/Types.md#subcallback)\<`BigNumber`\> |
 
 #### Returns
 
-`Promise`<`BigNumber`\>
+`Promise`\<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
 
-▸ **getAssetBalance**(`args`, `callback`): `Promise`<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
+#### Defined in
 
-#### Parameters
+[api/entities/Identity/index.ts:196](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L196)
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Object` |
-| `args.ticker` | `string` |
-| `callback` | [`SubCallback`](../../../../modules/Types/Types.md#subcallback)<`BigNumber`\> |
-
-#### Returns
-
-`Promise`<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
-
-___
+---
 
 ### getChildIdentities
 
-▸ **getChildIdentities**(): `Promise`<[`ChildIdentity`](ChildIdentity/ChildIdentity.md)[]\>
+▸ **getChildIdentities**(): `Promise`\<[`ChildIdentity`](ChildIdentity/ChildIdentity.md)[]\>
 
 Returns the list of all child identities
 
-**`Note`**
-
- this query can be potentially **SLOW** depending on the number of parent Identities present on the chain
-
 #### Returns
 
-`Promise`<[`ChildIdentity`](ChildIdentity/ChildIdentity.md)[]\>
+`Promise`\<[`ChildIdentity`](ChildIdentity/ChildIdentity.md)[]\>
 
-___
+**`Note`**
+
+this query can be potentially **SLOW** depending on the number of parent Identities present on the chain
+
+#### Defined in
+
+[api/entities/Identity/index.ts:876](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L876)
+
+---
 
 ### getHeldAssets
 
-▸ **getHeldAssets**(`opts?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`FungibleAsset`](../Asset/Fungible/FungibleAsset.md)\>\>
+▸ **getHeldAssets**(`opts?`): `Promise`\<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md) \<[`FungibleAsset`](../Asset/Fungible/FungibleAsset.md)\>\>
 
 Retrieve a list of all Assets which were held at one point by this Identity
 
-**`Note`**
-
- uses the middlewareV2
-
-**`Note`**
-
- supports pagination
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `Object` |
+| Name          | Type                                                                                        |
+| :------------ | :------------------------------------------------------------------------------------------ |
+| `opts`        | `Object`                                                                                    |
 | `opts.order?` | [`AssetHoldersOrderBy`](../../../../enums/Types/AssetHoldersOrderBy/AssetHoldersOrderBy.md) |
-| `opts.size?` | `BigNumber` |
-| `opts.start?` | `BigNumber` |
+| `opts.size?`  | `BigNumber`                                                                                 |
+| `opts.start?` | `BigNumber`                                                                                 |
 
 #### Returns
 
-`Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`FungibleAsset`](../Asset/Fungible/FungibleAsset.md)\>\>
+`Promise`\<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md) \<[`FungibleAsset`](../Asset/Fungible/FungibleAsset.md)\>\>
 
-___
+**`Note`**
+
+uses the middlewareV2
+
+**`Note`**
+
+supports pagination
+
+#### Defined in
+
+[api/entities/Identity/index.ts:349](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L349)
+
+---
 
 ### getHeldNfts
 
-▸ **getHeldNfts**(`opts?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`HeldNfts`](../../../../interfaces/Types/HeldNfts/HeldNfts.md)\>\>
+▸ **getHeldNfts**(`opts?`): `Promise`\<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md) \<[`HeldNfts`](../../../../interfaces/Types/HeldNfts/HeldNfts.md)\>\>
 
 Retrieve a list of all NftCollections which were held at one point by this Identity
 
-**`Note`**
-
- uses the middlewareV2
-
-**`Note`**
-
- supports pagination
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `Object` |
+| Name          | Type                                                                                  |
+| :------------ | :------------------------------------------------------------------------------------ |
+| `opts`        | `Object`                                                                              |
 | `opts.order?` | [`NftHoldersOrderBy`](../../../../enums/Types/NftHoldersOrderBy/NftHoldersOrderBy.md) |
-| `opts.size?` | `BigNumber` |
-| `opts.start?` | `BigNumber` |
+| `opts.size?`  | `BigNumber`                                                                           |
+| `opts.start?` | `BigNumber`                                                                           |
 
 #### Returns
 
-`Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`HeldNfts`](../../../../interfaces/Types/HeldNfts/HeldNfts.md)\>\>
+`Promise`\<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md) \<[`HeldNfts`](../../../../interfaces/Types/HeldNfts/HeldNfts.md)\>\>
 
-___
+**`Note`**
+
+uses the middlewareV2
+
+**`Note`**
+
+supports pagination
+
+#### Defined in
+
+[api/entities/Identity/index.ts:394](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L394)
+
+---
 
 ### getHistoricalInstructions
 
-▸ **getHistoricalInstructions**(): `Promise`<[`HistoricInstruction`](../../../../modules/API/Entities/Venue/Types/Types.md#historicinstruction)[]\>
+▸ **getHistoricalInstructions**(): `Promise`\<[`HistoricInstruction`](../../../../modules/API/Entities/Venue/Types/Types.md#historicinstruction)[]\>
 
 Retrieve all Instructions that have been associated with this Identity's DID
 
-**`Note`**
-
- uses the middleware V2
-
 #### Returns
 
-`Promise`<[`HistoricInstruction`](../../../../modules/API/Entities/Venue/Types/Types.md#historicinstruction)[]\>
+`Promise`\<[`HistoricInstruction`](../../../../modules/API/Entities/Venue/Types/Types.md#historicinstruction)[]\>
 
-___
+**`Note`**
+
+uses the middleware V2
+
+#### Defined in
+
+[api/entities/Identity/index.ts:856](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L856)
+
+---
 
 ### getInstructions
 
-▸ **getInstructions**(): `Promise`<[`GroupedInstructions`](../../../../interfaces/Types/GroupedInstructions/GroupedInstructions.md)\>
+▸ **getInstructions**(): `Promise`\<[`GroupedInstructions`](../../../../interfaces/Types/GroupedInstructions/GroupedInstructions.md)\>
 
 Retrieve all Instructions where this Identity is a custodian of one or more portfolios in the legs,
-  grouped by status
+grouped by status
 
 #### Returns
 
-`Promise`<[`GroupedInstructions`](../../../../interfaces/Types/GroupedInstructions/GroupedInstructions.md)\>
+`Promise`\<[`GroupedInstructions`](../../../../interfaces/Types/GroupedInstructions/GroupedInstructions.md)\>
 
-___
+#### Defined in
+
+[api/entities/Identity/index.ts:512](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L512)
+
+---
 
 ### getInvolvedInstructions
 
-▸ **getInvolvedInstructions**(): `Promise`<[`GroupedInvolvedInstructions`](../../../../interfaces/Types/GroupedInvolvedInstructions/GroupedInvolvedInstructions.md)\>
+▸ **getInvolvedInstructions**(): `Promise`\<[`GroupedInvolvedInstructions`](../../../../interfaces/Types/GroupedInvolvedInstructions/GroupedInvolvedInstructions.md)\>
 
 Retrieve all Instructions where this Identity is a participant (owner/custodian),
-  grouped by the role of the Identity and Instruction status
+grouped by the role of the Identity and Instruction status
 
 #### Returns
 
-`Promise`<[`GroupedInvolvedInstructions`](../../../../interfaces/Types/GroupedInvolvedInstructions/GroupedInvolvedInstructions.md)\>
+`Promise`\<[`GroupedInvolvedInstructions`](../../../../interfaces/Types/GroupedInvolvedInstructions/GroupedInvolvedInstructions.md)\>
 
-___
+#### Defined in
+
+[api/entities/Identity/index.ts:599](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L599)
+
+---
 
 ### getPendingDistributions
 
-▸ **getPendingDistributions**(): `Promise`<[`DistributionWithDetails`](../../../../interfaces/Types/DistributionWithDetails/DistributionWithDetails.md)[]\>
+▸ **getPendingDistributions**(): `Promise`\<[`DistributionWithDetails`](../../../../interfaces/Types/DistributionWithDetails/DistributionWithDetails.md)[]\>
 
 Retrieve every Dividend Distribution for which this Identity is eligible and hasn't been paid
 
-**`Note`**
-
- uses the middleware
-
-**`Note`**
-
- this query can be potentially **SLOW** depending on which Assets this Identity has held
-
 #### Returns
 
-`Promise`<[`DistributionWithDetails`](../../../../interfaces/Types/DistributionWithDetails/DistributionWithDetails.md)[]\>
+`Promise`\<[`DistributionWithDetails`](../../../../interfaces/Types/DistributionWithDetails/DistributionWithDetails.md)[]\>
 
-___
+**`Note`**
+
+uses the middleware
+
+**`Note`**
+
+this query can be potentially **SLOW** depending on which Assets this Identity has held
+
+#### Defined in
+
+[api/entities/Identity/index.ts:695](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L695)
+
+---
 
 ### getPrimaryAccount
 
-▸ **getPrimaryAccount**(): `Promise`<[`PermissionedAccount`](../../../../interfaces/Types/PermissionedAccount/PermissionedAccount.md)\>
+▸ **getPrimaryAccount**(): `Promise`\<[`PermissionedAccount`](../../../../interfaces/Types/PermissionedAccount/PermissionedAccount.md)\>
 
 Retrieve the primary Account associated with the Identity
 
-**`Note`**
-
- can be subscribed to
-
 #### Returns
 
-`Promise`<[`PermissionedAccount`](../../../../interfaces/Types/PermissionedAccount/PermissionedAccount.md)\>
+`Promise`\<[`PermissionedAccount`](../../../../interfaces/Types/PermissionedAccount/PermissionedAccount.md)\>
 
-▸ **getPrimaryAccount**(`callback`): `Promise`<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
+**`Note`**
+
+can be subscribed to
+
+#### Defined in
+
+[api/entities/Identity/index.ts:296](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L296)
+
+▸ **getPrimaryAccount**(`callback`): `Promise`\<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `callback` | [`SubCallback`](../../../../modules/Types/Types.md#subcallback)<[`PermissionedAccount`](../../../../interfaces/Types/PermissionedAccount/PermissionedAccount.md)\> |
+| Name       | Type                                                                                                                                                                 |
+| :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `callback` | [`SubCallback`](../../../../modules/Types/Types.md#subcallback) \<[`PermissionedAccount`](../../../../interfaces/Types/PermissionedAccount/PermissionedAccount.md)\> |
 
 #### Returns
 
-`Promise`<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
+`Promise`\<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
 
-___
+#### Defined in
+
+[api/entities/Identity/index.ts:297](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L297)
+
+---
 
 ### getSecondaryAccounts
 
-▸ **getSecondaryAccounts**(`paginationOpts?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`PermissionedAccount`](../../../../interfaces/Types/PermissionedAccount/PermissionedAccount.md)\>\>
+▸ **getSecondaryAccounts**(`paginationOpts?`): `Promise`\<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md) \<[`PermissionedAccount`](../../../../interfaces/Types/PermissionedAccount/PermissionedAccount.md)\>\>
 
 Get the list of secondary Accounts related to the Identity
 
-**`Note`**
-
- supports pagination
-
-**`Note`**
-
- can be subscribed to
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name              | Type                                                                                       |
+| :---------------- | :----------------------------------------------------------------------------------------- |
 | `paginationOpts?` | [`PaginationOptions`](../../../../interfaces/Types/PaginationOptions/PaginationOptions.md) |
 
 #### Returns
 
-`Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`PermissionedAccount`](../../../../interfaces/Types/PermissionedAccount/PermissionedAccount.md)\>\>
+`Promise`\<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md) \<[`PermissionedAccount`](../../../../interfaces/Types/PermissionedAccount/PermissionedAccount.md)\>\>
 
-▸ **getSecondaryAccounts**(`callback`): `Promise`<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
+**`Note`**
+
+supports pagination
+
+**`Note`**
+
+can be subscribed to
+
+#### Defined in
+
+[api/entities/Identity/index.ts:750](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L750)
+
+▸ **getSecondaryAccounts**(`callback`): `Promise`\<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `callback` | [`SubCallback`](../../../../modules/Types/Types.md#subcallback)<[`PermissionedAccount`](../../../../interfaces/Types/PermissionedAccount/PermissionedAccount.md)[]\> |
+| Name       | Type                                                                                                                                                                   |
+| :--------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `callback` | [`SubCallback`](../../../../modules/Types/Types.md#subcallback) \<[`PermissionedAccount`](../../../../interfaces/Types/PermissionedAccount/PermissionedAccount.md)[]\> |
 
 #### Returns
 
-`Promise`<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
+`Promise`\<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
 
-▸ **getSecondaryAccounts**(`paginationOpts`, `callback`): `Promise`<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
+#### Defined in
+
+[api/entities/Identity/index.ts:754](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L754)
+
+▸ **getSecondaryAccounts**(`paginationOpts`, `callback`): `Promise`\<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `paginationOpts` | [`PaginationOptions`](../../../../interfaces/Types/PaginationOptions/PaginationOptions.md) |
-| `callback` | [`SubCallback`](../../../../modules/Types/Types.md#subcallback)<[`PermissionedAccount`](../../../../interfaces/Types/PermissionedAccount/PermissionedAccount.md)[]\> |
+| Name             | Type                                                                                                                                                                   |
+| :--------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `paginationOpts` | [`PaginationOptions`](../../../../interfaces/Types/PaginationOptions/PaginationOptions.md)                                                                             |
+| `callback`       | [`SubCallback`](../../../../modules/Types/Types.md#subcallback) \<[`PermissionedAccount`](../../../../interfaces/Types/PermissionedAccount/PermissionedAccount.md)[]\> |
 
 #### Returns
 
-`Promise`<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
+`Promise`\<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
 
-___
+#### Defined in
+
+[api/entities/Identity/index.ts:758](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L758)
+
+---
 
 ### getTrustingAssets
 
-▸ **getTrustingAssets**(): `Promise`<[`FungibleAsset`](../Asset/Fungible/FungibleAsset.md)[]\>
+▸ **getTrustingAssets**(): `Promise`\<[`FungibleAsset`](../Asset/Fungible/FungibleAsset.md)[]\>
 
 Get the list of Assets for which this Identity is a trusted claim issuer
 
-**`Note`**
-
- uses the middlewareV2
-
 #### Returns
 
-`Promise`<[`FungibleAsset`](../Asset/Fungible/FungibleAsset.md)[]\>
+`Promise`\<[`FungibleAsset`](../Asset/Fungible/FungibleAsset.md)[]\>
 
-___
+**`Note`**
+
+uses the middlewareV2
+
+#### Defined in
+
+[api/entities/Identity/index.ts:465](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L465)
+
+---
 
 ### getVenues
 
-▸ **getVenues**(): `Promise`<[`Venue`](../Venue/Venue.md)[]\>
+▸ **getVenues**(): `Promise`\<[`Venue`](../Venue/Venue.md)[]\>
 
 Retrieve all Venues created by this Identity
 
-**`Note`**
-
- can be subscribed to
-
 #### Returns
 
-`Promise`<[`Venue`](../Venue/Venue.md)[]\>
+`Promise`\<[`Venue`](../Venue/Venue.md)[]\>
 
-___
+**`Note`**
+
+can be subscribed to
+
+#### Defined in
+
+[api/entities/Identity/index.ts:484](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L484)
+
+---
 
 ### hasRole
 
-▸ **hasRole**(`role`): `Promise`<`boolean`\>
+▸ **hasRole**(`role`): `Promise`\<`boolean`\>
 
 Check whether this Identity possesses the specified Role
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type                                              |
+| :----- | :------------------------------------------------ |
 | `role` | [`Role`](../../../../modules/Types/Types.md#role) |
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
-___
+#### Defined in
+
+[api/entities/Identity/index.ts:147](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L147)
+
+---
 
 ### hasValidCdd
 
-▸ **hasValidCdd**(): `Promise`<`boolean`\>
+▸ **hasValidCdd**(): `Promise`\<`boolean`\>
 
 Check whether this Identity has a valid CDD claim
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
-___
+#### Defined in
+
+[api/entities/Identity/index.ts:244](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L244)
+
+---
 
 ### isCddProvider
 
-▸ **isCddProvider**(): `Promise`<`boolean`\>
+▸ **isCddProvider**(): `Promise`\<`boolean`\>
 
 Check whether this Identity is a CDD provider
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
-___
+#### Defined in
+
+[api/entities/Identity/index.ts:277](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L277)
+
+---
 
 ### isChild
 
-▸ **isChild**(): `Promise`<`boolean`\>
+▸ **isChild**(): `Promise`\<`boolean`\>
 
 Check whether this Identity is a child Identity
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
-___
+#### Defined in
+
+[api/entities/Identity/index.ts:917](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L917)
+
+---
 
 ### isEqual
 
@@ -488,9 +584,9 @@ Determine whether this Entity is the same as another one
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `entity` | [`Entity`](../Entity/Entity.md)<`unknown`, `unknown`\> |
+| Name     | Type                                                    |
+| :------- | :------------------------------------------------------ |
+| `entity` | [`Entity`](../Entity/Entity.md)\<`unknown`, `unknown`\> |
 
 #### Returns
 
@@ -500,19 +596,27 @@ Determine whether this Entity is the same as another one
 
 [Entity](../Entity/Entity.md).[isEqual](../Entity/Entity.md#isequal)
 
-___
+#### Defined in
+
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Entity.ts#L61)
+
+---
 
 ### isGcMember
 
-▸ **isGcMember**(): `Promise`<`boolean`\>
+▸ **isGcMember**(): `Promise`\<`boolean`\>
 
 Check whether this Identity is Governance Committee member
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
-___
+#### Defined in
+
+[api/entities/Identity/index.ts:260](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L260)
+
+---
 
 ### toHuman
 
@@ -528,54 +632,63 @@ Return the Identity's DID
 
 [Entity](../Entity/Entity.md).[toHuman](../Entity/Entity.md#tohuman)
 
-___
+#### Defined in
+
+[api/entities/Identity/index.ts:847](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L847)
+
+---
 
 ### unlinkChild
 
-▸ **unlinkChild**(`args`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+▸ **unlinkChild**(`args`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
 Unlinks a child identity
 
-**`Throws`**
-
- if
- - the `child` is not a child of this identity
- - the transaction signer is not the primary key of the parent identity
-
-**`Note`**
-
- this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [unlinkChild.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | [`UnlinkChildParams`](../../../../interfaces/API/Procedures/Types/UnlinkChildParams/UnlinkChildParams.md) |
-| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+| Name    | Type                                                                                                      |
+| :------ | :-------------------------------------------------------------------------------------------------------- |
+| `args`  | [`UnlinkChildParams`](../../../../interfaces/API/Procedures/Types/UnlinkChildParams/UnlinkChildParams.md) |
+| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md)                            |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
-___
+**`Throws`**
+
+if
+
+- the `child` is not a child of this identity
+- the transaction signer is not the primary key of the parent identity
+
+**`Note`**
+
+this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [unlinkChild.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/Identity/index.ts:910](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Identity/index.ts#L910)
+
+---
 
 ### generateUuid
 
-▸ `Static` **generateUuid**<`Identifiers`\>(`identifiers`): `string`
+▸ `Static` **generateUuid**\<`Identifiers`\>(`identifiers`): `string`
 
 Generate the Entity's UUID from its identifying properties
 
 #### Type parameters
 
-| Name |
-| :------ |
+| Name          |
+| :------------ |
 | `Identifiers` |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name          | Type          |
+| :------------ | :------------ |
 | `identifiers` | `Identifiers` |
 
 #### Returns
@@ -586,24 +699,28 @@ Generate the Entity's UUID from its identifying properties
 
 [Entity](../Entity/Entity.md).[generateUuid](../Entity/Entity.md#generateuuid)
 
-___
+#### Defined in
+
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Entity.ts#L14)
+
+---
 
 ### unserialize
 
-▸ `Static` **unserialize**<`Identifiers`\>(`serialized`): `Identifiers`
+▸ `Static` **unserialize**\<`Identifiers`\>(`serialized`): `Identifiers`
 
 Unserialize a UUID into its Unique Identifiers
 
 #### Type parameters
 
-| Name |
-| :------ |
+| Name          |
+| :------------ |
 | `Identifiers` |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name         | Type     | Description         |
+| :----------- | :------- | :------------------ |
 | `serialized` | `string` | UUID to unserialize |
 
 #### Returns
@@ -613,3 +730,7 @@ Unserialize a UUID into its Unique Identifiers
 #### Inherited from
 
 [Entity](../Entity/Entity.md).[unserialize](../Entity/Entity.md#unserialize)
+
+#### Defined in
+
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Entity.ts#L23)

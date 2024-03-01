@@ -14,7 +14,7 @@ sidebar_label: "PortfolioId"
 
 #### Defined in
 
-[types/index.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L107)
+[types/index.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L107)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L108)
+[types/index.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L108)

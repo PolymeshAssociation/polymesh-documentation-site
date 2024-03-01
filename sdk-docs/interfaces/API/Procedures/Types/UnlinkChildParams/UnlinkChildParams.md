@@ -14,4 +14,4 @@ sidebar_label: "UnlinkChildParams"
 
 #### Defined in
 
-[api/procedures/types.ts:1146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L1146)
+[api/procedures/types.ts:1167](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/procedures/types.ts#L1167)

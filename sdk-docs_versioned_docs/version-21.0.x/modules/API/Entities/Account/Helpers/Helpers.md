@@ -1,7 +1,7 @@
 ---
-id: "Helpers"
-title: "Module: helpers"
-sidebar_label: "Helpers"
+id: 'Helpers'
+title: 'Module: helpers'
+sidebar_label: 'Helpers'
 ---
 
 ## Functions
@@ -14,11 +14,15 @@ Calculate the difference between the required Transaction permissions and the cu
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `requiredPermissions` | `undefined` \| ``null`` \| ([`NumberedPortfolio`](../../../../../classes/API/Entities/NumberedPortfolio/NumberedPortfolio.md) \| [`DefaultPortfolio`](../../../../../classes/API/Entities/DefaultPortfolio/DefaultPortfolio.md))[] |
-| `currentPermissions` | ``null`` \| [`SectionPermissions`](../../../../../interfaces/Types/SectionPermissions/SectionPermissions.md)<[`NumberedPortfolio`](../../../../../classes/API/Entities/NumberedPortfolio/NumberedPortfolio.md) \| [`DefaultPortfolio`](../../../../../classes/API/Entities/DefaultPortfolio/DefaultPortfolio.md)\> |
+| Name                  | Type                                                                                                                                                                                                                                                                                                               |
+| :-------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `requiredPermissions` | `undefined` \| `null` \| ([`NumberedPortfolio`](../../../../../classes/API/Entities/NumberedPortfolio/NumberedPortfolio.md) \| [`DefaultPortfolio`](../../../../../classes/API/Entities/DefaultPortfolio/DefaultPortfolio.md))[]                                                                                   |
+| `currentPermissions`  | `null` \| [`SectionPermissions`](../../../../../interfaces/Types/SectionPermissions/SectionPermissions.md) \<[`NumberedPortfolio`](../../../../../classes/API/Entities/NumberedPortfolio/NumberedPortfolio.md) \| [`DefaultPortfolio`](../../../../../classes/API/Entities/DefaultPortfolio/DefaultPortfolio.md)\> |
 
 #### Returns
 
 [`SimplePermissions`](../../../../../interfaces/Types/SimplePermissions/SimplePermissions.md)[``"portfolios"``]
+
+#### Defined in
+
+[api/entities/Account/helpers.ts:30](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Account/helpers.ts#L30)

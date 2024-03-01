@@ -14,7 +14,7 @@ sidebar_label: "CorporateActionKind"
 
 #### Defined in
 
-[api/entities/CorporateActionBase/types.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CorporateActionBase/types.ts#L38)
+[api/entities/CorporateActionBase/types.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/CorporateActionBase/types.ts#L38)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/types.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CorporateActionBase/types.ts#L40)
+[api/entities/CorporateActionBase/types.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/CorporateActionBase/types.ts#L40)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/types.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CorporateActionBase/types.ts#L36)
+[api/entities/CorporateActionBase/types.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/CorporateActionBase/types.ts#L36)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CorporateActionBase/types.ts#L39)
+[api/entities/CorporateActionBase/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/CorporateActionBase/types.ts#L39)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateActionBase/types.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CorporateActionBase/types.ts#L37)
+[api/entities/CorporateActionBase/types.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/CorporateActionBase/types.ts#L37)

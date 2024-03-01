@@ -14,7 +14,7 @@ sidebar_label: "MultiSigDetails"
 
 #### Defined in
 
-[api/entities/Account/types.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Account/types.ts#L8)
+[api/entities/Account/types.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Account/types.ts#L8)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/Account/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Account/types.ts#L7)
+[api/entities/Account/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Account/types.ts#L7)

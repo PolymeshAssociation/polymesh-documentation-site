@@ -12,8 +12,8 @@ sidebar_label: "Types"
 
 ### InputCaCheckpoint
 
-Ƭ **InputCaCheckpoint**: [`Checkpoint`](../../../../../../classes/API/Entities/Checkpoint/Checkpoint.md) \| [`CheckpointSchedule`](../../../../../../classes/API/Entities/CheckpointSchedule/CheckpointSchedule.md) \| `Date` \| { `id`: `BigNumber` ; `type`: [`Existing`](../../../../../../enums/API/Entities/Asset/Checkpoints/Types/CaCheckpointType/CaCheckpointType.md#existing)  } \| { `id`: `BigNumber` ; `type`: [`Schedule`](../../../../../../enums/API/Entities/Asset/Checkpoints/Types/CaCheckpointType/CaCheckpointType.md#schedule)  }
+Ƭ **InputCaCheckpoint**: [`Checkpoint`](../../../../../../classes/API/Entities/Checkpoint/Checkpoint.md) \| [`CheckpointSchedule`](../../../../../../classes/API/Entities/CheckpointSchedule/CheckpointSchedule.md) \| `Date` \| \{ `id`: `BigNumber` ; `type`: [`Existing`](../../../../../../enums/API/Entities/Asset/Checkpoints/Types/CaCheckpointType/CaCheckpointType.md#existing)  } \| \{ `id`: `BigNumber` ; `type`: [`Schedule`](../../../../../../enums/API/Entities/Asset/Checkpoints/Types/CaCheckpointType/CaCheckpointType.md#schedule)  }
 
 #### Defined in
 
-[api/entities/Asset/Checkpoints/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Asset/Checkpoints/types.ts#L10)
+[api/entities/Asset/Checkpoints/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Asset/Checkpoints/types.ts#L10)

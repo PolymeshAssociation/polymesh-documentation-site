@@ -14,7 +14,7 @@ sidebar_label: "Order"
 
 #### Defined in
 
-[middleware/types.ts:1236](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/types.ts#L1236)
+[middleware/types.ts:1236](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/types.ts#L1236)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:1237](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/types.ts#L1237)
+[middleware/types.ts:1237](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/types.ts#L1237)

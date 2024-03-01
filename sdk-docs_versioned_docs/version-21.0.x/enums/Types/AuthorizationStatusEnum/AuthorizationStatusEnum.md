@@ -8,7 +8,7 @@ sidebar_label: "AuthorizationStatusEnum"
 
 **`Enum Name`**
 
- AuthorizationStatusEnum
+AuthorizationStatusEnum
  Represents all possible authorization statuses
 
 ## Enumeration Members
@@ -19,7 +19,7 @@ sidebar_label: "AuthorizationStatusEnum"
 
 #### Defined in
 
-[middleware/typesV2.ts:29167](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29167)
+[middleware/typesV2.ts:29167](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L29167)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29168)
+[middleware/typesV2.ts:29168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L29168)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29169](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29169)
+[middleware/typesV2.ts:29169](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L29169)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29170](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29170)
+[middleware/typesV2.ts:29170](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L29170)

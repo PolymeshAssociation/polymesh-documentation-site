@@ -10,7 +10,7 @@ A proposal for a MultiSig transaction. This is a wrapper around an extrinsic tha
 
 ## Hierarchy
 
-- [`Entity`](../Entity/Entity.md)<`UniqueIdentifiers`, [`HumanReadable`](../../../../interfaces/API/Entities/MultiSigProposal/HumanReadable/HumanReadable.md)\>
+- [`Entity`](../Entity/Entity.md)\<`UniqueIdentifiers`, [`HumanReadable`](../../../../interfaces/API/Entities/MultiSigProposal/HumanReadable/HumanReadable.md)\>
 
   ↳ **`MultiSigProposal`**
 
@@ -22,7 +22,7 @@ A proposal for a MultiSig transaction. This is a wrapper around an extrinsic tha
 
 #### Defined in
 
-[api/entities/MultiSigProposal/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MultiSigProposal/index.ts#L53)
+[api/entities/MultiSigProposal/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/MultiSigProposal/index.ts#L53)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[api/entities/MultiSigProposal/index.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MultiSigProposal/index.ts#L52)
+[api/entities/MultiSigProposal/index.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/MultiSigProposal/index.ts#L52)
 
 ___
 
@@ -46,20 +46,15 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
 ### approve
 
-▸ **approve**(`opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+▸ **approve**(`opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
 Approve this MultiSig proposal
-
-**`Note`**
-
- this method is of type [NoArgsProcedureMethod](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md), which means you can call [approve.checkAuthorization](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
 
 #### Parameters
 
@@ -69,75 +64,100 @@ Approve this MultiSig proposal
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
+
+**`Note`**
+
+this method is of type [NoArgsProcedureMethod](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md), which means you can call [approve.checkAuthorization](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md#checkauthorization)
+  on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/MultiSigProposal/index.ts:97](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/MultiSigProposal/index.ts#L97)
 
 ___
 
 ### createdAt
 
-▸ **createdAt**(): `Promise`<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
+▸ **createdAt**(): `Promise`\<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
 
 Retrieve the identifier data (block number, date and event index) of the event that was emitted when this MultiSig Proposal was created
 
-**`Note`**
-
- uses the middlewareV2
-
-**`Note`**
-
- there is a possibility that the data is not ready by the time it is requested. In that case, `null` is returned
-
 #### Returns
 
-`Promise`<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
+`Promise`\<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
+
+**`Note`**
+
+uses the middlewareV2
+
+**`Note`**
+
+there is a possibility that the data is not ready by the time it is requested. In that case, `null` is returned
+
+#### Defined in
+
+[api/entities/MultiSigProposal/index.ts:289](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/MultiSigProposal/index.ts#L289)
 
 ___
 
 ### creator
 
-▸ **creator**(): `Promise`<``null`` \| [`Account`](../Account/Account.md)\>
+▸ **creator**(): `Promise`\<``null`` \| [`Account`](../Account/Account.md)\>
 
 Retrieve the account which created this MultiSig Proposal
 
-**`Note`**
-
- uses the middlewareV2
-
-**`Note`**
-
- there is a possibility that the data is not ready by the time it is requested. In that case, `null` is returned
-
 #### Returns
 
-`Promise`<``null`` \| [`Account`](../Account/Account.md)\>
+`Promise`\<``null`` \| [`Account`](../Account/Account.md)\>
+
+**`Note`**
+
+uses the middlewareV2
+
+**`Note`**
+
+there is a possibility that the data is not ready by the time it is requested. In that case, `null` is returned
+
+#### Defined in
+
+[api/entities/MultiSigProposal/index.ts:304](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/MultiSigProposal/index.ts#L304)
 
 ___
 
 ### details
 
-▸ **details**(): `Promise`<[`MultiSigProposalDetails`](../../../../interfaces/API/Entities/MultiSigProposal/Types/MultiSigProposalDetails/MultiSigProposalDetails.md)\>
+▸ **details**(): `Promise`\<[`MultiSigProposalDetails`](../../../../interfaces/API/Entities/MultiSigProposal/Types/MultiSigProposalDetails/MultiSigProposalDetails.md)\>
 
 Fetches the details of the Proposal. This includes the amount of approvals and rejections, the expiry, and details of the wrapped extrinsic
 
 #### Returns
 
-`Promise`<[`MultiSigProposalDetails`](../../../../interfaces/API/Entities/MultiSigProposal/Types/MultiSigProposalDetails/MultiSigProposalDetails.md)\>
+`Promise`\<[`MultiSigProposalDetails`](../../../../interfaces/API/Entities/MultiSigProposal/Types/MultiSigProposalDetails/MultiSigProposalDetails.md)\>
+
+#### Defined in
+
+[api/entities/MultiSigProposal/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/MultiSigProposal/index.ts#L114)
 
 ___
 
 ### exists
 
-▸ **exists**(): `Promise`<`boolean`\>
+▸ **exists**(): `Promise`\<`boolean`\>
 
 Determines whether this Proposal exists on chain
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Overrides
 
 [Entity](../Entity/Entity.md).[exists](../Entity/Entity.md#exists)
+
+#### Defined in
+
+[api/entities/MultiSigProposal/index.ts:186](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/MultiSigProposal/index.ts#L186)
 
 ___
 
@@ -151,7 +171,7 @@ Determine whether this Entity is the same as another one
 
 | Name | Type |
 | :------ | :------ |
-| `entity` | [`Entity`](../Entity/Entity.md)<`unknown`, `unknown`\> |
+| `entity` | [`Entity`](../Entity/Entity.md)\<`unknown`, `unknown`\> |
 
 #### Returns
 
@@ -161,18 +181,17 @@ Determine whether this Entity is the same as another one
 
 [Entity](../Entity/Entity.md).[isEqual](../Entity/Entity.md#isequal)
 
+#### Defined in
+
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Entity.ts#L61)
+
 ___
 
 ### reject
 
-▸ **reject**(`opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+▸ **reject**(`opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
 Reject this MultiSig proposal
-
-**`Note`**
-
- this method is of type [NoArgsProcedureMethod](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md), which means you can call [reject.checkAuthorization](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
 
 #### Parameters
 
@@ -182,7 +201,16 @@ Reject this MultiSig proposal
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
+
+**`Note`**
+
+this method is of type [NoArgsProcedureMethod](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md), which means you can call [reject.checkAuthorization](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md#checkauthorization)
+  on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/MultiSigProposal/index.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/MultiSigProposal/index.ts#L107)
 
 ___
 
@@ -200,27 +228,35 @@ Returns a human readable representation
 
 [Entity](../Entity/Entity.md).[toHuman](../Entity/Entity.md#tohuman)
 
+#### Defined in
+
+[api/entities/MultiSigProposal/index.ts:208](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/MultiSigProposal/index.ts#L208)
+
 ___
 
 ### votes
 
-▸ **votes**(): `Promise`<[`MultiSigProposalVote`](../../../../modules/API/Entities/MultiSigProposal/Types/Types.md#multisigproposalvote)[]\>
+▸ **votes**(): `Promise`\<[`MultiSigProposalVote`](../../../../modules/API/Entities/MultiSigProposal/Types/Types.md#multisigproposalvote)[]\>
 
 Fetches the individual votes for this MultiSig proposal and their identifier data (block number, date and event index) of the event that was emitted when this MultiSig Proposal Vote was casted
 
-**`Note`**
-
- uses the middlewareV2
-
 #### Returns
 
-`Promise`<[`MultiSigProposalVote`](../../../../modules/API/Entities/MultiSigProposal/Types/Types.md#multisigproposalvote)[]\>
+`Promise`\<[`MultiSigProposalVote`](../../../../modules/API/Entities/MultiSigProposal/Types/Types.md#multisigproposalvote)[]\>
+
+**`Note`**
+
+uses the middlewareV2
+
+#### Defined in
+
+[api/entities/MultiSigProposal/index.ts:225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/MultiSigProposal/index.ts#L225)
 
 ___
 
 ### generateUuid
 
-▸ `Static` **generateUuid**<`Identifiers`\>(`identifiers`): `string`
+▸ `Static` **generateUuid**\<`Identifiers`\>(`identifiers`): `string`
 
 Generate the Entity's UUID from its identifying properties
 
@@ -244,6 +280,10 @@ Generate the Entity's UUID from its identifying properties
 
 [Entity](../Entity/Entity.md).[generateUuid](../Entity/Entity.md#generateuuid)
 
+#### Defined in
+
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Entity.ts#L14)
+
 ___
 
 ### isUniqueIdentifiers
@@ -266,11 +306,15 @@ Typeguard that checks whether the object passed corresponds to the unique identi
 
 [Entity](../Entity/Entity.md).[isUniqueIdentifiers](../Entity/Entity.md#isuniqueidentifiers)
 
+#### Defined in
+
+[api/entities/Entity.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Entity.ts#L42)
+
 ___
 
 ### unserialize
 
-▸ `Static` **unserialize**<`Identifiers`\>(`serialized`): `Identifiers`
+▸ `Static` **unserialize**\<`Identifiers`\>(`serialized`): `Identifiers`
 
 Unserialize a UUID into its Unique Identifiers
 
@@ -293,3 +337,7 @@ Unserialize a UUID into its Unique Identifiers
 #### Inherited from
 
 [Entity](../Entity/Entity.md).[unserialize](../Entity/Entity.md#unserialize)
+
+#### Defined in
+
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Entity.ts#L23)

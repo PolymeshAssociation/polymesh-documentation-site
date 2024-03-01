@@ -18,13 +18,13 @@ More information can be found [here](https://wiki.polkadot.network/docs/build-pr
 
 #### Defined in
 
-[types/index.ts:1469](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L1469)
+[types/index.ts:1469](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L1469)
 
 ___
 
 ### nonce
 
-• `Optional` **nonce**: `BigNumber` \| `Promise`<`BigNumber`\> \| () => `BigNumber` \| `Promise`<`BigNumber`\>
+• `Optional` **nonce**: `BigNumber` \| `Promise`\<`BigNumber`\> \| () => `BigNumber` \| `Promise`\<`BigNumber`\>
 
 nonce value for signing the transaction
 
@@ -32,11 +32,11 @@ An [Account](../../../classes/API/Entities/Account/Account.md) can directly fetc
 
 **`Note`**
 
- the passed value can be either the nonce itself or a function that returns the nonce. This allows, for example, passing a closure that increases the returned value every time it's called, or a function that fetches the nonce from the chain or a different source
+the passed value can be either the nonce itself or a function that returns the nonce. This allows, for example, passing a closure that increases the returned value every time it's called, or a function that fetches the nonce from the chain or a different source
 
 #### Defined in
 
-[types/index.ts:1462](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L1462)
+[types/index.ts:1462](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L1462)
 
 ___
 
@@ -48,4 +48,4 @@ Account or address of a signing key to replace the current one (for this procedu
 
 #### Defined in
 
-[types/index.ts:1453](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L1453)
+[types/index.ts:1453](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L1453)

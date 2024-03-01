@@ -14,7 +14,7 @@ sidebar_label: "Params"
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CorporateAction.ts#L32)
+[api/entities/CorporateAction.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/CorporateAction.ts#L32)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CorporateAction.ts#L35)
+[api/entities/CorporateAction.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/CorporateAction.ts#L35)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CorporateAction.ts#L33)
+[api/entities/CorporateAction.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/CorporateAction.ts#L33)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CorporateAction.ts#L31)
+[api/entities/CorporateAction.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/CorporateAction.ts#L31)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CorporateAction.ts#L34)
+[api/entities/CorporateAction.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/CorporateAction.ts#L34)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CorporateAction.ts#L36)
+[api/entities/CorporateAction.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/CorporateAction.ts#L36)

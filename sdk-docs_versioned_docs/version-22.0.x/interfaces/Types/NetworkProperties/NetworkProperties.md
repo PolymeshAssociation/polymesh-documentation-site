@@ -14,7 +14,7 @@ sidebar_label: "NetworkProperties"
 
 #### Defined in
 
-[types/index.ts:755](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L755)
+[types/index.ts:755](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L755)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:756](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L756)
+[types/index.ts:756](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L756)

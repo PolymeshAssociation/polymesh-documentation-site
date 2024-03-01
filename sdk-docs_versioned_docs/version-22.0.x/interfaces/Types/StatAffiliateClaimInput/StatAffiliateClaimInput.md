@@ -14,7 +14,7 @@ sidebar_label: "StatAffiliateClaimInput"
 
 #### Defined in
 
-[types/index.ts:303](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L303)
+[types/index.ts:303](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L303)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:302](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L302)
+[types/index.ts:302](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L302)

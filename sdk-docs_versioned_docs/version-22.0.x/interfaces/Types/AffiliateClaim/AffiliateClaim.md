@@ -14,7 +14,7 @@ sidebar_label: "AffiliateClaim"
 
 #### Defined in
 
-[types/index.ts:227](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L227)
+[types/index.ts:227](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L227)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:226](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L226)
+[types/index.ts:226](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L226)

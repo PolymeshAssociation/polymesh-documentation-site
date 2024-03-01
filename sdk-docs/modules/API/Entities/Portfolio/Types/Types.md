@@ -14,8 +14,8 @@ sidebar_label: "Types"
 
 ### SettlementLeg
 
-Ƭ **SettlementLeg**: [`Leg`](../../Instruction/Types/Types.md#leg) & { `direction`: [`SettlementDirectionEnum`](../../../../../enums/Types/SettlementDirectionEnum/SettlementDirectionEnum.md)  }
+Ƭ **SettlementLeg**: [`Leg`](../../Instruction/Types/Types.md#leg) & \{ `direction`: [`SettlementDirectionEnum`](../../../../../enums/Types/SettlementDirectionEnum/SettlementDirectionEnum.md)  }
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Portfolio/types.ts#L28)
+[api/entities/Portfolio/types.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Portfolio/types.ts#L28)

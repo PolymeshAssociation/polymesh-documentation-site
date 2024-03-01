@@ -22,7 +22,7 @@ occurs if the sender Identity does not have enough balance to cover the amount
 
 #### Defined in
 
-[types/index.ts:638](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L638)
+[types/index.ts:638](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L638)
 
 ___
 
@@ -36,7 +36,7 @@ occurs if the sender Portfolio does not have enough balance to cover the amount
 
 #### Defined in
 
-[types/index.ts:662](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L662)
+[types/index.ts:662](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L662)
 
 ___
 
@@ -50,7 +50,7 @@ occurs if attempting to transfer decimal amounts of a non-divisible token
 
 #### Defined in
 
-[types/index.ts:607](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L607)
+[types/index.ts:607](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L607)
 
 ___
 
@@ -64,7 +64,7 @@ occurs if the receiver Identity doesn't have a valid CDD claim
 
 #### Defined in
 
-[types/index.ts:619](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L619)
+[types/index.ts:619](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L619)
 
 ___
 
@@ -78,7 +78,7 @@ occurs if the receiver Portfolio doesn't exist
 
 #### Defined in
 
-[types/index.ts:656](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L656)
+[types/index.ts:656](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L656)
 
 ___
 
@@ -92,7 +92,7 @@ occurs if the receiver Identity doesn't have a valid CDD claim
 
 #### Defined in
 
-[types/index.ts:625](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L625)
+[types/index.ts:625](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L625)
 
 ___
 
@@ -106,7 +106,7 @@ occurs if the sender Portfolio doesn't exist
 
 #### Defined in
 
-[types/index.ts:650](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L650)
+[types/index.ts:650](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L650)
 
 ___
 
@@ -121,7 +121,7 @@ occurs if one of the participants doesn't have a valid Investor Uniqueness Claim
 
 #### Defined in
 
-[types/index.ts:632](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L632)
+[types/index.ts:632](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L632)
 
 ___
 
@@ -135,7 +135,7 @@ occurs if the origin and destination Identities are the same
 
 #### Defined in
 
-[types/index.ts:613](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L613)
+[types/index.ts:613](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L613)
 
 ___
 
@@ -149,4 +149,4 @@ occurs if the Asset's transfers are frozen
 
 #### Defined in
 
-[types/index.ts:644](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L644)
+[types/index.ts:644](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L644)

@@ -1,7 +1,7 @@
 ---
-id: "Venue"
-title: "Class: Venue"
-sidebar_label: "Venue"
+id: 'Venue'
+title: 'Class: Venue'
+sidebar_label: 'Venue'
 ---
 
 [api/entities/Venue](../../../../modules/API/Entities/Venue/Venue.md).Venue
@@ -10,7 +10,7 @@ Represents a Venue through which settlements are handled
 
 ## Hierarchy
 
-- [`Entity`](../Entity/Entity.md)<[`UniqueIdentifiers`](../../../../interfaces/API/Entities/Venue/UniqueIdentifiers/UniqueIdentifiers.md), `string`\>
+- [`Entity`](../Entity/Entity.md) \<[`UniqueIdentifiers`](../../../../interfaces/API/Entities/Venue/UniqueIdentifiers/UniqueIdentifiers.md), `string`\>
 
   ↳ **`Venue`**
 
@@ -24,9 +24,9 @@ identifier number of the Venue
 
 #### Defined in
 
-[api/entities/Venue/index.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Venue/index.ts#L66)
+[api/entities/Venue/index.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Venue/index.ts#L66)
 
-___
+---
 
 ### uuid
 
@@ -38,135 +38,161 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
 ### addInstruction
 
-▸ **addInstruction**(`args`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`Instruction`](../Instruction/Instruction.md)[], [`Instruction`](../Instruction/Instruction.md)\>\>
+▸ **addInstruction**(`args`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`Instruction`](../Instruction/Instruction.md)[], [`Instruction`](../Instruction/Instruction.md)\>\>
 
 Creates a settlement Instruction in this Venue
 
-**`Note`**
-
- required role:
-  - Venue Owner
-
-**`Note`**
-
- this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [addInstruction.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | [`AddInstructionParams`](../../../../modules/API/Procedures/Types/Types.md#addinstructionparams) |
-| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+| Name    | Type                                                                                             |
+| :------ | :----------------------------------------------------------------------------------------------- |
+| `args`  | [`AddInstructionParams`](../../../../modules/API/Procedures/Types/Types.md#addinstructionparams) |
+| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md)                   |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`Instruction`](../Instruction/Instruction.md)[], [`Instruction`](../Instruction/Instruction.md)\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`Instruction`](../Instruction/Instruction.md)[], [`Instruction`](../Instruction/Instruction.md)\>\>
 
-___
+**`Note`**
+
+required role:
+
+- Venue Owner
+
+**`Note`**
+
+this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [addInstruction.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/Venue/index.ts:256](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Venue/index.ts#L256)
+
+---
 
 ### addInstructions
 
-▸ **addInstructions**(`args`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`Instruction`](../Instruction/Instruction.md)[], [`Instruction`](../Instruction/Instruction.md)[]\>\>
+▸ **addInstructions**(`args`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`Instruction`](../Instruction/Instruction.md)[], [`Instruction`](../Instruction/Instruction.md)[]\>\>
 
 Creates a batch of settlement Instructions in this Venue
 
-**`Note`**
-
- required role:
-  - Venue Owner
-
-**`Note`**
-
- this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [addInstructions.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | [`AddInstructionsParams`](../../../../interfaces/API/Procedures/Types/AddInstructionsParams/AddInstructionsParams.md) |
-| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+| Name    | Type                                                                                                                  |
+| :------ | :-------------------------------------------------------------------------------------------------------------------- |
+| `args`  | [`AddInstructionsParams`](../../../../interfaces/API/Procedures/Types/AddInstructionsParams/AddInstructionsParams.md) |
+| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md)                                        |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`Instruction`](../Instruction/Instruction.md)[], [`Instruction`](../Instruction/Instruction.md)[]\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`Instruction`](../Instruction/Instruction.md)[], [`Instruction`](../Instruction/Instruction.md)[]\>\>
 
-___
+**`Note`**
+
+required role:
+
+- Venue Owner
+
+**`Note`**
+
+this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [addInstructions.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/Venue/index.ts:269](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Venue/index.ts#L269)
+
+---
 
 ### details
 
-▸ **details**(): `Promise`<[`VenueDetails`](../../../../interfaces/API/Entities/Venue/Types/VenueDetails/VenueDetails.md)\>
+▸ **details**(): `Promise`\<[`VenueDetails`](../../../../interfaces/API/Entities/Venue/Types/VenueDetails/VenueDetails.md)\>
 
 Retrieve information specific to this Venue
 
 #### Returns
 
-`Promise`<[`VenueDetails`](../../../../interfaces/API/Entities/Venue/Types/VenueDetails/VenueDetails.md)\>
+`Promise`\<[`VenueDetails`](../../../../interfaces/API/Entities/Venue/Types/VenueDetails/VenueDetails.md)\>
 
-___
+#### Defined in
+
+[api/entities/Venue/index.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Venue/index.ts#L119)
+
+---
 
 ### exists
 
-▸ **exists**(): `Promise`<`boolean`\>
+▸ **exists**(): `Promise`\<`boolean`\>
 
 Determine whether this Venue exists on chain
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Overrides
 
 [Entity](../Entity/Entity.md).[exists](../Entity/Entity.md#exists)
 
-___
+#### Defined in
+
+[api/entities/Venue/index.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Venue/index.ts#L100)
+
+---
 
 ### getHistoricalInstructions
 
-▸ **getHistoricalInstructions**(`opts?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`HistoricInstruction`](../../../../modules/API/Entities/Venue/Types/Types.md#historicinstruction)\>\>
+▸ **getHistoricalInstructions**(`opts?`): `Promise`\<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md) \<[`HistoricInstruction`](../../../../modules/API/Entities/Venue/Types/Types.md#historicinstruction)\>\>
 
 Retrieve all Instructions that have been associated with this Venue instance
 
-**`Note`**
-
- uses the middleware V2
-
-**`Note`**
-
- supports pagination
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `Object` | - |
-| `opts.size?` | `BigNumber` | page size |
+| Name          | Type        | Description |
+| :------------ | :---------- | :---------- |
+| `opts`        | `Object`    | -           |
+| `opts.size?`  | `BigNumber` | page size   |
 | `opts.start?` | `BigNumber` | page offset |
 
 #### Returns
 
-`Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`HistoricInstruction`](../../../../modules/API/Entities/Venue/Types/Types.md#historicinstruction)\>\>
+`Promise`\<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md) \<[`HistoricInstruction`](../../../../modules/API/Entities/Venue/Types/Types.md#historicinstruction)\>\>
 
-___
+**`Note`**
+
+uses the middleware V2
+
+**`Note`**
+
+supports pagination
+
+#### Defined in
+
+[api/entities/Venue/index.ts:208](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Venue/index.ts#L208)
+
+---
 
 ### getInstructions
 
-▸ **getInstructions**(): `Promise`<`Pick`<[`GroupedInstructions`](../../../../interfaces/Types/GroupedInstructions/GroupedInstructions.md), ``"pending"`` \| ``"failed"``\>\>
+▸ **getInstructions**(): `Promise`\<`Pick`\<[`GroupedInstructions`](../../../../interfaces/Types/GroupedInstructions/GroupedInstructions.md), `"pending"` \| `"failed"`\>\>
 
 Retrieve all pending and failed Instructions in this Venue
 
 #### Returns
 
-`Promise`<`Pick`<[`GroupedInstructions`](../../../../interfaces/Types/GroupedInstructions/GroupedInstructions.md), ``"pending"`` \| ``"failed"``\>\>
+`Promise`\<`Pick`\<[`GroupedInstructions`](../../../../interfaces/Types/GroupedInstructions/GroupedInstructions.md), `"pending"` \| `"failed"`\>\>
 
-___
+#### Defined in
+
+[api/entities/Venue/index.ts:148](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Venue/index.ts#L148)
+
+---
 
 ### isEqual
 
@@ -176,9 +202,9 @@ Determine whether this Entity is the same as another one
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `entity` | [`Entity`](../Entity/Entity.md)<`unknown`, `unknown`\> |
+| Name     | Type                                                    |
+| :------- | :------------------------------------------------------ |
+| `entity` | [`Entity`](../Entity/Entity.md)\<`unknown`, `unknown`\> |
 
 #### Returns
 
@@ -188,36 +214,45 @@ Determine whether this Entity is the same as another one
 
 [Entity](../Entity/Entity.md).[isEqual](../Entity/Entity.md#isequal)
 
-___
+#### Defined in
+
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Entity.ts#L61)
+
+---
 
 ### modify
 
-▸ **modify**(`args`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+▸ **modify**(`args`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
 Modify description and type
 
-**`Note`**
-
- required role:
-  - Venue Owner
-
-**`Note`**
-
- this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [modify.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | [`ModifyVenueParams`](../../../../modules/API/Procedures/Types/Types.md#modifyvenueparams) |
-| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+| Name    | Type                                                                                       |
+| :------ | :----------------------------------------------------------------------------------------- |
+| `args`  | [`ModifyVenueParams`](../../../../modules/API/Procedures/Types/Types.md#modifyvenueparams) |
+| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md)             |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
-___
+**`Note`**
+
+required role:
+
+- Venue Owner
+
+**`Note`**
+
+this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [modify.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/Venue/index.ts:282](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Venue/index.ts#L282)
+
+---
 
 ### toHuman
 
@@ -233,24 +268,28 @@ Return the Venue's ID
 
 [Entity](../Entity/Entity.md).[toHuman](../Entity/Entity.md#tohuman)
 
-___
+#### Defined in
+
+[api/entities/Venue/index.ts:289](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Venue/index.ts#L289)
+
+---
 
 ### generateUuid
 
-▸ `Static` **generateUuid**<`Identifiers`\>(`identifiers`): `string`
+▸ `Static` **generateUuid**\<`Identifiers`\>(`identifiers`): `string`
 
 Generate the Entity's UUID from its identifying properties
 
 #### Type parameters
 
-| Name |
-| :------ |
+| Name          |
+| :------------ |
 | `Identifiers` |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name          | Type          |
+| :------------ | :------------ |
 | `identifiers` | `Identifiers` |
 
 #### Returns
@@ -261,24 +300,28 @@ Generate the Entity's UUID from its identifying properties
 
 [Entity](../Entity/Entity.md).[generateUuid](../Entity/Entity.md#generateuuid)
 
-___
+#### Defined in
+
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Entity.ts#L14)
+
+---
 
 ### unserialize
 
-▸ `Static` **unserialize**<`Identifiers`\>(`serialized`): `Identifiers`
+▸ `Static` **unserialize**\<`Identifiers`\>(`serialized`): `Identifiers`
 
 Unserialize a UUID into its Unique Identifiers
 
 #### Type parameters
 
-| Name |
-| :------ |
+| Name          |
+| :------------ |
 | `Identifiers` |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name         | Type     | Description         |
+| :----------- | :------- | :------------------ |
 | `serialized` | `string` | UUID to unserialize |
 
 #### Returns
@@ -288,3 +331,7 @@ Unserialize a UUID into its Unique Identifiers
 #### Inherited from
 
 [Entity](../Entity/Entity.md).[unserialize](../Entity/Entity.md#unserialize)
+
+#### Defined in
+
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Entity.ts#L23)

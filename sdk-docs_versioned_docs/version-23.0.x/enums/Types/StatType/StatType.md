@@ -10,7 +10,7 @@ Represents the StatType from the `statistics` module.
 
 **`Note`**
 
- the chain doesn't use "Scoped" types, but they are needed here to discriminate the input instead of having an optional input
+the chain doesn't use "Scoped" types, but they are needed here to discriminate the input instead of having an optional input
 
 ## Enumeration Members
 
@@ -20,7 +20,7 @@ Represents the StatType from the `statistics` module.
 
 #### Defined in
 
-[types/index.ts:357](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L357)
+[types/index.ts:357](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/types/index.ts#L357)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:356](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L356)
+[types/index.ts:356](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/types/index.ts#L356)
 
 ___
 
@@ -42,7 +42,7 @@ ScopedPercentage is an SDK only type, on chain it is `Balance` with a claimType 
 
 #### Defined in
 
-[types/index.ts:365](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L365)
+[types/index.ts:365](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/types/index.ts#L365)
 
 ___
 
@@ -54,4 +54,4 @@ ScopedCount is an SDK only type, on chain it is `Count` with a claimType option 
 
 #### Defined in
 
-[types/index.ts:361](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L361)
+[types/index.ts:361](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/types/index.ts#L361)

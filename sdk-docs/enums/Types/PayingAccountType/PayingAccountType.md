@@ -18,7 +18,7 @@ the caller Account is responsible of paying the fees
 
 #### Defined in
 
-[types/index.ts:829](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L829)
+[types/index.ts:835](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L835)
 
 ___
 
@@ -32,7 +32,7 @@ the paying Account is paying for a specific transaction because of
 
 #### Defined in
 
-[types/index.ts:825](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L825)
+[types/index.ts:831](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L831)
 
 ___
 
@@ -44,4 +44,4 @@ the paying Account is currently subsidizing the caller
 
 #### Defined in
 
-[types/index.ts:819](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L819)
+[types/index.ts:825](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L825)

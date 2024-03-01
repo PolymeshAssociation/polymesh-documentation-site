@@ -8,7 +8,7 @@ sidebar_label: "TransferRestrictionTypeEnum"
 
 **`Enum Name`**
 
- TransferRestrictionTypeEnum
+TransferRestrictionTypeEnum
  Represents all possible transfer restriction types
 
 ## Enumeration Members
@@ -19,7 +19,7 @@ sidebar_label: "TransferRestrictionTypeEnum"
 
 #### Defined in
 
-[middleware/typesV2.ts:29133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29133)
+[middleware/typesV2.ts:29133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L29133)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29134)
+[middleware/typesV2.ts:29134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L29134)

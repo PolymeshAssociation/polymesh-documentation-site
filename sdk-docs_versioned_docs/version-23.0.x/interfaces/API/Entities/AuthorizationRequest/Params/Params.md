@@ -14,7 +14,7 @@ sidebar_label: "Params"
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/AuthorizationRequest.ts#L44)
+[api/entities/AuthorizationRequest.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/AuthorizationRequest.ts#L44)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/AuthorizationRequest.ts#L43)
+[api/entities/AuthorizationRequest.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/AuthorizationRequest.ts#L43)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/AuthorizationRequest.ts#L42)
+[api/entities/AuthorizationRequest.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/AuthorizationRequest.ts#L42)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:41](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/AuthorizationRequest.ts#L41)
+[api/entities/AuthorizationRequest.ts:41](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/AuthorizationRequest.ts#L41)

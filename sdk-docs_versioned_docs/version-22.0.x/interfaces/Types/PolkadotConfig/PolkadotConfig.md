@@ -10,21 +10,21 @@ sidebar_label: "PolkadotConfig"
 
 ### metadata
 
-• `Optional` **metadata**: `Record`<`string`, \`0x${string}\`\>
+• `Optional` **metadata**: `Record`\<`string`, \`0x$\{string}\`\>
 
 provide a locally saved metadata file for a modestly fast startup time (e.g. 1 second when provided, 1.5 seconds without).
 
 **`Note`**
 
- if not provided the SDK will read the needed data from chain during startup
+if not provided the SDK will read the needed data from chain during startup
 
 **`Note`**
 
- format is key as genesis hash and spec version and the value hex encoded chain metadata
+format is key as genesis hash and spec version and the value hex encoded chain metadata
 
 **`Example`**
 
- creating valid metadata
+creating valid metadata
 ```ts
 const meta = _polkadotApi.runtimeMetadata.toHex();
 const genesisHash = _polkadotApi.genesisHash;
@@ -37,7 +37,7 @@ const metadata = {
 
 #### Defined in
 
-[types/index.ts:699](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L699)
+[types/index.ts:699](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L699)
 
 ___
 
@@ -49,7 +49,7 @@ set to `true` to disable polkadot start up warnings
 
 #### Defined in
 
-[types/index.ts:704](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L704)
+[types/index.ts:704](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L704)
 
 ___
 
@@ -61,8 +61,8 @@ allows for types to be provided for multiple chain specs at once
 
 **`Note`**
 
- shouldn't be needed for most use cases
+shouldn't be needed for most use cases
 
 #### Defined in
 
-[types/index.ts:711](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L711)
+[types/index.ts:711](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L711)

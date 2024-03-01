@@ -14,4 +14,4 @@ sidebar_label: "AuthorshipTx"
 
 #### Defined in
 
-[generated/types.ts:289](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/generated/types.ts#L289)
+[generated/types.ts:289](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/generated/types.ts#L289)

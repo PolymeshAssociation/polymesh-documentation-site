@@ -8,7 +8,7 @@ sidebar_label: "ProposalStateEnum"
 
 **`Enum Name`**
 
- ProposalStateEnum
+ProposalStateEnum
  Represents all possible Proposal statuses
 
 ## Enumeration Members
@@ -19,7 +19,7 @@ sidebar_label: "ProposalStateEnum"
 
 #### Defined in
 
-[middleware/typesV2.ts:28552](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L28552)
+[middleware/typesV2.ts:28552](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L28552)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:28553](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L28553)
+[middleware/typesV2.ts:28553](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L28553)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:28554](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L28554)
+[middleware/typesV2.ts:28554](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L28554)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:28555](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L28555)
+[middleware/typesV2.ts:28555](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L28555)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:28556](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L28556)
+[middleware/typesV2.ts:28556](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L28556)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:28557](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L28557)
+[middleware/typesV2.ts:28557](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L28557)
 
 ___
 
@@ -79,4 +79,4 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:28558](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L28558)
+[middleware/typesV2.ts:28558](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L28558)

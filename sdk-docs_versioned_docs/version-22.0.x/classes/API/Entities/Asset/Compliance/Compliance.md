@@ -10,7 +10,7 @@ Handles all Asset Compliance related functionality
 
 ## Hierarchy
 
-- `Namespace`<[`Asset`](../Asset.md)\>
+- `Namespace`\<[`Asset`](../Asset.md)\>
 
   ↳ **`Compliance`**
 
@@ -22,7 +22,7 @@ Handles all Asset Compliance related functionality
 
 #### Defined in
 
-[api/entities/Asset/Compliance/index.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Asset/Compliance/index.ts#L11)
+[api/entities/Asset/Compliance/index.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Asset/Compliance/index.ts#L11)
 
 ___
 
@@ -32,4 +32,4 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Compliance/index.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Asset/Compliance/index.ts#L10)
+[api/entities/Asset/Compliance/index.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Asset/Compliance/index.ts#L10)

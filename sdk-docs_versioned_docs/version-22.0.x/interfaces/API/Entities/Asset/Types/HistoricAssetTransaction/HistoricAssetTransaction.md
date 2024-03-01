@@ -20,7 +20,7 @@ sidebar_label: "HistoricAssetTransaction"
 
 #### Defined in
 
-[api/entities/Asset/types.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Asset/types.ts#L65)
+[api/entities/Asset/types.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Asset/types.ts#L65)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Asset/types.ts#L64)
+[api/entities/Asset/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Asset/types.ts#L64)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:717](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L717)
+[types/index.ts:717](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L717)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:716](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L716)
+[types/index.ts:716](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L716)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:715](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L715)
+[types/index.ts:715](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L715)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/types.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Asset/types.ts#L68)
+[api/entities/Asset/types.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Asset/types.ts#L68)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:718](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L718)
+[types/index.ts:718](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L718)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/types.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Asset/types.ts#L69)
+[api/entities/Asset/types.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Asset/types.ts#L69)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/types.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Asset/types.ts#L66)
+[api/entities/Asset/types.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Asset/types.ts#L66)
 
 ___
 
@@ -126,4 +126,4 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/types.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Asset/types.ts#L67)
+[api/entities/Asset/types.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Asset/types.ts#L67)

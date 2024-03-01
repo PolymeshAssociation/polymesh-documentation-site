@@ -14,7 +14,7 @@ sidebar_label: "TransactionOrderFields"
 
 #### Defined in
 
-[middleware/types.ts:1760](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/types.ts#L1760)
+[middleware/types.ts:1760](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/types.ts#L1760)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:1759](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/types.ts#L1759)
+[middleware/types.ts:1759](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/types.ts#L1759)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:1762](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/types.ts#L1762)
+[middleware/types.ts:1762](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/types.ts#L1762)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:1761](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/types.ts#L1761)
+[middleware/types.ts:1761](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/types.ts#L1761)

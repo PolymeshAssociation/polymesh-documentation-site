@@ -10,13 +10,13 @@ sidebar_label: "RevokeClaimsParams"
 
 ### claims
 
-• **claims**: `Omit`<[`ClaimTarget`](../../../../Types/ClaimTarget/ClaimTarget.md), ``"expiry"``\>[]
+• **claims**: `Omit`\<[`ClaimTarget`](../../../../Types/ClaimTarget/ClaimTarget.md), ``"expiry"``\>[]
 
 array of claims to be revoked
 
 #### Defined in
 
-[api/procedures/types.ts:412](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L412)
+[api/procedures/types.ts:412](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/procedures/types.ts#L412)
 
 ___
 
@@ -26,4 +26,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:413](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L413)
+[api/procedures/types.ts:413](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/procedures/types.ts#L413)

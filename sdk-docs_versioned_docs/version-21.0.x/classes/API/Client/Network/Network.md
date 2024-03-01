@@ -12,13 +12,9 @@ Handles all Network related functionality, including querying for historical eve
 
 ### getEventByIndexedArgs
 
-▸ **getEventByIndexedArgs**(`opts`): `Promise`<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
+▸ **getEventByIndexedArgs**(`opts`): `Promise`\<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
 
 Retrieve a single event by any of its indexed arguments. Can be filtered using parameters
-
-**`Note`**
-
- uses the middleware
 
 #### Parameters
 
@@ -33,19 +29,23 @@ Retrieve a single event by any of its indexed arguments. Can be filtered using p
 
 #### Returns
 
-`Promise`<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
+`Promise`\<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
+
+**`Note`**
+
+uses the middleware
+
+#### Defined in
+
+[api/client/Network.ts:167](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Network.ts#L167)
 
 ___
 
 ### getEventByIndexedArgsV2
 
-▸ **getEventByIndexedArgsV2**(`opts`): `Promise`<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
+▸ **getEventByIndexedArgsV2**(`opts`): `Promise`\<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
 
 Retrieve a single event by any of its indexed arguments. Can be filtered using parameters
-
-**`Note`**
-
- uses the middlewareV2
 
 #### Parameters
 
@@ -60,19 +60,23 @@ Retrieve a single event by any of its indexed arguments. Can be filtered using p
 
 #### Returns
 
-`Promise`<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
+`Promise`\<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)\>
+
+**`Note`**
+
+uses the middlewareV2
+
+#### Defined in
+
+[api/client/Network.ts:214](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Network.ts#L214)
 
 ___
 
 ### getEventsByIndexedArgs
 
-▸ **getEventsByIndexedArgs**(`opts`): `Promise`<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)[]\>
+▸ **getEventsByIndexedArgs**(`opts`): `Promise`\<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)[]\>
 
 Retrieve a list of events. Can be filtered using parameters
-
-**`Note`**
-
- uses the middleware
 
 #### Parameters
 
@@ -89,19 +93,23 @@ Retrieve a list of events. Can be filtered using parameters
 
 #### Returns
 
-`Promise`<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)[]\>
+`Promise`\<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)[]\>
+
+**`Note`**
+
+uses the middleware
+
+#### Defined in
+
+[api/client/Network.ts:260](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Network.ts#L260)
 
 ___
 
 ### getEventsByIndexedArgsV2
 
-▸ **getEventsByIndexedArgsV2**(`opts`): `Promise`<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)[]\>
+▸ **getEventsByIndexedArgsV2**(`opts`): `Promise`\<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)[]\>
 
 Retrieve a list of events. Can be filtered using parameters
-
-**`Note`**
-
- uses the middlewareV2
 
 #### Parameters
 
@@ -118,72 +126,96 @@ Retrieve a list of events. Can be filtered using parameters
 
 #### Returns
 
-`Promise`<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)[]\>
+`Promise`\<``null`` \| [`EventIdentifier`](../../../../interfaces/Types/EventIdentifier/EventIdentifier.md)[]\>
+
+**`Note`**
+
+uses the middlewareV2
+
+#### Defined in
+
+[api/client/Network.ts:322](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Network.ts#L322)
 
 ___
 
 ### getLatestBlock
 
-▸ **getLatestBlock**(): `Promise`<`BigNumber`\>
+▸ **getLatestBlock**(): `Promise`\<`BigNumber`\>
 
 Retrieve the number of the latest finalized block in the chain
 
 #### Returns
 
-`Promise`<`BigNumber`\>
+`Promise`\<`BigNumber`\>
+
+#### Defined in
+
+[api/client/Network.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Network.ts#L61)
 
 ___
 
 ### getMiddlewareLag
 
-▸ **getMiddlewareLag**(): `Promise`<`BigNumber`\>
+▸ **getMiddlewareLag**(): `Promise`\<`BigNumber`\>
 
 Get the number of blocks the middleware needs to process to be synced with chain.
 The lag can be around somewhere upto 15 blocks, but this can increase if the block size being processed by the Middleware is too large.
 If the lag is too large, its recommended to check the indexer health to make sure the Middleware is processing the blocks.
 
-**`Note`**
-
- uses the middleware V2
-
 #### Returns
 
-`Promise`<`BigNumber`\>
+`Promise`\<`BigNumber`\>
+
+**`Note`**
+
+uses the middleware V2
+
+#### Defined in
+
+[api/client/Network.ts:566](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Network.ts#L566)
 
 ___
 
 ### getMiddlewareMetadata
 
-▸ **getMiddlewareMetadata**(): `Promise`<``null`` \| [`MiddlewareMetadata`](../../../../interfaces/Types/MiddlewareMetadata/MiddlewareMetadata.md)\>
+▸ **getMiddlewareMetadata**(): `Promise`\<``null`` \| [`MiddlewareMetadata`](../../../../interfaces/Types/MiddlewareMetadata/MiddlewareMetadata.md)\>
 
 Retrieve middleware metadata.
 Returns null if middleware V2 is disabled
 
-**`Note`**
-
- uses the middleware V2
-
 #### Returns
 
-`Promise`<``null`` \| [`MiddlewareMetadata`](../../../../interfaces/Types/MiddlewareMetadata/MiddlewareMetadata.md)\>
+`Promise`\<``null`` \| [`MiddlewareMetadata`](../../../../interfaces/Types/MiddlewareMetadata/MiddlewareMetadata.md)\>
+
+**`Note`**
+
+uses the middleware V2
+
+#### Defined in
+
+[api/client/Network.ts:555](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Network.ts#L555)
 
 ___
 
 ### getNetworkProperties
 
-▸ **getNetworkProperties**(): `Promise`<[`NetworkProperties`](../../../../interfaces/Types/NetworkProperties/NetworkProperties.md)\>
+▸ **getNetworkProperties**(): `Promise`\<[`NetworkProperties`](../../../../interfaces/Types/NetworkProperties/NetworkProperties.md)\>
 
 Retrieve information for the current network
 
 #### Returns
 
-`Promise`<[`NetworkProperties`](../../../../interfaces/Types/NetworkProperties/NetworkProperties.md)\>
+`Promise`\<[`NetworkProperties`](../../../../interfaces/Types/NetworkProperties/NetworkProperties.md)\>
+
+#### Defined in
+
+[api/client/Network.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Network.ts#L82)
 
 ___
 
 ### getProtocolFees
 
-▸ **getProtocolFees**(`args`): `Promise`<[`ProtocolFees`](../../../../interfaces/Types/ProtocolFees/ProtocolFees.md)[]\>
+▸ **getProtocolFees**(`args`): `Promise`\<[`ProtocolFees`](../../../../interfaces/Types/ProtocolFees/ProtocolFees.md)[]\>
 
 Retrieve the protocol fees associated with running specific transactions
 
@@ -196,7 +228,11 @@ Retrieve the protocol fees associated with running specific transactions
 
 #### Returns
 
-`Promise`<[`ProtocolFees`](../../../../interfaces/Types/ProtocolFees/ProtocolFees.md)[]\>
+`Promise`\<[`ProtocolFees`](../../../../interfaces/Types/ProtocolFees/ProtocolFees.md)[]\>
+
+#### Defined in
+
+[api/client/Network.ts:106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Network.ts#L106)
 
 ___
 
@@ -210,17 +246,17 @@ Retrieve the chain's SS58 format
 
 `BigNumber`
 
+#### Defined in
+
+[api/client/Network.ts:75](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Network.ts#L75)
+
 ___
 
 ### getTransactionByHash
 
-▸ **getTransactionByHash**(`opts`): `Promise`<``null`` \| [`ExtrinsicDataWithFees`](../../../../interfaces/Types/ExtrinsicDataWithFees/ExtrinsicDataWithFees.md)\>
+▸ **getTransactionByHash**(`opts`): `Promise`\<``null`` \| [`ExtrinsicDataWithFees`](../../../../interfaces/Types/ExtrinsicDataWithFees/ExtrinsicDataWithFees.md)\>
 
 Retrieve a transaction by hash
-
-**`Note`**
-
- uses the middleware
 
 #### Parameters
 
@@ -231,19 +267,23 @@ Retrieve a transaction by hash
 
 #### Returns
 
-`Promise`<``null`` \| [`ExtrinsicDataWithFees`](../../../../interfaces/Types/ExtrinsicDataWithFees/ExtrinsicDataWithFees.md)\>
+`Promise`\<``null`` \| [`ExtrinsicDataWithFees`](../../../../interfaces/Types/ExtrinsicDataWithFees/ExtrinsicDataWithFees.md)\>
+
+**`Note`**
+
+uses the middleware
+
+#### Defined in
+
+[api/client/Network.ts:370](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Network.ts#L370)
 
 ___
 
 ### getTransactionByHashV2
 
-▸ **getTransactionByHashV2**(`opts`): `Promise`<``null`` \| [`ExtrinsicDataWithFees`](../../../../interfaces/Types/ExtrinsicDataWithFees/ExtrinsicDataWithFees.md)\>
+▸ **getTransactionByHashV2**(`opts`): `Promise`\<``null`` \| [`ExtrinsicDataWithFees`](../../../../interfaces/Types/ExtrinsicDataWithFees/ExtrinsicDataWithFees.md)\>
 
 Retrieve a transaction by hash
-
-**`Note`**
-
- uses the middlewareV2
 
 #### Parameters
 
@@ -254,7 +294,15 @@ Retrieve a transaction by hash
 
 #### Returns
 
-`Promise`<``null`` \| [`ExtrinsicDataWithFees`](../../../../interfaces/Types/ExtrinsicDataWithFees/ExtrinsicDataWithFees.md)\>
+`Promise`\<``null`` \| [`ExtrinsicDataWithFees`](../../../../interfaces/Types/ExtrinsicDataWithFees/ExtrinsicDataWithFees.md)\>
+
+**`Note`**
+
+uses the middlewareV2
+
+#### Defined in
+
+[api/client/Network.ts:464](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Network.ts#L464)
 
 ___
 
@@ -268,58 +316,69 @@ Get the treasury wallet address
 
 [`Account`](../../Entities/Account/Account.md)
 
+#### Defined in
+
+[api/client/Network.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Network.ts#L113)
+
 ___
 
 ### getTreasuryBalance
 
-▸ **getTreasuryBalance**(): `Promise`<`BigNumber`\>
+▸ **getTreasuryBalance**(): `Promise`\<`BigNumber`\>
 
 Get the Treasury POLYX balance
 
-**`Note`**
-
- can be subscribed to
-
 #### Returns
 
-`Promise`<`BigNumber`\>
+`Promise`\<`BigNumber`\>
 
-▸ **getTreasuryBalance**(`callback`): `Promise`<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
+**`Note`**
+
+can be subscribed to
+
+#### Defined in
+
+[api/client/Network.ts:126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Network.ts#L126)
+
+▸ **getTreasuryBalance**(`callback`): `Promise`\<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `callback` | [`SubCallback`](../../../../modules/Types/Types.md#subcallback)<`BigNumber`\> |
+| `callback` | [`SubCallback`](../../../../modules/Types/Types.md#subcallback)\<`BigNumber`\> |
 
 #### Returns
 
-`Promise`<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
+`Promise`\<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
+
+#### Defined in
+
+[api/client/Network.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Network.ts#L127)
 
 ___
 
 ### getVersion
 
-▸ **getVersion**(): `Promise`<`string`\>
+▸ **getVersion**(): `Promise`\<`string`\>
 
 Fetch the current network version (e.g. 3.1.0)
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
+
+#### Defined in
+
+[api/client/Network.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Network.ts#L68)
 
 ___
 
 ### transferPolyx
 
-▸ **transferPolyx**(`args`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+▸ **transferPolyx**(`args`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
 Transfer an amount of POLYX to a specified Account
-
-**`Note`**
-
- this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [transferPolyx.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
 
 #### Parameters
 
@@ -330,4 +389,13 @@ Transfer an amount of POLYX to a specified Account
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
+
+**`Note`**
+
+this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [transferPolyx.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
+  on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/client/Network.ts:152](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Network.ts#L152)

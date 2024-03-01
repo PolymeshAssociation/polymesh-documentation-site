@@ -16,7 +16,7 @@ Represents possible all possible balance types
 
 #### Defined in
 
-[middleware/types.ts:11167](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/middleware/types.ts#L11167)
+[middleware/types.ts:11291](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/middleware/types.ts#L11291)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:11168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/middleware/types.ts#L11168)
+[middleware/types.ts:11292](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/middleware/types.ts#L11292)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:11169](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/middleware/types.ts#L11169)
+[middleware/types.ts:11293](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/middleware/types.ts#L11293)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:11170](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/middleware/types.ts#L11170)
+[middleware/types.ts:11294](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/middleware/types.ts#L11294)
 
 ___
 
@@ -56,4 +56,4 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:11171](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/middleware/types.ts#L11171)
+[middleware/types.ts:11295](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/middleware/types.ts#L11295)

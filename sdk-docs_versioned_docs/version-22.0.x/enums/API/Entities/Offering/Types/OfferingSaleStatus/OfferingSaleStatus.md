@@ -16,7 +16,7 @@ Sale was manually closed after the end date was reached
 
 #### Defined in
 
-[api/entities/Offering/types.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Offering/types.ts#L53)
+[api/entities/Offering/types.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Offering/types.ts#L53)
 
 ___
 
@@ -28,7 +28,7 @@ Sale was manually closed before the end date was reached
 
 #### Defined in
 
-[api/entities/Offering/types.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Offering/types.ts#L49)
+[api/entities/Offering/types.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Offering/types.ts#L49)
 
 ___
 
@@ -40,7 +40,7 @@ Sale temporarily paused, can be resumed (unfrozen)
 
 #### Defined in
 
-[api/entities/Offering/types.ts:41](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Offering/types.ts#L41)
+[api/entities/Offering/types.ts:41](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Offering/types.ts#L41)
 
 ___
 
@@ -52,4 +52,4 @@ Investments can be made
 
 #### Defined in
 
-[api/entities/Offering/types.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Offering/types.ts#L45)
+[api/entities/Offering/types.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Offering/types.ts#L45)

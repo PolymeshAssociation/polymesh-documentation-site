@@ -14,7 +14,7 @@ sidebar_label: "MiddlewareConfig"
 
 #### Defined in
 
-[types/index.ts:677](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L677)
+[types/index.ts:677](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L677)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:676](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L676)
+[types/index.ts:676](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L676)

@@ -17,7 +17,7 @@ checkpoint to be used to calculate Dividends. If a Schedule is passed, the next 
 
 #### Defined in
 
-[api/procedures/types.ts:809](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L809)
+[api/procedures/types.ts:809](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/procedures/types.ts#L809)
 
 ___
 
@@ -29,7 +29,7 @@ ticker of the currency in which Dividends will be distributed
 
 #### Defined in
 
-[api/procedures/types.ts:817](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L817)
+[api/procedures/types.ts:817](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/procedures/types.ts#L817)
 
 ___
 
@@ -41,7 +41,7 @@ date at which the issuer publicly declared the Dividend Distribution. Optional, 
 
 #### Defined in
 
-[api/procedures/types.ts:788](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L788)
+[api/procedures/types.ts:788](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/procedures/types.ts#L788)
 
 ___
 
@@ -53,7 +53,7 @@ default percentage (0-100) of the Benefits to be held for tax purposes
 
 #### Defined in
 
-[api/procedures/types.ts:799](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L799)
+[api/procedures/types.ts:799](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/procedures/types.ts#L799)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:789](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L789)
+[api/procedures/types.ts:789](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/procedures/types.ts#L789)
 
 ___
 
@@ -75,7 +75,7 @@ optional, defaults to never expiring
 
 #### Defined in
 
-[api/procedures/types.ts:833](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L833)
+[api/procedures/types.ts:833](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/procedures/types.ts#L833)
 
 ___
 
@@ -87,7 +87,7 @@ maximum amount of `currency` to distribute in total
 
 #### Defined in
 
-[api/procedures/types.ts:825](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L825)
+[api/procedures/types.ts:825](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/procedures/types.ts#L825)
 
 ___
 
@@ -99,7 +99,7 @@ portfolio from which the Dividends will be distributed. Optional, defaults to th
 
 #### Defined in
 
-[api/procedures/types.ts:813](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L813)
+[api/procedures/types.ts:813](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/procedures/types.ts#L813)
 
 ___
 
@@ -111,7 +111,7 @@ date from which Asset Holders can claim their Dividends
 
 #### Defined in
 
-[api/procedures/types.ts:829](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L829)
+[api/procedures/types.ts:829](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/procedures/types.ts#L829)
 
 ___
 
@@ -123,7 +123,7 @@ amount of `currency` to distribute per each share of the Asset that a target hol
 
 #### Defined in
 
-[api/procedures/types.ts:821](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L821)
+[api/procedures/types.ts:821](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/procedures/types.ts#L821)
 
 ___
 
@@ -137,7 +137,7 @@ Asset Holder Identities to be included (or excluded) from the Dividend Distribut
 
 #### Defined in
 
-[api/procedures/types.ts:795](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L795)
+[api/procedures/types.ts:795](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/procedures/types.ts#L795)
 
 ___
 
@@ -150,4 +150,4 @@ percentage (0-100) of the Benefits to be held for tax purposes from individual A
 
 #### Defined in
 
-[api/procedures/types.ts:804](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L804)
+[api/procedures/types.ts:804](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/procedures/types.ts#L804)

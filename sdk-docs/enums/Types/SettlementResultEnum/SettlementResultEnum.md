@@ -16,7 +16,7 @@ Represents all possible states of a Settlement
 
 #### Defined in
 
-[middleware/types.ts:84494](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/middleware/types.ts#L84494)
+[middleware/types.ts:85699](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/middleware/types.ts#L85699)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:84495](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/middleware/types.ts#L84495)
+[middleware/types.ts:85700](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/middleware/types.ts#L85700)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:84496](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/middleware/types.ts#L84496)
+[middleware/types.ts:85701](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/middleware/types.ts#L85701)
 
 ___
 
@@ -46,4 +46,4 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:84497](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/middleware/types.ts#L84497)
+[middleware/types.ts:85702](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/middleware/types.ts#L85702)

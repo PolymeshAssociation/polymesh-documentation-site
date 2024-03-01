@@ -20,7 +20,7 @@ list of required Asset permissions
 
 #### Defined in
 
-[types/index.ts:1058](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L1058)
+[types/index.ts:1064](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L1064)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1064](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L1064)
+[types/index.ts:1070](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L1070)
 
 ___
 
@@ -42,4 +42,4 @@ list of required Transaction permissions
 
 #### Defined in
 
-[types/index.ts:1062](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L1062)
+[types/index.ts:1068](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L1068)

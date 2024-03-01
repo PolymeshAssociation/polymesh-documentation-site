@@ -14,4 +14,4 @@ sidebar_label: "RegisterCustomClaimTypeParams"
 
 #### Defined in
 
-[api/procedures/types.ts:1150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L1150)
+[api/procedures/types.ts:1171](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/procedures/types.ts#L1171)

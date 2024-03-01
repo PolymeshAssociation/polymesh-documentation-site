@@ -14,7 +14,7 @@ sidebar_label: "ExemptedClaim"
 
 #### Defined in
 
-[types/index.ts:258](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L258)
+[types/index.ts:258](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L258)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:257](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L257)
+[types/index.ts:257](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L257)

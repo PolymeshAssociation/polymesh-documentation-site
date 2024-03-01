@@ -1,7 +1,7 @@
 ---
-id: "Instruction"
-title: "Class: Instruction"
-sidebar_label: "Instruction"
+id: 'Instruction'
+title: 'Class: Instruction'
+sidebar_label: 'Instruction'
 ---
 
 [api/entities/Instruction](../../../../modules/API/Entities/Instruction/Instruction.md).Instruction
@@ -10,7 +10,7 @@ Represents a settlement Instruction to be executed on a certain Venue
 
 ## Hierarchy
 
-- [`Entity`](../Entity/Entity.md)<[`UniqueIdentifiers`](../../../../interfaces/API/Entities/Instruction/UniqueIdentifiers/UniqueIdentifiers.md), `string`\>
+- [`Entity`](../Entity/Entity.md) \<[`UniqueIdentifiers`](../../../../interfaces/API/Entities/Instruction/UniqueIdentifiers/UniqueIdentifiers.md), `string`\>
 
   ↳ **`Instruction`**
 
@@ -24,9 +24,9 @@ Unique identifier number of the instruction
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Instruction/index.ts#L89)
+[api/entities/Instruction/index.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Instruction/index.ts#L89)
 
-___
+---
 
 ### uuid
 
@@ -38,164 +38,196 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
 ### affirm
 
-▸ **affirm**(`args?`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
+▸ **affirm**(`args?`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
 
 Affirm this instruction (authorize)
 
-**`Note`**
-
- this method is of type [OptionalArgsProcedureMethod](../../../../interfaces/Types/OptionalArgsProcedureMethod/OptionalArgsProcedureMethod.md), which means you can call [affirm.checkAuthorization](../../../../interfaces/Types/OptionalArgsProcedureMethod/OptionalArgsProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type                                                                                                                       |
+| :------ | :------------------------------------------------------------------------------------------------------------------------- |
 | `args?` | [`AffirmOrWithdrawInstructionParams`](../../../../modules/API/Procedures/Types/Types.md#affirmorwithdrawinstructionparams) |
-| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md)                                             |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
 
-___
+**`Note`**
+
+this method is of type [OptionalArgsProcedureMethod](../../../../interfaces/Types/OptionalArgsProcedureMethod/OptionalArgsProcedureMethod.md), which means you can call [affirm.checkAuthorization](../../../../interfaces/Types/OptionalArgsProcedureMethod/OptionalArgsProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/Instruction/index.ts:575](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Instruction/index.ts#L575)
+
+---
 
 ### details
 
-▸ **details**(): `Promise`<[`InstructionDetails`](../../../../modules/API/Entities/Instruction/Types/Types.md#instructiondetails)\>
+▸ **details**(): `Promise`\<[`InstructionDetails`](../../../../modules/API/Entities/Instruction/Types/Types.md#instructiondetails)\>
 
 Retrieve information specific to this Instruction
 
 #### Returns
 
-`Promise`<[`InstructionDetails`](../../../../modules/API/Entities/Instruction/Types/Types.md#instructiondetails)\>
+`Promise`\<[`InstructionDetails`](../../../../modules/API/Entities/Instruction/Types/Types.md#instructiondetails)\>
 
-___
+#### Defined in
+
+[api/entities/Instruction/index.ts:300](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Instruction/index.ts#L300)
+
+---
 
 ### executeManually
 
-▸ **executeManually**(`args?`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
+▸ **executeManually**(`args?`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
 
 Executes an Instruction either of type `SettleManual` or a `Failed` instruction
 
-**`Note`**
-
- this method is of type [OptionalArgsProcedureMethod](../../../../interfaces/Types/OptionalArgsProcedureMethod/OptionalArgsProcedureMethod.md), which means you can call [executeManually.checkAuthorization](../../../../interfaces/Types/OptionalArgsProcedureMethod/OptionalArgsProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type                                                                                                                 |
+| :------ | :------------------------------------------------------------------------------------------------------------------- |
 | `args?` | [`ExecuteManualInstructionParams`](../../../../modules/API/Procedures/Types/Types.md#executemanualinstructionparams) |
-| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md)                                       |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
 
-___
+**`Note`**
+
+this method is of type [OptionalArgsProcedureMethod](../../../../interfaces/Types/OptionalArgsProcedureMethod/OptionalArgsProcedureMethod.md), which means you can call [executeManually.checkAuthorization](../../../../interfaces/Types/OptionalArgsProcedureMethod/OptionalArgsProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/Instruction/index.ts:609](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Instruction/index.ts#L609)
+
+---
 
 ### exists
 
-▸ **exists**(): `Promise`<`boolean`\>
+▸ **exists**(): `Promise`\<`boolean`\>
 
 Determine whether this Instruction exists on chain (or existed and was pruned)
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Overrides
 
 [Entity](../Entity/Entity.md).[exists](../Entity/Entity.md#exists)
 
-___
+#### Defined in
+
+[api/entities/Instruction/index.ts:282](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Instruction/index.ts#L282)
+
+---
 
 ### getAffirmations
 
-▸ **getAffirmations**(`paginationOpts?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`InstructionAffirmation`](../../../../interfaces/API/Entities/Instruction/Types/InstructionAffirmation/InstructionAffirmation.md)\>\>
+▸ **getAffirmations**(`paginationOpts?`): `Promise`\<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md) \<[`InstructionAffirmation`](../../../../interfaces/API/Entities/Instruction/Types/InstructionAffirmation/InstructionAffirmation.md)\>\>
 
 Retrieve every authorization generated by this Instruction (status and authorizing Identity)
 
-**`Note`**
-
- supports pagination
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name              | Type                                                                                       |
+| :---------------- | :----------------------------------------------------------------------------------------- |
 | `paginationOpts?` | [`PaginationOptions`](../../../../interfaces/Types/PaginationOptions/PaginationOptions.md) |
 
 #### Returns
 
-`Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`InstructionAffirmation`](../../../../interfaces/API/Entities/Instruction/Types/InstructionAffirmation/InstructionAffirmation.md)\>\>
+`Promise`\<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md) \<[`InstructionAffirmation`](../../../../interfaces/API/Entities/Instruction/Types/InstructionAffirmation/InstructionAffirmation.md)\>\>
 
-___
+**`Note`**
+
+supports pagination
+
+#### Defined in
+
+[api/entities/Instruction/index.ts:394](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Instruction/index.ts#L394)
+
+---
 
 ### getInvolvedPortfolios
 
-▸ **getInvolvedPortfolios**(`args`): `Promise`<([`NumberedPortfolio`](../NumberedPortfolio/NumberedPortfolio.md) \| [`DefaultPortfolio`](../DefaultPortfolio/DefaultPortfolio.md))[]\>
+▸ **getInvolvedPortfolios**(`args`): `Promise`\<([`NumberedPortfolio`](../NumberedPortfolio/NumberedPortfolio.md) \| [`DefaultPortfolio`](../DefaultPortfolio/DefaultPortfolio.md))[]\>
 
 Retrieve all the involved portfolios in this Instruction where the given identity is a custodian of
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Object` |
+| Name       | Type     |
+| :--------- | :------- |
+| `args`     | `Object` |
 | `args.did` | `string` |
 
 #### Returns
 
-`Promise`<([`NumberedPortfolio`](../NumberedPortfolio/NumberedPortfolio.md) \| [`DefaultPortfolio`](../DefaultPortfolio/DefaultPortfolio.md))[]\>
+`Promise`\<([`NumberedPortfolio`](../NumberedPortfolio/NumberedPortfolio.md) \| [`DefaultPortfolio`](../DefaultPortfolio/DefaultPortfolio.md))[]\>
 
-___
+#### Defined in
+
+[api/entities/Instruction/index.ts:655](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Instruction/index.ts#L655)
+
+---
 
 ### getLegs
 
-▸ **getLegs**(`paginationOpts?`): `Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`Leg`](../../../../interfaces/API/Entities/Instruction/Types/Leg/Leg.md)\>\>
+▸ **getLegs**(`paginationOpts?`): `Promise`\<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md) \<[`Leg`](../../../../interfaces/API/Entities/Instruction/Types/Leg/Leg.md)\>\>
 
 Retrieve all legs of this Instruction
 
-**`Note`**
-
- supports pagination
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name              | Type                                                                                       |
+| :---------------- | :----------------------------------------------------------------------------------------- |
 | `paginationOpts?` | [`PaginationOptions`](../../../../interfaces/Types/PaginationOptions/PaginationOptions.md) |
 
 #### Returns
 
-`Promise`<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md)<[`Leg`](../../../../interfaces/API/Entities/Instruction/Types/Leg/Leg.md)\>\>
-
-___
-
-### getStatus
-
-▸ **getStatus**(): `Promise`<[`InstructionStatusResult`](../../../../modules/API/Entities/Instruction/Types/Types.md#instructionstatusresult)\>
-
-Retrieve current status of this Instruction
+`Promise`\<[`ResultSet`](../../../../interfaces/Types/ResultSet/ResultSet.md) \<[`Leg`](../../../../interfaces/API/Entities/Instruction/Types/Leg/Leg.md)\>\>
 
 **`Note`**
 
- uses the middlewareV2
+supports pagination
+
+#### Defined in
+
+[api/entities/Instruction/index.ts:440](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Instruction/index.ts#L440)
+
+---
+
+### getStatus
+
+▸ **getStatus**(): `Promise`\<[`InstructionStatusResult`](../../../../modules/API/Entities/Instruction/Types/Types.md#instructionstatusresult)\>
+
+Retrieve current status of this Instruction
 
 #### Returns
 
-`Promise`<[`InstructionStatusResult`](../../../../modules/API/Entities/Instruction/Types/Types.md#instructionstatusresult)\>
+`Promise`\<[`InstructionStatusResult`](../../../../modules/API/Entities/Instruction/Types/Types.md#instructionstatusresult)\>
 
-___
+**`Note`**
+
+uses the middlewareV2
+
+#### Defined in
+
+[api/entities/Instruction/index.ts:521](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Instruction/index.ts#L521)
+
+---
 
 ### isEqual
 
@@ -205,9 +237,9 @@ Determine whether this Entity is the same as another one
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `entity` | [`Entity`](../Entity/Entity.md)<`unknown`, `unknown`\> |
+| Name     | Type                                                    |
+| :------- | :------------------------------------------------------ |
+| `entity` | [`Entity`](../Entity/Entity.md)\<`unknown`, `unknown`\> |
 
 #### Returns
 
@@ -217,126 +249,150 @@ Determine whether this Entity is the same as another one
 
 [Entity](../Entity/Entity.md).[isEqual](../Entity/Entity.md#isequal)
 
-___
+#### Defined in
+
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L61)
+
+---
 
 ### isExecuted
 
-▸ **isExecuted**(): `Promise`<`boolean`\>
+▸ **isExecuted**(): `Promise`\<`boolean`\>
 
 Retrieve whether the Instruction has already been executed and pruned from
-  the chain.
+the chain.
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
-___
+#### Defined in
+
+[api/entities/Instruction/index.ts:160](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Instruction/index.ts#L160)
+
+---
 
 ### isPending
 
-▸ **isPending**(): `Promise`<`boolean`\>
+▸ **isPending**(): `Promise`\<`boolean`\>
 
 Retrieve whether the Instruction is still pending on chain
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
-___
+#### Defined in
+
+[api/entities/Instruction/index.ts:201](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Instruction/index.ts#L201)
+
+---
 
 ### onStatusChange
 
-▸ **onStatusChange**(`callback`): `Promise`<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
+▸ **onStatusChange**(`callback`): `Promise`\<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
 
 Retrieve current status of the Instruction. This can be subscribed to know if instruction fails
 
-**`Note`**
-
- can be subscribed to
-
-**`Note`**
-
- current status as `Executed` means that the Instruction has been executed/rejected and pruned from
-  the chain.
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `callback` | [`SubCallback`](../../../../modules/Types/Types.md#subcallback)<[`InstructionStatus`](../../../../enums/API/Entities/Instruction/Types/InstructionStatus/InstructionStatus.md)\> |
+| Name       | Type                                                                                                                                                                               |
+| :--------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `callback` | [`SubCallback`](../../../../modules/Types/Types.md#subcallback) \<[`InstructionStatus`](../../../../enums/API/Entities/Instruction/Types/InstructionStatus/InstructionStatus.md)\> |
 
 #### Returns
 
-`Promise`<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
+`Promise`\<[`UnsubCallback`](../../../../modules/Types/Types.md#unsubcallback)\>
 
-___
+**`Note`**
+
+can be subscribed to
+
+**`Note`**
+
+current status as `Executed` means that the Instruction has been executed/rejected and pruned from
+the chain.
+
+#### Defined in
+
+[api/entities/Instruction/index.ts:226](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Instruction/index.ts#L226)
+
+---
 
 ### reject
 
-▸ **reject**(`args?`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
+▸ **reject**(`args?`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
 
 Reject this instruction
 
-**`Note`**
-
- reject on `SettleOnAffirmation` will execute the settlement and it will fail immediately.
-
-**`Note`**
-
- reject on `SettleOnBlock` behaves just like unauthorize
-
-**`Note`**
-
- reject on `SettleManual` behaves just like unauthorize
-
-**`Note`**
-
- this method is of type [OptionalArgsProcedureMethod](../../../../interfaces/Types/OptionalArgsProcedureMethod/OptionalArgsProcedureMethod.md), which means you can call [reject.checkAuthorization](../../../../interfaces/Types/OptionalArgsProcedureMethod/OptionalArgsProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type                                                                                                   |
+| :------ | :----------------------------------------------------------------------------------------------------- |
 | `args?` | [`RejectInstructionParams`](../../../../modules/API/Procedures/Types/Types.md#rejectinstructionparams) |
-| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md)                         |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
 
-___
+**`Note`**
+
+reject on `SettleOnAffirmation` will execute the settlement and it will fail immediately.
+
+**`Note`**
+
+reject on `SettleOnBlock` behaves just like unauthorize
+
+**`Note`**
+
+reject on `SettleManual` behaves just like unauthorize
+
+**`Note`**
+
+this method is of type [OptionalArgsProcedureMethod](../../../../interfaces/Types/OptionalArgsProcedureMethod/OptionalArgsProcedureMethod.md), which means you can call [reject.checkAuthorization](../../../../interfaces/Types/OptionalArgsProcedureMethod/OptionalArgsProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/Instruction/index.ts:565](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Instruction/index.ts#L565)
+
+---
 
 ### reschedule
 
-▸ **reschedule**(`opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
+▸ **reschedule**(`opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
 
 Reschedules a failed Instruction to be tried again
 
-**`Throws`**
-
- if the Instruction status is not `InstructionStatus.Failed`
-
-**`Deprecated`**
-
- chain v6 will allow executeManually to be used instead
-
-**`Note`**
-
- this method is of type [NoArgsProcedureMethod](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md), which means you can call [reschedule.checkAuthorization](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type                                                                           |
+| :------ | :----------------------------------------------------------------------------- |
 | `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
 
-___
+**`Throws`**
+
+if the Instruction status is not `InstructionStatus.Failed`
+
+**`Deprecated`**
+
+chain v6 will allow executeManually to be used instead
+
+**`Note`**
+
+this method is of type [NoArgsProcedureMethod](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md), which means you can call [reschedule.checkAuthorization](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/Instruction/index.ts:599](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Instruction/index.ts#L599)
+
+---
 
 ### toHuman
 
@@ -352,48 +408,56 @@ Return the Instruction's ID
 
 [Entity](../Entity/Entity.md).[toHuman](../Entity/Entity.md#tohuman)
 
-___
+#### Defined in
+
+[api/entities/Instruction/index.ts:648](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Instruction/index.ts#L648)
+
+---
 
 ### withdraw
 
-▸ **withdraw**(`args?`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
+▸ **withdraw**(`args?`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
 
 Withdraw affirmation from this instruction (unauthorize)
 
-**`Note`**
-
- this method is of type [OptionalArgsProcedureMethod](../../../../interfaces/Types/OptionalArgsProcedureMethod/OptionalArgsProcedureMethod.md), which means you can call [withdraw.checkAuthorization](../../../../interfaces/Types/OptionalArgsProcedureMethod/OptionalArgsProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type                                                                                                                       |
+| :------ | :------------------------------------------------------------------------------------------------------------------------- |
 | `args?` | [`AffirmOrWithdrawInstructionParams`](../../../../modules/API/Procedures/Types/Types.md#affirmorwithdrawinstructionparams) |
-| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md)                                             |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`Instruction`](Instruction.md), [`Instruction`](Instruction.md)\>\>
 
-___
+**`Note`**
+
+this method is of type [OptionalArgsProcedureMethod](../../../../interfaces/Types/OptionalArgsProcedureMethod/OptionalArgsProcedureMethod.md), which means you can call [withdraw.checkAuthorization](../../../../interfaces/Types/OptionalArgsProcedureMethod/OptionalArgsProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/Instruction/index.ts:585](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Instruction/index.ts#L585)
+
+---
 
 ### generateUuid
 
-▸ `Static` **generateUuid**<`Identifiers`\>(`identifiers`): `string`
+▸ `Static` **generateUuid**\<`Identifiers`\>(`identifiers`): `string`
 
 Generate the Entity's UUID from its identifying properties
 
 #### Type parameters
 
-| Name |
-| :------ |
+| Name          |
+| :------------ |
 | `Identifiers` |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name          | Type          |
+| :------------ | :------------ |
 | `identifiers` | `Identifiers` |
 
 #### Returns
@@ -404,24 +468,28 @@ Generate the Entity's UUID from its identifying properties
 
 [Entity](../Entity/Entity.md).[generateUuid](../Entity/Entity.md#generateuuid)
 
-___
+#### Defined in
+
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L14)
+
+---
 
 ### unserialize
 
-▸ `Static` **unserialize**<`Identifiers`\>(`serialized`): `Identifiers`
+▸ `Static` **unserialize**\<`Identifiers`\>(`serialized`): `Identifiers`
 
 Unserialize a UUID into its Unique Identifiers
 
 #### Type parameters
 
-| Name |
-| :------ |
+| Name          |
+| :------------ |
 | `Identifiers` |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name         | Type     | Description         |
+| :----------- | :------- | :------------------ |
 | `serialized` | `string` | UUID to unserialize |
 
 #### Returns
@@ -431,3 +499,7 @@ Unserialize a UUID into its Unique Identifiers
 #### Inherited from
 
 [Entity](../Entity/Entity.md).[unserialize](../Entity/Entity.md#unserialize)
+
+#### Defined in
+
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L23)

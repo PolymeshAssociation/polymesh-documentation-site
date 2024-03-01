@@ -14,4 +14,4 @@ sidebar_label: "NoDataClaim"
 
 #### Defined in
 
-[types/index.ts:293](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L293)
+[types/index.ts:293](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/types/index.ts#L293)

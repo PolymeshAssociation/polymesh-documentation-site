@@ -14,7 +14,7 @@ sidebar_label: "VenueOwnerRole"
 
 #### Defined in
 
-[types/index.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L102)
+[types/index.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L102)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L103)
+[types/index.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L103)

@@ -14,11 +14,11 @@ sidebar_label: "ConnectParams"
 
 **`Deprecated`**
 
- in favour of middlewareV2
+in favour of middlewareV2
 
 #### Defined in
 
-[api/client/Polymesh.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L44)
+[api/client/Polymesh.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L44)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[api/client/Polymesh.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L45)
+[api/client/Polymesh.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L45)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[api/client/Polymesh.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L39)
+[api/client/Polymesh.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L39)
 
 ___
 
@@ -48,4 +48,4 @@ ___
 
 #### Defined in
 
-[api/client/Polymesh.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/client/Polymesh.ts#L40)
+[api/client/Polymesh.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/client/Polymesh.ts#L40)

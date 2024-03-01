@@ -18,7 +18,7 @@ hex representation of the document (must be prefixed by "0x")
 
 #### Defined in
 
-[types/index.ts:169](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L169)
+[types/index.ts:169](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L169)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:171](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L171)
+[types/index.ts:171](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L171)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:164](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L164)
+[types/index.ts:164](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L164)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:170](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L170)
+[types/index.ts:170](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L170)
 
 ___
 
@@ -58,4 +58,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L165)
+[types/index.ts:165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L165)

@@ -16,7 +16,7 @@ Type of Authorization Request
 
 #### Defined in
 
-[types/index.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L181)
+[types/index.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L181)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:186](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L186)
+[types/index.ts:186](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L186)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:178](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L178)
+[types/index.ts:178](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L178)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:185](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L185)
+[types/index.ts:185](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L185)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:183](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L183)
+[types/index.ts:183](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L183)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:184](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L184)
+[types/index.ts:184](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L184)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:179](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L179)
+[types/index.ts:179](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L179)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:187](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L187)
+[types/index.ts:187](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L187)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L182)
+[types/index.ts:182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L182)
 
 ___
 
@@ -106,4 +106,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:180](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L180)
+[types/index.ts:180](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L180)

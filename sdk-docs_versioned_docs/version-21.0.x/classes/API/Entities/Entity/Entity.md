@@ -59,19 +59,23 @@ Represents an object or resource in the Polymesh Ecosystem with its own set of p
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
 ### exists
 
-▸ `Abstract` **exists**(): `Promise`<`boolean`\>
+▸ `Abstract` **exists**(): `Promise`\<`boolean`\>
 
 Determine whether this Entity exists on chain
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
+
+#### Defined in
+
+[api/entities/Entity.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Entity.ts#L68)
 
 ___
 
@@ -85,11 +89,15 @@ Determine whether this Entity is the same as another one
 
 | Name | Type |
 | :------ | :------ |
-| `entity` | [`Entity`](Entity.md)<`unknown`, `unknown`\> |
+| `entity` | [`Entity`](Entity.md)\<`unknown`, `unknown`\> |
 
 #### Returns
 
 `boolean`
+
+#### Defined in
+
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -103,11 +111,15 @@ Returns Entity data in a human readable (JSON) format
 
 `HumanReadable`
 
+#### Defined in
+
+[api/entities/Entity.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Entity.ts#L73)
+
 ___
 
 ### generateUuid
 
-▸ `Static` **generateUuid**<`Identifiers`\>(`identifiers`): `string`
+▸ `Static` **generateUuid**\<`Identifiers`\>(`identifiers`): `string`
 
 Generate the Entity's UUID from its identifying properties
 
@@ -127,6 +139,10 @@ Generate the Entity's UUID from its identifying properties
 
 `string`
 
+#### Defined in
+
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Entity.ts#L14)
+
 ___
 
 ### isUniqueIdentifiers
@@ -145,11 +161,15 @@ Typeguard that checks whether the object passed corresponds to the unique identi
 
 `boolean`
 
+#### Defined in
+
+[api/entities/Entity.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Entity.ts#L42)
+
 ___
 
 ### unserialize
 
-▸ `Static` **unserialize**<`Identifiers`\>(`serialized`): `Identifiers`
+▸ `Static` **unserialize**\<`Identifiers`\>(`serialized`): `Identifiers`
 
 Unserialize a UUID into its Unique Identifiers
 
@@ -168,3 +188,7 @@ Unserialize a UUID into its Unique Identifiers
 #### Returns
 
 `Identifiers`
+
+#### Defined in
+
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Entity.ts#L23)

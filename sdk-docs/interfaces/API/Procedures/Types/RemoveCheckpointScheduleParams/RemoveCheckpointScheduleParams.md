@@ -16,4 +16,4 @@ schedule (or ID) of the schedule to be removed
 
 #### Defined in
 
-[api/procedures/types.ts:704](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L704)
+[api/procedures/types.ts:725](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/procedures/types.ts#L725)

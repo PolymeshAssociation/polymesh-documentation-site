@@ -1,7 +1,7 @@
 ---
-id: "IdentityWithClaims"
-title: "Interface: IdentityWithClaims"
-sidebar_label: "IdentityWithClaims"
+id: 'IdentityWithClaims'
+title: 'Interface: IdentityWithClaims'
+sidebar_label: 'IdentityWithClaims'
 ---
 
 [types](../../../modules/Types/Types.md).IdentityWithClaims
@@ -10,13 +10,13 @@ sidebar_label: "IdentityWithClaims"
 
 ### claims
 
-• **claims**: [`ClaimData`](../ClaimData/ClaimData.md)<[`Claim`](../../../modules/Types/Types.md#claim)\>[]
+• **claims**: [`ClaimData`](../ClaimData/ClaimData.md) \<[`Claim`](../../../modules/Types/Types.md#claim)\>[]
 
 #### Defined in
 
-[types/index.ts:369](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L369)
+[types/index.ts:369](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L369)
 
-___
+---
 
 ### identity
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:368](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L368)
+[types/index.ts:368](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L368)

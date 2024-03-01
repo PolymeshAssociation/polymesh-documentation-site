@@ -14,7 +14,7 @@ sidebar_label: "UniqueIdentifiers"
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/CorporateAction.ts#L16)
+[api/entities/CorporateAction.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/CorporateAction.ts#L16)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/CorporateAction.ts#L17)
+[api/entities/CorporateAction.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/CorporateAction.ts#L17)

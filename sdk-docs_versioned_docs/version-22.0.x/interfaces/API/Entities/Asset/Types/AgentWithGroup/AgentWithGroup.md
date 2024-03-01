@@ -14,7 +14,7 @@ sidebar_label: "AgentWithGroup"
 
 #### Defined in
 
-[api/entities/Asset/types.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Asset/types.ts#L59)
+[api/entities/Asset/types.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Asset/types.ts#L59)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/types.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Asset/types.ts#L60)
+[api/entities/Asset/types.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Asset/types.ts#L60)

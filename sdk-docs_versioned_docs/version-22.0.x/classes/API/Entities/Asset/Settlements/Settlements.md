@@ -10,7 +10,7 @@ Handles all Asset Settlements related functionality
 
 ## Hierarchy
 
-- `Namespace`<[`Asset`](../Asset.md)\>
+- `Namespace`\<[`Asset`](../Asset.md)\>
 
   ↳ **`Settlements`**
 
@@ -18,18 +18,11 @@ Handles all Asset Settlements related functionality
 
 ### canTransfer
 
-▸ **canTransfer**(`args`): `Promise`<[`TransferBreakdown`](../../../../../interfaces/API/Entities/Asset/Types/TransferBreakdown/TransferBreakdown.md)\>
+▸ **canTransfer**(`args`): `Promise`\<[`TransferBreakdown`](../../../../../interfaces/API/Entities/Asset/Types/TransferBreakdown/TransferBreakdown.md)\>
 
 Check whether it is possible to create a settlement instruction to transfer a certain amount of this asset between two Portfolios. Returns a breakdown of
   the transaction containing general errors (such as insufficient balance or invalid receiver), any broken transfer restrictions, and any compliance
   failures
-
-**`Note`**
-
- this takes locked tokens into account. For example, if portfolio A has 1000 tokens and this function is called to check if 700 of them can be
-  transferred to portfolio B (assuming everything else checks out) the result will be success. If an instruction is created and authorized to transfer those 700 tokens,
-  they would become locked. From that point, further calls to this function would return failed results because of the funds being locked, even though they haven't been
-  transferred yet
 
 #### Parameters
 
@@ -42,4 +35,15 @@ Check whether it is possible to create a settlement instruction to transfer a ce
 
 #### Returns
 
-`Promise`<[`TransferBreakdown`](../../../../../interfaces/API/Entities/Asset/Types/TransferBreakdown/TransferBreakdown.md)\>
+`Promise`\<[`TransferBreakdown`](../../../../../interfaces/API/Entities/Asset/Types/TransferBreakdown/TransferBreakdown.md)\>
+
+**`Note`**
+
+this takes locked tokens into account. For example, if portfolio A has 1000 tokens and this function is called to check if 700 of them can be
+  transferred to portfolio B (assuming everything else checks out) the result will be success. If an instruction is created and authorized to transfer those 700 tokens,
+  they would become locked. From that point, further calls to this function would return failed results because of the funds being locked, even though they haven't been
+  transferred yet
+
+#### Defined in
+
+[api/entities/Asset/Settlements.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Asset/Settlements.ts#L36)

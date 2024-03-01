@@ -8,7 +8,7 @@ sidebar_label: "StatOpTypeEnum"
 
 **`Enum Name`**
 
- StatOpTypeEnum
+StatOpTypeEnum
  Represents all known stat types
 
 ## Enumeration Members
@@ -19,7 +19,7 @@ sidebar_label: "StatOpTypeEnum"
 
 #### Defined in
 
-[middleware/types.ts:28801](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/middleware/types.ts#L28801)
+[middleware/types.ts:28801](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/middleware/types.ts#L28801)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:28802](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/middleware/types.ts#L28802)
+[middleware/types.ts:28802](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/middleware/types.ts#L28802)

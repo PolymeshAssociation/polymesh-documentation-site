@@ -1,7 +1,7 @@
 ---
-id: "MetadataEntry"
-title: "Class: MetadataEntry"
-sidebar_label: "MetadataEntry"
+id: 'MetadataEntry'
+title: 'Class: MetadataEntry'
+sidebar_label: 'MetadataEntry'
 ---
 
 [api/entities/MetadataEntry](../../../../modules/API/Entities/MetadataEntry/MetadataEntry.md).MetadataEntry
@@ -10,7 +10,7 @@ Represents an Asset MetadataEntry in the Polymesh blockchain
 
 ## Hierarchy
 
-- [`Entity`](../Entity/Entity.md)<[`UniqueIdentifiers`](../../../../interfaces/API/Entities/MetadataEntry/UniqueIdentifiers/UniqueIdentifiers.md), [`HumanReadable`](../../../../interfaces/API/Entities/MetadataEntry/HumanReadable/HumanReadable.md)\>
+- [`Entity`](../Entity/Entity.md) \<[`UniqueIdentifiers`](../../../../interfaces/API/Entities/MetadataEntry/UniqueIdentifiers/UniqueIdentifiers.md), [`HumanReadable`](../../../../interfaces/API/Entities/MetadataEntry/HumanReadable/HumanReadable.md)\>
 
   ↳ **`MetadataEntry`**
 
@@ -24,9 +24,9 @@ Asset for which this is the metadata
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MetadataEntry/index.ts#L37)
+[api/entities/MetadataEntry/index.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MetadataEntry/index.ts#L46)
 
-___
+---
 
 ### id
 
@@ -36,9 +36,9 @@ identifier number of the MetadataEntry
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MetadataEntry/index.ts#L47)
+[api/entities/MetadataEntry/index.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MetadataEntry/index.ts#L56)
 
-___
+---
 
 ### type
 
@@ -48,9 +48,9 @@ Type of metadata represented by this instance
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MetadataEntry/index.ts#L42)
+[api/entities/MetadataEntry/index.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MetadataEntry/index.ts#L51)
 
-___
+---
 
 ### uuid
 
@@ -62,37 +62,77 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
+### clear
+
+▸ **clear**(`opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
+
+Removes the asset metadata value
+
+#### Parameters
+
+| Name    | Type                                                                           |
+| :------ | :----------------------------------------------------------------------------- |
+| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
+
+**`Throws`**
+
+- if the Metadata doesn't exists
+  - if the Metadata value is locked
+
+**`Note`**
+
+this method is of type [NoArgsProcedureMethod](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md), which means you can call [clear.checkAuthorization](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/MetadataEntry/index.ts:116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MetadataEntry/index.ts#L116)
+
+---
+
 ### details
 
-▸ **details**(): `Promise`<[`MetadataDetails`](../../../../interfaces/API/Entities/MetadataEntry/Types/MetadataDetails/MetadataDetails.md)\>
+▸ **details**(): `Promise`\<[`MetadataDetails`](../../../../interfaces/API/Entities/MetadataEntry/Types/MetadataDetails/MetadataDetails.md)\>
 
 Retrieve name and specs for this MetadataEntry
 
 #### Returns
 
-`Promise`<[`MetadataDetails`](../../../../interfaces/API/Entities/MetadataEntry/Types/MetadataDetails/MetadataDetails.md)\>
+`Promise`\<[`MetadataDetails`](../../../../interfaces/API/Entities/MetadataEntry/Types/MetadataDetails/MetadataDetails.md)\>
 
-___
+#### Defined in
+
+[api/entities/MetadataEntry/index.ts:141](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MetadataEntry/index.ts#L141)
+
+---
 
 ### exists
 
-▸ **exists**(): `Promise`<`boolean`\>
+▸ **exists**(): `Promise`\<`boolean`\>
 
 Determine whether this MetadataEntry exists on chain
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Overrides
 
 [Entity](../Entity/Entity.md).[exists](../Entity/Entity.md#exists)
 
-___
+#### Defined in
+
+[api/entities/MetadataEntry/index.ts:217](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MetadataEntry/index.ts#L217)
+
+---
 
 ### isEqual
 
@@ -102,9 +142,9 @@ Determine whether this Entity is the same as another one
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `entity` | [`Entity`](../Entity/Entity.md)<`unknown`, `unknown`\> |
+| Name     | Type                                                    |
+| :------- | :------------------------------------------------------ |
+| `entity` | [`Entity`](../Entity/Entity.md)\<`unknown`, `unknown`\> |
 
 #### Returns
 
@@ -114,35 +154,98 @@ Determine whether this Entity is the same as another one
 
 [Entity](../Entity/Entity.md).[isEqual](../Entity/Entity.md#isequal)
 
-___
+#### Defined in
 
-### set
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Entity.ts#L61)
 
-▸ **set**(`args`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`MetadataEntry`](MetadataEntry.md), [`MetadataEntry`](MetadataEntry.md)\>\>
+---
 
-Assign new value for the MetadataEntry along with its details or optionally only set the details (expiry + lock status) of any Metadata value
+### isModifiable
 
-**`Note`**
+▸ **isModifiable**(): `Promise`\<\{ `canModify`: `boolean` ; `reason?`: [`PolymeshError`](../../../Base/PolymeshError/PolymeshError.md) }\>
 
- - Value or the details can only be set if the MetadataEntry is not locked
+Check if the MetadataEntry can be modified.
+A MetadataEntry is modifiable if it exists and is not locked
 
-**`Note`**
+#### Returns
 
- this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [set.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
+`Promise`\<\{ `canModify`: `boolean` ; `reason?`: [`PolymeshError`](../../../Base/PolymeshError/PolymeshError.md) }\>
+
+#### Defined in
+
+[api/entities/MetadataEntry/index.ts:250](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MetadataEntry/index.ts#L250)
+
+---
+
+### remove
+
+▸ **remove**(`opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
+
+Removes a local Asset Metadata key along with its value
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | [`SetMetadataParams`](../../../../modules/API/Procedures/Types/Types.md#setmetadataparams) |
+| Name    | Type                                                                           |
+| :------ | :----------------------------------------------------------------------------- |
 | `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`MetadataEntry`](MetadataEntry.md), [`MetadataEntry`](MetadataEntry.md)\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
-___
+**`Note`**
+
+A global Metadata key cannot be deleted
+
+**`Throws`**
+
+- if the Metadata type is global
+  - if the Metadata doesn't exists
+  - if the Metadata value is locked
+  - if the Metadata is a mandatory key for any NFT Collection
+
+**`Note`**
+
+this method is of type [NoArgsProcedureMethod](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md), which means you can call [remove.checkAuthorization](../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/MetadataEntry/index.ts:134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MetadataEntry/index.ts#L134)
+
+---
+
+### set
+
+▸ **set**(`args`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`MetadataEntry`](MetadataEntry.md), [`MetadataEntry`](MetadataEntry.md)\>\>
+
+Assign new value for the MetadataEntry along with its details or optionally only set the details (expiry + lock status) of any Metadata value
+
+#### Parameters
+
+| Name    | Type                                                                                       |
+| :------ | :----------------------------------------------------------------------------------------- |
+| `args`  | [`SetMetadataParams`](../../../../modules/API/Procedures/Types/Types.md#setmetadataparams) |
+| `opts?` | [`ProcedureOpts`](../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md)             |
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`MetadataEntry`](MetadataEntry.md), [`MetadataEntry`](MetadataEntry.md)\>\>
+
+**`Note`**
+
+- Value or the details can only be set if the MetadataEntry is not locked
+
+**`Note`**
+
+this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [set.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/MetadataEntry/index.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MetadataEntry/index.ts#L102)
+
+---
 
 ### toHuman
 
@@ -158,40 +261,48 @@ Return the MetadataEntry's ID, Asset ticker and Metadata type
 
 [Entity](../Entity/Entity.md).[toHuman](../Entity/Entity.md#tohuman)
 
-___
+#### Defined in
+
+[api/entities/MetadataEntry/index.ts:313](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MetadataEntry/index.ts#L313)
+
+---
 
 ### value
 
-▸ **value**(): `Promise`<``null`` \| [`MetadataValue`](../../../../modules/API/Entities/MetadataEntry/Types/Types.md#metadatavalue)\>
+▸ **value**(): `Promise`\<`null` \| [`MetadataValue`](../../../../modules/API/Entities/MetadataEntry/Types/Types.md#metadatavalue)\>
 
 Retrieve the value and details (expiry + lock status) for this MetadataEntry
 
-**`Note`**
-
- - This returns `null` if no value is yet specified for this MetadataEntry
-
 #### Returns
 
-`Promise`<``null`` \| [`MetadataValue`](../../../../modules/API/Entities/MetadataEntry/Types/Types.md#metadatavalue)\>
+`Promise`\<`null` \| [`MetadataValue`](../../../../modules/API/Entities/MetadataEntry/Types/Types.md#metadatavalue)\>
 
-___
+**`Note`**
+
+- This returns `null` if no value is yet specified for this MetadataEntry
+
+#### Defined in
+
+[api/entities/MetadataEntry/index.ts:188](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MetadataEntry/index.ts#L188)
+
+---
 
 ### generateUuid
 
-▸ `Static` **generateUuid**<`Identifiers`\>(`identifiers`): `string`
+▸ `Static` **generateUuid**\<`Identifiers`\>(`identifiers`): `string`
 
 Generate the Entity's UUID from its identifying properties
 
 #### Type parameters
 
-| Name |
-| :------ |
+| Name          |
+| :------------ |
 | `Identifiers` |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name          | Type          |
+| :------------ | :------------ |
 | `identifiers` | `Identifiers` |
 
 #### Returns
@@ -202,24 +313,28 @@ Generate the Entity's UUID from its identifying properties
 
 [Entity](../Entity/Entity.md).[generateUuid](../Entity/Entity.md#generateuuid)
 
-___
+#### Defined in
+
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Entity.ts#L14)
+
+---
 
 ### unserialize
 
-▸ `Static` **unserialize**<`Identifiers`\>(`serialized`): `Identifiers`
+▸ `Static` **unserialize**\<`Identifiers`\>(`serialized`): `Identifiers`
 
 Unserialize a UUID into its Unique Identifiers
 
 #### Type parameters
 
-| Name |
-| :------ |
+| Name          |
+| :------------ |
 | `Identifiers` |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name         | Type     | Description         |
+| :----------- | :------- | :------------------ |
 | `serialized` | `string` | UUID to unserialize |
 
 #### Returns
@@ -229,3 +344,7 @@ Unserialize a UUID into its Unique Identifiers
 #### Inherited from
 
 [Entity](../Entity/Entity.md).[unserialize](../Entity/Entity.md#unserialize)
+
+#### Defined in
+
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Entity.ts#L23)

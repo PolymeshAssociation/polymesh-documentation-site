@@ -20,7 +20,7 @@ sidebar_label: "Leg"
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Instruction/types.ts#L49)
+[api/entities/Instruction/types.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Instruction/types.ts#L49)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Instruction/types.ts#L50)
+[api/entities/Instruction/types.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Instruction/types.ts#L50)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Instruction/types.ts#L47)
+[api/entities/Instruction/types.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Instruction/types.ts#L47)
 
 ___
 
@@ -50,4 +50,4 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Instruction/types.ts#L48)
+[api/entities/Instruction/types.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Instruction/types.ts#L48)

@@ -14,7 +14,7 @@ sidebar_label: "HumanReadable"
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Portfolio/index.ts#L48)
+[api/entities/Portfolio/index.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Portfolio/index.ts#L48)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Portfolio/index.ts#L49)
+[api/entities/Portfolio/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Portfolio/index.ts#L49)

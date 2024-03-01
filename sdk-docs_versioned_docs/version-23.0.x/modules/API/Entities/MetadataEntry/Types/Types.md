@@ -18,28 +18,28 @@ sidebar_label: "Types"
 
 ### GlobalMetadataKey
 
-Ƭ **GlobalMetadataKey**: [`MetadataDetails`](../../../../../interfaces/API/Entities/MetadataEntry/Types/MetadataDetails/MetadataDetails.md) & { `id`: `BigNumber`  }
+Ƭ **GlobalMetadataKey**: [`MetadataDetails`](../../../../../interfaces/API/Entities/MetadataEntry/Types/MetadataDetails/MetadataDetails.md) & \{ `id`: `BigNumber`  }
 
 #### Defined in
 
-[api/entities/MetadataEntry/types.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MetadataEntry/types.ts#L53)
+[api/entities/MetadataEntry/types.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/MetadataEntry/types.ts#L53)
 
 ___
 
 ### MetadataValue
 
-Ƭ **MetadataValue**: { `value`: `string`  } & [`MetadataValueDetails`](Types.md#metadatavaluedetails)
+Ƭ **MetadataValue**: \{ `value`: `string`  } & [`MetadataValueDetails`](Types.md#metadatavaluedetails)
 
 #### Defined in
 
-[api/entities/MetadataEntry/types.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MetadataEntry/types.ts#L49)
+[api/entities/MetadataEntry/types.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/MetadataEntry/types.ts#L49)
 
 ___
 
 ### MetadataValueDetails
 
-Ƭ **MetadataValueDetails**: { `expiry`: `Date` \| ``null``  } & { `lockStatus`: `Exclude`<[`MetadataLockStatus`](../../../../../enums/API/Entities/MetadataEntry/Types/MetadataLockStatus/MetadataLockStatus.md), [`LockedUntil`](../../../../../enums/API/Entities/MetadataEntry/Types/MetadataLockStatus/MetadataLockStatus.md#lockeduntil)\>  } \| { `lockStatus`: [`LockedUntil`](../../../../../enums/API/Entities/MetadataEntry/Types/MetadataLockStatus/MetadataLockStatus.md#lockeduntil) ; `lockedUntil`: `Date`  }
+Ƭ **MetadataValueDetails**: \{ `expiry`: `Date` \| ``null``  } & \{ `lockStatus`: `Exclude`\<[`MetadataLockStatus`](../../../../../enums/API/Entities/MetadataEntry/Types/MetadataLockStatus/MetadataLockStatus.md), [`LockedUntil`](../../../../../enums/API/Entities/MetadataEntry/Types/MetadataLockStatus/MetadataLockStatus.md#lockeduntil)\>  } \| \{ `lockStatus`: [`LockedUntil`](../../../../../enums/API/Entities/MetadataEntry/Types/MetadataLockStatus/MetadataLockStatus.md#lockeduntil) ; `lockedUntil`: `Date`  }
 
 #### Defined in
 
-[api/entities/MetadataEntry/types.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MetadataEntry/types.ts#L25)
+[api/entities/MetadataEntry/types.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/MetadataEntry/types.ts#L25)

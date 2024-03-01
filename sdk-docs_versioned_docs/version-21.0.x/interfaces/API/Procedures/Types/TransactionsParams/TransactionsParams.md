@@ -26,7 +26,7 @@ Asset over which the Identity will be granted permissions
 
 #### Defined in
 
-[api/procedures/types.ts:962](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L962)
+[api/procedures/types.ts:962](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L962)
 
 ___
 
@@ -38,4 +38,4 @@ a null value means full permissions
 
 #### Defined in
 
-[api/procedures/types.ts:969](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L969)
+[api/procedures/types.ts:969](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L969)

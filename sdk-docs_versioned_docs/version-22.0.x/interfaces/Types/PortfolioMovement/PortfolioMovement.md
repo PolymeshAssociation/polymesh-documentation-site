@@ -14,7 +14,7 @@ sidebar_label: "PortfolioMovement"
 
 #### Defined in
 
-[types/index.ts:1266](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L1266)
+[types/index.ts:1266](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L1266)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1265](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L1265)
+[types/index.ts:1265](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L1265)
 
 ___
 
@@ -36,4 +36,4 @@ identifier string to help differentiate transfers
 
 #### Defined in
 
-[types/index.ts:1270](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L1270)
+[types/index.ts:1270](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L1270)

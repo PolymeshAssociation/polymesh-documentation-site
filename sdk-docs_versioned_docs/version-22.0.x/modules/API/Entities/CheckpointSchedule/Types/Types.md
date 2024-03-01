@@ -12,8 +12,8 @@ sidebar_label: "Types"
 
 ### CheckpointScheduleParams
 
-Ƭ **CheckpointScheduleParams**: `Omit`<[`UniqueIdentifiers`](../../../../../interfaces/API/Entities/CheckpointSchedule/UniqueIdentifiers/UniqueIdentifiers.md) & [`Params`](../../../../../interfaces/API/Entities/CheckpointSchedule/Params/Params.md), ``"ticker"``\>
+Ƭ **CheckpointScheduleParams**: `Omit`\<[`UniqueIdentifiers`](../../../../../interfaces/API/Entities/CheckpointSchedule/UniqueIdentifiers/UniqueIdentifiers.md) & [`Params`](../../../../../interfaces/API/Entities/CheckpointSchedule/Params/Params.md), ``"ticker"``\>
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CheckpointSchedule/types.ts#L10)
+[api/entities/CheckpointSchedule/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CheckpointSchedule/types.ts#L10)

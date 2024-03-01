@@ -14,7 +14,7 @@ sidebar_label: "ClaimScopeTypeEnum"
 
 #### Defined in
 
-[middleware/typesV1.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/middleware/typesV1.ts#L6)
+[middleware/typesV1.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/middleware/typesV1.ts#L6)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV1.ts:4](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/middleware/typesV1.ts#L4)
+[middleware/typesV1.ts:4](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/middleware/typesV1.ts#L4)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[middleware/typesV1.ts:5](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/middleware/typesV1.ts#L5)
+[middleware/typesV1.ts:5](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/middleware/typesV1.ts#L5)

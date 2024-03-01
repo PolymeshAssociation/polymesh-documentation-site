@@ -28,7 +28,7 @@ Asset for which this group specifies permissions
 
 #### Defined in
 
-[api/entities/PermissionGroup.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/PermissionGroup.ts#L19)
+[api/entities/PermissionGroup.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/PermissionGroup.ts#L19)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[api/entities/KnownPermissionGroup.ts:30](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/KnownPermissionGroup.ts#L30)
+[api/entities/KnownPermissionGroup.ts:30](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/KnownPermissionGroup.ts#L30)
 
 ___
 
@@ -52,39 +52,47 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
 ### exists
 
-▸ **exists**(): `Promise`<`boolean`\>
+▸ **exists**(): `Promise`\<`boolean`\>
 
 Determine whether this Known Permission Group exists on chain
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Overrides
 
 [PermissionGroup](../PermissionGroup/PermissionGroup.md).[exists](../PermissionGroup/PermissionGroup.md#exists)
 
+#### Defined in
+
+[api/entities/KnownPermissionGroup.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/KnownPermissionGroup.ts#L90)
+
 ___
 
 ### getPermissions
 
-▸ **getPermissions**(): `Promise`<[`GroupPermissions`](../../../../modules/Types/Types.md#grouppermissions)\>
+▸ **getPermissions**(): `Promise`\<[`GroupPermissions`](../../../../modules/Types/Types.md#grouppermissions)\>
 
 Retrieve the Permissions associated with this Permission Group
 
 #### Returns
 
-`Promise`<[`GroupPermissions`](../../../../modules/Types/Types.md#grouppermissions)\>
+`Promise`\<[`GroupPermissions`](../../../../modules/Types/Types.md#grouppermissions)\>
 
 #### Overrides
 
 [PermissionGroup](../PermissionGroup/PermissionGroup.md).[getPermissions](../PermissionGroup/PermissionGroup.md#getpermissions)
+
+#### Defined in
+
+[api/entities/KnownPermissionGroup.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/KnownPermissionGroup.ts#L46)
 
 ___
 
@@ -98,7 +106,7 @@ Determine whether this Entity is the same as another one
 
 | Name | Type |
 | :------ | :------ |
-| `entity` | [`Entity`](../Entity/Entity.md)<`unknown`, `unknown`\> |
+| `entity` | [`Entity`](../Entity/Entity.md)\<`unknown`, `unknown`\> |
 
 #### Returns
 
@@ -107,6 +115,10 @@ Determine whether this Entity is the same as another one
 #### Inherited from
 
 [PermissionGroup](../PermissionGroup/PermissionGroup.md).[isEqual](../PermissionGroup/PermissionGroup.md#isequal)
+
+#### Defined in
+
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -124,11 +136,15 @@ Return the KnownPermissionGroup's static data
 
 [PermissionGroup](../PermissionGroup/PermissionGroup.md).[toHuman](../PermissionGroup/PermissionGroup.md#tohuman)
 
+#### Defined in
+
+[api/entities/KnownPermissionGroup.ts:97](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/KnownPermissionGroup.ts#L97)
+
 ___
 
 ### generateUuid
 
-▸ `Static` **generateUuid**<`Identifiers`\>(`identifiers`): `string`
+▸ `Static` **generateUuid**\<`Identifiers`\>(`identifiers`): `string`
 
 Generate the Entity's UUID from its identifying properties
 
@@ -152,11 +168,15 @@ Generate the Entity's UUID from its identifying properties
 
 [PermissionGroup](../PermissionGroup/PermissionGroup.md).[generateUuid](../PermissionGroup/PermissionGroup.md#generateuuid)
 
+#### Defined in
+
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Entity.ts#L14)
+
 ___
 
 ### unserialize
 
-▸ `Static` **unserialize**<`Identifiers`\>(`serialized`): `Identifiers`
+▸ `Static` **unserialize**\<`Identifiers`\>(`serialized`): `Identifiers`
 
 Unserialize a UUID into its Unique Identifiers
 
@@ -179,3 +199,7 @@ Unserialize a UUID into its Unique Identifiers
 #### Inherited from
 
 [PermissionGroup](../PermissionGroup/PermissionGroup.md).[unserialize](../PermissionGroup/PermissionGroup.md#unserialize)
+
+#### Defined in
+
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Entity.ts#L23)

@@ -1,7 +1,7 @@
 ---
-id: "Issuance"
-title: "Class: Issuance"
-sidebar_label: "Issuance"
+id: 'Issuance'
+title: 'Class: Issuance'
+sidebar_label: 'Issuance'
 ---
 
 [api/entities/Asset/Fungible/Issuance](../../../../../../modules/API/Entities/Asset/Fungible/Issuance/Issuance.md).Issuance
@@ -10,7 +10,7 @@ Handles all Asset Issuance related functionality
 
 ## Hierarchy
 
-- `Namespace`<[`FungibleAsset`](../FungibleAsset.md)\>
+- `Namespace`\<[`FungibleAsset`](../FungibleAsset.md)\>
 
   ↳ **`Issuance`**
 
@@ -18,23 +18,27 @@ Handles all Asset Issuance related functionality
 
 ### issue
 
-▸ **issue**(`args`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`FungibleAsset`](../FungibleAsset.md), [`FungibleAsset`](../FungibleAsset.md)\>\>
+▸ **issue**(`args`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`FungibleAsset`](../FungibleAsset.md), [`FungibleAsset`](../FungibleAsset.md)\>\>
 
 Issue a certain amount of Asset tokens to the caller's default portfolio
 
-**`Note`**
-
- this method is of type [ProcedureMethod](../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [issue.checkAuthorization](../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `args` | `Object` | - |
-| `args.amount` | `BigNumber` | amount of Asset tokens to be issued |
-| `opts?` | [`ProcedureOpts`](../../../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) | - |
+| Name          | Type                                                                                 | Description                         |
+| :------------ | :----------------------------------------------------------------------------------- | :---------------------------------- |
+| `args`        | `Object`                                                                             | -                                   |
+| `args.amount` | `BigNumber`                                                                          | amount of Asset tokens to be issued |
+| `opts?`       | [`ProcedureOpts`](../../../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) | -                                   |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<[`FungibleAsset`](../FungibleAsset.md), [`FungibleAsset`](../FungibleAsset.md)\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../../modules/Types/Types.md#genericpolymeshtransaction) \<[`FungibleAsset`](../FungibleAsset.md), [`FungibleAsset`](../FungibleAsset.md)\>\>
+
+**`Note`**
+
+this method is of type [ProcedureMethod](../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [issue.checkAuthorization](../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/Asset/Fungible/Issuance/index.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/Fungible/Issuance/index.ts#L34)

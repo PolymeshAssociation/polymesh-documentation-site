@@ -44,7 +44,7 @@ be narrowed via `instanceof` operator, or by using a more specific getter
 
 #### Defined in
 
-[api/entities/Asset/types.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Asset/types.ts#L26)
+[api/entities/Asset/types.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Asset/types.ts#L26)
 
 ___
 
@@ -56,20 +56,20 @@ A metadata entry for which each NFT in the collection must have an entry for
 
 **`Note`**
 
- each NFT **must** have an entry for each metadata value, the entry **should** comply with the relevant spec
+each NFT **must** have an entry for each metadata value, the entry **should** comply with the relevant spec
 
 #### Defined in
 
-[api/entities/Asset/types.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Asset/types.ts#L127)
+[api/entities/Asset/types.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Asset/types.ts#L127)
 
 ___
 
 ### MetadataKeyId
 
-Ƭ **MetadataKeyId**: { `id`: `BigNumber` ; `type`: [`Global`](../../../../../enums/API/Entities/MetadataEntry/Types/MetadataType/MetadataType.md#global)  } \| { `id`: `BigNumber` ; `ticker`: `string` ; `type`: [`Local`](../../../../../enums/API/Entities/MetadataEntry/Types/MetadataType/MetadataType.md#local)  }
+Ƭ **MetadataKeyId**: \{ `id`: `BigNumber` ; `type`: [`Global`](../../../../../enums/API/Entities/MetadataEntry/Types/MetadataType/MetadataType.md#global)  } \| \{ `id`: `BigNumber` ; `ticker`: `string` ; `type`: [`Local`](../../../../../enums/API/Entities/MetadataEntry/Types/MetadataType/MetadataType.md#local)  }
 
 The data needed to uniquely identify a metadata specification
 
 #### Defined in
 
-[api/entities/Asset/types.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Asset/types.ts#L100)
+[api/entities/Asset/types.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Asset/types.ts#L100)

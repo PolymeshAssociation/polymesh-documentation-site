@@ -16,4 +16,4 @@ array of Identities (or DIDs) of the default claim issuers
 
 #### Defined in
 
-[api/procedures/types.ts:749](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L749)
+[api/procedures/types.ts:770](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/procedures/types.ts#L770)

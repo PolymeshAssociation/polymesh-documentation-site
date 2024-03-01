@@ -14,7 +14,7 @@ sidebar_label: "ConditionCompliance"
 
 #### Defined in
 
-[types/index.ts:478](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L478)
+[types/index.ts:478](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L478)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:477](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L477)
+[types/index.ts:477](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L477)

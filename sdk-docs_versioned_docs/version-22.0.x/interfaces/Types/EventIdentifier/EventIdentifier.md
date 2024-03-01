@@ -22,7 +22,7 @@ sidebar_label: "EventIdentifier"
 
 #### Defined in
 
-[types/index.ts:717](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L717)
+[types/index.ts:717](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L717)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:716](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L716)
+[types/index.ts:716](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L716)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:715](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L715)
+[types/index.ts:715](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L715)
 
 ___
 
@@ -52,4 +52,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:718](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L718)
+[types/index.ts:718](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L718)

@@ -14,4 +14,4 @@ sidebar_label: "RemoveCorporateActionParams"
 
 #### Defined in
 
-[api/procedures/types.ts:753](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/procedures/types.ts#L753)
+[api/procedures/types.ts:753](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/procedures/types.ts#L753)

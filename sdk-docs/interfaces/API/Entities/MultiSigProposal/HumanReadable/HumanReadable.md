@@ -14,7 +14,7 @@ sidebar_label: "HumanReadable"
 
 #### Defined in
 
-[api/entities/MultiSigProposal/index.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MultiSigProposal/index.ts#L45)
+[api/entities/MultiSigProposal/index.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MultiSigProposal/index.ts#L45)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/MultiSigProposal/index.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MultiSigProposal/index.ts#L44)
+[api/entities/MultiSigProposal/index.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MultiSigProposal/index.ts#L44)

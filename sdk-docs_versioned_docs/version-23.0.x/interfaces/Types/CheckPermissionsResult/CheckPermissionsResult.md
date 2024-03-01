@@ -26,7 +26,7 @@ optional message explaining the reason for failure in special cases
 
 #### Defined in
 
-[types/index.ts:1102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L1102)
+[types/index.ts:1102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/types/index.ts#L1102)
 
 ___
 
@@ -38,7 +38,7 @@ required permissions which the signer *DOESN'T* have. Only present if `result` i
 
 #### Defined in
 
-[types/index.ts:1094](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L1094)
+[types/index.ts:1094](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/types/index.ts#L1094)
 
 ___
 
@@ -50,4 +50,4 @@ whether the signer complies with the required permissions or not
 
 #### Defined in
 
-[types/index.ts:1098](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L1098)
+[types/index.ts:1098](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/types/index.ts#L1098)

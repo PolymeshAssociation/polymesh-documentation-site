@@ -14,7 +14,7 @@ sidebar_label: "FungibleLeg"
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Instruction/types.ts#L57)
+[api/entities/Instruction/types.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Instruction/types.ts#L57)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Instruction/types.ts#L58)
+[api/entities/Instruction/types.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Instruction/types.ts#L58)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Instruction/types.ts#L55)
+[api/entities/Instruction/types.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Instruction/types.ts#L55)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Instruction/types.ts#L56)
+[api/entities/Instruction/types.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Instruction/types.ts#L56)

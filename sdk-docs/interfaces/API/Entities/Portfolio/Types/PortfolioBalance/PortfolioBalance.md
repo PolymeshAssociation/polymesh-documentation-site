@@ -20,7 +20,7 @@ sidebar_label: "PortfolioBalance"
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Portfolio/types.ts#L9)
+[api/entities/Portfolio/types.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Portfolio/types.ts#L9)
 
 ___
 
@@ -36,7 +36,7 @@ balance available for transferring and paying fees
 
 #### Defined in
 
-[types/index.ts:763](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L763)
+[types/index.ts:769](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L769)
 
 ___
 
@@ -52,7 +52,7 @@ unavailable balance, either bonded for staking or locked for some other purpose
 
 #### Defined in
 
-[types/index.ts:767](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L767)
+[types/index.ts:773](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L773)
 
 ___
 
@@ -68,4 +68,4 @@ free + locked
 
 #### Defined in
 
-[types/index.ts:771](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L771)
+[types/index.ts:777](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L777)

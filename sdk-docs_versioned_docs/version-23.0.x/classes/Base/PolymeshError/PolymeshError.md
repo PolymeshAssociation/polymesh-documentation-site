@@ -22,14 +22,14 @@ Wraps an error to give more information about its type
 
 #### Defined in
 
-[base/PolymeshError.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/base/PolymeshError.ts#L16)
+[base/PolymeshError.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/base/PolymeshError.ts#L16)
 
 ___
 
 ### data
 
-• `Optional` **data**: `Record`<`string`, `unknown`\>
+• `Optional` **data**: `Record`\<`string`, `unknown`\>
 
 #### Defined in
 
-[base/PolymeshError.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/base/PolymeshError.ts#L18)
+[base/PolymeshError.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/base/PolymeshError.ts#L18)

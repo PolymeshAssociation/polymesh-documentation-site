@@ -14,7 +14,7 @@ sidebar_label: "RoleType"
 
 #### Defined in
 
-[types/index.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L84)
+[types/index.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L84)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L87)
+[types/index.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L87)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L89)
+[types/index.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L89)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:86](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L86)
+[types/index.ts:86](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L86)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L83)
+[types/index.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L83)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:85](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L85)
+[types/index.ts:85](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L85)

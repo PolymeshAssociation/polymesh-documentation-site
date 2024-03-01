@@ -16,7 +16,7 @@ Represents all possible authorization statuses
 
 #### Defined in
 
-[middleware/types.ts:10980](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/middleware/types.ts#L10980)
+[middleware/types.ts:11104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/middleware/types.ts#L11104)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:10981](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/middleware/types.ts#L10981)
+[middleware/types.ts:11105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/middleware/types.ts#L11105)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:10982](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/middleware/types.ts#L10982)
+[middleware/types.ts:11106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/middleware/types.ts#L11106)
 
 ___
 
@@ -46,4 +46,4 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:10983](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/middleware/types.ts#L10983)
+[middleware/types.ts:11107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/middleware/types.ts#L11107)

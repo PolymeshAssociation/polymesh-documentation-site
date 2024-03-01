@@ -14,7 +14,7 @@ sidebar_label: "SecurityIdentifierType"
 
 #### Defined in
 
-[types/index.ts:144](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L144)
+[types/index.ts:144](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L144)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:143](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L143)
+[types/index.ts:143](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L143)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L146)
+[types/index.ts:146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L146)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:142](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L142)
+[types/index.ts:142](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L142)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:145](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L145)
+[types/index.ts:145](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L145)

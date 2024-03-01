@@ -14,7 +14,7 @@ sidebar_label: "Scope"
 
 #### Defined in
 
-[types/index.ts:204](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L204)
+[types/index.ts:204](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L204)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:205](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L205)
+[types/index.ts:205](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L205)

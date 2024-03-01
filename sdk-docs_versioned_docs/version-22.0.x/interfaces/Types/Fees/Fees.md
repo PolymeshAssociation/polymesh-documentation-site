@@ -16,7 +16,7 @@ regular network fee
 
 #### Defined in
 
-[types/index.ts:767](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L767)
+[types/index.ts:767](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L767)
 
 ___
 
@@ -28,7 +28,7 @@ bonus fee charged by certain transactions
 
 #### Defined in
 
-[types/index.ts:763](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L763)
+[types/index.ts:763](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L763)
 
 ___
 
@@ -40,4 +40,4 @@ sum of the protocol and gas fees
 
 #### Defined in
 
-[types/index.ts:771](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L771)
+[types/index.ts:771](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L771)

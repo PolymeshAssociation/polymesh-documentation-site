@@ -14,7 +14,7 @@ sidebar_label: "ProposalStatus"
 
 #### Defined in
 
-[api/entities/MultiSigProposal/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/MultiSigProposal/types.ts#L7)
+[api/entities/MultiSigProposal/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/MultiSigProposal/types.ts#L7)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/MultiSigProposal/types.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/MultiSigProposal/types.ts#L8)
+[api/entities/MultiSigProposal/types.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/MultiSigProposal/types.ts#L8)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/MultiSigProposal/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/MultiSigProposal/types.ts#L10)
+[api/entities/MultiSigProposal/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/MultiSigProposal/types.ts#L10)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[api/entities/MultiSigProposal/types.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/MultiSigProposal/types.ts#L6)
+[api/entities/MultiSigProposal/types.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/MultiSigProposal/types.ts#L6)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[api/entities/MultiSigProposal/types.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/MultiSigProposal/types.ts#L11)
+[api/entities/MultiSigProposal/types.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/MultiSigProposal/types.ts#L11)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[api/entities/MultiSigProposal/types.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/MultiSigProposal/types.ts#L9)
+[api/entities/MultiSigProposal/types.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/MultiSigProposal/types.ts#L9)

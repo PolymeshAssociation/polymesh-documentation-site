@@ -1,7 +1,7 @@
 ---
-id: "Requirements"
-title: "Class: Requirements"
-sidebar_label: "Requirements"
+id: 'Requirements'
+title: 'Class: Requirements'
+sidebar_label: 'Requirements'
 ---
 
 [api/entities/Asset/Base/Compliance/Requirements](../../../../../../../modules/API/Entities/Asset/Base/Compliance/Requirements/Requirements.md).Requirements
@@ -10,7 +10,7 @@ Handles all Asset Compliance Requirements related functionality
 
 ## Hierarchy
 
-- `Namespace`<[`BaseAsset`](../../BaseAsset/BaseAsset.md)\>
+- `Namespace`\<[`BaseAsset`](../../BaseAsset/BaseAsset.md)\>
 
   ↳ **`Requirements`**
 
@@ -18,208 +18,250 @@ Handles all Asset Compliance Requirements related functionality
 
 ### add
 
-▸ **add**(`args`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+▸ **add**(`args`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
 Add a new compliance requirement to the the Asset. This doesn't modify existing requirements
 
-**`Note`**
-
- this method is of type [ProcedureMethod](../../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [add.checkAuthorization](../../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | [`AddAssetRequirementParams`](../../../../../../../interfaces/API/Procedures/Types/AddAssetRequirementParams/AddAssetRequirementParams.md) |
-| `opts?` | [`ProcedureOpts`](../../../../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+| Name    | Type                                                                                                                                       |
+| :------ | :----------------------------------------------------------------------------------------------------------------------------------------- |
+| `args`  | [`AddAssetRequirementParams`](../../../../../../../interfaces/API/Procedures/Types/AddAssetRequirementParams/AddAssetRequirementParams.md) |
+| `opts?` | [`ProcedureOpts`](../../../../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md)                                                    |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
-___
+**`Note`**
+
+this method is of type [ProcedureMethod](../../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [add.checkAuthorization](../../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/Asset/Base/Compliance/Requirements.ts:94](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/Base/Compliance/Requirements.ts#L94)
+
+---
 
 ### arePaused
 
-▸ **arePaused**(): `Promise`<`boolean`\>
+▸ **arePaused**(): `Promise`\<`boolean`\>
 
 Check whether Asset compliance requirements are paused or not
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
-___
+#### Defined in
+
+[api/entities/Asset/Base/Compliance/Requirements.ts:219](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/Base/Compliance/Requirements.ts#L219)
+
+---
 
 ### get
 
-▸ **get**(): `Promise`<[`ComplianceRequirements`](../../../../../../../interfaces/Types/ComplianceRequirements/ComplianceRequirements.md)\>
+▸ **get**(): `Promise`\<[`ComplianceRequirements`](../../../../../../../interfaces/Types/ComplianceRequirements/ComplianceRequirements.md)\>
 
 Retrieve all of the Asset's compliance requirements, together with the Default Trusted Claim Issuers
 
-**`Note`**
-
- can be subscribed to
-
 #### Returns
 
-`Promise`<[`ComplianceRequirements`](../../../../../../../interfaces/Types/ComplianceRequirements/ComplianceRequirements.md)\>
+`Promise`\<[`ComplianceRequirements`](../../../../../../../interfaces/Types/ComplianceRequirements/ComplianceRequirements.md)\>
 
-▸ **get**(`callback`): `Promise`<[`UnsubCallback`](../../../../../../../modules/Types/Types.md#unsubcallback)\>
+**`Note`**
+
+can be subscribed to
+
+#### Defined in
+
+[api/entities/Asset/Base/Compliance/Requirements.ts:126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/Base/Compliance/Requirements.ts#L126)
+
+▸ **get**(`callback`): `Promise`\<[`UnsubCallback`](../../../../../../../modules/Types/Types.md#unsubcallback)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `callback` | [`SubCallback`](../../../../../../../modules/Types/Types.md#subcallback)<[`ComplianceRequirements`](../../../../../../../interfaces/Types/ComplianceRequirements/ComplianceRequirements.md)\> |
+| Name       | Type                                                                                                                                                                                            |
+| :--------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `callback` | [`SubCallback`](../../../../../../../modules/Types/Types.md#subcallback) \<[`ComplianceRequirements`](../../../../../../../interfaces/Types/ComplianceRequirements/ComplianceRequirements.md)\> |
 
 #### Returns
 
-`Promise`<[`UnsubCallback`](../../../../../../../modules/Types/Types.md#unsubcallback)\>
+`Promise`\<[`UnsubCallback`](../../../../../../../modules/Types/Types.md#unsubcallback)\>
 
-___
+#### Defined in
+
+[api/entities/Asset/Base/Compliance/Requirements.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/Base/Compliance/Requirements.ts#L127)
+
+---
 
 ### modify
 
-▸ **modify**(`args`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+▸ **modify**(`args`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
 Modify a compliance requirement for the Asset
 
-**`Note`**
-
- this method is of type [ProcedureMethod](../../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [modify.checkAuthorization](../../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | [`ModifyComplianceRequirementParams`](../../../../../../../modules/API/Procedures/Types/Types.md#modifycompliancerequirementparams) |
-| `opts?` | [`ProcedureOpts`](../../../../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+| Name    | Type                                                                                                                                |
+| :------ | :---------------------------------------------------------------------------------------------------------------------------------- |
+| `args`  | [`ModifyComplianceRequirementParams`](../../../../../../../modules/API/Procedures/Types/Types.md#modifycompliancerequirementparams) |
+| `opts?` | [`ProcedureOpts`](../../../../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md)                                             |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
-___
+**`Note`**
+
+this method is of type [ProcedureMethod](../../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [modify.checkAuthorization](../../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/Asset/Base/Compliance/Requirements.ts:243](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/Base/Compliance/Requirements.ts#L243)
+
+---
 
 ### pause
 
-▸ **pause**(`opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+▸ **pause**(`opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
 Pause all the Asset's requirements. This means that all transfers will be allowed until requirements are unpaused
 
-**`Note`**
-
- this method is of type [NoArgsProcedureMethod](../../../../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md), which means you can call [pause.checkAuthorization](../../../../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type                                                                                    |
+| :------ | :-------------------------------------------------------------------------------------- |
 | `opts?` | [`ProcedureOpts`](../../../../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
-___
+**`Note`**
+
+this method is of type [NoArgsProcedureMethod](../../../../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md), which means you can call [pause.checkAuthorization](../../../../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/Asset/Base/Compliance/Requirements.ts:202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/Base/Compliance/Requirements.ts#L202)
+
+---
 
 ### remove
 
-▸ **remove**(`args`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+▸ **remove**(`args`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
 Remove an existing compliance requirement from the Asset
 
-**`Note`**
-
- this method is of type [ProcedureMethod](../../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [remove.checkAuthorization](../../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | [`RemoveAssetRequirementParams`](../../../../../../../interfaces/API/Procedures/Types/RemoveAssetRequirementParams/RemoveAssetRequirementParams.md) |
-| `opts?` | [`ProcedureOpts`](../../../../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+| Name    | Type                                                                                                                                                |
+| :------ | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `args`  | [`RemoveAssetRequirementParams`](../../../../../../../interfaces/API/Procedures/Types/RemoveAssetRequirementParams/RemoveAssetRequirementParams.md) |
+| `opts?` | [`ProcedureOpts`](../../../../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md)                                                             |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
-___
+**`Note`**
+
+this method is of type [ProcedureMethod](../../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [remove.checkAuthorization](../../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/Asset/Base/Compliance/Requirements.ts:104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/Base/Compliance/Requirements.ts#L104)
+
+---
 
 ### reset
 
-▸ **reset**(`opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+▸ **reset**(`opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
 Delete all the current requirements for the Asset.
 
-**`Note`**
-
- this method is of type [NoArgsProcedureMethod](../../../../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md), which means you can call [reset.checkAuthorization](../../../../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type                                                                                    |
+| :------ | :-------------------------------------------------------------------------------------- |
 | `opts?` | [`ProcedureOpts`](../../../../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
-___
+**`Note`**
+
+this method is of type [NoArgsProcedureMethod](../../../../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md), which means you can call [reset.checkAuthorization](../../../../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/Asset/Base/Compliance/Requirements.ts:192](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/Base/Compliance/Requirements.ts#L192)
+
+---
 
 ### set
 
-▸ **set**(`args`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+▸ **set**(`args`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
 Configure compliance requirements for the Asset. This operation will replace all existing requirements with a new requirement set
 
-**`Example`**
-
- Say A, B, C, D and E are requirements and we arrange them as `[[A, B], [C, D], [E]]`.
-For a transfer to succeed, it must either comply with A AND B, C AND D, OR E.
-
-**`Note`**
-
- this method is of type [ProcedureMethod](../../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [set.checkAuthorization](../../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | [`SetAssetRequirementsParams`](../../../../../../../interfaces/API/Procedures/Types/SetAssetRequirementsParams/SetAssetRequirementsParams.md) |
-| `opts?` | [`ProcedureOpts`](../../../../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
+| Name    | Type                                                                                                                                          |
+| :------ | :-------------------------------------------------------------------------------------------------------------------------------------------- |
+| `args`  | [`SetAssetRequirementsParams`](../../../../../../../interfaces/API/Procedures/Types/SetAssetRequirementsParams/SetAssetRequirementsParams.md) |
+| `opts?` | [`ProcedureOpts`](../../../../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md)                                                       |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
-___
+**`Example`**
+
+```ts
+Say A, B, C, D and E are requirements and we arrange them as `[[A, B], [C, D], [E]]`.
+For a transfer to succeed, it must either comply with A AND B, C AND D, OR E.
+```
+
+**`Note`**
+
+this method is of type [ProcedureMethod](../../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [set.checkAuthorization](../../../../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/Asset/Base/Compliance/Requirements.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/Base/Compliance/Requirements.ts#L117)
+
+---
 
 ### unpause
 
-▸ **unpause**(`opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+▸ **unpause**(`opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
 Un-pause all the Asset's current requirements
 
-**`Note`**
-
- this method is of type [NoArgsProcedureMethod](../../../../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md), which means you can call [unpause.checkAuthorization](../../../../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type                                                                                    |
+| :------ | :-------------------------------------------------------------------------------------- |
 | `opts?` | [`ProcedureOpts`](../../../../../../../interfaces/Types/ProcedureOpts/ProcedureOpts.md) |
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
+
+**`Note`**
+
+this method is of type [NoArgsProcedureMethod](../../../../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md), which means you can call [unpause.checkAuthorization](../../../../../../../interfaces/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md#checkauthorization)
+on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/Asset/Base/Compliance/Requirements.ts:212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/Asset/Base/Compliance/Requirements.ts#L212)

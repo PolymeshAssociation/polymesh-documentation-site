@@ -1,7 +1,7 @@
 ---
-id: "Authorizations"
-title: "Class: Authorizations<Parent>"
-sidebar_label: "Authorizations"
+id: 'Authorizations'
+title: 'Class: Authorizations<Parent>'
+sidebar_label: 'Authorizations'
 ---
 
 [api/entities/common/namespaces/Authorizations](../../../../../../modules/API/Entities/Common/Namespaces/Authorizations/Authorizations.md).Authorizations
@@ -10,13 +10,13 @@ Handles all Authorization related functionality
 
 ## Type parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type                                                                |
+| :------- | :------------------------------------------------------------------ |
 | `Parent` | extends [`Signer`](../../../../../../modules/Types/Types.md#signer) |
 
 ## Hierarchy
 
-- `Namespace`<`Parent`\>
+- `Namespace`\<`Parent`\>
 
   ↳ **`Authorizations`**
 
@@ -26,71 +26,83 @@ Handles all Authorization related functionality
 
 ### getHistoricalAuthorizations
 
-▸ **getHistoricalAuthorizations**(`opts?`): `Promise`<[`ResultSet`](../../../../../../interfaces/Types/ResultSet/ResultSet.md)<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)\>\>
+▸ **getHistoricalAuthorizations**(`opts?`): `Promise`\<[`ResultSet`](../../../../../../interfaces/Types/ResultSet/ResultSet.md) \<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)\>\>
 
 Fetch all historical Authorization Requests for which this Signer is the target
 
-**`Note`**
-
- supports pagination
-
-**`Note`**
-
- uses the middlewareV2
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `Object` | - |
-| `opts.size?` | `BigNumber` | page size |
-| `opts.start?` | `BigNumber` | page offset |
+| Name           | Type                                                                                                          | Description                                                                    |
+| :------------- | :------------------------------------------------------------------------------------------------------------ | :----------------------------------------------------------------------------- |
+| `opts`         | `Object`                                                                                                      | -                                                                              |
+| `opts.size?`   | `BigNumber`                                                                                                   | page size                                                                      |
+| `opts.start?`  | `BigNumber`                                                                                                   | page offset                                                                    |
 | `opts.status?` | [`AuthorizationStatusEnum`](../../../../../../enums/Types/AuthorizationStatusEnum/AuthorizationStatusEnum.md) | fetch only authorizations with this status. Fetches all statuses if not passed |
-| `opts.type?` | [`AuthTypeEnum`](../../../../../../enums/Types/AuthTypeEnum/AuthTypeEnum.md) | fetch only authorizations of this type. Fetches all types if not passed |
+| `opts.type?`   | [`AuthTypeEnum`](../../../../../../enums/Types/AuthTypeEnum/AuthTypeEnum.md)                                  | fetch only authorizations of this type. Fetches all types if not passed        |
 
 #### Returns
 
-`Promise`<[`ResultSet`](../../../../../../interfaces/Types/ResultSet/ResultSet.md)<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)\>\>
+`Promise`\<[`ResultSet`](../../../../../../interfaces/Types/ResultSet/ResultSet.md) \<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)\>\>
 
-___
+**`Note`**
+
+supports pagination
+
+**`Note`**
+
+uses the middlewareV2
+
+#### Defined in
+
+[api/entities/common/namespaces/Authorizations.ts:147](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/common/namespaces/Authorizations.ts#L147)
+
+---
 
 ### getOne
 
-▸ **getOne**(`args`): `Promise`<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)\>
+▸ **getOne**(`args`): `Promise`\<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)\>
 
 Retrieve a single Authorization Request targeting this Signer by its ID
 
-**`Throws`**
-
- if there is no Authorization Request with the passed ID targeting this Signer
-
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Object` |
+| Name      | Type        |
+| :-------- | :---------- |
+| `args`    | `Object`    |
 | `args.id` | `BigNumber` |
 
 #### Returns
 
-`Promise`<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)\>
+`Promise`\<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)\>
 
-___
+**`Throws`**
+
+if there is no Authorization Request with the passed ID targeting this Signer
+
+#### Defined in
+
+[api/entities/common/namespaces/Authorizations.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/common/namespaces/Authorizations.ts#L77)
+
+---
 
 ### getReceived
 
-▸ **getReceived**(`opts?`): `Promise`<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)[]\>
+▸ **getReceived**(`opts?`): `Promise`\<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)[]\>
 
 Fetch all pending Authorization Requests for which this Signer is the target
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | `Object` | - |
-| `opts.includeExpired?` | `boolean` | whether to include expired authorizations. Defaults to true |
-| `opts.type?` | [`AuthorizationType`](../../../../../../enums/Types/AuthorizationType/AuthorizationType.md) | fetch only authorizations of this type. Fetches all types if not passed |
+| Name                   | Type                                                                                        | Description                                                             |
+| :--------------------- | :------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------- |
+| `opts?`                | `Object`                                                                                    | -                                                                       |
+| `opts.includeExpired?` | `boolean`                                                                                   | whether to include expired authorizations. Defaults to true             |
+| `opts.type?`           | [`AuthorizationType`](../../../../../../enums/Types/AuthorizationType/AuthorizationType.md) | fetch only authorizations of this type. Fetches all types if not passed |
 
 #### Returns
 
-`Promise`<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)[]\>
+`Promise`\<[`AuthorizationRequest`](../../../AuthorizationRequest/AuthorizationRequest.md)[]\>
+
+#### Defined in
+
+[api/entities/common/namespaces/Authorizations.ts:41](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/common/namespaces/Authorizations.ts#L41)

@@ -14,7 +14,7 @@ sidebar_label: "SingleClaimCondition"
 
 #### Defined in
 
-[types/index.ts:423](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L423)
+[types/index.ts:423](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L423)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:422](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L422)
+[types/index.ts:422](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L422)

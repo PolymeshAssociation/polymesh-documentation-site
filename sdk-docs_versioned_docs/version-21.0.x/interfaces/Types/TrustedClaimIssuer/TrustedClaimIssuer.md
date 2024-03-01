@@ -10,7 +10,7 @@ sidebar_label: "TrustedClaimIssuer"
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `IsDefault` | extends `boolean` = ``false`` |  |
+| `IsDefault` | extends `boolean` = ``false`` | whether the Identity is a default trusted claim issuer for an asset or just for a specific compliance condition. Defaults to false |
 
 ## Properties
 
@@ -20,7 +20,7 @@ sidebar_label: "TrustedClaimIssuer"
 
 #### Defined in
 
-[types/index.ts:416](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L416)
+[types/index.ts:416](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/types/index.ts#L416)
 
 ___
 
@@ -32,4 +32,4 @@ a null value means that the issuer is trusted for all claim types
 
 #### Defined in
 
-[types/index.ts:420](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L420)
+[types/index.ts:420](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/types/index.ts#L420)

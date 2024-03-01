@@ -17,7 +17,7 @@ not authorized:
 
 #### Defined in
 
-[types/index.ts:1078](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1078)
+[types/index.ts:1078](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/types/index.ts#L1078)
 
 ___
 
@@ -29,7 +29,7 @@ all transactions authorized
 
 #### Defined in
 
-[types/index.ts:1073](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1073)
+[types/index.ts:1073](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/types/index.ts#L1073)
 
 ___
 
@@ -44,7 +44,7 @@ authorized:
 
 #### Defined in
 
-[types/index.ts:1085](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1085)
+[types/index.ts:1085](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/types/index.ts#L1085)
 
 ___
 
@@ -60,4 +60,4 @@ authorized:
 
 #### Defined in
 
-[types/index.ts:1093](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L1093)
+[types/index.ts:1093](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/types/index.ts#L1093)

@@ -14,4 +14,4 @@ sidebar_label: "ModifyAssetTrustedClaimIssuersAddSetParams"
 
 #### Defined in
 
-[api/procedures/types.ts:666](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/procedures/types.ts#L666)
+[api/procedures/types.ts:666](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/procedures/types.ts#L666)

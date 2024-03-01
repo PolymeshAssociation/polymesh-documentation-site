@@ -14,7 +14,7 @@ sidebar_label: "PaginationOptions"
 
 #### Defined in
 
-[types/index.ts:739](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L739)
+[types/index.ts:739](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L739)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:740](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L740)
+[types/index.ts:740](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L740)

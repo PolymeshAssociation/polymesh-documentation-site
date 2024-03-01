@@ -33,7 +33,7 @@ hash of the block where this transaction resides (status: `Succeeded`, `Failed`)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/base/PolymeshTransactionBase.ts#L90)
+[base/PolymeshTransactionBase.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/base/PolymeshTransactionBase.ts#L90)
 
 ___
 
@@ -45,7 +45,7 @@ number of the block where this transaction resides (status: `Succeeded`, `Failed
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/base/PolymeshTransactionBase.ts#L95)
+[base/PolymeshTransactionBase.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/base/PolymeshTransactionBase.ts#L95)
 
 ___
 
@@ -57,7 +57,7 @@ stores errors thrown while running the transaction (status: `Failed`, `Aborted`)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/base/PolymeshTransactionBase.ts#L70)
+[base/PolymeshTransactionBase.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/base/PolymeshTransactionBase.ts#L70)
 
 ___
 
@@ -69,7 +69,7 @@ stores the transaction receipt (if successful)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:75](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/base/PolymeshTransactionBase.ts#L75)
+[base/PolymeshTransactionBase.ts:75](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/base/PolymeshTransactionBase.ts#L75)
 
 ___
 
@@ -81,7 +81,7 @@ current status of the transaction
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/base/PolymeshTransactionBase.ts#L65)
+[base/PolymeshTransactionBase.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/base/PolymeshTransactionBase.ts#L65)
 
 ___
 
@@ -93,7 +93,7 @@ transaction hash (status: `Running`, `Succeeded`, `Failed`)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/base/PolymeshTransactionBase.ts#L80)
+[base/PolymeshTransactionBase.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/base/PolymeshTransactionBase.ts#L80)
 
 ___
 
@@ -105,7 +105,7 @@ transaction index within its block (status: `Succeeded`, `Failed`)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:85](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/base/PolymeshTransactionBase.ts#L85)
+[base/PolymeshTransactionBase.ts:85](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/base/PolymeshTransactionBase.ts#L85)
 
 ## Accessors
 
@@ -119,6 +119,10 @@ returns true if transaction has completed successfully
 
 `boolean`
 
+#### Defined in
+
+[base/PolymeshTransactionBase.ts:714](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/base/PolymeshTransactionBase.ts#L714)
+
 ___
 
 ### result
@@ -127,23 +131,27 @@ ___
 
 returns the transaction result - this is the same value as the Promise run returns
 
-**`Note`**
-
- it is generally preferable to `await` the `Promise` returned by [transaction.run()](PolymeshTransactionBase.md#run) instead of reading this property
-
-**`Throws`**
-
- if the [transaction.isSuccess](PolymeshTransactionBase.md#issuccess) property is false — be sure to check that before accessing!
-
 #### Returns
 
 `TransformedReturnValue`
+
+**`Note`**
+
+it is generally preferable to `await` the `Promise` returned by [transaction.run()](PolymeshTransactionBase.md#run) instead of reading this property
+
+**`Throws`**
+
+if the [transaction.isSuccess](PolymeshTransactionBase.md#issuccess) property is false — be sure to check that before accessing!
+
+#### Defined in
+
+[base/PolymeshTransactionBase.ts:698](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/base/PolymeshTransactionBase.ts#L698)
 
 ## Methods
 
 ### getProtocolFees
 
-▸ `Abstract` **getProtocolFees**(): `Promise`<`BigNumber`\>
+▸ `Abstract` **getProtocolFees**(): `Promise`\<`BigNumber`\>
 
 Return this transaction's protocol fees. These are extra fees charged for
   specific operations on the chain. Not to be confused with network fees (which
@@ -152,24 +160,32 @@ Return this transaction's protocol fees. These are extra fees charged for
 
 #### Returns
 
-`Promise`<`BigNumber`\>
+`Promise`\<`BigNumber`\>
+
+#### Defined in
+
+[base/PolymeshTransactionBase.ts:597](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/base/PolymeshTransactionBase.ts#L597)
 
 ___
 
 ### getTotalFees
 
-▸ **getTotalFees**(): `Promise`<[`PayingAccountFees`](../../../interfaces/Types/PayingAccountFees/PayingAccountFees.md)\>
+▸ **getTotalFees**(): `Promise`\<[`PayingAccountFees`](../../../interfaces/Types/PayingAccountFees/PayingAccountFees.md)\>
 
 Retrieve a breakdown of the fees required to run this transaction, as well as the Account responsible for paying them
 
-**`Note`**
-
- these values might be inaccurate if the transaction is run at a later time. This can be due to a governance vote or other
-  chain related factors (like modifications to a specific subsidizer relationship or a chain upgrade)
-
 #### Returns
 
-`Promise`<[`PayingAccountFees`](../../../interfaces/Types/PayingAccountFees/PayingAccountFees.md)\>
+`Promise`\<[`PayingAccountFees`](../../../interfaces/Types/PayingAccountFees/PayingAccountFees.md)\>
+
+**`Note`**
+
+these values might be inaccurate if the transaction is run at a later time. This can be due to a governance vote or other
+  chain related factors (like modifications to a specific subsidizer relationship or a chain upgrade)
+
+#### Defined in
+
+[base/PolymeshTransactionBase.ts:397](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/base/PolymeshTransactionBase.ts#L397)
 
 ___
 
@@ -179,25 +195,29 @@ ___
 
 Subscribe to the results of this transaction being processed by the indexing service (and as such, available to the middleware)
 
-**`Note`**
-
- this event will be fired even if the queue fails
-
-**`Throws`**
-
- if the middleware wasn't enabled when instantiating the SDK client
-
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `listener` | (`err?`: [`PolymeshError`](../PolymeshError/PolymeshError.md)) => `void` | callback function that will be called whenever the middleware is updated with the latest data.   If there is an error (timeout or middleware offline) it will be passed to this callback |
+| `listener` | (`err?`: [`PolymeshError`](../PolymeshError/PolymeshError.md)) => `void` | callback function that will be called whenever the middleware is updated with the latest data. If there is an error (timeout or middleware offline) it will be passed to this callback |
 
 #### Returns
 
 [`UnsubCallback`](../../../modules/Types/Types.md#unsubcallback)
 
 unsubscribe function
+
+**`Note`**
+
+this event will be fired even if the queue fails
+
+**`Throws`**
+
+if the middleware wasn't enabled when instantiating the SDK client
+
+#### Defined in
+
+[base/PolymeshTransactionBase.ts:437](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/base/PolymeshTransactionBase.ts#L437)
 
 ___
 
@@ -211,7 +231,7 @@ Subscribe to status changes
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `listener` | (`transaction`: [`GenericPolymeshTransaction`](../../../modules/Types/Types.md#genericpolymeshtransaction)<`ReturnValue`, `TransformedReturnValue`\>) => `void` | callback function that will be called whenever the status changes |
+| `listener` | (`transaction`: [`GenericPolymeshTransaction`](../../../modules/Types/Types.md#genericpolymeshtransaction)\<`ReturnValue`, `TransformedReturnValue`\>) => `void` | callback function that will be called whenever the status changes |
 
 #### Returns
 
@@ -219,11 +239,15 @@ Subscribe to status changes
 
 unsubscribe function
 
+#### Defined in
+
+[base/PolymeshTransactionBase.ts:379](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/base/PolymeshTransactionBase.ts#L379)
+
 ___
 
 ### run
 
-▸ **run**(): `Promise`<`TransformedReturnValue`\>
+▸ **run**(): `Promise`\<`TransformedReturnValue`\>
 
 Run the transaction, update its status and return a result if applicable.
   Certain transactions create Entities on the blockchain, and those Entities are returned
@@ -232,7 +256,11 @@ Run the transaction, update its status and return a result if applicable.
 
 #### Returns
 
-`Promise`<`TransformedReturnValue`\>
+`Promise`\<`TransformedReturnValue`\>
+
+#### Defined in
+
+[base/PolymeshTransactionBase.ts:189](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/base/PolymeshTransactionBase.ts#L189)
 
 ___
 
@@ -244,10 +272,14 @@ Return whether the transaction can be subsidized. If the result is false
   AND the caller is being subsidized by a third party, the transaction can't be executed and trying
   to do so will result in an error
 
-**`Note`**
-
- this depends on the type of transaction itself (e.g. `staking.bond` can't be subsidized, but `asset.createAsset` can)
-
 #### Returns
 
 `boolean`
+
+**`Note`**
+
+this depends on the type of transaction itself (e.g. `staking.bond` can't be subsidized, but `asset.createAsset` can)
+
+#### Defined in
+
+[base/PolymeshTransactionBase.ts:567](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/base/PolymeshTransactionBase.ts#L567)

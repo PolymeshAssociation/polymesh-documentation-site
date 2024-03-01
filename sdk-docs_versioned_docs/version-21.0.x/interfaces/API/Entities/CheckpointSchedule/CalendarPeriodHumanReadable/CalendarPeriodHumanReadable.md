@@ -14,7 +14,7 @@ sidebar_label: "CalendarPeriodHumanReadable"
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CheckpointSchedule/index.ts#L22)
+[api/entities/CheckpointSchedule/index.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/CheckpointSchedule/index.ts#L22)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/CheckpointSchedule/index.ts#L21)
+[api/entities/CheckpointSchedule/index.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/CheckpointSchedule/index.ts#L21)

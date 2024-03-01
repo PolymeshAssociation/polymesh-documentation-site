@@ -12,7 +12,7 @@ Signer/agent permissions for a specific type
 
 | Name | Description |
 | :------ | :------ |
-| `T` |  |
+| `T` | type of Permissions (Asset, Transaction, Portfolio, etc) |
 
 ## Hierarchy
 
@@ -30,7 +30,7 @@ Whether the permissions are inclusive or exclusive
 
 #### Defined in
 
-[types/index.ts:956](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L956)
+[types/index.ts:956](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L956)
 
 ___
 
@@ -42,4 +42,4 @@ Values to be included/excluded
 
 #### Defined in
 
-[types/index.ts:952](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L952)
+[types/index.ts:952](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L952)

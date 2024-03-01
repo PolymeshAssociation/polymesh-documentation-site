@@ -14,4 +14,4 @@ sidebar_label: "ImOnlineTx"
 
 #### Defined in
 
-[generated/types.ts:492](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/generated/types.ts#L492)
+[generated/types.ts:492](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/generated/types.ts#L492)

@@ -17,8 +17,8 @@ sidebar_label: "Types"
 
 ### MultiSigProposalVote
 
-Ƭ **MultiSigProposalVote**: [`EventIdentifier`](../../../../../interfaces/Types/EventIdentifier/EventIdentifier.md) & { `action`: [`MultiSigProposalVoteActionEnum`](../../../../../enums/Types/MultiSigProposalVoteActionEnum/MultiSigProposalVoteActionEnum.md) ; `signer`: [`Signer`](../../../../Types/Types.md#signer)  }
+Ƭ **MultiSigProposalVote**: [`EventIdentifier`](../../../../../interfaces/Types/EventIdentifier/EventIdentifier.md) & \{ `action`: [`MultiSigProposalVoteActionEnum`](../../../../../enums/Types/MultiSigProposalVoteActionEnum/MultiSigProposalVoteActionEnum.md) ; `signer`: [`Signer`](../../../../Types/Types.md#signer)  }
 
 #### Defined in
 
-[api/entities/MultiSigProposal/types.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MultiSigProposal/types.ts#L55)
+[api/entities/MultiSigProposal/types.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MultiSigProposal/types.ts#L55)

@@ -18,4 +18,4 @@ ticker of the Asset
 
 #### Defined in
 
-[api/entities/Asset/index.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Asset/index.ts#L84)
+[api/entities/Asset/index.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Asset/index.ts#L84)

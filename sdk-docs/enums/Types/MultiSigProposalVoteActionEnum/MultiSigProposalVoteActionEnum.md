@@ -16,7 +16,7 @@ Represents action performed on MultiSig proposal
 
 #### Defined in
 
-[middleware/types.ts:71455](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/middleware/types.ts#L71455)
+[middleware/types.ts:72454](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/middleware/types.ts#L72454)
 
 ___
 
@@ -26,4 +26,4 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:71456](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/middleware/types.ts#L71456)
+[middleware/types.ts:72455](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/middleware/types.ts#L72455)

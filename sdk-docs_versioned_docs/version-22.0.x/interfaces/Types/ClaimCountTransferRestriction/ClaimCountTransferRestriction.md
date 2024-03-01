@@ -22,7 +22,7 @@ The type of investors this restriction applies to. e.g. non-accredited
 
 #### Defined in
 
-[types/index.ts:1322](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L1322)
+[types/index.ts:1322](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L1322)
 
 ___
 
@@ -34,7 +34,7 @@ array of Scope/Identity IDs that are exempted from the Restriction
 
 **`Note`**
 
- if the Asset requires investor uniqueness, Scope IDs are used. Otherwise, we use Identity IDs. More on Scope IDs and investor uniqueness
+if the Asset requires investor uniqueness, Scope IDs are used. Otherwise, we use Identity IDs. More on Scope IDs and investor uniqueness
   [here](https://developers.polymesh.network/introduction/identity#polymesh-unique-identity-system-puis) and
   [here](https://developers.polymesh.network/polymesh-docs/primitives/confidential-identity)
 
@@ -44,7 +44,7 @@ TransferRestrictionBase.exemptedIds
 
 #### Defined in
 
-[types/index.ts:1305](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L1305)
+[types/index.ts:1305](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L1305)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:1332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L1332)
+[types/index.ts:1332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L1332)
 
 ___
 
@@ -66,7 +66,7 @@ The maximum amount of investors that must meet the Claim criteria
 
 #### Defined in
 
-[types/index.ts:1330](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L1330)
+[types/index.ts:1330](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L1330)
 
 ___
 
@@ -78,4 +78,4 @@ The minimum amount of investors the must meet the Claim criteria
 
 #### Defined in
 
-[types/index.ts:1326](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L1326)
+[types/index.ts:1326](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L1326)

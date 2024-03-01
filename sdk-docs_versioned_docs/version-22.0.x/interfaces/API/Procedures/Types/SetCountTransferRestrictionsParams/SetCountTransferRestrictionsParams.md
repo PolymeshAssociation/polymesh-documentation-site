@@ -16,7 +16,7 @@ array of Count Transfer Restrictions with their corresponding exemptions (if app
 
 #### Defined in
 
-[api/procedures/types.ts:213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/procedures/types.ts#L213)
+[api/procedures/types.ts:213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/procedures/types.ts#L213)
 
 ___
 
@@ -26,4 +26,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:214](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/procedures/types.ts#L214)
+[api/procedures/types.ts:214](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/procedures/types.ts#L214)

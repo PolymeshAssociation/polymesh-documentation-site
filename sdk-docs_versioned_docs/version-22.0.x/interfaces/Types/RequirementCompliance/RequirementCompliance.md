@@ -14,7 +14,7 @@ sidebar_label: "RequirementCompliance"
 
 #### Defined in
 
-[types/index.ts:484](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L484)
+[types/index.ts:484](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L484)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:483](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L483)
+[types/index.ts:483](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L483)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:482](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L482)
+[types/index.ts:482](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L482)

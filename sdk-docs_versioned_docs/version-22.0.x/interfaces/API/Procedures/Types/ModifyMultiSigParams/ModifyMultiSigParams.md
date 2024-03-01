@@ -16,7 +16,7 @@ The MultiSig to be modified
 
 #### Defined in
 
-[api/procedures/types.ts:1022](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/procedures/types.ts#L1022)
+[api/procedures/types.ts:1022](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/procedures/types.ts#L1022)
 
 ___
 
@@ -28,4 +28,4 @@ The signers to set for the MultiSig
 
 #### Defined in
 
-[api/procedures/types.ts:1026](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/procedures/types.ts#L1026)
+[api/procedures/types.ts:1026](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/procedures/types.ts#L1026)

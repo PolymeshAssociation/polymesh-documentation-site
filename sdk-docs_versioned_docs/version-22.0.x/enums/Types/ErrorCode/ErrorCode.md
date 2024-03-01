@@ -19,7 +19,7 @@ the data that is being fetched does not exist on-chain, or relies on non-existen
 
 #### Defined in
 
-[types/index.ts:531](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L531)
+[types/index.ts:531](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L531)
 
 ___
 
@@ -32,7 +32,7 @@ this type of error is thrown when attempting to delete/modify an entity which ha
 
 #### Defined in
 
-[types/index.ts:553](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L553)
+[types/index.ts:553](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L553)
 
 ___
 
@@ -44,7 +44,7 @@ error that should cause termination of the calling application
 
 #### Defined in
 
-[types/index.ts:513](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L513)
+[types/index.ts:513](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L513)
 
 ___
 
@@ -56,7 +56,7 @@ general purpose errors that don't fit well into the other categories
 
 #### Defined in
 
-[types/index.ts:566](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L566)
+[types/index.ts:566](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L566)
 
 ___
 
@@ -68,7 +68,7 @@ one or more parties involved in the transaction do not have enough balance to pe
 
 #### Defined in
 
-[types/index.ts:557](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L557)
+[types/index.ts:557](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L557)
 
 ___
 
@@ -81,7 +81,7 @@ the data that is being written to the chain would result in some limit being exc
 
 #### Defined in
 
-[types/index.ts:541](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L541)
+[types/index.ts:541](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L541)
 
 ___
 
@@ -93,7 +93,7 @@ errors encountered when interacting with the historic data middleware (GQL serve
 
 #### Defined in
 
-[types/index.ts:526](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L526)
+[types/index.ts:526](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L526)
 
 ___
 
@@ -106,7 +106,7 @@ the data that is being written to the chain is the same data that is already in 
 
 #### Defined in
 
-[types/index.ts:536](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L536)
+[types/index.ts:536](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L536)
 
 ___
 
@@ -118,7 +118,7 @@ user does not have the required roles/permissions to perform an operation
 
 #### Defined in
 
-[types/index.ts:522](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L522)
+[types/index.ts:522](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L522)
 
 ___
 
@@ -130,7 +130,7 @@ transaction removed from the tx pool
 
 #### Defined in
 
-[types/index.ts:499](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L499)
+[types/index.ts:499](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L499)
 
 ___
 
@@ -142,7 +142,7 @@ user rejected the transaction in their wallet
 
 #### Defined in
 
-[types/index.ts:503](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L503)
+[types/index.ts:503](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L503)
 
 ___
 
@@ -156,7 +156,7 @@ transaction failed due to an on-chain error. This is a business logic error,
 
 #### Defined in
 
-[types/index.ts:509](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L509)
+[types/index.ts:509](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L509)
 
 ___
 
@@ -169,7 +169,7 @@ errors that are the result of something unforeseen.
 
 #### Defined in
 
-[types/index.ts:562](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L562)
+[types/index.ts:562](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L562)
 
 ___
 
@@ -184,7 +184,7 @@ one or more base prerequisites for a transaction to be successful haven't been m
 
 #### Defined in
 
-[types/index.ts:548](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L548)
+[types/index.ts:548](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L548)
 
 ___
 
@@ -197,4 +197,4 @@ user input error. This means that one or more inputs passed by the user
 
 #### Defined in
 
-[types/index.ts:518](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L518)
+[types/index.ts:518](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L518)

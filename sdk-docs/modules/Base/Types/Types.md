@@ -4,6 +4,10 @@ title: "Module: Base Types"
 sidebar_label: "Types"
 ---
 
+## Interfaces
+
+- [TransactionPayload](../../../interfaces/Base/Types/TransactionPayload/TransactionPayload.md)
+
 ## Type Aliases
 
 ### PolymeshError
@@ -12,13 +16,13 @@ sidebar_label: "Types"
 
 #### Defined in
 
-[base/types.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/base/types.ts#L17)
+[base/types.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/base/types.ts#L48)
 
 ___
 
 ### PolymeshTransaction
 
-Ƭ **PolymeshTransaction**<`ReturnValue`, `TransformedReturnValue`, `Args`\>: [`PolymeshTransaction`](../../../classes/Base/PolymeshTransaction/PolymeshTransaction.md)<`ReturnValue`, `TransformedReturnValue`, `Args`\>
+Ƭ **PolymeshTransaction**\<`ReturnValue`, `TransformedReturnValue`, `Args`\>: [`PolymeshTransaction`](../../../classes/Base/PolymeshTransaction/PolymeshTransaction.md)\<`ReturnValue`, `TransformedReturnValue`, `Args`\>
 
 #### Type parameters
 
@@ -30,13 +34,13 @@ ___
 
 #### Defined in
 
-[base/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/base/types.ts#L7)
+[base/types.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/base/types.ts#L38)
 
 ___
 
 ### PolymeshTransactionBatch
 
-Ƭ **PolymeshTransactionBatch**<`ReturnValue`, `TransformedReturnValue`, `Args`\>: [`PolymeshTransactionBatch`](../../../classes/Base/PolymeshTransactionBatch/PolymeshTransactionBatch.md)<`ReturnValue`, `TransformedReturnValue`, `Args`\>
+Ƭ **PolymeshTransactionBatch**\<`ReturnValue`, `TransformedReturnValue`, `Args`\>: [`PolymeshTransactionBatch`](../../../classes/Base/PolymeshTransactionBatch/PolymeshTransactionBatch.md)\<`ReturnValue`, `TransformedReturnValue`, `Args`\>
 
 #### Type parameters
 
@@ -48,4 +52,4 @@ ___
 
 #### Defined in
 
-[base/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/base/types.ts#L12)
+[base/types.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/base/types.ts#L43)

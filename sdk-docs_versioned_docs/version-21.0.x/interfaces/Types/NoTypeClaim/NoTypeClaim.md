@@ -14,4 +14,4 @@ sidebar_label: "NoTypeClaim"
 
 #### Defined in
 
-[types/index.ts:289](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/types/index.ts#L289)
+[types/index.ts:289](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/types/index.ts#L289)

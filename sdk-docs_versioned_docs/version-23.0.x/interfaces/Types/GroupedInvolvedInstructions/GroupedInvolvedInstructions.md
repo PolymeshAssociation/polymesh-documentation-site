@@ -16,16 +16,16 @@ Instructions where the Identity is the custodian of the leg portfolios
 
 #### Defined in
 
-[types/index.ts:1615](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L1615)
+[types/index.ts:1615](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/types/index.ts#L1615)
 
 ___
 
 ### owned
 
-• **owned**: `Omit`<[`GroupedInstructions`](../GroupedInstructions/GroupedInstructions.md), ``"affirmed"``\>
+• **owned**: `Omit`\<[`GroupedInstructions`](../GroupedInstructions/GroupedInstructions.md), ``"affirmed"``\>
 
 Instructions where the Identity is the owner of the leg portfolios
 
 #### Defined in
 
-[types/index.ts:1619](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L1619)
+[types/index.ts:1619](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/types/index.ts#L1619)

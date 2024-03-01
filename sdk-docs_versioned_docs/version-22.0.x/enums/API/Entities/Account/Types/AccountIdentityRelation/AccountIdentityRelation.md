@@ -18,7 +18,7 @@ The Account is one of many signers for a MultiSig
 
 #### Defined in
 
-[api/entities/Account/types.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Account/types.ts#L48)
+[api/entities/Account/types.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Account/types.ts#L48)
 
 ___
 
@@ -30,7 +30,7 @@ The Account is the Identity's primary key (i.e. it has full permission)
 
 #### Defined in
 
-[api/entities/Account/types.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Account/types.ts#L40)
+[api/entities/Account/types.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Account/types.ts#L40)
 
 ___
 
@@ -42,7 +42,7 @@ The Account is a Secondary account. There are associated permissions that may li
 
 #### Defined in
 
-[api/entities/Account/types.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Account/types.ts#L44)
+[api/entities/Account/types.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Account/types.ts#L44)
 
 ___
 
@@ -54,4 +54,4 @@ The Account is not associated to any Identity
 
 #### Defined in
 
-[api/entities/Account/types.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Account/types.ts#L36)
+[api/entities/Account/types.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Account/types.ts#L36)

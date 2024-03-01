@@ -14,4 +14,4 @@ sidebar_label: "CddProviderRole"
 
 #### Defined in
 
-[types/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L114)
+[types/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/types/index.ts#L114)

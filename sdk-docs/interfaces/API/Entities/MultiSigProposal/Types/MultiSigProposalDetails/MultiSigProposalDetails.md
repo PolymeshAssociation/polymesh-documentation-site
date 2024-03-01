@@ -16,7 +16,7 @@ The number of approvals this proposal has received
 
 #### Defined in
 
-[api/entities/MultiSigProposal/types.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MultiSigProposal/types.ts#L19)
+[api/entities/MultiSigProposal/types.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MultiSigProposal/types.ts#L19)
 
 ___
 
@@ -28,7 +28,7 @@ The arguments to be passed to the transaction for this proposal
 
 #### Defined in
 
-[api/entities/MultiSigProposal/types.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MultiSigProposal/types.ts#L43)
+[api/entities/MultiSigProposal/types.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MultiSigProposal/types.ts#L43)
 
 ___
 
@@ -40,7 +40,7 @@ Determines if the proposal will automatically be closed once a threshold of reje
 
 #### Defined in
 
-[api/entities/MultiSigProposal/types.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MultiSigProposal/types.ts#L35)
+[api/entities/MultiSigProposal/types.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MultiSigProposal/types.ts#L35)
 
 ___
 
@@ -52,7 +52,7 @@ An optional time in which this proposal will expire if a decision isn't reached 
 
 #### Defined in
 
-[api/entities/MultiSigProposal/types.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MultiSigProposal/types.ts#L31)
+[api/entities/MultiSigProposal/types.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MultiSigProposal/types.ts#L31)
 
 ___
 
@@ -64,7 +64,7 @@ The number of rejections this proposal has received
 
 #### Defined in
 
-[api/entities/MultiSigProposal/types.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MultiSigProposal/types.ts#L23)
+[api/entities/MultiSigProposal/types.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MultiSigProposal/types.ts#L23)
 
 ___
 
@@ -76,7 +76,7 @@ The current status of the proposal
 
 #### Defined in
 
-[api/entities/MultiSigProposal/types.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MultiSigProposal/types.ts#L27)
+[api/entities/MultiSigProposal/types.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MultiSigProposal/types.ts#L27)
 
 ___
 
@@ -88,7 +88,7 @@ The tag for the transaction being proposed for the MultiSig to execute
 
 #### Defined in
 
-[api/entities/MultiSigProposal/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MultiSigProposal/types.ts#L39)
+[api/entities/MultiSigProposal/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MultiSigProposal/types.ts#L39)
 
 ___
 
@@ -100,4 +100,4 @@ Accounts of signing keys that have already voted on this proposal
 
 #### Defined in
 
-[api/entities/MultiSigProposal/types.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/MultiSigProposal/types.ts#L47)
+[api/entities/MultiSigProposal/types.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/api/entities/MultiSigProposal/types.ts#L47)

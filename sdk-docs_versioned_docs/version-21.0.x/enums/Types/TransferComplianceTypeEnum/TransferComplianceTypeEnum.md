@@ -8,7 +8,7 @@ sidebar_label: "TransferComplianceTypeEnum"
 
 **`Enum Name`**
 
- TransferComplianceTypeEnum
+TransferComplianceTypeEnum
  Represents all possible transfer restriction rules that can be enabled
 
 ## Enumeration Members
@@ -19,7 +19,7 @@ sidebar_label: "TransferComplianceTypeEnum"
 
 #### Defined in
 
-[middleware/typesV2.ts:29097](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29097)
+[middleware/typesV2.ts:29097](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L29097)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29098](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29098)
+[middleware/typesV2.ts:29098](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L29098)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29099](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29099)
+[middleware/typesV2.ts:29099](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L29099)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29100)
+[middleware/typesV2.ts:29100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L29100)

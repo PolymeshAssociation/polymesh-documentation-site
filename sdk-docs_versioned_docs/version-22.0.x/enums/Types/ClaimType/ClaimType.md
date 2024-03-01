@@ -14,7 +14,7 @@ sidebar_label: "ClaimType"
 
 #### Defined in
 
-[types/index.ts:209](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L209)
+[types/index.ts:209](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L209)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:210](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L210)
+[types/index.ts:210](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L210)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:217](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L217)
+[types/index.ts:217](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L217)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:211](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L211)
+[types/index.ts:211](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L211)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L213)
+[types/index.ts:213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L213)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:216](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L216)
+[types/index.ts:216](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L216)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:215](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L215)
+[types/index.ts:215](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L215)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:214](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L214)
+[types/index.ts:214](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L214)
 
 ___
 
@@ -94,4 +94,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/types/index.ts#L212)
+[types/index.ts:212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/types/index.ts#L212)

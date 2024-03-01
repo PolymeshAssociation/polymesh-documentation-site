@@ -1,7 +1,7 @@
 ---
-id: "CheckpointSchedule"
-title: "Class: CheckpointSchedule"
-sidebar_label: "CheckpointSchedule"
+id: 'CheckpointSchedule'
+title: 'Class: CheckpointSchedule'
+sidebar_label: 'CheckpointSchedule'
 ---
 
 [api/entities/CheckpointSchedule](../../../../modules/API/Entities/CheckpointSchedule/CheckpointSchedule.md).CheckpointSchedule
@@ -10,7 +10,7 @@ Represents a Checkpoint Schedule for an Asset. Schedules can be set up to create
 
 ## Hierarchy
 
-- [`Entity`](../Entity/Entity.md)<[`UniqueIdentifiers`](../../../../interfaces/API/Entities/CheckpointSchedule/UniqueIdentifiers/UniqueIdentifiers.md), [`HumanReadable`](../../../../interfaces/API/Entities/CheckpointSchedule/HumanReadable/HumanReadable.md)\>
+- [`Entity`](../Entity/Entity.md) \<[`UniqueIdentifiers`](../../../../interfaces/API/Entities/CheckpointSchedule/UniqueIdentifiers/UniqueIdentifiers.md), [`HumanReadable`](../../../../interfaces/API/Entities/CheckpointSchedule/HumanReadable/HumanReadable.md)\>
 
   ↳ **`CheckpointSchedule`**
 
@@ -24,9 +24,9 @@ Asset for which Checkpoints are scheduled
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/CheckpointSchedule/index.ts#L48)
+[api/entities/CheckpointSchedule/index.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/CheckpointSchedule/index.ts#L48)
 
-___
+---
 
 ### expiryDate
 
@@ -36,9 +36,9 @@ date at which the last Checkpoint will be created with this Schedule.
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/CheckpointSchedule/index.ts#L58)
+[api/entities/CheckpointSchedule/index.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/CheckpointSchedule/index.ts#L58)
 
-___
+---
 
 ### id
 
@@ -48,9 +48,9 @@ schedule identifier number
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/CheckpointSchedule/index.ts#L43)
+[api/entities/CheckpointSchedule/index.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/CheckpointSchedule/index.ts#L43)
 
-___
+---
 
 ### pendingPoints
 
@@ -60,9 +60,9 @@ dates in the future where checkpoints are schedule to be created
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/CheckpointSchedule/index.ts#L53)
+[api/entities/CheckpointSchedule/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/CheckpointSchedule/index.ts#L53)
 
-___
+---
 
 ### uuid
 
@@ -74,49 +74,61 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
 ### details
 
-▸ **details**(): `Promise`<[`ScheduleDetails`](../../../../interfaces/API/Entities/CheckpointSchedule/Types/ScheduleDetails/ScheduleDetails.md)\>
+▸ **details**(): `Promise`\<[`ScheduleDetails`](../../../../interfaces/API/Entities/CheckpointSchedule/Types/ScheduleDetails/ScheduleDetails.md)\>
 
 Retrieve information specific to this Schedule
 
 #### Returns
 
-`Promise`<[`ScheduleDetails`](../../../../interfaces/API/Entities/CheckpointSchedule/Types/ScheduleDetails/ScheduleDetails.md)\>
+`Promise`\<[`ScheduleDetails`](../../../../interfaces/API/Entities/CheckpointSchedule/Types/ScheduleDetails/ScheduleDetails.md)\>
 
-___
+#### Defined in
+
+[api/entities/CheckpointSchedule/index.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/CheckpointSchedule/index.ts#L80)
+
+---
 
 ### exists
 
-▸ **exists**(): `Promise`<`boolean`\>
+▸ **exists**(): `Promise`\<`boolean`\>
 
 Determine whether this Checkpoint Schedule exists on chain
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Overrides
 
 [Entity](../Entity/Entity.md).[exists](../Entity/Entity.md#exists)
 
-___
+#### Defined in
+
+[api/entities/CheckpointSchedule/index.ts:150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/CheckpointSchedule/index.ts#L150)
+
+---
 
 ### getCheckpoints
 
-▸ **getCheckpoints**(): `Promise`<[`Checkpoint`](../Checkpoint/Checkpoint.md)[]\>
+▸ **getCheckpoints**(): `Promise`\<[`Checkpoint`](../Checkpoint/Checkpoint.md)[]\>
 
 Retrieve all Checkpoints created by this Schedule
 
 #### Returns
 
-`Promise`<[`Checkpoint`](../Checkpoint/Checkpoint.md)[]\>
+`Promise`\<[`Checkpoint`](../Checkpoint/Checkpoint.md)[]\>
 
-___
+#### Defined in
+
+[api/entities/CheckpointSchedule/index.ts:118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/CheckpointSchedule/index.ts#L118)
+
+---
 
 ### isEqual
 
@@ -126,9 +138,9 @@ Determine whether this Entity is the same as another one
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `entity` | [`Entity`](../Entity/Entity.md)<`unknown`, `unknown`\> |
+| Name     | Type                                                    |
+| :------- | :------------------------------------------------------ |
+| `entity` | [`Entity`](../Entity/Entity.md)\<`unknown`, `unknown`\> |
 
 #### Returns
 
@@ -138,7 +150,11 @@ Determine whether this Entity is the same as another one
 
 [Entity](../Entity/Entity.md).[isEqual](../Entity/Entity.md#isequal)
 
-___
+#### Defined in
+
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Entity.ts#L61)
+
+---
 
 ### toHuman
 
@@ -154,24 +170,28 @@ Return the Schedule's static data
 
 [Entity](../Entity/Entity.md).[toHuman](../Entity/Entity.md#tohuman)
 
-___
+#### Defined in
+
+[api/entities/CheckpointSchedule/index.ts:175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/CheckpointSchedule/index.ts#L175)
+
+---
 
 ### generateUuid
 
-▸ `Static` **generateUuid**<`Identifiers`\>(`identifiers`): `string`
+▸ `Static` **generateUuid**\<`Identifiers`\>(`identifiers`): `string`
 
 Generate the Entity's UUID from its identifying properties
 
 #### Type parameters
 
-| Name |
-| :------ |
+| Name          |
+| :------------ |
 | `Identifiers` |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name          | Type          |
+| :------------ | :------------ |
 | `identifiers` | `Identifiers` |
 
 #### Returns
@@ -182,24 +202,28 @@ Generate the Entity's UUID from its identifying properties
 
 [Entity](../Entity/Entity.md).[generateUuid](../Entity/Entity.md#generateuuid)
 
-___
+#### Defined in
+
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Entity.ts#L14)
+
+---
 
 ### unserialize
 
-▸ `Static` **unserialize**<`Identifiers`\>(`serialized`): `Identifiers`
+▸ `Static` **unserialize**\<`Identifiers`\>(`serialized`): `Identifiers`
 
 Unserialize a UUID into its Unique Identifiers
 
 #### Type parameters
 
-| Name |
-| :------ |
+| Name          |
+| :------------ |
 | `Identifiers` |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name         | Type     | Description         |
+| :----------- | :------- | :------------------ |
 | `serialized` | `string` | UUID to unserialize |
 
 #### Returns
@@ -209,3 +233,7 @@ Unserialize a UUID into its Unique Identifiers
 #### Inherited from
 
 [Entity](../Entity/Entity.md).[unserialize](../Entity/Entity.md#unserialize)
+
+#### Defined in
+
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Entity.ts#L23)

@@ -8,7 +8,7 @@ sidebar_label: "InstructionStatusEnum"
 
 **`Enum Name`**
 
- InstructionStatusEnum
+InstructionStatusEnum
  Represents all possible states of an Instruction
 
 ## Enumeration Members
@@ -19,7 +19,7 @@ sidebar_label: "InstructionStatusEnum"
 
 #### Defined in
 
-[middleware/typesV2.ts:29203](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29203)
+[middleware/typesV2.ts:29203](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L29203)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29204](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29204)
+[middleware/typesV2.ts:29204](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L29204)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29205](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29205)
+[middleware/typesV2.ts:29205](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L29205)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[middleware/typesV2.ts:29206](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/middleware/typesV2.ts#L29206)
+[middleware/typesV2.ts:29206](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/middleware/typesV2.ts#L29206)

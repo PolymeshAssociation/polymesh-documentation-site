@@ -16,8 +16,8 @@ sidebar_label: "Types"
 
 ### HistoricInstruction
 
-Ƭ **HistoricInstruction**: `Omit`<[`InstructionDetails`](../../Instruction/Types/Types.md#instructiondetails), ``"status"`` \| ``"venue"``\> & { `blockHash`: `string` ; `blockNumber`: `BigNumber` ; `id`: `BigNumber` ; `legs`: [`Leg`](../../../../../interfaces/API/Entities/Instruction/Types/Leg/Leg.md)[] ; `status`: [`InstructionStatusEnum`](../../../../../enums/Types/InstructionStatusEnum/InstructionStatusEnum.md) ; `venueId`: `BigNumber`  }
+Ƭ **HistoricInstruction**: `Omit`\<[`InstructionDetails`](../../Instruction/Types/Types.md#instructiondetails), ``"status"`` \| ``"venue"``\> & \{ `blockHash`: `string` ; `blockNumber`: `BigNumber` ; `id`: `BigNumber` ; `legs`: [`Leg`](../../../../../interfaces/API/Entities/Instruction/Types/Leg/Leg.md)[] ; `status`: [`InstructionStatusEnum`](../../../../../enums/Types/InstructionStatusEnum/InstructionStatusEnum.md) ; `venueId`: `BigNumber`  }
 
 #### Defined in
 
-[api/entities/Venue/types.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Venue/types.ts#L29)
+[api/entities/Venue/types.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Venue/types.ts#L29)

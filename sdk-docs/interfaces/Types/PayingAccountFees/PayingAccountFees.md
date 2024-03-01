@@ -19,16 +19,16 @@ fees that will be paid by the Account
 
 #### Defined in
 
-[types/index.ts:860](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L860)
+[types/index.ts:866](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L866)
 
 ___
 
 ### payingAccountData
 
-• **payingAccountData**: { `account`: [`Account`](../../../classes/API/Entities/Account/Account.md) ; `allowance`: `BigNumber` ; `type`: [`Subsidy`](../../../enums/Types/PayingAccountType/PayingAccountType.md#subsidy)  } & { `balance`: `BigNumber`  } & { `account`: [`Account`](../../../classes/API/Entities/Account/Account.md) ; `type`: [`Other`](../../../enums/Types/PayingAccountType/PayingAccountType.md#other) \| [`Caller`](../../../enums/Types/PayingAccountType/PayingAccountType.md#caller)  } & { `balance`: `BigNumber`  }
+• **payingAccountData**: `Object`
 
 data related to the Account responsible of paying for the transaction
 
 #### Defined in
 
-[types/index.ts:864](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L864)
+[types/index.ts:870](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L870)

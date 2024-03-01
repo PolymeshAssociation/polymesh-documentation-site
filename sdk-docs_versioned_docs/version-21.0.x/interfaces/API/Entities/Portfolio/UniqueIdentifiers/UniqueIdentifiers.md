@@ -14,7 +14,7 @@ sidebar_label: "UniqueIdentifiers"
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Portfolio/index.ts#L54)
+[api/entities/Portfolio/index.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Portfolio/index.ts#L54)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d2/src/api/entities/Portfolio/index.ts#L55)
+[api/entities/Portfolio/index.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95e180d28/src/api/entities/Portfolio/index.ts#L55)

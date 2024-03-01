@@ -10,13 +10,13 @@ sidebar_label: "ComplianceRequirements"
 
 ### defaultTrustedClaimIssuers
 
-• **defaultTrustedClaimIssuers**: [`TrustedClaimIssuer`](../TrustedClaimIssuer/TrustedClaimIssuer.md)<``false``\>[]
+• **defaultTrustedClaimIssuers**: [`TrustedClaimIssuer`](../TrustedClaimIssuer/TrustedClaimIssuer.md)\<``false``\>[]
 
 used for conditions where no trusted claim issuers were specified
 
 #### Defined in
 
-[types/index.ts:502](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L502)
+[types/index.ts:508](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L508)
 
 ___
 
@@ -26,4 +26,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:498](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/types/index.ts#L498)
+[types/index.ts:504](https://github.com/PolymeshAssociation/polymesh-sdk/blob/adcc38781/src/types/index.ts#L504)

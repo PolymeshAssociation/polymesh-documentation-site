@@ -1,7 +1,7 @@
 ---
-id: "RegisterIdentityParams"
-title: "Interface: RegisterIdentityParams"
-sidebar_label: "RegisterIdentityParams"
+id: 'RegisterIdentityParams'
+title: 'Interface: RegisterIdentityParams'
+sidebar_label: 'RegisterIdentityParams'
 ---
 
 [api/procedures/types](../../../../../modules/API/Procedures/Types/Types.md).RegisterIdentityParams
@@ -16,9 +16,9 @@ sidebar_label: "RegisterIdentityParams"
 
 #### Defined in
 
-[api/procedures/types.ts:392](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/procedures/types.ts#L392)
+[api/procedures/types.ts:392](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/procedures/types.ts#L392)
 
-___
+---
 
 ### expiry
 
@@ -28,25 +28,25 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:396](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/procedures/types.ts#L396)
+[api/procedures/types.ts:396](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/procedures/types.ts#L396)
 
-___
+---
 
 ### secondaryAccounts
 
-• `Optional` **secondaryAccounts**: [`Modify`](../../../../../modules/Types/Utils/Utils.md#modify)<[`PermissionedAccount`](../../../../Types/PermissionedAccount/PermissionedAccount.md), { `permissions`: [`PermissionsLike`](../../../../../modules/Types/Types.md#permissionslike)  }\>[]
+• `Optional` **secondaryAccounts**: [`Modify`](../../../../../modules/Types/Utils/Utils.md#modify) \<[`PermissionedAccount`](../../../../Types/PermissionedAccount/PermissionedAccount.md), \{ `permissions`: [`PermissionsLike`](../../../../../modules/Types/Types.md#permissionslike) }\>[]
 
 (optional) secondary accounts for the new Identity with their corresponding permissions.
 
 **`Note`**
 
- Each Account will need to accept the generated authorizations before being linked to the Identity
+Each Account will need to accept the generated authorizations before being linked to the Identity
 
 #### Defined in
 
-[api/procedures/types.ts:388](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/procedures/types.ts#L388)
+[api/procedures/types.ts:388](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/procedures/types.ts#L388)
 
-___
+---
 
 ### targetAccount
 
@@ -56,4 +56,4 @@ The Account that should function as the primary key of the newly created Identit
 
 #### Defined in
 
-[api/procedures/types.ts:383](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/procedures/types.ts#L383)
+[api/procedures/types.ts:383](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/procedures/types.ts#L383)

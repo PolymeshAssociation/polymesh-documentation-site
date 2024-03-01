@@ -14,7 +14,7 @@ sidebar_label: "UniqueIdentifiers"
 
 #### Defined in
 
-[api/entities/Checkpoint.ts:20](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Checkpoint.ts#L20)
+[api/entities/Checkpoint.ts:20](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Checkpoint.ts#L20)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/Checkpoint.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Checkpoint.ts#L21)
+[api/entities/Checkpoint.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Checkpoint.ts#L21)

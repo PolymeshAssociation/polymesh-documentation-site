@@ -14,7 +14,7 @@ sidebar_label: "OfferingStatus"
 
 #### Defined in
 
-[api/entities/Offering/types.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Offering/types.ts#L58)
+[api/entities/Offering/types.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Offering/types.ts#L58)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/Offering/types.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Offering/types.ts#L59)
+[api/entities/Offering/types.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Offering/types.ts#L59)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[api/entities/Offering/types.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/720afb69c/src/api/entities/Offering/types.ts#L57)
+[api/entities/Offering/types.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2c78f6c34/src/api/entities/Offering/types.ts#L57)

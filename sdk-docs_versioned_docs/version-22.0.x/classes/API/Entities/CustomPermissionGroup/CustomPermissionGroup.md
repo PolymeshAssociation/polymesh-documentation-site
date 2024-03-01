@@ -28,7 +28,7 @@ Asset for which this group specifies permissions
 
 #### Defined in
 
-[api/entities/PermissionGroup.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/PermissionGroup.ts#L19)
+[api/entities/PermissionGroup.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/PermissionGroup.ts#L19)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[api/entities/CustomPermissionGroup.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/CustomPermissionGroup.ts#L39)
+[api/entities/CustomPermissionGroup.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CustomPermissionGroup.ts#L39)
 
 ___
 
@@ -52,39 +52,47 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/95f248df/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
 ### exists
 
-▸ **exists**(): `Promise`<`boolean`\>
+▸ **exists**(): `Promise`\<`boolean`\>
 
 Determine whether this Custom Permission Group exists on chain
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`\<`boolean`\>
 
 #### Overrides
 
 [PermissionGroup](../PermissionGroup/PermissionGroup.md).[exists](../PermissionGroup/PermissionGroup.md#exists)
 
+#### Defined in
+
+[api/entities/CustomPermissionGroup.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CustomPermissionGroup.ts#L100)
+
 ___
 
 ### getPermissions
 
-▸ **getPermissions**(): `Promise`<[`GroupPermissions`](../../../../modules/Types/Types.md#grouppermissions)\>
+▸ **getPermissions**(): `Promise`\<[`GroupPermissions`](../../../../modules/Types/Types.md#grouppermissions)\>
 
 Retrieve the list of permissions and transaction groups associated with this Permission Group
 
 #### Returns
 
-`Promise`<[`GroupPermissions`](../../../../modules/Types/Types.md#grouppermissions)\>
+`Promise`\<[`GroupPermissions`](../../../../modules/Types/Types.md#grouppermissions)\>
 
 #### Overrides
 
 [PermissionGroup](../PermissionGroup/PermissionGroup.md).[getPermissions](../PermissionGroup/PermissionGroup.md#getpermissions)
+
+#### Defined in
+
+[api/entities/CustomPermissionGroup.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CustomPermissionGroup.ts#L70)
 
 ___
 
@@ -98,7 +106,7 @@ Determine whether this Entity is the same as another one
 
 | Name | Type |
 | :------ | :------ |
-| `entity` | [`Entity`](../Entity/Entity.md)<`unknown`, `unknown`\> |
+| `entity` | [`Entity`](../Entity/Entity.md)\<`unknown`, `unknown`\> |
 
 #### Returns
 
@@ -108,18 +116,17 @@ Determine whether this Entity is the same as another one
 
 [PermissionGroup](../PermissionGroup/PermissionGroup.md).[isEqual](../PermissionGroup/PermissionGroup.md#isequal)
 
+#### Defined in
+
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L61)
+
 ___
 
 ### setPermissions
 
-▸ **setPermissions**(`args`, `opts?`): `Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+▸ **setPermissions**(`args`, `opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
 
 Modify the group's permissions
-
-**`Note`**
-
- this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [setPermissions.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
-  on it to see whether the signing Account and Identity have the required roles and permissions to run it
 
 #### Parameters
 
@@ -130,7 +137,16 @@ Modify the group's permissions
 
 #### Returns
 
-`Promise`<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)<`void`, `void`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../../modules/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
+
+**`Note`**
+
+this method is of type [ProcedureMethod](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [setPermissions.checkAuthorization](../../../../interfaces/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
+  on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/CustomPermissionGroup.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CustomPermissionGroup.ts#L63)
 
 ___
 
@@ -148,11 +164,15 @@ Return the Group's static data
 
 [PermissionGroup](../PermissionGroup/PermissionGroup.md).[toHuman](../PermissionGroup/PermissionGroup.md#tohuman)
 
+#### Defined in
+
+[api/entities/CustomPermissionGroup.ts:118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/CustomPermissionGroup.ts#L118)
+
 ___
 
 ### generateUuid
 
-▸ `Static` **generateUuid**<`Identifiers`\>(`identifiers`): `string`
+▸ `Static` **generateUuid**\<`Identifiers`\>(`identifiers`): `string`
 
 Generate the Entity's UUID from its identifying properties
 
@@ -176,11 +196,15 @@ Generate the Entity's UUID from its identifying properties
 
 [PermissionGroup](../PermissionGroup/PermissionGroup.md).[generateUuid](../PermissionGroup/PermissionGroup.md#generateuuid)
 
+#### Defined in
+
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L14)
+
 ___
 
 ### unserialize
 
-▸ `Static` **unserialize**<`Identifiers`\>(`serialized`): `Identifiers`
+▸ `Static` **unserialize**\<`Identifiers`\>(`serialized`): `Identifiers`
 
 Unserialize a UUID into its Unique Identifiers
 
@@ -203,3 +227,7 @@ Unserialize a UUID into its Unique Identifiers
 #### Inherited from
 
 [PermissionGroup](../PermissionGroup/PermissionGroup.md).[unserialize](../PermissionGroup/PermissionGroup.md#unserialize)
+
+#### Defined in
+
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/2d3ac2aea/src/api/entities/Entity.ts#L23)
