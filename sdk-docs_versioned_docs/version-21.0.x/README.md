@@ -1,7 +1,7 @@
 ---
-id: "README"
-title: "Polymesh SDK Readme"
-sidebar_label: "SDK Readme"
+id: 'README'
+title: 'Polymesh SDK Readme'
+sidebar_label: 'SDK Readme'
 sidebar_position: 0
 ---
 
@@ -31,13 +31,9 @@ This release is compatible with Polymesh v5.4.x
 
 The Polymesh SDK's main goal is to provide external developers with a set of tools that will allow them to build powerful applications that interact with the Polymesh protocol. It focuses on abstracting away all the complexities of the Polymesh blockchain and expose a simple but complete interface. The result is a feature-rich, user-friendly node.js library.
 
-### Before moving on
-
-This document assumes you are already familiar with [Security Tokens](https://thesecuritytokenstandard.org/) in general and [Polymath](https://www.polymath.network/) as well as [Polymesh](https://polymath.network/polymesh) in particular.
-
 ### Technical Pre-requisites
 
-In order to use the Polymath SDK, you must install [node](https://nodejs.org/) \(version 14\) and [npm](https://www.npmjs.com/). The library is written in [typescript](https://www.typescriptlang.org/), but can also be used in plain javascript. This document will assume you are using typescript, but the translation to javascript is very simple.
+In order to use the Polymesh SDK, you must install [node](https://nodejs.org/) \(version 14\) and [npm](https://www.npmjs.com/). The library is written in [typescript](https://www.typescriptlang.org/), but can also be used in plain javascript. This document will assume you are using typescript, but the translation to javascript is very simple.
 
 ### Documentation
 
@@ -104,7 +100,9 @@ import { Polymesh } from '@polymeshassociation/polymesh-sdk';
 import { BrowserExtensionSigningManager } from '@polymeshassociation/browser-extension-signing-manager';
 
 async function run() {
-  const signingManager = await BrowserExtensionSigningManager.create('MY_APP_NAME'); // The Polymesh wallet extension will ask the user to authorize MY_APP_NAME for access
+  const signingManager = await BrowserExtensionSigningManager.create(
+    'MY_APP_NAME'
+  ); // The Polymesh wallet extension will ask the user to authorize MY_APP_NAME for access
 
   const polyClient = await Polymesh.connect({
     nodeUrl: 'wss://some-node-url.com',
