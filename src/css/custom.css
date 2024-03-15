@@ -16,6 +16,13 @@
   /* --ifm-hero-background-color: 'linear-gradient(193.19deg, #FF2E72 5.7%, #4A125E 91.16%)'; */
   /* --ifm-hero-text-color: #ffffff; */
 
+  --ifm-h1-font-size: 2.125rem;
+  --ifm-h2-font-size: 1.875rem;
+  --ifm-h3-font-size: 1.5rem;
+  --ifm-h4-font-size: 1.25rem;
+  --ifm-h5-font-size: 1.125rem;
+  --ifm-h5-font-size: 1rem;
+
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
@@ -30,6 +37,36 @@
   --ifm-color-primary-lighter: #ec4673;
   --ifm-color-primary-lightest: #ec4673;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+.markdown,
+.markdown > h1,
+.markdown > h2,
+.markdown > h3,
+.markdown > h4,
+.markdown > h5,
+.markdown > h6 {
+  --ifm-h1-font-size: 2.25rem;
+  --ifm-h2-font-size: 2rem;
+  --ifm-h3-font-size: 1.5rem;
+  --ifm-h4-font-size: 1.25rem;
+  --ifm-h5-font-size: 1.125rem;
+  --ifm-h6-font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+  .markdown h1:first-child,
+  .markdown > h2,
+  .markdown > h3,
+  .markdown > h4,
+  .markdown > h5,
+  .markdown > h6 {
+    --ifm-h1-font-size: 2rem;
+    --ifm-h2-font-size: 1.5rem;
+    --ifm-h3-font-size: 1.25rem;
+    --ifm-h4-font-size: 1rem;
+    --ifm-h5-font-size: 0.875rem;
+    --ifm-h6-font-size: 0.85rem;
+  }
 }
 
 .hero--primary {

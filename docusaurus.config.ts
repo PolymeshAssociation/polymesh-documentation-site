@@ -57,6 +57,8 @@ const config: Config = {
         routeBasePath: '/polymesh-docs',
         // sidebarPath: require.resolve('./sidebars.js'),
         // ... other options
+        editUrl:
+        'https://github.com/PolymeshAssociation/polymesh-documentation-site/edit/develop',
       },
     ],
     [
@@ -240,9 +242,17 @@ const config: Config = {
     prism: {
       theme: prismThemes.vsDark,
       darkTheme: prismThemes.nightOwl,
-      additionalLanguages: ['rust'],
+      additionalLanguages: ['rust', 'json', 'bash'],
+    },
+    mermaid: {
+      theme: { light: 'neutral', dark: 'dark' },
+      options: {
+        sequence: { showSequenceNumbers: true },
+      },
     },
   } satisfies Preset.ThemeConfig,
+  markdown: { mermaid: true },
+  themes: ['@docusaurus/theme-mermaid'],
 };
 
 export default config;
