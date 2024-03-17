@@ -31,7 +31,6 @@ const config: Config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
       {
         docs: {
           path: 'docs',
@@ -44,6 +43,9 @@ const config: Config = {
         blog: false, // disable the blog plugin
         theme: {
           customCss: './src/css/custom.css',
+        },
+        googleTagManager: {
+          containerId: 'GTM-TB6Q6MQ',
         },
       } satisfies Preset.Options,
     ],
@@ -58,7 +60,7 @@ const config: Config = {
         // sidebarPath: require.resolve('./sidebars.js'),
         // ... other options
         editUrl:
-        'https://github.com/PolymeshAssociation/polymesh-documentation-site/edit/develop',
+          'https://github.com/PolymeshAssociation/polymesh-documentation-site/edit/develop',
       },
     ],
     [
