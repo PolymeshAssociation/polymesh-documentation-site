@@ -69,13 +69,13 @@ const config: Config = {
         id: 'sdk-docs',
         path: 'sdk-docs',
         routeBasePath: '/sdk-docs',
-        includeCurrentVersion: true,
-        versions: {
-          current: {
-            label: '24.0.0-beta.1',
-            path: '24.0.0-beta.1',
-          },
-        },
+        includeCurrentVersion: false,
+        // versions: {
+        //   current: {
+        //     label: '24.0.0-beta.1',
+        //     path: '24.0.0-beta.1',
+        //   },
+        // },
       },
     ],
   ],
@@ -149,6 +149,10 @@ const config: Config = {
             {
               label: 'Polymesh Runtime',
               href: 'https://docs.polymesh.live/polymesh',
+            },
+            {
+              label: 'Polymesh Private Runtime',
+              href: 'https://private-docs.polymesh.live/polymesh_private',
             },
             {
               label: 'Polymesh Client API',
