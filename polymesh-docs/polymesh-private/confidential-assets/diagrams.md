@@ -160,7 +160,6 @@ else Venue/Sender does not provide instruction ID
   P -->> R: Pending instruction ID(s) returned
 end
 
-R ->> P: Query previously emitted instruction affirmation<br>events to retrieve sender proof(s).A chain<br>indexer (e.g. Polymesh SubQuery) may be required<br> for efficient queries of historical events
 R ->> R: Verify or decrypt sender proof using their<br> confidential account to view the<br> amount being sent
 ```
 
@@ -185,11 +184,7 @@ else Venue/Sender does not provide instruction ID
   M ->>P: Requests pending instructions
   P -->> M: Pending instruction ID(s) returned
 end
-M ->> P: Query previously emitted instruction<br> affirmation events to retrieve sender<br>proof(s). A chain indexer (e.g. Polymesh<br> SubQuery) may be required for efficient<br> queries of historical events
-P -->> M: Sender proof
-M ->> P: Query instruction leg details to<br>determine the correct index of<br>the mediators confidential account<br>in the array of auditors
-P -->> M: Auditor index
-M ->> M: Verify or decrypt amount from the sender proof using<br>their confidential account, the confidential asset ID<br>and the auditor index for their confidential account.<br>If known, the expected amount can be<br>provider to reduce the time to verify.
+M ->> M: Verify or decrypt amount from the sender proof using<br>their confidential account and the confidential transaction ID.
 ```
 
 ### 7 Auditor Zero Knowledge Proof Review
@@ -201,13 +196,19 @@ For an issuer to be able to be able to verify or decrypt confidential amounts th
 ```mermaid
 sequenceDiagram
 
+participant I as Issuer/Sender
+participant V as Venue Owner
 participant A as Auditor(s)
 participant P as Polymesh
-  A ->> P: Query previously emitted instruction affirmation events to retrieve<br>sender proof(s). A chain indexer (e.g. Polymesh SubQuery)<br> may be required for efficient queries of historical events
-  P -->> A: Sender proof
-  A ->> P: Query instruction leg details to determine the correct index of<br>the auditor confidential account in the array of auditors
-  P -->> A: Auditor index
-  A ->> A: Verify or decrypt amount from the sender proof using<br>their confidential account, the confidential asset ID<br>and the auditor index for their confidential account.<br>If known, the expected amount can be<br>provider to reduce the time to verify.
+alt Venue provides instruction ID
+  V ->> A: Instruction ID
+else Sender provides instruction ID
+  I ->> A: Instruction ID
+else Venue/Sender does not provide instruction ID
+  A ->>P: Requests pending instructions
+  P -->> A: Pending instruction ID(s) returned
+end
+A ->> A: Verify or decrypt amount from the sender proof using<br>their confidential account and the confidential transaction ID.
 ```
 
 ### 8 Instruction Affirmation

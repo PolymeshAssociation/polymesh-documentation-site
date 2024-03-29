@@ -65,11 +65,10 @@ The [Development Environment](./overview.md) creates a signing key and DID for t
 export MEDIATOR_DID=$(docker compose logs polymesh-private-rest-api-init | grep "Mediator DiD" | sed -n -e 's/^.*Mediator DiD: //p')
 ```
 
-You also need to know the addresses of Polymesh Private Rest API and the indexer GraphQL endpoint., below we use defaults from the [Development Environment](./overview.md).
+You also need to know the address of Polymesh Private Rest API., below we use the default value from the [Development Environment](./overview.md).
 
 ```bash
 export PP_REST_API=http://localhost:3001
-export PP_GRAPHQL=http://localhost:3000
 ```
 
 In the next steps we generate ElGamal key pairs for the asset sender, receiver, mediator and auditor. For the sender and receiver their ElGamal public key is registered to their on-chain DID.
@@ -581,12 +580,13 @@ The sequence diagram associated with the following steps can be found [here](../
 
 #### 4.2 Requests pending instructions
 
+For this example we will just take the first instruction
+
 ```bash
 export RESPONSE_4_2=$(curl --silent --request 'GET' \
   ''"$PP_REST_API"'/confidential-accounts/'"$SENDER_CONFIDENTIAL_ACCOUNT"'/associated-transactions?direction=Outgoing' \
   -H 'accept: application/json')
 
-# For this example we will just take the first instruction
 export CONFIDENTIAL_TRANSACTION_ID=$(echo $RESPONSE_4_2 | jq -r '.results[0]')
 
 echo $RESPONSE_4_2 | jq
@@ -603,12 +603,13 @@ Example response:
 
 #### 4.4 Requests instruction details
 
+For this example we just use the first leg for simplicity
+
 ```bash
 export RESPONSE_4_4=$(curl --silent --request 'GET' \
   ''"$PP_REST_API"'/confidential-transactions/'"$CONFIDENTIAL_TRANSACTION_ID"'' \
   -H 'accept: application/json')
 
-# For this example we just use the first leg for simplicity
 export LEG_ID=$(echo $RESPONSE_4_4 | jq -r '.legs[0].id')
 
 echo $RESPONSE_4_4 | jq
@@ -715,24 +716,16 @@ Example response:
 
 The sequence diagram associated with the following steps can be found [here](../confidential-assets/diagrams.md#5-receiver-zero-knowledge-proof-verification).
 
-#### 5.5 Query previously emitted instruction affirmation events to retrieve sender proof(s)
-
-:::warning
-
-The next step is querying the **GraphQL** endpoint to retrieve information
-
-:::
+#### 5.5 Verify or decrypt sender proof using their confidential account to view the amount being sent
 
 ```bash
-export RESPONSE_5_5=$(curl --silent ''"$PP_GRAPHQL"'' \
-    --header 'Accept-Encoding: gzip, deflate, br' \
-    --header 'Content-Type: application/json' \
-    --header 'Accept: application/json' \
-    --header 'Connection: keep-alive' \
-    --data-binary '{"query":"query cta {confidentialTransactionAffirmations(filter:{transactionId:{equalTo:\"'"$CONFIDENTIAL_TRANSACTION_ID"'\"},legId:{equalTo:'"$LEG_ID"'},party:{equalTo:Sender}}){nodes{transactionId,id,proofs,accountId,identityId,party,legId}}}"}' \
-    --compressed)
-
-export SENDER_PROOF_5_5=$(echo $RESPONSE_5_5 | jq -r '.data.confidentialTransactionAffirmations.nodes[0].proofs[0].proof')
+export RESPONSE_5_5=$(curl --silent --request 'POST' \
+  ''"$PP_REST_API"'/confidential-transactions/'"$CONFIDENTIAL_TRANSACTION_ID"'/auditor-verify' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "auditorKey": "'"$RECEIVER_CONFIDENTIAL_ACCOUNT"'"
+}')
 
 echo $RESPONSE_5_5 | jq
 ```
@@ -741,50 +734,16 @@ Example response:
 
 ```json
 {
-  "data": {
-    "confidentialTransactionAffirmations": {
-      "nodes": [
-        {
-          "transactionId": "1",
-          "id": "1/Sender/0xbf84839e6bc8ad6fe969f560895663fdd2c175b40c9ab3ca63df9fd7010b64f8",
-          "proofs": [
-            {
-              "proof": "0x1004f1e8f24f21c51c9ea8ade48e370d9817eb6651ace219d3dc28dd9d07359b56f05a8c0ab21bc5596d77ea1e5cf88d25dc85986693ac7d1a9fe3f1e6c1671f6f7603df4f786d7f97accc16a4fb4b89d823a935dce7d38066f98c01e10ecb5806da780642af9abe518833dc0d22df8cb63d1d1b65c75c200017c83e07628f884fbc20316152b908be989155f7d74e6ba568b87c566a2851345d97dddf279449058d11109adb6007a43ccdd3d951653072a753b50934e91f86891edfe4c8fc516b2caa3be202dd562a5a1167a57b26de3f0f81277805b3865df82c846fab025da47f2712304def158f95ebeaf443229660ba97fb2f554637307d9f9aa5a335c0a5860a7558ecdb0b1e6f866c67c3585facb776e94870c211c03ada6741b844c6a258790242888271dc10ddcf375fcd952b4d57c42239421d4f6c2e5098087be33b5f0a47ac9bceed4df69ac63d7bc1882304d5a0cd9fc232c3bb5c0b0fd857394a334900ec9f43ffd88002ae51cf7279c005a3a21bd051e76d44ecfe079d65657da87f01544914ba4b72345652526d6a4cb8f85a6a70e644baf857d199d39b0bd6fca15eca59f01960bac31ef77d523b102b048a22322da5ebb4edb518285c5a0d9a181482b411b6bb56ce97741156e3ae64654e98d0ecdd4a9d9595dd2bc64eab793238c079d020c8859f551a93e7d1b0c382dac80bc99c2ed9265e628615e44187cf52055af6d8d7c43a1dc121340a82357dfe1af4a4652d645630749199efdcd06707810bda8bc3f2f42f1f30ac01639de25739b48672f3cc6772515036a6c1a00c7f45550ab930e39cea9932bfd2fad7c33e0cca27c0ef147d1ce8ef0b324b5df125a86db41c0272daa7b25a841e68daedd0ed99269c10d2c4a828c865f9409d5171e570d04205ed8e41702c2158284a4faaedc00c484374f62fb9e9ac802d386cca6b1830b6cc140cef84b1c614455b73ede66d7b054255b7d7e4e9b5b1025cc0f5a5086c3edfd9d552475b1a0c0e459214b8d00647c7bd6b09c1d856cfdf66133dbf0bce30429a139cb98885a31cafd782525b415871d2912ff8df0fe29e0ea2d4e7011c205f5fe16e09a4eb35e3ef4d75c11e3af5d38e752c31dabbbd9700bbd71058d6fe09ad7f28490189eb8ead7fb2780d3fe27cc526c51f8cdca896fd0bb75c770863c0e73d1e61c45073cf8f7af086071af8eabc0588681cbfc23d8a861383771cd1a8d03471059ae4e964ba9655fc6c07b6e9d72b8b6c22389b07171f36690e9aba8c1c8147cb4bb74b5bbe8aed7f1ca2e8670f6e3c6427111eabdbd9d59477fc93dfd5a284f2b5d90bbdfd8c6727790e94c83a60103d1a59f373c52b970815806598e516a8dd841c207884f15939dbc96b719179460409879c2813dc3c116e840fce3abb725e2d90f1f18c4e75a34e31d8c8b128178c1cf14212d4f0462b435c1538f9ac45b2f7f6acc663d319476a6bf810d46b0fa3fdeb93a6df83145c31c0d51c9bf43f028c2f5e0c2387bb26ff7e2655621797540034bacfa81e33177ffa2cd21c6a9c6414087f6a36c9f42b7ee2375499dba71c715c9a05edb684ba4afae5ecff26d547cae075fc0ce8a09043d9443111019b4cac3ca5b5b5c96dec7068abc08fe9c31e8ae49cd61181d810530d6d43c630e71c192cb2c869e7aba5799050072f4feccaf028d7329eaffa89aefbc06cd4ae1337882286827c33ce952f4d913f571b998d1ad662bccae070768f47130110a31a768177f0d2795b821d0552a4293f75efcb760b3fb69160003d718ced0d0001f029f22a065634276c1d00",
-              "assetId": "0x35f2d90772b65a565351124987913aea"
-            }
-          ],
-          "accountId": null,
-          "identityId": "0xbf84839e6bc8ad6fe969f560895663fdd2c175b40c9ab3ca63df9fd7010b64f8",
-          "party": "Sender",
-          "legId": 0
-        }
-      ]
+  "verifications": [
+    {
+      "isAuditor": false,
+      "isProved": true,
+      "assetId": "35f2d907-72b6-5a56-5351-124987913aea",
+      "legId": "0",
+      "isValid": null,
+      "errMsg": null
     }
-  }
-}
-```
-
-#### 5.6 Verify or decrypt sender proof using their confidential account to view the amount being sent
-
-```bash
-export RESPONSE_5_6=$(curl --silent --request 'POST' \
-  ''"$PP_REST_API"'/confidential-accounts/'"$RECEIVER_CONFIDENTIAL_ACCOUNT"'/receiver-verify' \
-  -H 'accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "senderProof": "'"$SENDER_PROOF_5_5"'"
-}')
-
-echo $RESPONSE_5_6 | jq
-```
-
-Example response:
-
-```json
-{
-  "isValid": true,
-  "amount": "1000",
-  "errMsg": null
+  ]
 }
 ```
 
@@ -792,24 +751,16 @@ Example response:
 
 The sequence diagram associated with the following steps can be found [here](../confidential-assets/diagrams.md#6-mediator-zero-knowledge-proof-verification).
 
-#### 6.5 Query previously emitted instruction affirmation events to retrieve sender proof(s)
-
-:::warning
-
-The next step is querying the **GraphQL** endpoint to retrieve information
-
-:::
+#### 6.5 Verify or decrypt sender proof using their confidential account and the confidential transaction ID to view the amount being sent
 
 ```bash
-export RESPONSE_6_5=$(curl --silent ''"$PP_GRAPHQL"'' \
-    --header 'Accept-Encoding: gzip, deflate, br' \
-    --header 'Content-Type: application/json' \
-    --header 'Accept: application/json' \
-    --header 'Connection: keep-alive' \
-    --data-binary '{"query":"query cta {confidentialTransactionAffirmations(filter:{transactionId:{equalTo:\"'"$CONFIDENTIAL_TRANSACTION_ID"'\"},legId:{equalTo:'"$LEG_ID"'},party:{equalTo:Sender}}){nodes{transactionId,id,proofs,accountId,identityId,party,legId}}}"}' \
-    --compressed)
-
-export SENDER_PROOF_6_5=$(echo $RESPONSE_6_5 | jq -r '.data.confidentialTransactionAffirmations.nodes[0].proofs[0].proof')
+export RESPONSE_6_5=$(curl --silent --request 'POST' \
+  ''"$PP_REST_API"'/confidential-transactions/'"$CONFIDENTIAL_TRANSACTION_ID"'/auditor-verify' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "auditorKey": "'"$MEDIATOR_CONFIDENTIAL_ACCOUNT"'"
+}')
 
 echo $RESPONSE_6_5 | jq
 ```
@@ -818,156 +769,34 @@ Example response:
 
 ```json
 {
-  "data": {
-    "confidentialTransactionAffirmations": {
-      "nodes": [
-        {
-          "transactionId": "1",
-          "id": "1/Sender/0xbf84839e6bc8ad6fe969f560895663fdd2c175b40c9ab3ca63df9fd7010b64f8",
-          "proofs": [
-            {
-              "proof": "0x1004f1e8f24f21c51c9ea8ade48e370d9817eb6651ace219d3dc28dd9d07359b56f05a8c0ab21bc5596d77ea1e5cf88d25dc85986693ac7d1a9fe3f1e6c1671f6f7603df4f786d7f97accc16a4fb4b89d823a935dce7d38066f98c01e10ecb5806da780642af9abe518833dc0d22df8cb63d1d1b65c75c200017c83e07628f884fbc20316152b908be989155f7d74e6ba568b87c566a2851345d97dddf279449058d11109adb6007a43ccdd3d951653072a753b50934e91f86891edfe4c8fc516b2caa3be202dd562a5a1167a57b26de3f0f81277805b3865df82c846fab025da47f2712304def158f95ebeaf443229660ba97fb2f554637307d9f9aa5a335c0a5860a7558ecdb0b1e6f866c67c3585facb776e94870c211c03ada6741b844c6a258790242888271dc10ddcf375fcd952b4d57c42239421d4f6c2e5098087be33b5f0a47ac9bceed4df69ac63d7bc1882304d5a0cd9fc232c3bb5c0b0fd857394a334900ec9f43ffd88002ae51cf7279c005a3a21bd051e76d44ecfe079d65657da87f01544914ba4b72345652526d6a4cb8f85a6a70e644baf857d199d39b0bd6fca15eca59f01960bac31ef77d523b102b048a22322da5ebb4edb518285c5a0d9a181482b411b6bb56ce97741156e3ae64654e98d0ecdd4a9d9595dd2bc64eab793238c079d020c8859f551a93e7d1b0c382dac80bc99c2ed9265e628615e44187cf52055af6d8d7c43a1dc121340a82357dfe1af4a4652d645630749199efdcd06707810bda8bc3f2f42f1f30ac01639de25739b48672f3cc6772515036a6c1a00c7f45550ab930e39cea9932bfd2fad7c33e0cca27c0ef147d1ce8ef0b324b5df125a86db41c0272daa7b25a841e68daedd0ed99269c10d2c4a828c865f9409d5171e570d04205ed8e41702c2158284a4faaedc00c484374f62fb9e9ac802d386cca6b1830b6cc140cef84b1c614455b73ede66d7b054255b7d7e4e9b5b1025cc0f5a5086c3edfd9d552475b1a0c0e459214b8d00647c7bd6b09c1d856cfdf66133dbf0bce30429a139cb98885a31cafd782525b415871d2912ff8df0fe29e0ea2d4e7011c205f5fe16e09a4eb35e3ef4d75c11e3af5d38e752c31dabbbd9700bbd71058d6fe09ad7f28490189eb8ead7fb2780d3fe27cc526c51f8cdca896fd0bb75c770863c0e73d1e61c45073cf8f7af086071af8eabc0588681cbfc23d8a861383771cd1a8d03471059ae4e964ba9655fc6c07b6e9d72b8b6c22389b07171f36690e9aba8c1c8147cb4bb74b5bbe8aed7f1ca2e8670f6e3c6427111eabdbd9d59477fc93dfd5a284f2b5d90bbdfd8c6727790e94c83a60103d1a59f373c52b970815806598e516a8dd841c207884f15939dbc96b719179460409879c2813dc3c116e840fce3abb725e2d90f1f18c4e75a34e31d8c8b128178c1cf14212d4f0462b435c1538f9ac45b2f7f6acc663d319476a6bf810d46b0fa3fdeb93a6df83145c31c0d51c9bf43f028c2f5e0c2387bb26ff7e2655621797540034bacfa81e33177ffa2cd21c6a9c6414087f6a36c9f42b7ee2375499dba71c715c9a05edb684ba4afae5ecff26d547cae075fc0ce8a09043d9443111019b4cac3ca5b5b5c96dec7068abc08fe9c31e8ae49cd61181d810530d6d43c630e71c192cb2c869e7aba5799050072f4feccaf028d7329eaffa89aefbc06cd4ae1337882286827c33ce952f4d913f571b998d1ad662bccae070768f47130110a31a768177f0d2795b821d0552a4293f75efcb760b3fb69160003d718ced0d0001f029f22a065634276c1d00",
-              "assetId": "0x35f2d90772b65a565351124987913aea"
-            }
-          ],
-          "accountId": null,
-          "identityId": "0xbf84839e6bc8ad6fe969f560895663fdd2c175b40c9ab3ca63df9fd7010b64f8",
-          "party": "Sender",
-          "legId": 0
-        }
-      ]
+  "verifications": [
+    {
+      "isProved": true,
+      "isAuditor": true,
+      "amount": "1000",
+      "assetId": "35f2d907-72b6-5a56-5351-124987913aea",
+      "legId": "0",
+      "errMsg": null,
+      "isValid": true
     }
-  }
+  ]
 }
-```
 
-#### 6.7 Query instruction leg details to determine the correct index of the mediators confidential account in the array of auditors
-
-```bash
-# Instruction details were previously retrieved so we will reuse in this step
-export AUDITORS=$(echo "$RESPONSE_4_4" | jq -c '.legs[0].assetAuditors[0].auditors[]')
-
-index=0
-for auditor in $AUDITORS; do
-    publicKey=$(echo "$auditor" | jq -r '.publicKey')
-    if [ "$publicKey" == "$MEDIATOR_CONFIDENTIAL_ACCOUNT" ]; then
-        export MEDIATOR_INDEX="$index"
-        break
-    fi
-    ((index++))
-done
-
-echo "Index of the Mediator's confidential key: $MEDIATOR_INDEX"
-```
-
-Example response:
-
-```bash
-Index of the Mediator's confidential key: 0
-```
-
-#### 6.9 Verify or decrypt sender proof using their confidential account to view the amount being sent
-
-We made the mediator an auditor [here](#23-initialises-confidential-asset-specifying-auditors-and-mediators), so we can use the auditor-verify endpoint.
-
-```bash
-export RESPONSE_6_9=$(curl --silent --request 'POST' \
-  ''"$PP_REST_API"'/confidential-accounts/'"$MEDIATOR_CONFIDENTIAL_ACCOUNT"'/auditor-verify' \
-  -H 'accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "auditorId": "'"$MEDIATOR_INDEX"'",
-  "senderProof": "'"$SENDER_PROOF_6_5"'"
-}')
-
-echo $RESPONSE_6_9 | jq
 ```
 
 ### 7 Auditor zero knowledge proof verification
 
 The sequence diagram associated with the following steps can be found [here](../confidential-assets/diagrams.md#7-auditor-zero-knowledge-proof-review).
 
-#### 7.1 Query previously emitted instruction affirmation events to retrieve sender proof(s)
-
-:::warning
-
-The next step is querying the **GraphQL** endpoint to retrieve information
-
-:::
-
-```bash
-export RESPONSE_7_1=$(curl --silent ''"$PP_GRAPHQL"'' \
-    --header 'Accept-Encoding: gzip, deflate, br' \
-    --header 'Content-Type: application/json' \
-    --header 'Accept: application/json' \
-    --header 'Connection: keep-alive' \
-    --data-binary '{"query":"query cta {confidentialTransactionAffirmations(filter:{transactionId:{equalTo:\"'"$CONFIDENTIAL_TRANSACTION_ID"'\"},legId:{equalTo:'"$LEG_ID"'},party:{equalTo:Sender}}){nodes{transactionId,id,proofs,accountId,identityId,party,legId}}}"}' \
-    --compressed)
-
-export SENDER_PROOF_7_1=$(echo $RESPONSE_7_1 | jq -r '.data.confidentialTransactionAffirmations.nodes[0].proofs[0].proof')
-
-echo $RESPONSE_7_1 | jq
-```
-
-Example response:
-
-```json
-{
-  "data": {
-    "confidentialTransactionAffirmations": {
-      "nodes": [
-        {
-          "transactionId": "1",
-          "id": "1/Sender/0xbf84839e6bc8ad6fe969f560895663fdd2c175b40c9ab3ca63df9fd7010b64f8",
-          "proofs": [
-            {
-              "proof": "0x1004f1e8f24f21c51c9ea8ade48e370d9817eb6651ace219d3dc28dd9d07359b56f05a8c0ab21bc5596d77ea1e5cf88d25dc85986693ac7d1a9fe3f1e6c1671f6f7603df4f786d7f97accc16a4fb4b89d823a935dce7d38066f98c01e10ecb5806da780642af9abe518833dc0d22df8cb63d1d1b65c75c200017c83e07628f884fbc20316152b908be989155f7d74e6ba568b87c566a2851345d97dddf279449058d11109adb6007a43ccdd3d951653072a753b50934e91f86891edfe4c8fc516b2caa3be202dd562a5a1167a57b26de3f0f81277805b3865df82c846fab025da47f2712304def158f95ebeaf443229660ba97fb2f554637307d9f9aa5a335c0a5860a7558ecdb0b1e6f866c67c3585facb776e94870c211c03ada6741b844c6a258790242888271dc10ddcf375fcd952b4d57c42239421d4f6c2e5098087be33b5f0a47ac9bceed4df69ac63d7bc1882304d5a0cd9fc232c3bb5c0b0fd857394a334900ec9f43ffd88002ae51cf7279c005a3a21bd051e76d44ecfe079d65657da87f01544914ba4b72345652526d6a4cb8f85a6a70e644baf857d199d39b0bd6fca15eca59f01960bac31ef77d523b102b048a22322da5ebb4edb518285c5a0d9a181482b411b6bb56ce97741156e3ae64654e98d0ecdd4a9d9595dd2bc64eab793238c079d020c8859f551a93e7d1b0c382dac80bc99c2ed9265e628615e44187cf52055af6d8d7c43a1dc121340a82357dfe1af4a4652d645630749199efdcd06707810bda8bc3f2f42f1f30ac01639de25739b48672f3cc6772515036a6c1a00c7f45550ab930e39cea9932bfd2fad7c33e0cca27c0ef147d1ce8ef0b324b5df125a86db41c0272daa7b25a841e68daedd0ed99269c10d2c4a828c865f9409d5171e570d04205ed8e41702c2158284a4faaedc00c484374f62fb9e9ac802d386cca6b1830b6cc140cef84b1c614455b73ede66d7b054255b7d7e4e9b5b1025cc0f5a5086c3edfd9d552475b1a0c0e459214b8d00647c7bd6b09c1d856cfdf66133dbf0bce30429a139cb98885a31cafd782525b415871d2912ff8df0fe29e0ea2d4e7011c205f5fe16e09a4eb35e3ef4d75c11e3af5d38e752c31dabbbd9700bbd71058d6fe09ad7f28490189eb8ead7fb2780d3fe27cc526c51f8cdca896fd0bb75c770863c0e73d1e61c45073cf8f7af086071af8eabc0588681cbfc23d8a861383771cd1a8d03471059ae4e964ba9655fc6c07b6e9d72b8b6c22389b07171f36690e9aba8c1c8147cb4bb74b5bbe8aed7f1ca2e8670f6e3c6427111eabdbd9d59477fc93dfd5a284f2b5d90bbdfd8c6727790e94c83a60103d1a59f373c52b970815806598e516a8dd841c207884f15939dbc96b719179460409879c2813dc3c116e840fce3abb725e2d90f1f18c4e75a34e31d8c8b128178c1cf14212d4f0462b435c1538f9ac45b2f7f6acc663d319476a6bf810d46b0fa3fdeb93a6df83145c31c0d51c9bf43f028c2f5e0c2387bb26ff7e2655621797540034bacfa81e33177ffa2cd21c6a9c6414087f6a36c9f42b7ee2375499dba71c715c9a05edb684ba4afae5ecff26d547cae075fc0ce8a09043d9443111019b4cac3ca5b5b5c96dec7068abc08fe9c31e8ae49cd61181d810530d6d43c630e71c192cb2c869e7aba5799050072f4feccaf028d7329eaffa89aefbc06cd4ae1337882286827c33ce952f4d913f571b998d1ad662bccae070768f47130110a31a768177f0d2795b821d0552a4293f75efcb760b3fb69160003d718ced0d0001f029f22a065634276c1d00",
-              "assetId": "0x35f2d90772b65a565351124987913aea"
-            }
-          ],
-          "accountId": null,
-          "identityId": "0xbf84839e6bc8ad6fe969f560895663fdd2c175b40c9ab3ca63df9fd7010b64f8",
-          "party": "Sender",
-          "legId": 0
-        }
-      ]
-    }
-  }
-}
-```
-
-#### 7.3 Query instruction leg details to determine the correct index of the auditor confidential account in the array of auditors
-
-```bash
-index=0
-for auditor in $AUDITORS; do
-    publicKey=$(echo "$auditor" | jq -r '.publicKey')
-    if [ "$publicKey" == "$AUDITOR_CONFIDENTIAL_ACCOUNT" ]; then
-        export AUDITOR_INDEX="$index"
-        break
-    fi
-    ((index++))
-done
-
-echo "Index of the Auditor's confidential key: $AUDITOR_INDEX"
-```
-
-Example response:
-
-```bash
-Index of the Auditor's confidential key: 1
-```
-
 #### 7.5 Verify or decrypt sender proof using their confidential account to view the amount being sent
 
 ```bash
 export RESPONSE_7_5=$(curl --silent --request 'POST' \
-  ''"$PP_REST_API"'/confidential-accounts/'"$AUDITOR_CONFIDENTIAL_ACCOUNT"'/auditor-verify' \
+  ''"$PP_REST_API"'/confidential-transactions/'"$CONFIDENTIAL_TRANSACTION_ID"'/auditor-verify' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-  "auditorId": "'"$AUDITOR_INDEX"'",
-  "senderProof": "'"$SENDER_PROOF_7_1"'"
+  "auditorKey": "'"$AUDITOR_CONFIDENTIAL_ACCOUNT"'"
 }')
 
 echo $RESPONSE_7_5 | jq
@@ -977,10 +806,19 @@ Example response:
 
 ```json
 {
-  "isValid": true,
-  "amount": "1000",
-  "errMsg": null
+  "verifications": [
+    {
+      "isProved": true,
+      "isAuditor": true,
+      "amount": "1000",
+      "assetId": "35f2d907-72b6-5a56-5351-124987913aea",
+      "legId": "0",
+      "errMsg": null,
+      "isValid": true
+    }
+  ]
 }
+
 ```
 
 ### 8 Instruction Affirmation
