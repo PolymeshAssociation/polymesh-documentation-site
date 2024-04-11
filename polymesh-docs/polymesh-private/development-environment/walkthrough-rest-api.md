@@ -792,11 +792,7 @@ Example response:
 
 ### 6 Mediator zero knowledge proof verification
 
-The sequence diagram associated with the following steps can be found [here](../confidential-assets/diagrams.md#6-mediator-zero-knowledge-proof-verification).
-
-#### 6.1-9 Verify or decrypt amount from the sender proof using their confidential account, the confidential asset ID and the auditor index for their confidential account.
-
-The Rest API will get all required data in the backgrund for you.
+The following method completes all steps on the [Mediator Zero Knowledge Proof Verification](../confidential-assets/diagrams.md#6-mediator-zero-knowledge-proof-verification) sequence diagram in a single API call.
 
 ```bash
 export RESPONSE_6_1_9=$(curl --silent --request 'POST' \
@@ -830,9 +826,7 @@ Example response:
 
 ### 7 Auditor zero knowledge proof verification
 
-The sequence diagram associated with the following steps can be found [here](../confidential-assets/diagrams.md#7-auditor-zero-knowledge-proof-review).
-
-#### 7.1-5 Verify or decrypt amount from the sender proof using their confidential account, the confidential asset ID and the auditor index for their confidential account.
+The following method completes all steps on the [Auditor Zero Knowledge Proof Review](../confidential-assets/diagrams.md#7-auditor-zero-knowledge-proof-review) sequence diagram in a single API call.
 
 ```bash
 export RESPONSE_7_1_5=$(curl --silent --request 'POST' \
@@ -862,7 +856,6 @@ Example response:
     }
   ]
 }
-
 ```
 
 ### 8 Instruction Affirmation
@@ -1099,4 +1092,3 @@ Example response:
   }
 }
 ```
-

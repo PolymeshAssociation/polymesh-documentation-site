@@ -262,4 +262,3 @@ participant P as Polymesh
   P ->> P: Sender encrypted balance updated
   Note over I,P: Settlement instruction complete
 ```
-
