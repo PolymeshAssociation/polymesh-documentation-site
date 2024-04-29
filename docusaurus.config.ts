@@ -78,6 +78,28 @@ const config: Config = {
         // },
       },
     ],
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            to: '/polymesh-docs/polymesh-private/tutorials/walkthrough-confidential-assets-rest-api',
+            from: '/polymesh-docs/polymesh-private/development-environment/walkthrough-rest-api',
+          },
+          {
+            to: '/polymesh-docs/polymesh-private/confidential-assets',
+            from: '/polymesh-docs/polymesh-private/confidential-assets/overview',
+          },
+          {
+            to: '/polymesh-docs/polymesh-private/tooling',
+            from: [
+              '/polymesh-docs/polymesh-private/development-environment/overview',
+              '/polymesh-docs/polymesh-private/development-environment/tooling',
+            ],
+          },
+        ],
+      },
+    ],
   ],
 
   themeConfig: {

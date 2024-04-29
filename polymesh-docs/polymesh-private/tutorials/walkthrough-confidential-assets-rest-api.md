@@ -1,13 +1,14 @@
 ---
 sidebar_position: 3
-title: Walkthrough - REST API
+title: Confidential Assets Walkthrough
+sidebar_label: Confidential Assets - REST API
 description: ''
 subsite: polymesh-private-docs
 ---
 
 ## Introduction
 
-This page provides code snippets and example responses for each [sequence diagram](../confidential-assets/diagrams.md) demonstrating how the various Confidential Assets related transactions can be executed utilizing the Polymesh Private REST API.
+This page provides code snippets and example responses for each [Confidential Asset sequence diagram](../confidential-assets/diagrams.md), demonstrating how the various Confidential Asset related transactions can be executed utilizing the Polymesh Private REST API.
 
 As some code relies on the output of previous steps the code snippets must be executed in the same order as they appear on this page. Environment variables are used to store intermediary values needed for later steps.
 
@@ -23,13 +24,15 @@ The actors involved in these examples are:
 
 Ensure you have `curl` and `jq` installed.
 
-If you are using the [Polymesh Private Development Environment](./overview.md), you can run the examples without additional steps.
+If you are using the [Polymesh Private Development Environment](../tooling.md#development-environment), you can run the examples without additional steps.
 
-The examples use the Polymesh Private Rest API, as detailed [here](./tooling.md#usage-via-polymesh-rest-api).
+The examples use the Polymesh Private Rest API, as detailed [here](../tooling.md#usage-via-polymesh-rest-api).
 
-The [Development Environment](./overview.md) includes initial setup of the external signing manager and keys which are used in these examples.
+The [Development Environment](../tooling.md#development-environment) includes initial setup of the external signing manager and keys which are used in these examples.
 
-You can check if the Polymesh Private Development Environment has finished initialization as follows:
+:::note
+
+The development environment can take a few minutes to complete initialization. Once the docker images have been pulled you can check the status of the environment by visiting [http://localhost:3030/status/pp](http://localhost:3030/status/pp). Alternatively, you can check if the Polymesh Private Development Environment has finished initialization as follows:
 
 ```bash
 docker compose logs polymesh-private-rest-api-init
@@ -44,6 +47,7 @@ polymesh-private-rest-api-init-1  | Setup has been completed
 ```
 
 The last line should indicate either _Setup has been completed_ or _Setup has already been completed_.
+:::
 
 :::tip
 The developer environment hosts Swagger documentation for the REST API, providing insights into the transactions used in the following walkthroughs. The REST API is typically at [http://localhost:3001](http://localhost:3001) by default when running.
@@ -59,13 +63,13 @@ Refer to the Confidential Account Setup sequence diagram [here](../confidential-
 
 Make sure you are in the folder with the [compose](https://github.com/PolymeshAssociation/polymesh-private-dev-env/blob/main/compose.yaml) file.
 
-The [Development Environment](./overview.md) creates a signing key and DID for the Mediator used in the below examples, so we extract that to an environment variable first.
+The [Development Environment](../tooling.md#development-environment) creates a signing key and DID for the Mediator used in the below examples, so we extract that to an environment variable first.
 
 ```bash
 export MEDIATOR_DID=$(docker compose logs polymesh-private-rest-api-init | grep "Mediator DiD" | sed -n -e 's/^.*Mediator DiD: //p')
 ```
 
-You also need to know the addresses of Polymesh Private Rest API and the indexer GraphQL endpoint., below we use defaults from the [Development Environment](./overview.md).
+You also need to know the addresses of Polymesh Private Rest API and the indexer GraphQL endpoint., below we use defaults from the [Development Environment](../tooling.md#development-environment).
 
 ```bash
 export PP_REST_API=http://localhost:3001

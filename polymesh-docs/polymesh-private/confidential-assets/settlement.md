@@ -7,7 +7,7 @@ subsite: polymesh-private-docs
 
 ## Overview
 
-Confidential Assets are transferred via Settlement Instructions, which consist of one or more asset transfer legs. Each leg represents a transfer of one or more assets between a sender and receivers' [confidential accounts](../confidential-assets/overview.md#confidential-accounts). Once all parties affirm all legs, the instruction can be executed atomically, meaning all legs simultaneously succeed or fail. Settlement Instructions can represent single asset transfers (e.g., ACME), bilateral exchange of assets (e.g., USDC vs. ACME), or netted end-of-period settlements.
+Confidential Assets are transferred via Settlement Instructions, which consist of one or more asset transfer legs. Each leg represents a transfer of one or more assets between a sender and receivers' [confidential accounts](../confidential-assets/index.md#confidential-accounts). Once all parties affirm all legs, the instruction can be executed atomically, meaning all legs simultaneously succeed or fail. Settlement Instructions can represent single asset transfers (e.g., ACME), bilateral exchange of assets (e.g., USDC vs. ACME), or netted end-of-period settlements.
 
 To ensure the validity of asset transactions, each user sending assets must provide a zero-knowledge proof, verified on-chain using a sigma protocol.
 
@@ -57,7 +57,7 @@ The Venue Owner is responsible for creating the settlement instruction. They spe
 
 ### Sender
 
-For each settlement leg, a Sender must be defined. This is the confidential account that will be debited when the settlement instruction is affirmed. The Sender is required to generate a Zero Knowledge Proof with their [Confidential Account](./overview.md#confidential-accounts)'s private key and submit it to the chain to affirm an instruction leg. The Sender proof includes encrypted transaction details, ensuring the privacy of transaction amounts. The amount being transferred **must** be encrypted with the Receiver's and all required Auditors' Confidential Account public keys to be valid. A Sender must affirm a leg before a Receiver or Mediator can take further action.
+For each settlement leg, a Sender must be defined. This is the confidential account that will be debited when the settlement instruction is affirmed. The Sender is required to generate a Zero Knowledge Proof with their [Confidential Account](./index.md#confidential-accounts)'s private key and submit it to the chain to affirm an instruction leg. The Sender proof includes encrypted transaction details, ensuring the privacy of transaction amounts. The amount being transferred **must** be encrypted with the Receiver's and all required Auditors' Confidential Account public keys to be valid. A Sender must affirm a leg before a Receiver or Mediator can take further action.
 
 ### Receiver
 

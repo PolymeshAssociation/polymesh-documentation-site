@@ -1,9 +1,11 @@
 ---
 sidebar_position: 1
-title: Overview
+title: Confidential Assets
 description: ''
 subsite: polymesh-private-docs
 ---
+
+## Overview
 
 Confidential Assets in Polymesh enable users to transact in assets using a shared global ledger while preserving the privacy of asset balances and transaction amounts.
 

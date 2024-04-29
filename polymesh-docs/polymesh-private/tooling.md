@@ -32,6 +32,24 @@ Each repository has its own README.md file to help get started with building and
 
 Please see repo licenses for details of usage restrictions.
 
+### Development Environment
+
+To ease the setup of a developer environment for Polymesh Private instances, we provide a Docker compose file that spins up a preconfigured Polymesh Private chain, and associated tooling.
+
+The repository [https://github.com/PolymeshAssociation/Polymesh-private-dev-env](https://github.com/PolymeshAssociation/Polymesh-private-dev-env) provides the required docker files and configuration for this.
+
+This environment includes:
+
+- [A Polymesh Private Node](#polymesh-private-chain)
+- [REST API](#polymesh-rest-api)
+- [Proof API](#polymesh-proof-api)
+- [SubQuery Chain Indexer and GraphQL API](#polymesh-graphql-api)
+- Hashicorp Vault (for managing signing keys)
+
+Refer to this projects README for details on how to quickly launch an environment.
+
+Alternatively you can set up and connect the various tools individually by referring to the individual repositories of those tools described in the following sections.
+
 ### Polymesh Private Chain
 
 [https://github.com/PolymeshAssociation/polymesh-private](https://github.com/PolymeshAssociation/polymesh-private)

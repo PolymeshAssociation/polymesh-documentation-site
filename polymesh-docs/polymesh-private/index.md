@@ -29,4 +29,4 @@ Polymesh Private eliminates the need for publicly traded utility tokens, reducin
 
 ## Confidentiality
 
-Polymesh Private introduces support for [Confidential Assets](./confidential-assets/overview.md), to enable secure asset transactions on a global ledger without exposing asset balances or transaction amounts. This feature is initially available exclusively to users of Polymesh Private.
+Polymesh Private introduces support for [Confidential Assets](confidential-assets/index.md), to enable secure asset transactions on a global ledger without exposing asset balances or transaction amounts. This feature is initially available exclusively to users of Polymesh Private.
