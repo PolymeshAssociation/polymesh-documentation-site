@@ -27,7 +27,7 @@ Each identity is referenced via a decentralised identifier - its DID. A DID is a
 
 ## Assets
 
-Assets held by a user are associated with one of their identities. For example the identity with DID `0xabc` might have a balance of 50 ACME tokens and 30 FOO tokens.
+Assets held by a user are associated with one of their identities. For example the identity with DID `0xalice` might have a balance of 50 ACME tokens and 30 FOO tokens.
 
 Assets held by an identity can be organised into [portfolios](../portfolios-custody/) beneath that identity.
 
@@ -72,7 +72,7 @@ Polymesh is generally agnostic as to the type of key being used, and treats each
 
 ### Public / Private Key Pairs
 
-Polymesh uses public-key cryptography based on the [Ed25519 curve](https://docs.substrate.io/learn/cryptography/#elliptic-curve), and allows keys that use either the Ed25519 or SR25519 constructions.
+Polymesh uses public-key cryptography based on the [Ed25519 curve](https://docs.substrate.io/learn/cryptography/#elliptic-curve), and allows keys that use either the Ed25519, SR25519 or ECDSA constructions.
 
 These types of keys can be held on hardware wallets, or can be generated off-line and stored as paper wallets.
 
@@ -139,3 +139,33 @@ The _portfolios_ granularity allows a key to be limited to interacting with only
 The access of a particular key is the intersection of each of these categories. It is possible to permission a key with full access to any of these categories.
 
 Not all on-chain actions are associated with either an asset, or a portfolio (for example staking). For such actions, these permission types are not checked.
+
+## Child Identities
+
+An identity as described above is always created by a [CDD service provider](../cdd/).
+
+This process involves two steps for CDD providers:
+  - creating an on-chain identity for the user, referenced via the returned DID
+  - issuing a CDD claim to the new on-chain identity
+
+When a user submits a transaction to the network, we:
+  - determine the associated identity by looking at what identity the key that signs the transaction is linked to (this can be at most one identity)
+  - check that this associated identity has a valid (issued by a current CDD provider, not expired) CDD claim
+
+However for some use-cases it may be helpful for existing identities created via CDD providers to be able to create additional child identities unilaterally (i.e. without the involvement of a CDD provider).
+
+Some possible use-cases:
+
+- Isolate a smart contract from the deployer's identity to protect user funds held or controlled by the smart contract.
+
+- Extra layer of protection, with the child identities being "hot wallets" and the parent identity being "cold wallets". Since assets are held at the identity-level, it can be useful to have hot / cold identities.
+
+- Organizational structure (one child identity for each department/sub-company).
+
+Polymesh allows any "parent" identity (an identity created via a CDD provider) to create additional child identities - these are normal identities except that they inherit their CDD claim from their parent, rather than via an explicit CDD claim issued by a CDD provider attached to the child DID.
+
+To create a new child identity, there is an extrinsic `identity::create_child_identity` and corresponding SDK / RESTful API methods.
+
+Once a child identity is created, it is assigned its own unique DID, and can hold claims and assets like any other identity. A child identity cannot create additional child identities underneath it - i.e. we do not allow recursion when creating child identities. A child identity only inherits its CDD status from its parent identity - any other claims related to compliance must be held directly by the child identity.
+
+If desired, a child identity can be unlinked from its parent. This means that it will no longer inherit its CDD status from its parents CDD claim, but instead must get its own CDD claim from a permissioned CDD provider.
