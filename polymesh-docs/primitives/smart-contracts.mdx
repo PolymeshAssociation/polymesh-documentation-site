@@ -53,6 +53,8 @@ For example, a custodian may attach a smart contract as a secondary key, with th
 
 Note that it is possible to have a smart contract be the primary key of a parent identity (rather than a child identity when it is deployed as such) - this can be achieved by including logic in the smart contract to accept a primary key rotation authorisation. In a similar fashion a smart contract that is a primary key, could allow additional secondary keys to be added to its identity by encoding appropriate logic that issues these authorisations in the smart contract.
 
+![Smart Contract Diagram](../images/smart-contracts/smart_contract_keys.png)
+
 ## Using Native Polymesh Functionality
 
 It's important that smart contracts can interact with native Polymesh logic, specifically by reading storage (e.g. to determine the holders of an asset issued on the native layer) and calling extrinsics (e.g. to accept authorisations, or execute settlements).
