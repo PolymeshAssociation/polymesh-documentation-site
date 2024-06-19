@@ -66,7 +66,7 @@ Make sure you are in the folder with the [compose](https://github.com/PolymeshAs
 The [Development Environment](../tooling.md#development-environment) creates a signing key and DID for the Mediator used in the below examples, so we extract that to an environment variable first.
 
 ```bash
-export MEDIATOR_DID=$(docker compose logs polymesh-private-rest-api-init | grep "Mediator DiD" | sed -n -e 's/^.*Mediator DiD: //p')
+export MEDIATOR_DID=$(docker compose logs polymesh-private-rest-api-init | grep "Mediator_did" | sed -n -e 's/^.*Mediator_did: //p')
 ```
 
 You also need to know the addresses of Polymesh Private Rest API and the indexer GraphQL endpoint., below we use defaults from the [Development Environment](../tooling.md#development-environment).
@@ -800,11 +800,11 @@ The following method completes all steps on the [Mediator Zero Knowledge Proof V
 
 ```bash
 export RESPONSE_6_1_9=$(curl --silent --request 'POST' \
-  ''"$PP_REST_API"'/confidential-transactions/'"$CONFIDENTIAL_TRANSACTION_ID"'/auditor-verify' \
+  ''"$PP_REST_API"'/confidential-transactions/'"$CONFIDENTIAL_TRANSACTION_ID"'/verify-amounts' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-  "auditorKey": "'"$MEDIATOR_CONFIDENTIAL_ACCOUNT"'"
+  "publicKey": "'"$MEDIATOR_CONFIDENTIAL_ACCOUNT"'"
 }')
 
 echo $RESPONSE_6_1_9 | jq
@@ -818,6 +818,8 @@ Example response:
     {
       "isProved": true,
       "isAuditor": true,
+      "isReceiver": false,   
+      "amountDecrypted": true,         
       "amount": "1000",
       "assetId": "35f2d907-72b6-5a56-5351-124987913aea",
       "legId": "0",
@@ -834,11 +836,11 @@ The following method completes all steps on the [Auditor Zero Knowledge Proof Re
 
 ```bash
 export RESPONSE_7_1_5=$(curl --silent --request 'POST' \
-  ''"$PP_REST_API"'/confidential-transactions/'"$CONFIDENTIAL_TRANSACTION_ID"'/auditor-verify' \
+  ''"$PP_REST_API"'/confidential-transactions/'"$CONFIDENTIAL_TRANSACTION_ID"'/verify-amounts' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-  "auditorKey": "'"$AUDITOR_CONFIDENTIAL_ACCOUNT"'"
+  "publicKey": "'"$AUDITOR_CONFIDENTIAL_ACCOUNT"'"
 }')
 
 echo $RESPONSE_7_1_5 | jq
@@ -852,6 +854,8 @@ Example response:
     {
       "isProved": true,
       "isAuditor": true,
+      "isReceiver": false,
+      "amountDecrypted": true,
       "amount": "1000",
       "assetId": "35f2d907-72b6-5a56-5351-124987913aea",
       "legId": "0",
