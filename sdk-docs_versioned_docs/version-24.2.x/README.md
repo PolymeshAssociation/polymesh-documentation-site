@@ -1,13 +1,13 @@
 ---
-id: "README"
-title: "Polymesh SDK Readme"
-sidebar_label: "SDK Readme"
+id: 'README'
+title: 'Polymesh SDK Readme'
+sidebar_label: 'SDK Readme'
 sidebar_position: 0
 ---
 
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/standard/semistandard)
-[![Types](https://img.shields.io/npm/types/@polymeshassociation/polymesh-sdk)](https://)
+![Types](https://img.shields.io/npm/types/@polymeshassociation/polymesh-sdk)
 [![npm](https://img.shields.io/npm/v/@polymeshassociation/polymesh-sdk)](https://www.npmjs.com/package/@polymeshassociation/polymesh-sdk)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=PolymeshAssociation_polymesh-sdk&metric=coverage)](https://sonarcloud.io/summary/new_code?id=PolymeshAssociation_polymesh-sdk)
@@ -74,7 +74,8 @@ async function run() {
         mnemonic: '//Alice', //A "well known" mnemonic, often with sudo privileges on development chains
       },
       {
-        mnemonic: 'forest end mail art wish leave truth else ignore royal knife river', // most mnemonics are 12 words
+        mnemonic:
+          'forest end mail art wish leave truth else ignore royal knife river', // most mnemonics are 12 words
       },
     ],
   });
@@ -99,7 +100,9 @@ import { Polymesh } from '@polymeshassociation/polymesh-sdk';
 import { BrowserExtensionSigningManager } from '@polymeshassociation/browser-extension-signing-manager';
 
 async function run() {
-  const signingManager = await BrowserExtensionSigningManager.create('MY_APP_NAME'); // The Polymesh wallet extension will ask the user to authorize MY_APP_NAME for access
+  const signingManager = await BrowserExtensionSigningManager.create(
+    'MY_APP_NAME'
+  ); // The Polymesh wallet extension will ask the user to authorize MY_APP_NAME for access
 
   const polyClient = await Polymesh.connect({
     nodeUrl: 'wss://some-node-url.com',
