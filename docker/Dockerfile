@@ -15,7 +15,11 @@ RUN npm ci --ignore-scripts
 ################################################################
 
 COPY --chown=node:node . /home/node/
-RUN npm run build
+RUN sed --quiet 's/^\(.*\)=.*$/\1=__\1__/p' .env > .env.template && \
+    mv .env.template .env && \
+    npm run build && \
+    sed 's/^\(.*\)=.*$/\1/' .env > /home/node/env.var.list && \
+    rm .env
 
 ################################################################
 
@@ -23,7 +27,21 @@ FROM nginx:stable-alpine-slim
 
 ################################################################
 
+COPY --chown=root:root docker/nginx.conf /etc/nginx/conf.d/default.conf
+COPY --chown=root:root docker/replace-env-var-placeholders.sh /usr/local/bin/
+
+################################################################
+
+COPY --from=builder --chown=root:root /home/node/env.var.list /srv/
 COPY --from=builder --chown=root:root /home/node/build/ /usr/share/nginx/html/
-COPY --chown=root:root nginx.conf /etc/nginx/conf.d/default.conf
+
+################################################################
+
+ENV GTM_CONTAINER_ID=GTM_CONTAINER_ID_NOT_SET
+
+################################################################
+
+CMD replace-env-var-placeholders.sh && \
+    nginx -g 'daemon off;'
 
 ################################################################

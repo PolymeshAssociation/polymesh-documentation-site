@@ -71,7 +71,7 @@ node {
             stage('Build') {
                 sh (label: 'Build',
                     script: '''#!/bin/bash
-                            docker build -f Dockerfile -t "${CONTAINER_REGISTRY}/polymesh/documentation-ui:${GIT_COMMIT}" .
+                            docker build -f docker/Dockerfile -t "${CONTAINER_REGISTRY}/polymesh/documentation-ui:${GIT_COMMIT}" .
                             ''')
             }
 
