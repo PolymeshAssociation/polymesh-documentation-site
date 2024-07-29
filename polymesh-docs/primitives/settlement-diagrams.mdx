@@ -1,0 +1,153 @@
+---
+title: Settlement Sequence Diagrams
+description: ''
+# slug: /polymesh-docs/primitives/settlement
+subsite: polymesh-docs
+---
+
+## Purpose of Sequence Diagrams
+
+These sequence diagrams provide a detailed overview of the steps involved in the settlement process for Assets. They outline each step comprehensively, from account setup to instruction creation, affirmation, rejection, and execution.
+
+It's important to note that these diagrams offer a low-level representation, including all steps of the listed process. This level of detail ensures clarity and precision in understanding the settlement process.
+
+When using tools such as the Polymesh REST API or the Polymesh Typescript SDK, some of the steps depicted in these diagrams are combined into a single user action. These tools can simplify the process for integrators, streamlining the integration of Assets.
+
+## Asset Creation
+
+In this sequence diagram, the asset issuer creates, configures and issues an asset. In this flow the issuer does this directly, but it is also possible to delegrate the configuration and issuance steps to an agent once the asset has been created.
+
+```mermaid
+sequenceDiagram
+participant I as Issuer
+participant P as Polymesh
+
+Note over I: Issuers can directly issue, or specify an agent to issue on their behalf
+opt
+  I ->> P: Register Asset Ticker
+end
+I ->> P: Create Asset
+opt
+  I ->> P: Specify Asset Metadata
+end
+opt
+  I ->> P: Specify Asset Compliance Rules
+end
+I ->> P: Issue (mint) Asset
+```
+# Asset Agent Management
+
+In this optional sequence diagram, the asset issuer permissions an external agent to operate their asset on their behalf.
+
+Agents can be granted granular permissions so that they can only operate specific features (e.g. documentation updates) as needed.
+
+```mermaid
+sequenceDiagram
+participant I as Issuer
+participant A as Agent
+participant P as Polymesh
+
+I ->> P: Issue `BecomeAgent` Authorization
+Note over I,P: Specifies Ticker, Agent DID and Agent Permission Group
+A ->> P: Accept `BecomeAgent` Authorization
+Note over I, P: Once an Agent has been permissioned,they can act on behalf of the Issuer<br/>with respect to this asset
+```
+
+# Asset Venue Creation
+
+In this step the asset issuer (or their agent) creates a new distribution venue to distribute their asset. Every settlement instruction in Polymesh is related to a particular settlement venue, and only the creator of that venue can specify who is allowed to sign receipts for off-chain asset transfers.
+
+In addition the issuer of an asset can optionally manage which venues they allow their asset to trade within.
+
+```mermaid
+sequenceDiagram
+participant I as Issuer / Agent
+participant P as Polymesh
+
+I ->> P: Create a Venue
+Note over I,P: Venue Details, Type and Receipt Signers provided
+P ->> I: New Venue ID
+Note over I,P: Venue ID is emitted in an event
+opt
+  I ->> P: Specify Additional Allowed Venues
+end
+opt
+  I ->> P: Update Allowed Receipt Signers on Issuer Venue
+end
+opt
+  I ->> P: Update Venue Details for Issuer Venue
+end
+```
+
+# Asset Settlement / Distribution
+
+In this step an asset is settled between a sender and receiver. In this example both the sender and receiver configure a custodian who does the affirmation step on their behalf - this approach is optional, and you can see in the next example that we have the sender and receiver affirming directly rather than via a custodian.
+
+```mermaid
+sequenceDiagram
+participant I as Issuer / Exchange
+participant S as Asset Sender
+participant R as Asset Receiver
+participant SC as Sender Custodian
+participant RC as Receiver Custodian
+participant M as Mediator
+participant P as Polymesh
+
+par
+  S ->> P: Issue Custody Authorization for Sender Custodian
+  SC ->> P: Accept Custody Authorization
+and
+  R ->> P: Issue Custody Authorization for Receiver Custodian
+  RC ->> P: Accept Custody Authorization
+end
+
+I ->> P: Create Settlement Instruction between Sender and Receiver
+
+par
+  SC ->> P: Affirm Settlement Instruction as Sender
+  P ->> P: Sender Assets Locked
+and
+  RC ->> P: Affirm Settlement Instruction as Receiver
+  P ->> P: Receiver Assets Locked
+and
+  opt
+    M ->> P: Affirm Settlement Instruction as Mediator
+  end
+end
+
+I ->> P: Execute Settlement Instruction
+```
+
+# Asset Settlement  / Distribution with Off-Chain Leg
+
+In this step we show the sequence when a settlement instruction involves both an on-chain leg (to move a security issued directly on Polymesh) as well as an off-chain leg representing an asset moving on a chain or payment system outside of Polymesh.
+
+In this case we have synchronised settlement between the off-chain and on-chain legs (rather than atomic settlement) with signed data being provided via an "OffChain Signer API" to verify that the off-chain leg was completed, before the settlement instruction is finalised on Polymesh.
+
+```mermaid
+sequenceDiagram
+participant I as Issuer / Exchange
+participant S as Asset Sender
+participant R as Asset Receiver
+participant M as Mediator
+participant O as OffChain Signer API
+participant P as Polymesh
+
+I ->> P: Create Settlement Instruction between Sender and Receiver
+note over I,P: Settlement Instruction includes an on-chain asset (sender to receiver)<br/>and an off-chain asset (receiver to sender)
+
+par
+  S ->> P: Affirm Settlement Instruction
+  P ->> P: Sender Assets Locked
+and
+  R ->> O: Request Signed Receipt the Off-Chain Asset Has Been Transferred
+  O ->> R: Signed Receipt Provided
+  R ->> P: Affirm Settlement Instruction via Signed Receipt
+and
+  opt
+    M ->> P: Affirm Settlement Instruction
+  end
+end
+
+I ->> P: Execute Settlement Instruction
+```
