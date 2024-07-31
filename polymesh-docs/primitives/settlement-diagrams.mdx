@@ -33,7 +33,7 @@ end
 opt
   I ->> P: Specify Asset Compliance Rules
 end
-I ->> P: Issue (mint) Asset
+I ->> P: Issue (mint) Tokens For This Asset
 ```
 # Asset Agent Management
 
@@ -47,16 +47,20 @@ participant I as Issuer
 participant A as Agent
 participant P as Polymesh
 
+opt
+  I ->> P: Create a custom Permission Group for the asset
+  P -->> I: Returns Permission Group ID
+end
 I ->> P: Issue `BecomeAgent` Authorization
 Note over I,P: Specifies Ticker, Agent DID and Agent Permission Group
+P -->> A: Pending Authorization Approval/Rejection
 A ->> P: Accept `BecomeAgent` Authorization
-Note over I, P: Once an Agent has been permissioned,they can act on behalf of the Issuer<br/>with respect to this asset
+Note over I, P: Once an Agent has been permissioned, they can act on behalf of the Issuer<br/> for the specified transactions with respect to this asset
 ```
 
 # Asset Venue Creation
 
-In this step the asset issuer (or their agent) creates a new distribution venue to distribute their asset. Every settlement instruction in Polymesh is related to a particular settlement venue, and only the creator of that venue can specify who is allowed to sign receipts for off-chain asset transfers.
-
+In this step the asset issuer (or their agent) creates a new distribution venue to distribute their asset. Every settlement instruction in Polymesh is related to a particular settlement venue, and only the creator of that venue can create settlement instruction under that venue and optionally specify who is allowed to sign receipts for off-chain asset transfers.
 In addition the issuer of an asset can optionally manage which venues they allow their asset to trade within.
 
 ```mermaid
@@ -66,22 +70,34 @@ participant P as Polymesh
 
 I ->> P: Create a Venue
 Note over I,P: Venue Details, Type and Receipt Signers provided
-P ->> I: New Venue ID
+P -->> I: New Venue ID
 Note over I,P: Venue ID is emitted in an event
 opt
-  I ->> P: Specify Additional Allowed Venues
+  I ->> P: Restrict Asset Settlement Instructions to Specified Venues
+end
+opt
+  I ->> P: Update Venue Details for Issuer Venue
+end
+opt
+  I ->> P: Update Permitted Settlement Venues for the Asset
 end
 opt
   I ->> P: Update Allowed Receipt Signers on Issuer Venue
 end
 opt
-  I ->> P: Update Venue Details for Issuer Venue
+  I ->> P: Update Venue Details for Issuer/Agent's Venue
 end
 ```
 
 # Asset Settlement / Distribution
 
 In this step an asset is settled between a sender and receiver. In this example both the sender and receiver configure a custodian who does the affirmation step on their behalf - this approach is optional, and you can see in the next example that we have the sender and receiver affirming directly rather than via a custodian.
+
+For clarity roles have been clearly separated however some entities may perform multiple roles e.g. the asset issuer may also be the sender in the case of primary distribution.
+
+:::note
+If the settlement instruction creator is also a sender or receiver in the instruction then creating the instruction will also affirm legs of the instruction that apply to them.  
+:::
 
 ```mermaid
 sequenceDiagram
@@ -95,9 +111,11 @@ participant P as Polymesh
 
 par
   S ->> P: Issue Custody Authorization for Sender Custodian
+  P -->> SC: Pending Accept Custody Approval/Rejection  
   SC ->> P: Accept Custody Authorization
 and
   R ->> P: Issue Custody Authorization for Receiver Custodian
+  P -->> RC: Pending Accept Custody Approval/Rejection  
   RC ->> P: Accept Custody Authorization
 end
 
@@ -111,18 +129,29 @@ and
   P ->> P: Receiver Assets Locked
 and
   opt
-    M ->> P: Affirm Settlement Instruction as Mediator
+    M ->> P: Affirm Settlement<br>Instruction as<br>Mediator
   end
 end
 
 I ->> P: Execute Settlement Instruction
+Note over I,P: Fully affirmed instructions can optionally be executed by any party to the instruction
+
 ```
 
-# Asset Settlement  / Distribution with Off-Chain Leg
+# Asset Settlement / Distribution with Off-Chain Leg
 
-In this step we show the sequence when a settlement instruction involves both an on-chain leg (to move a security issued directly on Polymesh) as well as an off-chain leg representing an asset moving on a chain or payment system outside of Polymesh.
+In this step we show the sequence when a settlement instruction involves both an on-chain leg (to move an asset issued directly on Polymesh) as well as an off-chain leg representing an asset or payment moving on a chain or payment system outside of Polymesh.
 
 In this case we have synchronised settlement between the off-chain and on-chain legs (rather than atomic settlement) with signed data being provided via an "OffChain Signer API" to verify that the off-chain leg was completed, before the settlement instruction is finalised on Polymesh.
+
+:::note
+The role of the "Off-Chain Signer API" entity in the below sequence diagram is:
+  - monitor Polymesh for settlement instructions related to specified venues which involve off-chain legs
+  - observe whether or not the off-chain leg has been completed on the external payment / chain
+  - once the above steps have completed successfully sign a receipt (referencing the Polymesh settlement instruction and off-chain leg) using a private key which has been permissioned as an allowed signer on the venue associated with the settlement instruction
+
+This signed data can then be used on Polymesh to affirm the off-chain leg, meaning that the Polymesh settlement instruction cannot be finalised until the "Off-Chain Signer API" has confirmed the payment (off-chain) leg.
+:::
 
 ```mermaid
 sequenceDiagram
@@ -130,7 +159,7 @@ participant I as Issuer / Exchange
 participant S as Asset Sender
 participant R as Asset Receiver
 participant M as Mediator
-participant O as OffChain Signer API
+participant O as Off-Chain Signer API
 participant P as Polymesh
 
 I ->> P: Create Settlement Instruction between Sender and Receiver
