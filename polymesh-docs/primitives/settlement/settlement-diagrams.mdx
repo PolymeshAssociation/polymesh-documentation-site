@@ -102,7 +102,7 @@ If the settlement instruction creator is also a sender or receiver in the instru
 
 ```mermaid
 sequenceDiagram
-participant I as Issuer / Exchange
+participant I as Venue Owner<br>(e.g. Issuer / Exchange)
 participant S as Asset Sender
 participant R as Asset Receiver
 participant SC as Sender Custodian
@@ -112,11 +112,11 @@ participant P as Polymesh
 
 par
   S ->> P: Issue Custody Authorization for Sender Custodian
-  P -->> SC: Pending Accept Custody Approval/Rejection  
+  P -->> SC: Pending Accept Custody Approval/Rejection
   SC ->> P: Accept Custody Authorization
 and
   R ->> P: Issue Custody Authorization for Receiver Custodian
-  P -->> RC: Pending Accept Custody Approval/Rejection  
+  P -->> RC: Pending Accept Custody Approval/Rejection
   RC ->> P: Accept Custody Authorization
 end
 
@@ -136,7 +136,7 @@ end
 
 I ->> P: Execute Settlement Instruction
 Note over I,P: Fully affirmed instructions can optionally be executed by any party to the instruction
-
+P ->> P: Sender and Receiver Balances<br>Updated and Locks Removed
 ```
 
 ## Asset Settlement / Distribution with Off-Chain Leg
@@ -147,16 +147,17 @@ In this case we have synchronised settlement between the off-chain and on-chain 
 
 :::note
 The role of the "Off-Chain Signer API" entity in the below sequence diagram is:
-  - monitor Polymesh for settlement instructions related to specified venues which involve off-chain legs
-  - observe whether or not the off-chain leg has been completed on the external payment / chain
-  - once the above steps have completed successfully sign a receipt (referencing the Polymesh settlement instruction and off-chain leg) using a private key which has been permissioned as an allowed signer on the venue associated with the settlement instruction
+
+- monitor Polymesh for settlement instructions related to specified venues which involve off-chain legs
+- observe whether or not the off-chain leg has been completed on the external payment / chain
+- once the above steps have completed successfully sign a receipt (referencing the Polymesh settlement instruction and off-chain leg) using a private key which has been permissioned as an allowed signer on the venue associated with the settlement instruction
 
 This signed data can then be used on Polymesh to affirm the off-chain leg, meaning that the Polymesh settlement instruction cannot be finalised until the "Off-Chain Signer API" has confirmed the payment (off-chain) leg.
 :::
 
 ```mermaid
 sequenceDiagram
-participant I as Issuer / Exchange
+participant I as Venue Owner
 participant S as Asset Sender
 participant R as Asset Receiver
 participant M as Mediator
@@ -170,6 +171,7 @@ par
   S ->> P: Affirm Settlement Instruction
   P ->> P: Sender Assets Locked
 and
+  note over R: Transfer the off-chain asset
   R ->> O: Request Signed Receipt the Off-Chain Asset Has Been Transferred
   O ->> R: Signed Receipt Provided
   R ->> P: Affirm Settlement Instruction via Signed Receipt
@@ -178,6 +180,8 @@ and
     M ->> P: Affirm Settlement Instruction
   end
 end
-
 I ->> P: Execute Settlement Instruction
+Note over I,P: Fully affirmed instructions can optionally be executed by any party to the instruction
+P ->> P: Sender and Receiver Balances<br>Updated and Lock Removed
+
 ```
