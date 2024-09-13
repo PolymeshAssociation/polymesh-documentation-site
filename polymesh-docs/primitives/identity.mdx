@@ -65,7 +65,7 @@ https://docs.substrate.io/learn/cryptography/
 There are three types of keys that can be used in Polymesh:
 
 - Public / Private key pairs
-- Multisigs
+- MultiSigs
 - Smart Contracts
 
 Polymesh is generally agnostic as to the type of key being used, and treats each key type consistently (e.g. for permissioning).
@@ -76,43 +76,72 @@ Polymesh uses public-key cryptography based on the [Ed25519 curve](https://docs.
 
 These types of keys can be held on hardware wallets, or can be generated off-line and stored as paper wallets.
 
-### Multisigs
+### MultiSigs
 
-In addition to public / private key pairs a key can also be a multisig account.
+In addition to public / private key pairs a key can also be a MultiSig account.
 
-A multisig is a single key which is controlled by one or more people. A _n_ of _m_ multisig requires _n_ of its _m_ members to agree on an action, before that action can be signed by that multisig.
+For a walkthrough on how to create a new MultiSig please see [MultiSig Walkthrough](../multisig/).
 
-- MultiSig Signers: the keys attached to the MultiSig as signers
+A MultiSig is a single key which is controlled by one or more people. A _n_ of _m_ MultiSig requires _n_ of its _m_ members to agree on a transaction, before that actitransactionon can be submitted by that MultiSig.
 
-- Creator Identity: the identity that created the MultiSig - this is fixed and can't be modified
+In particular a MultiSig has the following attributes:
 
-- Acting Identity: the identity that the MultiSig acts through, by virtue of being attached as a Primary / Secondary Key.
+- MultiSig Signers (`multisig::multiSigSigners`): the keys attached to the MultiSig as signers
 
-- MultiSig Signers => MultiSig is mapped through `KeyToMultiSig`
+- MultiSig Approvals Required (`multisig::multiSigSignsRequired`): the number of MultiSig Signers required to approve a transaction
 
-- MultiSig => Creator Identity is mapped through `MultiSigToIdentity`
+- Admin Identity (`multisig::adminDid`): the (optional) identity that can manage the MultiSig (e.g. add / remove signers)
 
-- MultiSig => Acting Identity and assigned permissions (if applicable) are mapped through `KeyRecords` (None if MultiSig is not a Primary / Secondary Key)
+- Paying Identity (`multisig::payingDid`): the (optional) identity that pays for MultiSig transactions (both the proposal and approval, as well as the execution)
 
-This has the consequence that MultiSig Signers can not send / receive POLYX (since they are not directly associated with an identity).
+- MultiSig Identity (`identity::keyRecords` / `identity::didRecords`): the (optional) identity to which the MultiSig is attached as a primary or secondary key
+
+#### Creating MultiSigs
+
+To create a new MultiSig, an existing key (attached to a valid identity) must call `multisig::createMultisig`, specifying the signers, and number of approvals required. It can also optionally specify the permissions that the new MultiSig will be assigned.
+
+The new MultiSig will automatically:
+- be added to the callers identity as a secondary key with appropriate permissions
+- have its *Paying Identity* set to the callers identity
+- issue `AddMultiSigSigner` authorisations to each of the specified signers
+
+Once created, the specified signers will need to accept the authorisations issued above, before they can interact with the multisig. This is done via a call to `multisig::acceptMultisigSigner` by each of the signing keys.
+
+#### Submitting Transactions
+
+MultiSig Signers are not directly associated with an identity, but are indirectly associated through their linked MultiSig (which may be attached to an identity as a primary or secondary key).
+
+This has the consequence that MultiSig Signers can not send / receive POLYX (since they are not directly associated with an identity), and hence cannot directly pay for transactions to create or approve proposals.
+
+In order to submit a normal transaction (excluding transactions related to joining / leaving an identity - for these see below), the MultiSig must be attached to a valid identity as a primary or secondary key, and either the MultiSig itself, or the primary key of its *Paying Identity*, must have sufficient funds to pay the transaction fees to create and approve the proposal.
+
+#### Identity Management
+
+When initially created, a MultiSig is:
+- linked to its creating identity as a secondary key
+- has its *Paying Identity* set to the creating identity
+- has no *Admin Identity* assigned
+
+However, after creation, these relationships can be amended.
+
+In particular an *Admin Identity* can be assigned via `multisig::addAdmin`, which then allows the assigned *Admin Identity* to add / remove signers from the MultiSig (via `multisig::addMultisigSignersViaAdmin`, `multisig::removeMultisigSignersViaAdmin`) and change the number of approvals needed (via `multisig::changeSigsRequiredViaAdmin`). To make these changes, the primary key of the *Admin Identity* must call these transactions.
+
+Additionally a MultiSig can leave and join new identities, similar to any other key. Changing identity will not update the *Admin Identity* of the MultiSig - this must be amended separately if needed.
+
+To change identity, a MultiSig must:
+- leave its current identity by executing a proposal of `identity::leaveIdentityAsKey`
+- receive a `JoinIdentity` authorisation from another identity
+- create / approve the `JoinIdentity` authorisation by a direct call to `multisig::approveJoinIdentity` by the required number of signers
+
+Note that in order to leave your current identity, a MultiSig must have a balance less than 1 POLYX - this is to avoid large POLYX balances becoming stuck on detached MultiSig keys.
+
+#### Payment Management
 
 MultiSigs can hold funds, once they have been attached as a Primary / Secondary Key to an identity. If they are removed from the identity they can continue to hold funds, as per normal external key behaviour, but these funds are locked until the key is reattached to a CDD'ed identity.
 
-All transactions have a single payer, which is established when the transaction is first submitted. For a transaction executed via a MultiSig this will be the Creator Identity derived from the external MultiSig Signer account that submits the extrinsic.
+A MultiSig may opt to pay for its own transactions (to remove the requirement to keep the primary key of its *Paying Identity* funded with POLYX) via `multisig::removePayer` - this can also be done by the *Paying Identity* (rather than the MultiSig) via `multisig::removePayerViaPayer`.
 
-When Signers are approving / proposing a MultiSig transaction, we have:
-
-- CDD check done on Creator Identity
-
-- Payment made by Creator Identity
-
-When a MultiSig executes a proposal, we have:
-
-- CDD check done on Creator Identity
-
-- CDD check done on Acting Identity (on dispatch)
-
-- Payment made by Creator Identity
+Note that if you remove the *Paying Identity* from a MultiSig it is not possible to re-add this at a later time.
 
 ### Smart Contracts
 
