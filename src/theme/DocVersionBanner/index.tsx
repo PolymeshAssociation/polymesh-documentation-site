@@ -1,17 +1,33 @@
-import React from 'react';
+import React, { type ComponentType } from 'react';
 import clsx from 'clsx';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Link from '@docusaurus/Link';
 import Translate from '@docusaurus/Translate';
 import {
   useActivePlugin,
   useDocVersionSuggestions,
+  type GlobalVersion,
 } from '@docusaurus/plugin-content-docs/client';
 import { ThemeClassNames } from '@docusaurus/theme-common';
 import {
   useDocsPreferredVersion,
   useDocsVersion,
-} from '@docusaurus/theme-common/internal';
-function UnreleasedVersionLabel({ siteTitle, versionMetadata }) {
+} from '@docusaurus/plugin-content-docs/client';
+import type { Props } from '@theme/DocVersionBanner';
+import type {
+  VersionBanner,
+  PropVersionMetadata,
+} from '@docusaurus/plugin-content-docs';
+
+type BannerLabelComponentProps = {
+  siteTitle: string;
+  versionMetadata: PropVersionMetadata;
+};
+
+function UnreleasedVersionLabel({
+  siteTitle,
+  versionMetadata,
+}: BannerLabelComponentProps) {
   return (
     <Translate
       id="theme.docs.versions.unreleasedVersionLabel"
@@ -27,7 +43,11 @@ function UnreleasedVersionLabel({ siteTitle, versionMetadata }) {
     </Translate>
   );
 }
-function UnmaintainedVersionLabel({ siteTitle, versionMetadata }) {
+
+function UnmaintainedVersionLabel({
+  siteTitle,
+  versionMetadata,
+}: BannerLabelComponentProps) {
   return (
     <Translate
       id="theme.docs.versions.unmaintainedVersionLabel"
@@ -43,16 +63,29 @@ function UnmaintainedVersionLabel({ siteTitle, versionMetadata }) {
     </Translate>
   );
 }
-const BannerLabelComponents = {
+
+const BannerLabelComponents: {
+  [banner in VersionBanner]: ComponentType<BannerLabelComponentProps>;
+} = {
   unreleased: UnreleasedVersionLabel,
   unmaintained: UnmaintainedVersionLabel,
 };
-function BannerLabel(props) {
+
+function BannerLabel(props: BannerLabelComponentProps) {
   const BannerLabelComponent =
-    BannerLabelComponents[props.versionMetadata.banner];
+    BannerLabelComponents[props.versionMetadata.banner!];
   return <BannerLabelComponent {...props} />;
 }
-function LatestVersionSuggestionLabel({ versionLabel, to, onClick }) {
+
+function LatestVersionSuggestionLabel({
+  versionLabel,
+  to,
+  onClick,
+}: {
+  to: string;
+  onClick: () => void;
+  versionLabel: string;
+}) {
   return (
     <Translate
       id="theme.docs.versions.latestVersionSuggestionLabel"
@@ -79,24 +112,38 @@ function LatestVersionSuggestionLabel({ versionLabel, to, onClick }) {
     </Translate>
   );
 }
-function DocVersionBannerEnabled({ className, versionMetadata }) {
+
+function DocVersionBannerEnabled({
+  className,
+  versionMetadata,
+}: Props & {
+  versionMetadata: PropVersionMetadata;
+}): JSX.Element {
+  // const {
+  //   siteConfig: { title: siteTitle },
+  // } = useDocusaurusContext();
   const docsTitle = 'Polymesh SDK';
-  const { pluginId } = useActivePlugin({ failfast: true });
-  const getVersionMainDoc = (version) =>
-    version.docs.find((doc) => doc.id === version.mainDocId);
+  const { pluginId } = useActivePlugin({ failfast: true })!;
+
+  const getVersionMainDoc = (version: GlobalVersion) =>
+    version.docs.find((doc) => doc.id === version.mainDocId)!;
+
   const { savePreferredVersionName } = useDocsPreferredVersion(pluginId);
+
   const { latestDocSuggestion, latestVersionSuggestion } =
     useDocVersionSuggestions(pluginId);
+
   // Try to link to same doc in latest version (not always possible), falling
   // back to main doc of latest version
   const latestVersionSuggestedDoc =
     latestDocSuggestion ?? getVersionMainDoc(latestVersionSuggestion);
+
   return (
     <div
       className={clsx(
         className,
         ThemeClassNames.docs.docVersionBanner,
-        'alert alert--warning margin-bottom--md'
+        'alert alert--warning margin-bottom--md',
       )}
       role="alert"
     >
@@ -113,7 +160,10 @@ function DocVersionBannerEnabled({ className, versionMetadata }) {
     </div>
   );
 }
-export default function DocVersionBanner({ className }) {
+
+export default function DocVersionBanner({
+  className,
+}: Props): JSX.Element | null {
   const versionMetadata = useDocsVersion();
   if (versionMetadata.banner) {
     return (
