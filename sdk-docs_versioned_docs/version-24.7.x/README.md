@@ -21,7 +21,7 @@ sidebar_position: 0
 
 ## Polymesh version
 
-This release is compatible with Polymesh v6.0, v6.1, v6.2
+This release is compatible with Polymesh v6.2 and v6.3,
 
 <!--- End of section --->
 

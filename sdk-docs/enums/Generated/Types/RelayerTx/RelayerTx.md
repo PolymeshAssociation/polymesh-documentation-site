@@ -1,0 +1,67 @@
+---
+id: "RelayerTx"
+title: "Enumeration: RelayerTx"
+sidebar_label: "RelayerTx"
+---
+
+[generated/types](../../../../modules/Generated/Types/Types.md).RelayerTx
+
+## Enumeration Members
+
+### AcceptPayingKey
+
+• **AcceptPayingKey** = ``"relayer.acceptPayingKey"``
+
+#### Defined in
+
+[generated/types.ts:762](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L762)
+
+___
+
+### DecreasePolyxLimit
+
+• **DecreasePolyxLimit** = ``"relayer.decreasePolyxLimit"``
+
+#### Defined in
+
+[generated/types.ts:766](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L766)
+
+___
+
+### IncreasePolyxLimit
+
+• **IncreasePolyxLimit** = ``"relayer.increasePolyxLimit"``
+
+#### Defined in
+
+[generated/types.ts:765](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L765)
+
+___
+
+### RemovePayingKey
+
+• **RemovePayingKey** = ``"relayer.removePayingKey"``
+
+#### Defined in
+
+[generated/types.ts:763](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L763)
+
+___
+
+### SetPayingKey
+
+• **SetPayingKey** = ``"relayer.setPayingKey"``
+
+#### Defined in
+
+[generated/types.ts:761](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L761)
+
+___
+
+### UpdatePolyxLimit
+
+• **UpdatePolyxLimit** = ``"relayer.updatePolyxLimit"``
+
+#### Defined in
+
+[generated/types.ts:764](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L764)

@@ -1,7 +1,7 @@
 ---
-id: "README"
-title: "Polymesh SDK Readme"
-sidebar_label: "SDK Readme"
+id: 'README'
+title: 'Polymesh SDK Readme'
+sidebar_label: 'SDK Readme'
 sidebar_position: 0
 ---
 
@@ -21,7 +21,7 @@ sidebar_position: 0
 
 ## Polymesh version
 
-This release is compatible with Polymesh v6.0, v6.1, v6.2
+This release is compatible with Polymesh v6.3
 
 <!--- End of section --->
 
@@ -33,7 +33,7 @@ The Polymesh SDK's main goal is to provide external developers with a set of too
 
 ### Technical Pre-requisites
 
-In order to use the Polymesh SDK, you must install [node](https://nodejs.org/) \(version 16\) and [npm](https://www.npmjs.com/). The library is written in [typescript](https://www.typescriptlang.org/), but can also be used in plain javascript. This document will assume you are using typescript, but the translation to javascript is very simple.
+In order to use the Polymesh SDK, you must install [node](https://nodejs.org/) \(version 18+ recommended\) and [npm](https://www.npmjs.com/). The library is written in [typescript](https://www.typescriptlang.org/), but can also be used in plain javascript. This document will assume you are using typescript, but the translation to javascript is very simple.
 
 ### Documentation
 
@@ -74,7 +74,8 @@ async function run() {
         mnemonic: '//Alice', //A "well known" mnemonic, often with sudo privileges on development chains
       },
       {
-        mnemonic: 'forest end mail art wish leave truth else ignore royal knife river', // most mnemonics are 12 words
+        mnemonic:
+          'forest end mail art wish leave truth else ignore royal knife river', // most mnemonics are 12 words
       },
     ],
   });
@@ -99,7 +100,9 @@ import { Polymesh } from '@polymeshassociation/polymesh-sdk';
 import { BrowserExtensionSigningManager } from '@polymeshassociation/browser-extension-signing-manager';
 
 async function run() {
-  const signingManager = await BrowserExtensionSigningManager.create('MY_APP_NAME'); // The Polymesh wallet extension will ask the user to authorize MY_APP_NAME for access
+  const signingManager = await BrowserExtensionSigningManager.create(
+    'MY_APP_NAME'
+  ); // The Polymesh wallet extension will ask the user to authorize MY_APP_NAME for access
 
   const polyClient = await Polymesh.connect({
     nodeUrl: 'wss://some-node-url.com',
@@ -140,18 +143,15 @@ Approving and rejecting existing proposals are an exception and should be submit
 MultiSig signers, then the procedure's `multiSig` param can be checked to ensure the correct method is called.
 
 ```typescript
-  const createAssetProc = await polyClient.assets.createAsset(
-    args,
-    {
-      signingAccount: multiSigSigner
-    }
-  )
-  createAssetProc.multiSig // indicates the acting MultiSig. If set `runAsProposal` must be used
-  const proposal = await createAssetProc.runAsProposal()
+const createAssetProc = await polyClient.assets.createAsset(args, {
+  signingAccount: multiSigSigner,
+});
+createAssetProc.multiSig; // indicates the acting MultiSig. If set `runAsProposal` must be used
+const proposal = await createAssetProc.runAsProposal();
 
-  const rejectProc = await proposal.reject({ signingAccount: multiSigSigner })
-  rejectProc.multiSig // returns `null`. Rejecting a proposal does not get wrapped
-  await rejectProc.run()
+const rejectProc = await proposal.reject({ signingAccount: multiSigSigner });
+rejectProc.multiSig; // returns `null`. Rejecting a proposal does not get wrapped
+await rejectProc.run();
 ```
 
 #### Reading Data
