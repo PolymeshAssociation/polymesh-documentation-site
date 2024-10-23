@@ -69,13 +69,13 @@ const config: Config = {
         id: 'sdk-docs',
         path: 'sdk-docs',
         routeBasePath: '/sdk-docs',
-        includeCurrentVersion: false,
-        // versions: {
-        //   current: {
-        //     label: '24.6.0',
-        //     path: '24.6.0',
-        //   },
-        // },
+        includeCurrentVersion: true,
+        versions: {
+          current: {
+            label: '26.0.0-alpha.1',
+            path: '26.0.0-alpha.1',
+          },
+        },
       },
     ],
     [

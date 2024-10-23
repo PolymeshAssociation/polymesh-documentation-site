@@ -12,8 +12,9 @@ import ActionCardWrapper from '/src/components/ActionCard/ActionCardWrapper';
 export default {
   // Re-use the default mapping
   ...MDXComponents,
-  // Map the "highlight" tag to our <Highlight /> component!
-  // `Highlight` will receive all props that were passed to `highlight` in MDX
+  // Make components available globally without import statements
+  // Map the e.g. "OverviewBox" tag to our <OverviewBox /> component!
+  // `OverviewBox` will receive all props that were passed to `OverviewBox` in MDX
   Tabs,
   TabItem,
   OverviewBox,
