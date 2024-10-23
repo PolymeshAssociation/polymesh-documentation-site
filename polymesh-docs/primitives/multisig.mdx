@@ -135,10 +135,6 @@ A *Paying Identity* can be removed either by the MultiSig, or by the *Paying Ide
 
 It may be that the MultiSig needs to be detached from its current identity, and attached to a new identity.
 
-In order to be detached from an identity, a MultiSig must have a POLYX balance of less than 1 POLYX. This is to avoid a large amount of POLYX being locked on a MultiSig which can no longer transact as a result of not being attached as a primary or secondary key to an identity.
-
-Once the balance has been decreased below 1 POLYX, the MultiSig can leave its current identity.
-
 ![Leave Identity](../images/multisig/24-leave_identity.png)
 
 ![Leave Identity Event](../images/multisig/25-leave_identity_event.png)
@@ -156,3 +152,11 @@ To join a new identity, a MultiSig must use the dedicated extrinsic `multisig::a
 ![Accept Identity](../images/multisig/28-join_identity.png)
 
 ![Accept Identity Event](../images/multisig/29-join_identity_event.png)
+
+Note that it is also possible to simplify the workflow using Polymesh's native batching functionality,
+
+Instead you can create a proposal for an atomic batch of two transactions using `utility::batch`:
+  - leave the current identity by executing `identity::leaveIdentityAsKey`
+  - join the new identity by executing `identity::joinIdentityAsKey`
+
+The latter approach is recommended provided the `JoinIdentity` authorization can be issued before the MultiSig needs to leave its current identity.

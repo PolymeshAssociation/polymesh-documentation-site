@@ -129,11 +129,21 @@ In particular an *Admin Identity* can be assigned via `multisig::addAdmin`, whic
 Additionally a MultiSig can leave and join new identities, similar to any other key. Changing identity will not update the *Admin Identity* of the MultiSig - this must be amended separately if needed.
 
 To change identity, a MultiSig must:
-- leave its current identity by executing a proposal of `identity::leaveIdentityAsKey`
+
 - receive a `JoinIdentity` authorisation from another identity
+
+and then either:
+
+- leave its current identity by executing a proposal of `identity::leaveIdentityAsKey`
 - create / approve the `JoinIdentity` authorisation by a direct call to `multisig::approveJoinIdentity` by the required number of signers
 
-Note that in order to leave your current identity, a MultiSig must have a balance less than 1 POLYX - this is to avoid large POLYX balances becoming stuck on detached MultiSig keys.
+or:
+
+- create a proposal for an atomic batch of two transactions using `utility::batch`:
+  - leave its current identity by executing `identity::leaveIdentityAsKey`
+  - join its new identity by executing `identity::joinIdentityAsKey`
+
+The latter approach is recommended provided the `JoinIdentity` authorization can be issued before the MultiSig needs to leave its current identity.
 
 #### Payment Management
 
