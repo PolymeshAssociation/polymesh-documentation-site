@@ -44,9 +44,9 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
-        googleTagManager: {
-          containerId: process.env.GTM_CONTAINER_ID,
-        },
+        // googleTagManager: {
+        //   containerId: process.env.GTM_CONTAINER_ID,
+        // },
       } satisfies Preset.Options,
     ],
   ],
@@ -100,9 +100,16 @@ const config: Config = {
         ],
       },
     ],
+    'docusaurus-plugin-matomo'
   ],
 
   themeConfig: {
+    matomo: {
+      matomoUrl: 'https://matomo.polymesh.network/',
+      siteId: '3',
+      phpLoader: 'matomo.php',
+      jsLoader: 'matomo.js',
+    },    
     algolia: {
       // The application ID provided by Algolia
       appId: 'K25SRS7O1D',
@@ -260,7 +267,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Polymesh Association, All Right Reserved`,
+      copyright: `Copyright © ${new Date().getFullYear()} Polymesh Association, All Rights Reserved`,
       logo: {
         width: '150px',
         alt: 'Polymesh Logo',
