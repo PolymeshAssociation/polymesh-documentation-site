@@ -40,7 +40,7 @@ this method is of type [ProcedureMethod](../../../../../../../interfaces/API/Pro
 
 #### Defined in
 
-[api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L93)
+[api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L93)
 
 ___
 
@@ -60,7 +60,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L112)
+[api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L112)
 
 ▸ **get**(`callback`): `Promise`\<[`UnsubCallback`](../../../../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -76,7 +76,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L113)
+[api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L113)
 
 ___
 
@@ -104,7 +104,7 @@ this method is of type [ProcedureMethod](../../../../../../../interfaces/API/Pro
 
 #### Defined in
 
-[api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L103)
+[api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L103)
 
 ___
 
@@ -134,4 +134,4 @@ this method is of type [ProcedureMethod](../../../../../../../interfaces/API/Pro
 
 #### Defined in
 
-[api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L83)
+[api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L83)

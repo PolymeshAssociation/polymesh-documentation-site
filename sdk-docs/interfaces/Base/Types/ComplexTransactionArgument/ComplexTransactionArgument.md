@@ -14,7 +14,7 @@ sidebar_label: "ComplexTransactionArgument"
 
 #### Defined in
 
-[base/types.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L96)
+[base/types.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L96)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[base/types.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L92)
+[base/types.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L92)

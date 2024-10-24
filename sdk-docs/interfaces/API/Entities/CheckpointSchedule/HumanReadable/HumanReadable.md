@@ -14,7 +14,7 @@ sidebar_label: "HumanReadable"
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CheckpointSchedule/index.ts#L24)
+[api/entities/CheckpointSchedule/index.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CheckpointSchedule/index.ts#L24)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CheckpointSchedule/index.ts#L26)
+[api/entities/CheckpointSchedule/index.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CheckpointSchedule/index.ts#L26)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CheckpointSchedule/index.ts#L19)
+[api/entities/CheckpointSchedule/index.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CheckpointSchedule/index.ts#L19)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CheckpointSchedule/index.ts#L25)
+[api/entities/CheckpointSchedule/index.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CheckpointSchedule/index.ts#L25)
 
 ___
 
@@ -58,4 +58,4 @@ in favour of `assetId`
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CheckpointSchedule/index.ts#L23)
+[api/entities/CheckpointSchedule/index.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CheckpointSchedule/index.ts#L23)

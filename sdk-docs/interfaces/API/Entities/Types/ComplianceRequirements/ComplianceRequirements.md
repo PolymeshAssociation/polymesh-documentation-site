@@ -16,7 +16,7 @@ used for conditions where no trusted claim issuers were specified
 
 #### Defined in
 
-[api/entities/types.ts:402](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L402)
+[api/entities/types.ts:402](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L402)
 
 ___
 
@@ -26,4 +26,4 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:398](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L398)
+[api/entities/types.ts:398](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L398)

@@ -16,7 +16,7 @@ List of child keys along with their off chain authorization signatures
 
 #### Defined in
 
-[api/procedures/types.ts:1722](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L1722)
+[api/procedures/types.ts:1727](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L1727)
 
 ___
 
@@ -28,4 +28,4 @@ Expiry date until which all the off chain authorizations received from each key 
 
 #### Defined in
 
-[api/procedures/types.ts:1717](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L1717)
+[api/procedures/types.ts:1722](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L1722)

@@ -1270,6 +1270,12 @@ Re-exports [IssueTokensParams](../../interfaces/API/Procedures/Types/IssueTokens
 
 ___
 
+### JoinCreatorAsPrimary
+
+Re-exports [JoinCreatorAsPrimary](../../interfaces/API/Procedures/Types/JoinCreatorAsPrimary/JoinCreatorAsPrimary.md)
+
+___
+
 ### JoinCreatorAsSecondary
 
 Re-exports [JoinCreatorAsSecondary](../../interfaces/API/Procedures/Types/JoinCreatorAsSecondary/JoinCreatorAsSecondary.md)
@@ -2776,7 +2782,7 @@ Re-exports [WithdrawInstructionParams](../API/Procedures/Types/Types.md#withdraw
 
 #### Defined in
 
-[middleware/typesV1.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/typesV1.ts#L13)
+[middleware/typesV1.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/typesV1.ts#L13)
 
 ___
 
@@ -2826,4 +2832,4 @@ All built-in and custom scalars, mapped to their actual values
 
 #### Defined in
 
-[middleware/types.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L13)
+[middleware/types.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L13)

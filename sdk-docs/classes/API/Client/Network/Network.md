@@ -37,7 +37,7 @@ uses the middlewareV2
 
 #### Defined in
 
-[api/client/Network.ts:169](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Network.ts#L169)
+[api/client/Network.ts:169](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Network.ts#L169)
 
 ___
 
@@ -70,7 +70,7 @@ uses the middlewareV2
 
 #### Defined in
 
-[api/client/Network.ts:328](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Network.ts#L328)
+[api/client/Network.ts:328](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Network.ts#L328)
 
 ___
 
@@ -86,7 +86,7 @@ Retrieve the number of the latest finalized block in the chain
 
 #### Defined in
 
-[api/client/Network.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Network.ts#L60)
+[api/client/Network.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Network.ts#L60)
 
 ___
 
@@ -108,7 +108,7 @@ uses the middleware V2
 
 #### Defined in
 
-[api/client/Network.ts:479](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Network.ts#L479)
+[api/client/Network.ts:479](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Network.ts#L479)
 
 ___
 
@@ -129,7 +129,7 @@ uses the middleware V2
 
 #### Defined in
 
-[api/client/Network.ts:468](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Network.ts#L468)
+[api/client/Network.ts:468](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Network.ts#L468)
 
 ___
 
@@ -145,7 +145,7 @@ Retrieve information for the current network
 
 #### Defined in
 
-[api/client/Network.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Network.ts#L81)
+[api/client/Network.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Network.ts#L81)
 
 ___
 
@@ -168,7 +168,7 @@ Retrieve the protocol fees associated with running specific transactions
 
 #### Defined in
 
-[api/client/Network.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Network.ts#L107)
+[api/client/Network.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Network.ts#L107)
 
 ___
 
@@ -184,7 +184,7 @@ Retrieve the chain's SS58 format
 
 #### Defined in
 
-[api/client/Network.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Network.ts#L74)
+[api/client/Network.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Network.ts#L74)
 
 ___
 
@@ -211,7 +211,7 @@ uses the middlewareV2
 
 #### Defined in
 
-[api/client/Network.ts:376](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Network.ts#L376)
+[api/client/Network.ts:376](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Network.ts#L376)
 
 ___
 
@@ -227,7 +227,7 @@ Get the treasury wallet address
 
 #### Defined in
 
-[api/client/Network.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Network.ts#L114)
+[api/client/Network.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Network.ts#L114)
 
 ___
 
@@ -247,7 +247,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/client/Network.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Network.ts#L127)
+[api/client/Network.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Network.ts#L127)
 
 ▸ **getTreasuryBalance**(`callback`): `Promise`\<[`UnsubCallback`](../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -263,7 +263,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/client/Network.ts:128](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Network.ts#L128)
+[api/client/Network.ts:128](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Network.ts#L128)
 
 ___
 
@@ -279,7 +279,7 @@ Fetch the current network version (e.g. 3.1.0)
 
 #### Defined in
 
-[api/client/Network.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Network.ts#L67)
+[api/client/Network.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Network.ts#L67)
 
 ___
 
@@ -306,7 +306,7 @@ if the signature is not hex encoded
 
 #### Defined in
 
-[api/client/Network.ts:207](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Network.ts#L207)
+[api/client/Network.ts:207](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Network.ts#L207)
 
 ___
 
@@ -322,7 +322,7 @@ Returns whether or not the connected chain node as support for confidential asse
 
 #### Defined in
 
-[api/client/Network.ts:496](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Network.ts#L496)
+[api/client/Network.ts:496](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Network.ts#L496)
 
 ___
 
@@ -340,7 +340,7 @@ Returns if functions can be subscribed.
 
 #### Defined in
 
-[api/client/Network.ts:512](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Network.ts#L512)
+[api/client/Network.ts:512](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Network.ts#L512)
 
 ___
 
@@ -368,4 +368,4 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Network.ts:154](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Network.ts#L154)
+[api/client/Network.ts:154](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Network.ts#L154)

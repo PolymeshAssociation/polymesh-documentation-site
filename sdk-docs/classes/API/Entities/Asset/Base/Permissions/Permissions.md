@@ -40,7 +40,7 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Base/Permissions/index.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/Permissions/index.ts#L67)
+[api/entities/Asset/Base/Permissions/index.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/Permissions/index.ts#L67)
 
 ___
 
@@ -57,7 +57,7 @@ Retrieve a list of agents (Identities which have permissions over the Asset) and
 
 #### Defined in
 
-[api/entities/Asset/Base/Permissions/index.ts:168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/Permissions/index.ts#L168)
+[api/entities/Asset/Base/Permissions/index.ts:168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/Permissions/index.ts#L168)
 
 ___
 
@@ -85,7 +85,7 @@ if there is no Permission Group with the passed ID
 
 #### Defined in
 
-[api/entities/Asset/Base/Permissions/index.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/Permissions/index.ts#L101)
+[api/entities/Asset/Base/Permissions/index.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/Permissions/index.ts#L101)
 
 ▸ **getGroup**(`args`): `Promise`\<[`KnownPermissionGroup`](../../../KnownPermissionGroup/KnownPermissionGroup.md)\>
 
@@ -102,7 +102,7 @@ if there is no Permission Group with the passed ID
 
 #### Defined in
 
-[api/entities/Asset/Base/Permissions/index.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/Permissions/index.ts#L102)
+[api/entities/Asset/Base/Permissions/index.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/Permissions/index.ts#L102)
 
 ___
 
@@ -118,7 +118,7 @@ Retrieve all Permission Groups of this Asset
 
 #### Defined in
 
-[api/entities/Asset/Base/Permissions/index.ts:131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/Permissions/index.ts#L131)
+[api/entities/Asset/Base/Permissions/index.ts:131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/Permissions/index.ts#L131)
 
 ___
 
@@ -152,7 +152,7 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Base/Permissions/index.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/Permissions/index.ts#L81)
+[api/entities/Asset/Base/Permissions/index.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/Permissions/index.ts#L81)
 
 ___
 
@@ -180,4 +180,4 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Base/Permissions/index.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/Permissions/index.ts#L91)
+[api/entities/Asset/Base/Permissions/index.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/Permissions/index.ts#L91)

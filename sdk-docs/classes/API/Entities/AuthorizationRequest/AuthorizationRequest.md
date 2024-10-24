@@ -26,7 +26,7 @@ internal identifier for the Request (used to accept/reject/cancel)
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/AuthorizationRequest.ts#L100)
+[api/entities/AuthorizationRequest.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/AuthorizationRequest.ts#L100)
 
 ___
 
@@ -51,7 +51,7 @@ Authorization Request data corresponding to type of Authorization
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/AuthorizationRequest.ts#L89)
+[api/entities/AuthorizationRequest.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/AuthorizationRequest.ts#L89)
 
 ___
 
@@ -64,7 +64,7 @@ date at which the Authorization Request expires and can no longer be accepted.
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/AuthorizationRequest.ts#L95)
+[api/entities/AuthorizationRequest.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/AuthorizationRequest.ts#L95)
 
 ___
 
@@ -76,7 +76,7 @@ Identity that emitted the request
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/AuthorizationRequest.ts#L71)
+[api/entities/AuthorizationRequest.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/AuthorizationRequest.ts#L71)
 
 ___
 
@@ -88,7 +88,7 @@ Identity or Account to which the request was emitted
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/AuthorizationRequest.ts#L66)
+[api/entities/AuthorizationRequest.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/AuthorizationRequest.ts#L66)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -129,7 +129,7 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:193](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/AuthorizationRequest.ts#L193)
+[api/entities/AuthorizationRequest.ts:193](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/AuthorizationRequest.ts#L193)
 
 ___
 
@@ -149,7 +149,7 @@ Determine whether this Authorization Request exists on chain
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/AuthorizationRequest.ts#L222)
+[api/entities/AuthorizationRequest.ts:222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/AuthorizationRequest.ts#L222)
 
 ___
 
@@ -175,7 +175,7 @@ Determine whether this Entity is the same as another one
 
 #### Defined in
 
-[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L61)
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -191,7 +191,7 @@ Returns whether the Authorization Request has expired
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/AuthorizationRequest.ts#L213)
+[api/entities/AuthorizationRequest.ts:213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/AuthorizationRequest.ts#L213)
 
 ___
 
@@ -221,7 +221,7 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:206](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/AuthorizationRequest.ts#L206)
+[api/entities/AuthorizationRequest.ts:206](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/AuthorizationRequest.ts#L206)
 
 ___
 
@@ -241,7 +241,7 @@ Return the Authorization's static data
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:236](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/AuthorizationRequest.ts#L236)
+[api/entities/AuthorizationRequest.ts:236](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/AuthorizationRequest.ts#L236)
 
 ___
 
@@ -273,7 +273,7 @@ Generate the Entity's UUID from its identifying properties
 
 #### Defined in
 
-[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L14)
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L14)
 
 ___
 
@@ -305,4 +305,4 @@ Unserialize a UUID into its Unique Identifiers
 
 #### Defined in
 
-[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L23)
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L23)

@@ -16,7 +16,7 @@ Additional information attached to the payload, such as IDs or memos about the t
 
 #### Defined in
 
-[base/types.ts:199](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L199)
+[base/types.ts:199](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L199)
 
 ___
 
@@ -31,7 +31,7 @@ the signer payload and signature will be attached to.
 
 #### Defined in
 
-[base/types.ts:194](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L194)
+[base/types.ts:194](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L194)
 
 ___
 
@@ -45,7 +45,7 @@ Will be set only if the signing account is a MultiSig signer and the transaction
 
 #### Defined in
 
-[base/types.ts:206](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L206)
+[base/types.ts:206](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L206)
 
 ___
 
@@ -57,7 +57,7 @@ This is what a Polkadot signer ".signPayload" method expects
 
 #### Defined in
 
-[base/types.ts:178](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L178)
+[base/types.ts:178](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L178)
 
 ___
 
@@ -73,4 +73,4 @@ the signature should be prefixed with a single byte to indicate its type. Prepen
 
 #### Defined in
 
-[base/types.ts:185](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L185)
+[base/types.ts:185](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L185)

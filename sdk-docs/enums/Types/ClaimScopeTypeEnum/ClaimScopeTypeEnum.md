@@ -14,7 +14,7 @@ sidebar_label: "ClaimScopeTypeEnum"
 
 #### Defined in
 
-[middleware/typesV1.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/typesV1.ts#L9)
+[middleware/typesV1.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/typesV1.ts#L9)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV1.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/typesV1.ts#L10)
+[middleware/typesV1.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/typesV1.ts#L10)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[middleware/typesV1.ts:4](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/typesV1.ts#L4)
+[middleware/typesV1.ts:4](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/typesV1.ts#L4)
 
 ___
 
@@ -48,4 +48,4 @@ in favour of 'Asset'
 
 #### Defined in
 
-[middleware/typesV1.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/typesV1.ts#L8)
+[middleware/typesV1.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/typesV1.ts#L8)

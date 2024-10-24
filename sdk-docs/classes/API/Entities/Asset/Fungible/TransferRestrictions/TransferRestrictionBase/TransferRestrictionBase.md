@@ -58,7 +58,7 @@ this method is of type [ProcedureMethod](../../../../../../../interfaces/API/Pro
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts:178](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts#L178)
+[api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts:178](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts#L178)
 
 ___
 
@@ -90,7 +90,7 @@ this method is of type [ProcedureMethod](../../../../../../../interfaces/API/Pro
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts:224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts#L224)
+[api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts:224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts#L224)
 
 ___
 
@@ -118,7 +118,7 @@ this method is of type [ProcedureMethod](../../../../../../../interfaces/API/Pro
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts:212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts#L212)
+[api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts:212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts#L212)
 
 ___
 
@@ -140,7 +140,7 @@ there is a maximum number of restrictions allowed across all types.
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts:235](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts#L235)
+[api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts:235](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts#L235)
 
 ___
 
@@ -162,7 +162,7 @@ there is a maximum number of restrictions allowed across all types.
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts:357](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts#L357)
+[api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts:357](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts#L357)
 
 ___
 
@@ -193,7 +193,7 @@ this method is of type [NoArgsProcedureMethod](../../../../../../../interfaces/A
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts:202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts#L202)
+[api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts:202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts#L202)
 
 ___
 
@@ -225,4 +225,4 @@ this method is of type [ProcedureMethod](../../../../../../../interfaces/API/Pro
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts:190](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts#L190)
+[api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts:190](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/TransferRestrictions/TransferRestrictionBase.ts#L190)

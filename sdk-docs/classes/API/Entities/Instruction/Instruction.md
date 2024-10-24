@@ -24,7 +24,7 @@ Unique identifier number of the instruction
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L102)
+[api/entities/Instruction/index.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L102)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -66,7 +66,7 @@ this method is of type [OptionalArgsProcedureMethod](../../../../interfaces/API/
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:551](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L551)
+[api/entities/Instruction/index.ts:560](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L560)
 
 ___
 
@@ -94,7 +94,7 @@ this method is of type [OptionalArgsProcedureMethod](../../../../interfaces/API/
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:585](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L585)
+[api/entities/Instruction/index.ts:594](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L594)
 
 ___
 
@@ -110,7 +110,7 @@ Retrieve information specific to this Instruction
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:299](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L299)
+[api/entities/Instruction/index.ts:299](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L299)
 
 ___
 
@@ -138,7 +138,7 @@ this method is of type [OptionalArgsProcedureMethod](../../../../interfaces/API/
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:605](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L605)
+[api/entities/Instruction/index.ts:614](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L614)
 
 ___
 
@@ -158,7 +158,7 @@ Determine whether this Instruction exists on chain (or existed and was pruned)
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L281)
+[api/entities/Instruction/index.ts:281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L281)
 
 ___
 
@@ -185,7 +185,7 @@ Generate an offchain affirmation receipt for a specific leg and UID
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:813](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L813)
+[api/entities/Instruction/index.ts:825](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L825)
 
 ___
 
@@ -211,7 +211,7 @@ supports pagination
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:351](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L351)
+[api/entities/Instruction/index.ts:351](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L351)
 
 ___
 
@@ -234,7 +234,7 @@ Retrieve all the involved portfolios in this Instruction where the given identit
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:651](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L651)
+[api/entities/Instruction/index.ts:663](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L663)
 
 ___
 
@@ -260,7 +260,7 @@ supports pagination
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:397](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L397)
+[api/entities/Instruction/index.ts:397](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L397)
 
 ___
 
@@ -276,7 +276,7 @@ Returns the mediators for the Instruction, along with their affirmation status
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:698](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L698)
+[api/entities/Instruction/index.ts:710](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L710)
 
 ___
 
@@ -299,7 +299,7 @@ Returns affirmation status for a specific offchain leg in this Instruction
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:762](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L762)
+[api/entities/Instruction/index.ts:774](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L774)
 
 ___
 
@@ -315,7 +315,7 @@ Returns affirmation statuses for offchain legs in this Instruction
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:727](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L727)
+[api/entities/Instruction/index.ts:739](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L739)
 
 ___
 
@@ -335,7 +335,7 @@ uses the middlewareV2
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:497](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L497)
+[api/entities/Instruction/index.ts:497](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L497)
 
 ___
 
@@ -361,7 +361,7 @@ Determine whether this Entity is the same as another one
 
 #### Defined in
 
-[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L61)
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -378,7 +378,7 @@ Retrieve whether the Instruction has already been executed and pruned from
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:193](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L193)
+[api/entities/Instruction/index.ts:193](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L193)
 
 ___
 
@@ -394,7 +394,7 @@ Retrieve whether the Instruction is still pending on chain
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L222)
+[api/entities/Instruction/index.ts:222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L222)
 
 ___
 
@@ -425,7 +425,7 @@ current status as `Executed` means that the Instruction has been executed/reject
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:247](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L247)
+[api/entities/Instruction/index.ts:247](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L247)
 
 ___
 
@@ -465,7 +465,7 @@ this method is of type [OptionalArgsProcedureMethod](../../../../interfaces/API/
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:541](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L541)
+[api/entities/Instruction/index.ts:550](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L550)
 
 ___
 
@@ -504,7 +504,7 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:575](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L575)
+[api/entities/Instruction/index.ts:584](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L584)
 
 ___
 
@@ -524,7 +524,7 @@ Return the Instruction's ID
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:644](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L644)
+[api/entities/Instruction/index.ts:656](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L656)
 
 ___
 
@@ -552,7 +552,7 @@ this method is of type [OptionalArgsProcedureMethod](../../../../interfaces/API/
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:561](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L561)
+[api/entities/Instruction/index.ts:570](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L570)
 
 ___
 
@@ -579,7 +579,7 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Instruction/index.ts:595](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/index.ts#L595)
+[api/entities/Instruction/index.ts:604](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/index.ts#L604)
 
 ___
 
@@ -611,7 +611,7 @@ Generate the Entity's UUID from its identifying properties
 
 #### Defined in
 
-[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L14)
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L14)
 
 ___
 
@@ -643,4 +643,4 @@ Unserialize a UUID into its Unique Identifiers
 
 #### Defined in
 
-[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L23)
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L23)

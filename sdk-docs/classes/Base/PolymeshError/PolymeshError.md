@@ -22,7 +22,7 @@ Wraps an error to give more information about its type
 
 #### Defined in
 
-[base/PolymeshError.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/PolymeshError.ts#L16)
+[base/PolymeshError.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/PolymeshError.ts#L16)
 
 ___
 
@@ -32,4 +32,4 @@ ___
 
 #### Defined in
 
-[base/PolymeshError.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/PolymeshError.ts#L18)
+[base/PolymeshError.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/PolymeshError.ts#L18)

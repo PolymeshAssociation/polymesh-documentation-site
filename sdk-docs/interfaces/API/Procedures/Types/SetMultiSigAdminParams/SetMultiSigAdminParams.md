@@ -16,4 +16,4 @@ The identity to become an admin for the MultiSig. `null` will remove the current
 
 #### Defined in
 
-[api/procedures/types.ts:1646](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L1646)
+[api/procedures/types.ts:1651](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L1651)

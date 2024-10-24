@@ -39,7 +39,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Assets.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Assets.ts#L102)
+[api/client/Assets.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Assets.ts#L102)
 
 ___
 
@@ -72,7 +72,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Assets.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Assets.ts#L115)
+[api/client/Assets.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Assets.ts#L115)
 
 ___
 
@@ -98,7 +98,7 @@ supports pagination
 
 #### Defined in
 
-[api/client/Assets.ts:408](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Assets.ts#L408)
+[api/client/Assets.ts:408](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Assets.ts#L408)
 
 ___
 
@@ -125,7 +125,7 @@ Retrieve a FungibleAsset or NftCollection
 
 #### Defined in
 
-[api/client/Assets.ts:230](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Assets.ts#L230)
+[api/client/Assets.ts:230](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Assets.ts#L230)
 
 ▸ **getAsset**(`args`): `Promise`\<[`Asset`](../../../../modules/API/Entities/Asset/Types/Types.md#asset)\>
 
@@ -142,7 +142,7 @@ Retrieve a FungibleAsset or NftCollection
 
 #### Defined in
 
-[api/client/Assets.ts:231](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Assets.ts#L231)
+[api/client/Assets.ts:231](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Assets.ts#L231)
 
 ___
 
@@ -169,7 +169,7 @@ Assets with unreadable characters in their tickers will be left out
 
 #### Defined in
 
-[api/client/Assets.ts:260](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Assets.ts#L260)
+[api/client/Assets.ts:260](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Assets.ts#L260)
 
 ___
 
@@ -192,7 +192,7 @@ Retrieve a FungibleAsset
 
 #### Defined in
 
-[api/client/Assets.ts:341](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Assets.ts#L341)
+[api/client/Assets.ts:341](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Assets.ts#L341)
 
 ▸ **getFungibleAsset**(`args`): `Promise`\<[`FungibleAsset`](../../Entities/Asset/Fungible/FungibleAsset.md)\>
 
@@ -209,7 +209,7 @@ Retrieve a FungibleAsset
 
 #### Defined in
 
-[api/client/Assets.ts:342](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Assets.ts#L342)
+[api/client/Assets.ts:342](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Assets.ts#L342)
 
 ___
 
@@ -225,7 +225,7 @@ Retrieve all the Asset Global Metadata on chain. This includes metadata id, name
 
 #### Defined in
 
-[api/client/Assets.ts:458](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Assets.ts#L458)
+[api/client/Assets.ts:458](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Assets.ts#L458)
 
 ___
 
@@ -248,7 +248,7 @@ Retrieve an NftCollection
 
 #### Defined in
 
-[api/client/Assets.ts:373](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Assets.ts#L373)
+[api/client/Assets.ts:373](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Assets.ts#L373)
 
 ▸ **getNftCollection**(`args`): `Promise`\<[`NftCollection`](../../Entities/Asset/NonFungible/NftCollection/NftCollection.md)\>
 
@@ -265,7 +265,7 @@ Retrieve an NftCollection
 
 #### Defined in
 
-[api/client/Assets.ts:374](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Assets.ts#L374)
+[api/client/Assets.ts:374](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Assets.ts#L374)
 
 ___
 
@@ -288,7 +288,7 @@ Retrieve a Ticker Reservation
 
 #### Defined in
 
-[api/client/Assets.ts:218](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Assets.ts#L218)
+[api/client/Assets.ts:218](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Assets.ts#L218)
 
 ___
 
@@ -316,7 +316,7 @@ reservations with unreadable characters in their tickers will be left out
 
 #### Defined in
 
-[api/client/Assets.ts:159](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Assets.ts#L159)
+[api/client/Assets.ts:159](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Assets.ts#L159)
 
 ___
 
@@ -343,7 +343,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/client/Assets.ts:124](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Assets.ts#L124)
+[api/client/Assets.ts:124](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Assets.ts#L124)
 
 ▸ **isTickerAvailable**(`args`, `callback`): `Promise`\<[`UnsubCallback`](../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -361,7 +361,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/client/Assets.ts:125](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Assets.ts#L125)
+[api/client/Assets.ts:125](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Assets.ts#L125)
 
 ___
 
@@ -390,4 +390,4 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Assets.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Assets.ts#L89)
+[api/client/Assets.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Assets.ts#L89)

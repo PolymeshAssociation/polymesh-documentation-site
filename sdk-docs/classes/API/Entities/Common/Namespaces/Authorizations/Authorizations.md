@@ -54,7 +54,7 @@ uses the middlewareV2
 
 #### Defined in
 
-[api/entities/common/namespaces/Authorizations.ts:150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/common/namespaces/Authorizations.ts#L150)
+[api/entities/common/namespaces/Authorizations.ts:150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/common/namespaces/Authorizations.ts#L150)
 
 ___
 
@@ -81,7 +81,7 @@ if there is no Authorization Request with the passed ID targeting this Signer
 
 #### Defined in
 
-[api/entities/common/namespaces/Authorizations.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/common/namespaces/Authorizations.ts#L80)
+[api/entities/common/namespaces/Authorizations.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/common/namespaces/Authorizations.ts#L80)
 
 ___
 
@@ -105,4 +105,4 @@ Fetch all pending Authorization Requests for which this Signer is the target
 
 #### Defined in
 
-[api/entities/common/namespaces/Authorizations.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/common/namespaces/Authorizations.ts#L42)
+[api/entities/common/namespaces/Authorizations.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/common/namespaces/Authorizations.ts#L42)

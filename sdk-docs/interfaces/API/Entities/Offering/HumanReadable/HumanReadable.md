@@ -14,7 +14,7 @@ sidebar_label: "HumanReadable"
 
 #### Defined in
 
-[api/entities/Offering/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Offering/index.ts#L53)
+[api/entities/Offering/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Offering/index.ts#L53)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/Offering/index.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Offering/index.ts#L48)
+[api/entities/Offering/index.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Offering/index.ts#L48)
 
 ___
 
@@ -38,4 +38,4 @@ in favour of `assetId`
 
 #### Defined in
 
-[api/entities/Offering/index.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Offering/index.ts#L52)
+[api/entities/Offering/index.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Offering/index.ts#L52)

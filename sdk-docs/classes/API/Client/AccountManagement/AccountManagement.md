@@ -41,7 +41,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/AccountManagement.ts:373](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L373)
+[api/client/AccountManagement.ts:373](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L373)
 
 ___
 
@@ -73,7 +73,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/AccountManagement.ts:163](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L163)
+[api/client/AccountManagement.ts:163](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L163)
 
 ___
 
@@ -107,7 +107,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/AccountManagement.ts:249](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L249)
+[api/client/AccountManagement.ts:249](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L249)
 
 ___
 
@@ -134,7 +134,7 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/client/AccountManagement.ts:211](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L211)
+[api/client/AccountManagement.ts:211](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L211)
 
 ___
 
@@ -159,7 +159,7 @@ Generate an offchain authorization signature with a specified signer
 
 #### Defined in
 
-[api/client/AccountManagement.ts:384](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L384)
+[api/client/AccountManagement.ts:384](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L384)
 
 ___
 
@@ -182,7 +182,7 @@ Return an Account instance from an address. If the Account has multiSig signers,
 
 #### Defined in
 
-[api/client/AccountManagement.ts:308](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L308)
+[api/client/AccountManagement.ts:308](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L308)
 
 ___
 
@@ -209,7 +209,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/client/AccountManagement.ts:260](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L260)
+[api/client/AccountManagement.ts:260](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L260)
 
 ▸ **getAccountBalance**(`callback`): `Promise`\<[`UnsubCallback`](../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -225,7 +225,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/client/AccountManagement.ts:261](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L261)
+[api/client/AccountManagement.ts:261](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L261)
 
 ▸ **getAccountBalance**(`args`, `callback`): `Promise`\<[`UnsubCallback`](../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -243,7 +243,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/client/AccountManagement.ts:262](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L262)
+[api/client/AccountManagement.ts:262](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L262)
 
 ___
 
@@ -259,7 +259,7 @@ Return the signing Account, or null if no signing Account has been set
 
 #### Defined in
 
-[api/client/AccountManagement.ts:315](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L315)
+[api/client/AccountManagement.ts:315](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L315)
 
 ___
 
@@ -279,7 +279,7 @@ Return a list that contains all the signing Accounts associated to the SDK insta
 
 #### Defined in
 
-[api/client/AccountManagement.ts:328](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L328)
+[api/client/AccountManagement.ts:328](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L328)
 
 ___
 
@@ -303,7 +303,7 @@ Return an Subsidy instance for a pair of beneficiary and subsidizer Account
 
 #### Defined in
 
-[api/client/AccountManagement.ts:335](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L335)
+[api/client/AccountManagement.ts:335](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L335)
 
 ___
 
@@ -337,7 +337,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/AccountManagement.ts:201](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L201)
+[api/client/AccountManagement.ts:201](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L201)
 
 ___
 
@@ -360,7 +360,7 @@ Returns `true`
 
 #### Defined in
 
-[api/client/AccountManagement.ts:352](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L352)
+[api/client/AccountManagement.ts:352](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L352)
 
 ___
 
@@ -387,7 +387,7 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/client/AccountManagement.ts:141](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L141)
+[api/client/AccountManagement.ts:141](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L141)
 
 ___
 
@@ -419,7 +419,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/AccountManagement.ts:187](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L187)
+[api/client/AccountManagement.ts:187](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L187)
 
 ___
 
@@ -447,7 +447,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/AccountManagement.ts:151](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L151)
+[api/client/AccountManagement.ts:151](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L151)
 
 ___
 
@@ -480,7 +480,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/AccountManagement.ts:175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L175)
+[api/client/AccountManagement.ts:175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L175)
 
 ___
 
@@ -514,7 +514,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/AccountManagement.ts:235](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L235)
+[api/client/AccountManagement.ts:235](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L235)
 
 ___
 
@@ -541,4 +541,4 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/client/AccountManagement.ts:221](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/AccountManagement.ts#L221)
+[api/client/AccountManagement.ts:221](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/AccountManagement.ts#L221)

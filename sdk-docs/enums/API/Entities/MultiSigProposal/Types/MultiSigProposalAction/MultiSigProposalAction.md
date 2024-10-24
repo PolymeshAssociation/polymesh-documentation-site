@@ -14,7 +14,7 @@ sidebar_label: "MultiSigProposalAction"
 
 #### Defined in
 
-[api/entities/MultiSigProposal/types.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/MultiSigProposal/types.ts#L65)
+[api/entities/MultiSigProposal/types.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/MultiSigProposal/types.ts#L65)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/MultiSigProposal/types.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/MultiSigProposal/types.ts#L66)
+[api/entities/MultiSigProposal/types.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/MultiSigProposal/types.ts#L66)

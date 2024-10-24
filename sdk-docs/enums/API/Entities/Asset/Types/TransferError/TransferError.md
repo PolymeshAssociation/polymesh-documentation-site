@@ -22,7 +22,7 @@ occurs if some compliance rule would prevent the transfer
 
 #### Defined in
 
-[api/entities/Asset/types.ts:351](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L351)
+[api/entities/Asset/types.ts:356](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L356)
 
 ___
 
@@ -36,7 +36,7 @@ occurs if the sender Identity does not have enough balance to cover the amount
 
 #### Defined in
 
-[api/entities/Asset/types.ts:320](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L320)
+[api/entities/Asset/types.ts:325](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L325)
 
 ___
 
@@ -50,7 +50,7 @@ occurs if the sender Portfolio does not have enough balance to cover the amount
 
 #### Defined in
 
-[api/entities/Asset/types.ts:344](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L344)
+[api/entities/Asset/types.ts:349](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L349)
 
 ___
 
@@ -64,7 +64,7 @@ occurs if attempting to transfer decimal amounts of a non-divisible token
 
 #### Defined in
 
-[api/entities/Asset/types.ts:289](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L289)
+[api/entities/Asset/types.ts:294](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L294)
 
 ___
 
@@ -78,7 +78,7 @@ occurs if the receiver Identity doesn't have a valid CDD claim
 
 #### Defined in
 
-[api/entities/Asset/types.ts:301](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L301)
+[api/entities/Asset/types.ts:306](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L306)
 
 ___
 
@@ -92,7 +92,7 @@ occurs if the receiver Portfolio doesn't exist
 
 #### Defined in
 
-[api/entities/Asset/types.ts:338](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L338)
+[api/entities/Asset/types.ts:343](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L343)
 
 ___
 
@@ -106,7 +106,7 @@ occurs if the receiver Identity doesn't have a valid CDD claim
 
 #### Defined in
 
-[api/entities/Asset/types.ts:307](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L307)
+[api/entities/Asset/types.ts:312](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L312)
 
 ___
 
@@ -120,7 +120,7 @@ occurs if the sender Portfolio doesn't exist
 
 #### Defined in
 
-[api/entities/Asset/types.ts:332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L332)
+[api/entities/Asset/types.ts:337](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L337)
 
 ___
 
@@ -135,7 +135,7 @@ occurs if one of the participants doesn't have a valid Investor Uniqueness Claim
 
 #### Defined in
 
-[api/entities/Asset/types.ts:314](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L314)
+[api/entities/Asset/types.ts:319](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L319)
 
 ___
 
@@ -149,7 +149,7 @@ occurs if the origin and destination Identities are the same
 
 #### Defined in
 
-[api/entities/Asset/types.ts:295](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L295)
+[api/entities/Asset/types.ts:300](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L300)
 
 ___
 
@@ -161,7 +161,7 @@ occurs if some statistics transfer condition would prevent the transfer
 
 #### Defined in
 
-[api/entities/Asset/types.ts:356](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L356)
+[api/entities/Asset/types.ts:361](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L361)
 
 ___
 
@@ -175,4 +175,4 @@ occurs if the Asset's transfers are frozen
 
 #### Defined in
 
-[api/entities/Asset/types.ts:326](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L326)
+[api/entities/Asset/types.ts:331](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L331)

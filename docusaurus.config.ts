@@ -72,8 +72,8 @@ const config: Config = {
         includeCurrentVersion: true,
         versions: {
           current: {
-            label: '26.0.0-alpha.1',
-            path: '26.0.0-alpha.1',
+            label: '26.0.0-beta.2',
+            path: '26.0.0-beta.2',
           },
         },
       },

@@ -22,7 +22,7 @@ Handles all Asset Compliance related functionality
 
 #### Defined in
 
-[api/entities/Asset/Base/Compliance/index.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/Compliance/index.ts#L11)
+[api/entities/Asset/Base/Compliance/index.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/Compliance/index.ts#L11)
 
 ___
 
@@ -32,4 +32,4 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Base/Compliance/index.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/Compliance/index.ts#L10)
+[api/entities/Asset/Base/Compliance/index.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/Compliance/index.ts#L10)

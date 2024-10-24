@@ -14,7 +14,7 @@ sidebar_label: "MetadataDetails"
 
 #### Defined in
 
-[api/entities/MetadataEntry/types.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/MetadataEntry/types.ts#L23)
+[api/entities/MetadataEntry/types.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/MetadataEntry/types.ts#L23)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/MetadataEntry/types.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/MetadataEntry/types.ts#L24)
+[api/entities/MetadataEntry/types.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/MetadataEntry/types.ts#L24)

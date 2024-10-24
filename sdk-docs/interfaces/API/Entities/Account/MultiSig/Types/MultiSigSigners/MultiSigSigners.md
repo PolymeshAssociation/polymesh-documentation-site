@@ -14,7 +14,7 @@ sidebar_label: "MultiSigSigners"
 
 #### Defined in
 
-[api/entities/Account/MultiSig/types.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Account/MultiSig/types.ts#L14)
+[api/entities/Account/MultiSig/types.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Account/MultiSig/types.ts#L14)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/Account/MultiSig/types.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Account/MultiSig/types.ts#L15)
+[api/entities/Account/MultiSig/types.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Account/MultiSig/types.ts#L15)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/Account/MultiSig/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Account/MultiSig/types.ts#L12)
+[api/entities/Account/MultiSig/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Account/MultiSig/types.ts#L12)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[api/entities/Account/MultiSig/types.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Account/MultiSig/types.ts#L13)
+[api/entities/Account/MultiSig/types.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Account/MultiSig/types.ts#L13)

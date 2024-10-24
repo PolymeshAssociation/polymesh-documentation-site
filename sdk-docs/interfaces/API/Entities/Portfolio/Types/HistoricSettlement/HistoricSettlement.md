@@ -16,7 +16,7 @@ Array of Accounts that participated by affirming the settlement
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Portfolio/types.ts#L38)
+[api/entities/Portfolio/types.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Portfolio/types.ts#L38)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Portfolio/types.ts#L33)
+[api/entities/Portfolio/types.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Portfolio/types.ts#L33)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Portfolio/types.ts#L32)
+[api/entities/Portfolio/types.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Portfolio/types.ts#L32)
 
 ___
 
@@ -48,7 +48,7 @@ This value is null when depicting portfolio movements
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Portfolio/types.ts#L43)
+[api/entities/Portfolio/types.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Portfolio/types.ts#L43)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Portfolio/types.ts#L39)
+[api/entities/Portfolio/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Portfolio/types.ts#L39)
 
 ___
 
@@ -68,4 +68,4 @@ ___
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Portfolio/types.ts#L34)
+[api/entities/Portfolio/types.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Portfolio/types.ts#L34)

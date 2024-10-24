@@ -29,7 +29,7 @@ Asset affected by this Corporate Action
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CorporateActionBase/index.ts#L84)
+[api/entities/CorporateActionBase/index.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CorporateActionBase/index.ts#L84)
 
 ___
 
@@ -41,7 +41,7 @@ Asset ID of the currency in which dividends are being distributed
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:98](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/DividendDistribution/index.ts#L98)
+[api/entities/DividendDistribution/index.ts:98](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/DividendDistribution/index.ts#L98)
 
 ___
 
@@ -57,7 +57,7 @@ date at which the Corporate Action was created
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CorporateActionBase/index.ts#L89)
+[api/entities/CorporateActionBase/index.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CorporateActionBase/index.ts#L89)
 
 ___
 
@@ -73,7 +73,7 @@ default percentage (0-100) of tax withholding for this Corporate Action
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CorporateActionBase/index.ts#L105)
+[api/entities/CorporateActionBase/index.ts:105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CorporateActionBase/index.ts#L105)
 
 ___
 
@@ -89,7 +89,7 @@ brief text description of the Corporate Action
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:94](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CorporateActionBase/index.ts#L94)
+[api/entities/CorporateActionBase/index.ts:94](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CorporateActionBase/index.ts#L94)
 
 ___
 
@@ -101,7 +101,7 @@ date after which dividends can no longer be paid/reclaimed. A null value means t
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/DividendDistribution/index.ts#L114)
+[api/entities/DividendDistribution/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/DividendDistribution/index.ts#L114)
 
 ___
 
@@ -117,7 +117,7 @@ internal Corporate Action ID
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:79](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CorporateActionBase/index.ts#L79)
+[api/entities/CorporateActionBase/index.ts:79](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CorporateActionBase/index.ts#L79)
 
 ___
 
@@ -130,7 +130,7 @@ maximum amount of `currency` to be distributed. Distributions are "first come, f
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/DividendDistribution/index.ts#L109)
+[api/entities/DividendDistribution/index.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/DividendDistribution/index.ts#L109)
 
 ___
 
@@ -142,7 +142,7 @@ Portfolio from which the dividends will be distributed
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/DividendDistribution/index.ts#L93)
+[api/entities/DividendDistribution/index.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/DividendDistribution/index.ts#L93)
 
 ___
 
@@ -154,7 +154,7 @@ date starting from which dividends can be paid/reclaimed
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/DividendDistribution/index.ts#L119)
+[api/entities/DividendDistribution/index.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/DividendDistribution/index.ts#L119)
 
 ___
 
@@ -166,7 +166,7 @@ amount of `currency` to pay for each share held by the Asset Holders
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/DividendDistribution/index.ts#L103)
+[api/entities/DividendDistribution/index.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/DividendDistribution/index.ts#L103)
 
 ___
 
@@ -183,7 +183,7 @@ Asset Holder Identities related to this Corporate action. If the treatment is `E
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CorporateActionBase/index.ts#L100)
+[api/entities/CorporateActionBase/index.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CorporateActionBase/index.ts#L100)
 
 ___
 
@@ -200,7 +200,7 @@ percentage (0-100) of tax withholding per Identity. Any Identity not present
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CorporateActionBase/index.ts#L111)
+[api/entities/CorporateActionBase/index.ts:111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CorporateActionBase/index.ts#L111)
 
 ___
 
@@ -214,7 +214,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -235,7 +235,7 @@ Retrieve the Checkpoint associated with this Dividend Distribution. If the Check
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:253](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/DividendDistribution/index.ts#L253)
+[api/entities/DividendDistribution/index.ts:253](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/DividendDistribution/index.ts#L253)
 
 ___
 
@@ -266,7 +266,7 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/DividendDistribution/index.ts#L202)
+[api/entities/DividendDistribution/index.ts:202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/DividendDistribution/index.ts#L202)
 
 ___
 
@@ -282,7 +282,7 @@ Retrieve details associated with this Dividend Distribution
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/DividendDistribution/index.ts#L281)
+[api/entities/DividendDistribution/index.ts:281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/DividendDistribution/index.ts#L281)
 
 ___
 
@@ -302,7 +302,7 @@ Retrieve whether the Distribution exists
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:272](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/DividendDistribution/index.ts#L272)
+[api/entities/DividendDistribution/index.ts:272](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/DividendDistribution/index.ts#L272)
 
 ___
 
@@ -331,7 +331,7 @@ if the Distribution Checkpoint hasn't been created yet, the result will be null.
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:362](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/DividendDistribution/index.ts#L362)
+[api/entities/DividendDistribution/index.ts:362](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/DividendDistribution/index.ts#L362)
 
 ___
 
@@ -357,7 +357,7 @@ if the Distribution Checkpoint hasn't been created yet, the result will be an em
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:307](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/DividendDistribution/index.ts#L307)
+[api/entities/DividendDistribution/index.ts:307](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/DividendDistribution/index.ts#L307)
 
 ___
 
@@ -389,7 +389,7 @@ supports pagination
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:501](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/DividendDistribution/index.ts#L501)
+[api/entities/DividendDistribution/index.ts:501](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/DividendDistribution/index.ts#L501)
 
 ___
 
@@ -409,7 +409,7 @@ uses the middlewareV2
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:460](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/DividendDistribution/index.ts#L460)
+[api/entities/DividendDistribution/index.ts:460](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/DividendDistribution/index.ts#L460)
 
 ___
 
@@ -435,7 +435,7 @@ Determine whether this Entity is the same as another one
 
 #### Defined in
 
-[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L61)
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -471,7 +471,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:164](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CorporateActionBase/index.ts#L164)
+[api/entities/CorporateActionBase/index.ts:164](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CorporateActionBase/index.ts#L164)
 
 ___
 
@@ -503,7 +503,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/DividendDistribution/index.ts#L212)
+[api/entities/DividendDistribution/index.ts:212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/DividendDistribution/index.ts#L212)
 
 ___
 
@@ -539,7 +539,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:230](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/DividendDistribution/index.ts#L230)
+[api/entities/DividendDistribution/index.ts:230](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/DividendDistribution/index.ts#L230)
 
 ___
 
@@ -575,7 +575,7 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:245](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/DividendDistribution/index.ts#L245)
+[api/entities/DividendDistribution/index.ts:245](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/DividendDistribution/index.ts#L245)
 
 ___
 
@@ -595,7 +595,7 @@ Return the Dividend Distribution's static data
 
 #### Defined in
 
-[api/entities/DividendDistribution/index.ts:616](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/DividendDistribution/index.ts#L616)
+[api/entities/DividendDistribution/index.ts:616](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/DividendDistribution/index.ts#L616)
 
 ___
 
@@ -627,7 +627,7 @@ Generate the Entity's UUID from its identifying properties
 
 #### Defined in
 
-[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L14)
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L14)
 
 ___
 
@@ -659,4 +659,4 @@ Unserialize a UUID into its Unique Identifiers
 
 #### Defined in
 
-[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L23)
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L23)

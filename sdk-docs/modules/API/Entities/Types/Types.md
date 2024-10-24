@@ -656,7 +656,7 @@ Re-exports [VenueType](../../../../enums/API/Entities/Venue/Types/VenueType/Venu
 
 #### Defined in
 
-[api/entities/types.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L43)
+[api/entities/types.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L43)
 
 ___
 
@@ -673,7 +673,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:830](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L830)
+[api/entities/types.ts:830](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L830)
 
 ___
 
@@ -690,7 +690,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:458](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L458)
+[api/entities/types.ts:458](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L458)
 
 ___
 
@@ -707,7 +707,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:429](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L429)
+[api/entities/types.ts:429](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L429)
 
 ___
 
@@ -719,7 +719,7 @@ Authorization request data corresponding to type
 
 #### Defined in
 
-[api/entities/types.ts:479](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L479)
+[api/entities/types.ts:479](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L479)
 
 ___
 
@@ -729,7 +729,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L46)
+[api/entities/types.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L46)
 
 ___
 
@@ -746,7 +746,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:453](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L453)
+[api/entities/types.ts:453](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L453)
 
 ___
 
@@ -756,7 +756,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L47)
+[api/entities/types.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L47)
 
 ___
 
@@ -766,7 +766,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L48)
+[api/entities/types.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L48)
 
 ___
 
@@ -776,7 +776,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L55)
+[api/entities/types.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L55)
 
 ___
 
@@ -786,7 +786,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:237](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L237)
+[api/entities/types.ts:237](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L237)
 
 ___
 
@@ -796,7 +796,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:562](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L562)
+[api/entities/types.ts:562](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L562)
 
 ___
 
@@ -806,7 +806,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:371](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L371)
+[api/entities/types.ts:371](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L371)
 
 ___
 
@@ -816,7 +816,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L49)
+[api/entities/types.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L49)
 
 ___
 
@@ -826,7 +826,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L50)
+[api/entities/types.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L50)
 
 ___
 
@@ -836,7 +836,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L51)
+[api/entities/types.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L51)
 
 ___
 
@@ -846,7 +846,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L52)
+[api/entities/types.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L52)
 
 ___
 
@@ -856,7 +856,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L53)
+[api/entities/types.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L53)
 
 ___
 
@@ -866,7 +866,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L59)
+[api/entities/types.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L59)
 
 ___
 
@@ -883,7 +883,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:463](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L463)
+[api/entities/types.ts:463](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L463)
 
 ___
 
@@ -895,7 +895,7 @@ Asset permissions shared by agents in a group
 
 #### Defined in
 
-[api/entities/types.ts:664](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L664)
+[api/entities/types.ts:664](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L664)
 
 ___
 
@@ -905,7 +905,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L54)
+[api/entities/types.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L54)
 
 ___
 
@@ -915,7 +915,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:379](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L379)
+[api/entities/types.ts:379](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L379)
 
 ___
 
@@ -925,7 +925,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:342](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L342)
+[api/entities/types.ts:342](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L342)
 
 ___
 
@@ -935,7 +935,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:405](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L405)
+[api/entities/types.ts:405](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L405)
 
 ___
 
@@ -945,7 +945,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:265](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L265)
+[api/entities/types.ts:265](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L265)
 
 ___
 
@@ -955,7 +955,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:270](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L270)
+[api/entities/types.ts:270](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L270)
 
 ___
 
@@ -965,7 +965,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:318](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L318)
+[api/entities/types.ts:318](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L318)
 
 ___
 
@@ -975,7 +975,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L56)
+[api/entities/types.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L56)
 
 ___
 
@@ -992,7 +992,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:443](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L443)
+[api/entities/types.ts:443](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L443)
 
 ___
 
@@ -1002,7 +1002,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L57)
+[api/entities/types.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L57)
 
 ___
 
@@ -1012,7 +1012,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L62)
+[api/entities/types.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L62)
 
 ___
 
@@ -1022,7 +1022,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L44)
+[api/entities/types.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L44)
 
 ___
 
@@ -1032,7 +1032,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L45)
+[api/entities/types.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L45)
 
 ___
 
@@ -1042,7 +1042,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L92)
+[api/entities/types.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L92)
 
 ___
 
@@ -1052,7 +1052,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L60)
+[api/entities/types.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L60)
 
 ___
 
@@ -1062,7 +1062,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L61)
+[api/entities/types.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L61)
 
 ___
 
@@ -1080,7 +1080,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:819](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L819)
+[api/entities/types.ts:819](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L819)
 
 ___
 
@@ -1090,7 +1090,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L58)
+[api/entities/types.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L58)
 
 ___
 
@@ -1100,7 +1100,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L63)
+[api/entities/types.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L63)
 
 ___
 
@@ -1118,7 +1118,7 @@ TxGroups in the `transactionGroups` array will be transformed into their corresp
 
 #### Defined in
 
-[api/entities/types.ts:789](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L789)
+[api/entities/types.ts:789](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L789)
 
 ___
 
@@ -1135,7 +1135,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:448](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L448)
+[api/entities/types.ts:448](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L448)
 
 ___
 
@@ -1145,7 +1145,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:775](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L775)
+[api/entities/types.ts:775](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L775)
 
 ___
 
@@ -1155,7 +1155,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:828](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L828)
+[api/entities/types.ts:828](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L828)
 
 ___
 
@@ -1171,7 +1171,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:434](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L434)
+[api/entities/types.ts:434](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L434)
 
 ___
 
@@ -1188,7 +1188,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:438](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L438)
+[api/entities/types.ts:438](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L438)
 
 ___
 
@@ -1198,7 +1198,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L224)
+[api/entities/types.ts:224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L224)
 
 ___
 
@@ -1208,7 +1208,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:757](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L757)
+[api/entities/types.ts:757](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L757)
 
 ___
 
@@ -1218,7 +1218,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:248](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L248)
+[api/entities/types.ts:248](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L248)
 
 ___
 
@@ -1248,7 +1248,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L83)
+[api/entities/types.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L83)
 
 ___
 
@@ -1258,7 +1258,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L66)
+[api/entities/types.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L66)
 
 ___
 
@@ -1268,7 +1268,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L64)
+[api/entities/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L64)
 
 ___
 
@@ -1278,7 +1278,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:235](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L235)
+[api/entities/types.ts:235](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L235)
 
 ___
 
@@ -1296,7 +1296,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:85](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L85)
+[api/entities/types.ts:85](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L85)
 
 ___
 
@@ -1306,4 +1306,4 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L65)
+[api/entities/types.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L65)

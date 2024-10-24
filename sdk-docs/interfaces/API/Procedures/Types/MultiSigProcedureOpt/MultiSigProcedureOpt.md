@@ -16,4 +16,4 @@ The block number for which the proposal expires
 
 #### Defined in
 
-[api/procedures/types.ts:143](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L143)
+[api/procedures/types.ts:143](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L143)

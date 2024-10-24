@@ -28,7 +28,7 @@ Get the list of Subsidy relationship along with their subsidized amount for whic
 
 #### Defined in
 
-[api/entities/Subsidies.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Subsidies.ts#L12)
+[api/entities/Subsidies.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Subsidies.ts#L12)
 
 ___
 
@@ -49,7 +49,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Subsidies.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Subsidies.ts#L61)
+[api/entities/Subsidies.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Subsidies.ts#L61)
 
 ▸ **getSubsidizer**(`callback`): `Promise`\<[`UnsubCallback`](../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -65,4 +65,4 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Subsidies.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Subsidies.ts#L62)
+[api/entities/Subsidies.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Subsidies.ts#L62)

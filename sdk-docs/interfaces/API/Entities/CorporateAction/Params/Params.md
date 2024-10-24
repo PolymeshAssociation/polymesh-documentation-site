@@ -14,7 +14,7 @@ sidebar_label: "Params"
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CorporateAction.ts#L36)
+[api/entities/CorporateAction.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CorporateAction.ts#L36)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CorporateAction.ts#L39)
+[api/entities/CorporateAction.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CorporateAction.ts#L39)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CorporateAction.ts#L37)
+[api/entities/CorporateAction.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CorporateAction.ts#L37)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CorporateAction.ts#L35)
+[api/entities/CorporateAction.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CorporateAction.ts#L35)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CorporateAction.ts#L38)
+[api/entities/CorporateAction.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CorporateAction.ts#L38)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[api/entities/CorporateAction.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CorporateAction.ts#L40)
+[api/entities/CorporateAction.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CorporateAction.ts#L40)

@@ -14,4 +14,4 @@ sidebar_label: "CreateGroupParams"
 
 #### Defined in
 
-[api/procedures/types.ts:1403](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L1403)
+[api/procedures/types.ts:1408](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L1408)

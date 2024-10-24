@@ -18,4 +18,4 @@ sidebar_label: "Types"
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Portfolio/types.ts#L27)
+[api/entities/Portfolio/types.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Portfolio/types.ts#L27)

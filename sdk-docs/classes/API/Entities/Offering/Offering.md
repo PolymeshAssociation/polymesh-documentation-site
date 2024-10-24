@@ -24,7 +24,7 @@ Asset being offered
 
 #### Defined in
 
-[api/entities/Offering/index.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Offering/index.ts#L78)
+[api/entities/Offering/index.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Offering/index.ts#L78)
 
 ___
 
@@ -36,7 +36,7 @@ identifier number of the Offering
 
 #### Defined in
 
-[api/entities/Offering/index.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Offering/index.ts#L73)
+[api/entities/Offering/index.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Offering/index.ts#L73)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -77,7 +77,7 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Offering/index.ts:178](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Offering/index.ts#L178)
+[api/entities/Offering/index.ts:178](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Offering/index.ts#L178)
 
 ___
 
@@ -97,7 +97,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Offering/index.ts:124](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Offering/index.ts#L124)
+[api/entities/Offering/index.ts:124](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Offering/index.ts#L124)
 
 ▸ **details**(`callback`): `Promise`\<[`UnsubCallback`](../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -113,7 +113,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Offering/index.ts:125](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Offering/index.ts#L125)
+[api/entities/Offering/index.ts:125](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Offering/index.ts#L125)
 
 ___
 
@@ -133,7 +133,7 @@ Determine whether this Offering exists on chain
 
 #### Defined in
 
-[api/entities/Offering/index.ts:291](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Offering/index.ts#L291)
+[api/entities/Offering/index.ts:291](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Offering/index.ts#L291)
 
 ___
 
@@ -160,7 +160,7 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Offering/index.ts:188](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Offering/index.ts#L188)
+[api/entities/Offering/index.ts:188](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Offering/index.ts#L188)
 
 ___
 
@@ -192,7 +192,7 @@ uses the middleware V2
 
 #### Defined in
 
-[api/entities/Offering/index.ts:240](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Offering/index.ts#L240)
+[api/entities/Offering/index.ts:240](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Offering/index.ts#L240)
 
 ___
 
@@ -226,7 +226,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/Offering/index.ts:227](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Offering/index.ts#L227)
+[api/entities/Offering/index.ts:227](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Offering/index.ts#L227)
 
 ___
 
@@ -252,7 +252,7 @@ Determine whether this Entity is the same as another one
 
 #### Defined in
 
-[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L61)
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -287,7 +287,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/Offering/index.ts:213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Offering/index.ts#L213)
+[api/entities/Offering/index.ts:213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Offering/index.ts#L213)
 
 ___
 
@@ -307,7 +307,7 @@ Return the Offering's ID and Asset ticker
 
 #### Defined in
 
-[api/entities/Offering/index.ts:307](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Offering/index.ts#L307)
+[api/entities/Offering/index.ts:307](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Offering/index.ts#L307)
 
 ___
 
@@ -334,7 +334,7 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Offering/index.ts:198](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Offering/index.ts#L198)
+[api/entities/Offering/index.ts:198](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Offering/index.ts#L198)
 
 ___
 
@@ -366,7 +366,7 @@ Generate the Entity's UUID from its identifying properties
 
 #### Defined in
 
-[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L14)
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L14)
 
 ___
 
@@ -398,4 +398,4 @@ Unserialize a UUID into its Unique Identifiers
 
 #### Defined in
 
-[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L23)
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L23)

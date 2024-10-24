@@ -46,7 +46,7 @@ this method is of type [ProcedureMethod](../../../../../interfaces/API/Procedure
 
 #### Defined in
 
-[api/entities/Identity/Portfolios.ts:178](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Identity/Portfolios.ts#L178)
+[api/entities/Identity/Portfolios.ts:213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Identity/Portfolios.ts#L213)
 
 ___
 
@@ -74,7 +74,7 @@ supports pagination
 
 #### Defined in
 
-[api/entities/Identity/Portfolios.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Identity/Portfolios.ts#L91)
+[api/entities/Identity/Portfolios.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Identity/Portfolios.ts#L92)
 
 ___
 
@@ -90,7 +90,7 @@ Retrieve a Numbered Portfolio or the Default Portfolio if Portfolio ID is not pa
 
 #### Defined in
 
-[api/entities/Identity/Portfolios.ts:138](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Identity/Portfolios.ts#L138)
+[api/entities/Identity/Portfolios.ts:139](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Identity/Portfolios.ts#L139)
 
 ▸ **getPortfolio**(`args`): `Promise`\<[`NumberedPortfolio`](../../NumberedPortfolio/NumberedPortfolio.md)\>
 
@@ -107,7 +107,34 @@ Retrieve a Numbered Portfolio or the Default Portfolio if Portfolio ID is not pa
 
 #### Defined in
 
-[api/entities/Identity/Portfolios.ts:139](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Identity/Portfolios.ts#L139)
+[api/entities/Identity/Portfolios.ts:140](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Identity/Portfolios.ts#L140)
+
+___
+
+### getPortfolioByName
+
+▸ **getPortfolioByName**(`args`): `Promise`\<[`NumberedPortfolio`](../../NumberedPortfolio/NumberedPortfolio.md)\>
+
+Retrieve a Numbered Portfolio by its name
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args` | `Object` |
+| `args.name` | `string` |
+
+#### Returns
+
+`Promise`\<[`NumberedPortfolio`](../../NumberedPortfolio/NumberedPortfolio.md)\>
+
+**`Throws`**
+
+if no Portfolio exists with the given name
+
+#### Defined in
+
+[api/entities/Identity/Portfolios.ts:175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Identity/Portfolios.ts#L175)
 
 ___
 
@@ -123,7 +150,7 @@ Retrieve all the Portfolios owned by this Identity
 
 #### Defined in
 
-[api/entities/Identity/Portfolios.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Identity/Portfolios.ts#L60)
+[api/entities/Identity/Portfolios.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Identity/Portfolios.ts#L61)
 
 ___
 
@@ -152,4 +179,4 @@ uses the middlewareV2
 
 #### Defined in
 
-[api/entities/Identity/Portfolios.ts:190](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Identity/Portfolios.ts#L190)
+[api/entities/Identity/Portfolios.ts:225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Identity/Portfolios.ts#L225)

@@ -45,7 +45,7 @@ this method is of type [ProcedureMethod](../../../../../../../interfaces/API/Pro
 
 #### Defined in
 
-[api/entities/Asset/Fungible/CorporateActions/Distributions.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/CorporateActions/Distributions.ts#L42)
+[api/entities/Asset/Fungible/CorporateActions/Distributions.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/CorporateActions/Distributions.ts#L42)
 
 ___
 
@@ -61,7 +61,7 @@ Retrieve all Dividend Distributions associated to this Asset, along with their d
 
 #### Defined in
 
-[api/entities/Asset/Fungible/CorporateActions/Distributions.ts:116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/CorporateActions/Distributions.ts#L116)
+[api/entities/Asset/Fungible/CorporateActions/Distributions.ts:116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/CorporateActions/Distributions.ts#L116)
 
 ___
 
@@ -88,4 +88,4 @@ if there is no Distribution with the passed ID
 
 #### Defined in
 
-[api/entities/Asset/Fungible/CorporateActions/Distributions.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/CorporateActions/Distributions.ts#L63)
+[api/entities/Asset/Fungible/CorporateActions/Distributions.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/CorporateActions/Distributions.ts#L63)

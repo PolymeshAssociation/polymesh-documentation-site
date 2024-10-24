@@ -14,7 +14,7 @@ sidebar_label: "HumanReadable"
 
 #### Defined in
 
-[api/entities/CustomPermissionGroup.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CustomPermissionGroup.ts#L21)
+[api/entities/CustomPermissionGroup.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CustomPermissionGroup.ts#L21)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/CustomPermissionGroup.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CustomPermissionGroup.ts#L16)
+[api/entities/CustomPermissionGroup.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CustomPermissionGroup.ts#L16)
 
 ___
 
@@ -38,4 +38,4 @@ in favour of `assetId`
 
 #### Defined in
 
-[api/entities/CustomPermissionGroup.ts:20](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CustomPermissionGroup.ts#L20)
+[api/entities/CustomPermissionGroup.ts:20](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CustomPermissionGroup.ts#L20)

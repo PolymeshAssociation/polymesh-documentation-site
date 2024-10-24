@@ -50,7 +50,7 @@ this method is of type [ProcedureMethod](../../../../../../../interfaces/API/Pro
 
 #### Defined in
 
-[api/entities/Asset/Fungible/Checkpoints/Schedules.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L55)
+[api/entities/Asset/Fungible/Checkpoints/Schedules.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L55)
 
 ___
 
@@ -66,7 +66,7 @@ Retrieve all active Checkpoint Schedules
 
 #### Defined in
 
-[api/entities/Asset/Fungible/Checkpoints/Schedules.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L92)
+[api/entities/Asset/Fungible/Checkpoints/Schedules.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L92)
 
 ___
 
@@ -93,7 +93,7 @@ if there is no Schedule with the passed ID
 
 #### Defined in
 
-[api/entities/Asset/Fungible/Checkpoints/Schedules.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L74)
+[api/entities/Asset/Fungible/Checkpoints/Schedules.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L74)
 
 ___
 
@@ -109,7 +109,7 @@ Retrieve the maximum allowed Schedule complexity for this Asset
 
 #### Defined in
 
-[api/entities/Asset/Fungible/Checkpoints/Schedules.ts:135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L135)
+[api/entities/Asset/Fungible/Checkpoints/Schedules.ts:135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L135)
 
 ___
 
@@ -137,4 +137,4 @@ this method is of type [ProcedureMethod](../../../../../../../interfaces/API/Pro
 
 #### Defined in
 
-[api/entities/Asset/Fungible/Checkpoints/Schedules.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L65)
+[api/entities/Asset/Fungible/Checkpoints/Schedules.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L65)

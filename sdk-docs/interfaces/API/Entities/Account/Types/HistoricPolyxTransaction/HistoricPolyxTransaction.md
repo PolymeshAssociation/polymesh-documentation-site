@@ -20,7 +20,7 @@ sidebar_label: "HistoricPolyxTransaction"
 
 #### Defined in
 
-[api/entities/Account/types.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Account/types.ts#L100)
+[api/entities/Account/types.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Account/types.ts#L100)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/client/types.ts:176](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L176)
+[api/client/types.ts:176](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L176)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[api/client/types.ts:175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L175)
+[api/client/types.ts:175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L175)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[api/client/types.ts:174](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L174)
+[api/client/types.ts:174](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L174)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[api/entities/Account/types.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Account/types.ts#L108)
+[api/entities/Account/types.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Account/types.ts#L108)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[api/entities/Account/types.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Account/types.ts#L110)
+[api/entities/Account/types.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Account/types.ts#L110)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[api/client/types.ts:177](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L177)
+[api/client/types.ts:177](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L177)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[api/entities/Account/types.ts:106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Account/types.ts#L106)
+[api/entities/Account/types.ts:106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Account/types.ts#L106)
 
 ___
 
@@ -122,7 +122,7 @@ this can be null in cases where some balance are endowed/transferred from treasu
 
 #### Defined in
 
-[api/entities/Account/types.ts:88](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Account/types.ts#L88)
+[api/entities/Account/types.ts:88](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Account/types.ts#L88)
 
 ___
 
@@ -138,7 +138,7 @@ this can be null in cases where some balance are endowed/transferred from treasu
 
 #### Defined in
 
-[api/entities/Account/types.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Account/types.ts#L83)
+[api/entities/Account/types.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Account/types.ts#L83)
 
 ___
 
@@ -150,7 +150,7 @@ identifier string to help differentiate transfers
 
 #### Defined in
 
-[api/entities/Account/types.ts:105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Account/types.ts#L105)
+[api/entities/Account/types.ts:105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Account/types.ts#L105)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[api/entities/Account/types.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Account/types.ts#L109)
+[api/entities/Account/types.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Account/types.ts#L109)
 
 ___
 
@@ -176,7 +176,7 @@ this can be null in case when account balance was burned
 
 #### Defined in
 
-[api/entities/Account/types.ts:98](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Account/types.ts#L98)
+[api/entities/Account/types.ts:98](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Account/types.ts#L98)
 
 ___
 
@@ -192,7 +192,7 @@ this can be null in case when account balance was burned
 
 #### Defined in
 
-[api/entities/Account/types.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Account/types.ts#L93)
+[api/entities/Account/types.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Account/types.ts#L93)
 
 ___
 
@@ -202,4 +202,4 @@ ___
 
 #### Defined in
 
-[api/entities/Account/types.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Account/types.ts#L101)
+[api/entities/Account/types.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Account/types.ts#L101)

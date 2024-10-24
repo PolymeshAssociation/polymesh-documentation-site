@@ -35,7 +35,7 @@ Retrieve all of the Asset's Offerings and their details. Can be filtered using p
 
 #### Defined in
 
-[api/entities/Asset/Fungible/Offerings/index.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/Offerings/index.ts#L84)
+[api/entities/Asset/Fungible/Offerings/index.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/Offerings/index.ts#L84)
 
 ___
 
@@ -62,7 +62,7 @@ if there is no Offering with the passed ID
 
 #### Defined in
 
-[api/entities/Asset/Fungible/Offerings/index.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/Offerings/index.ts#L62)
+[api/entities/Asset/Fungible/Offerings/index.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/Offerings/index.ts#L62)
 
 ___
 
@@ -96,4 +96,4 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Fungible/Offerings/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/Offerings/index.ts#L53)
+[api/entities/Asset/Fungible/Offerings/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/Offerings/index.ts#L53)

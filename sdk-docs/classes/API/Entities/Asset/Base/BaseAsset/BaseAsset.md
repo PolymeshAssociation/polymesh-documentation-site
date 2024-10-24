@@ -26,7 +26,7 @@ Class used to manage functionality common to all assets.
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L69)
+[api/entities/Asset/Base/BaseAsset.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L71)
 
 ___
 
@@ -36,9 +36,13 @@ ___
 
 Identity ID of the Asset (used for Claims)
 
+**`Deprecated`**
+
+this is no longer used from chain 7.x
+
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L78)
+[api/entities/Asset/Base/BaseAsset.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L81)
 
 ___
 
@@ -48,7 +52,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L70)
+[api/entities/Asset/Base/BaseAsset.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L72)
 
 ___
 
@@ -60,7 +64,7 @@ Unique ID of the Asset
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L90)
+[api/entities/Asset/Base/BaseAsset.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L95)
 
 ___
 
@@ -70,7 +74,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L71)
+[api/entities/Asset/Base/BaseAsset.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L73)
 
 ___
 
@@ -80,7 +84,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L72)
+[api/entities/Asset/Base/BaseAsset.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L74)
 
 ___
 
@@ -92,9 +96,13 @@ ticker of the Asset
 
 Since the chain version 7.x, ticker can be optionally associated with an Asset
 
+**`Deprecated`**
+
+in favour of `ticker` value received from the response of `details` method
+
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:85](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L85)
+[api/entities/Asset/Base/BaseAsset.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L90)
 
 ___
 
@@ -108,7 +116,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -136,7 +144,7 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:243](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L243)
+[api/entities/Asset/Base/BaseAsset.ts:254](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L254)
 
 ___
 
@@ -156,7 +164,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:511](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L511)
+[api/entities/Asset/Base/BaseAsset.ts:554](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L554)
 
 ▸ **currentFundingRound**(`callback`): `Promise`\<[`UnsubCallback`](../../../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -172,7 +180,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:512](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L512)
+[api/entities/Asset/Base/BaseAsset.ts:555](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L555)
 
 ___
 
@@ -192,7 +200,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:355](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L355)
+[api/entities/Asset/Base/BaseAsset.ts:380](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L380)
 
 ▸ **details**(`callback`): `Promise`\<[`UnsubCallback`](../../../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -208,7 +216,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:356](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L356)
+[api/entities/Asset/Base/BaseAsset.ts:381](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L381)
 
 ___
 
@@ -235,7 +243,7 @@ this method is of type [NoArgsProcedureMethod](../../../../../../interfaces/API/
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:223](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L223)
+[api/entities/Asset/Base/BaseAsset.ts:234](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L234)
 
 ___
 
@@ -255,7 +263,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:275](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L275)
+[api/entities/Asset/Base/BaseAsset.ts:300](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L300)
 
 ▸ **getIdentifiers**(`callback?`): `Promise`\<[`UnsubCallback`](../../../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -271,7 +279,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:276](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L276)
+[api/entities/Asset/Base/BaseAsset.ts:301](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L301)
 
 ___
 
@@ -287,7 +295,7 @@ Get required Asset mediators. These Identities must approve any Instruction invo
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:456](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L456)
+[api/entities/Asset/Base/BaseAsset.ts:499](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L499)
 
 ___
 
@@ -303,7 +311,7 @@ Get venue filtering details
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:476](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L476)
+[api/entities/Asset/Base/BaseAsset.ts:519](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L519)
 
 ___
 
@@ -329,7 +337,7 @@ Determine whether this Entity is the same as another one
 
 #### Defined in
 
-[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L61)
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -349,7 +357,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:321](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L321)
+[api/entities/Asset/Base/BaseAsset.ts:346](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L346)
 
 ▸ **isFrozen**(`callback`): `Promise`\<[`UnsubCallback`](../../../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -365,7 +373,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:322](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L322)
+[api/entities/Asset/Base/BaseAsset.ts:347](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L347)
 
 ___
 
@@ -398,7 +406,7 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:266](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L266)
+[api/entities/Asset/Base/BaseAsset.ts:277](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L277)
 
 ___
 
@@ -430,7 +438,7 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L135)
+[api/entities/Asset/Base/BaseAsset.ts:140](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L140)
 
 ___
 
@@ -458,7 +466,7 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:253](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L253)
+[api/entities/Asset/Base/BaseAsset.ts:264](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L264)
 
 ___
 
@@ -486,7 +494,7 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L113)
+[api/entities/Asset/Base/BaseAsset.ts:118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L118)
 
 ___
 
@@ -506,7 +514,7 @@ Return the BaseAsset's ID
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:578](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L578)
+[api/entities/Asset/Base/BaseAsset.ts:621](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L621)
 
 ___
 
@@ -541,7 +549,7 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L103)
+[api/entities/Asset/Base/BaseAsset.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L108)
 
 ___
 
@@ -568,7 +576,42 @@ this method is of type [NoArgsProcedureMethod](../../../../../../interfaces/API/
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:233](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/BaseAsset.ts#L233)
+[api/entities/Asset/Base/BaseAsset.ts:244](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L244)
+
+___
+
+### unlinkTicker
+
+▸ **unlinkTicker**(`opts?`): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../modules/API/Procedures/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
+
+Unlink ticker from the Asset
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `opts?` | [`ProcedureOpts`](../../../../../../interfaces/API/Procedures/Types/ProcedureOpts/ProcedureOpts.md) |
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../../modules/API/Procedures/Types/Types.md#genericpolymeshtransaction)\<`void`, `void`\>\>
+
+**`Note`**
+
+Only the ticker owner is allowed to unlink the Asset
+
+**`Throws`**
+
+if there is no ticker to unlink
+
+**`Note`**
+
+this method is of type [NoArgsProcedureMethod](../../../../../../interfaces/API/Procedures/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md), which means you can call [unlinkTicker.checkAuthorization](../../../../../../interfaces/API/Procedures/Types/NoArgsProcedureMethod/NoArgsProcedureMethod.md#checkauthorization)
+  on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Defined in
+
+[api/entities/Asset/Base/BaseAsset.ts:291](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/BaseAsset.ts#L291)
 
 ___
 
@@ -600,7 +643,7 @@ Generate the Entity's UUID from its identifying properties
 
 #### Defined in
 
-[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L14)
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L14)
 
 ___
 
@@ -632,4 +675,4 @@ Unserialize a UUID into its Unique Identifiers
 
 #### Defined in
 
-[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L23)
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L23)
