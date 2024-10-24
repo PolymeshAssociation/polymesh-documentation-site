@@ -26,7 +26,7 @@ TransferRestrictionBase.exemptedIds
 
 #### Defined in
 
-[api/entities/types.ts:493](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L493)
+[api/entities/types.ts:493](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L493)
 
 ___
 
@@ -38,4 +38,4 @@ maximum percentage (0-100) of the total supply of the Asset that can be held by 
 
 #### Defined in
 
-[api/entities/types.ts:504](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L504)
+[api/entities/types.ts:504](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L504)

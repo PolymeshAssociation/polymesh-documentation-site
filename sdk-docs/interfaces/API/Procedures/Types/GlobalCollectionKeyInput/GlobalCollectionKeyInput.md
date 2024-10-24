@@ -14,7 +14,7 @@ sidebar_label: "GlobalCollectionKeyInput"
 
 #### Defined in
 
-[api/procedures/types.ts:711](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L711)
+[api/procedures/types.ts:716](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L716)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:710](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L710)
+[api/procedures/types.ts:715](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L715)

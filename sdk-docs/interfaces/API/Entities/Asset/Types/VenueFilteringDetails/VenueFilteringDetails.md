@@ -16,7 +16,7 @@ If `isEnabled` is true, then only these venues are allowed to create instruction
 
 #### Defined in
 
-[api/entities/Asset/types.ts:238](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L238)
+[api/entities/Asset/types.ts:243](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L243)
 
 ___
 
@@ -28,4 +28,4 @@ Whether or not Venue filtering is enabled. If enabled then only allowed the Venu
 
 #### Defined in
 
-[api/entities/Asset/types.ts:234](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L234)
+[api/entities/Asset/types.ts:239](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L239)

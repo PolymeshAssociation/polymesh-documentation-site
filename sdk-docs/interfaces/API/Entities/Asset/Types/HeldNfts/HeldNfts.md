@@ -16,7 +16,7 @@ An nft collection, along with a subset of its NFTs
 
 #### Defined in
 
-[api/entities/Asset/types.ts:385](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L385)
+[api/entities/Asset/types.ts:390](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L390)
 
 ___
 
@@ -26,4 +26,4 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/types.ts:386](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L386)
+[api/entities/Asset/types.ts:391](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L391)

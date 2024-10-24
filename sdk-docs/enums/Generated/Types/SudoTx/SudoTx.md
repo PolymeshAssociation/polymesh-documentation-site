@@ -14,7 +14,7 @@ sidebar_label: "SudoTx"
 
 #### Defined in
 
-[generated/types.ts:518](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L518)
+[generated/types.ts:519](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/generated/types.ts#L519)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:516](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L516)
+[generated/types.ts:517](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/generated/types.ts#L517)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:519](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L519)
+[generated/types.ts:520](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/generated/types.ts#L520)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:517](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L517)
+[generated/types.ts:518](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/generated/types.ts#L518)

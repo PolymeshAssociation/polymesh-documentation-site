@@ -18,7 +18,7 @@ the caller Account is responsible of paying the fees
 
 #### Defined in
 
-[base/types.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L127)
+[base/types.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L127)
 
 ___
 
@@ -30,7 +30,7 @@ The creator of the MultiSig is responsible for paying the fees
 
 #### Defined in
 
-[base/types.ts:131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L131)
+[base/types.ts:131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L131)
 
 ___
 
@@ -44,7 +44,7 @@ the paying Account is paying for a specific transaction because of
 
 #### Defined in
 
-[base/types.ts:123](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L123)
+[base/types.ts:123](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L123)
 
 ___
 
@@ -56,4 +56,4 @@ the paying Account is currently subsidizing the caller
 
 #### Defined in
 
-[base/types.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L117)
+[base/types.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L117)

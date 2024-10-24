@@ -20,7 +20,7 @@ sidebar_label: "TrustedClaimIssuer"
 
 #### Defined in
 
-[api/entities/types.ts:311](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L311)
+[api/entities/types.ts:311](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L311)
 
 ___
 
@@ -32,4 +32,4 @@ a null value means that the issuer is trusted for all claim types
 
 #### Defined in
 
-[api/entities/types.ts:315](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L315)
+[api/entities/types.ts:315](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L315)

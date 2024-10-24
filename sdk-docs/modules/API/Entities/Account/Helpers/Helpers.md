@@ -25,4 +25,4 @@ Calculate the difference between the required Transaction permissions and the cu
 
 #### Defined in
 
-[api/entities/Account/helpers.ts:30](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Account/helpers.ts#L30)
+[api/entities/Account/helpers.ts:30](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Account/helpers.ts#L30)

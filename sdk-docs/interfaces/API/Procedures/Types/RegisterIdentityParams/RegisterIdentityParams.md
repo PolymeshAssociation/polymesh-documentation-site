@@ -16,7 +16,7 @@ sidebar_label: "RegisterIdentityParams"
 
 #### Defined in
 
-[api/procedures/types.ts:843](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L843)
+[api/procedures/types.ts:848](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L848)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:847](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L847)
+[api/procedures/types.ts:852](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L852)
 
 ___
 
@@ -44,7 +44,7 @@ Each Account will need to accept the generated authorizations before being linke
 
 #### Defined in
 
-[api/procedures/types.ts:839](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L839)
+[api/procedures/types.ts:844](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L844)
 
 ___
 
@@ -56,4 +56,4 @@ The Account that should function as the primary key of the newly created Identit
 
 #### Defined in
 
-[api/procedures/types.ts:834](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L834)
+[api/procedures/types.ts:839](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L839)

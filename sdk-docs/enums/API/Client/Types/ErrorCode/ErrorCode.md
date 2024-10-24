@@ -19,7 +19,7 @@ the data that is being fetched does not exist on-chain, or relies on non-existen
 
 #### Defined in
 
-[api/client/types.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L96)
+[api/client/types.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L96)
 
 ___
 
@@ -32,7 +32,7 @@ this type of error is thrown when attempting to delete/modify an entity which ha
 
 #### Defined in
 
-[api/client/types.ts:118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L118)
+[api/client/types.ts:118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L118)
 
 ___
 
@@ -44,7 +44,7 @@ error that should cause termination of the calling application
 
 #### Defined in
 
-[api/client/types.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L78)
+[api/client/types.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L78)
 
 ___
 
@@ -56,7 +56,7 @@ general purpose errors that don't fit well into the other categories
 
 #### Defined in
 
-[api/client/types.ts:131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L131)
+[api/client/types.ts:131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L131)
 
 ___
 
@@ -68,7 +68,7 @@ one or more parties involved in the transaction do not have enough balance to pe
 
 #### Defined in
 
-[api/client/types.ts:122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L122)
+[api/client/types.ts:122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L122)
 
 ___
 
@@ -81,7 +81,7 @@ the data that is being written to the chain would result in some limit being exc
 
 #### Defined in
 
-[api/client/types.ts:106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L106)
+[api/client/types.ts:106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L106)
 
 ___
 
@@ -93,7 +93,7 @@ errors encountered when interacting with the historic data middleware (GQL serve
 
 #### Defined in
 
-[api/client/types.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L91)
+[api/client/types.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L91)
 
 ___
 
@@ -106,7 +106,7 @@ the data that is being written to the chain is the same data that is already in 
 
 #### Defined in
 
-[api/client/types.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L101)
+[api/client/types.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L101)
 
 ___
 
@@ -118,7 +118,7 @@ user does not have the required roles/permissions to perform an operation
 
 #### Defined in
 
-[api/client/types.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L87)
+[api/client/types.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L87)
 
 ___
 
@@ -130,7 +130,7 @@ transaction removed from the tx pool
 
 #### Defined in
 
-[api/client/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L64)
+[api/client/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L64)
 
 ___
 
@@ -142,7 +142,7 @@ user rejected the transaction in their wallet
 
 #### Defined in
 
-[api/client/types.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L68)
+[api/client/types.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L68)
 
 ___
 
@@ -156,7 +156,7 @@ transaction failed due to an on-chain error. This is a business logic error,
 
 #### Defined in
 
-[api/client/types.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L74)
+[api/client/types.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L74)
 
 ___
 
@@ -169,7 +169,7 @@ errors that are the result of something unforeseen.
 
 #### Defined in
 
-[api/client/types.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L127)
+[api/client/types.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L127)
 
 ___
 
@@ -184,7 +184,7 @@ one or more base prerequisites for a transaction to be successful haven't been m
 
 #### Defined in
 
-[api/client/types.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L113)
+[api/client/types.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L113)
 
 ___
 
@@ -197,4 +197,4 @@ user input error. This means that one or more inputs passed by the user
 
 #### Defined in
 
-[api/client/types.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L83)
+[api/client/types.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L83)

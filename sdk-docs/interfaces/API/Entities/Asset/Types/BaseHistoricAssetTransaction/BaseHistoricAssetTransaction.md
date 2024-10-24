@@ -28,7 +28,7 @@ sidebar_label: "BaseHistoricAssetTransaction"
 
 #### Defined in
 
-[api/client/types.ts:176](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L176)
+[api/client/types.ts:176](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L176)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[api/client/types.ts:175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L175)
+[api/client/types.ts:175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L175)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[api/client/types.ts:174](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L174)
+[api/client/types.ts:174](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L174)
 
 ___
 
@@ -68,7 +68,7 @@ Event identifying the type of transaction
 
 #### Defined in
 
-[api/entities/Asset/types.ts:162](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L162)
+[api/entities/Asset/types.ts:163](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L163)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[api/client/types.ts:177](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/types.ts#L177)
+[api/client/types.ts:177](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/types.ts#L177)
 
 ___
 
@@ -94,7 +94,7 @@ Index value of the extrinsic which led to the Asset transaction within the `bloc
 
 #### Defined in
 
-[api/entities/Asset/types.ts:167](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L167)
+[api/entities/Asset/types.ts:168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L168)
 
 ___
 
@@ -106,7 +106,7 @@ Origin portfolio involved in the transaction. This value will be null when the `
 
 #### Defined in
 
-[api/entities/Asset/types.ts:153](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L153)
+[api/entities/Asset/types.ts:154](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L154)
 
 ___
 
@@ -118,7 +118,7 @@ Name of the funding round (if provided while issuing the Asset). This value is p
 
 #### Defined in
 
-[api/entities/Asset/types.ts:172](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L172)
+[api/entities/Asset/types.ts:173](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L173)
 
 ___
 
@@ -130,7 +130,7 @@ ID of the instruction being executed. This value is present only when the value 
 
 #### Defined in
 
-[api/entities/Asset/types.ts:176](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L176)
+[api/entities/Asset/types.ts:177](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L177)
 
 ___
 
@@ -142,7 +142,7 @@ Memo provided against the executed instruction. This value is present only when 
 
 #### Defined in
 
-[api/entities/Asset/types.ts:180](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L180)
+[api/entities/Asset/types.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L181)
 
 ___
 
@@ -154,4 +154,4 @@ Destination portfolio involved in the transaction . This value will be null when
 
 #### Defined in
 
-[api/entities/Asset/types.ts:157](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L157)
+[api/entities/Asset/types.ts:158](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L158)

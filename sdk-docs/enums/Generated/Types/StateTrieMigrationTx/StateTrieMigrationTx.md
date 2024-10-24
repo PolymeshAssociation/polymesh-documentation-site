@@ -14,7 +14,7 @@ sidebar_label: "StateTrieMigrationTx"
 
 #### Defined in
 
-[generated/types.ts:823](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L823)
+[generated/types.ts:825](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/generated/types.ts#L825)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:822](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L822)
+[generated/types.ts:824](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/generated/types.ts#L824)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:827](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L827)
+[generated/types.ts:829](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/generated/types.ts#L829)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:825](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L825)
+[generated/types.ts:827](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/generated/types.ts#L827)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:824](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L824)
+[generated/types.ts:826](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/generated/types.ts#L826)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:826](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L826)
+[generated/types.ts:828](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/generated/types.ts#L828)

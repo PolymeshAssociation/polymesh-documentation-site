@@ -14,4 +14,4 @@ sidebar_label: "PayDividendsParams"
 
 #### Defined in
 
-[api/procedures/types.ts:1592](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L1592)
+[api/procedures/types.ts:1597](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L1597)

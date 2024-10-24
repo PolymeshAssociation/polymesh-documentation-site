@@ -16,7 +16,7 @@ Index of the off chain leg within the instruction to be affirmed
 
 #### Defined in
 
-[api/procedures/types.ts:1027](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L1027)
+[api/procedures/types.ts:1032](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L1032)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:1039](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L1039)
+[api/procedures/types.ts:1044](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L1044)
 
 ___
 
@@ -40,7 +40,7 @@ Signature confirming the receipt details
 
 #### Defined in
 
-[api/procedures/types.ts:1035](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L1035)
+[api/procedures/types.ts:1040](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L1040)
 
 ___
 
@@ -52,7 +52,7 @@ Signer of this receipt
 
 #### Defined in
 
-[api/procedures/types.ts:1031](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L1031)
+[api/procedures/types.ts:1036](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L1036)
 
 ___
 
@@ -64,4 +64,4 @@ Unique receipt number set by the signer for their receipts
 
 #### Defined in
 
-[api/procedures/types.ts:1023](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L1023)
+[api/procedures/types.ts:1028](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L1028)

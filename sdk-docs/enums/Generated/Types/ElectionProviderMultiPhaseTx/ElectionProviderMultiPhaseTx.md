@@ -14,7 +14,7 @@ sidebar_label: "ElectionProviderMultiPhaseTx"
 
 #### Defined in
 
-[generated/types.ts:835](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L835)
+[generated/types.ts:837](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/generated/types.ts#L837)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:833](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L833)
+[generated/types.ts:835](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/generated/types.ts#L835)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:832](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L832)
+[generated/types.ts:834](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/generated/types.ts#L834)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:834](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L834)
+[generated/types.ts:836](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/generated/types.ts#L836)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:831](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/generated/types.ts#L831)
+[generated/types.ts:833](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/generated/types.ts#L833)

@@ -18,7 +18,7 @@ Account is a MultiSig. (i.e. multiple signatures are required to authorize trans
 
 #### Defined in
 
-[api/entities/Account/types.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Account/types.ts#L35)
+[api/entities/Account/types.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Account/types.ts#L35)
 
 ___
 
@@ -30,7 +30,7 @@ Account is a standard type (e.g. corresponds to the public key of a sr25519 pair
 
 #### Defined in
 
-[api/entities/Account/types.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Account/types.ts#L31)
+[api/entities/Account/types.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Account/types.ts#L31)
 
 ___
 
@@ -42,4 +42,4 @@ Account represents a smart contract
 
 #### Defined in
 
-[api/entities/Account/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Account/types.ts#L39)
+[api/entities/Account/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Account/types.ts#L39)

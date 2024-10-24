@@ -18,7 +18,7 @@ A set of methods for managing a Polymesh Identity's Accounts and their permissio
 
 #### Defined in
 
-[api/client/Polymesh.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Polymesh.ts#L108)
+[api/client/Polymesh.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Polymesh.ts#L108)
 
 ___
 
@@ -30,7 +30,7 @@ A set of methods for interacting with Assets
 
 #### Defined in
 
-[api/client/Polymesh.ts:116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Polymesh.ts#L116)
+[api/client/Polymesh.ts:116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Polymesh.ts#L116)
 
 ___
 
@@ -42,7 +42,7 @@ A set of methods to deal with Claims
 
 #### Defined in
 
-[api/client/Polymesh.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Polymesh.ts#L96)
+[api/client/Polymesh.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Polymesh.ts#L96)
 
 ___
 
@@ -54,7 +54,7 @@ A set of methods for interacting with Polymesh Identities.
 
 #### Defined in
 
-[api/client/Polymesh.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Polymesh.ts#L112)
+[api/client/Polymesh.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Polymesh.ts#L112)
 
 ___
 
@@ -66,7 +66,7 @@ A set of methods to interact with the Polymesh network. This includes transferri
 
 #### Defined in
 
-[api/client/Polymesh.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Polymesh.ts#L100)
+[api/client/Polymesh.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Polymesh.ts#L100)
 
 ___
 
@@ -78,7 +78,7 @@ A set of methods for exchanging Assets
 
 #### Defined in
 
-[api/client/Polymesh.ts:104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Polymesh.ts#L104)
+[api/client/Polymesh.ts:104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Polymesh.ts#L104)
 
 ## Accessors
 
@@ -94,7 +94,7 @@ MiddlewareV2 client
 
 #### Defined in
 
-[api/client/Polymesh.ts:357](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Polymesh.ts#L357)
+[api/client/Polymesh.ts:357](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Polymesh.ts#L357)
 
 ___
 
@@ -110,7 +110,7 @@ Polkadot client
 
 #### Defined in
 
-[api/client/Polymesh.ts:341](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Polymesh.ts#L341)
+[api/client/Polymesh.ts:341](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Polymesh.ts#L341)
 
 ___
 
@@ -126,7 +126,7 @@ signing address (to manually submit transactions with the polkadot API)
 
 #### Defined in
 
-[api/client/Polymesh.ts:349](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Polymesh.ts#L349)
+[api/client/Polymesh.ts:349](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Polymesh.ts#L349)
 
 ## Methods
 
@@ -200,7 +200,7 @@ this method is of type [CreateTransactionBatchProcedureMethod](../../../../inter
 
 #### Defined in
 
-[api/client/Polymesh.ts:332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Polymesh.ts#L332)
+[api/client/Polymesh.ts:332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Polymesh.ts#L332)
 
 ___
 
@@ -222,7 +222,7 @@ the SDK will become unusable after this operation. It will throw an error when a
 
 #### Defined in
 
-[api/client/Polymesh.ts:274](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Polymesh.ts#L274)
+[api/client/Polymesh.ts:274](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Polymesh.ts#L274)
 
 ___
 
@@ -242,7 +242,7 @@ if there is no signing Account associated to the SDK
 
 #### Defined in
 
-[api/client/Polymesh.ts:229](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Polymesh.ts#L229)
+[api/client/Polymesh.ts:229](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Polymesh.ts#L229)
 
 ___
 
@@ -266,7 +266,7 @@ an unsubscribe callback
 
 #### Defined in
 
-[api/client/Polymesh.ts:238](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Polymesh.ts#L238)
+[api/client/Polymesh.ts:238](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Polymesh.ts#L238)
 
 ___
 
@@ -290,7 +290,7 @@ an unsubscribe callback
 
 #### Defined in
 
-[api/client/Polymesh.ts:255](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Polymesh.ts#L255)
+[api/client/Polymesh.ts:255](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Polymesh.ts#L255)
 
 ___
 
@@ -316,7 +316,7 @@ if the passed Account is not present in the Signing Manager (or there is no Sign
 
 #### Defined in
 
-[api/client/Polymesh.ts:283](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Polymesh.ts#L283)
+[api/client/Polymesh.ts:283](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Polymesh.ts#L283)
 
 ___
 
@@ -342,7 +342,7 @@ Pass `null` to unset the current signing manager
 
 #### Defined in
 
-[api/client/Polymesh.ts:292](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Polymesh.ts#L292)
+[api/client/Polymesh.ts:292](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Polymesh.ts#L292)
 
 ___
 
@@ -364,4 +364,4 @@ Create an SDK instance and connect to a Polymesh node
 
 #### Defined in
 
-[api/client/Polymesh.ts:149](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Polymesh.ts#L149)
+[api/client/Polymesh.ts:149](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Polymesh.ts#L149)

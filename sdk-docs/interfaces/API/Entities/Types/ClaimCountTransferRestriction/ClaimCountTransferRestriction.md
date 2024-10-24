@@ -22,7 +22,7 @@ The type of investors this restriction applies to. e.g. non-accredited
 
 #### Defined in
 
-[api/entities/types.ts:510](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L510)
+[api/entities/types.ts:510](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L510)
 
 ___
 
@@ -38,7 +38,7 @@ TransferRestrictionBase.exemptedIds
 
 #### Defined in
 
-[api/entities/types.ts:493](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L493)
+[api/entities/types.ts:493](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L493)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:520](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L520)
+[api/entities/types.ts:520](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L520)
 
 ___
 
@@ -60,7 +60,7 @@ The maximum amount of investors that must meet the Claim criteria
 
 #### Defined in
 
-[api/entities/types.ts:518](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L518)
+[api/entities/types.ts:518](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L518)
 
 ___
 
@@ -72,4 +72,4 @@ The minimum amount of investors the must meet the Claim criteria
 
 #### Defined in
 
-[api/entities/types.ts:514](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L514)
+[api/entities/types.ts:514](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L514)

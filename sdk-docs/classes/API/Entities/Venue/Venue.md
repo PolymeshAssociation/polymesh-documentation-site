@@ -24,7 +24,7 @@ identifier number of the Venue
 
 #### Defined in
 
-[api/entities/Venue/index.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Venue/index.ts#L77)
+[api/entities/Venue/index.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Venue/index.ts#L77)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -71,7 +71,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/Venue/index.ts:313](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Venue/index.ts#L313)
+[api/entities/Venue/index.ts:313](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Venue/index.ts#L313)
 
 ___
 
@@ -104,7 +104,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/Venue/index.ts:326](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Venue/index.ts#L326)
+[api/entities/Venue/index.ts:326](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Venue/index.ts#L326)
 
 ___
 
@@ -141,7 +141,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/Venue/index.ts:354](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Venue/index.ts#L354)
+[api/entities/Venue/index.ts:354](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Venue/index.ts#L354)
 
 ___
 
@@ -157,7 +157,7 @@ Retrieve information specific to this Venue
 
 #### Defined in
 
-[api/entities/Venue/index.ts:150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Venue/index.ts#L150)
+[api/entities/Venue/index.ts:150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Venue/index.ts#L150)
 
 ___
 
@@ -177,7 +177,7 @@ Determine whether this Venue exists on chain
 
 #### Defined in
 
-[api/entities/Venue/index.ts:131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Venue/index.ts#L131)
+[api/entities/Venue/index.ts:131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Venue/index.ts#L131)
 
 ___
 
@@ -194,7 +194,7 @@ Only these signers are allowed to affirm off-chain instructions
 
 #### Defined in
 
-[api/entities/Venue/index.ts:282](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Venue/index.ts#L282)
+[api/entities/Venue/index.ts:282](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Venue/index.ts#L282)
 
 ___
 
@@ -226,7 +226,7 @@ supports pagination
 
 #### Defined in
 
-[api/entities/Venue/index.ts:239](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Venue/index.ts#L239)
+[api/entities/Venue/index.ts:239](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Venue/index.ts#L239)
 
 ___
 
@@ -242,7 +242,7 @@ Retrieve all pending and failed Instructions in this Venue
 
 #### Defined in
 
-[api/entities/Venue/index.ts:179](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Venue/index.ts#L179)
+[api/entities/Venue/index.ts:179](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Venue/index.ts#L179)
 
 ___
 
@@ -268,7 +268,7 @@ Determine whether this Entity is the same as another one
 
 #### Defined in
 
-[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L61)
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -301,7 +301,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/Venue/index.ts:339](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Venue/index.ts#L339)
+[api/entities/Venue/index.ts:339](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Venue/index.ts#L339)
 
 ___
 
@@ -338,7 +338,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/Venue/index.ts:369](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Venue/index.ts#L369)
+[api/entities/Venue/index.ts:369](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Venue/index.ts#L369)
 
 ___
 
@@ -358,7 +358,7 @@ Return the Venue's ID
 
 #### Defined in
 
-[api/entities/Venue/index.ts:376](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Venue/index.ts#L376)
+[api/entities/Venue/index.ts:376](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Venue/index.ts#L376)
 
 ___
 
@@ -390,7 +390,7 @@ Generate the Entity's UUID from its identifying properties
 
 #### Defined in
 
-[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L14)
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L14)
 
 ___
 
@@ -422,4 +422,4 @@ Unserialize a UUID into its Unique Identifiers
 
 #### Defined in
 
-[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L23)
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L23)

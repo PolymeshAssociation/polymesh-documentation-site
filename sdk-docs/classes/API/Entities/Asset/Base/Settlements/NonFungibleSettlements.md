@@ -46,7 +46,7 @@ this takes locked tokens into account. For example, if portfolio A has NFTs 1, 2
 
 #### Defined in
 
-[api/entities/Asset/Base/Settlements/index.ts:291](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/Settlements/index.ts#L291)
+[api/entities/Asset/Base/Settlements/index.ts:309](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/Settlements/index.ts#L309)
 
 ___
 
@@ -77,7 +77,7 @@ BaseSettlements.preApprove
 
 #### Defined in
 
-[api/entities/Asset/Base/Settlements/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/Settlements/index.ts#L49)
+[api/entities/Asset/Base/Settlements/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/Settlements/index.ts#L53)
 
 ___
 
@@ -108,4 +108,4 @@ BaseSettlements.removePreApproval
 
 #### Defined in
 
-[api/entities/Asset/Base/Settlements/index.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Base/Settlements/index.ts#L59)
+[api/entities/Asset/Base/Settlements/index.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Base/Settlements/index.ts#L63)

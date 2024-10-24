@@ -28,7 +28,7 @@ Identity of the Portfolio's owner
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Portfolio/index.ts#L77)
+[api/entities/Portfolio/index.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Portfolio/index.ts#L77)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -62,7 +62,7 @@ Determine whether this Portfolio exists on chain
 
 #### Defined in
 
-[api/entities/DefaultPortfolio.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/DefaultPortfolio.ts#L22)
+[api/entities/DefaultPortfolio.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/DefaultPortfolio.ts#L22)
 
 ___
 
@@ -89,7 +89,7 @@ Retrieve the balances of all fungible assets in this Portfolio
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:143](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Portfolio/index.ts#L143)
+[api/entities/Portfolio/index.ts:143](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Portfolio/index.ts#L143)
 
 ___
 
@@ -116,7 +116,7 @@ Retrieve the NFTs held in this portfolio
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Portfolio/index.ts#L222)
+[api/entities/Portfolio/index.ts:222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Portfolio/index.ts#L222)
 
 ___
 
@@ -140,7 +140,7 @@ if no custodian is set, the owner Identity is returned
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:370](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Portfolio/index.ts#L370)
+[api/entities/Portfolio/index.ts:370](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Portfolio/index.ts#L370)
 
 ___
 
@@ -173,7 +173,7 @@ uses the middlewareV2
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:412](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Portfolio/index.ts#L412)
+[api/entities/Portfolio/index.ts:412](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Portfolio/index.ts#L412)
 
 ___
 
@@ -200,7 +200,7 @@ Return whether an Identity is the Portfolio custodian
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Portfolio/index.ts#L127)
+[api/entities/Portfolio/index.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Portfolio/index.ts#L127)
 
 ___
 
@@ -226,7 +226,7 @@ Determine whether this Entity is the same as another one
 
 #### Defined in
 
-[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L61)
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -253,7 +253,7 @@ Return whether an Identity is the Portfolio owner
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Portfolio/index.ts#L114)
+[api/entities/Portfolio/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Portfolio/index.ts#L114)
 
 ___
 
@@ -290,7 +290,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:348](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Portfolio/index.ts#L348)
+[api/entities/Portfolio/index.ts:348](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Portfolio/index.ts#L348)
 
 ___
 
@@ -326,7 +326,7 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:361](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Portfolio/index.ts#L361)
+[api/entities/Portfolio/index.ts:361](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Portfolio/index.ts#L361)
 
 ___
 
@@ -369,7 +369,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:335](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Portfolio/index.ts#L335)
+[api/entities/Portfolio/index.ts:335](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Portfolio/index.ts#L335)
 
 ___
 
@@ -389,7 +389,7 @@ Return the Portfolio ID and owner DID
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:490](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Portfolio/index.ts#L490)
+[api/entities/Portfolio/index.ts:490](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Portfolio/index.ts#L490)
 
 ___
 
@@ -421,7 +421,7 @@ Generate the Entity's UUID from its identifying properties
 
 #### Defined in
 
-[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L14)
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L14)
 
 ___
 
@@ -453,4 +453,4 @@ Unserialize a UUID into its Unique Identifiers
 
 #### Defined in
 
-[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L23)
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L23)

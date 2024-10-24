@@ -40,7 +40,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Identities.ts:274](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Identities.ts#L274)
+[api/client/Identities.ts:274](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Identities.ts#L274)
 
 ___
 
@@ -83,7 +83,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Identities.ts:145](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Identities.ts#L145)
+[api/client/Identities.ts:145](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Identities.ts#L145)
 
 ___
 
@@ -123,7 +123,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Identities.ts:242](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Identities.ts#L242)
+[api/client/Identities.ts:242](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Identities.ts#L242)
 
 ___
 
@@ -163,7 +163,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Identities.ts:260](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Identities.ts#L260)
+[api/client/Identities.ts:260](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Identities.ts#L260)
 
 ___
 
@@ -197,7 +197,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Identities.ts:188](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Identities.ts#L188)
+[api/client/Identities.ts:188](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Identities.ts#L188)
 
 ___
 
@@ -231,7 +231,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Identities.ts:199](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Identities.ts#L199)
+[api/client/Identities.ts:199](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Identities.ts#L199)
 
 ___
 
@@ -258,7 +258,7 @@ if
 
 #### Defined in
 
-[api/client/Identities.ts:297](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Identities.ts#L297)
+[api/client/Identities.ts:297](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Identities.ts#L297)
 
 ___
 
@@ -285,7 +285,7 @@ if there is no ChildIdentity with the passed DID
 
 #### Defined in
 
-[api/client/Identities.ts:217](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Identities.ts#L217)
+[api/client/Identities.ts:217](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Identities.ts#L217)
 
 ___
 
@@ -312,7 +312,7 @@ if there is no Identity with the passed DID
 
 #### Defined in
 
-[api/client/Identities.ts:208](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Identities.ts#L208)
+[api/client/Identities.ts:208](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Identities.ts#L208)
 
 ___
 
@@ -335,7 +335,7 @@ Return whether the supplied Identity/DID exists
 
 #### Defined in
 
-[api/client/Identities.ts:224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Identities.ts#L224)
+[api/client/Identities.ts:224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Identities.ts#L224)
 
 ___
 
@@ -378,7 +378,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Identities.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Identities.ts#L127)
+[api/client/Identities.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Identities.ts#L127)
 
 ___
 
@@ -412,7 +412,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Identities.ts:288](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Identities.ts#L288)
+[api/client/Identities.ts:288](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Identities.ts#L288)
 
 ___
 
@@ -446,7 +446,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Identities.ts:159](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Identities.ts#L159)
+[api/client/Identities.ts:159](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Identities.ts#L159)
 
 ___
 
@@ -496,4 +496,4 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Identities.ts:177](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Identities.ts#L177)
+[api/client/Identities.ts:177](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Identities.ts#L177)

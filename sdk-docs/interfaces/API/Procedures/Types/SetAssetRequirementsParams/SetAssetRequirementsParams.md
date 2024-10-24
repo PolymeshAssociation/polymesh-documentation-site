@@ -17,4 +17,4 @@ array of array of conditions. For a transfer to be successful, it must comply wi
 
 #### Defined in
 
-[api/procedures/types.ts:1257](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L1257)
+[api/procedures/types.ts:1262](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L1262)

@@ -30,7 +30,7 @@ Whether the permissions are inclusive or exclusive
 
 #### Defined in
 
-[api/entities/types.ts:619](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L619)
+[api/entities/types.ts:619](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L619)
 
 ___
 
@@ -42,4 +42,4 @@ Values to be included/excluded
 
 #### Defined in
 
-[api/entities/types.ts:615](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L615)
+[api/entities/types.ts:615](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L615)

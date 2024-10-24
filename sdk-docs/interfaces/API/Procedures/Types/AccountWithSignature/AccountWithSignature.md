@@ -25,7 +25,7 @@ Signature can also be generated using the method [accountManagement.generateOffC
 
 #### Defined in
 
-[api/procedures/types.ts:623](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L623)
+[api/procedures/types.ts:623](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L623)
 
 ___
 
@@ -41,4 +41,4 @@ This account should not be linked to any other Identity
 
 #### Defined in
 
-[api/procedures/types.ts:609](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L609)
+[api/procedures/types.ts:609](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L609)

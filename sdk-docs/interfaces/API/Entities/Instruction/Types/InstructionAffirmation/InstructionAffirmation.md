@@ -14,7 +14,7 @@ sidebar_label: "InstructionAffirmation"
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:88](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/types.ts#L88)
+[api/entities/Instruction/types.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/types.ts#L96)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Instruction/types.ts#L89)
+[api/entities/Instruction/types.ts:97](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Instruction/types.ts#L97)

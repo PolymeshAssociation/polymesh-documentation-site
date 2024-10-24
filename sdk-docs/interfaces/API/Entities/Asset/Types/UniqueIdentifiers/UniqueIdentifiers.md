@@ -18,4 +18,4 @@ id of the Asset
 
 #### Defined in
 
-[api/entities/Asset/types.ts:88](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L88)
+[api/entities/Asset/types.ts:88](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L88)

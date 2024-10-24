@@ -16,7 +16,7 @@ Methods to use when ordering `AssetHolder`.
 
 #### Defined in
 
-[middleware/types.ts:5809](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L5809)
+[middleware/types.ts:5809](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L5809)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:5810](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L5810)
+[middleware/types.ts:5810](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L5810)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:5811](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L5811)
+[middleware/types.ts:5811](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L5811)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:5812](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L5812)
+[middleware/types.ts:5812](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L5812)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:5813](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L5813)
+[middleware/types.ts:5813](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L5813)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:5814](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L5814)
+[middleware/types.ts:5814](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L5814)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:5815](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L5815)
+[middleware/types.ts:5815](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L5815)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:5816](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L5816)
+[middleware/types.ts:5816](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L5816)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:5819](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L5819)
+[middleware/types.ts:5819](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L5819)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:5820](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L5820)
+[middleware/types.ts:5820](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L5820)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:5817](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L5817)
+[middleware/types.ts:5817](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L5817)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:5818](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L5818)
+[middleware/types.ts:5818](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L5818)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:5821](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L5821)
+[middleware/types.ts:5821](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L5821)
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:5822](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L5822)
+[middleware/types.ts:5822](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L5822)
 
 ___
 
@@ -156,7 +156,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:5823](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L5823)
+[middleware/types.ts:5823](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L5823)
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:5824](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L5824)
+[middleware/types.ts:5824](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L5824)
 
 ___
 
@@ -176,4 +176,4 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:5825](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L5825)
+[middleware/types.ts:5825](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L5825)

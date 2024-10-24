@@ -25,7 +25,7 @@ Asset whose balances are being recorded in this Checkpoint
 
 #### Defined in
 
-[api/entities/Checkpoint.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Checkpoint.ts#L59)
+[api/entities/Checkpoint.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Checkpoint.ts#L59)
 
 ___
 
@@ -37,7 +37,7 @@ Checkpoint identifier number
 
 #### Defined in
 
-[api/entities/Checkpoint.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Checkpoint.ts#L54)
+[api/entities/Checkpoint.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Checkpoint.ts#L54)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -86,7 +86,7 @@ This arises from a chain storage optimization and pagination.
 
 #### Defined in
 
-[api/entities/Checkpoint.ts:111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Checkpoint.ts#L111)
+[api/entities/Checkpoint.ts:111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Checkpoint.ts#L111)
 
 ___
 
@@ -115,7 +115,7 @@ The balance is stored only when the Identity makes a transaction after a Checkpo
 
 #### Defined in
 
-[api/entities/Checkpoint.ts:205](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Checkpoint.ts#L205)
+[api/entities/Checkpoint.ts:205](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Checkpoint.ts#L205)
 
 ___
 
@@ -131,7 +131,7 @@ Retrieve this Checkpoint's creation date
 
 #### Defined in
 
-[api/entities/Checkpoint.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Checkpoint.ts#L91)
+[api/entities/Checkpoint.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Checkpoint.ts#L91)
 
 ___
 
@@ -151,7 +151,7 @@ Determine whether this Checkpoint exists on chain
 
 #### Defined in
 
-[api/entities/Checkpoint.ts:250](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Checkpoint.ts#L250)
+[api/entities/Checkpoint.ts:250](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Checkpoint.ts#L250)
 
 ___
 
@@ -177,7 +177,7 @@ Determine whether this Entity is the same as another one
 
 #### Defined in
 
-[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L61)
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -197,7 +197,7 @@ Return the Checkpoint's ticker and identifier
 
 #### Defined in
 
-[api/entities/Checkpoint.ts:272](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Checkpoint.ts#L272)
+[api/entities/Checkpoint.ts:272](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Checkpoint.ts#L272)
 
 ___
 
@@ -213,7 +213,7 @@ Retrieve the Asset's total supply at this checkpoint
 
 #### Defined in
 
-[api/entities/Checkpoint.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Checkpoint.ts#L76)
+[api/entities/Checkpoint.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Checkpoint.ts#L76)
 
 ___
 
@@ -245,7 +245,7 @@ Generate the Entity's UUID from its identifying properties
 
 #### Defined in
 
-[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L14)
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L14)
 
 ___
 
@@ -277,4 +277,4 @@ Unserialize a UUID into its Unique Identifiers
 
 #### Defined in
 
-[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L23)
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L23)

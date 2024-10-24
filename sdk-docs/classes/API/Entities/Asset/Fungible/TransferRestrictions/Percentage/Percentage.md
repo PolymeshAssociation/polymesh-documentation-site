@@ -33,7 +33,7 @@ if the Balance statistic is not enabled for this Asset. [enableStat](Percentage.
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L29)
+[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L29)
 
 ___
 
@@ -54,7 +54,7 @@ if the stat is being used by a restriction or is not set
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L66)
+[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L66)
 
 ___
 
@@ -71,7 +71,7 @@ that limit the total ownership of the Assets' supply
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L58)
+[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L58)
 
 ___
 
@@ -101,7 +101,7 @@ there is a maximum number of restrictions allowed across all types.
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:75](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L75)
+[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:75](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L75)
 
 ___
 
@@ -125,7 +125,7 @@ Retrieve current Percentage Transfer Restriction investor balance statistic for 
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L81)
+[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L81)
 
 ___
 
@@ -145,7 +145,7 @@ the result is the total amount of restrictions after the procedure has run
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L52)
+[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L52)
 
 ___
 
@@ -170,4 +170,4 @@ the result is the total amount of restrictions after the procedure has run
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L42)
+[api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/TransferRestrictions/Percentage.ts#L42)

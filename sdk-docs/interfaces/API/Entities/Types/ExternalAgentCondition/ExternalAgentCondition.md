@@ -14,4 +14,4 @@ sidebar_label: "ExternalAgentCondition"
 
 #### Defined in
 
-[api/entities/types.ts:368](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L368)
+[api/entities/types.ts:368](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L368)

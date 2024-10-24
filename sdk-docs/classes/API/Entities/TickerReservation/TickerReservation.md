@@ -26,7 +26,7 @@ reserved ticker
 
 #### Defined in
 
-[api/entities/TickerReservation/index.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/TickerReservation/index.ts#L59)
+[api/entities/TickerReservation/index.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/TickerReservation/index.ts#L59)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -73,7 +73,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/TickerReservation/index.ts:226](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/TickerReservation/index.ts#L226)
+[api/entities/TickerReservation/index.ts:226](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/TickerReservation/index.ts#L226)
 
 ___
 
@@ -93,7 +93,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/TickerReservation/index.ts:99](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/TickerReservation/index.ts#L99)
+[api/entities/TickerReservation/index.ts:99](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/TickerReservation/index.ts#L99)
 
 ▸ **details**(`callback`): `Promise`\<[`UnsubCallback`](../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -109,7 +109,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/TickerReservation/index.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/TickerReservation/index.ts#L100)
+[api/entities/TickerReservation/index.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/TickerReservation/index.ts#L100)
 
 ___
 
@@ -129,7 +129,7 @@ Determine whether this Ticker Reservation exists on chain
 
 #### Defined in
 
-[api/entities/TickerReservation/index.ts:251](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/TickerReservation/index.ts#L251)
+[api/entities/TickerReservation/index.ts:251](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/TickerReservation/index.ts#L251)
 
 ___
 
@@ -162,7 +162,7 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/TickerReservation/index.ts:213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/TickerReservation/index.ts#L213)
+[api/entities/TickerReservation/index.ts:213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/TickerReservation/index.ts#L213)
 
 ___
 
@@ -188,7 +188,7 @@ Determine whether this Entity is the same as another one
 
 #### Defined in
 
-[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L61)
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -208,7 +208,7 @@ Return the Reservation's ticker
 
 #### Defined in
 
-[api/entities/TickerReservation/index.ts:278](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/TickerReservation/index.ts#L278)
+[api/entities/TickerReservation/index.ts:278](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/TickerReservation/index.ts#L278)
 
 ___
 
@@ -248,7 +248,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/TickerReservation/index.ts:244](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/TickerReservation/index.ts#L244)
+[api/entities/TickerReservation/index.ts:244](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/TickerReservation/index.ts#L244)
 
 ___
 
@@ -280,7 +280,7 @@ Generate the Entity's UUID from its identifying properties
 
 #### Defined in
 
-[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L14)
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L14)
 
 ___
 
@@ -312,4 +312,4 @@ Unserialize a UUID into its Unique Identifiers
 
 #### Defined in
 
-[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L23)
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L23)

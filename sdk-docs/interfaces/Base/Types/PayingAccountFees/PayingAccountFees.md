@@ -19,7 +19,7 @@ fees that will be paid by the Account
 
 #### Defined in
 
-[base/types.ts:162](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L162)
+[base/types.ts:162](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L162)
 
 ___
 
@@ -31,4 +31,4 @@ data related to the Account responsible of paying for the transaction
 
 #### Defined in
 
-[base/types.ts:166](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L166)
+[base/types.ts:166](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L166)

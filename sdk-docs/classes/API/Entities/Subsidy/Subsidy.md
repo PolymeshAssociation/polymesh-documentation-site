@@ -24,7 +24,7 @@ Account whose transactions are being paid for
 
 #### Defined in
 
-[api/entities/Subsidy/index.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Subsidy/index.ts#L54)
+[api/entities/Subsidy/index.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Subsidy/index.ts#L54)
 
 ___
 
@@ -36,7 +36,7 @@ Account that is paying for the transactions
 
 #### Defined in
 
-[api/entities/Subsidy/index.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Subsidy/index.ts#L58)
+[api/entities/Subsidy/index.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Subsidy/index.ts#L58)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -86,7 +86,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/Subsidy/index.ts:179](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Subsidy/index.ts#L179)
+[api/entities/Subsidy/index.ts:179](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Subsidy/index.ts#L179)
 
 ___
 
@@ -106,7 +106,7 @@ Determine whether this Subsidy relationship exists on chain
 
 #### Defined in
 
-[api/entities/Subsidy/index.ts:186](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Subsidy/index.ts#L186)
+[api/entities/Subsidy/index.ts:186](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Subsidy/index.ts#L186)
 
 ___
 
@@ -126,7 +126,7 @@ if the Subsidy does not exist
 
 #### Defined in
 
-[api/entities/Subsidy/index.ts:205](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Subsidy/index.ts#L205)
+[api/entities/Subsidy/index.ts:205](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Subsidy/index.ts#L205)
 
 ___
 
@@ -158,7 +158,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/Subsidy/index.ts:165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Subsidy/index.ts#L165)
+[api/entities/Subsidy/index.ts:165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Subsidy/index.ts#L165)
 
 ___
 
@@ -184,7 +184,7 @@ Determine whether this Entity is the same as another one
 
 #### Defined in
 
-[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L61)
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -215,7 +215,7 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Subsidy/index.ts:139](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Subsidy/index.ts#L139)
+[api/entities/Subsidy/index.ts:139](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Subsidy/index.ts#L139)
 
 ___
 
@@ -251,7 +251,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/Subsidy/index.ts:153](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Subsidy/index.ts#L153)
+[api/entities/Subsidy/index.ts:153](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Subsidy/index.ts#L153)
 
 ___
 
@@ -271,7 +271,7 @@ Return the Subsidy's static data
 
 #### Defined in
 
-[api/entities/Subsidy/index.ts:227](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Subsidy/index.ts#L227)
+[api/entities/Subsidy/index.ts:227](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Subsidy/index.ts#L227)
 
 ___
 
@@ -303,7 +303,7 @@ Generate the Entity's UUID from its identifying properties
 
 #### Defined in
 
-[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L14)
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L14)
 
 ___
 
@@ -335,4 +335,4 @@ Unserialize a UUID into its Unique Identifiers
 
 #### Defined in
 
-[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L23)
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L23)

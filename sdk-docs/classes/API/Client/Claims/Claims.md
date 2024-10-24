@@ -39,7 +39,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Claims.ts:133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Claims.ts#L133)
+[api/client/Claims.ts:133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Claims.ts#L133)
 
 ___
 
@@ -72,7 +72,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Claims.ts:146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Claims.ts#L146)
+[api/client/Claims.ts:146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Claims.ts#L146)
 
 ___
 
@@ -105,7 +105,7 @@ uses the middlewareV2 (Required)
 
 #### Defined in
 
-[api/client/Claims.ts:580](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Claims.ts#L580)
+[api/client/Claims.ts:580](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Claims.ts#L580)
 
 ___
 
@@ -129,7 +129,7 @@ Retrieve the list of CDD claims for a target Identity
 
 #### Defined in
 
-[api/client/Claims.ts:343](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Claims.ts#L343)
+[api/client/Claims.ts:343](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Claims.ts#L343)
 
 ___
 
@@ -153,7 +153,7 @@ Retrieve all scopes in which claims have been made for the target Identity.
 
 #### Defined in
 
-[api/client/Claims.ts:292](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Claims.ts#L292)
+[api/client/Claims.ts:292](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Claims.ts#L292)
 
 ___
 
@@ -175,7 +175,7 @@ Retrieves a custom claim type based on its ID
 
 #### Defined in
 
-[api/client/Claims.ts:555](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Claims.ts#L555)
+[api/client/Claims.ts:555](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Claims.ts#L555)
 
 ___
 
@@ -197,7 +197,7 @@ Retrieves a custom claim type based on its name
 
 #### Defined in
 
-[api/client/Claims.ts:532](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Claims.ts#L532)
+[api/client/Claims.ts:532](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Claims.ts#L532)
 
 ___
 
@@ -234,7 +234,7 @@ uses the middleware V2
 
 #### Defined in
 
-[api/client/Claims.ts:207](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Claims.ts#L207)
+[api/client/Claims.ts:207](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Claims.ts#L207)
 
 ___
 
@@ -268,7 +268,7 @@ uses the middlewareV2
 
 #### Defined in
 
-[api/client/Claims.ts:172](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Claims.ts#L172)
+[api/client/Claims.ts:172](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Claims.ts#L172)
 
 ___
 
@@ -304,7 +304,7 @@ uses the middlewareV2 (optional)
 
 #### Defined in
 
-[api/client/Claims.ts:435](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Claims.ts#L435)
+[api/client/Claims.ts:435](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Claims.ts#L435)
 
 ___
 
@@ -338,7 +338,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Claims.ts:523](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Claims.ts#L523)
+[api/client/Claims.ts:523](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Claims.ts#L523)
 
 ___
 
@@ -371,4 +371,4 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Claims.ts:159](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Claims.ts#L159)
+[api/client/Claims.ts:159](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Claims.ts#L159)

@@ -34,7 +34,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Settlements.ts:121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Settlements.ts#L121)
+[api/client/Settlements.ts:121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Settlements.ts#L121)
 
 ___
 
@@ -62,7 +62,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Settlements.ts:131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Settlements.ts#L131)
+[api/client/Settlements.ts:131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Settlements.ts#L131)
 
 ___
 
@@ -90,7 +90,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Settlements.ts:111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Settlements.ts#L111)
+[api/client/Settlements.ts:111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Settlements.ts#L111)
 
 ___
 
@@ -113,7 +113,7 @@ Retrieve an Instruction by its ID
 
 #### Defined in
 
-[api/client/Settlements.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Settlements.ts#L89)
+[api/client/Settlements.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Settlements.ts#L89)
 
 ___
 
@@ -136,4 +136,4 @@ Retrieve a Venue by its ID
 
 #### Defined in
 
-[api/client/Settlements.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/client/Settlements.ts#L68)
+[api/client/Settlements.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/client/Settlements.ts#L68)

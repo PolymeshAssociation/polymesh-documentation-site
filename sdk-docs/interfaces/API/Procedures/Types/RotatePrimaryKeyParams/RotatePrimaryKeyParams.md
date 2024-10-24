@@ -16,7 +16,7 @@ sidebar_label: "RotatePrimaryKeyParams"
 
 #### Defined in
 
-[api/procedures/types.ts:876](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L876)
+[api/procedures/types.ts:881](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L881)
 
 ___
 
@@ -28,4 +28,4 @@ The Account that should function as the primary key of the newly created Identit
 
 #### Defined in
 
-[api/procedures/types.ts:871](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L871)
+[api/procedures/types.ts:876](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L876)

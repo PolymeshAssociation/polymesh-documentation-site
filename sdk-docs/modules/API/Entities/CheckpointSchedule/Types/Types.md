@@ -16,4 +16,4 @@ sidebar_label: "Types"
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CheckpointSchedule/types.ts#L10)
+[api/entities/CheckpointSchedule/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CheckpointSchedule/types.ts#L10)

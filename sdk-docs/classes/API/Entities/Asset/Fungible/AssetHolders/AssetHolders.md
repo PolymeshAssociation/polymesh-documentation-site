@@ -38,4 +38,4 @@ supports pagination
 
 #### Defined in
 
-[api/entities/Asset/Fungible/AssetHolders/index.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/Fungible/AssetHolders/index.ts#L17)
+[api/entities/Asset/Fungible/AssetHolders/index.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/Fungible/AssetHolders/index.ts#L17)

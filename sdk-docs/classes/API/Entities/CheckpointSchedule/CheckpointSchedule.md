@@ -24,7 +24,7 @@ Asset for which Checkpoints are scheduled
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CheckpointSchedule/index.ts#L57)
+[api/entities/CheckpointSchedule/index.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CheckpointSchedule/index.ts#L57)
 
 ___
 
@@ -36,7 +36,7 @@ date at which the last Checkpoint will be created with this Schedule.
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CheckpointSchedule/index.ts#L67)
+[api/entities/CheckpointSchedule/index.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CheckpointSchedule/index.ts#L67)
 
 ___
 
@@ -48,7 +48,7 @@ schedule identifier number
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CheckpointSchedule/index.ts#L52)
+[api/entities/CheckpointSchedule/index.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CheckpointSchedule/index.ts#L52)
 
 ___
 
@@ -60,7 +60,7 @@ dates in the future where checkpoints are schedule to be created
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CheckpointSchedule/index.ts#L62)
+[api/entities/CheckpointSchedule/index.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CheckpointSchedule/index.ts#L62)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -90,7 +90,7 @@ Retrieve information specific to this Schedule
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CheckpointSchedule/index.ts#L89)
+[api/entities/CheckpointSchedule/index.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CheckpointSchedule/index.ts#L89)
 
 ___
 
@@ -110,7 +110,7 @@ Determine whether this Checkpoint Schedule exists on chain
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:160](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CheckpointSchedule/index.ts#L160)
+[api/entities/CheckpointSchedule/index.ts:160](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CheckpointSchedule/index.ts#L160)
 
 ___
 
@@ -126,7 +126,7 @@ Retrieve all Checkpoints created by this Schedule
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CheckpointSchedule/index.ts#L127)
+[api/entities/CheckpointSchedule/index.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CheckpointSchedule/index.ts#L127)
 
 ___
 
@@ -152,7 +152,7 @@ Determine whether this Entity is the same as another one
 
 #### Defined in
 
-[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L61)
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -172,7 +172,7 @@ Return the Schedule's static data
 
 #### Defined in
 
-[api/entities/CheckpointSchedule/index.ts:185](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/CheckpointSchedule/index.ts#L185)
+[api/entities/CheckpointSchedule/index.ts:185](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/CheckpointSchedule/index.ts#L185)
 
 ___
 
@@ -204,7 +204,7 @@ Generate the Entity's UUID from its identifying properties
 
 #### Defined in
 
-[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L14)
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L14)
 
 ___
 
@@ -236,4 +236,4 @@ Unserialize a UUID into its Unique Identifiers
 
 #### Defined in
 
-[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Entity.ts#L23)
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Entity.ts#L23)

@@ -33,7 +33,7 @@ sidebar_label: "OptionalArgsProcedureMethod"
 
 #### Defined in
 
-[api/procedures/types.ts:178](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L178)
+[api/procedures/types.ts:178](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L178)
 
 ## Properties
 
@@ -58,4 +58,4 @@ sidebar_label: "OptionalArgsProcedureMethod"
 
 #### Defined in
 
-[api/procedures/types.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L181)
+[api/procedures/types.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L181)

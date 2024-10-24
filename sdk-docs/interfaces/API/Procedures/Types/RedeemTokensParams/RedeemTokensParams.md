@@ -16,7 +16,7 @@ amount of Asset tokens to be redeemed
 
 #### Defined in
 
-[api/procedures/types.ts:1190](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L1190)
+[api/procedures/types.ts:1195](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L1195)
 
 ___
 
@@ -28,4 +28,4 @@ portfolio (or portfolio ID) from which Assets will be redeemed (optional, defaul
 
 #### Defined in
 
-[api/procedures/types.ts:1194](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L1194)
+[api/procedures/types.ts:1199](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L1199)

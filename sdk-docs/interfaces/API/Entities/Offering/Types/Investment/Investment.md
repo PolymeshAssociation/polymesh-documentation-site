@@ -14,7 +14,7 @@ sidebar_label: "Investment"
 
 #### Defined in
 
-[api/entities/Offering/types.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Offering/types.ts#L90)
+[api/entities/Offering/types.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Offering/types.ts#L90)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/Offering/types.ts:88](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Offering/types.ts#L88)
+[api/entities/Offering/types.ts:88](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Offering/types.ts#L88)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[api/entities/Offering/types.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Offering/types.ts#L89)
+[api/entities/Offering/types.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Offering/types.ts#L89)

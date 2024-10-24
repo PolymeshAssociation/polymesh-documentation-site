@@ -20,7 +20,7 @@ the chain doesn't use "Scoped" types, but they are needed here to discriminate t
 
 #### Defined in
 
-[api/entities/types.ts:286](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L286)
+[api/entities/types.ts:286](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L286)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:285](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L285)
+[api/entities/types.ts:285](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L285)
 
 ___
 
@@ -42,7 +42,7 @@ ScopedPercentage is an SDK only type, on chain it is `Balance` with a claimType 
 
 #### Defined in
 
-[api/entities/types.ts:294](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L294)
+[api/entities/types.ts:294](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L294)
 
 ___
 
@@ -54,4 +54,4 @@ ScopedCount is an SDK only type, on chain it is `Count` with a claimType option 
 
 #### Defined in
 
-[api/entities/types.ts:290](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/types.ts#L290)
+[api/entities/types.ts:290](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/types.ts#L290)

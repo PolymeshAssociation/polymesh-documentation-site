@@ -14,7 +14,7 @@ sidebar_label: "TransactionArgumentType"
 
 #### Defined in
 
-[base/types.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L55)
+[base/types.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L55)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[base/types.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L61)
+[base/types.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L61)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[base/types.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L59)
+[base/types.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L59)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[base/types.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L57)
+[base/types.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L57)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[base/types.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L60)
+[base/types.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L60)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[base/types.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L54)
+[base/types.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L54)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[base/types.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L67)
+[base/types.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L67)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[base/types.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L58)
+[base/types.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L58)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[base/types.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L65)
+[base/types.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L65)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[base/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L64)
+[base/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L64)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[base/types.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L63)
+[base/types.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L63)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[base/types.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L56)
+[base/types.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L56)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-[base/types.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L62)
+[base/types.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L62)
 
 ___
 
@@ -144,4 +144,4 @@ ___
 
 #### Defined in
 
-[base/types.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/base/types.ts#L66)
+[base/types.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/base/types.ts#L66)

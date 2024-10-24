@@ -14,4 +14,4 @@ sidebar_label: "SetGroupPermissionsParams"
 
 #### Defined in
 
-[api/procedures/types.ts:1455](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L1455)
+[api/procedures/types.ts:1460](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L1460)

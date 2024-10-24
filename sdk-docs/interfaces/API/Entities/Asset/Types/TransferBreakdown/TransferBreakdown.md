@@ -12,13 +12,13 @@ Object containing every reason why a specific Asset transfer would fail
 
 ### compliance
 
-• `Optional` **compliance**: [`Compliance`](../../../Types/Compliance/Compliance.md)
+• **compliance**: [`Compliance`](../../../Types/Compliance/Compliance.md)
 
 how the transfer adheres to the asset's compliance rules
 
 #### Defined in
 
-[api/entities/Asset/types.ts:133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L133)
+[api/entities/Asset/types.ts:134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L134)
 
 ___
 
@@ -30,7 +30,7 @@ list of general transfer errors
 
 #### Defined in
 
-[api/entities/Asset/types.ts:129](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L129)
+[api/entities/Asset/types.ts:130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L130)
 
 ___
 
@@ -42,7 +42,7 @@ list of transfer restrictions and whether the transfer satisfies each one
 
 #### Defined in
 
-[api/entities/Asset/types.ts:137](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L137)
+[api/entities/Asset/types.ts:138](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L138)
 
 ___
 
@@ -54,4 +54,4 @@ true if the transfer is possible
 
 #### Defined in
 
-[api/entities/Asset/types.ts:141](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/Asset/types.ts#L141)
+[api/entities/Asset/types.ts:142](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/Asset/types.ts#L142)

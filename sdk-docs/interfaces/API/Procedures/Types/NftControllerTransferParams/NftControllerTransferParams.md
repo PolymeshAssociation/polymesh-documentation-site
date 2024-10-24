@@ -16,7 +16,7 @@ Optional portfolio (or portfolio ID) to which NFTs will be transferred to. Defau
 
 #### Defined in
 
-[api/procedures/types.ts:1129](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L1129)
+[api/procedures/types.ts:1134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L1134)
 
 ___
 
@@ -28,7 +28,7 @@ The NFTs to transfer
 
 #### Defined in
 
-[api/procedures/types.ts:1124](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L1124)
+[api/procedures/types.ts:1129](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L1129)
 
 ___
 
@@ -40,4 +40,4 @@ portfolio (or portfolio ID) from which NFTs will be transferred from
 
 #### Defined in
 
-[api/procedures/types.ts:1120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/procedures/types.ts#L1120)
+[api/procedures/types.ts:1125](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/procedures/types.ts#L1125)

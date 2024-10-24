@@ -14,7 +14,7 @@ sidebar_label: "HumanReadable"
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/AuthorizationRequest.ts#L36)
+[api/entities/AuthorizationRequest.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/AuthorizationRequest.ts#L36)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/AuthorizationRequest.ts#L34)
+[api/entities/AuthorizationRequest.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/AuthorizationRequest.ts#L34)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/AuthorizationRequest.ts#L37)
+[api/entities/AuthorizationRequest.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/AuthorizationRequest.ts#L37)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/AuthorizationRequest.ts#L33)
+[api/entities/AuthorizationRequest.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/AuthorizationRequest.ts#L33)
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 #### Defined in
 
-[api/entities/AuthorizationRequest.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/api/entities/AuthorizationRequest.ts#L35)
+[api/entities/AuthorizationRequest.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/api/entities/AuthorizationRequest.ts#L35)

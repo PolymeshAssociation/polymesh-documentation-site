@@ -16,7 +16,7 @@ Represents all possible states of an Instruction
 
 #### Defined in
 
-[middleware/types.ts:97298](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L97298)
+[middleware/types.ts:97937](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L97937)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:97299](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L97299)
+[middleware/types.ts:97938](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L97938)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:97300](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L97300)
+[middleware/types.ts:97939](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L97939)
 
 ___
 
@@ -46,4 +46,4 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:97301](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c53723bab/src/middleware/types.ts#L97301)
+[middleware/types.ts:97940](https://github.com/PolymeshAssociation/polymesh-sdk/blob/5b946f904/src/middleware/types.ts#L97940)
