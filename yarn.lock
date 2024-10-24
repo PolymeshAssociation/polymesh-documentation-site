@@ -1277,7 +1277,7 @@
     "@docsearch/css" "3.6.2"
     algoliasearch "^4.19.1"
 
-"@docusaurus/core@^3.5.2", "@docusaurus/core@3.5.2":
+"@docusaurus/core@^2.0.0-alpha.56 || ^3.0.0", "@docusaurus/core@^3.5.2", "@docusaurus/core@3.5.2":
   version "3.5.2"
   resolved "https://registry.npmjs.org/@docusaurus/core/-/core-3.5.2.tgz"
   integrity sha512-4Z1WkhCSkX4KO0Fw5m/Vuc7Q3NxBG53NE5u59Rs96fWkMPZVSrzEPP16/Nk6cWb/shK7xXPndTmalJtw7twL/w==
@@ -4009,6 +4009,11 @@ dns-packet@^5.2.2:
   integrity sha512-l4gcSouhcgIKRvyy99RNVOgxXiicE+2jZoNmaNmZ6JXiGajBOJAesk1OBlJuM5k2c+eudGdLxDqXuPCKIj6kpw==
   dependencies:
     "@leichtgewicht/ip-codec" "^2.0.1"
+
+docusaurus-plugin-matomo@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.npmjs.org/docusaurus-plugin-matomo/-/docusaurus-plugin-matomo-0.0.8.tgz"
+  integrity sha512-YSaDdjxI7uN1FuNLSGrQy4BmDEXwwyL6vac7GfmS7wFBLck/Ias5jHqENPBHXe36m2cYzyesGPQL1EsS9vanwA==
 
 dom-converter@^0.2.0:
   version "0.2.0"
