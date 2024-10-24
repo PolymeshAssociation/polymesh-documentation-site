@@ -100,7 +100,7 @@ const config: Config = {
         ],
       },
     ],
-    'docusaurus-plugin-matomo'
+    'docusaurus-plugin-matomo',
   ],
 
   themeConfig: {
@@ -109,7 +109,7 @@ const config: Config = {
       siteId: '3',
       phpLoader: 'matomo.php',
       jsLoader: 'matomo.js',
-    },    
+    },
     algolia: {
       // The application ID provided by Algolia
       appId: 'K25SRS7O1D',
