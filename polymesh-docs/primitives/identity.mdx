@@ -128,6 +128,14 @@ However, these relationships can be amended.
 
 An _Admin Identity_ can be assigned via `multisig::addAdmin`, allowing the _Admin Identity_ to add/remove signers from the MultiSig (via `multisig::addMultisigSignersViaAdmin`, `multisig::removeMultisigSignersViaAdmin`) and change the number of approvals needed (via `multisig::changeSigsRequiredViaAdmin`). To make these changes, the primary key of the _Admin Identity_ must call these transactions.
 
+The _Admin Identity_ can be removed either directly by the _Admin Identity_ themselves, or by the MultiSig executing a proposal to remove the _Admin Identity_.
+
+Modifying the signers or number of signers required, on a MultiSig, invalidates any prior un-executed MultiSig proposals.
+
+:::note
+Since the _Admin Identity_ associated with a MultiSig can modify the signers and / or the number of signers required on a MultiSig, thus invalidating any pending proposals, they can prevent the MultiSig from directly removing the _Admin Identity_ on a MultiSig. This is by design to provide a _Admin Identity_ with full control over any MultiSig it is administering. 
+:::
+
 Additionally, a MultiSig can leave and join new identities, similar to any other key. Changing identity will not update the _Admin Identity_ of the MultiSig, this must be amended separately if needed.
 
 To change identity, a MultiSig must:

@@ -17,11 +17,21 @@ Polymesh has a native token, used for security and payments, [POLYX](../polyx/).
 
 Polymesh provides core business logic and financial abstractions at its base layer, called primitives. These provide a rich set of embedded on-chain actions (called extrinsics) that a user can initiate, such as creating an asset, settling securities instructions or participating in on-chain governance.
 
-Polymesh also supports Layer 2 (smart contract) logic, allowing network users to extend and leverage the base layer primitives to build on-chain financial and identity based protocols. Polymesh smart contracts compile to [WebAssembly (Wasm)](https://webassembly.org/). Using Wasm expands the family of languages available to smart contract developers to include Rust, C/C++, C#, Typescript, Haxe amd Kotlin. As well as allows for the use of standard development tools. For Polymesh we recommend the use of [ink!](https://ink.substrate.io/), which is a subset of Rust specifically designed by Parity for Substrate based chains. Ink! offers significantly greater performance and safety when compared with other programming languages such as Solidity.
+Polymesh also supports Layer 2 [Smart Contract](../../primitives/smart-contracts/) logic, allowing network users to extend and leverage the base layer primitives to build on-chain financial and identity based protocols. Polymesh smart contracts compile to [WebAssembly (Wasm)](https://webassembly.org/). Using Wasm expands the family of languages available to smart contract developers to include Rust, C/C++, C#, Typescript, Haxe amd Kotlin, as well as allowing for the use of standard development tools. For Polymesh we recommend the use of [Ink!](https://ink.substrate.io/), which is a subset of Rust specifically designed by Parity for Substrate based chains. Ink! offers significantly greater performance and safety when compared with other programming languages such as Solidity.
 
 ## Architecture
 
 ![Architecture Diagram](../images/Polymesh_Architecture.png)
+
+## Polymesh and Polymesh Private
+
+While Polymesh is a public-permissioned blockchain, [Polymesh Private]((../../polymesh-private/) is a variant of Polymesh designed to be deployed as a private blockchain between participating chain operators. There is exactly one Polymesh mainnet, whereas there can be many independent instances of Polymesh Private chains.
+
+Polymesh Private is very similar to Polymesh, with the following exceptions:
+  - Polymesh Private chains are expected to be run amongst a small set of peers on a private network.
+  - Polymesh Private includes a [Confidential Asset](../../polymesh-private/confidential-assets/) module to allow private asset settlements between counterparties.
+  - Polymesh Private does not involve the use of the [POLYX](../polyx/) token. While transactions can still have fees associated with them, these fees are paid in a token associated with the individual Polymesh Private instance which is not expected to have intrinsic value. Alternatively Polymesh Private transactions can be modified to have no fees.
+  - Usage of Polymesh Private is governed by a license - see https://github.com/PolymeshAssociation/polymesh-private?tab=readme-ov-file#license for more details.
 
 ## Polymesh Pillars
 
@@ -29,7 +39,7 @@ Polymesh is tailored to the needs of regulated assets and global capital markets
 
 ### Identity
 
-Identity is at the core of Polymesh. Polymesh implements a federated root of trust via permissioned Customer Due Diligence service providers. Every transaction in Polymesh is associated with an identity.
+[Identity](../../primitives/identity/) is at the core of Polymesh. Polymesh implements a federated root of trust for onboarding all users, via permissioned Customer Due Diligence service providers. Every transaction in Polymesh is associated with an identity.
 
 Identities provide attestation and key management. All users must act through an on-chain identity when interacting with Polymesh. Identities are referenced through DIDs (decentralised identifiers).
 
@@ -37,7 +47,7 @@ Identity attestations allow asset issuers to enforce compliance on-chain in real
 
 Identity key management allows users and organisations to flexibly manage their on-chain identities via primary and secondary keys and delegate asset management to other identities via external agent functionality.
 
-An entity (a real world individual or organisation) can have multiple on-chain identities, allowing them to keep their overall positions confidential.
+An entity (a real world individual or organisation) can have multiple on-chain identities, allowing them to keep their overall positions segregated and confidential.
 
 ### Governance
 
@@ -47,8 +57,8 @@ The Polymesh governance system is designed to further decentralise over time.
 
 ### Confidentiality
 
-Confidentiality allows Polymesh users to maintain privacy over certain aspects of their securities transactions. The MERCAT protocol was designed to allow confidentiality within asset transfers using homomorphic encryption and zero-knowledge proofs. In future releases we will be integrating confidential assets into Polymesh, based on the [MERCAT](https://info.polymesh.network/hubfs/Files/MERCAT-white-paper.pdf) protocol. There is also ongoing research on how to improve and update confidentiality in Polymesh to support the full spectrum of confidentiality and securities use-cases.
+Confidentiality allows Polymesh users to maintain privacy over certain aspects of their securities transactions. The [Confidential Asset](../../polymesh-private/confidential-assets/) protocol, implemented in Polymesh Private, is designed to allow confidentiality within asset transfers using homomorphic encryption and zero-knowledge proofs. There is also ongoing research on how to improve and update confidentiality in Polymesh to support the full spectrum of confidentiality and securities use-cases.
 
 ### Compliance
 
-Polymesh facilitates claim based compliance directly in its base layer. Asset issuers can set flexible and extendable rules relating to the claims that their investors are required to have attached to their identity in order to either send or receive the asset. These rules can be combined to create complex transfer restrictions that are tailored to the assets specific type, jurisdiction and regulatory regime.
+Polymesh facilitates claim based compliance directly in its base layer primitives. Asset issuers can set flexible and extendable rules relating to the claims that their investors are required to have attached to their identity in order to either send or receive the asset. These rules can be combined to create complex transfer restrictions that are tailored to the assets specific type, jurisdiction and regulatory regime.

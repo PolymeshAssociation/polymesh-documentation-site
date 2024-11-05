@@ -23,7 +23,7 @@ Instructions can be settled either via:
 
 - an off-chain payment receipt
 
-Payment receipts are small pieces of data signed by an authorised signatory (determined by the venue on which the instruction is settling) which allege that the corresponding assets have moved off-chain. They can only be used for instruction legs that do not correspond to on-chain tickers.
+Payment receipts are small pieces of data signed by an authorised signatory (determined by the venue on which the instruction is settling) which allege that the corresponding assets have moved off-chain. They can only be used for instruction legs that do not correspond to on-chain Asset IDs. Note that an off-chain payment receipt can only be used for a settlement instruction associated with a venue to ensure that the list of authorised signatories is well-defined.
 
 ## Roles
 
@@ -31,13 +31,15 @@ Payment receipts are small pieces of data signed by an authorised signatory (det
 
 The asset issuer (or agent on their behalf) controls the set of identities that are allowed to create instructions that reference their asset. They can also choose to leave this open.
 
-### Venue Creator
+### Venues
 
 Only the creator of a venue is allowed to create instructions underneath it.
 
 The creator of a venue can cancel any pending instruction underneath it.
 
 The venue creator controls the set of identities that are allowed to sign payment receipts for instructions underneath it.
+
+Venues are optional for settlement instructions - when creating a new settlement instruction, if the venue is not specified, then the instruction cannot include off-chain legs.
 
 ### Counterparty
 
@@ -79,7 +81,7 @@ If an instruction is executed, assets are transferred between counterparties for
 
 For certain types of assets, e.g. stable coins, it may not be appropriate to require all users to explicitly affirm transactions where they receive the asset (either directly or via their custodian).
 
-In this case Polymesh allows users to "pre-approve" certain tickers meaning that explicit affirmations are no longer required. Certain tickers can also be excluded from requiring affirmation on receipt globally via the Polymesh governing council.
+In this case Polymesh allows users to "pre-approve" certain Asset IDs meaning that explicit affirmations are no longer required. Certain Asset IDs can also be excluded from requiring affirmation on receipt globally via the Polymesh governing council.
 
 ## Affirming and Custody
 
@@ -93,7 +95,7 @@ This allows control to be handed to a custodian, whilst the record of beneficial
 
 Alice wants to transfer 10 ACME tokens to Bob as a gift.
 
-She uses her “default” venue (or any venue that she has previously created) to generate an instruction, with a single leg.
+Either she does not specify a venue, or she specifies any venue that she has previously created, to generate an instruction, with a single leg.
 
 If Bob has provided pre-authorisation via signed data to Alice, she can submit it alongside the transaction as Bobs authorisation, and her own authorisation is implicit (since she is creating the instruction). Alice's ACME tokens are locked until Bob authorises the instruction (or Alice cancels), assuming he has not pre-authorised.
 
