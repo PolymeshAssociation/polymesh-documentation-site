@@ -1023,6 +1023,8 @@ export RESPONSE_8_7=$(curl --silent --request 'GET' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json')
 
+export RESPONSE_8_7_BALANCE=$(echo $RESPONSE_8_7 | jq -r '.balance')
+
 echo $RESPONSE_8_7
 ```
 
@@ -1040,7 +1042,7 @@ export RESPONSE_8_7_1=$(curl --silent --request 'POST' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-    "encryptedValue": "'"$RESPONSE_8_7"'"
+    "encryptedValue": "'"$RESPONSE_8_7_BALANCE"'"
   }')
 
 echo $RESPONSE_8_7_1 | jq
