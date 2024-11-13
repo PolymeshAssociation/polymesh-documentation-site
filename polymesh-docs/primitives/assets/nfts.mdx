@@ -6,11 +6,9 @@ description: ''
 subsite: polymesh-docs
 ---
 
-# Non-Fungible Tokens
-
 ## Overview
 
-The Non-Fungible Token (NFT) pallet extends the Asset pallet allowing users to create NFT collections, issue unique tokens and redeem (i.e. burn) existing non-fungible tokens. The documentation for the NFT crate can be found [here](https://docs.polymesh.live/pallet_nft/index.html).
+The Non-Fungible Token (NFT) pallet extends the Asset pallet, allowing users to create NFT collections, issue unique tokens, and redeem (i.e. burn) existing non-fungible tokens. Documentation for the NFT crate can be found [here](https://docs.polymesh.live/pallet_nft/index.html).
 
 ## NFT Collection
 
@@ -18,71 +16,71 @@ All non-fungible tokens are linked to a unique NFT collection, which is tied to 
 
 ### Creating an NFT Collection
 
-In order to successfully create an NFT collection, the dispatchable [`create_nft_collection`](https://docs.polymesh.live/pallet_nft/struct.Module.html#arguments) must be called, and the following conditions must hold:
+To successfully create an NFT collection, the dispatchable [`create_nft_collection`](https://docs.polymesh.live/pallet_nft/struct.Module.html#arguments) must be called, and the following conditions must be met:
 
-- If the asset already exists, it must be of type `NonFungible` and the caller must have the proper permission for the asset. If the asset does not already exist, the `create_nft_collection` dispatchable will also create one non-fungible asset using the values passed as `nft_type`;
-- This must be the first collection associated to the given `AssetId` (i.e. only one collection per Asset ID is allowed);
-- The number of metadata keys associated to the collection must be less or equal to [MaxNumberOfCollectionKeys](https://docs.polymesh.live/pallet_nft/trait.Config.html#associatedtype.MaxNumberOfCollectionKeys);
-- All metadata keys must be registered prior to the creation of the collection. This implies that when using local metadata keys, one must call `create_asset` and `register_asset_metadata_local_type` before calling `create_nft_collection`;
+- If the asset already exists, it must be of type `NonFungible`, and the caller must have the appropriate permission for the asset. If the asset does not exist, `create_nft_collection` will also create one non-fungible asset using the values passed as `nft_type`.
+- This must be the first collection associated with the given `AssetId` (i.e. only one collection per Asset ID is allowed).
+- The number of metadata keys associated with the collection must be less than or equal to [MaxNumberOfCollectionKeys](https://docs.polymesh.live/pallet_nft/trait.Config.html#associatedtype.MaxNumberOfCollectionKeys).
+- All metadata keys must be registered before the collection is created. When using local metadata keys, you must call `create_asset` and `register_asset_metadata_local_type` before `create_nft_collection`.
 
-Once the dispatchable succeeds, a unique ID is tied to the NFT collection, in addition to the Asset ID which identifies the underlying asset details.
+Once the dispatchable succeeds, a unique ID is tied to the NFT collection, in addition to the Asset ID, which identifies the underlying asset details.
 
 ### Issuing an NFT
 
-After creating the collection, tokens can be issued with the [`issue_nft`](https://docs.polymesh.live/pallet_nft/struct.Module.html#arguments-1) extrinsic. For successfully issuing an NFT, the following conditions must hold:
+After creating the collection, tokens can be issued with the [`issue_nft`](https://docs.polymesh.live/pallet_nft/struct.Module.html#arguments-1) extrinsic. For an NFT to be issued successfully, the following conditions must hold:
 
-- An NFT collection associated with `AssetId` must exist;
-- The caller must have the proper permission for the `Asset`;
-- The `portfolio_kind` of the caller must be valid;
-- All metadata keys specified in the NFT collection have a value set when issuing the token. Attempting to issue a token with metadata keys not defined in the collection will also fail;
+- An NFT collection associated with `AssetId` must exist.
+- The caller must have the appropriate permission for the `Asset`.
+- The `portfolio_kind` of the caller must be valid.
+- All metadata keys specified in the NFT collection must have a value set when issuing the token. Issuing a token with metadata keys not defined in the collection will fail.
 
 Once the dispatchable succeeds, a unique non-fungible token is linked to the specified portfolio.
 
 ### Redeeming an NFT
 
-A non-fungible token can be redeemed by calling the [`redeem_nft`](https://docs.polymesh.live/pallet_nft/struct.Module.html#arguments-2) dispatchable.For successfully redeeming an NFT, the following conditions must hold:
+A non-fungible token can be redeemed by calling the [`redeem_nft`](https://docs.polymesh.live/pallet_nft/struct.Module.html#arguments-2) dispatchable. To successfully redeem an NFT, the following conditions must hold:
 
-- An NFT collection associated with `AssetId` must exist;
-- The caller must have the proper permission for the `Asset`;
-- The `nft_id` of the token must exist in the caller's portfolio;
+- An NFT collection associated with `AssetId` must exist.
+- The caller must have the appropriate permission for the `Asset`.
+- The `nft_id` of the token must exist in the caller's portfolio.
 
-Once the dispatchable succeeds, the non-fungible token will no longer be linked to caller's portfolio.
+Once the dispatchable succeeds, the non-fungible token will no longer be linked to the caller's portfolio.
 
-## NFTs and the Settlement pallet
+## NFTs and the Settlement Pallet
 
-Polymesh's [Settlement](https://developers.polymesh.network/polymesh-docs/primitives/settlement/#overview) engine fully supports NFTs, and transferring of non-fungible tokens go through the same process as fungible assets. This means that all compliance rules defined for the underlying asset must be respected for a successful transfer of an NFT.
+Polymesh's [Settlement](https://developers.polymesh.network/polymesh-docs/primitives/settlement/#overview) engine fully supports NFTs, and transfers of non-fungible tokens follow the same process as fungible assets. This means that all compliance rules defined for the underlying asset must be respected for a successful transfer of an NFT.
 
 ## Metadata Schema
 
-NFTs can be associated with metadata at both the collection and individual NFT granularity. Each NFT collection can define local metadata keys to use for their collection.
+NFTs can be associated with metadata at both the collection and individual NFT level. Each NFT collection can define local metadata keys for their collection.
 
-There are also 4 globally defined metadata keys, which are intended to be used in a standardised way, to allow third-party dApps etc. to easily process metadata associated with NFTs.
+There are also four globally defined metadata keys, intended to be used in a standardized way to allow third-party dApps to process metadata associated with NFTs.
 
-Unlike other chains and standards (e.g. EIP-721) Polymesh encourages you to store metadata directly on-chain - this has the benefit of transparency, reducing dependencies on external systems such as IPFS, and allowing the metadata to be referenced by smart contract business logic.
+Unlike other chains and standards (e.g., EIP-721), Polymesh encourages metadata to be stored directly on-chain for greater transparency, reduced reliance on external systems such as IPFS, and allowing direct reference by smart contract business logic.
 
-However, in some cases it may still be preferable to store some metadata off-chain - for compatability purposes or otherwise.
+In some cases, it may be preferable to store some metadata off-chain, for compatibility or other reasons.
 
-The below two standard approaches to specifying a Token URI and an Image URI are optional, but encouraged if you are storing this data off-chain.
+The two standard approaches below for specifying a Token URI and an Image URI are optional but encouraged if storing this data off-chain.
 
 ### Token URI
 
-The Token URI of an NFT is intended to point towards an off-chain URI containing a JSON blob defining some metadata of the NFT.
+The Token URI of an NFT is intended to point to an off-chain URI containing a JSON blob defining metadata for the NFT.
 
 The Token URI can be specified in various ways:
 
 - via the global metadata key `tokenUri` defined for an individual NFT
 - via the global metadata key `baseTokenUri` defined for the whole NFT collection
 
-In both cases, the metadata value can include `{tokenId}` which will be substituted by a client with the corresponding `tokenId` of the individual NFT being referenced.
+In both cases, the metadata value can include `{tokenId}`, which will be substituted by a client with the corresponding `tokenId` of the individual NFT.
 
 The full process to determine the Token URI of an individual NFT is:
 
-- if the individual NFT has a `tokenUri` value set, return this
-- else if the NFT collection has a `baseTokenUri` value set then:
-  - if the `baseTokenUri` does not already include `{tokenId}` append `/{tokenId}` (e.g. the resolved URI is \{baseTokenUri}/\{tokenId})
-  - substitute any `{tokenId}` references with the underlying `tokenId` of the individual NFT, return this
+- If the individual NFT has a `tokenUri` value set, return this.
+- Otherwise, if the NFT collection has a `baseTokenUri` value set, then:
+  - If the `baseTokenUri` does not already include `{tokenId}`, append `/{tokenId}` (e.g., the resolved URI is `{baseTokenUri}/{tokenId}`).
+  - Substitute any `{tokenId}` references with the underlying `tokenId` of the individual NFT, then return this.
 
-The JSON blob referenced by an individual NFTs Token URI should confirm to the JSON schema below:
+The JSON blob referenced by an individual NFT's Token URI should conform to the JSON schema below:
 
 ```json
 {
@@ -91,15 +89,15 @@ The JSON blob referenced by an individual NFTs Token URI should confirm to the J
   "properties": {
     "name": {
       "type": "string",
-      "description": "Identifies the asset which this token represents"
+      "description": "Identifies the asset this token represents"
     },
     "description": {
       "type": "string",
-      "description": "Describes the asset which this token represents"
+      "description": "Describes the asset this token represents"
     },
     "properties": {
       "type": "object",
-      "description": "Arbitrary properties. Values may be strings, numbers, object or arrays."
+      "description": "Arbitrary properties. Values may be strings, numbers, objects, or arrays."
     }
   }
 }
@@ -107,30 +105,27 @@ The JSON blob referenced by an individual NFTs Token URI should confirm to the J
 
 ### Image URI
 
-As well as being able to specify off-chain metadata via a JSON blob, you can also directly specify the image associated with an individual NFT.
-
-The Image URI of an NFT is intended to point towards an off-chain URI containing image data for the individual NFT.
+You can also specify an image associated with an individual NFT by providing an Image URI, intended to point to an off-chain URI containing image data for the NFT.
 
 The Image URI can be specified in various ways:
 
 - via the global metadata key `imageUri` defined for an individual NFT
-- via the global metadata key `baseImageUri` defined for the whole NFT collection
+- via the global metadata key `baseImageUri` defined for the entire NFT collection
 
-In both cases, the metadata value can include `{tokenId}` which will be substituted by a client with the corresponding `tokenId` of the individual NFT being referenced.
+In both cases, the metadata value can include `{tokenId}`, which will be substituted by a client with the `tokenId` of the individual NFT.
 
-The full process to determine the Image URI of an individual NFT is:
+The process to determine the Image URI of an individual NFT is:
 
-- if the individual NFT has a `imageUri` value set, return this
-- else if the NFT collection has a `baseImageUri` value set then:
-  - if the `baseImageUri` does not already include `{tokenId}` append `/{tokenId}` (e.g. the resolved URI is \{baseImageUri}/\{tokenId})
-  - substitute any `{tokenId}` references with the underlying `tokenId` of the individual NFT, return this
+- If the individual NFT has an `imageUri` value set, return this.
+- Otherwise, if the NFT collection has a `baseImageUri` value set, then:
+  - If the `baseImageUri` does not already include `{tokenId}`, append `/{tokenId}` (e.g., the resolved URI is `{baseImageUri}/{tokenId}`).
+  - Substitute any `{tokenId}` references with the underlying `tokenId` of the individual NFT, then return this.
 
-This logic is equivalent to the above logic for [Token URI](#token-uri).
+This logic matches the process described for the [Token URI](#token-uri).
 
 :::note Notes
 
-- When using `baseImageUri`, it is highly recommended to include `{tokenId}` to ensure a file extension is included in the URI. Without the file extension, there may be ambiguity in how the image is handled, which can lead to display issues or incorrect handling by applications reading the file.
-
-- The above specification allows an image to be specified either via the [Image URI](#image-uri) or through an `image` tag in the JSON data linked by the [Token URI](#token-uri). The recommended approach is to first look for a dedicated [Image URI](#image-uri) and then, if not found, fall back to the image tag in the data stored at the [Token URI](#token-uri).
+- When using `baseImageUri`, it's highly recommended to include `{tokenId}` to ensure a file extension is included in the URI. Without a file extension, there may be ambiguity in how the image is handled, which could lead to display or processing issues.
+- The above specification allows an image to be specified via the [Image URI](#image-uri) or through an `image` tag in the JSON data linked by the [Token URI](#token-uri). The recommended approach is to first look for a dedicated [Image URI](#image-uri) and, if not found, fall back to the image tag in the data stored at the [Token URI](#token-uri).
 
 :::
