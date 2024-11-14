@@ -9,7 +9,7 @@ subsite: polymesh-docs
 
 Polymesh supports the issuance and management of both fungible and non-fungible native assets.
 
-While each asset type has specific differences in issuance and definition, both fungible and non-fungible assets use the [Settlement](../../settlement/) and [Compliance](../../compliance/) modules consistently. This consistency allows both asset types to share attestations and be settled collectively.
+While each asset type has specific differences in issuance and definition, both fungible and non-fungible assets use the [Settlement](../settlement/) and [Compliance](../compliance/) modules consistently. This consistency allows both asset types to share attestations and be settled collectively.
 
 ## Asset IDs
 
