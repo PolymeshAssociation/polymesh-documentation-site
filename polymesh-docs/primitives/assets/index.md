@@ -76,7 +76,7 @@ The issuer or an agent can also perform a "controller transfer", allowing them t
 
 ## Issuance
 
-Polymesh’s issuance process allows issuers or their appointed agent to mint assets to a portfolio they control and then transfer these assets to investors through a [Settlement instruction](../../settlement/).
+Polymesh’s issuance process allows issuers or their appointed agent to mint assets to a portfolio they control and then transfer these assets to investors through a [Settlement instruction](../settlement/).
 
 ## Roles
 
