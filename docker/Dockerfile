@@ -37,7 +37,7 @@ COPY --from=builder --chown=root:root /home/node/build/ /usr/share/nginx/html/
 
 ################################################################
 
-ENV GTM_CONTAINER_ID=GTM_CONTAINER_ID_NOT_SET
+ENV MATOMO_SITE_ID=MATOMO_SITE_ID_NOT_SET
 
 ################################################################
 
