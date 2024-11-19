@@ -3,6 +3,8 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import 'dotenv/config';
 
+const siteId = process.env.MATOMO_SITE_ID;
+console.log('siteId', siteId);
 const config: Config = {
   title: 'Polymesh Documentation Portal',
   tagline: 'The perfect place to discover the open source Polymesh universe',
@@ -50,6 +52,15 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+  scripts: siteId
+  ? [
+      {
+        src: '/matomo/matomo_inject.js',
+        async: true,
+        'data-site-id': siteId,
+      },
+    ]
+  : [], // Do not load the script if no siteId is provided
   plugins: [
     [
       '@docusaurus/plugin-content-docs',
@@ -100,16 +111,9 @@ const config: Config = {
         ],
       },
     ],
-    'docusaurus-plugin-matomo',
   ],
 
   themeConfig: {
-    matomo: {
-      matomoUrl: 'https://matomo.polymesh.network/',
-      siteId: '3',
-      phpLoader: 'matomo.php',
-      jsLoader: 'matomo.js',
-    },
     algolia: {
       // The application ID provided by Algolia
       appId: 'K25SRS7O1D',
