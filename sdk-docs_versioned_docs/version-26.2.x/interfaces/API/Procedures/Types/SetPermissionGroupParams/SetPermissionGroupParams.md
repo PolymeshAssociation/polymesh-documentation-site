@@ -22,4 +22,4 @@ This procedure can be called with:
 
 #### Defined in
 
-[api/procedures/types.ts:1593](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L1593)
+[api/procedures/types.ts:1605](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L1605)

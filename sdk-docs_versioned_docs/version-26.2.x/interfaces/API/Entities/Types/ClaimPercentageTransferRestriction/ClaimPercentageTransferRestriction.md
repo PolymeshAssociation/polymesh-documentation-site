@@ -22,7 +22,7 @@ The type of investors this restriction applies to. e.g. Canadian investor
 
 #### Defined in
 
-[api/entities/types.ts:528](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/types.ts#L528)
+[api/entities/types.ts:528](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/types.ts#L528)
 
 ___
 
@@ -38,7 +38,7 @@ TransferRestrictionBase.exemptedIds
 
 #### Defined in
 
-[api/entities/types.ts:495](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/types.ts#L495)
+[api/entities/types.ts:495](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/types.ts#L495)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:538](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/types.ts#L538)
+[api/entities/types.ts:538](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/types.ts#L538)
 
 ___
 
@@ -60,7 +60,7 @@ The maximum percentage of the total supply that investors meeting the Claim crit
 
 #### Defined in
 
-[api/entities/types.ts:536](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/types.ts#L536)
+[api/entities/types.ts:536](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/types.ts#L536)
 
 ___
 
@@ -72,4 +72,4 @@ The minimum percentage of the total supply that investors meeting the Claim crit
 
 #### Defined in
 
-[api/entities/types.ts:532](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/types.ts#L532)
+[api/entities/types.ts:532](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/types.ts#L532)

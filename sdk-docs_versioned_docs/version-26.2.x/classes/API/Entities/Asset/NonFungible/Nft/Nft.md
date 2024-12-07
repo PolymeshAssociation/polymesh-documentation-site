@@ -24,7 +24,7 @@ The [NftCollection](../../../../../../modules/API/Entities/Asset/NonFungible/Nft
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/Nft.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/Nft.ts#L50)
+[api/entities/Asset/NonFungible/Nft.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/Nft.ts#L50)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/Nft.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/Nft.ts#L45)
+[api/entities/Asset/NonFungible/Nft.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/Nft.ts#L45)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -68,7 +68,7 @@ Determine if the NFT exists on chain
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/Nft.ts:130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/Nft.ts#L130)
+[api/entities/Asset/NonFungible/Nft.ts:130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/Nft.ts#L130)
 
 ___
 
@@ -97,7 +97,7 @@ The URI values can include `{tokenId}` that will be replaced with the NFTs ID. I
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/Nft.ts:152](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/Nft.ts#L152)
+[api/entities/Asset/NonFungible/Nft.ts:152](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/Nft.ts#L152)
 
 ___
 
@@ -113,7 +113,7 @@ Get metadata associated with this token
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/Nft.ts:98](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/Nft.ts#L98)
+[api/entities/Asset/NonFungible/Nft.ts:98](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/Nft.ts#L98)
 
 ___
 
@@ -133,7 +133,7 @@ This method returns `null` if there is no existing holder for the token. This ma
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/Nft.ts:213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/Nft.ts#L213)
+[api/entities/Asset/NonFungible/Nft.ts:213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/Nft.ts#L213)
 
 ___
 
@@ -162,7 +162,7 @@ The URI values can include `{tokenId}` that will be replaced with the NFTs ID. I
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/Nft.ts:188](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/Nft.ts#L188)
+[api/entities/Asset/NonFungible/Nft.ts:188](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/Nft.ts#L188)
 
 ___
 
@@ -188,7 +188,7 @@ Determine whether this Entity is the same as another one
 
 #### Defined in
 
-[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L61)
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -208,7 +208,7 @@ if NFT has no owner (has been redeemed)
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/Nft.ts:245](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/Nft.ts#L245)
+[api/entities/Asset/NonFungible/Nft.ts:245](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/Nft.ts#L245)
 
 ___
 
@@ -236,7 +236,7 @@ this method is of type [OptionalArgsProcedureMethod](../../../../../../interface
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/Nft.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/Nft.ts#L58)
+[api/entities/Asset/NonFungible/Nft.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/Nft.ts#L58)
 
 ___
 
@@ -268,7 +268,7 @@ Generate the Entity's UUID from its identifying properties
 
 #### Defined in
 
-[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L14)
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L14)
 
 ___
 
@@ -300,4 +300,4 @@ Unserialize a UUID into its Unique Identifiers
 
 #### Defined in
 
-[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L23)
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L23)

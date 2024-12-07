@@ -40,7 +40,7 @@ this method is of type [ProcedureMethod](../../../../../../../interfaces/API/Pro
 
 #### Defined in
 
-[api/entities/Asset/Base/Compliance/Requirements.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/Compliance/Requirements.ts#L92)
+[api/entities/Asset/Base/Compliance/Requirements.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/Compliance/Requirements.ts#L92)
 
 ___
 
@@ -56,7 +56,7 @@ Check whether Asset compliance requirements are paused or not
 
 #### Defined in
 
-[api/entities/Asset/Base/Compliance/Requirements.ts:219](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/Compliance/Requirements.ts#L219)
+[api/entities/Asset/Base/Compliance/Requirements.ts:219](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/Compliance/Requirements.ts#L219)
 
 ___
 
@@ -76,7 +76,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/Base/Compliance/Requirements.ts:124](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/Compliance/Requirements.ts#L124)
+[api/entities/Asset/Base/Compliance/Requirements.ts:124](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/Compliance/Requirements.ts#L124)
 
 ▸ **get**(`callback`): `Promise`\<[`UnsubCallback`](../../../../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -92,7 +92,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/Base/Compliance/Requirements.ts:125](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/Compliance/Requirements.ts#L125)
+[api/entities/Asset/Base/Compliance/Requirements.ts:125](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/Compliance/Requirements.ts#L125)
 
 ___
 
@@ -120,7 +120,7 @@ this method is of type [ProcedureMethod](../../../../../../../interfaces/API/Pro
 
 #### Defined in
 
-[api/entities/Asset/Base/Compliance/Requirements.ts:243](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/Compliance/Requirements.ts#L243)
+[api/entities/Asset/Base/Compliance/Requirements.ts:243](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/Compliance/Requirements.ts#L243)
 
 ___
 
@@ -147,7 +147,7 @@ this method is of type [NoArgsProcedureMethod](../../../../../../../interfaces/A
 
 #### Defined in
 
-[api/entities/Asset/Base/Compliance/Requirements.ts:202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/Compliance/Requirements.ts#L202)
+[api/entities/Asset/Base/Compliance/Requirements.ts:202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/Compliance/Requirements.ts#L202)
 
 ___
 
@@ -175,7 +175,7 @@ this method is of type [ProcedureMethod](../../../../../../../interfaces/API/Pro
 
 #### Defined in
 
-[api/entities/Asset/Base/Compliance/Requirements.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/Compliance/Requirements.ts#L102)
+[api/entities/Asset/Base/Compliance/Requirements.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/Compliance/Requirements.ts#L102)
 
 ___
 
@@ -202,7 +202,7 @@ this method is of type [NoArgsProcedureMethod](../../../../../../../interfaces/A
 
 #### Defined in
 
-[api/entities/Asset/Base/Compliance/Requirements.ts:192](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/Compliance/Requirements.ts#L192)
+[api/entities/Asset/Base/Compliance/Requirements.ts:192](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/Compliance/Requirements.ts#L192)
 
 ___
 
@@ -237,7 +237,7 @@ this method is of type [ProcedureMethod](../../../../../../../interfaces/API/Pro
 
 #### Defined in
 
-[api/entities/Asset/Base/Compliance/Requirements.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/Compliance/Requirements.ts#L115)
+[api/entities/Asset/Base/Compliance/Requirements.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/Compliance/Requirements.ts#L115)
 
 ___
 
@@ -264,4 +264,4 @@ this method is of type [NoArgsProcedureMethod](../../../../../../../interfaces/A
 
 #### Defined in
 
-[api/entities/Asset/Base/Compliance/Requirements.ts:212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/Compliance/Requirements.ts#L212)
+[api/entities/Asset/Base/Compliance/Requirements.ts:212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/Compliance/Requirements.ts#L212)

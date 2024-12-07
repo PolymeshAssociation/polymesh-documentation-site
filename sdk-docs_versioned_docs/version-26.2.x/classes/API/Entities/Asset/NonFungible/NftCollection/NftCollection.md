@@ -22,7 +22,7 @@ Class used to manage NFT functionality
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/NftCollection.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/NftCollection.ts#L62)
+[api/entities/Asset/NonFungible/NftCollection.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/NftCollection.ts#L62)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L71)
+[api/entities/Asset/Base/BaseAsset.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L71)
 
 ___
 
@@ -56,7 +56,7 @@ this is no longer used from chain 7.x
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L81)
+[api/entities/Asset/Base/BaseAsset.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L81)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L72)
+[api/entities/Asset/Base/BaseAsset.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L72)
 
 ___
 
@@ -86,7 +86,7 @@ Unique ID of the Asset in UUID format
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L95)
+[api/entities/Asset/Base/BaseAsset.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L95)
 
 ___
 
@@ -100,7 +100,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L73)
+[api/entities/Asset/Base/BaseAsset.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L73)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L74)
+[api/entities/Asset/Base/BaseAsset.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L74)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/NftCollection.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/NftCollection.ts#L63)
+[api/entities/Asset/NonFungible/NftCollection.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/NftCollection.ts#L63)
 
 ___
 
@@ -146,7 +146,7 @@ in favour of `ticker` value received from the response of `details` method
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L90)
+[api/entities/Asset/Base/BaseAsset.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L90)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L46)
 
 ## Accessors
 
@@ -184,7 +184,7 @@ BaseAsset.rawId
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L102)
+[api/entities/Asset/Base/BaseAsset.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L102)
 
 ## Methods
 
@@ -216,7 +216,7 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:263](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L263)
+[api/entities/Asset/Base/BaseAsset.ts:265](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L265)
 
 ___
 
@@ -237,7 +237,7 @@ In other words, the SDK only validates the presence of metadata keys, additional
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/NftCollection.ts:172](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/NftCollection.ts#L172)
+[api/entities/Asset/NonFungible/NftCollection.ts:172](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/NftCollection.ts#L172)
 
 ___
 
@@ -265,7 +265,7 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/NftCollection.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/NftCollection.ts#L82)
+[api/entities/Asset/NonFungible/NftCollection.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/NftCollection.ts#L82)
 
 ___
 
@@ -289,7 +289,7 @@ there is a possibility that the data is not ready by the time it is requested. I
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/NftCollection.ts:261](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/NftCollection.ts#L261)
+[api/entities/Asset/NonFungible/NftCollection.ts:261](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/NftCollection.ts#L261)
 
 ___
 
@@ -313,7 +313,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:563](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L563)
+[api/entities/Asset/Base/BaseAsset.ts:565](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L565)
 
 ▸ **currentFundingRound**(`callback`): `Promise`\<[`UnsubCallback`](../../../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -333,7 +333,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:564](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L564)
+[api/entities/Asset/Base/BaseAsset.ts:566](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L566)
 
 ___
 
@@ -357,7 +357,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/NftCollection.ts:122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/NftCollection.ts#L122)
+[api/entities/Asset/NonFungible/NftCollection.ts:122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/NftCollection.ts#L122)
 
 ▸ **details**(`callback`): `Promise`\<[`UnsubCallback`](../../../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -377,7 +377,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/NftCollection.ts:123](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/NftCollection.ts#L123)
+[api/entities/Asset/NonFungible/NftCollection.ts:123](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/NftCollection.ts#L123)
 
 ___
 
@@ -397,7 +397,7 @@ BaseAsset.exists
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/NftCollection.ts:284](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/NftCollection.ts#L284)
+[api/entities/Asset/NonFungible/NftCollection.ts:284](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/NftCollection.ts#L284)
 
 ___
 
@@ -428,7 +428,7 @@ this method is of type [NoArgsProcedureMethod](../../../../../../interfaces/API/
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:243](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L243)
+[api/entities/Asset/Base/BaseAsset.ts:245](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L245)
 
 ___
 
@@ -444,7 +444,7 @@ Returns the collection's on chain numeric ID. Used primarily to access NFT speci
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/NftCollection.ts:311](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/NftCollection.ts#L311)
+[api/entities/Asset/NonFungible/NftCollection.ts:311](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/NftCollection.ts#L311)
 
 ___
 
@@ -468,7 +468,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:309](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L309)
+[api/entities/Asset/Base/BaseAsset.ts:311](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L311)
 
 ▸ **getIdentifiers**(`callback?`): `Promise`\<[`UnsubCallback`](../../../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -488,7 +488,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:310](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L310)
+[api/entities/Asset/Base/BaseAsset.ts:312](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L312)
 
 ___
 
@@ -515,7 +515,7 @@ if the given NFT does not exist
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/NftCollection.ts:237](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/NftCollection.ts#L237)
+[api/entities/Asset/NonFungible/NftCollection.ts:237](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/NftCollection.ts#L237)
 
 ___
 
@@ -535,7 +535,7 @@ Get required Asset mediators. These Identities must approve any Instruction invo
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:508](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L508)
+[api/entities/Asset/Base/BaseAsset.ts:510](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L510)
 
 ___
 
@@ -563,7 +563,7 @@ uses the middlewareV2
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/NftCollection.ts:346](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/NftCollection.ts#L346)
+[api/entities/Asset/NonFungible/NftCollection.ts:346](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/NftCollection.ts#L346)
 
 ___
 
@@ -583,7 +583,7 @@ Get venue filtering details
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:528](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L528)
+[api/entities/Asset/Base/BaseAsset.ts:530](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L530)
 
 ___
 
@@ -599,7 +599,7 @@ Retrieve the amount of unique investors that hold this Nft
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/NftCollection.ts:215](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/NftCollection.ts#L215)
+[api/entities/Asset/NonFungible/NftCollection.ts:215](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/NftCollection.ts#L215)
 
 ___
 
@@ -625,7 +625,7 @@ Determine whether this Entity is the same as another one
 
 #### Defined in
 
-[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L61)
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -649,7 +649,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:355](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L355)
+[api/entities/Asset/Base/BaseAsset.ts:357](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L357)
 
 ▸ **isFrozen**(`callback`): `Promise`\<[`UnsubCallback`](../../../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -669,7 +669,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:356](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L356)
+[api/entities/Asset/Base/BaseAsset.ts:358](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L358)
 
 ___
 
@@ -701,7 +701,7 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/NftCollection.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/NftCollection.ts#L72)
+[api/entities/Asset/NonFungible/NftCollection.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/NftCollection.ts#L72)
 
 ___
 
@@ -738,7 +738,7 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:286](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L286)
+[api/entities/Asset/Base/BaseAsset.ts:288](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L288)
 
 ___
 
@@ -763,6 +763,14 @@ Modify some properties of the Asset
 
 if the passed values result in no changes being made to the Asset
 
+**`Throws`**
+
+if the passed assetType is not a known asset type or a custom type that has not been created on the chain
+
+**`Throws`**
+
+if trying to modify an NftCollection's assetType
+
 **`Note`**
 
 this method is of type [ProcedureMethod](../../../../../../interfaces/API/Procedures/Types/ProcedureMethod/ProcedureMethod.md), which means you can call [modify.checkAuthorization](../../../../../../interfaces/API/Procedures/Types/ProcedureMethod/ProcedureMethod.md#checkauthorization)
@@ -774,7 +782,7 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:149](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L149)
+[api/entities/Asset/Base/BaseAsset.ts:151](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L151)
 
 ___
 
@@ -806,7 +814,7 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:273](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L273)
+[api/entities/Asset/Base/BaseAsset.ts:275](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L275)
 
 ___
 
@@ -838,7 +846,7 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L127)
+[api/entities/Asset/Base/BaseAsset.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L127)
 
 ___
 
@@ -858,7 +866,7 @@ Return the BaseAsset's ID
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:630](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L630)
+[api/entities/Asset/Base/BaseAsset.ts:632](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L632)
 
 ___
 
@@ -897,7 +905,7 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L117)
+[api/entities/Asset/Base/BaseAsset.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L117)
 
 ___
 
@@ -928,7 +936,7 @@ this method is of type [NoArgsProcedureMethod](../../../../../../interfaces/API/
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:253](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L253)
+[api/entities/Asset/Base/BaseAsset.ts:255](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L255)
 
 ___
 
@@ -967,7 +975,7 @@ this method is of type [NoArgsProcedureMethod](../../../../../../interfaces/API/
 
 #### Defined in
 
-[api/entities/Asset/Base/BaseAsset.ts:300](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/BaseAsset.ts#L300)
+[api/entities/Asset/Base/BaseAsset.ts:302](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/BaseAsset.ts#L302)
 
 ___
 
@@ -999,7 +1007,7 @@ Generate the Entity's UUID from its identifying properties
 
 #### Defined in
 
-[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L14)
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L14)
 
 ___
 
@@ -1031,4 +1039,4 @@ Unserialize a UUID into its Unique Identifiers
 
 #### Defined in
 
-[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L23)
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L23)

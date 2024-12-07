@@ -14,7 +14,7 @@ sidebar_label: "SubmissionDetails"
 
 #### Defined in
 
-[api/client/types.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L50)
+[api/client/types.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L51)
 
 ___
 
@@ -26,7 +26,7 @@ The raw result of the transaction. Contains event data for the transaction
 
 #### Defined in
 
-[api/client/types.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L56)
+[api/client/types.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L57)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[api/client/types.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L52)
+[api/client/types.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L53)
 
 ___
 
@@ -46,4 +46,4 @@ ___
 
 #### Defined in
 
-[api/client/types.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L51)
+[api/client/types.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L52)

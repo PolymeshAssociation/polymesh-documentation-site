@@ -22,7 +22,7 @@ sidebar_label: "Utils"
 
 #### Defined in
 
-[base/utils.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/utils.ts#L181)
+[base/utils.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/utils.ts#L181)
 
 ___
 
@@ -43,4 +43,4 @@ ___
 
 #### Defined in
 
-[base/utils.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/utils.ts#L66)
+[base/utils.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/utils.ts#L66)

@@ -27,4 +27,4 @@ sidebar_label: "Nft"
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/Nft.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/Nft.ts#L31)
+[api/entities/Asset/NonFungible/Nft.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/Nft.ts#L31)

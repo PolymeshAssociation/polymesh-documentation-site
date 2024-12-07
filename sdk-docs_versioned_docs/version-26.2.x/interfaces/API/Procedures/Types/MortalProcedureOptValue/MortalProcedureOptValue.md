@@ -16,7 +16,7 @@ This transaction will be rejected if not included in a block after a while (defa
 
 #### Defined in
 
-[api/procedures/types.ts:129](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L129)
+[api/procedures/types.ts:129](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L129)
 
 ___
 
@@ -36,4 +36,4 @@ this value should not exceed 4096, which is the chain's `BlockHashCount` as the 
 
 #### Defined in
 
-[api/procedures/types.ts:136](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L136)
+[api/procedures/types.ts:136](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L136)

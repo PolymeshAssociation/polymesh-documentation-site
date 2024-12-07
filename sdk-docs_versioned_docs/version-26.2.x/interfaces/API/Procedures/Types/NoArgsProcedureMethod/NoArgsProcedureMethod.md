@@ -31,7 +31,7 @@ sidebar_label: "NoArgsProcedureMethod"
 
 #### Defined in
 
-[api/procedures/types.ts:188](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L188)
+[api/procedures/types.ts:188](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L188)
 
 ## Properties
 
@@ -55,4 +55,4 @@ sidebar_label: "NoArgsProcedureMethod"
 
 #### Defined in
 
-[api/procedures/types.ts:189](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L189)
+[api/procedures/types.ts:189](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L189)

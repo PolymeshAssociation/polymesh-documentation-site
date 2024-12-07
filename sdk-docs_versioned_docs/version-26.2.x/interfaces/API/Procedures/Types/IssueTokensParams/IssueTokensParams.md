@@ -16,7 +16,7 @@ amount of Asset tokens to be issued
 
 #### Defined in
 
-[api/procedures/types.ts:698](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L698)
+[api/procedures/types.ts:699](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L699)
 
 ___
 
@@ -28,4 +28,4 @@ portfolio to which the Asset tokens will be issued (optional, default is the def
 
 #### Defined in
 
-[api/procedures/types.ts:702](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L702)
+[api/procedures/types.ts:703](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L703)

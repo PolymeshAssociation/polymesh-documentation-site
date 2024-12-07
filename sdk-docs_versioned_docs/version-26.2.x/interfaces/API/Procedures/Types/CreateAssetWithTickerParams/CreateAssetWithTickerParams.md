@@ -16,11 +16,12 @@ sidebar_label: "CreateAssetWithTickerParams"
 
 ### assetType
 
-• **assetType**: `string`
+• **assetType**: `string` \| `BigNumber`
 
 type of security that the Asset represents (e.g. Equity, Debt, Commodity). Common values are included in the
   [KnownAssetType](../../../../../enums/API/Entities/Asset/Types/KnownAssetType/KnownAssetType.md) enum, but custom values can be used as well. Custom values must be registered on-chain the first time
   they're used, requiring an additional transaction. They aren't tied to a specific Asset
+  if using a custom type, it can be provided as a string (representing name) or a BigNumber (representing the custom type ID)
 
 #### Inherited from
 
@@ -28,7 +29,7 @@ type of security that the Asset represents (e.g. Equity, Debt, Commodity). Commo
 
 #### Defined in
 
-[api/procedures/types.ts:668](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L668)
+[api/procedures/types.ts:669](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L669)
 
 ___
 
@@ -42,7 +43,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:677](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L677)
+[api/procedures/types.ts:678](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L678)
 
 ___
 
@@ -58,7 +59,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:676](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L676)
+[api/procedures/types.ts:677](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L677)
 
 ___
 
@@ -83,7 +84,7 @@ the appropriate namespace
 
 #### Defined in
 
-[api/procedures/types.ts:691](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L691)
+[api/procedures/types.ts:692](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L692)
 
 ___
 
@@ -99,7 +100,7 @@ amount of Asset tokens that will be minted on creation (optional, default doesn'
 
 #### Defined in
 
-[api/procedures/types.ts:654](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L654)
+[api/procedures/types.ts:654](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L654)
 
 ___
 
@@ -115,7 +116,7 @@ whether a single Asset token can be divided into decimal parts
 
 #### Defined in
 
-[api/procedures/types.ts:662](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L662)
+[api/procedures/types.ts:662](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L662)
 
 ___
 
@@ -129,7 +130,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:650](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L650)
+[api/procedures/types.ts:650](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L650)
 
 ___
 
@@ -145,7 +146,7 @@ portfolio to which the Asset tokens will be issued on creation (optional, defaul
 
 #### Defined in
 
-[api/procedures/types.ts:658](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L658)
+[api/procedures/types.ts:658](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L658)
 
 ___
 
@@ -161,7 +162,7 @@ array of domestic or international alphanumeric security identifiers for the Ass
 
 #### Defined in
 
-[api/procedures/types.ts:672](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L672)
+[api/procedures/types.ts:673](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L673)
 
 ___
 
@@ -177,4 +178,4 @@ from 7.x chain, ticker has been made optional. For 6.x chain, it is still mandat
 
 #### Defined in
 
-[api/procedures/types.ts:711](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L711)
+[api/procedures/types.ts:712](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L712)

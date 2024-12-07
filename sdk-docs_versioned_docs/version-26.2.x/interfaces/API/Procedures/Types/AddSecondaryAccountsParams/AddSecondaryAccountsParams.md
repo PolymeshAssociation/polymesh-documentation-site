@@ -16,7 +16,7 @@ List of accounts to be added as secondary accounts along with their off chain au
 
 #### Defined in
 
-[api/procedures/types.ts:635](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L635)
+[api/procedures/types.ts:635](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L635)
 
 ___
 
@@ -28,4 +28,4 @@ Expiry date until which all the off chain authorizations received from each acco
 
 #### Defined in
 
-[api/procedures/types.ts:630](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L630)
+[api/procedures/types.ts:630](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L630)

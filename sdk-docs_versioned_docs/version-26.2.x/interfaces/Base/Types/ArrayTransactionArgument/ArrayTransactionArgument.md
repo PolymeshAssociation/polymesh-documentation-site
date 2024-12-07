@@ -14,7 +14,7 @@ sidebar_label: "ArrayTransactionArgument"
 
 #### Defined in
 
-[base/types.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/types.ts#L83)
+[base/types.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/types.ts#L83)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[base/types.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/types.ts#L82)
+[base/types.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/types.ts#L82)

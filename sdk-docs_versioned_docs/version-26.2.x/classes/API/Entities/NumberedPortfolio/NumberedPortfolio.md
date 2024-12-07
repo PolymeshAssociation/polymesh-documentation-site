@@ -24,7 +24,7 @@ Portfolio identifier number
 
 #### Defined in
 
-[api/entities/NumberedPortfolio.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/NumberedPortfolio.ts#L39)
+[api/entities/NumberedPortfolio.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/NumberedPortfolio.ts#L39)
 
 ___
 
@@ -40,7 +40,7 @@ Identity of the Portfolio's owner
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Portfolio/index.ts#L77)
+[api/entities/Portfolio/index.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Portfolio/index.ts#L77)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -78,7 +78,7 @@ there is a possibility that the data is not ready by the time it is requested. I
 
 #### Defined in
 
-[api/entities/NumberedPortfolio.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/NumberedPortfolio.ts#L101)
+[api/entities/NumberedPortfolio.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/NumberedPortfolio.ts#L101)
 
 ___
 
@@ -98,7 +98,7 @@ Return whether this Portfolio exists
 
 #### Defined in
 
-[api/entities/NumberedPortfolio.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/NumberedPortfolio.ts#L127)
+[api/entities/NumberedPortfolio.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/NumberedPortfolio.ts#L127)
 
 ___
 
@@ -125,7 +125,7 @@ Retrieve the balances of all fungible assets in this Portfolio
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:143](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Portfolio/index.ts#L143)
+[api/entities/Portfolio/index.ts:143](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Portfolio/index.ts#L143)
 
 ___
 
@@ -152,7 +152,7 @@ Retrieve the NFTs held in this portfolio
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Portfolio/index.ts#L222)
+[api/entities/Portfolio/index.ts:222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Portfolio/index.ts#L222)
 
 ___
 
@@ -176,7 +176,7 @@ if no custodian is set, the owner Identity is returned
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:370](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Portfolio/index.ts#L370)
+[api/entities/Portfolio/index.ts:370](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Portfolio/index.ts#L370)
 
 ___
 
@@ -192,7 +192,7 @@ Return the Portfolio name
 
 #### Defined in
 
-[api/entities/NumberedPortfolio.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/NumberedPortfolio.ts#L72)
+[api/entities/NumberedPortfolio.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/NumberedPortfolio.ts#L72)
 
 ___
 
@@ -225,7 +225,7 @@ uses the middlewareV2
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:412](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Portfolio/index.ts#L412)
+[api/entities/Portfolio/index.ts:412](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Portfolio/index.ts#L412)
 
 ___
 
@@ -252,7 +252,7 @@ Return whether an Identity is the Portfolio custodian
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Portfolio/index.ts#L127)
+[api/entities/Portfolio/index.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Portfolio/index.ts#L127)
 
 ___
 
@@ -278,7 +278,7 @@ Determine whether this Entity is the same as another one
 
 #### Defined in
 
-[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L61)
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -305,7 +305,7 @@ Return whether an Identity is the Portfolio owner
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Portfolio/index.ts#L114)
+[api/entities/Portfolio/index.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Portfolio/index.ts#L114)
 
 ___
 
@@ -337,7 +337,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/NumberedPortfolio.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/NumberedPortfolio.ts#L65)
+[api/entities/NumberedPortfolio.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/NumberedPortfolio.ts#L65)
 
 ___
 
@@ -374,7 +374,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:348](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Portfolio/index.ts#L348)
+[api/entities/Portfolio/index.ts:348](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Portfolio/index.ts#L348)
 
 ___
 
@@ -410,7 +410,7 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:361](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Portfolio/index.ts#L361)
+[api/entities/Portfolio/index.ts:361](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Portfolio/index.ts#L361)
 
 ___
 
@@ -453,7 +453,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:335](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Portfolio/index.ts#L335)
+[api/entities/Portfolio/index.ts:335](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Portfolio/index.ts#L335)
 
 ___
 
@@ -473,7 +473,7 @@ Return the Portfolio ID and owner DID
 
 #### Defined in
 
-[api/entities/Portfolio/index.ts:490](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Portfolio/index.ts#L490)
+[api/entities/Portfolio/index.ts:490](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Portfolio/index.ts#L490)
 
 ___
 
@@ -505,7 +505,7 @@ Generate the Entity's UUID from its identifying properties
 
 #### Defined in
 
-[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L14)
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L14)
 
 ___
 
@@ -537,4 +537,4 @@ Unserialize a UUID into its Unique Identifiers
 
 #### Defined in
 
-[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L23)
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L23)

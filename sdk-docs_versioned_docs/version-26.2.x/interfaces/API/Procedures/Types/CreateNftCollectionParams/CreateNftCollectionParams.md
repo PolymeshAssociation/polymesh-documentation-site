@@ -21,7 +21,7 @@ for spec version before 7.x, this value is overwritten by `ticker` value
 
 #### Defined in
 
-[api/procedures/types.ts:737](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L737)
+[api/procedures/types.ts:738](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L738)
 
 ___
 
@@ -38,7 +38,7 @@ If `imageUri` is specified as a collection key, then each token will need to be 
 
 #### Defined in
 
-[api/procedures/types.ts:766](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L766)
+[api/procedures/types.ts:767](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L767)
 
 ___
 
@@ -50,7 +50,7 @@ Links to off chain documents related to the NftCollection
 
 #### Defined in
 
-[api/procedures/types.ts:770](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L770)
+[api/procedures/types.ts:771](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L771)
 
 ___
 
@@ -62,7 +62,7 @@ A optional field that can be used to provide information about the funding state
 
 #### Defined in
 
-[api/procedures/types.ts:775](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L775)
+[api/procedures/types.ts:776](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L776)
 
 ___
 
@@ -74,7 +74,7 @@ The collection name. defaults to `ticker`
 
 #### Defined in
 
-[api/procedures/types.ts:750](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L750)
+[api/procedures/types.ts:751](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L751)
 
 ___
 
@@ -92,7 +92,7 @@ if provided a BigNumber that does not correspond to a custom type
 
 #### Defined in
 
-[api/procedures/types.ts:755](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L755)
+[api/procedures/types.ts:756](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L756)
 
 ___
 
@@ -104,7 +104,7 @@ array of domestic or international alphanumeric security identifiers for the Ass
 
 #### Defined in
 
-[api/procedures/types.ts:759](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L759)
+[api/procedures/types.ts:760](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L760)
 
 ___
 
@@ -123,4 +123,4 @@ This value is mandatory for spec version before 7.x
 
 #### Defined in
 
-[api/procedures/types.ts:746](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L746)
+[api/procedures/types.ts:747](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L747)

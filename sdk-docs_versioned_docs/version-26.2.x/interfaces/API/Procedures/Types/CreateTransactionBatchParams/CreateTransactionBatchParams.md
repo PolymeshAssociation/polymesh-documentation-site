@@ -20,4 +20,4 @@ sidebar_label: "CreateTransactionBatchParams"
 
 #### Defined in
 
-[api/procedures/types.ts:1617](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L1617)
+[api/procedures/types.ts:1629](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L1629)

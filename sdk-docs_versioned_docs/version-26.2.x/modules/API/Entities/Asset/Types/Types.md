@@ -61,7 +61,7 @@ be narrowed via `instanceof` operator, or by using a more specific getter
 
 #### Defined in
 
-[api/entities/Asset/types.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/types.ts#L27)
+[api/entities/Asset/types.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/types.ts#L27)
 
 ___
 
@@ -77,7 +77,7 @@ each NFT **must** have an entry for each metadata value, the entry **should** co
 
 #### Defined in
 
-[api/entities/Asset/types.ts:251](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/types.ts#L251)
+[api/entities/Asset/types.ts:251](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/types.ts#L251)
 
 ___
 
@@ -89,4 +89,4 @@ The data needed to uniquely identify a metadata specification
 
 #### Defined in
 
-[api/entities/Asset/types.ts:205](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/types.ts#L205)
+[api/entities/Asset/types.ts:205](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/types.ts#L205)

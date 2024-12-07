@@ -14,7 +14,7 @@ sidebar_label: "CaCheckpointType"
 
 #### Defined in
 
-[api/entities/Asset/Fungible/Checkpoints/types.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/Checkpoints/types.ts#L6)
+[api/entities/Asset/Fungible/Checkpoints/types.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/Checkpoints/types.ts#L6)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/Fungible/Checkpoints/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/Checkpoints/types.ts#L7)
+[api/entities/Asset/Fungible/Checkpoints/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/Checkpoints/types.ts#L7)

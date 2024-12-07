@@ -14,4 +14,4 @@ sidebar_label: "InstructionIdParams"
 
 #### Defined in
 
-[api/procedures/types.ts:985](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L985)
+[api/procedures/types.ts:986](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L986)

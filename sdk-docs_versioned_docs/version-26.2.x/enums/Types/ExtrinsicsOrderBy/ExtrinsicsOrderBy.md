@@ -16,7 +16,7 @@ Methods to use when ordering `Extrinsic`.
 
 #### Defined in
 
-[middleware/types.ts:79429](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79429)
+[middleware/types.ts:80692](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80692)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79430](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79430)
+[middleware/types.ts:80693](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80693)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79431](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79431)
+[middleware/types.ts:80694](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80694)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79432](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79432)
+[middleware/types.ts:80695](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80695)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79433](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79433)
+[middleware/types.ts:80696](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80696)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79434](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79434)
+[middleware/types.ts:80697](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80697)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79435](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79435)
+[middleware/types.ts:80698](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80698)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79436](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79436)
+[middleware/types.ts:80699](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80699)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79437](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79437)
+[middleware/types.ts:80700](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80700)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79438](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79438)
+[middleware/types.ts:80701](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80701)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79439](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79439)
+[middleware/types.ts:80702](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80702)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79440](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79440)
+[middleware/types.ts:80703](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80703)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79441](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79441)
+[middleware/types.ts:80704](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80704)
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79442](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79442)
+[middleware/types.ts:80705](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80705)
 
 ___
 
@@ -156,7 +156,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79443](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79443)
+[middleware/types.ts:80706](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80706)
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79444](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79444)
+[middleware/types.ts:80707](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80707)
 
 ___
 
@@ -176,7 +176,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79445](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79445)
+[middleware/types.ts:80708](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80708)
 
 ___
 
@@ -186,7 +186,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79446](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79446)
+[middleware/types.ts:80709](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80709)
 
 ___
 
@@ -196,7 +196,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79447](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79447)
+[middleware/types.ts:80710](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80710)
 
 ___
 
@@ -206,7 +206,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79448](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79448)
+[middleware/types.ts:80711](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80711)
 
 ___
 
@@ -216,7 +216,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79449](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79449)
+[middleware/types.ts:80712](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80712)
 
 ___
 
@@ -226,7 +226,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79450](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79450)
+[middleware/types.ts:80713](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80713)
 
 ___
 
@@ -236,7 +236,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79451](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79451)
+[middleware/types.ts:80714](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80714)
 
 ___
 
@@ -246,7 +246,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79452](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79452)
+[middleware/types.ts:80715](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80715)
 
 ___
 
@@ -256,7 +256,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79453](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79453)
+[middleware/types.ts:80716](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80716)
 
 ___
 
@@ -266,7 +266,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79454](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79454)
+[middleware/types.ts:80717](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80717)
 
 ___
 
@@ -276,7 +276,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79455](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79455)
+[middleware/types.ts:80718](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80718)
 
 ___
 
@@ -286,7 +286,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79456](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79456)
+[middleware/types.ts:80719](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80719)
 
 ___
 
@@ -296,7 +296,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79457](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79457)
+[middleware/types.ts:80720](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80720)
 
 ___
 
@@ -306,7 +306,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79458](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79458)
+[middleware/types.ts:80721](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80721)
 
 ___
 
@@ -316,7 +316,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79459](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79459)
+[middleware/types.ts:80722](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80722)
 
 ___
 
@@ -326,7 +326,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79460](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79460)
+[middleware/types.ts:80723](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80723)
 
 ___
 
@@ -336,7 +336,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79461](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79461)
+[middleware/types.ts:80724](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80724)
 
 ___
 
@@ -346,7 +346,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79462](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79462)
+[middleware/types.ts:80725](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80725)
 
 ___
 
@@ -356,7 +356,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79463](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79463)
+[middleware/types.ts:80726](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80726)
 
 ___
 
@@ -366,7 +366,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79464](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79464)
+[middleware/types.ts:80727](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80727)
 
 ___
 
@@ -376,7 +376,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79467](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79467)
+[middleware/types.ts:80730](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80730)
 
 ___
 
@@ -386,7 +386,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79468](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79468)
+[middleware/types.ts:80731](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80731)
 
 ___
 
@@ -396,7 +396,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79465](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79465)
+[middleware/types.ts:80728](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80728)
 
 ___
 
@@ -406,7 +406,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79466](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79466)
+[middleware/types.ts:80729](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80729)
 
 ___
 
@@ -416,7 +416,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79471](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79471)
+[middleware/types.ts:80734](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80734)
 
 ___
 
@@ -426,7 +426,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79472](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79472)
+[middleware/types.ts:80735](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80735)
 
 ___
 
@@ -436,7 +436,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79469](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79469)
+[middleware/types.ts:80732](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80732)
 
 ___
 
@@ -446,7 +446,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79470](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79470)
+[middleware/types.ts:80733](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80733)
 
 ___
 
@@ -456,7 +456,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79473](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79473)
+[middleware/types.ts:80736](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80736)
 
 ___
 
@@ -466,7 +466,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79474](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79474)
+[middleware/types.ts:80737](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80737)
 
 ___
 
@@ -476,7 +476,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79475](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79475)
+[middleware/types.ts:80738](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80738)
 
 ___
 
@@ -486,7 +486,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79476](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79476)
+[middleware/types.ts:80739](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80739)
 
 ___
 
@@ -496,7 +496,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79477](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79477)
+[middleware/types.ts:80740](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80740)
 
 ___
 
@@ -506,7 +506,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79478](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79478)
+[middleware/types.ts:80741](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80741)
 
 ___
 
@@ -516,7 +516,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79479](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79479)
+[middleware/types.ts:80742](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80742)
 
 ___
 
@@ -526,7 +526,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79480](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79480)
+[middleware/types.ts:80743](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80743)
 
 ___
 
@@ -536,7 +536,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79481](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79481)
+[middleware/types.ts:80744](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80744)
 
 ___
 
@@ -546,7 +546,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79482](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79482)
+[middleware/types.ts:80745](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80745)
 
 ___
 
@@ -556,7 +556,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79483](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79483)
+[middleware/types.ts:80746](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80746)
 
 ___
 
@@ -566,7 +566,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79484](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79484)
+[middleware/types.ts:80747](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80747)
 
 ___
 
@@ -576,7 +576,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79485](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79485)
+[middleware/types.ts:80748](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80748)
 
 ___
 
@@ -586,7 +586,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79486](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79486)
+[middleware/types.ts:80749](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80749)
 
 ___
 
@@ -596,7 +596,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79487](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79487)
+[middleware/types.ts:80750](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80750)
 
 ___
 
@@ -606,7 +606,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79488](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79488)
+[middleware/types.ts:80751](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80751)
 
 ___
 
@@ -616,7 +616,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79489](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79489)
+[middleware/types.ts:80752](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80752)
 
 ___
 
@@ -626,7 +626,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79490](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79490)
+[middleware/types.ts:80753](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80753)
 
 ___
 
@@ -636,7 +636,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79491](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79491)
+[middleware/types.ts:80754](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80754)
 
 ___
 
@@ -646,7 +646,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79492](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79492)
+[middleware/types.ts:80755](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80755)
 
 ___
 
@@ -656,7 +656,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79493](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79493)
+[middleware/types.ts:80756](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80756)
 
 ___
 
@@ -666,7 +666,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79494](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79494)
+[middleware/types.ts:80757](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80757)
 
 ___
 
@@ -676,7 +676,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79495](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79495)
+[middleware/types.ts:80758](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80758)
 
 ___
 
@@ -686,7 +686,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79496](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79496)
+[middleware/types.ts:80759](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80759)
 
 ___
 
@@ -696,7 +696,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79497](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79497)
+[middleware/types.ts:80760](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80760)
 
 ___
 
@@ -706,7 +706,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79498](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79498)
+[middleware/types.ts:80761](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80761)
 
 ___
 
@@ -716,7 +716,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79499](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79499)
+[middleware/types.ts:80762](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80762)
 
 ___
 
@@ -726,7 +726,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79500](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79500)
+[middleware/types.ts:80763](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80763)
 
 ___
 
@@ -736,7 +736,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79501](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79501)
+[middleware/types.ts:80764](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80764)
 
 ___
 
@@ -746,7 +746,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79502](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79502)
+[middleware/types.ts:80765](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80765)
 
 ___
 
@@ -756,7 +756,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79503](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79503)
+[middleware/types.ts:80766](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80766)
 
 ___
 
@@ -766,7 +766,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79504](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79504)
+[middleware/types.ts:80767](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80767)
 
 ___
 
@@ -776,7 +776,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79505](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79505)
+[middleware/types.ts:80768](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80768)
 
 ___
 
@@ -786,7 +786,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79506](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79506)
+[middleware/types.ts:80769](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80769)
 
 ___
 
@@ -796,7 +796,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79507](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79507)
+[middleware/types.ts:80770](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80770)
 
 ___
 
@@ -806,7 +806,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79508](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79508)
+[middleware/types.ts:80771](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80771)
 
 ___
 
@@ -816,7 +816,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79509](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79509)
+[middleware/types.ts:80772](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80772)
 
 ___
 
@@ -826,7 +826,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79510](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79510)
+[middleware/types.ts:80773](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80773)
 
 ___
 
@@ -836,7 +836,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79511](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79511)
+[middleware/types.ts:80774](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80774)
 
 ___
 
@@ -846,7 +846,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79512](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79512)
+[middleware/types.ts:80775](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80775)
 
 ___
 
@@ -856,7 +856,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79515](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79515)
+[middleware/types.ts:80778](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80778)
 
 ___
 
@@ -866,7 +866,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79516](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79516)
+[middleware/types.ts:80779](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80779)
 
 ___
 
@@ -876,7 +876,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79513](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79513)
+[middleware/types.ts:80776](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80776)
 
 ___
 
@@ -886,7 +886,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79514](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79514)
+[middleware/types.ts:80777](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80777)
 
 ___
 
@@ -896,7 +896,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79519](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79519)
+[middleware/types.ts:80782](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80782)
 
 ___
 
@@ -906,7 +906,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79520](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79520)
+[middleware/types.ts:80783](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80783)
 
 ___
 
@@ -916,7 +916,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79517](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79517)
+[middleware/types.ts:80780](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80780)
 
 ___
 
@@ -926,7 +926,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79518](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79518)
+[middleware/types.ts:80781](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80781)
 
 ___
 
@@ -936,7 +936,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79521](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79521)
+[middleware/types.ts:80784](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80784)
 
 ___
 
@@ -946,7 +946,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79522](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79522)
+[middleware/types.ts:80785](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80785)
 
 ___
 
@@ -956,7 +956,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79523](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79523)
+[middleware/types.ts:80786](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80786)
 
 ___
 
@@ -966,7 +966,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79524](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79524)
+[middleware/types.ts:80787](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80787)
 
 ___
 
@@ -976,7 +976,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79525](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79525)
+[middleware/types.ts:80788](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80788)
 
 ___
 
@@ -986,7 +986,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79526](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79526)
+[middleware/types.ts:80789](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80789)
 
 ___
 
@@ -996,7 +996,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79527](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79527)
+[middleware/types.ts:80790](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80790)
 
 ___
 
@@ -1006,7 +1006,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79528](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79528)
+[middleware/types.ts:80791](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80791)
 
 ___
 
@@ -1016,7 +1016,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79529](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79529)
+[middleware/types.ts:80792](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80792)
 
 ___
 
@@ -1026,7 +1026,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79530](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79530)
+[middleware/types.ts:80793](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80793)
 
 ___
 
@@ -1036,7 +1036,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79531](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79531)
+[middleware/types.ts:80794](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80794)
 
 ___
 
@@ -1046,7 +1046,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79532](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79532)
+[middleware/types.ts:80795](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80795)
 
 ___
 
@@ -1056,7 +1056,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79533](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79533)
+[middleware/types.ts:80796](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80796)
 
 ___
 
@@ -1066,7 +1066,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79534](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79534)
+[middleware/types.ts:80797](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80797)
 
 ___
 
@@ -1076,7 +1076,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79535](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79535)
+[middleware/types.ts:80798](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80798)
 
 ___
 
@@ -1086,7 +1086,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79536](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79536)
+[middleware/types.ts:80799](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80799)
 
 ___
 
@@ -1096,7 +1096,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79537](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79537)
+[middleware/types.ts:80800](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80800)
 
 ___
 
@@ -1106,7 +1106,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79538](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79538)
+[middleware/types.ts:80801](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80801)
 
 ___
 
@@ -1116,7 +1116,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79539](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79539)
+[middleware/types.ts:80802](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80802)
 
 ___
 
@@ -1126,7 +1126,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79540](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79540)
+[middleware/types.ts:80803](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80803)
 
 ___
 
@@ -1136,7 +1136,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79541](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79541)
+[middleware/types.ts:80804](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80804)
 
 ___
 
@@ -1146,7 +1146,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79542](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79542)
+[middleware/types.ts:80805](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80805)
 
 ___
 
@@ -1156,7 +1156,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79543](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79543)
+[middleware/types.ts:80806](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80806)
 
 ___
 
@@ -1166,7 +1166,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79544](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79544)
+[middleware/types.ts:80807](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80807)
 
 ___
 
@@ -1176,7 +1176,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79545](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79545)
+[middleware/types.ts:80808](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80808)
 
 ___
 
@@ -1186,7 +1186,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79546](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79546)
+[middleware/types.ts:80809](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80809)
 
 ___
 
@@ -1196,7 +1196,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79547](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79547)
+[middleware/types.ts:80810](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80810)
 
 ___
 
@@ -1206,7 +1206,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79548](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79548)
+[middleware/types.ts:80811](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80811)
 
 ___
 
@@ -1216,7 +1216,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79549](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79549)
+[middleware/types.ts:80812](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80812)
 
 ___
 
@@ -1226,7 +1226,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79550](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79550)
+[middleware/types.ts:80813](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80813)
 
 ___
 
@@ -1236,7 +1236,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79551](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79551)
+[middleware/types.ts:80814](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80814)
 
 ___
 
@@ -1246,7 +1246,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79552](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79552)
+[middleware/types.ts:80815](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80815)
 
 ___
 
@@ -1256,7 +1256,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79553](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79553)
+[middleware/types.ts:80816](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80816)
 
 ___
 
@@ -1266,7 +1266,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79554](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79554)
+[middleware/types.ts:80817](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80817)
 
 ___
 
@@ -1276,7 +1276,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79555](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79555)
+[middleware/types.ts:80818](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80818)
 
 ___
 
@@ -1286,7 +1286,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79556](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79556)
+[middleware/types.ts:80819](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80819)
 
 ___
 
@@ -1296,7 +1296,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79557](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79557)
+[middleware/types.ts:80820](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80820)
 
 ___
 
@@ -1306,7 +1306,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79558](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79558)
+[middleware/types.ts:80821](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80821)
 
 ___
 
@@ -1316,7 +1316,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79561](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79561)
+[middleware/types.ts:80824](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80824)
 
 ___
 
@@ -1326,7 +1326,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79562](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79562)
+[middleware/types.ts:80825](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80825)
 
 ___
 
@@ -1336,7 +1336,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79559](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79559)
+[middleware/types.ts:80822](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80822)
 
 ___
 
@@ -1346,7 +1346,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79560](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79560)
+[middleware/types.ts:80823](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80823)
 
 ___
 
@@ -1356,7 +1356,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79565](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79565)
+[middleware/types.ts:80828](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80828)
 
 ___
 
@@ -1366,7 +1366,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79566](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79566)
+[middleware/types.ts:80829](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80829)
 
 ___
 
@@ -1376,7 +1376,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79563](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79563)
+[middleware/types.ts:80826](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80826)
 
 ___
 
@@ -1386,7 +1386,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79564](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79564)
+[middleware/types.ts:80827](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80827)
 
 ___
 
@@ -1396,7 +1396,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79567](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79567)
+[middleware/types.ts:80830](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80830)
 
 ___
 
@@ -1406,7 +1406,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79568](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79568)
+[middleware/types.ts:80831](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80831)
 
 ___
 
@@ -1416,7 +1416,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79569](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79569)
+[middleware/types.ts:80832](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80832)
 
 ___
 
@@ -1426,7 +1426,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79570](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79570)
+[middleware/types.ts:80833](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80833)
 
 ___
 
@@ -1436,7 +1436,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79571](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79571)
+[middleware/types.ts:80834](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80834)
 
 ___
 
@@ -1446,7 +1446,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79572](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79572)
+[middleware/types.ts:80835](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80835)
 
 ___
 
@@ -1456,7 +1456,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79573](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79573)
+[middleware/types.ts:80836](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80836)
 
 ___
 
@@ -1466,7 +1466,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79574](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79574)
+[middleware/types.ts:80837](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80837)
 
 ___
 
@@ -1476,7 +1476,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79575](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79575)
+[middleware/types.ts:80838](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80838)
 
 ___
 
@@ -1486,7 +1486,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79576](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79576)
+[middleware/types.ts:80839](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80839)
 
 ___
 
@@ -1496,7 +1496,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79577](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79577)
+[middleware/types.ts:80840](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80840)
 
 ___
 
@@ -1506,7 +1506,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79578](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79578)
+[middleware/types.ts:80841](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80841)
 
 ___
 
@@ -1516,7 +1516,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79579](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79579)
+[middleware/types.ts:80842](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80842)
 
 ___
 
@@ -1526,7 +1526,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79580](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79580)
+[middleware/types.ts:80843](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80843)
 
 ___
 
@@ -1536,7 +1536,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79581](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79581)
+[middleware/types.ts:80844](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80844)
 
 ___
 
@@ -1546,7 +1546,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79582](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79582)
+[middleware/types.ts:80845](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80845)
 
 ___
 
@@ -1556,7 +1556,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79583](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79583)
+[middleware/types.ts:80846](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80846)
 
 ___
 
@@ -1566,7 +1566,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79584](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79584)
+[middleware/types.ts:80847](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80847)
 
 ___
 
@@ -1576,7 +1576,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79585](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79585)
+[middleware/types.ts:80848](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80848)
 
 ___
 
@@ -1586,7 +1586,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79586](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79586)
+[middleware/types.ts:80849](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80849)
 
 ___
 
@@ -1596,7 +1596,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79587](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79587)
+[middleware/types.ts:80850](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80850)
 
 ___
 
@@ -1606,7 +1606,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79588](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79588)
+[middleware/types.ts:80851](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80851)
 
 ___
 
@@ -1616,7 +1616,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79589](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79589)
+[middleware/types.ts:80852](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80852)
 
 ___
 
@@ -1626,7 +1626,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79590](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79590)
+[middleware/types.ts:80853](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80853)
 
 ___
 
@@ -1636,7 +1636,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79591](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79591)
+[middleware/types.ts:80854](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80854)
 
 ___
 
@@ -1646,7 +1646,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79592](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79592)
+[middleware/types.ts:80855](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80855)
 
 ___
 
@@ -1656,7 +1656,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79593](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79593)
+[middleware/types.ts:80856](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80856)
 
 ___
 
@@ -1666,7 +1666,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79594](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79594)
+[middleware/types.ts:80857](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80857)
 
 ___
 
@@ -1676,7 +1676,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79595](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79595)
+[middleware/types.ts:80858](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80858)
 
 ___
 
@@ -1686,7 +1686,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79596](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79596)
+[middleware/types.ts:80859](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80859)
 
 ___
 
@@ -1696,7 +1696,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79597](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79597)
+[middleware/types.ts:80860](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80860)
 
 ___
 
@@ -1706,7 +1706,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79598](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79598)
+[middleware/types.ts:80861](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80861)
 
 ___
 
@@ -1716,7 +1716,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79599](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79599)
+[middleware/types.ts:80862](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80862)
 
 ___
 
@@ -1726,7 +1726,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79600](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79600)
+[middleware/types.ts:80863](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80863)
 
 ___
 
@@ -1736,7 +1736,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79601](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79601)
+[middleware/types.ts:80864](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80864)
 
 ___
 
@@ -1746,7 +1746,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79602](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79602)
+[middleware/types.ts:80865](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80865)
 
 ___
 
@@ -1756,7 +1756,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79603](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79603)
+[middleware/types.ts:80866](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80866)
 
 ___
 
@@ -1766,7 +1766,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79604](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79604)
+[middleware/types.ts:80867](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80867)
 
 ___
 
@@ -1776,7 +1776,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79607](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79607)
+[middleware/types.ts:80870](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80870)
 
 ___
 
@@ -1786,7 +1786,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79608](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79608)
+[middleware/types.ts:80871](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80871)
 
 ___
 
@@ -1796,7 +1796,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79605](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79605)
+[middleware/types.ts:80868](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80868)
 
 ___
 
@@ -1806,7 +1806,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79606](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79606)
+[middleware/types.ts:80869](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80869)
 
 ___
 
@@ -1816,7 +1816,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79611](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79611)
+[middleware/types.ts:80874](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80874)
 
 ___
 
@@ -1826,7 +1826,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79612](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79612)
+[middleware/types.ts:80875](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80875)
 
 ___
 
@@ -1836,7 +1836,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79609](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79609)
+[middleware/types.ts:80872](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80872)
 
 ___
 
@@ -1846,7 +1846,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79610](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79610)
+[middleware/types.ts:80873](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80873)
 
 ___
 
@@ -1856,7 +1856,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79613](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79613)
+[middleware/types.ts:80876](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80876)
 
 ___
 
@@ -1866,7 +1866,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79614](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79614)
+[middleware/types.ts:80877](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80877)
 
 ___
 
@@ -1876,7 +1876,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79615](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79615)
+[middleware/types.ts:80878](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80878)
 
 ___
 
@@ -1886,7 +1886,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79616](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79616)
+[middleware/types.ts:80879](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80879)
 
 ___
 
@@ -1896,7 +1896,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79617](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79617)
+[middleware/types.ts:80880](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80880)
 
 ___
 
@@ -1906,7 +1906,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79618](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79618)
+[middleware/types.ts:80881](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80881)
 
 ___
 
@@ -1916,7 +1916,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79619](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79619)
+[middleware/types.ts:80882](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80882)
 
 ___
 
@@ -1926,7 +1926,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79620](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79620)
+[middleware/types.ts:80883](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80883)
 
 ___
 
@@ -1936,7 +1936,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79621](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79621)
+[middleware/types.ts:80884](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80884)
 
 ___
 
@@ -1946,7 +1946,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79622](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79622)
+[middleware/types.ts:80885](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80885)
 
 ___
 
@@ -1956,7 +1956,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79623](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79623)
+[middleware/types.ts:80886](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80886)
 
 ___
 
@@ -1966,7 +1966,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79624](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79624)
+[middleware/types.ts:80887](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80887)
 
 ___
 
@@ -1976,7 +1976,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79625](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79625)
+[middleware/types.ts:80888](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80888)
 
 ___
 
@@ -1986,7 +1986,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79626](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79626)
+[middleware/types.ts:80889](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80889)
 
 ___
 
@@ -1996,7 +1996,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79627](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79627)
+[middleware/types.ts:80890](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80890)
 
 ___
 
@@ -2006,7 +2006,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79628](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79628)
+[middleware/types.ts:80891](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80891)
 
 ___
 
@@ -2016,7 +2016,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79629](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79629)
+[middleware/types.ts:80892](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80892)
 
 ___
 
@@ -2026,7 +2026,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79630](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79630)
+[middleware/types.ts:80893](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80893)
 
 ___
 
@@ -2036,7 +2036,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79631](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79631)
+[middleware/types.ts:80894](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80894)
 
 ___
 
@@ -2046,7 +2046,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79632](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79632)
+[middleware/types.ts:80895](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80895)
 
 ___
 
@@ -2056,7 +2056,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79633](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79633)
+[middleware/types.ts:80896](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80896)
 
 ___
 
@@ -2066,7 +2066,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79634](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79634)
+[middleware/types.ts:80897](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80897)
 
 ___
 
@@ -2076,7 +2076,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79635](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79635)
+[middleware/types.ts:80898](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80898)
 
 ___
 
@@ -2086,7 +2086,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79636](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79636)
+[middleware/types.ts:80899](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80899)
 
 ___
 
@@ -2096,7 +2096,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79637](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79637)
+[middleware/types.ts:80900](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80900)
 
 ___
 
@@ -2106,7 +2106,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79638](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79638)
+[middleware/types.ts:80901](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80901)
 
 ___
 
@@ -2116,7 +2116,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79639](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79639)
+[middleware/types.ts:80902](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80902)
 
 ___
 
@@ -2126,7 +2126,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79640](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79640)
+[middleware/types.ts:80903](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80903)
 
 ___
 
@@ -2136,7 +2136,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79641](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79641)
+[middleware/types.ts:80904](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80904)
 
 ___
 
@@ -2146,7 +2146,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79642](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79642)
+[middleware/types.ts:80905](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80905)
 
 ___
 
@@ -2156,7 +2156,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79643](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79643)
+[middleware/types.ts:80906](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80906)
 
 ___
 
@@ -2166,7 +2166,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79644](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79644)
+[middleware/types.ts:80907](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80907)
 
 ___
 
@@ -2176,7 +2176,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79645](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79645)
+[middleware/types.ts:80908](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80908)
 
 ___
 
@@ -2186,7 +2186,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79646](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79646)
+[middleware/types.ts:80909](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80909)
 
 ___
 
@@ -2196,7 +2196,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79647](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79647)
+[middleware/types.ts:80910](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80910)
 
 ___
 
@@ -2206,7 +2206,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79648](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79648)
+[middleware/types.ts:80911](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80911)
 
 ___
 
@@ -2216,7 +2216,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79649](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79649)
+[middleware/types.ts:80912](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80912)
 
 ___
 
@@ -2226,7 +2226,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79650](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79650)
+[middleware/types.ts:80913](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80913)
 
 ___
 
@@ -2236,7 +2236,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79653](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79653)
+[middleware/types.ts:80916](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80916)
 
 ___
 
@@ -2246,7 +2246,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79654](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79654)
+[middleware/types.ts:80917](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80917)
 
 ___
 
@@ -2256,7 +2256,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79651](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79651)
+[middleware/types.ts:80914](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80914)
 
 ___
 
@@ -2266,7 +2266,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79652](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79652)
+[middleware/types.ts:80915](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80915)
 
 ___
 
@@ -2276,7 +2276,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79657](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79657)
+[middleware/types.ts:80920](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80920)
 
 ___
 
@@ -2286,7 +2286,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79658](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79658)
+[middleware/types.ts:80921](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80921)
 
 ___
 
@@ -2296,7 +2296,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79655](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79655)
+[middleware/types.ts:80918](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80918)
 
 ___
 
@@ -2306,7 +2306,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79656](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79656)
+[middleware/types.ts:80919](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80919)
 
 ___
 
@@ -2316,7 +2316,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79659](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79659)
+[middleware/types.ts:80922](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80922)
 
 ___
 
@@ -2326,7 +2326,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79660](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79660)
+[middleware/types.ts:80923](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80923)
 
 ___
 
@@ -2336,7 +2336,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79661](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79661)
+[middleware/types.ts:80924](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80924)
 
 ___
 
@@ -2346,7 +2346,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79662](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79662)
+[middleware/types.ts:80925](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80925)
 
 ___
 
@@ -2356,7 +2356,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79663](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79663)
+[middleware/types.ts:80926](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80926)
 
 ___
 
@@ -2366,7 +2366,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79664](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79664)
+[middleware/types.ts:80927](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80927)
 
 ___
 
@@ -2376,7 +2376,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79665](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79665)
+[middleware/types.ts:80928](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80928)
 
 ___
 
@@ -2386,7 +2386,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79666](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79666)
+[middleware/types.ts:80929](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80929)
 
 ___
 
@@ -2396,7 +2396,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79667](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79667)
+[middleware/types.ts:80930](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80930)
 
 ___
 
@@ -2406,7 +2406,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79668](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79668)
+[middleware/types.ts:80931](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80931)
 
 ___
 
@@ -2416,7 +2416,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79669](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79669)
+[middleware/types.ts:80932](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80932)
 
 ___
 
@@ -2426,7 +2426,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79670](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79670)
+[middleware/types.ts:80933](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80933)
 
 ___
 
@@ -2436,7 +2436,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79671](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79671)
+[middleware/types.ts:80934](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80934)
 
 ___
 
@@ -2446,7 +2446,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79672](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79672)
+[middleware/types.ts:80935](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80935)
 
 ___
 
@@ -2456,7 +2456,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79673](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79673)
+[middleware/types.ts:80936](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80936)
 
 ___
 
@@ -2466,7 +2466,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79674](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79674)
+[middleware/types.ts:80937](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80937)
 
 ___
 
@@ -2476,7 +2476,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79675](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79675)
+[middleware/types.ts:80938](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80938)
 
 ___
 
@@ -2486,7 +2486,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79676](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79676)
+[middleware/types.ts:80939](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80939)
 
 ___
 
@@ -2496,7 +2496,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79677](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79677)
+[middleware/types.ts:80940](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80940)
 
 ___
 
@@ -2506,7 +2506,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79678](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79678)
+[middleware/types.ts:80941](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80941)
 
 ___
 
@@ -2516,7 +2516,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79679](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79679)
+[middleware/types.ts:80942](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80942)
 
 ___
 
@@ -2526,7 +2526,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79680](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79680)
+[middleware/types.ts:80943](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80943)
 
 ___
 
@@ -2536,7 +2536,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79681](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79681)
+[middleware/types.ts:80944](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80944)
 
 ___
 
@@ -2546,7 +2546,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79682](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79682)
+[middleware/types.ts:80945](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80945)
 
 ___
 
@@ -2556,7 +2556,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79683](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79683)
+[middleware/types.ts:80946](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80946)
 
 ___
 
@@ -2566,7 +2566,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79684](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79684)
+[middleware/types.ts:80947](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80947)
 
 ___
 
@@ -2576,7 +2576,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79685](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79685)
+[middleware/types.ts:80948](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80948)
 
 ___
 
@@ -2586,7 +2586,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79686](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79686)
+[middleware/types.ts:80949](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80949)
 
 ___
 
@@ -2596,7 +2596,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79687](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79687)
+[middleware/types.ts:80950](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80950)
 
 ___
 
@@ -2606,7 +2606,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79688](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79688)
+[middleware/types.ts:80951](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80951)
 
 ___
 
@@ -2616,7 +2616,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79689](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79689)
+[middleware/types.ts:80952](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80952)
 
 ___
 
@@ -2626,7 +2626,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79690](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79690)
+[middleware/types.ts:80953](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80953)
 
 ___
 
@@ -2636,7 +2636,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79691](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79691)
+[middleware/types.ts:80954](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80954)
 
 ___
 
@@ -2646,7 +2646,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79692](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79692)
+[middleware/types.ts:80955](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80955)
 
 ___
 
@@ -2656,7 +2656,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79693](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79693)
+[middleware/types.ts:80956](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80956)
 
 ___
 
@@ -2666,7 +2666,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79694](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79694)
+[middleware/types.ts:80957](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80957)
 
 ___
 
@@ -2676,7 +2676,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79695](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79695)
+[middleware/types.ts:80958](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80958)
 
 ___
 
@@ -2686,7 +2686,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79696](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79696)
+[middleware/types.ts:80959](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80959)
 
 ___
 
@@ -2696,7 +2696,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79699](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79699)
+[middleware/types.ts:80962](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80962)
 
 ___
 
@@ -2706,7 +2706,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79700](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79700)
+[middleware/types.ts:80963](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80963)
 
 ___
 
@@ -2716,7 +2716,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79697](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79697)
+[middleware/types.ts:80960](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80960)
 
 ___
 
@@ -2726,7 +2726,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79698](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79698)
+[middleware/types.ts:80961](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80961)
 
 ___
 
@@ -2736,7 +2736,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79703](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79703)
+[middleware/types.ts:80966](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80966)
 
 ___
 
@@ -2746,7 +2746,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79704](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79704)
+[middleware/types.ts:80967](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80967)
 
 ___
 
@@ -2756,7 +2756,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79701](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79701)
+[middleware/types.ts:80964](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80964)
 
 ___
 
@@ -2766,7 +2766,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79702](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79702)
+[middleware/types.ts:80965](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80965)
 
 ___
 
@@ -2776,7 +2776,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79705](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79705)
+[middleware/types.ts:80968](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80968)
 
 ___
 
@@ -2786,7 +2786,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79706](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79706)
+[middleware/types.ts:80969](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80969)
 
 ___
 
@@ -2796,7 +2796,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79707](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79707)
+[middleware/types.ts:80970](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80970)
 
 ___
 
@@ -2806,7 +2806,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79708](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79708)
+[middleware/types.ts:80971](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80971)
 
 ___
 
@@ -2816,7 +2816,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79709](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79709)
+[middleware/types.ts:80972](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80972)
 
 ___
 
@@ -2826,7 +2826,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79710](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79710)
+[middleware/types.ts:80973](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80973)
 
 ___
 
@@ -2836,7 +2836,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79711](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79711)
+[middleware/types.ts:80974](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80974)
 
 ___
 
@@ -2846,7 +2846,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79712](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79712)
+[middleware/types.ts:80975](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80975)
 
 ___
 
@@ -2856,7 +2856,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79713](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79713)
+[middleware/types.ts:80976](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80976)
 
 ___
 
@@ -2866,7 +2866,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79714](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79714)
+[middleware/types.ts:80977](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80977)
 
 ___
 
@@ -2876,7 +2876,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79715](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79715)
+[middleware/types.ts:80978](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80978)
 
 ___
 
@@ -2886,7 +2886,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79716](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79716)
+[middleware/types.ts:80979](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80979)
 
 ___
 
@@ -2896,7 +2896,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79717](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79717)
+[middleware/types.ts:80980](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80980)
 
 ___
 
@@ -2906,7 +2906,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79718](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79718)
+[middleware/types.ts:80981](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80981)
 
 ___
 
@@ -2916,7 +2916,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79719](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79719)
+[middleware/types.ts:80982](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80982)
 
 ___
 
@@ -2926,7 +2926,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79720](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79720)
+[middleware/types.ts:80983](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80983)
 
 ___
 
@@ -2936,7 +2936,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79721](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79721)
+[middleware/types.ts:80984](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80984)
 
 ___
 
@@ -2946,7 +2946,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79722](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79722)
+[middleware/types.ts:80985](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80985)
 
 ___
 
@@ -2956,7 +2956,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79723](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79723)
+[middleware/types.ts:80986](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80986)
 
 ___
 
@@ -2966,7 +2966,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79724](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79724)
+[middleware/types.ts:80987](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80987)
 
 ___
 
@@ -2976,7 +2976,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79725](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79725)
+[middleware/types.ts:80988](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80988)
 
 ___
 
@@ -2986,7 +2986,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79726](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79726)
+[middleware/types.ts:80989](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80989)
 
 ___
 
@@ -2996,7 +2996,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79727](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79727)
+[middleware/types.ts:80990](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80990)
 
 ___
 
@@ -3006,7 +3006,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79728](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79728)
+[middleware/types.ts:80991](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80991)
 
 ___
 
@@ -3016,7 +3016,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79729](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79729)
+[middleware/types.ts:80992](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80992)
 
 ___
 
@@ -3026,7 +3026,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79730](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79730)
+[middleware/types.ts:80993](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80993)
 
 ___
 
@@ -3036,7 +3036,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79731](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79731)
+[middleware/types.ts:80994](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80994)
 
 ___
 
@@ -3046,7 +3046,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79732](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79732)
+[middleware/types.ts:80995](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80995)
 
 ___
 
@@ -3056,7 +3056,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79733](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79733)
+[middleware/types.ts:80996](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80996)
 
 ___
 
@@ -3066,7 +3066,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79734](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79734)
+[middleware/types.ts:80997](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80997)
 
 ___
 
@@ -3076,7 +3076,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79735](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79735)
+[middleware/types.ts:80998](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80998)
 
 ___
 
@@ -3086,7 +3086,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79736](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79736)
+[middleware/types.ts:80999](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L80999)
 
 ___
 
@@ -3096,7 +3096,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79737](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79737)
+[middleware/types.ts:81000](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81000)
 
 ___
 
@@ -3106,7 +3106,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79738](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79738)
+[middleware/types.ts:81001](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81001)
 
 ___
 
@@ -3116,7 +3116,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79739](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79739)
+[middleware/types.ts:81002](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81002)
 
 ___
 
@@ -3126,7 +3126,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79740](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79740)
+[middleware/types.ts:81003](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81003)
 
 ___
 
@@ -3136,7 +3136,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79741](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79741)
+[middleware/types.ts:81004](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81004)
 
 ___
 
@@ -3146,7 +3146,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79742](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79742)
+[middleware/types.ts:81005](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81005)
 
 ___
 
@@ -3156,7 +3156,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79745](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79745)
+[middleware/types.ts:81008](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81008)
 
 ___
 
@@ -3166,7 +3166,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79746](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79746)
+[middleware/types.ts:81009](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81009)
 
 ___
 
@@ -3176,7 +3176,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79743](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79743)
+[middleware/types.ts:81006](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81006)
 
 ___
 
@@ -3186,7 +3186,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79744](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79744)
+[middleware/types.ts:81007](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81007)
 
 ___
 
@@ -3196,7 +3196,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79749](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79749)
+[middleware/types.ts:81012](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81012)
 
 ___
 
@@ -3206,7 +3206,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79750](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79750)
+[middleware/types.ts:81013](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81013)
 
 ___
 
@@ -3216,7 +3216,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79747](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79747)
+[middleware/types.ts:81010](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81010)
 
 ___
 
@@ -3226,7 +3226,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79748](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79748)
+[middleware/types.ts:81011](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81011)
 
 ___
 
@@ -3236,7 +3236,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79751](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79751)
+[middleware/types.ts:81014](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81014)
 
 ___
 
@@ -3246,7 +3246,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79752](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79752)
+[middleware/types.ts:81015](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81015)
 
 ___
 
@@ -3256,7 +3256,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79753](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79753)
+[middleware/types.ts:81016](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81016)
 
 ___
 
@@ -3266,7 +3266,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79754](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79754)
+[middleware/types.ts:81017](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81017)
 
 ___
 
@@ -3276,7 +3276,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79755](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79755)
+[middleware/types.ts:81018](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81018)
 
 ___
 
@@ -3286,7 +3286,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79756](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79756)
+[middleware/types.ts:81019](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81019)
 
 ___
 
@@ -3296,7 +3296,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79757](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79757)
+[middleware/types.ts:81020](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81020)
 
 ___
 
@@ -3306,7 +3306,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79758](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79758)
+[middleware/types.ts:81021](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81021)
 
 ___
 
@@ -3316,7 +3316,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79759](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79759)
+[middleware/types.ts:81022](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81022)
 
 ___
 
@@ -3326,7 +3326,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79760](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79760)
+[middleware/types.ts:81023](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81023)
 
 ___
 
@@ -3336,7 +3336,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79761](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79761)
+[middleware/types.ts:81024](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81024)
 
 ___
 
@@ -3346,7 +3346,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79762](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79762)
+[middleware/types.ts:81025](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81025)
 
 ___
 
@@ -3356,7 +3356,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79763](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79763)
+[middleware/types.ts:81026](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81026)
 
 ___
 
@@ -3366,7 +3366,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79764](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79764)
+[middleware/types.ts:81027](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81027)
 
 ___
 
@@ -3376,7 +3376,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79765](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79765)
+[middleware/types.ts:81028](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81028)
 
 ___
 
@@ -3386,7 +3386,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79766](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79766)
+[middleware/types.ts:81029](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81029)
 
 ___
 
@@ -3396,7 +3396,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79767](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79767)
+[middleware/types.ts:81030](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81030)
 
 ___
 
@@ -3406,7 +3406,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79768](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79768)
+[middleware/types.ts:81031](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81031)
 
 ___
 
@@ -3416,7 +3416,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79769](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79769)
+[middleware/types.ts:81032](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81032)
 
 ___
 
@@ -3426,7 +3426,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79770](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79770)
+[middleware/types.ts:81033](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81033)
 
 ___
 
@@ -3436,7 +3436,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79771](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79771)
+[middleware/types.ts:81034](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81034)
 
 ___
 
@@ -3446,7 +3446,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79772](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79772)
+[middleware/types.ts:81035](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81035)
 
 ___
 
@@ -3456,7 +3456,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79773](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79773)
+[middleware/types.ts:81036](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81036)
 
 ___
 
@@ -3466,7 +3466,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79774](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79774)
+[middleware/types.ts:81037](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81037)
 
 ___
 
@@ -3476,7 +3476,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79775](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79775)
+[middleware/types.ts:81038](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81038)
 
 ___
 
@@ -3486,7 +3486,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79776](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79776)
+[middleware/types.ts:81039](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81039)
 
 ___
 
@@ -3496,7 +3496,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79777](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79777)
+[middleware/types.ts:81040](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81040)
 
 ___
 
@@ -3506,7 +3506,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79778](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79778)
+[middleware/types.ts:81041](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81041)
 
 ___
 
@@ -3516,7 +3516,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79779](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79779)
+[middleware/types.ts:81042](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81042)
 
 ___
 
@@ -3526,7 +3526,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79780](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79780)
+[middleware/types.ts:81043](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81043)
 
 ___
 
@@ -3536,7 +3536,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79781](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79781)
+[middleware/types.ts:81044](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81044)
 
 ___
 
@@ -3546,7 +3546,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79782](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79782)
+[middleware/types.ts:81045](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81045)
 
 ___
 
@@ -3556,7 +3556,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79783](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79783)
+[middleware/types.ts:81046](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81046)
 
 ___
 
@@ -3566,7 +3566,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79784](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79784)
+[middleware/types.ts:81047](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81047)
 
 ___
 
@@ -3576,7 +3576,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79785](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79785)
+[middleware/types.ts:81048](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81048)
 
 ___
 
@@ -3586,7 +3586,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79786](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79786)
+[middleware/types.ts:81049](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81049)
 
 ___
 
@@ -3596,7 +3596,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79787](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79787)
+[middleware/types.ts:81050](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81050)
 
 ___
 
@@ -3606,7 +3606,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79788](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79788)
+[middleware/types.ts:81051](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81051)
 
 ___
 
@@ -3616,7 +3616,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79791](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79791)
+[middleware/types.ts:81054](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81054)
 
 ___
 
@@ -3626,7 +3626,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79792](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79792)
+[middleware/types.ts:81055](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81055)
 
 ___
 
@@ -3636,7 +3636,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79789](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79789)
+[middleware/types.ts:81052](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81052)
 
 ___
 
@@ -3646,7 +3646,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79790](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79790)
+[middleware/types.ts:81053](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81053)
 
 ___
 
@@ -3656,7 +3656,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79795](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79795)
+[middleware/types.ts:81058](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81058)
 
 ___
 
@@ -3666,7 +3666,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79796](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79796)
+[middleware/types.ts:81059](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81059)
 
 ___
 
@@ -3676,7 +3676,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79793](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79793)
+[middleware/types.ts:81056](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81056)
 
 ___
 
@@ -3686,7 +3686,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79794](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79794)
+[middleware/types.ts:81057](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81057)
 
 ___
 
@@ -3696,7 +3696,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79797](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79797)
+[middleware/types.ts:81060](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81060)
 
 ___
 
@@ -3706,7 +3706,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79798](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79798)
+[middleware/types.ts:81061](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81061)
 
 ___
 
@@ -3716,7 +3716,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79799](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79799)
+[middleware/types.ts:81062](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81062)
 
 ___
 
@@ -3726,7 +3726,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79800](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79800)
+[middleware/types.ts:81063](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81063)
 
 ___
 
@@ -3736,7 +3736,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79801](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79801)
+[middleware/types.ts:81064](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81064)
 
 ___
 
@@ -3746,7 +3746,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79802](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79802)
+[middleware/types.ts:81065](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81065)
 
 ___
 
@@ -3756,7 +3756,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79803](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79803)
+[middleware/types.ts:81066](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81066)
 
 ___
 
@@ -3766,7 +3766,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79804](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79804)
+[middleware/types.ts:81067](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81067)
 
 ___
 
@@ -3776,7 +3776,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79805](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79805)
+[middleware/types.ts:81068](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81068)
 
 ___
 
@@ -3786,7 +3786,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79806](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79806)
+[middleware/types.ts:81069](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81069)
 
 ___
 
@@ -3796,7 +3796,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79807](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79807)
+[middleware/types.ts:81070](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81070)
 
 ___
 
@@ -3806,7 +3806,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79808](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79808)
+[middleware/types.ts:81071](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81071)
 
 ___
 
@@ -3816,7 +3816,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79809](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79809)
+[middleware/types.ts:81072](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81072)
 
 ___
 
@@ -3826,7 +3826,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79810](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79810)
+[middleware/types.ts:81073](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81073)
 
 ___
 
@@ -3836,7 +3836,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79811](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79811)
+[middleware/types.ts:81074](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81074)
 
 ___
 
@@ -3846,7 +3846,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79812](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79812)
+[middleware/types.ts:81075](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81075)
 
 ___
 
@@ -3856,7 +3856,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79813](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79813)
+[middleware/types.ts:81076](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81076)
 
 ___
 
@@ -3866,7 +3866,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79814](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79814)
+[middleware/types.ts:81077](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81077)
 
 ___
 
@@ -3876,7 +3876,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79815](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79815)
+[middleware/types.ts:81078](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81078)
 
 ___
 
@@ -3886,7 +3886,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79816](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79816)
+[middleware/types.ts:81079](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81079)
 
 ___
 
@@ -3896,7 +3896,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79817](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79817)
+[middleware/types.ts:81080](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81080)
 
 ___
 
@@ -3906,7 +3906,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79818](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79818)
+[middleware/types.ts:81081](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81081)
 
 ___
 
@@ -3916,7 +3916,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79819](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79819)
+[middleware/types.ts:81082](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81082)
 
 ___
 
@@ -3926,7 +3926,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79820](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79820)
+[middleware/types.ts:81083](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81083)
 
 ___
 
@@ -3936,7 +3936,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79821](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79821)
+[middleware/types.ts:81084](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81084)
 
 ___
 
@@ -3946,7 +3946,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79822](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79822)
+[middleware/types.ts:81085](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81085)
 
 ___
 
@@ -3956,7 +3956,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79823](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79823)
+[middleware/types.ts:81086](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81086)
 
 ___
 
@@ -3966,7 +3966,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79824](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79824)
+[middleware/types.ts:81087](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81087)
 
 ___
 
@@ -3976,7 +3976,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79825](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79825)
+[middleware/types.ts:81088](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81088)
 
 ___
 
@@ -3986,7 +3986,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79826](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79826)
+[middleware/types.ts:81089](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81089)
 
 ___
 
@@ -3996,7 +3996,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79827](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79827)
+[middleware/types.ts:81090](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81090)
 
 ___
 
@@ -4006,7 +4006,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79828](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79828)
+[middleware/types.ts:81091](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81091)
 
 ___
 
@@ -4016,7 +4016,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79829](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79829)
+[middleware/types.ts:81092](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81092)
 
 ___
 
@@ -4026,7 +4026,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79830](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79830)
+[middleware/types.ts:81093](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81093)
 
 ___
 
@@ -4036,7 +4036,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79831](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79831)
+[middleware/types.ts:81094](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81094)
 
 ___
 
@@ -4046,7 +4046,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79832](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79832)
+[middleware/types.ts:81095](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81095)
 
 ___
 
@@ -4056,7 +4056,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79833](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79833)
+[middleware/types.ts:81096](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81096)
 
 ___
 
@@ -4066,7 +4066,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79834](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79834)
+[middleware/types.ts:81097](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81097)
 
 ___
 
@@ -4076,7 +4076,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79837](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79837)
+[middleware/types.ts:81100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81100)
 
 ___
 
@@ -4086,7 +4086,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79838](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79838)
+[middleware/types.ts:81101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81101)
 
 ___
 
@@ -4096,7 +4096,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79835](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79835)
+[middleware/types.ts:81098](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81098)
 
 ___
 
@@ -4106,7 +4106,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79836](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79836)
+[middleware/types.ts:81099](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81099)
 
 ___
 
@@ -4116,7 +4116,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79841](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79841)
+[middleware/types.ts:81104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81104)
 
 ___
 
@@ -4126,7 +4126,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79842](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79842)
+[middleware/types.ts:81105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81105)
 
 ___
 
@@ -4136,7 +4136,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79839](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79839)
+[middleware/types.ts:81102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81102)
 
 ___
 
@@ -4146,7 +4146,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79840](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79840)
+[middleware/types.ts:81103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81103)
 
 ___
 
@@ -4156,7 +4156,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79843](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79843)
+[middleware/types.ts:81106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81106)
 
 ___
 
@@ -4166,7 +4166,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79844](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79844)
+[middleware/types.ts:81107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81107)
 
 ___
 
@@ -4176,7 +4176,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79845](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79845)
+[middleware/types.ts:81108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81108)
 
 ___
 
@@ -4186,7 +4186,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79846](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79846)
+[middleware/types.ts:81109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81109)
 
 ___
 
@@ -4196,7 +4196,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79847](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79847)
+[middleware/types.ts:81110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81110)
 
 ___
 
@@ -4206,7 +4206,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79848](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79848)
+[middleware/types.ts:81111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81111)
 
 ___
 
@@ -4216,7 +4216,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79849](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79849)
+[middleware/types.ts:81112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81112)
 
 ___
 
@@ -4226,7 +4226,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79850](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79850)
+[middleware/types.ts:81113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81113)
 
 ___
 
@@ -4236,7 +4236,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79851](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79851)
+[middleware/types.ts:81114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81114)
 
 ___
 
@@ -4246,7 +4246,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79852](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79852)
+[middleware/types.ts:81115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81115)
 
 ___
 
@@ -4256,7 +4256,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79853](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79853)
+[middleware/types.ts:81116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81116)
 
 ___
 
@@ -4266,7 +4266,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79854](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79854)
+[middleware/types.ts:81117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81117)
 
 ___
 
@@ -4276,7 +4276,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79855](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79855)
+[middleware/types.ts:81118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81118)
 
 ___
 
@@ -4286,7 +4286,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79856](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79856)
+[middleware/types.ts:81119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81119)
 
 ___
 
@@ -4296,7 +4296,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79857](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79857)
+[middleware/types.ts:81120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81120)
 
 ___
 
@@ -4306,7 +4306,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79858](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79858)
+[middleware/types.ts:81121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81121)
 
 ___
 
@@ -4316,7 +4316,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79859](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79859)
+[middleware/types.ts:81122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81122)
 
 ___
 
@@ -4326,7 +4326,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79860](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79860)
+[middleware/types.ts:81123](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81123)
 
 ___
 
@@ -4336,7 +4336,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79861](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79861)
+[middleware/types.ts:81124](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81124)
 
 ___
 
@@ -4346,7 +4346,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79862](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79862)
+[middleware/types.ts:81125](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81125)
 
 ___
 
@@ -4356,7 +4356,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79863](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79863)
+[middleware/types.ts:81126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81126)
 
 ___
 
@@ -4366,7 +4366,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79864](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79864)
+[middleware/types.ts:81127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81127)
 
 ___
 
@@ -4376,7 +4376,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79865](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79865)
+[middleware/types.ts:81128](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81128)
 
 ___
 
@@ -4386,7 +4386,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79866](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79866)
+[middleware/types.ts:81129](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81129)
 
 ___
 
@@ -4396,7 +4396,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79867](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79867)
+[middleware/types.ts:81130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81130)
 
 ___
 
@@ -4406,7 +4406,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79868](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79868)
+[middleware/types.ts:81131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81131)
 
 ___
 
@@ -4416,7 +4416,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79869](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79869)
+[middleware/types.ts:81132](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81132)
 
 ___
 
@@ -4426,7 +4426,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79870](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79870)
+[middleware/types.ts:81133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81133)
 
 ___
 
@@ -4436,7 +4436,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79871](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79871)
+[middleware/types.ts:81134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81134)
 
 ___
 
@@ -4446,7 +4446,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79872](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79872)
+[middleware/types.ts:81135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81135)
 
 ___
 
@@ -4456,7 +4456,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79873](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79873)
+[middleware/types.ts:81136](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81136)
 
 ___
 
@@ -4466,7 +4466,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79874](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79874)
+[middleware/types.ts:81137](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81137)
 
 ___
 
@@ -4476,7 +4476,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79875](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79875)
+[middleware/types.ts:81138](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81138)
 
 ___
 
@@ -4486,7 +4486,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79876](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79876)
+[middleware/types.ts:81139](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81139)
 
 ___
 
@@ -4496,7 +4496,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79877](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79877)
+[middleware/types.ts:81140](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81140)
 
 ___
 
@@ -4506,7 +4506,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79878](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79878)
+[middleware/types.ts:81141](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81141)
 
 ___
 
@@ -4516,7 +4516,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79879](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79879)
+[middleware/types.ts:81142](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81142)
 
 ___
 
@@ -4526,7 +4526,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79880](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79880)
+[middleware/types.ts:81143](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81143)
 
 ___
 
@@ -4536,7 +4536,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79881](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79881)
+[middleware/types.ts:81144](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81144)
 
 ___
 
@@ -4546,7 +4546,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79882](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79882)
+[middleware/types.ts:81145](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81145)
 
 ___
 
@@ -4556,7 +4556,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79883](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79883)
+[middleware/types.ts:81146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81146)
 
 ___
 
@@ -4566,7 +4566,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79886](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79886)
+[middleware/types.ts:81149](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81149)
 
 ___
 
@@ -4576,7 +4576,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79887](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79887)
+[middleware/types.ts:81150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81150)
 
 ___
 
@@ -4586,7 +4586,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79884](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79884)
+[middleware/types.ts:81147](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81147)
 
 ___
 
@@ -4596,7 +4596,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79885](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79885)
+[middleware/types.ts:81148](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81148)
 
 ___
 
@@ -4606,7 +4606,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79888](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79888)
+[middleware/types.ts:81151](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81151)
 
 ___
 
@@ -4616,7 +4616,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79889](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79889)
+[middleware/types.ts:81152](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81152)
 
 ___
 
@@ -4626,7 +4626,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79892](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79892)
+[middleware/types.ts:81155](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81155)
 
 ___
 
@@ -4636,7 +4636,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79893](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79893)
+[middleware/types.ts:81156](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81156)
 
 ___
 
@@ -4646,7 +4646,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79890](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79890)
+[middleware/types.ts:81153](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81153)
 
 ___
 
@@ -4656,7 +4656,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79891](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79891)
+[middleware/types.ts:81154](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81154)
 
 ___
 
@@ -4666,7 +4666,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79894](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79894)
+[middleware/types.ts:81157](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81157)
 
 ___
 
@@ -4676,7 +4676,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79895](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79895)
+[middleware/types.ts:81158](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81158)
 
 ___
 
@@ -4686,7 +4686,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79896](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79896)
+[middleware/types.ts:81159](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81159)
 
 ___
 
@@ -4696,7 +4696,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79897](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79897)
+[middleware/types.ts:81160](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81160)
 
 ___
 
@@ -4706,7 +4706,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79898](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79898)
+[middleware/types.ts:81161](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81161)
 
 ___
 
@@ -4716,7 +4716,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79899](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79899)
+[middleware/types.ts:81162](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81162)
 
 ___
 
@@ -4726,7 +4726,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79900](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79900)
+[middleware/types.ts:81163](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81163)
 
 ___
 
@@ -4736,7 +4736,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79901](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79901)
+[middleware/types.ts:81164](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81164)
 
 ___
 
@@ -4746,7 +4746,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79902](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79902)
+[middleware/types.ts:81165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81165)
 
 ___
 
@@ -4756,7 +4756,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79903](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79903)
+[middleware/types.ts:81166](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81166)
 
 ___
 
@@ -4766,7 +4766,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79904](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79904)
+[middleware/types.ts:81167](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81167)
 
 ___
 
@@ -4776,7 +4776,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79905](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79905)
+[middleware/types.ts:81168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81168)
 
 ___
 
@@ -4786,7 +4786,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79906](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79906)
+[middleware/types.ts:81169](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81169)
 
 ___
 
@@ -4796,7 +4796,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79907](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79907)
+[middleware/types.ts:81170](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81170)
 
 ___
 
@@ -4806,7 +4806,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79908](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79908)
+[middleware/types.ts:81171](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81171)
 
 ___
 
@@ -4816,7 +4816,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79909](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79909)
+[middleware/types.ts:81172](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81172)
 
 ___
 
@@ -4826,7 +4826,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79910](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79910)
+[middleware/types.ts:81173](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81173)
 
 ___
 
@@ -4836,7 +4836,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79911](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79911)
+[middleware/types.ts:81174](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81174)
 
 ___
 
@@ -4846,7 +4846,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79912](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79912)
+[middleware/types.ts:81175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81175)
 
 ___
 
@@ -4856,7 +4856,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79913](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79913)
+[middleware/types.ts:81176](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81176)
 
 ___
 
@@ -4866,7 +4866,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79914](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79914)
+[middleware/types.ts:81177](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81177)
 
 ___
 
@@ -4876,7 +4876,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79915](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79915)
+[middleware/types.ts:81178](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81178)
 
 ___
 
@@ -4886,7 +4886,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79916](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79916)
+[middleware/types.ts:81179](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81179)
 
 ___
 
@@ -4896,7 +4896,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79917](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79917)
+[middleware/types.ts:81180](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81180)
 
 ___
 
@@ -4906,7 +4906,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79918](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79918)
+[middleware/types.ts:81181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81181)
 
 ___
 
@@ -4916,7 +4916,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79919](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79919)
+[middleware/types.ts:81182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81182)
 
 ___
 
@@ -4926,7 +4926,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79920](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79920)
+[middleware/types.ts:81183](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81183)
 
 ___
 
@@ -4936,7 +4936,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79921](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79921)
+[middleware/types.ts:81184](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81184)
 
 ___
 
@@ -4946,7 +4946,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79924](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79924)
+[middleware/types.ts:81187](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81187)
 
 ___
 
@@ -4956,7 +4956,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79925](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79925)
+[middleware/types.ts:81188](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81188)
 
 ___
 
@@ -4966,7 +4966,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79922](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79922)
+[middleware/types.ts:81185](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81185)
 
 ___
 
@@ -4976,7 +4976,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79923](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79923)
+[middleware/types.ts:81186](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81186)
 
 ___
 
@@ -4986,7 +4986,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79926](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79926)
+[middleware/types.ts:81189](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81189)
 
 ___
 
@@ -4996,7 +4996,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79927](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79927)
+[middleware/types.ts:81190](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81190)
 
 ___
 
@@ -5006,7 +5006,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79930](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79930)
+[middleware/types.ts:81193](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81193)
 
 ___
 
@@ -5016,7 +5016,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79931](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79931)
+[middleware/types.ts:81194](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81194)
 
 ___
 
@@ -5026,7 +5026,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79928](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79928)
+[middleware/types.ts:81191](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81191)
 
 ___
 
@@ -5036,7 +5036,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79929](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79929)
+[middleware/types.ts:81192](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81192)
 
 ___
 
@@ -5046,7 +5046,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79932](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79932)
+[middleware/types.ts:81195](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81195)
 
 ___
 
@@ -5056,7 +5056,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79933](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79933)
+[middleware/types.ts:81196](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81196)
 
 ___
 
@@ -5066,7 +5066,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79934](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79934)
+[middleware/types.ts:81197](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81197)
 
 ___
 
@@ -5076,7 +5076,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79935](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79935)
+[middleware/types.ts:81198](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81198)
 
 ___
 
@@ -5086,7 +5086,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79936](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79936)
+[middleware/types.ts:81199](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81199)
 
 ___
 
@@ -5096,7 +5096,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79937](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79937)
+[middleware/types.ts:81200](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81200)
 
 ___
 
@@ -5106,7 +5106,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79938](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79938)
+[middleware/types.ts:81201](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81201)
 
 ___
 
@@ -5116,7 +5116,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79939](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79939)
+[middleware/types.ts:81202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81202)
 
 ___
 
@@ -5126,7 +5126,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79940](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79940)
+[middleware/types.ts:81203](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81203)
 
 ___
 
@@ -5136,7 +5136,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79941](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79941)
+[middleware/types.ts:81204](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81204)
 
 ___
 
@@ -5146,7 +5146,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79942](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79942)
+[middleware/types.ts:81205](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81205)
 
 ___
 
@@ -5156,7 +5156,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79943](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79943)
+[middleware/types.ts:81206](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81206)
 
 ___
 
@@ -5166,7 +5166,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79944](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79944)
+[middleware/types.ts:81207](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81207)
 
 ___
 
@@ -5176,7 +5176,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79945](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79945)
+[middleware/types.ts:81208](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81208)
 
 ___
 
@@ -5186,7 +5186,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79946](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79946)
+[middleware/types.ts:81209](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81209)
 
 ___
 
@@ -5196,7 +5196,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79947](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79947)
+[middleware/types.ts:81210](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81210)
 
 ___
 
@@ -5206,7 +5206,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79948](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79948)
+[middleware/types.ts:81211](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81211)
 
 ___
 
@@ -5216,7 +5216,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79949](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79949)
+[middleware/types.ts:81212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81212)
 
 ___
 
@@ -5226,7 +5226,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79950](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79950)
+[middleware/types.ts:81213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81213)
 
 ___
 
@@ -5236,7 +5236,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79951](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79951)
+[middleware/types.ts:81214](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81214)
 
 ___
 
@@ -5246,7 +5246,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79952](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79952)
+[middleware/types.ts:81215](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81215)
 
 ___
 
@@ -5256,7 +5256,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79953](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79953)
+[middleware/types.ts:81216](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81216)
 
 ___
 
@@ -5266,7 +5266,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79954](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79954)
+[middleware/types.ts:81217](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81217)
 
 ___
 
@@ -5276,7 +5276,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79955](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79955)
+[middleware/types.ts:81218](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81218)
 
 ___
 
@@ -5286,7 +5286,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79956](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79956)
+[middleware/types.ts:81219](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81219)
 
 ___
 
@@ -5296,7 +5296,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79957](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79957)
+[middleware/types.ts:81220](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81220)
 
 ___
 
@@ -5306,7 +5306,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79960](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79960)
+[middleware/types.ts:81223](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81223)
 
 ___
 
@@ -5316,7 +5316,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79961](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79961)
+[middleware/types.ts:81224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81224)
 
 ___
 
@@ -5326,7 +5326,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79958](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79958)
+[middleware/types.ts:81221](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81221)
 
 ___
 
@@ -5336,7 +5336,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79959](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79959)
+[middleware/types.ts:81222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81222)
 
 ___
 
@@ -5346,7 +5346,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79962](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79962)
+[middleware/types.ts:81225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81225)
 
 ___
 
@@ -5356,7 +5356,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79963](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79963)
+[middleware/types.ts:81226](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81226)
 
 ___
 
@@ -5366,7 +5366,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79966](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79966)
+[middleware/types.ts:81229](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81229)
 
 ___
 
@@ -5376,7 +5376,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79967](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79967)
+[middleware/types.ts:81230](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81230)
 
 ___
 
@@ -5386,7 +5386,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79964](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79964)
+[middleware/types.ts:81227](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81227)
 
 ___
 
@@ -5396,7 +5396,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79965](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79965)
+[middleware/types.ts:81228](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81228)
 
 ___
 
@@ -5406,7 +5406,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79968](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79968)
+[middleware/types.ts:81231](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81231)
 
 ___
 
@@ -5416,7 +5416,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79969](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79969)
+[middleware/types.ts:81232](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81232)
 
 ___
 
@@ -5426,7 +5426,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79970](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79970)
+[middleware/types.ts:81233](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81233)
 
 ___
 
@@ -5436,7 +5436,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79971](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79971)
+[middleware/types.ts:81234](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81234)
 
 ___
 
@@ -5446,7 +5446,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79972](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79972)
+[middleware/types.ts:81235](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81235)
 
 ___
 
@@ -5456,7 +5456,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79973](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79973)
+[middleware/types.ts:81236](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81236)
 
 ___
 
@@ -5466,7 +5466,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79974](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79974)
+[middleware/types.ts:81237](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81237)
 
 ___
 
@@ -5476,7 +5476,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79975](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79975)
+[middleware/types.ts:81238](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81238)
 
 ___
 
@@ -5486,7 +5486,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79976](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79976)
+[middleware/types.ts:81239](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81239)
 
 ___
 
@@ -5496,7 +5496,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79977](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79977)
+[middleware/types.ts:81240](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81240)
 
 ___
 
@@ -5506,7 +5506,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79978](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79978)
+[middleware/types.ts:81241](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81241)
 
 ___
 
@@ -5516,7 +5516,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79979](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79979)
+[middleware/types.ts:81242](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81242)
 
 ___
 
@@ -5526,7 +5526,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79980](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79980)
+[middleware/types.ts:81243](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81243)
 
 ___
 
@@ -5536,7 +5536,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79981](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79981)
+[middleware/types.ts:81244](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81244)
 
 ___
 
@@ -5546,7 +5546,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79982](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79982)
+[middleware/types.ts:81245](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81245)
 
 ___
 
@@ -5556,7 +5556,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79983](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79983)
+[middleware/types.ts:81246](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81246)
 
 ___
 
@@ -5566,7 +5566,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79984](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79984)
+[middleware/types.ts:81247](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81247)
 
 ___
 
@@ -5576,7 +5576,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79985](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79985)
+[middleware/types.ts:81248](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81248)
 
 ___
 
@@ -5586,7 +5586,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79986](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79986)
+[middleware/types.ts:81249](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81249)
 
 ___
 
@@ -5596,7 +5596,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79987](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79987)
+[middleware/types.ts:81250](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81250)
 
 ___
 
@@ -5606,7 +5606,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79988](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79988)
+[middleware/types.ts:81251](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81251)
 
 ___
 
@@ -5616,7 +5616,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79989](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79989)
+[middleware/types.ts:81252](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81252)
 
 ___
 
@@ -5626,7 +5626,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79990](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79990)
+[middleware/types.ts:81253](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81253)
 
 ___
 
@@ -5636,7 +5636,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79991](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79991)
+[middleware/types.ts:81254](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81254)
 
 ___
 
@@ -5646,7 +5646,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79992](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79992)
+[middleware/types.ts:81255](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81255)
 
 ___
 
@@ -5656,7 +5656,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79993](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79993)
+[middleware/types.ts:81256](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81256)
 
 ___
 
@@ -5666,7 +5666,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79996](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79996)
+[middleware/types.ts:81259](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81259)
 
 ___
 
@@ -5676,7 +5676,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79997](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79997)
+[middleware/types.ts:81260](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81260)
 
 ___
 
@@ -5686,7 +5686,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79994](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79994)
+[middleware/types.ts:81257](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81257)
 
 ___
 
@@ -5696,7 +5696,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79995](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79995)
+[middleware/types.ts:81258](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81258)
 
 ___
 
@@ -5706,7 +5706,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79998](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79998)
+[middleware/types.ts:81261](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81261)
 
 ___
 
@@ -5716,7 +5716,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:79999](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L79999)
+[middleware/types.ts:81262](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81262)
 
 ___
 
@@ -5726,7 +5726,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80002](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80002)
+[middleware/types.ts:81265](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81265)
 
 ___
 
@@ -5736,7 +5736,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80003](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80003)
+[middleware/types.ts:81266](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81266)
 
 ___
 
@@ -5746,7 +5746,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80000](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80000)
+[middleware/types.ts:81263](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81263)
 
 ___
 
@@ -5756,7 +5756,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80001](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80001)
+[middleware/types.ts:81264](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81264)
 
 ___
 
@@ -5766,7 +5766,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80004](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80004)
+[middleware/types.ts:81267](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81267)
 
 ___
 
@@ -5776,7 +5776,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80005](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80005)
+[middleware/types.ts:81268](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81268)
 
 ___
 
@@ -5786,7 +5786,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80006](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80006)
+[middleware/types.ts:81269](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81269)
 
 ___
 
@@ -5796,7 +5796,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80007](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80007)
+[middleware/types.ts:81270](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81270)
 
 ___
 
@@ -5806,7 +5806,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80008](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80008)
+[middleware/types.ts:81271](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81271)
 
 ___
 
@@ -5816,7 +5816,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80009](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80009)
+[middleware/types.ts:81272](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81272)
 
 ___
 
@@ -5826,7 +5826,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80010](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80010)
+[middleware/types.ts:81273](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81273)
 
 ___
 
@@ -5836,7 +5836,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80011](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80011)
+[middleware/types.ts:81274](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81274)
 
 ___
 
@@ -5846,7 +5846,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80012](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80012)
+[middleware/types.ts:81275](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81275)
 
 ___
 
@@ -5856,7 +5856,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80013](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80013)
+[middleware/types.ts:81276](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81276)
 
 ___
 
@@ -5866,7 +5866,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80014](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80014)
+[middleware/types.ts:81277](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81277)
 
 ___
 
@@ -5876,7 +5876,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80015](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80015)
+[middleware/types.ts:81278](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81278)
 
 ___
 
@@ -5886,7 +5886,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80016](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80016)
+[middleware/types.ts:81279](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81279)
 
 ___
 
@@ -5896,7 +5896,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80017](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80017)
+[middleware/types.ts:81280](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81280)
 
 ___
 
@@ -5906,7 +5906,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80018](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80018)
+[middleware/types.ts:81281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81281)
 
 ___
 
@@ -5916,7 +5916,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80019](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80019)
+[middleware/types.ts:81282](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81282)
 
 ___
 
@@ -5926,7 +5926,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80020](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80020)
+[middleware/types.ts:81283](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81283)
 
 ___
 
@@ -5936,7 +5936,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80021](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80021)
+[middleware/types.ts:81284](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81284)
 
 ___
 
@@ -5946,7 +5946,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80022](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80022)
+[middleware/types.ts:81285](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81285)
 
 ___
 
@@ -5956,7 +5956,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80023](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80023)
+[middleware/types.ts:81286](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81286)
 
 ___
 
@@ -5966,7 +5966,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80024](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80024)
+[middleware/types.ts:81287](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81287)
 
 ___
 
@@ -5976,7 +5976,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80025](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80025)
+[middleware/types.ts:81288](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81288)
 
 ___
 
@@ -5986,7 +5986,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80026](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80026)
+[middleware/types.ts:81289](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81289)
 
 ___
 
@@ -5996,7 +5996,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80027](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80027)
+[middleware/types.ts:81290](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81290)
 
 ___
 
@@ -6006,7 +6006,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80028](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80028)
+[middleware/types.ts:81291](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81291)
 
 ___
 
@@ -6016,7 +6016,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80029](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80029)
+[middleware/types.ts:81292](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81292)
 
 ___
 
@@ -6026,7 +6026,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80032](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80032)
+[middleware/types.ts:81295](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81295)
 
 ___
 
@@ -6036,7 +6036,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80033](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80033)
+[middleware/types.ts:81296](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81296)
 
 ___
 
@@ -6046,7 +6046,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80030](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80030)
+[middleware/types.ts:81293](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81293)
 
 ___
 
@@ -6056,7 +6056,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80031](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80031)
+[middleware/types.ts:81294](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81294)
 
 ___
 
@@ -6066,7 +6066,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80034](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80034)
+[middleware/types.ts:81297](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81297)
 
 ___
 
@@ -6076,7 +6076,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80035](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80035)
+[middleware/types.ts:81298](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81298)
 
 ___
 
@@ -6086,7 +6086,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80038](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80038)
+[middleware/types.ts:81301](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81301)
 
 ___
 
@@ -6096,7 +6096,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80039](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80039)
+[middleware/types.ts:81302](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81302)
 
 ___
 
@@ -6106,7 +6106,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80036](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80036)
+[middleware/types.ts:81299](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81299)
 
 ___
 
@@ -6116,7 +6116,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80037](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80037)
+[middleware/types.ts:81300](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81300)
 
 ___
 
@@ -6126,7 +6126,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80040](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80040)
+[middleware/types.ts:81303](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81303)
 
 ___
 
@@ -6136,7 +6136,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80041](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80041)
+[middleware/types.ts:81304](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81304)
 
 ___
 
@@ -6146,7 +6146,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80042](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80042)
+[middleware/types.ts:81305](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81305)
 
 ___
 
@@ -6156,7 +6156,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80043](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80043)
+[middleware/types.ts:81306](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81306)
 
 ___
 
@@ -6166,7 +6166,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80044](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80044)
+[middleware/types.ts:81307](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81307)
 
 ___
 
@@ -6176,7 +6176,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80045](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80045)
+[middleware/types.ts:81308](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81308)
 
 ___
 
@@ -6186,7 +6186,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80046](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80046)
+[middleware/types.ts:81309](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81309)
 
 ___
 
@@ -6196,7 +6196,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80047](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80047)
+[middleware/types.ts:81310](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81310)
 
 ___
 
@@ -6206,7 +6206,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80048](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80048)
+[middleware/types.ts:81311](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81311)
 
 ___
 
@@ -6216,7 +6216,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80049](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80049)
+[middleware/types.ts:81312](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81312)
 
 ___
 
@@ -6226,7 +6226,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80050](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80050)
+[middleware/types.ts:81313](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81313)
 
 ___
 
@@ -6236,7 +6236,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80051](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80051)
+[middleware/types.ts:81314](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81314)
 
 ___
 
@@ -6246,7 +6246,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80052](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80052)
+[middleware/types.ts:81315](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81315)
 
 ___
 
@@ -6256,7 +6256,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80053](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80053)
+[middleware/types.ts:81316](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81316)
 
 ___
 
@@ -6266,7 +6266,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80054](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80054)
+[middleware/types.ts:81317](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81317)
 
 ___
 
@@ -6276,7 +6276,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80055](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80055)
+[middleware/types.ts:81318](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81318)
 
 ___
 
@@ -6286,7 +6286,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80056](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80056)
+[middleware/types.ts:81319](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81319)
 
 ___
 
@@ -6296,7 +6296,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80057](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80057)
+[middleware/types.ts:81320](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81320)
 
 ___
 
@@ -6306,7 +6306,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80058](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80058)
+[middleware/types.ts:81321](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81321)
 
 ___
 
@@ -6316,7 +6316,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80059](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80059)
+[middleware/types.ts:81322](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81322)
 
 ___
 
@@ -6326,7 +6326,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80060](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80060)
+[middleware/types.ts:81323](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81323)
 
 ___
 
@@ -6336,7 +6336,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80061](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80061)
+[middleware/types.ts:81324](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81324)
 
 ___
 
@@ -6346,7 +6346,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80062](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80062)
+[middleware/types.ts:81325](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81325)
 
 ___
 
@@ -6356,7 +6356,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80063](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80063)
+[middleware/types.ts:81326](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81326)
 
 ___
 
@@ -6366,7 +6366,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80064](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80064)
+[middleware/types.ts:81327](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81327)
 
 ___
 
@@ -6376,7 +6376,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80065](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80065)
+[middleware/types.ts:81328](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81328)
 
 ___
 
@@ -6386,7 +6386,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80068](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80068)
+[middleware/types.ts:81331](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81331)
 
 ___
 
@@ -6396,7 +6396,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80069](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80069)
+[middleware/types.ts:81332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81332)
 
 ___
 
@@ -6406,7 +6406,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80066](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80066)
+[middleware/types.ts:81329](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81329)
 
 ___
 
@@ -6416,7 +6416,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80067](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80067)
+[middleware/types.ts:81330](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81330)
 
 ___
 
@@ -6426,7 +6426,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80070](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80070)
+[middleware/types.ts:81333](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81333)
 
 ___
 
@@ -6436,7 +6436,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80071](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80071)
+[middleware/types.ts:81334](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81334)
 
 ___
 
@@ -6446,7 +6446,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80074](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80074)
+[middleware/types.ts:81337](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81337)
 
 ___
 
@@ -6456,7 +6456,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80075](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80075)
+[middleware/types.ts:81338](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81338)
 
 ___
 
@@ -6466,7 +6466,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80072](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80072)
+[middleware/types.ts:81335](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81335)
 
 ___
 
@@ -6476,7 +6476,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80073](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80073)
+[middleware/types.ts:81336](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81336)
 
 ___
 
@@ -6486,7 +6486,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80076](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80076)
+[middleware/types.ts:81339](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81339)
 
 ___
 
@@ -6496,7 +6496,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80077](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80077)
+[middleware/types.ts:81340](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81340)
 
 ___
 
@@ -6506,7 +6506,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80078](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80078)
+[middleware/types.ts:81341](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81341)
 
 ___
 
@@ -6516,7 +6516,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80079](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80079)
+[middleware/types.ts:81342](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81342)
 
 ___
 
@@ -6526,7 +6526,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80080](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80080)
+[middleware/types.ts:81343](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81343)
 
 ___
 
@@ -6536,7 +6536,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80081](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80081)
+[middleware/types.ts:81344](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81344)
 
 ___
 
@@ -6546,7 +6546,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80082](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80082)
+[middleware/types.ts:81345](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81345)
 
 ___
 
@@ -6556,7 +6556,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80083](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80083)
+[middleware/types.ts:81346](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81346)
 
 ___
 
@@ -6566,7 +6566,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80084](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80084)
+[middleware/types.ts:81347](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81347)
 
 ___
 
@@ -6576,7 +6576,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80085](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80085)
+[middleware/types.ts:81348](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81348)
 
 ___
 
@@ -6586,7 +6586,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80086](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80086)
+[middleware/types.ts:81349](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81349)
 
 ___
 
@@ -6596,7 +6596,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80087](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80087)
+[middleware/types.ts:81350](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81350)
 
 ___
 
@@ -6606,7 +6606,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80088](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80088)
+[middleware/types.ts:81351](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81351)
 
 ___
 
@@ -6616,7 +6616,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80089](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80089)
+[middleware/types.ts:81352](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81352)
 
 ___
 
@@ -6626,7 +6626,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80090](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80090)
+[middleware/types.ts:81353](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81353)
 
 ___
 
@@ -6636,7 +6636,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80091](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80091)
+[middleware/types.ts:81354](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81354)
 
 ___
 
@@ -6646,7 +6646,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80092](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80092)
+[middleware/types.ts:81355](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81355)
 
 ___
 
@@ -6656,7 +6656,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80093](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80093)
+[middleware/types.ts:81356](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81356)
 
 ___
 
@@ -6666,7 +6666,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80094](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80094)
+[middleware/types.ts:81357](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81357)
 
 ___
 
@@ -6676,7 +6676,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80095](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80095)
+[middleware/types.ts:81358](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81358)
 
 ___
 
@@ -6686,7 +6686,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80096](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80096)
+[middleware/types.ts:81359](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81359)
 
 ___
 
@@ -6696,7 +6696,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80097](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80097)
+[middleware/types.ts:81360](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81360)
 
 ___
 
@@ -6706,7 +6706,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80098](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80098)
+[middleware/types.ts:81361](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81361)
 
 ___
 
@@ -6716,7 +6716,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80099](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80099)
+[middleware/types.ts:81362](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81362)
 
 ___
 
@@ -6726,7 +6726,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80100)
+[middleware/types.ts:81363](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81363)
 
 ___
 
@@ -6736,7 +6736,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80101)
+[middleware/types.ts:81364](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81364)
 
 ___
 
@@ -6746,7 +6746,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80104)
+[middleware/types.ts:81367](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81367)
 
 ___
 
@@ -6756,7 +6756,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80105)
+[middleware/types.ts:81368](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81368)
 
 ___
 
@@ -6766,7 +6766,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80102)
+[middleware/types.ts:81365](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81365)
 
 ___
 
@@ -6776,7 +6776,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80103)
+[middleware/types.ts:81366](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81366)
 
 ___
 
@@ -6786,7 +6786,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80106)
+[middleware/types.ts:81369](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81369)
 
 ___
 
@@ -6796,7 +6796,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80107)
+[middleware/types.ts:81370](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81370)
 
 ___
 
@@ -6806,7 +6806,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80110)
+[middleware/types.ts:81373](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81373)
 
 ___
 
@@ -6816,7 +6816,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80111)
+[middleware/types.ts:81374](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81374)
 
 ___
 
@@ -6826,7 +6826,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80108)
+[middleware/types.ts:81371](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81371)
 
 ___
 
@@ -6836,7 +6836,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80109)
+[middleware/types.ts:81372](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81372)
 
 ___
 
@@ -6846,7 +6846,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80112)
+[middleware/types.ts:81375](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81375)
 
 ___
 
@@ -6856,7 +6856,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80113)
+[middleware/types.ts:81376](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81376)
 
 ___
 
@@ -6866,7 +6866,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80114)
+[middleware/types.ts:81377](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81377)
 
 ___
 
@@ -6876,7 +6876,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80115)
+[middleware/types.ts:81378](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81378)
 
 ___
 
@@ -6886,7 +6886,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80116)
+[middleware/types.ts:81379](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81379)
 
 ___
 
@@ -6896,7 +6896,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80117)
+[middleware/types.ts:81380](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81380)
 
 ___
 
@@ -6906,7 +6906,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80118)
+[middleware/types.ts:81381](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81381)
 
 ___
 
@@ -6916,7 +6916,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80119)
+[middleware/types.ts:81382](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81382)
 
 ___
 
@@ -6926,7 +6926,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80120)
+[middleware/types.ts:81383](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81383)
 
 ___
 
@@ -6936,7 +6936,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80121)
+[middleware/types.ts:81384](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81384)
 
 ___
 
@@ -6946,7 +6946,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80122)
+[middleware/types.ts:81385](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81385)
 
 ___
 
@@ -6956,7 +6956,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80123](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80123)
+[middleware/types.ts:81386](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81386)
 
 ___
 
@@ -6966,7 +6966,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80124](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80124)
+[middleware/types.ts:81387](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81387)
 
 ___
 
@@ -6976,7 +6976,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80125](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80125)
+[middleware/types.ts:81388](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81388)
 
 ___
 
@@ -6986,7 +6986,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80126)
+[middleware/types.ts:81389](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81389)
 
 ___
 
@@ -6996,7 +6996,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80127)
+[middleware/types.ts:81390](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81390)
 
 ___
 
@@ -7006,7 +7006,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80128](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80128)
+[middleware/types.ts:81391](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81391)
 
 ___
 
@@ -7016,7 +7016,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80129](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80129)
+[middleware/types.ts:81392](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81392)
 
 ___
 
@@ -7026,7 +7026,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80130)
+[middleware/types.ts:81393](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81393)
 
 ___
 
@@ -7036,7 +7036,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80131)
+[middleware/types.ts:81394](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81394)
 
 ___
 
@@ -7046,7 +7046,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80132](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80132)
+[middleware/types.ts:81395](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81395)
 
 ___
 
@@ -7056,7 +7056,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80133)
+[middleware/types.ts:81396](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81396)
 
 ___
 
@@ -7066,7 +7066,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80134)
+[middleware/types.ts:81397](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81397)
 
 ___
 
@@ -7076,7 +7076,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80135)
+[middleware/types.ts:81398](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81398)
 
 ___
 
@@ -7086,7 +7086,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80136](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80136)
+[middleware/types.ts:81399](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81399)
 
 ___
 
@@ -7096,7 +7096,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80137](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80137)
+[middleware/types.ts:81400](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81400)
 
 ___
 
@@ -7106,7 +7106,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80140](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80140)
+[middleware/types.ts:81403](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81403)
 
 ___
 
@@ -7116,7 +7116,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80141](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80141)
+[middleware/types.ts:81404](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81404)
 
 ___
 
@@ -7126,7 +7126,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80138](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80138)
+[middleware/types.ts:81401](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81401)
 
 ___
 
@@ -7136,7 +7136,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80139](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80139)
+[middleware/types.ts:81402](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81402)
 
 ___
 
@@ -7146,7 +7146,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80142](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80142)
+[middleware/types.ts:81405](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81405)
 
 ___
 
@@ -7156,7 +7156,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80143](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80143)
+[middleware/types.ts:81406](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81406)
 
 ___
 
@@ -7166,7 +7166,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80146)
+[middleware/types.ts:81409](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81409)
 
 ___
 
@@ -7176,7 +7176,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80147](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80147)
+[middleware/types.ts:81410](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81410)
 
 ___
 
@@ -7186,7 +7186,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80144](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80144)
+[middleware/types.ts:81407](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81407)
 
 ___
 
@@ -7196,7 +7196,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80145](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80145)
+[middleware/types.ts:81408](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81408)
 
 ___
 
@@ -7206,7 +7206,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80148](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80148)
+[middleware/types.ts:81411](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81411)
 
 ___
 
@@ -7216,7 +7216,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80149](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80149)
+[middleware/types.ts:81412](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81412)
 
 ___
 
@@ -7226,7 +7226,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80150)
+[middleware/types.ts:81413](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81413)
 
 ___
 
@@ -7236,7 +7236,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80151](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80151)
+[middleware/types.ts:81414](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81414)
 
 ___
 
@@ -7246,7 +7246,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80152](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80152)
+[middleware/types.ts:81415](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81415)
 
 ___
 
@@ -7256,7 +7256,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80153](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80153)
+[middleware/types.ts:81416](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81416)
 
 ___
 
@@ -7266,7 +7266,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80154](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80154)
+[middleware/types.ts:81417](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81417)
 
 ___
 
@@ -7276,7 +7276,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80155](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80155)
+[middleware/types.ts:81418](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81418)
 
 ___
 
@@ -7286,7 +7286,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80156](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80156)
+[middleware/types.ts:81419](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81419)
 
 ___
 
@@ -7296,7 +7296,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80157](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80157)
+[middleware/types.ts:81420](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81420)
 
 ___
 
@@ -7306,7 +7306,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80158](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80158)
+[middleware/types.ts:81421](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81421)
 
 ___
 
@@ -7316,7 +7316,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80159](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80159)
+[middleware/types.ts:81422](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81422)
 
 ___
 
@@ -7326,7 +7326,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80160](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80160)
+[middleware/types.ts:81423](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81423)
 
 ___
 
@@ -7336,7 +7336,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80161](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80161)
+[middleware/types.ts:81424](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81424)
 
 ___
 
@@ -7346,7 +7346,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80162](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80162)
+[middleware/types.ts:81425](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81425)
 
 ___
 
@@ -7356,7 +7356,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80163](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80163)
+[middleware/types.ts:81426](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81426)
 
 ___
 
@@ -7366,7 +7366,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80164](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80164)
+[middleware/types.ts:81427](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81427)
 
 ___
 
@@ -7376,7 +7376,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80165)
+[middleware/types.ts:81428](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81428)
 
 ___
 
@@ -7386,7 +7386,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80166](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80166)
+[middleware/types.ts:81429](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81429)
 
 ___
 
@@ -7396,7 +7396,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80167](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80167)
+[middleware/types.ts:81430](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81430)
 
 ___
 
@@ -7406,7 +7406,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80168)
+[middleware/types.ts:81431](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81431)
 
 ___
 
@@ -7416,7 +7416,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80169](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80169)
+[middleware/types.ts:81432](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81432)
 
 ___
 
@@ -7426,7 +7426,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80170](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80170)
+[middleware/types.ts:81433](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81433)
 
 ___
 
@@ -7436,7 +7436,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80171](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80171)
+[middleware/types.ts:81434](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81434)
 
 ___
 
@@ -7446,7 +7446,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80172](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80172)
+[middleware/types.ts:81435](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81435)
 
 ___
 
@@ -7456,7 +7456,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80173](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80173)
+[middleware/types.ts:81436](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81436)
 
 ___
 
@@ -7466,7 +7466,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80176](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80176)
+[middleware/types.ts:81439](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81439)
 
 ___
 
@@ -7476,7 +7476,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80177](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80177)
+[middleware/types.ts:81440](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81440)
 
 ___
 
@@ -7486,7 +7486,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80174](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80174)
+[middleware/types.ts:81437](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81437)
 
 ___
 
@@ -7496,7 +7496,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80175)
+[middleware/types.ts:81438](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81438)
 
 ___
 
@@ -7506,7 +7506,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80178](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80178)
+[middleware/types.ts:81441](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81441)
 
 ___
 
@@ -7516,7 +7516,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80179](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80179)
+[middleware/types.ts:81442](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81442)
 
 ___
 
@@ -7526,7 +7526,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80182)
+[middleware/types.ts:81445](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81445)
 
 ___
 
@@ -7536,7 +7536,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80183](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80183)
+[middleware/types.ts:81446](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81446)
 
 ___
 
@@ -7546,7 +7546,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80180](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80180)
+[middleware/types.ts:81443](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81443)
 
 ___
 
@@ -7556,7 +7556,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80181)
+[middleware/types.ts:81444](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81444)
 
 ___
 
@@ -7566,7 +7566,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80184](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80184)
+[middleware/types.ts:81447](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81447)
 
 ___
 
@@ -7576,7 +7576,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80185](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80185)
+[middleware/types.ts:81448](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81448)
 
 ___
 
@@ -7586,7 +7586,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80186](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80186)
+[middleware/types.ts:81449](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81449)
 
 ___
 
@@ -7596,7 +7596,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80187](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80187)
+[middleware/types.ts:81450](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81450)
 
 ___
 
@@ -7606,7 +7606,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80188](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80188)
+[middleware/types.ts:81451](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81451)
 
 ___
 
@@ -7616,7 +7616,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80189](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80189)
+[middleware/types.ts:81452](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81452)
 
 ___
 
@@ -7626,7 +7626,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80190](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80190)
+[middleware/types.ts:81453](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81453)
 
 ___
 
@@ -7636,7 +7636,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80191](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80191)
+[middleware/types.ts:81454](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81454)
 
 ___
 
@@ -7646,7 +7646,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80192](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80192)
+[middleware/types.ts:81455](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81455)
 
 ___
 
@@ -7656,7 +7656,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80193](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80193)
+[middleware/types.ts:81456](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81456)
 
 ___
 
@@ -7666,7 +7666,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80194](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80194)
+[middleware/types.ts:81457](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81457)
 
 ___
 
@@ -7676,7 +7676,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80195](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80195)
+[middleware/types.ts:81458](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81458)
 
 ___
 
@@ -7686,7 +7686,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80196](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80196)
+[middleware/types.ts:81459](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81459)
 
 ___
 
@@ -7696,7 +7696,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80197](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80197)
+[middleware/types.ts:81460](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81460)
 
 ___
 
@@ -7706,7 +7706,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80200](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80200)
+[middleware/types.ts:81463](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81463)
 
 ___
 
@@ -7716,7 +7716,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80201](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80201)
+[middleware/types.ts:81464](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81464)
 
 ___
 
@@ -7726,7 +7726,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80198](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80198)
+[middleware/types.ts:81461](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81461)
 
 ___
 
@@ -7736,7 +7736,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80199](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80199)
+[middleware/types.ts:81462](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81462)
 
 ___
 
@@ -7746,7 +7746,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80202)
+[middleware/types.ts:81465](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81465)
 
 ___
 
@@ -7756,7 +7756,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80203](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80203)
+[middleware/types.ts:81466](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81466)
 
 ___
 
@@ -7766,7 +7766,7 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80204](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80204)
+[middleware/types.ts:81467](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81467)
 
 ___
 
@@ -7776,4 +7776,4 @@ ___
 
 #### Defined in
 
-[middleware/types.ts:80205](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L80205)
+[middleware/types.ts:81468](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L81468)

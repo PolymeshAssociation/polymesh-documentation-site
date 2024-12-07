@@ -16,4 +16,4 @@ list of secondary Accounts
 
 #### Defined in
 
-[api/procedures/types.ts:593](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L593)
+[api/procedures/types.ts:593](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L593)

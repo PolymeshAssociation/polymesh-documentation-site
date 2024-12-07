@@ -40,7 +40,7 @@ CustomClaimType
 
 #### Defined in
 
-[api/client/types.ts:206](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L206)
+[api/client/types.ts:207](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L207)
 
 ___
 
@@ -52,4 +52,4 @@ CustomClaimType with DID that registered the CustomClaimType
 
 #### Defined in
 
-[api/client/types.ts:214](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L214)
+[api/client/types.ts:215](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L215)

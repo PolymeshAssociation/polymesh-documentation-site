@@ -14,4 +14,4 @@ sidebar_label: "WaivePermissionsParams"
 
 #### Defined in
 
-[api/procedures/types.ts:1562](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L1562)
+[api/procedures/types.ts:1574](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L1574)

@@ -16,4 +16,4 @@ The points in time in the future for which to create checkpoints for
 
 #### Defined in
 
-[api/procedures/types.ts:1221](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L1221)
+[api/procedures/types.ts:1233](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L1233)

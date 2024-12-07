@@ -14,7 +14,7 @@ sidebar_label: "PortfolioCollection"
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Portfolio/types.ts#L12)
+[api/entities/Portfolio/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Portfolio/types.ts#L12)
 
 ___
 
@@ -26,7 +26,7 @@ NFTs available for transferring
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Portfolio/types.ts#L16)
+[api/entities/Portfolio/types.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Portfolio/types.ts#L16)
 
 ___
 
@@ -38,7 +38,7 @@ NFTs that are locked, such as being involved in a pending instruction
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:20](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Portfolio/types.ts#L20)
+[api/entities/Portfolio/types.ts:20](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Portfolio/types.ts#L20)
 
 ___
 
@@ -50,4 +50,4 @@ Total number of NFTs held for a collection
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Portfolio/types.ts#L24)
+[api/entities/Portfolio/types.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Portfolio/types.ts#L24)

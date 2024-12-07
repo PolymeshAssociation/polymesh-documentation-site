@@ -35,7 +35,7 @@ Apply the [TxData](../../../interfaces/API/Procedures/Types/TxData/TxData.md) ty
 
 #### Defined in
 
-[base/types.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/types.ts#L17)
+[base/types.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/types.ts#L17)
 
 ___
 
@@ -47,7 +47,7 @@ Data representing the Account responsible for paying fees for a transaction
 
 #### Defined in
 
-[base/types.ts:137](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/types.ts#L137)
+[base/types.ts:137](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/types.ts#L137)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[base/types.ts:219](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/types.ts#L219)
+[base/types.ts:219](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/types.ts#L219)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[base/types.ts:209](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/types.ts#L209)
+[base/types.ts:209](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/types.ts#L209)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[base/types.ts:214](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/types.ts#L214)
+[base/types.ts:214](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/types.ts#L214)
 
 ___
 
@@ -103,4 +103,4 @@ ___
 
 #### Defined in
 
-[base/types.ts:99](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/types.ts#L99)
+[base/types.ts:99](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/types.ts#L99)

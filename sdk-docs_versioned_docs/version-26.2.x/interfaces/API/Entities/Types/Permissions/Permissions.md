@@ -20,7 +20,7 @@ Assets over which this key has permissions
 
 #### Defined in
 
-[api/entities/types.ts:646](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/types.ts#L646)
+[api/entities/types.ts:646](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/types.ts#L646)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[api/entities/types.ts:660](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/types.ts#L660)
+[api/entities/types.ts:660](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/types.ts#L660)
 
 ___
 
@@ -46,7 +46,7 @@ NOTE: If transactions is null, ignore this value
 
 #### Defined in
 
-[api/entities/types.ts:658](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/types.ts#L658)
+[api/entities/types.ts:658](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/types.ts#L658)
 
 ___
 
@@ -58,4 +58,4 @@ Transactions this key can execute
 
 #### Defined in
 
-[api/entities/types.ts:650](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/types.ts#L650)
+[api/entities/types.ts:650](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/types.ts#L650)

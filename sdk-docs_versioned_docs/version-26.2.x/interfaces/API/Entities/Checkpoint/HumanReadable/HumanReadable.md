@@ -14,7 +14,7 @@ sidebar_label: "HumanReadable"
 
 #### Defined in
 
-[api/entities/Checkpoint.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Checkpoint.ts#L33)
+[api/entities/Checkpoint.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Checkpoint.ts#L33)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/Checkpoint.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Checkpoint.ts#L28)
+[api/entities/Checkpoint.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Checkpoint.ts#L28)
 
 ___
 
@@ -38,4 +38,4 @@ in favour of `assetId`
 
 #### Defined in
 
-[api/entities/Checkpoint.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Checkpoint.ts#L32)
+[api/entities/Checkpoint.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Checkpoint.ts#L32)

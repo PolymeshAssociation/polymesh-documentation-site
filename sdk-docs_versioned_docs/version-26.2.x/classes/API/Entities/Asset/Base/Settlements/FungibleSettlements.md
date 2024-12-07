@@ -46,7 +46,7 @@ this takes locked tokens into account. For example, if portfolio A has 1000 toke
 
 #### Defined in
 
-[api/entities/Asset/Base/Settlements/index.ts:281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/Settlements/index.ts#L281)
+[api/entities/Asset/Base/Settlements/index.ts:281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/Settlements/index.ts#L281)
 
 ___
 
@@ -77,7 +77,7 @@ BaseSettlements.preApprove
 
 #### Defined in
 
-[api/entities/Asset/Base/Settlements/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/Settlements/index.ts#L53)
+[api/entities/Asset/Base/Settlements/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/Settlements/index.ts#L53)
 
 ___
 
@@ -108,4 +108,4 @@ BaseSettlements.removePreApproval
 
 #### Defined in
 
-[api/entities/Asset/Base/Settlements/index.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/Settlements/index.ts#L63)
+[api/entities/Asset/Base/Settlements/index.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/Settlements/index.ts#L63)

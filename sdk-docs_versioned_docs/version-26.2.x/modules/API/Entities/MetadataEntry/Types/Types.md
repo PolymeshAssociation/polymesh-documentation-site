@@ -22,7 +22,7 @@ sidebar_label: "Types"
 
 #### Defined in
 
-[api/entities/MetadataEntry/types.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MetadataEntry/types.ts#L55)
+[api/entities/MetadataEntry/types.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MetadataEntry/types.ts#L55)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[api/entities/MetadataEntry/types.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MetadataEntry/types.ts#L51)
+[api/entities/MetadataEntry/types.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MetadataEntry/types.ts#L51)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[api/entities/MetadataEntry/types.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MetadataEntry/types.ts#L27)
+[api/entities/MetadataEntry/types.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MetadataEntry/types.ts#L27)
 
 ___
 
@@ -52,4 +52,4 @@ ___
 
 #### Defined in
 
-[api/entities/MetadataEntry/types.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MetadataEntry/types.ts#L59)
+[api/entities/MetadataEntry/types.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MetadataEntry/types.ts#L59)

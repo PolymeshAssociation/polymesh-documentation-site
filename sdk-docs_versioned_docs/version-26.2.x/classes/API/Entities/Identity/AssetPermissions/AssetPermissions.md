@@ -36,7 +36,7 @@ Check whether this Identity has specific transaction Permissions over an Asset
 
 #### Defined in
 
-[api/entities/Identity/AssetPermissions.ts:133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/AssetPermissions.ts#L133)
+[api/entities/Identity/AssetPermissions.ts:133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/AssetPermissions.ts#L133)
 
 ___
 
@@ -68,7 +68,7 @@ there is a possibility that the data is not ready by the time it is requested. I
 
 #### Defined in
 
-[api/entities/Identity/AssetPermissions.ts:325](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/AssetPermissions.ts#L325)
+[api/entities/Identity/AssetPermissions.ts:325](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/AssetPermissions.ts#L325)
 
 ___
 
@@ -84,7 +84,7 @@ Retrieve all the Assets over which this Identity has permissions, with the corre
 
 #### Defined in
 
-[api/entities/Identity/AssetPermissions.ts:104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/AssetPermissions.ts#L104)
+[api/entities/Identity/AssetPermissions.ts:104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/AssetPermissions.ts#L104)
 
 ___
 
@@ -107,7 +107,7 @@ Retrieve this Identity's Permission Group for a specific Asset
 
 #### Defined in
 
-[api/entities/Identity/AssetPermissions.ts:284](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/AssetPermissions.ts#L284)
+[api/entities/Identity/AssetPermissions.ts:284](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/AssetPermissions.ts#L284)
 
 ___
 
@@ -142,7 +142,7 @@ supports pagination
 
 #### Defined in
 
-[api/entities/Identity/AssetPermissions.ts:376](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/AssetPermissions.ts#L376)
+[api/entities/Identity/AssetPermissions.ts:376](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/AssetPermissions.ts#L376)
 
 ___
 
@@ -170,7 +170,7 @@ this method is of type [ProcedureMethod](../../../../../interfaces/API/Procedure
 
 #### Defined in
 
-[api/entities/Identity/AssetPermissions.ts:361](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/AssetPermissions.ts#L361)
+[api/entities/Identity/AssetPermissions.ts:361](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/AssetPermissions.ts#L361)
 
 ___
 
@@ -198,4 +198,4 @@ this method is of type [ProcedureMethod](../../../../../interfaces/API/Procedure
 
 #### Defined in
 
-[api/entities/Identity/AssetPermissions.ts:351](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/AssetPermissions.ts#L351)
+[api/entities/Identity/AssetPermissions.ts:351](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/AssetPermissions.ts#L351)

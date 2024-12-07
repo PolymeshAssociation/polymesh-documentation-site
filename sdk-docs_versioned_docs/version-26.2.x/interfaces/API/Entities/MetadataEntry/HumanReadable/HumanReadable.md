@@ -14,7 +14,7 @@ sidebar_label: "HumanReadable"
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MetadataEntry/index.ts#L39)
+[api/entities/MetadataEntry/index.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MetadataEntry/index.ts#L39)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MetadataEntry/index.ts#L34)
+[api/entities/MetadataEntry/index.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MetadataEntry/index.ts#L34)
 
 ___
 
@@ -38,7 +38,7 @@ in favour of `assetId`
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MetadataEntry/index.ts#L38)
+[api/entities/MetadataEntry/index.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MetadataEntry/index.ts#L38)
 
 ___
 
@@ -48,4 +48,4 @@ ___
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MetadataEntry/index.ts#L40)
+[api/entities/MetadataEntry/index.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MetadataEntry/index.ts#L40)

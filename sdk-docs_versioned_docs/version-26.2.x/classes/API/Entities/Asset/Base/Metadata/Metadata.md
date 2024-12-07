@@ -32,7 +32,7 @@ this returns all available metadata entries for this Asset, with or without any 
 
 #### Defined in
 
-[api/entities/Asset/Base/Metadata/index.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/Metadata/index.ts#L69)
+[api/entities/Asset/Base/Metadata/index.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/Metadata/index.ts#L69)
 
 ___
 
@@ -48,7 +48,7 @@ Retrieve all (local + global) the MetadataEntry details whose value is set for t
 
 #### Defined in
 
-[api/entities/Asset/Base/Metadata/index.ts:183](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/Metadata/index.ts#L183)
+[api/entities/Asset/Base/Metadata/index.ts:183](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/Metadata/index.ts#L183)
 
 ___
 
@@ -76,7 +76,7 @@ if there is no MetadataEntry with the passed ID and specified type
 
 #### Defined in
 
-[api/entities/Asset/Base/Metadata/index.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/Metadata/index.ts#L115)
+[api/entities/Asset/Base/Metadata/index.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/Metadata/index.ts#L115)
 
 ___
 
@@ -109,4 +109,4 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Base/Metadata/index.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/Metadata/index.ts#L60)
+[api/entities/Asset/Base/Metadata/index.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/Metadata/index.ts#L60)

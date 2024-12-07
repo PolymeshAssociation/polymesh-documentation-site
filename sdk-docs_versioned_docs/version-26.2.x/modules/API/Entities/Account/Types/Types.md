@@ -23,4 +23,4 @@ sidebar_label: "Types"
 
 #### Defined in
 
-[api/entities/Account/types.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Account/types.ts#L22)
+[api/entities/Account/types.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Account/types.ts#L22)

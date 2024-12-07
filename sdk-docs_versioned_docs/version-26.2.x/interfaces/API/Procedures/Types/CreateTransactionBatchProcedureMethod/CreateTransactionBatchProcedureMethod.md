@@ -31,7 +31,7 @@ sidebar_label: "CreateTransactionBatchProcedureMethod"
 
 #### Defined in
 
-[api/procedures/types.ts:149](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L149)
+[api/procedures/types.ts:149](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L149)
 
 ## Properties
 
@@ -62,4 +62,4 @@ sidebar_label: "CreateTransactionBatchProcedureMethod"
 
 #### Defined in
 
-[api/procedures/types.ts:153](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L153)
+[api/procedures/types.ts:153](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L153)

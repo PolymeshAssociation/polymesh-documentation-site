@@ -18,7 +18,7 @@ The asset ID to filter by
 
 #### Defined in
 
-[api/client/types.ts:228](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L228)
+[api/client/types.ts:229](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L229)
 
 ___
 
@@ -30,7 +30,7 @@ The DID of the identity to filter by
 
 #### Defined in
 
-[api/client/types.ts:224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L224)
+[api/client/types.ts:225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L225)
 
 ___
 
@@ -42,7 +42,7 @@ The mediator did to filter by
 
 #### Defined in
 
-[api/client/types.ts:244](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L244)
+[api/client/types.ts:245](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L245)
 
 ___
 
@@ -54,7 +54,7 @@ The party did to filter by
 
 #### Defined in
 
-[api/client/types.ts:248](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L248)
+[api/client/types.ts:249](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L249)
 
 ___
 
@@ -66,7 +66,7 @@ The receiver did to filter by
 
 #### Defined in
 
-[api/client/types.ts:240](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L240)
+[api/client/types.ts:241](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L241)
 
 ___
 
@@ -78,7 +78,7 @@ The sender did to filter by
 
 #### Defined in
 
-[api/client/types.ts:236](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L236)
+[api/client/types.ts:237](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L237)
 
 ___
 
@@ -90,7 +90,7 @@ The number of results to return
 
 #### Defined in
 
-[api/client/types.ts:252](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L252)
+[api/client/types.ts:253](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L253)
 
 ___
 
@@ -102,7 +102,7 @@ The number of results to skip
 
 #### Defined in
 
-[api/client/types.ts:256](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L256)
+[api/client/types.ts:257](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L257)
 
 ___
 
@@ -114,4 +114,4 @@ The status to filter by
 
 #### Defined in
 
-[api/client/types.ts:232](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L232)
+[api/client/types.ts:233](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L233)
