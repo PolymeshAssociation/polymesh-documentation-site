@@ -14,7 +14,7 @@ sidebar_label: "InviteAccountParams"
 
 #### Defined in
 
-[api/procedures/types.ts:575](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L575)
+[api/procedures/types.ts:575](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L575)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:574](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L574)
+[api/procedures/types.ts:574](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L574)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:573](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L573)
+[api/procedures/types.ts:573](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L573)

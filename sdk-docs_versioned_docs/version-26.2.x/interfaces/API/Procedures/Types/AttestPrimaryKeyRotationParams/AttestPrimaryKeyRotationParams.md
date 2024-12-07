@@ -16,7 +16,7 @@ sidebar_label: "AttestPrimaryKeyRotationParams"
 
 #### Defined in
 
-[api/procedures/types.ts:869](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L869)
+[api/procedures/types.ts:870](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L870)
 
 ___
 
@@ -28,7 +28,7 @@ Identity or the DID of the Identity that is to be rotated
 
 #### Defined in
 
-[api/procedures/types.ts:864](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L864)
+[api/procedures/types.ts:865](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L865)
 
 ___
 
@@ -40,4 +40,4 @@ The Account that will be attested to become the primary key of the `identity`. C
 
 #### Defined in
 
-[api/procedures/types.ts:859](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L859)
+[api/procedures/types.ts:860](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L860)

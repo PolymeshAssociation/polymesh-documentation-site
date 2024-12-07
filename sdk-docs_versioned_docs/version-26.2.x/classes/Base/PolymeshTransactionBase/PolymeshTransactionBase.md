@@ -33,7 +33,7 @@ hash of the block where this transaction resides (status: `Succeeded`, `Failed`)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/PolymeshTransactionBase.ts#L106)
+[base/PolymeshTransactionBase.ts:106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/PolymeshTransactionBase.ts#L106)
 
 ___
 
@@ -45,7 +45,7 @@ number of the block where this transaction resides (status: `Succeeded`, `Failed
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/PolymeshTransactionBase.ts#L111)
+[base/PolymeshTransactionBase.ts:111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/PolymeshTransactionBase.ts#L111)
 
 ___
 
@@ -57,7 +57,7 @@ stores errors thrown while running the transaction (status: `Failed`, `Aborted`)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:86](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/PolymeshTransactionBase.ts#L86)
+[base/PolymeshTransactionBase.ts:86](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/PolymeshTransactionBase.ts#L86)
 
 ___
 
@@ -72,7 +72,7 @@ meaning `.runAsProposal` should be used instead of `.run`
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/PolymeshTransactionBase.ts#L119)
+[base/PolymeshTransactionBase.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/PolymeshTransactionBase.ts#L119)
 
 ___
 
@@ -84,7 +84,7 @@ stores the transaction receipt (if successful)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/PolymeshTransactionBase.ts#L91)
+[base/PolymeshTransactionBase.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/PolymeshTransactionBase.ts#L91)
 
 ___
 
@@ -96,7 +96,7 @@ current status of the transaction
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/PolymeshTransactionBase.ts#L81)
+[base/PolymeshTransactionBase.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/PolymeshTransactionBase.ts#L81)
 
 ___
 
@@ -108,7 +108,7 @@ transaction hash (status: `Running`, `Succeeded`, `Failed`)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/PolymeshTransactionBase.ts#L96)
+[base/PolymeshTransactionBase.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/PolymeshTransactionBase.ts#L96)
 
 ___
 
@@ -120,7 +120,7 @@ transaction index within its block (status: `Succeeded`, `Failed`)
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/PolymeshTransactionBase.ts#L101)
+[base/PolymeshTransactionBase.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/PolymeshTransactionBase.ts#L101)
 
 ## Accessors
 
@@ -136,7 +136,7 @@ returns true if transaction has completed successfully
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:907](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/PolymeshTransactionBase.ts#L907)
+[base/PolymeshTransactionBase.ts:907](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/PolymeshTransactionBase.ts#L907)
 
 ___
 
@@ -160,7 +160,7 @@ if the [transaction.isSuccess](PolymeshTransactionBase.md#issuccess) property is
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:823](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/PolymeshTransactionBase.ts#L823)
+[base/PolymeshTransactionBase.ts:823](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/PolymeshTransactionBase.ts#L823)
 
 ## Methods
 
@@ -179,7 +179,7 @@ Return this transaction's protocol fees. These are extra fees charged for
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:754](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/PolymeshTransactionBase.ts#L754)
+[base/PolymeshTransactionBase.ts:754](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/PolymeshTransactionBase.ts#L754)
 
 ___
 
@@ -200,7 +200,7 @@ these values might be inaccurate if the transaction is run at a later time. This
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:537](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/PolymeshTransactionBase.ts#L537)
+[base/PolymeshTransactionBase.ts:537](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/PolymeshTransactionBase.ts#L537)
 
 ___
 
@@ -232,7 +232,7 @@ if the middleware wasn't enabled when instantiating the SDK client
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:577](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/PolymeshTransactionBase.ts#L577)
+[base/PolymeshTransactionBase.ts:577](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/PolymeshTransactionBase.ts#L577)
 
 ___
 
@@ -256,7 +256,7 @@ unsubscribe function
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:519](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/PolymeshTransactionBase.ts#L519)
+[base/PolymeshTransactionBase.ts:519](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/PolymeshTransactionBase.ts#L519)
 
 ___
 
@@ -275,7 +275,7 @@ Run the transaction, update its status and return a result if applicable.
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:270](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/PolymeshTransactionBase.ts#L270)
+[base/PolymeshTransactionBase.ts:270](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/PolymeshTransactionBase.ts#L270)
 
 ___
 
@@ -291,7 +291,7 @@ Run the transaction as a multiSig proposal
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:228](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/PolymeshTransactionBase.ts#L228)
+[base/PolymeshTransactionBase.ts:228](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/PolymeshTransactionBase.ts#L228)
 
 ___
 
@@ -313,7 +313,7 @@ this depends on the type of transaction itself (e.g. `staking.bond` can't be sub
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:715](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/PolymeshTransactionBase.ts#L715)
+[base/PolymeshTransactionBase.ts:715](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/PolymeshTransactionBase.ts#L715)
 
 ___
 
@@ -343,4 +343,4 @@ When using this method, details like account nonces, and transaction mortality r
 
 #### Defined in
 
-[base/PolymeshTransactionBase.ts:844](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/PolymeshTransactionBase.ts#L844)
+[base/PolymeshTransactionBase.ts:844](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/PolymeshTransactionBase.ts#L844)

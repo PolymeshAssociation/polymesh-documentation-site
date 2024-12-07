@@ -2805,7 +2805,7 @@ Re-exports [WithdrawInstructionParams](../API/Procedures/Types/Types.md#withdraw
 
 #### Defined in
 
-[middleware/typesV1.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/typesV1.ts#L13)
+[middleware/typesV1.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/typesV1.ts#L13)
 
 ___
 
@@ -2855,4 +2855,4 @@ All built-in and custom scalars, mapped to their actual values
 
 #### Defined in
 
-[middleware/types.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/middleware/types.ts#L13)
+[middleware/types.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/middleware/types.ts#L9)

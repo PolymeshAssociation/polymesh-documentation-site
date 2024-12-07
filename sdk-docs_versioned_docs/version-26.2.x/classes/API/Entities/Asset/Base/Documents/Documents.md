@@ -38,7 +38,7 @@ supports pagination
 
 #### Defined in
 
-[api/entities/Asset/Base/Documents/index.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/Documents/index.ts#L45)
+[api/entities/Asset/Base/Documents/index.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/Documents/index.ts#L45)
 
 ___
 
@@ -66,4 +66,4 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Base/Documents/index.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Base/Documents/index.ts#L36)
+[api/entities/Asset/Base/Documents/index.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Base/Documents/index.ts#L36)

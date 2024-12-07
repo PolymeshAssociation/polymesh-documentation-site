@@ -16,7 +16,7 @@ Grants permissions to the MultiSig upon creation. The caller must be the primary
 
 #### Defined in
 
-[api/procedures/types.ts:1629](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L1629)
+[api/procedures/types.ts:1641](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L1641)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:1625](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L1625)
+[api/procedures/types.ts:1637](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L1637)
 
 ___
 
@@ -40,4 +40,4 @@ Signer must be an Account as of v7
 
 #### Defined in
 
-[api/procedures/types.ts:1624](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L1624)
+[api/procedures/types.ts:1636](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L1636)

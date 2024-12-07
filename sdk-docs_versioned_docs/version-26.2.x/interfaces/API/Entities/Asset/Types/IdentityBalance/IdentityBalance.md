@@ -16,7 +16,7 @@ Represents the balance of an Asset Holder
 
 #### Defined in
 
-[api/entities/Asset/types.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/types.ts#L107)
+[api/entities/Asset/types.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/types.ts#L107)
 
 ___
 
@@ -26,4 +26,4 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/types.ts:106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/types.ts#L106)
+[api/entities/Asset/types.ts:106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/types.ts#L106)

@@ -22,7 +22,7 @@ Handles all Asset Corporate Actions related functionality
 
 #### Defined in
 
-[api/entities/Asset/Fungible/CorporateActions/index.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/CorporateActions/index.ts#L26)
+[api/entities/Asset/Fungible/CorporateActions/index.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/CorporateActions/index.ts#L26)
 
 ## Methods
 
@@ -38,7 +38,7 @@ Retrieve a list of agent Identities
 
 #### Defined in
 
-[api/entities/Asset/Fungible/CorporateActions/index.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/CorporateActions/index.ts#L74)
+[api/entities/Asset/Fungible/CorporateActions/index.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/CorporateActions/index.ts#L74)
 
 ___
 
@@ -60,7 +60,7 @@ This config is applied to every Corporate Action that is created until they are 
 
 #### Defined in
 
-[api/entities/Asset/Fungible/CorporateActions/index.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/CorporateActions/index.ts#L110)
+[api/entities/Asset/Fungible/CorporateActions/index.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/CorporateActions/index.ts#L110)
 
 ___
 
@@ -88,7 +88,7 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Fungible/CorporateActions/index.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/CorporateActions/index.ts#L67)
+[api/entities/Asset/Fungible/CorporateActions/index.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/CorporateActions/index.ts#L67)
 
 ___
 
@@ -122,4 +122,4 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Fungible/CorporateActions/index.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/CorporateActions/index.ts#L57)
+[api/entities/Asset/Fungible/CorporateActions/index.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/CorporateActions/index.ts#L57)

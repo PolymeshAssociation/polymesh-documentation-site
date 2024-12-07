@@ -14,7 +14,7 @@ sidebar_label: "IdentityRole"
 
 #### Defined in
 
-[api/procedures/types.ts:274](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L274)
+[api/procedures/types.ts:274](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L274)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:273](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L273)
+[api/procedures/types.ts:273](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L273)

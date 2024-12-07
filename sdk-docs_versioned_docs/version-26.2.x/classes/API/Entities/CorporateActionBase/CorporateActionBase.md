@@ -29,7 +29,7 @@ Asset affected by this Corporate Action
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/CorporateActionBase/index.ts#L84)
+[api/entities/CorporateActionBase/index.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/CorporateActionBase/index.ts#L84)
 
 ___
 
@@ -41,7 +41,7 @@ date at which the Corporate Action was created
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/CorporateActionBase/index.ts#L89)
+[api/entities/CorporateActionBase/index.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/CorporateActionBase/index.ts#L89)
 
 ___
 
@@ -53,7 +53,7 @@ default percentage (0-100) of tax withholding for this Corporate Action
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/CorporateActionBase/index.ts#L105)
+[api/entities/CorporateActionBase/index.ts:105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/CorporateActionBase/index.ts#L105)
 
 ___
 
@@ -65,7 +65,7 @@ brief text description of the Corporate Action
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:94](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/CorporateActionBase/index.ts#L94)
+[api/entities/CorporateActionBase/index.ts:94](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/CorporateActionBase/index.ts#L94)
 
 ___
 
@@ -77,7 +77,7 @@ internal Corporate Action ID
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:79](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/CorporateActionBase/index.ts#L79)
+[api/entities/CorporateActionBase/index.ts:79](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/CorporateActionBase/index.ts#L79)
 
 ___
 
@@ -90,7 +90,7 @@ Asset Holder Identities related to this Corporate action. If the treatment is `E
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/CorporateActionBase/index.ts#L100)
+[api/entities/CorporateActionBase/index.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/CorporateActionBase/index.ts#L100)
 
 ___
 
@@ -103,7 +103,7 @@ percentage (0-100) of tax withholding per Identity. Any Identity not present
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/CorporateActionBase/index.ts#L111)
+[api/entities/CorporateActionBase/index.ts:111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/CorporateActionBase/index.ts#L111)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -135,7 +135,7 @@ Retrieve the Checkpoint associated with this Corporate Action. If the Checkpoint
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:195](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/CorporateActionBase/index.ts#L195)
+[api/entities/CorporateActionBase/index.ts:195](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/CorporateActionBase/index.ts#L195)
 
 ___
 
@@ -155,7 +155,7 @@ Determine whether this Corporate Action exists on chain
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:184](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/CorporateActionBase/index.ts#L184)
+[api/entities/CorporateActionBase/index.ts:184](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/CorporateActionBase/index.ts#L184)
 
 ___
 
@@ -181,7 +181,7 @@ Determine whether this Entity is the same as another one
 
 #### Defined in
 
-[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L61)
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -213,7 +213,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:164](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/CorporateActionBase/index.ts#L164)
+[api/entities/CorporateActionBase/index.ts:164](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/CorporateActionBase/index.ts#L164)
 
 ___
 
@@ -241,7 +241,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:174](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/CorporateActionBase/index.ts#L174)
+[api/entities/CorporateActionBase/index.ts:174](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/CorporateActionBase/index.ts#L174)
 
 ___
 
@@ -261,7 +261,7 @@ Return the Corporate Action's static data
 
 #### Defined in
 
-[api/entities/CorporateActionBase/index.ts:275](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/CorporateActionBase/index.ts#L275)
+[api/entities/CorporateActionBase/index.ts:275](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/CorporateActionBase/index.ts#L275)
 
 ___
 
@@ -293,7 +293,7 @@ Generate the Entity's UUID from its identifying properties
 
 #### Defined in
 
-[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L14)
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L14)
 
 ___
 
@@ -325,4 +325,4 @@ Unserialize a UUID into its Unique Identifiers
 
 #### Defined in
 
-[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L23)
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L23)

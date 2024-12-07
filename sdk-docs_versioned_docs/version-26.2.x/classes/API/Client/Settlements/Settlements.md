@@ -34,7 +34,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Settlements.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/Settlements.ts#L127)
+[api/client/Settlements.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/Settlements.ts#L127)
 
 ___
 
@@ -62,7 +62,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Settlements.ts:137](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/Settlements.ts#L137)
+[api/client/Settlements.ts:137](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/Settlements.ts#L137)
 
 ___
 
@@ -90,7 +90,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/client/Settlements.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/Settlements.ts#L117)
+[api/client/Settlements.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/Settlements.ts#L117)
 
 ___
 
@@ -120,7 +120,7 @@ supports pagination
 
 #### Defined in
 
-[api/client/Settlements.ts:148](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/Settlements.ts#L148)
+[api/client/Settlements.ts:148](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/Settlements.ts#L148)
 
 ___
 
@@ -143,7 +143,7 @@ Retrieve an Instruction by its ID
 
 #### Defined in
 
-[api/client/Settlements.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/Settlements.ts#L95)
+[api/client/Settlements.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/Settlements.ts#L95)
 
 ___
 
@@ -166,4 +166,4 @@ Retrieve a Venue by its ID
 
 #### Defined in
 
-[api/client/Settlements.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/Settlements.ts#L74)
+[api/client/Settlements.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/Settlements.ts#L74)

@@ -16,7 +16,7 @@ whether the signer is an Account or Identity
 
 #### Defined in
 
-[api/entities/types.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/types.ts#L114)
+[api/entities/types.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/types.ts#L114)
 
 ___
 
@@ -28,4 +28,4 @@ address or DID (depending on whether the signer is an Account or Identity)
 
 #### Defined in
 
-[api/entities/types.ts:118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/types.ts#L118)
+[api/entities/types.ts:118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/types.ts#L118)

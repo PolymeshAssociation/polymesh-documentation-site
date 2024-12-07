@@ -14,7 +14,7 @@ sidebar_label: "CorporateBallotTx"
 
 #### Defined in
 
-[generated/types.ts:607](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/generated/types.ts#L607)
+[generated/types.ts:607](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/generated/types.ts#L607)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:609](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/generated/types.ts#L609)
+[generated/types.ts:609](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/generated/types.ts#L609)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:610](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/generated/types.ts#L610)
+[generated/types.ts:610](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/generated/types.ts#L610)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:611](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/generated/types.ts#L611)
+[generated/types.ts:611](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/generated/types.ts#L611)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[generated/types.ts:612](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/generated/types.ts#L612)
+[generated/types.ts:612](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/generated/types.ts#L612)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:608](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/generated/types.ts#L608)
+[generated/types.ts:608](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/generated/types.ts#L608)

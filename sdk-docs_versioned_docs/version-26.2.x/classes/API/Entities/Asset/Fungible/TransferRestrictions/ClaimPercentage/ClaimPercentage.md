@@ -34,7 +34,7 @@ if the appropriately scoped Balance statistic (by ClaimType and issuer) is not e
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts#L32)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts#L32)
 
 ___
 
@@ -55,7 +55,7 @@ if the stat is being used by a restriction or is not set
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts#L69)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts#L69)
 
 ___
 
@@ -72,7 +72,7 @@ that limit the total ownership the Asset's supply
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts#L61)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts#L61)
 
 ___
 
@@ -102,7 +102,7 @@ there is a maximum number of restrictions allowed across all types.
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts#L78)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts#L78)
 
 ___
 
@@ -126,7 +126,7 @@ Retrieve current Claim Percentage Transfer Restriction investor balance statisti
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts#L84)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts#L84)
 
 ___
 
@@ -146,7 +146,7 @@ the result is the total amount of restrictions after the procedure has run
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts#L55)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts#L55)
 
 ___
 
@@ -171,4 +171,4 @@ the result is the total amount of restrictions after the procedure has run
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts#L45)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimPercentage.ts#L45)

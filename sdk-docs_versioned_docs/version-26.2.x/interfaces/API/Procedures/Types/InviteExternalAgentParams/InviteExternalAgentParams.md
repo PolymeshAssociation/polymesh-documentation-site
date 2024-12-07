@@ -24,7 +24,7 @@ due to chain limitations, the expiry will be ignored if the passed `permissions`
 
 #### Defined in
 
-[api/procedures/types.ts:1434](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L1434)
+[api/procedures/types.ts:1446](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L1446)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:1419](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L1419)
+[api/procedures/types.ts:1431](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L1431)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:1418](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L1418)
+[api/procedures/types.ts:1430](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L1430)

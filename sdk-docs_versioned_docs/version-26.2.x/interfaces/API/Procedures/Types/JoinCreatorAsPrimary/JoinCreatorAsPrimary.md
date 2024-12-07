@@ -14,7 +14,7 @@ sidebar_label: "JoinCreatorAsPrimary"
 
 #### Defined in
 
-[api/procedures/types.ts:1655](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L1655)
+[api/procedures/types.ts:1667](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L1667)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:1656](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L1656)
+[api/procedures/types.ts:1668](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L1668)

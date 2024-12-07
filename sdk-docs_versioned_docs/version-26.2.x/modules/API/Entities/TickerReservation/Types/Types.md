@@ -16,4 +16,4 @@ sidebar_label: "Types"
 
 #### Defined in
 
-[api/entities/TickerReservation/types.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/TickerReservation/types.ts#L18)
+[api/entities/TickerReservation/types.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/TickerReservation/types.ts#L18)

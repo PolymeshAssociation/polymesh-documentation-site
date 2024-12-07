@@ -16,4 +16,4 @@ array of Instructions to be added in the Venue
 
 #### Defined in
 
-[api/procedures/types.ts:977](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L977)
+[api/procedures/types.ts:978](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L978)

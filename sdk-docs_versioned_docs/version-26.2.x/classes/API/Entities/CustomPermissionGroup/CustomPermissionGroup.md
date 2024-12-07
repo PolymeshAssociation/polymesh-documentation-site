@@ -28,7 +28,7 @@ Asset for which this group specifies permissions
 
 #### Defined in
 
-[api/entities/PermissionGroup.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/PermissionGroup.ts#L19)
+[api/entities/PermissionGroup.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/PermissionGroup.ts#L19)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[api/entities/CustomPermissionGroup.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/CustomPermissionGroup.ts#L43)
+[api/entities/CustomPermissionGroup.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/CustomPermissionGroup.ts#L43)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -72,7 +72,7 @@ Determine whether this Custom Permission Group exists on chain
 
 #### Defined in
 
-[api/entities/CustomPermissionGroup.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/CustomPermissionGroup.ts#L108)
+[api/entities/CustomPermissionGroup.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/CustomPermissionGroup.ts#L108)
 
 ___
 
@@ -92,7 +92,7 @@ Retrieve the list of permissions and transaction groups associated with this Per
 
 #### Defined in
 
-[api/entities/CustomPermissionGroup.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/CustomPermissionGroup.ts#L74)
+[api/entities/CustomPermissionGroup.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/CustomPermissionGroup.ts#L74)
 
 ___
 
@@ -118,7 +118,7 @@ Determine whether this Entity is the same as another one
 
 #### Defined in
 
-[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L61)
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -146,7 +146,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/CustomPermissionGroup.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/CustomPermissionGroup.ts#L67)
+[api/entities/CustomPermissionGroup.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/CustomPermissionGroup.ts#L67)
 
 ___
 
@@ -166,7 +166,7 @@ Return the Group's static data
 
 #### Defined in
 
-[api/entities/CustomPermissionGroup.ts:122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/CustomPermissionGroup.ts#L122)
+[api/entities/CustomPermissionGroup.ts:122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/CustomPermissionGroup.ts#L122)
 
 ___
 
@@ -198,7 +198,7 @@ Generate the Entity's UUID from its identifying properties
 
 #### Defined in
 
-[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L14)
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L14)
 
 ___
 
@@ -230,4 +230,4 @@ Unserialize a UUID into its Unique Identifiers
 
 #### Defined in
 
-[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L23)
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L23)

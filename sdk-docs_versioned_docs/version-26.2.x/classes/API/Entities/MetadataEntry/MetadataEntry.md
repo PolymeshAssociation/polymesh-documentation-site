@@ -24,7 +24,7 @@ Asset for which this is the metadata
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MetadataEntry/index.ts#L50)
+[api/entities/MetadataEntry/index.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MetadataEntry/index.ts#L50)
 
 ___
 
@@ -36,7 +36,7 @@ identifier number of the MetadataEntry
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MetadataEntry/index.ts#L60)
+[api/entities/MetadataEntry/index.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MetadataEntry/index.ts#L60)
 
 ___
 
@@ -48,7 +48,7 @@ Type of metadata represented by this instance
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MetadataEntry/index.ts#L55)
+[api/entities/MetadataEntry/index.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MetadataEntry/index.ts#L55)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -94,7 +94,7 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MetadataEntry/index.ts#L120)
+[api/entities/MetadataEntry/index.ts:120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MetadataEntry/index.ts#L120)
 
 ___
 
@@ -110,7 +110,7 @@ Retrieve name and specs for this MetadataEntry
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:145](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MetadataEntry/index.ts#L145)
+[api/entities/MetadataEntry/index.ts:145](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MetadataEntry/index.ts#L145)
 
 ___
 
@@ -130,7 +130,7 @@ Determine whether this MetadataEntry exists on chain
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:221](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MetadataEntry/index.ts#L221)
+[api/entities/MetadataEntry/index.ts:221](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MetadataEntry/index.ts#L221)
 
 ___
 
@@ -156,7 +156,7 @@ Determine whether this Entity is the same as another one
 
 #### Defined in
 
-[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L61)
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -173,7 +173,7 @@ A MetadataEntry is modifiable if it exists and is not locked
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:254](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MetadataEntry/index.ts#L254)
+[api/entities/MetadataEntry/index.ts:254](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MetadataEntry/index.ts#L254)
 
 ___
 
@@ -211,7 +211,7 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:138](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MetadataEntry/index.ts#L138)
+[api/entities/MetadataEntry/index.ts:138](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MetadataEntry/index.ts#L138)
 
 ___
 
@@ -243,7 +243,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MetadataEntry/index.ts#L106)
+[api/entities/MetadataEntry/index.ts:106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MetadataEntry/index.ts#L106)
 
 ___
 
@@ -263,7 +263,7 @@ Return the MetadataEntry's ID, Asset ticker and Metadata type
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:317](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MetadataEntry/index.ts#L317)
+[api/entities/MetadataEntry/index.ts:317](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MetadataEntry/index.ts#L317)
 
 ___
 
@@ -283,7 +283,7 @@ Retrieve the value and details (expiry + lock status) for this MetadataEntry
 
 #### Defined in
 
-[api/entities/MetadataEntry/index.ts:192](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MetadataEntry/index.ts#L192)
+[api/entities/MetadataEntry/index.ts:192](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MetadataEntry/index.ts#L192)
 
 ___
 
@@ -315,7 +315,7 @@ Generate the Entity's UUID from its identifying properties
 
 #### Defined in
 
-[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L14)
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L14)
 
 ___
 
@@ -347,4 +347,4 @@ Unserialize a UUID into its Unique Identifiers
 
 #### Defined in
 
-[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L23)
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L23)

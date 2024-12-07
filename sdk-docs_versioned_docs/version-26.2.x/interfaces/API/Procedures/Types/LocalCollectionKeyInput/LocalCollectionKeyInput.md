@@ -14,7 +14,7 @@ sidebar_label: "LocalCollectionKeyInput"
 
 #### Defined in
 
-[api/procedures/types.ts:721](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L721)
+[api/procedures/types.ts:722](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L722)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:722](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L722)
+[api/procedures/types.ts:723](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L723)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[api/procedures/types.ts:720](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L720)
+[api/procedures/types.ts:721](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L721)

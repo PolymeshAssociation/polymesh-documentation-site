@@ -16,7 +16,7 @@ Alphanumeric standardized security identifier
 
 #### Defined in
 
-[api/entities/Asset/types.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/types.ts#L63)
+[api/entities/Asset/types.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/types.ts#L63)
 
 ___
 
@@ -26,4 +26,4 @@ ___
 
 #### Defined in
 
-[api/entities/Asset/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/types.ts#L64)
+[api/entities/Asset/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/types.ts#L64)

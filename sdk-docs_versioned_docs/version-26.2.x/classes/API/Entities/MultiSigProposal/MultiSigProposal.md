@@ -22,7 +22,7 @@ A proposal for a MultiSig transaction. This is a wrapper around an extrinsic tha
 
 #### Defined in
 
-[api/entities/MultiSigProposal/index.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MultiSigProposal/index.ts#L54)
+[api/entities/MultiSigProposal/index.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MultiSigProposal/index.ts#L54)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[api/entities/MultiSigProposal/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MultiSigProposal/index.ts#L53)
+[api/entities/MultiSigProposal/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MultiSigProposal/index.ts#L53)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -73,7 +73,7 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/MultiSigProposal/index.ts:98](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MultiSigProposal/index.ts#L98)
+[api/entities/MultiSigProposal/index.ts:98](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MultiSigProposal/index.ts#L98)
 
 ___
 
@@ -97,7 +97,7 @@ there is a possibility that the data is not ready by the time it is requested. I
 
 #### Defined in
 
-[api/entities/MultiSigProposal/index.ts:351](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MultiSigProposal/index.ts#L351)
+[api/entities/MultiSigProposal/index.ts:351](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MultiSigProposal/index.ts#L351)
 
 ___
 
@@ -121,7 +121,7 @@ there is a possibility that the data is not ready by the time it is requested. I
 
 #### Defined in
 
-[api/entities/MultiSigProposal/index.ts:366](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MultiSigProposal/index.ts#L366)
+[api/entities/MultiSigProposal/index.ts:366](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MultiSigProposal/index.ts#L366)
 
 ___
 
@@ -137,7 +137,7 @@ Fetches the details of the Proposal. This includes the amount of approvals and r
 
 #### Defined in
 
-[api/entities/MultiSigProposal/index.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MultiSigProposal/index.ts#L115)
+[api/entities/MultiSigProposal/index.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MultiSigProposal/index.ts#L115)
 
 ___
 
@@ -157,7 +157,7 @@ Determines whether this Proposal exists on chain
 
 #### Defined in
 
-[api/entities/MultiSigProposal/index.ts:248](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MultiSigProposal/index.ts#L248)
+[api/entities/MultiSigProposal/index.ts:248](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MultiSigProposal/index.ts#L248)
 
 ___
 
@@ -183,7 +183,7 @@ Determine whether this Entity is the same as another one
 
 #### Defined in
 
-[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L61)
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -210,7 +210,7 @@ this method is of type [NoArgsProcedureMethod](../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/MultiSigProposal/index.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MultiSigProposal/index.ts#L108)
+[api/entities/MultiSigProposal/index.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MultiSigProposal/index.ts#L108)
 
 ___
 
@@ -230,7 +230,7 @@ Returns a human readable representation
 
 #### Defined in
 
-[api/entities/MultiSigProposal/index.ts:270](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MultiSigProposal/index.ts#L270)
+[api/entities/MultiSigProposal/index.ts:270](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MultiSigProposal/index.ts#L270)
 
 ___
 
@@ -250,7 +250,7 @@ uses the middlewareV2
 
 #### Defined in
 
-[api/entities/MultiSigProposal/index.ts:287](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MultiSigProposal/index.ts#L287)
+[api/entities/MultiSigProposal/index.ts:287](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MultiSigProposal/index.ts#L287)
 
 ___
 
@@ -282,7 +282,7 @@ Generate the Entity's UUID from its identifying properties
 
 #### Defined in
 
-[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L14)
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L14)
 
 ___
 
@@ -308,7 +308,7 @@ Typeguard that checks whether the object passed corresponds to the unique identi
 
 #### Defined in
 
-[api/entities/Entity.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L42)
+[api/entities/Entity.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L42)
 
 ___
 
@@ -340,4 +340,4 @@ Unserialize a UUID into its Unique Identifiers
 
 #### Defined in
 
-[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L23)
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L23)

@@ -20,7 +20,7 @@ sidebar_label: "OfferingTier"
 
 #### Defined in
 
-[api/entities/Offering/types.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Offering/types.ts#L63)
+[api/entities/Offering/types.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Offering/types.ts#L63)
 
 ___
 
@@ -30,4 +30,4 @@ ___
 
 #### Defined in
 
-[api/entities/Offering/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Offering/types.ts#L64)
+[api/entities/Offering/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Offering/types.ts#L64)

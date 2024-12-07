@@ -17,7 +17,7 @@ not authorized:
 
 #### Defined in
 
-[api/entities/types.ts:741](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/types.ts#L741)
+[api/entities/types.ts:741](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/types.ts#L741)
 
 ___
 
@@ -29,7 +29,7 @@ all transactions authorized
 
 #### Defined in
 
-[api/entities/types.ts:736](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/types.ts#L736)
+[api/entities/types.ts:736](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/types.ts#L736)
 
 ___
 
@@ -44,7 +44,7 @@ authorized:
 
 #### Defined in
 
-[api/entities/types.ts:748](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/types.ts#L748)
+[api/entities/types.ts:748](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/types.ts#L748)
 
 ___
 
@@ -60,4 +60,4 @@ authorized:
 
 #### Defined in
 
-[api/entities/types.ts:756](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/types.ts#L756)
+[api/entities/types.ts:756](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/types.ts#L756)

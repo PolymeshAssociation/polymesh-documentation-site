@@ -40,4 +40,4 @@ this method is of type [ProcedureMethod](../../../../../../interfaces/API/Proced
 
 #### Defined in
 
-[api/entities/Asset/Fungible/Issuance/index.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/Issuance/index.ts#L28)
+[api/entities/Asset/Fungible/Issuance/index.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/Issuance/index.ts#L28)

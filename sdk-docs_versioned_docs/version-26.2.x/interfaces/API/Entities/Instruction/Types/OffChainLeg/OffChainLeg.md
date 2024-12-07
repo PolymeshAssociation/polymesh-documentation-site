@@ -16,7 +16,7 @@ the ticker of the off chain asset
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Instruction/types.ts#L84)
+[api/entities/Instruction/types.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Instruction/types.ts#L84)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Instruction/types.ts#L78)
+[api/entities/Instruction/types.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Instruction/types.ts#L78)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Instruction/types.ts#L80)
+[api/entities/Instruction/types.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Instruction/types.ts#L80)
 
 ___
 
@@ -46,4 +46,4 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:79](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Instruction/types.ts#L79)
+[api/entities/Instruction/types.ts:79](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Instruction/types.ts#L79)

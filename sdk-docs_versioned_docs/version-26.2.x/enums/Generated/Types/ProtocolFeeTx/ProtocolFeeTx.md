@@ -14,7 +14,7 @@ sidebar_label: "ProtocolFeeTx"
 
 #### Defined in
 
-[generated/types.ts:652](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/generated/types.ts#L652)
+[generated/types.ts:652](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/generated/types.ts#L652)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:651](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/generated/types.ts#L651)
+[generated/types.ts:651](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/generated/types.ts#L651)

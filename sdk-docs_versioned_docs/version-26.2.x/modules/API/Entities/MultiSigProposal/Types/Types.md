@@ -23,7 +23,7 @@ Represents JSON serializable data. Used for cases when the value can take on man
 
 #### Defined in
 
-[api/entities/MultiSigProposal/types.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MultiSigProposal/types.ts#L18)
+[api/entities/MultiSigProposal/types.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MultiSigProposal/types.ts#L18)
 
 ___
 
@@ -33,4 +33,4 @@ ___
 
 #### Defined in
 
-[api/entities/MultiSigProposal/types.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/MultiSigProposal/types.ts#L69)
+[api/entities/MultiSigProposal/types.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/MultiSigProposal/types.ts#L69)

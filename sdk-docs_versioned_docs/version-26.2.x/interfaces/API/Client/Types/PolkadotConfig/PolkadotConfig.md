@@ -37,7 +37,7 @@ const metadata = {
 
 #### Defined in
 
-[api/client/types.ts:160](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L160)
+[api/client/types.ts:161](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L161)
 
 ___
 
@@ -49,7 +49,7 @@ set to `true` to disable polkadot start up warnings
 
 #### Defined in
 
-[api/client/types.ts:165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L165)
+[api/client/types.ts:166](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L166)
 
 ___
 
@@ -65,4 +65,4 @@ shouldn't be needed for most use cases
 
 #### Defined in
 
-[api/client/types.ts:172](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L172)
+[api/client/types.ts:173](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L173)

@@ -18,7 +18,7 @@ More information can be found [here](https://wiki.polkadot.network/docs/build-pr
 
 #### Defined in
 
-[api/procedures/types.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L110)
+[api/procedures/types.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L110)
 
 ___
 
@@ -30,7 +30,7 @@ These options will only apply when the `signingAccount` is a MultiSig signer and
 
 #### Defined in
 
-[api/procedures/types.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L115)
+[api/procedures/types.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L115)
 
 ___
 
@@ -48,7 +48,7 @@ the passed value can be either the nonce itself or a function that returns the n
 
 #### Defined in
 
-[api/procedures/types.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L103)
+[api/procedures/types.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L103)
 
 ___
 
@@ -60,4 +60,4 @@ Account or address of a signing key to replace the current one (for this procedu
 
 #### Defined in
 
-[api/procedures/types.ts:94](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L94)
+[api/procedures/types.ts:94](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L94)

@@ -20,7 +20,7 @@ sidebar_label: "PortfolioBalance"
 
 #### Defined in
 
-[api/entities/Portfolio/types.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Portfolio/types.ts#L8)
+[api/entities/Portfolio/types.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Portfolio/types.ts#L8)
 
 ___
 
@@ -36,7 +36,7 @@ balance available for transferring and paying fees
 
 #### Defined in
 
-[api/entities/Account/types.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Account/types.ts#L11)
+[api/entities/Account/types.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Account/types.ts#L11)
 
 ___
 
@@ -52,7 +52,7 @@ unavailable balance, either bonded for staking or locked for some other purpose
 
 #### Defined in
 
-[api/entities/Account/types.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Account/types.ts#L15)
+[api/entities/Account/types.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Account/types.ts#L15)
 
 ___
 
@@ -68,4 +68,4 @@ free + locked
 
 #### Defined in
 
-[api/entities/Account/types.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Account/types.ts#L19)
+[api/entities/Account/types.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Account/types.ts#L19)

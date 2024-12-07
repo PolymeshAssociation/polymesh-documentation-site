@@ -26,7 +26,7 @@ Represents an Identity in the Polymesh blockchain
 
 #### Defined in
 
-[api/entities/Identity/index.ts:132](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L132)
+[api/entities/Identity/index.ts:132](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L132)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[api/entities/Identity/index.ts:130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L130)
+[api/entities/Identity/index.ts:130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L130)
 
 ___
 
@@ -48,7 +48,7 @@ Identity ID as stored in the blockchain
 
 #### Defined in
 
-[api/entities/Identity/index.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L127)
+[api/entities/Identity/index.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L127)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[api/entities/Identity/index.ts:131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L131)
+[api/entities/Identity/index.ts:131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L131)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L46)
+[api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L46)
 
 ## Methods
 
@@ -92,7 +92,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Identity/index.ts:713](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L713)
+[api/entities/Identity/index.ts:713](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L713)
 
 ▸ **areSecondaryAccountsFrozen**(`callback`): `Promise`\<[`UnsubCallback`](../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -108,7 +108,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Identity/index.ts:714](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L714)
+[api/entities/Identity/index.ts:714](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L714)
 
 ___
 
@@ -130,7 +130,7 @@ Check whether this Identity possesses all specified roles
 
 #### Defined in
 
-[api/entities/Identity/index.ts:495](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L495)
+[api/entities/Identity/index.ts:495](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L495)
 
 ___
 
@@ -154,7 +154,7 @@ asset Identities aren't considered to exist for this check
 
 #### Defined in
 
-[api/entities/Identity/index.ts:885](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L885)
+[api/entities/Identity/index.ts:885](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L885)
 
 ___
 
@@ -181,7 +181,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Identity/index.ts:208](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L208)
+[api/entities/Identity/index.ts:208](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L208)
 
 ▸ **getAssetBalance**(`args`): `Promise`\<`BigNumber`\>
 
@@ -198,7 +198,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Identity/index.ts:209](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L209)
+[api/entities/Identity/index.ts:209](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L209)
 
 ▸ **getAssetBalance**(`args`, `callback`): `Promise`\<[`UnsubCallback`](../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -216,7 +216,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Identity/index.ts:210](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L210)
+[api/entities/Identity/index.ts:210](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L210)
 
 ▸ **getAssetBalance**(`args`, `callback`): `Promise`\<[`UnsubCallback`](../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -234,7 +234,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Identity/index.ts:215](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L215)
+[api/entities/Identity/index.ts:215](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L215)
 
 ___
 
@@ -254,7 +254,7 @@ this query can be potentially **SLOW** depending on the number of parent Identit
 
 #### Defined in
 
-[api/entities/Identity/index.ts:943](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L943)
+[api/entities/Identity/index.ts:943](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L943)
 
 ___
 
@@ -287,7 +287,7 @@ supports pagination
 
 #### Defined in
 
-[api/entities/Identity/index.ts:391](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L391)
+[api/entities/Identity/index.ts:391](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L391)
 
 ___
 
@@ -320,7 +320,7 @@ supports pagination
 
 #### Defined in
 
-[api/entities/Identity/index.ts:438](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L438)
+[api/entities/Identity/index.ts:438](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L438)
 
 ___
 
@@ -350,7 +350,7 @@ supports pagination
 
 #### Defined in
 
-[api/entities/Identity/index.ts:919](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L919)
+[api/entities/Identity/index.ts:919](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L919)
 
 ___
 
@@ -367,7 +367,7 @@ Retrieve all Instructions where this Identity is a custodian of one or more port
 
 #### Defined in
 
-[api/entities/Identity/index.ts:567](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L567)
+[api/entities/Identity/index.ts:567](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L567)
 
 ___
 
@@ -384,7 +384,7 @@ Retrieve all Instructions where this Identity is a participant (owner/custodian)
 
 #### Defined in
 
-[api/entities/Identity/index.ts:654](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L654)
+[api/entities/Identity/index.ts:654](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L654)
 
 ___
 
@@ -407,7 +407,7 @@ this query can be potentially **SLOW** depending on the number of MultiSigs pres
 
 #### Defined in
 
-[api/entities/Identity/index.ts:1073](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L1073)
+[api/entities/Identity/index.ts:1073](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L1073)
 
 ___
 
@@ -423,7 +423,7 @@ Returns the off chain authorization nonce for this Identity
 
 #### Defined in
 
-[api/entities/Identity/index.ts:1208](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L1208)
+[api/entities/Identity/index.ts:1208](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L1208)
 
 ___
 
@@ -447,7 +447,7 @@ this query can be potentially **SLOW** depending on which Assets this Identity h
 
 #### Defined in
 
-[api/entities/Identity/index.ts:752](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L752)
+[api/entities/Identity/index.ts:752](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L752)
 
 ___
 
@@ -467,7 +467,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Identity/index.ts:327](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L327)
+[api/entities/Identity/index.ts:327](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L327)
 
 ▸ **getPrimaryAccount**(`callback`): `Promise`\<[`UnsubCallback`](../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -483,7 +483,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Identity/index.ts:328](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L328)
+[api/entities/Identity/index.ts:328](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L328)
 
 ___
 
@@ -513,7 +513,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Identity/index.ts:802](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L802)
+[api/entities/Identity/index.ts:802](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L802)
 
 ▸ **getSecondaryAccounts**(`callback`): `Promise`\<[`UnsubCallback`](../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -529,7 +529,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Identity/index.ts:806](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L806)
+[api/entities/Identity/index.ts:806](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L806)
 
 ▸ **getSecondaryAccounts**(`paginationOpts`, `callback`): `Promise`\<[`UnsubCallback`](../../../../modules/API/Entities/Types/Types.md#unsubcallback)\>
 
@@ -546,7 +546,7 @@ can be subscribed to, if connected to node using a web socket
 
 #### Defined in
 
-[api/entities/Identity/index.ts:810](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L810)
+[api/entities/Identity/index.ts:810](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L810)
 
 ___
 
@@ -566,7 +566,7 @@ uses the middlewareV2
 
 #### Defined in
 
-[api/entities/Identity/index.ts:519](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L519)
+[api/entities/Identity/index.ts:519](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L519)
 
 ___
 
@@ -582,7 +582,7 @@ Retrieve all Venues created by this Identity
 
 #### Defined in
 
-[api/entities/Identity/index.ts:539](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L539)
+[api/entities/Identity/index.ts:539](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L539)
 
 ___
 
@@ -604,7 +604,7 @@ Check whether this Identity possesses the specified Role
 
 #### Defined in
 
-[api/entities/Identity/index.ts:160](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L160)
+[api/entities/Identity/index.ts:160](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L160)
 
 ___
 
@@ -620,7 +620,7 @@ Check whether this Identity has a valid CDD claim
 
 #### Defined in
 
-[api/entities/Identity/index.ts:275](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L275)
+[api/entities/Identity/index.ts:275](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L275)
 
 ___
 
@@ -642,7 +642,7 @@ Returns whether or not this Identity has pre-approved a particular asset
 
 #### Defined in
 
-[api/entities/Identity/index.ts:1037](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L1037)
+[api/entities/Identity/index.ts:1037](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L1037)
 
 ___
 
@@ -658,7 +658,7 @@ Check whether this Identity is a CDD provider
 
 #### Defined in
 
-[api/entities/Identity/index.ts:308](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L308)
+[api/entities/Identity/index.ts:308](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L308)
 
 ___
 
@@ -674,7 +674,7 @@ Check whether this Identity is a child Identity
 
 #### Defined in
 
-[api/entities/Identity/index.ts:984](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L984)
+[api/entities/Identity/index.ts:984](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L984)
 
 ___
 
@@ -700,7 +700,7 @@ Determine whether this Entity is the same as another one
 
 #### Defined in
 
-[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L61)
+[api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L61)
 
 ___
 
@@ -716,7 +716,7 @@ Check whether this Identity is Governance Committee member
 
 #### Defined in
 
-[api/entities/Identity/index.ts:291](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L291)
+[api/entities/Identity/index.ts:291](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L291)
 
 ___
 
@@ -738,7 +738,7 @@ Returns a list of all assets this Identity has pre-approved. These assets will n
 
 #### Defined in
 
-[api/entities/Identity/index.ts:995](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L995)
+[api/entities/Identity/index.ts:995](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L995)
 
 ___
 
@@ -758,7 +758,7 @@ Return the Identity's DID
 
 #### Defined in
 
-[api/entities/Identity/index.ts:908](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L908)
+[api/entities/Identity/index.ts:908](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L908)
 
 ___
 
@@ -792,7 +792,7 @@ this method is of type [ProcedureMethod](../../../../interfaces/API/Procedures/T
 
 #### Defined in
 
-[api/entities/Identity/index.ts:977](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/index.ts#L977)
+[api/entities/Identity/index.ts:977](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/index.ts#L977)
 
 ___
 
@@ -824,7 +824,7 @@ Generate the Entity's UUID from its identifying properties
 
 #### Defined in
 
-[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L14)
+[api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L14)
 
 ___
 
@@ -856,4 +856,4 @@ Unserialize a UUID into its Unique Identifiers
 
 #### Defined in
 
-[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Entity.ts#L23)
+[api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Entity.ts#L23)

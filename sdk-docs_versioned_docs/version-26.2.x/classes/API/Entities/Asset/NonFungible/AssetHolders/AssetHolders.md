@@ -40,4 +40,4 @@ uses the middlewareV2
 
 #### Defined in
 
-[api/entities/Asset/NonFungible/AssetHolders/index.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/NonFungible/AssetHolders/index.ts#L19)
+[api/entities/Asset/NonFungible/AssetHolders/index.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/NonFungible/AssetHolders/index.ts#L19)

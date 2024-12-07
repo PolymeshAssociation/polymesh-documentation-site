@@ -38,7 +38,7 @@ if the appropriate count statistic (matching ClaimType and issuer) is not enable
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L32)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L32)
 
 ___
 
@@ -59,7 +59,7 @@ if the stat is being used by a restriction or is not set
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L78)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L78)
 
 ___
 
@@ -87,7 +87,7 @@ versions of the chain may expose a new extrinsic to avoid this issue
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L70)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L70)
 
 ___
 
@@ -117,7 +117,7 @@ there is a maximum number of restrictions allowed across all types.
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L87)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L87)
 
 ___
 
@@ -141,7 +141,7 @@ Retrieve current Claim Count Transfer Restriction investor balance statistic for
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L93)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L93)
 
 ___
 
@@ -161,7 +161,7 @@ the result is the total amount of restrictions after the procedure has run
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L55)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L55)
 
 ___
 
@@ -186,4 +186,4 @@ the result is the total amount of restrictions after the procedure has run
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L45)
+[api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/ClaimCount.ts#L45)

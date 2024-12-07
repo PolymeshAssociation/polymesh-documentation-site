@@ -14,4 +14,4 @@ sidebar_label: "PlainTransactionArgument"
 
 #### Defined in
 
-[base/types.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/types.ts#L71)
+[base/types.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/types.ts#L71)

@@ -50,7 +50,7 @@ uses the middlewareV2
 
 #### Defined in
 
-[api/entities/common/namespaces/Authorizations.ts:150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/common/namespaces/Authorizations.ts#L150)
+[api/entities/common/namespaces/Authorizations.ts:150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/common/namespaces/Authorizations.ts#L150)
 
 ___
 
@@ -81,7 +81,7 @@ if there is no Authorization Request with the passed ID targeting or issued by t
 
 #### Defined in
 
-[api/entities/Identity/IdentityAuthorizations.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/IdentityAuthorizations.ts#L60)
+[api/entities/Identity/IdentityAuthorizations.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/IdentityAuthorizations.ts#L60)
 
 ___
 
@@ -109,7 +109,7 @@ Fetch all pending Authorization Requests for which this Signer is the target
 
 #### Defined in
 
-[api/entities/common/namespaces/Authorizations.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/common/namespaces/Authorizations.ts#L42)
+[api/entities/common/namespaces/Authorizations.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/common/namespaces/Authorizations.ts#L42)
 
 ___
 
@@ -135,4 +135,4 @@ supports pagination
 
 #### Defined in
 
-[api/entities/Identity/IdentityAuthorizations.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Identity/IdentityAuthorizations.ts#L18)
+[api/entities/Identity/IdentityAuthorizations.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Identity/IdentityAuthorizations.ts#L18)

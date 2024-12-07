@@ -34,7 +34,7 @@ if a count statistic is not enabled for the Asset. [Count.enableStat](Count.md#e
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L39)
+[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L39)
 
 ___
 
@@ -55,7 +55,7 @@ if the stat is being used by a restriction or is not set
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L83)
+[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L83)
 
 ___
 
@@ -81,7 +81,7 @@ versions of the chain may expose a new extrinsic to avoid this issue
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:75](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L75)
+[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:75](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L75)
 
 ___
 
@@ -114,7 +114,7 @@ there is a maximum number of restrictions allowed across all types.
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:94](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L94)
+[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:94](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L94)
 
 ___
 
@@ -138,7 +138,7 @@ Retrieve current Count Transfer Restriction investor balance statistic for the A
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L109)
+[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L109)
 
 ___
 
@@ -164,7 +164,7 @@ creation and try again if a race occurred. Future versions of the chain should i
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L103)
+[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L103)
 
 ___
 
@@ -184,7 +184,7 @@ the result is the total amount of restrictions after the procedure has run
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L62)
+[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L62)
 
 ___
 
@@ -209,4 +209,4 @@ the result is the total amount of restrictions after the procedure has run
 
 #### Defined in
 
-[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L52)
+[api/entities/Asset/Fungible/TransferRestrictions/Count.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/TransferRestrictions/Count.ts#L52)

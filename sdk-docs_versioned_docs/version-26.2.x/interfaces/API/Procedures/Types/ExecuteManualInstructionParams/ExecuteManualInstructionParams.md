@@ -16,4 +16,4 @@ sidebar_label: "ExecuteManualInstructionParams"
 
 #### Defined in
 
-[api/procedures/types.ts:1094](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L1094)
+[api/procedures/types.ts:1095](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L1095)

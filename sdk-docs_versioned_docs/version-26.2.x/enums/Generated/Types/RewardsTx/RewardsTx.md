@@ -14,7 +14,7 @@ sidebar_label: "RewardsTx"
 
 #### Defined in
 
-[generated/types.ts:772](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/generated/types.ts#L772)
+[generated/types.ts:772](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/generated/types.ts#L772)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[generated/types.ts:773](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/generated/types.ts#L773)
+[generated/types.ts:773](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/generated/types.ts#L773)

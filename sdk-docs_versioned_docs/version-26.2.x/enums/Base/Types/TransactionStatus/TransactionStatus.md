@@ -17,7 +17,7 @@ see https://github.com/paritytech/substrate/blob/master/primitives/transaction-p
 
 #### Defined in
 
-[base/types.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/types.ts#L50)
+[base/types.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/types.ts#L50)
 
 ___
 
@@ -29,7 +29,7 @@ the transaction's execution failed due to a an on-chain validation error, insuff
 
 #### Defined in
 
-[base/types.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/types.ts#L45)
+[base/types.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/types.ts#L45)
 
 ___
 
@@ -41,7 +41,7 @@ the transaction is prepped to run
 
 #### Defined in
 
-[base/types.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/types.ts#L25)
+[base/types.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/types.ts#L25)
 
 ___
 
@@ -53,7 +53,7 @@ the transaction was rejected by the signer
 
 #### Defined in
 
-[base/types.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/types.ts#L37)
+[base/types.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/types.ts#L37)
 
 ___
 
@@ -65,7 +65,7 @@ the transaction is being executed
 
 #### Defined in
 
-[base/types.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/types.ts#L33)
+[base/types.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/types.ts#L33)
 
 ___
 
@@ -77,7 +77,7 @@ the transaction was run successfully
 
 #### Defined in
 
-[base/types.ts:41](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/types.ts#L41)
+[base/types.ts:41](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/types.ts#L41)
 
 ___
 
@@ -89,4 +89,4 @@ the transaction is waiting for the user's signature
 
 #### Defined in
 
-[base/types.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/base/types.ts#L29)
+[base/types.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/base/types.ts#L29)

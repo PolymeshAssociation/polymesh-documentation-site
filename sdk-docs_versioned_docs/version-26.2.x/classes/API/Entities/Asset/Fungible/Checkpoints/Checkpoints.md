@@ -22,7 +22,7 @@ Handles all Asset Checkpoints related functionality
 
 #### Defined in
 
-[api/entities/Asset/Fungible/Checkpoints/index.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/Checkpoints/index.ts#L36)
+[api/entities/Asset/Fungible/Checkpoints/index.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/Checkpoints/index.ts#L36)
 
 ## Methods
 
@@ -49,7 +49,7 @@ this method is of type [NoArgsProcedureMethod](../../../../../../interfaces/API/
 
 #### Defined in
 
-[api/entities/Asset/Fungible/Checkpoints/index.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/Checkpoints/index.ts#L58)
+[api/entities/Asset/Fungible/Checkpoints/index.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/Checkpoints/index.ts#L58)
 
 ___
 
@@ -75,7 +75,7 @@ supports pagination
 
 #### Defined in
 
-[api/entities/Asset/Fungible/Checkpoints/index.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/Checkpoints/index.ts#L92)
+[api/entities/Asset/Fungible/Checkpoints/index.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/Checkpoints/index.ts#L92)
 
 ___
 
@@ -102,4 +102,4 @@ if there is no Checkpoint with the passed ID
 
 #### Defined in
 
-[api/entities/Asset/Fungible/Checkpoints/index.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Asset/Fungible/Checkpoints/index.ts#L67)
+[api/entities/Asset/Fungible/Checkpoints/index.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Asset/Fungible/Checkpoints/index.ts#L67)

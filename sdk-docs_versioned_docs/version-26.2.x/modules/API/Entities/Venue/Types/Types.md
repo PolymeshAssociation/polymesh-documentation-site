@@ -20,4 +20,4 @@ sidebar_label: "Types"
 
 #### Defined in
 
-[api/entities/Venue/types.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Venue/types.ts#L29)
+[api/entities/Venue/types.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Venue/types.ts#L29)

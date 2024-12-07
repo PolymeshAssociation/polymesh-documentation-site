@@ -33,7 +33,7 @@ sidebar_label: "ProcedureMethod"
 
 #### Defined in
 
-[api/procedures/types.ts:164](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L164)
+[api/procedures/types.ts:164](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L164)
 
 ## Properties
 
@@ -58,4 +58,4 @@ sidebar_label: "ProcedureMethod"
 
 #### Defined in
 
-[api/procedures/types.ts:167](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/procedures/types.ts#L167)
+[api/procedures/types.ts:167](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/procedures/types.ts#L167)

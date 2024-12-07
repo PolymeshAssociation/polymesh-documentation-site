@@ -14,7 +14,7 @@ sidebar_label: "OffChainAffirmation"
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Instruction/types.ts#L101)
+[api/entities/Instruction/types.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Instruction/types.ts#L101)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[api/entities/Instruction/types.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/entities/Instruction/types.ts#L102)
+[api/entities/Instruction/types.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/entities/Instruction/types.ts#L102)

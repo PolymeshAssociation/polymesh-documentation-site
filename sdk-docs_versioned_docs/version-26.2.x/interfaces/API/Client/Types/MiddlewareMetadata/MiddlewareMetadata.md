@@ -14,7 +14,7 @@ sidebar_label: "MiddlewareMetadata"
 
 #### Defined in
 
-[api/client/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L39)
+[api/client/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L39)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[api/client/types.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L40)
+[api/client/types.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L40)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[api/client/types.ts:41](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L41)
+[api/client/types.ts:41](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L41)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[api/client/types.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L42)
+[api/client/types.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L42)
 
 ___
 
@@ -54,7 +54,17 @@ ___
 
 #### Defined in
 
-[api/client/types.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L43)
+[api/client/types.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L43)
+
+___
+
+### paddedIds
+
+• **paddedIds**: `boolean`
+
+#### Defined in
+
+[api/client/types.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L47)
 
 ___
 
@@ -64,7 +74,7 @@ ___
 
 #### Defined in
 
-[api/client/types.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L44)
+[api/client/types.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L44)
 
 ___
 
@@ -74,7 +84,7 @@ ___
 
 #### Defined in
 
-[api/client/types.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L46)
+[api/client/types.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L46)
 
 ___
 
@@ -84,4 +94,4 @@ ___
 
 #### Defined in
 
-[api/client/types.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/3cc570ade/src/api/client/types.ts#L45)
+[api/client/types.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/c8da9dfce/src/api/client/types.ts#L45)
