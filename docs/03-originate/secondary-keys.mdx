@@ -3,9 +3,6 @@ sidebar_position: 4
 title: Secondary Keys
 description: Assigning authority
 ---
-
-<YoutubePlayer videoId="Osb4Dnf8rvI" />
-
 ## ACME Corporation
 
 So far we have seen that obtaining the wallet software, verifying your ID and issuing a security token are surprisingly simple. However, the examples given were somewhat simplistic to avoid complicating matters with adjacent concerns.
@@ -20,7 +17,7 @@ Let's resolve this.
 
 The goal is that ACME should be an **identified organisation** that has passed customer due diligence and Alice has, in addition to her personal wallet, a **signing key** to use when she represents ACME in her capacity as CEO.
 
-There is more than one way to do this. Alice, can, for example, create another key for ACME. With that key in focus (click the blue circle to the left of the unassigned key), complete [customer due diligence](/docs/quickstart/verification-with-cdd). This will create a new primary key and a new account. Then, create a secondary key for the CEO and assign it to the new account.
+There is more than one way to do this. Alice, can, for example, create another key for ACME. With that key in focus (click on the top of the portal and choose the unassigned key from the dropdown), complete [customer due diligence](/docs/quickstart/verification-with-cdd). This will create a new primary key and a new account. Then, create a secondary key for the CEO and assign it to the new account.
 
 ![Alice and secondary keys](images/primary_secondary_keys.png)
 
@@ -28,7 +25,7 @@ Why would you do that? Key management policy is unique to each organisation, but
 
 Alice could dismiss the preceding suggestion and do it all from one wallet, i.e. wearing all of the hats and the end result would look approximately like the illustration below, which is perfectly acceptable for practice and learning. Alice has primary keys for herself, for ACME Corp, and a CEO key she would use for most ACME-related activities.
 
-![all three keys](images/30-three-keys.png)
+![all three keys](images/30-three-keys2.png)
 
 Let's instead proceed as though ACME and Alice are indeed **separate entities**. Possibly ACME existed before Alice became CEO and ACME's keys are managed by separate personnel. How would that work?
 
@@ -36,13 +33,13 @@ Let's instead proceed as though ACME and Alice are indeed **separate entities**.
 
 Let's suppose that the ACME account is managed by someone other than Alice. We can simulate this by using a different computer. This procedure closely matches a real-world scenario where these activities would indeed occur separately. For this, the following is necessary:
 
-1. Create a [wallet](/docs/quickstart/wallet/) and PID for ACME;
+1. Create a [wallet](/docs/quickstart/wallet/) and a key for ACME;
 2. Complete [customer due diligence](/docs/quickstart/verification-with-cdd);
 3. [Get some POLYX](/docs/quickstart/quickstart-polyx) (ACME will need some too).
 
 Below, you can see ACME has been verified and has some POLYX.
 
-![assign key](images/01-assign-key.png)
+![assign key](images/01-assign-key2.png)
 
 ## Create a secondary key
 
@@ -68,31 +65,37 @@ In case that is unclear, the flow would be:
 
 As we will see below, Alice's consent will be required for step 5 in the business process.
 
-Now that ACME has the key Alice provided, return to ACME's wallet and dashboard, navigate to the `Account` tab and press `Assign a key`. You will see that the UI permits the operator to paste _any_ Polymesh key into the form. Paste Alice's key there, give the account a nickname, e.g. Alice (our CEO), and verify the transaction.
+Now that ACME has the key Alice provided, return to ACME's wallet and portal, navigate to the `Authorizations` tab and click on `Create New Auth`. 
+
+![create new auth](images/002-create_new_auth.png)
+
+Select 'Join Identity' as the authorization type. You will see that the UI permits the operator to paste _any_ Polymesh key into the form. Paste Alice's key there, and an expiry date for the authorization in case it's needed, then click on 'Create' and verify the transaction.
+
+![join identity](images/003-join_identity.png)
 
 Of course, ACME cannot do that without Alice's consent. After all, it is Alice's key.
 
-Back to Alice's wallet, dashboard, and `Accounts` tab, see that Alice is informed that ACME wants to assign _her key_ to _their account_.
+Back to Alice's wallet, portal, and `Authorizations` tab, see that Alice is informed that ACME wants to assign _her key_ to _their account_.
 
 :::tip
 
-Press the icon to the left of Alice's secondary key to bring the correct account into focus. This is how Alice chooses the key to use for signing at any given time. The header information in the wallet changes to reflect this and the web UI senses the change and refreshes to display the new context.
+Click on the dropdown icon at the top right of the page then select the key to bring the correct account into focus. This is how Alice chooses the key to use for signing at any given time.
 
 :::
 
-![images](images/02-approve-assignment.png)
+![images](images/02-approve-assignment2.png)
 
 Since Alice is the CEO and gave ACME her key for this purpose, she expects this and, after checking the requesting account, approves the assignment.
 
-![ceo](images/03-CEO.png)
+![ceo](images/03-CEO2.png)
 
 Alice's wallet will now have **two signing keys**, one for her personal concerns and one to use in her capacity as CEO. The wallet will change as she switches between these roles. Here, her personal signing key is in focus. The header and the accounts page on the dashboard reflect this context - this is Alice's personal account.
 
-![alice's ceo key](images/03-CEO.png)
+![alice's ceo key](images/03-CEO2.png)
 
-She can change context by clicking on the little blue circle to the left of ACME CEO. This brings the CEO signing key into focus. Notice that the header region of the wallet updates to reflect this, and the accounts website refeshes immediately to show the ACME account where she is a signer.
+She can change context by clicking on the dropdown icon at the top right of the page then select the relevant key. This brings the CEO signing key into focus. Notice that the header region of the wallet updates to reflect this, and the accounts website refeshes immediately to show the ACME account where she is a signer.
 
-![ceo context](images/04-ACME-context.png)
+![ceo context](images/04-ACME-context2.png)
 
 ## Transfer token ownership
 
