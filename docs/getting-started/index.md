@@ -1,0 +1,10 @@
+---
+title: Getting Started Guide
+description: Quick start guide for new users
+id: getting-started-index
+slug: /getting-started
+sidebar_label: Getting Started
+tags:
+  - guide
+  - quickstart
+---

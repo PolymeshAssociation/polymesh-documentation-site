@@ -1,0 +1,117 @@
+Prompt:
+Create the documentation structure as per the provided CSV file. The site is a Docusaurus site, and all contents must be included in the `docs` folder. The folder structure within the docs folder will be used to autogenerate the sidebar menu for navigation. Follow these steps:
+
+1. Create the folder structure within the `docs` folder as specified in the CSV file.
+2. Create `_category_.json` files as appropriate to define categories and subcategories.
+3. Create markdown files for each document, ensuring they are not included in the `_category_.json` files.
+4. Each markdown file must include appropriate front matter as specified in the CSV file.
+5. Create the files in batches, with a maximum of 8 new files per batch.
+6. Record progress in this file after each batch.
+7. Ask for confirmation before proceeding to the next batch.
+
+Ensure that the folder structure and file names match exactly with the CSV file. The front matter in markdown files should include title, description, and any other metadata specified in the CSV file.
+
+Example front matter for markdown files:
+```
+---
+title: Document Title
+description: A brief description of the document.
+id: document-id
+slug: /custom-url
+sidebar_label: Custom Sidebar Label
+tags:
+  - tag1
+  - tag2
+---
+```
+
+Example `_category_.json` file:
+```
+{
+  "label": "Category Name",
+  "position": 1,
+  "collapsible": true,
+  "collapsed": true
+}
+```
+
+Batch 1:
+- Created folder structure and files for the following paths:
+/home/fob/projects/polymesh-documentation-site/docs/assets/index.md
+/home/fob/projects/polymesh-documentation-site/docs/assets/metadata.md
+/home/fob/projects/polymesh-documentation-site/docs/assets/fungible.md
+/home/fob/projects/polymesh-documentation-site/docs/assets/nft.md
+/home/fob/projects/polymesh-documentation-site/docs/assets/_category_.json
+/home/fob/projects/polymesh-documentation-site/docs/assets/confidential.md
+/home/fob/projects/polymesh-documentation-site/docs/compliance/index.md
+/home/fob/projects/polymesh-documentation-site/docs/compliance/authorizations.md
+/home/fob/projects/polymesh-documentation-site/docs/compliance/transfer-rules.md
+/home/fob/projects/polymesh-documentation-site/docs/compliance/_category_.json
+/home/fob/projects/polymesh-documentation-site/docs/community/index.md
+/home/fob/projects/polymesh-documentation-site/docs/community/_category_.json
+/home/fob/projects/polymesh-documentation-site/docs/community/discussion-forum/index.md
+/home/fob/projects/polymesh-documentation-site/docs/governance.md
+/home/fob/projects/polymesh-documentation-site/docs/tutorials/index.md
+/home/fob/projects/polymesh-documentation-site/docs/tutorials/_category_.json
+/home/fob/projects/polymesh-documentation-site/docs/index.md
+/home/fob/projects/polymesh-documentation-site/docs/introduction.md
+/home/fob/projects/polymesh-documentation-site/docs/polyx/fees.md
+/home/fob/projects/polymesh-documentation-site/docs/polyx/index.md
+/home/fob/projects/polymesh-documentation-site/docs/polyx/staking.md
+/home/fob/projects/polymesh-documentation-site/docs/polyx/_category_.json
+/home/fob/projects/polymesh-documentation-site/docs/portfolios/index.md
+/home/fob/projects/polymesh-documentation-site/docs/portfolios/custody.md
+/home/fob/projects/polymesh-documentation-site/docs/portfolios/_category_.json
+/home/fob/projects/polymesh-documentation-site/docs/glossary.md
+/home/fob/projects/polymesh-documentation-site/docs/accounts/index.md
+/home/fob/projects/polymesh-documentation-site/docs/accounts/_category_.json
+/home/fob/projects/polymesh-documentation-site/docs/accounts/relayers.md
+/home/fob/projects/polymesh-documentation-site/docs/accounts/subsidized.md
+/home/fob/projects/polymesh-documentation-site/docs/external-agents.md
+/home/fob/projects/polymesh-documentation-site/docs/identity/advanced/index.md
+/home/fob/projects/polymesh-documentation-site/docs/identity/advanced/multisig.md
+/home/fob/projects/polymesh-documentation-site/docs/identity/advanced/_category_.json
+/home/fob/projects/polymesh-documentation-site/docs/identity/advanced/child.md
+/home/fob/projects/polymesh-documentation-site/docs/identity/advanced/keys.md
+/home/fob/projects/polymesh-documentation-site/docs/identity/index.md
+/home/fob/projects/polymesh-documentation-site/docs/identity/_category_.json
+/home/fob/projects/polymesh-documentation-site/docs/identity/roles.md
+/home/fob/projects/polymesh-documentation-site/docs/identity/basics.md
+/home/fob/projects/polymesh-documentation-site/docs/_category_.json
+/home/fob/projects/polymesh-documentation-site/docs/development/index.md
+/home/fob/projects/polymesh-documentation-site/docs/development/node/index.md
+/home/fob/projects/polymesh-documentation-site/docs/development/node/_category_.json
+/home/fob/projects/polymesh-documentation-site/docs/development/_category_.json
+/home/fob/projects/polymesh-documentation-site/docs/development/smart-contracts.md
+/home/fob/projects/polymesh-documentation-site/docs/development/integration/cdd.md
+/home/fob/projects/polymesh-documentation-site/docs/development/integration/index.md
+/home/fob/projects/polymesh-documentation-site/docs/development/integration/_category_.json
+/home/fob/projects/polymesh-documentation-site/docs/development/integration/exchange.md
+/home/fob/projects/polymesh-documentation-site/docs/development/integration/subquery.md
+/home/fob/projects/polymesh-documentation-site/docs/development/local-setup.md
+/home/fob/projects/polymesh-documentation-site/docs/development/rest-api.md
+/home/fob/projects/polymesh-documentation-site/docs/development/sdk/polkadot-api.md
+/home/fob/projects/polymesh-documentation-site/docs/development/sdk/index.md
+/home/fob/projects/polymesh-documentation-site/docs/development/sdk/signing.md
+/home/fob/projects/polymesh-documentation-site/docs/development/sdk/types.md
+/home/fob/projects/polymesh-documentation-site/docs/development/sdk/_category_.json
+/home/fob/projects/polymesh-documentation-site/docs/getting-started/index.md
+/home/fob/projects/polymesh-documentation-site/docs/getting-started/onboarding.md
+/home/fob/projects/polymesh-documentation-site/docs/getting-started/_category_.json
+/home/fob/projects/polymesh-documentation-site/docs/getting-started/keys.md
+/home/fob/projects/polymesh-documentation-site/docs/resources/bug-bounty.md
+/home/fob/projects/polymesh-documentation-site/docs/resources/index.md
+/home/fob/projects/polymesh-documentation-site/docs/resources/_category_.json
+/home/fob/projects/polymesh-documentation-site/docs/architecture.md
+/home/fob/projects/polymesh-documentation-site/docs/settlement/index.md
+/home/fob/projects/polymesh-documentation-site/docs/settlement/venues.md
+/home/fob/projects/polymesh-documentation-site/docs/settlement/_category_.json
+/home/fob/projects/polymesh-documentation-site/docs/settlement/mediators.md
+/home/fob/projects/polymesh-documentation-site/docs/settlement/off-chain.md
+/home/fob/projects/polymesh-documentation-site/docs/corporate-actions/index.md
+/home/fob/projects/polymesh-documentation-site/docs/corporate-actions/_category_.json
+/home/fob/projects/polymesh-documentation-site/docs/corporate-actions/dividends.md
+/home/fob/projects/polymesh-documentation-site/docs/corporate-actions/checkpoints.md
+/home/fob/projects/polymesh-documentation-site/docs/sto.md
+```
+

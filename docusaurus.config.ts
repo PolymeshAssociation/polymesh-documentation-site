@@ -33,8 +33,8 @@ const config: Config = {
       'classic',
       {
         docs: {
-          path: 'docs',
-          // routeBasePath: '/docs', // Defaults to "docs"
+          // path: 'docs',
+          routeBasePath: '/', // Defaults to "docs"
           // sidebarPath: require.resolve('./sidebars.js'), // Defaults to sidebars.js
 
           editUrl:
@@ -139,7 +139,7 @@ const config: Config = {
       items: [
         {
           type: 'doc',
-          docId: 'index',
+          docId: 'introduction',
           position: 'left',
           label: 'Developer Docs',
         },

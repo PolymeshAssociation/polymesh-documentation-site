@@ -1,0 +1,10 @@
+---
+title: Settlement
+description: Settlement Mechanisms
+id: settlement-index
+slug: /settlement
+sidebar_label: Settlement
+tags:
+  - settlement
+  - mechanisms
+---

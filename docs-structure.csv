@@ -1,0 +1,59 @@
+Weight,Section,Title,Description,Path,Slug,Type
+100,Root,Homepage,Basic landing page with cards linking to main sections,/,/,page
+200,Documentation,Core Concepts,Comprehensive guide to Polymesh fundamentals,/docs,/docs,category
+201,Documentation,Introduction,What is Polymesh - Overview and capabilities,/docs/introduction,/docs/intro,page
+202,Documentation,Architecture,Technical Stack and Consensus Mechanism,/docs/architecture,/docs/architecture,page
+203,Documentation,POLYX,Token Economics and Utility,/docs/polyx,/docs/polyx,category
+203.1,Documentation,Staking,POLYX Staking Mechanism,/docs/polyx/staking,/docs/polyx/staking,page
+203.2,Documentation,Network Fees,Transaction and Protocol Fees,/docs/polyx/fees,/docs/polyx/fees,page
+204,Documentation,Identity,Identity Management on Polymesh,/docs/identity,/docs/identity,category
+204.1,Documentation,Identity Basics,Core Identity Concepts and CDD Process,/docs/identity/basics,/docs/identity/basics,page
+204.2,Documentation,Permissioned Roles,Network Roles and Permissions,/docs/identity/roles,/docs/identity/roles,page
+204.3,Documentation,Advanced Identity,Advanced Identity Features,/docs/identity/advanced,/docs/identity/advanced,category
+204.3.1,Documentation,Secondary Keys,Key Management,/docs/identity/advanced/keys,/docs/identity/advanced/keys,page
+204.3.2,Documentation,Multisigs,Multisignature Accounts,/docs/identity/advanced/multisig,/docs/identity/advanced/multisig,page
+204.3.3,Documentation,Child Identities,Subsidiary Identity Management,/docs/identity/advanced/child,/docs/identity/advanced/child,page
+204.3.4,Documentation,Authorizations,Authorization Framework,/docs/compliance/authorizations,/docs/compliance/authorizations,page
+205,Documentation,Governance,Platform Governance,/docs/governance,/docs/governance,page
+206,Documentation,Assets,Asset Management,/docs/assets,/docs/assets,category
+206.1,Documentation,Fungible Assets,Fungible Token Management,/docs/assets/fungible,/docs/assets/fungible,page
+206.2,Documentation,Non-Fungible Assets,NFT Implementation,/docs/assets/nft,/docs/assets/nft,page
+206.3,Documentation,Asset Metadata,Asset Metadata Management,/docs/assets/metadata,/docs/assets/metadata,page
+206.4,Documentation,Confidential Assets,Private Asset Features,/docs/assets/confidential,/docs/assets/confidential,page
+207,Documentation,Compliance,Rules and Restrictions,/docs/compliance,/docs/compliance,category
+207.1,Documentation,Transfer Restrictions,Asset Transfer Rules,/docs/compliance/transfer-rules,/docs/compliance/transfer-rules,page
+208,Documentation,Settlement,Settlement Mechanisms,/docs/settlement,/docs/settlement,category
+208.1,Documentation,Venues,Trading Venues,/docs/settlement/venues,/docs/settlement/venues,page
+208.2,Documentation,Mediators,Settlement Mediators,/docs/settlement/mediators,/docs/settlement/mediators,page
+208.3,Documentation,Off-Chain Settlement,Receipt Management,/docs/settlement/off-chain,/docs/settlement/off-chain,page
+209,Documentation,Portfolio Management,Portfolio System,/docs/portfolios,/docs/portfolios,category
+209.1,Documentation,Custody,Custody Management,/docs/portfolios/custody,/docs/portfolios/custody,page
+210,Documentation,Corporate Actions,Corporate Action Management,/docs/corporate-actions,/docs/corporate-actions,category
+210.1,Documentation,Checkpoints,Checkpoint Management,/docs/corporate-actions/checkpoints,/docs/corporate-actions/checkpoints,page
+210.2,Documentation,Dividends,Dividend Distribution,/docs/corporate-actions/dividends,/docs/corporate-actions/dividends,page
+211,Documentation,External Agents,Agent Management,/docs/external-agents,/docs/external-agents,page
+212,Documentation,Account Management,Account Features,/docs/accounts,/docs/accounts,category
+212.1,Documentation,Relayer Accounts,Transaction Relaying,/docs/accounts/relayers,/docs/accounts/relayers,page
+212.2,Documentation,Subsidized Accounts,Fee Subsidization,/docs/accounts/subsidized,/docs/accounts/subsidized,page
+213,Documentation,STO Features,Security Token Offerings,/docs/sto,/docs/sto,page
+214,Documentation,Glossary,Term Definitions,/docs/glossary,/docs/glossary,page
+300,Getting Started,Getting Started Guide,Quick start guide for new users,/docs/getting-started,/docs/getting-started,category
+301,Getting Started,Key Generation,Creating and Managing Keys,/docs/getting-started/keys,/docs/getting-started/keys,page
+302,Getting Started,Onboarding,Identity Verification Process,/docs/getting-started/onboarding,/docs/getting-started/onboarding,page
+400,Development,Developer Guide,Technical documentation,/docs/development,/docs/development,category
+401,Development,Local Environment,Setting up local development,/docs/development/local-setup,/docs/development/local-setup,page
+402,Development,Node Operation,Running a Polymesh node,/docs/development/node,/docs/development/node,category
+403,Development,SDK Documentation,SDK Integration Guide,/docs/development/sdk,/docs/development/sdk,category
+403.3,Development,Signing Managers,Advanced Key Management,/docs/development/sdk/signing,/docs/development/sdk/signing,page
+403.4,Development,Polkadot API,Low-level API Access,/docs/development/sdk/polkadot-api,/docs/development/sdk/polkadot-api,page
+403.5,Development,Types Repository,Polymesh Types,/docs/development/sdk/types,/docs/development/sdk/types,page
+404,Development,REST API,API Documentation,/docs/development/rest-api,/docs/development/rest-api,category
+405,Development,Smart Contracts,Smart Contract Development,/docs/development/smart-contracts,/docs/development/smart-contracts,category
+406,Development,Integration Guides,Integration Documentation,/docs/development/integration,/docs/development/integration,category
+406.1,Development,Exchange Integration,Exchange Setup Guide,/docs/development/integration/exchange,/docs/development/integration/exchange,page
+406.2,Development,CDD Provider Integration,CDD Provider Setup,/docs/development/integration/cdd,/docs/development/integration/cdd,page
+406.3,Development,SubQuery Integration,SubQuery Implementation,/docs/development/integration/subquery,/docs/development/integration/subquery,page
+500,Resources,Tools & References,Development Resources,/docs/resources,/docs/resources,page
+501,Resources,Bug Bounty,Security Program Details,/docs/resources/bug-bounty,/docs/resources/bug-bounty,page
+600,Community,Discussion Forum,Community Interaction,/docs/community,/docs/community,page
+700,Tutorials,Tutorial Index,Learning Resources,/docs/tutorials,/docs/tutorials,category

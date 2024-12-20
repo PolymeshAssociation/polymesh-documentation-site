@@ -1,0 +1,10 @@
+---
+title: Node Operation
+description: Running a Polymesh node
+id: node-index
+slug: /development/node
+sidebar_label: Node Operation
+tags:
+  - node
+  - operation
+---

@@ -1,0 +1,10 @@
+---
+title: Asset Management
+description: Asset Management on Polymesh
+id: assets-index
+slug: /assets
+sidebar_label: Asset Management
+tags:
+  - assets
+  - management
+---
