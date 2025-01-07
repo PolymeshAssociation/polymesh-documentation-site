@@ -35,7 +35,7 @@ const config: Config = {
         docs: {
           // path: 'docs',
           routeBasePath: '/', // Defaults to "docs"
-          // sidebarPath: require.resolve('./sidebars.js'), // Defaults to sidebars.js
+          sidebarPath: require.resolve('./docs-sidebars.ts'), // Defaults to sidebars.js
 
           editUrl:
             'https://github.com/PolymeshAssociation/polymesh-documentation-site/edit/develop',
@@ -51,55 +51,56 @@ const config: Config = {
     ],
   ],
   plugins: [
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'polymesh-docs',
-        path: 'polymesh-docs',
-        routeBasePath: '/polymesh-docs',
-        // sidebarPath: require.resolve('./sidebars.js'),
-        // ... other options
-        editUrl:
-          'https://github.com/PolymeshAssociation/polymesh-documentation-site/edit/develop',
-      },
-    ],
+    // [
+    //   '@docusaurus/plugin-content-docs',
+    //   {
+    //     id: 'polymesh-docs',
+    //     path: 'polymesh-docs',
+    //     routeBasePath: '/polymesh-docs',
+    //     sidebarPath: require.resolve('./polymesh-docs-sidebar.ts'),
+    //     // ... other options
+    //     editUrl:
+    //       'https://github.com/PolymeshAssociation/polymesh-documentation-site/edit/develop',
+    //   },
+    // ],
     [
       '@docusaurus/plugin-content-docs',
       {
         id: 'sdk-docs',
         path: 'sdk-docs',
         routeBasePath: '/sdk-docs',
-        includeCurrentVersion: true,
-        versions: {
-          current: {
-            label: '26.0.0-alpha.1',
-            path: '26.0.0-alpha.1',
-          },
-        },
+        includeCurrentVersion: false,
+        // versions: {
+        //   current: {
+        //     label: '26.0.0-alpha.1',
+        //     path: '26.0.0-alpha.1',
+        //   },
+        // },
+        sidebarPath: require.resolve('./sdk-docs-sidebar.ts'),
       },
     ],
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        redirects: [
-          {
-            to: '/polymesh-docs/polymesh-private/tutorials/walkthrough-confidential-assets-rest-api',
-            from: '/polymesh-docs/polymesh-private/development-environment/walkthrough-rest-api',
-          },
-          {
-            to: '/polymesh-docs/polymesh-private/confidential-assets',
-            from: '/polymesh-docs/polymesh-private/confidential-assets/overview',
-          },
-          {
-            to: '/polymesh-docs/polymesh-private/tooling',
-            from: [
-              '/polymesh-docs/polymesh-private/development-environment/overview',
-              '/polymesh-docs/polymesh-private/development-environment/tooling',
-            ],
-          },
-        ],
-      },
-    ],
+    // [
+    //   '@docusaurus/plugin-client-redirects',
+    //   {
+    //     redirects: [
+    //       {
+    //         to: '/polymesh-docs/polymesh-private/tutorials/walkthrough-confidential-assets-rest-api',
+    //         from: '/polymesh-docs/polymesh-private/development-environment/walkthrough-rest-api',
+    //       },
+    //       {
+    //         to: '/polymesh-docs/polymesh-private/confidential-assets',
+    //         from: '/polymesh-docs/polymesh-private/confidential-assets/overview',
+    //       },
+    //       {
+    //         to: '/polymesh-docs/polymesh-private/tooling',
+    //         from: [
+    //           '/polymesh-docs/polymesh-private/development-environment/overview',
+    //           '/polymesh-docs/polymesh-private/development-environment/tooling',
+    //         ],
+    //       },
+    //     ],
+    //   },
+    // ],
   ],
 
   themeConfig: {
@@ -137,17 +138,17 @@ const config: Config = {
       logo: { width: '150px', alt: 'Polymesh Logo', src: 'img/logo.svg' },
 
       items: [
-        {
-          type: 'doc',
-          docId: 'introduction',
-          position: 'left',
-          label: 'Developer Docs',
-        },
-        {
-          to: 'polymesh-docs',
-          position: 'left',
-          label: 'Polymesh Docs',
-        },
+        // {
+        //   type: 'doc',
+        //   docId: 'documentation/docs-index',
+        //   position: 'left',
+        //   label: 'Developer Docs',
+        // },
+        // {
+        //   to: 'polymesh-docs',
+        //   position: 'left',
+        //   label: 'Polymesh Docs',
+        // },
         {
           to: 'sdk-docs',
           position: 'left',
@@ -196,23 +197,23 @@ const config: Config = {
     footer: {
       style: 'light',
       links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Developer Docs',
-              to: '/docs/introduction',
-            },
-            {
-              label: 'Network Docs',
-              to: '/polymesh-docs#network',
-            },
-            {
-              label: 'Polymesh Primitive Docs',
-              to: '/polymesh-docs#primitives',
-            },
-          ],
-        },
+        // {
+        //   title: 'Docs',
+        //   items: [
+        // {
+        //   label: 'Developer Docs',
+        //   to: '/docs/introduction',
+        // },
+        // {
+        //   label: 'Network Docs',
+        //   to: '/polymesh-docs#network',
+        // },
+        // {
+        //   label: 'Polymesh Primitive Docs',
+        //   to: '/polymesh-docs#primitives',
+        // },
+        //   ],
+        // },
         {
           title: 'Community',
           items: [
