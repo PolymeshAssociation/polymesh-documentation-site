@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Polymesh Documentation Portal</ShortName>
+  <Description>Search Polymesh Documentation Portal</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">https://polymeshassociation.github.io/polymesh-documentation-site-restructure/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://polymeshassociation.github.io/polymesh-documentation-site-restructure/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://polymeshassociation.github.io/polymesh-documentation-site-restructure/opensearch.xml" />
+  <moz:SearchForm>https://polymeshassociation.github.io/polymesh-documentation-site-restructure/</moz:SearchForm>
+</OpenSearchDescription>
