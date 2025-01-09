@@ -12,7 +12,9 @@ const config: Config = {
   baseUrl: '/',
   // baseUrl: '/polymesh-documentation-site/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenAnchors: 'throw',
+  onBrokenMarkdownLinks: 'throw',
+  onDuplicateRoutes: 'throw',
   favicon: 'img/favicon.ico',
 
   // GitHub pages deployment config.

@@ -9,6 +9,188 @@ tags:
   - management
 ---
 
-import DocCardList from '@theme/DocCardList';
+## Overview
 
-<DocCardList />
+Identity is at the core of Polymesh.
+
+To submit a transaction on-chain, the signing key must either be associated with an identity or authorized to act on behalf of one.
+
+Polymesh uses a federated root of trust via permissioned Customer Due Diligence (CDD) service providers, so every transaction is associated with an identity.
+
+Identities in Polymesh are controlled by keys. Each identity has a single primary key and may have additional secondary keys.
+
+Asset holdings, claims and permissions are associated with identities. Users may have multiple identities, allowing for a degree of privacy in asset holdings.
+
+Each identity is referenced by a decentralized identifier (DID), a pseudo-anonymous identifier like `0xfc0d2fc058d02c0a89c2cc2ff11726971dd39886a0b80ecfaa80fa3f196d65ce`.
+
+## Identity Diagram
+
+![Identity Diagram](./images/identity/Identity.png)
+
+## Assets
+
+Assets held by a user are associated with one of their identities. For example, the identity with DID `0xalice` might hold 50 ACME tokens and 30 FOO tokens.
+
+Assets held by an identity can be organized into [portfolios](/portfolios/custody/).
+
+## Claims
+
+An identity can add claims to other identities and hold claims added to it by others.
+
+To enforce asset compliance, issuers nominate trusted claim issuers to manage compliance-related claims for their investors.
+
+## Identity and Key Authentication with CDD Verification
+
+In Polymesh, all on-chain actions are associated with both a signing key and an identity, which is created by a [CDD service provider](/identity/verification/). Each identity has associated keys, categorized as primary or secondary, that can sign on its behalf, and each key is linked to only one identity.
+To enable on-chain transactions, an identity must be linked to a CDD claim, always issued by a CDD provider through a two-step process:
+
+1. Creating an on-chain identity for the user, referenced by a DID.
+2. Issuing a CDD claim to this new identity.
+   When a user submits a transaction, the network first identifies the signing key's associated identity and then checks that this identity has a valid CDD claim (issued by a current CDD provider and not expired). Both an associated DID and a valid CDD claim are required for the transaction to be accepted. (Excluding transactions to join an identity)
+   POLYX, Polymesh's native token, is held at the key level. Staking and governance activities that use POLYX are also linked to keys. POLYX transaction also requires an identity with a valid CDD claim to be executed.
+
+## Primary and Secondary Keys
+
+A users key is associated with a DID as its primary key when registered by the CDD provider and serves as its controlling key. The primary key has full permissions for that identity including adding or removing secondary keys.
+
+Secondary keys can also sign transactions but may have limited permissions restricted to specific actions, portfolios, or assets, and can be removed by the primary key.
+
+For more on Polymesh's public/private key cryptography, please see:  
+[https://docs.substrate.io/learn/cryptography/](https://docs.substrate.io/learn/cryptography/)
+
+## Key Types
+
+Polymesh supports three key types:
+
+- Public/Private key pairs
+- MultiSigs
+- Smart Contracts
+
+Polymesh treats each key type consistently (e.g., for permissions).
+
+### Public/Private Key Pairs
+
+Polymesh uses public-key cryptography with the [Ed25519 curve](https://docs.substrate.io/learn/cryptography/#elliptic-curve), supporting Ed25519, SR25519, or ECDSA keys.
+
+### MultiSigs
+
+A MultiSig is a single key controlled by one or more people. An _n_ of _m_ MultiSig requires _n_ of its _m_ members to agree on a transaction before that transaction can be submitted by the MultiSig.
+
+For a walkthrough on how to create a new MultiSig, please see the [MultiSig Walkthrough](/identity/advanced/multisig).
+
+Attributes include:
+
+- MultiSig Signers (`multisig::multiSigSigners`): Keys authorized to sign.
+- MultiSig Approvals Required (`multisig::multiSigSignsRequired`): Minimum signatures required.
+- Admin Identity (`multisig::adminDid`): Optional identity to manage the MultiSig.
+- Paying Identity (`multisig::payingDid`): Optional identity to cover MultiSig fees.
+- MultiSig Identity (`identity::keyRecords` / `identity::didRecords`): Optional identity which the MultiSig is linked to as primary or secondary.
+
+#### Creating MultiSigs
+
+To create a MultiSig, call `multisig::createMultisig`, specifying the signers and required approvals. The permissions to assign the Multisig key can also optionally be specified.
+
+The new MultiSig will automatically:
+
+- Be added to the caller's identity as a secondary key with appropriate permissions.
+- Have its _Paying Identity_ set to the caller's identity.
+- Issue `AddMultiSigSigner` authorizations to each of the specified signers.
+
+Once created, the specified signers must accept the authorizations issued above before they can interact with the MultiSig. This is done via a call to `multisig::acceptMultisigSigner` by each of the signing keys.
+
+:::note
+MultiSig signing keys are not permitted to be directly linked to an identity or another MultiSig.
+:::
+
+#### Submitting Transactions
+
+MultiSig signers are indirectly associated with an identity through the MultiSig itself. MultiSig signers cannot send or receive POLYX since they are not directly associated with an identity and cannot directly pay for transactions to create, approve or reject proposals.
+
+The MultiSig must be attached to a valid identity to be able to submit a transaction (excluding transactions to join or leave an identity), and either the MultiSig or its _Paying Identity_ must have sufficient funds to pay the transaction fees to create, approve or reject the proposal.
+
+#### Identity Management
+
+When created, a MultiSig is:
+
+- Linked to its creating identity as a secondary key.
+- Has its _Paying Identity_ set to the creating identity.
+- Has no _Admin Identity_ assigned.
+
+These relationships can be amended.
+
+An _Admin Identity_ can be assigned via `multisig::addAdmin`, allowing the _Admin Identity_ to add/remove signers from the MultiSig (via `multisig::addMultisigSignersViaAdmin`, `multisig::removeMultisigSignersViaAdmin`) and change the number of approvals needed (via `multisig::changeSigsRequiredViaAdmin`). The primary key of the _Admin Identity_ is the only key that can call these transactions.
+
+The _Admin Identity_ can be removed either by the _Admin Identity_ themselves, or by the MultiSig executing a proposal to remove the _Admin Identity_.
+
+Modifying signers or the required number of signatures invalidates any pending MultiSig proposals.
+
+:::note
+As the _Admin Identity_ associated with a MultiSig can modify the signers and / or the number of signers required on a MultiSig, invalidating any pending proposals, they can prevent the MultiSig from directly removing the _Admin Identity_ on a MultiSig. This is by design to provide a _Admin Identity_ with full control over any MultiSig it is administering.
+:::
+
+A MultiSig can leave and join a new identity, similar to any other key. Changing identity will not update the _Admin Identity_ of the MultiSig, this must be amended separately if needed.
+
+To change identity, a MultiSig must:
+
+- Receive a `JoinIdentity` authorization from another identity.
+
+Then either:
+
+- Leave its current identity by executing a proposal of `identity::leaveIdentityAsKey`.
+- Create/approve the `JoinIdentity` authorization by a direct call to `multisig::approveJoinIdentity` by the required number of signers.
+
+Or:
+
+- Create a proposal for an atomic batch of two transactions using `utility::batch`:
+  - Leave its current identity by executing `identity::leaveIdentityAsKey`.
+  - Join its new identity by executing `identity::joinIdentityAsKey`.
+
+The latter approach is recommended, provided the `JoinIdentity` authorization can be issued before the MultiSig leaves its current identity.
+
+#### Payment Management
+
+MultiSigs can hold POLYX once linked to an identity. If they are removed from the identity, they can continue to hold funds (as per normal external key behavior), but these funds are locked until the key is reattached to a CDD'ed identity.
+
+A MultiSig may opt to pay for its own transactions (to remove the requirement to keep the primary key of its _Paying Identity_ funded with POLYX) via `multisig::removePayer`. This can also be done by the _Paying Identity_ via `multisig::removePayerViaPayer`.
+
+:::note
+If removed, a new _Paying Identity_ cannot be re-added.
+:::
+
+### Smart Contracts
+
+While not conventionally considered key types, Smart Contracts are represented by a public address on Polymesh, similar to other key types. Like other keys, smart contracts must be associated with an identity to be able to transact on-chain.
+
+Smart contracts allow developers to define custom logic, rules, records, and functions. They are vital tools for automating complex processes, facilitating decentralized applications, and expanding the network's capabilities. Like other keys, Smart Contracts can hold POLYX tokens but require interaction with external keys to initiate actions. These contracts seamlessly integrate with Polymesh through chain extensions, granting access to blockchain data and functionalities, thus supporting diverse decentralized applications and use cases.
+
+## Permissions
+
+Permissions have three granular levels:
+
+- **Assets**: Restricts interaction to specific assets.
+- **Extrinsics**: Restricts access to certain on-chain actions.
+- **Portfolios**: Restricts access transacting with assets in specific portfolios under the identity or under the custody/control of that identity.
+
+The access of a particular key is determined by the intersection of these categories. It is possible to grant a key full access to any or all of these categories.
+
+Not all on-chain actions are associated with an asset or a portfolio (e.g., staking). For such actions, these permission types are not checked.
+
+## Child Identities
+
+As described above all keys and identities must be linked to a CDD Provider assigned CDD claim to be allowed to transact on chain. However, In some scenarios, existing identities may benefit from the ability to create additional child identities independently (i.e., without involving a CDD provider).
+
+![Child Identity Diagram](./images/identity/child_identities.png)
+
+Possible use cases for child identities include:
+
+- **Smart Contract Isolation**: Creating a separate identity for a smart contract to protect user funds managed by the contract, ensuring it operates independently of the deployer's identity.
+- **Enhanced Security Structure**: Using child identities as "hot wallets" while keeping the parent identity as a "cold wallet" to secure assets. Since assets are held at the identity level, this structure allows for separate identities for hot/cold wallet functions.
+- **Organizational Hierarchy**: Structuring an organization with child identities, such as assigning separate identities to different departments or subsidiaries.
+
+Polymesh allows any "parent" identity (created through a CDD provider) to create additional child identities. These child identities inherit the CDD claim of the parent, instead of receiving an explicit CDD claim from a CDD provider on the child DID. It is through the parents CDD claim that the child identity is permitted to transact.
+
+To create a child identity, the `identity::create_child_identity` extrinsic is available, along with corresponding SDK and RESTful API methods.
+
+Once created, a child identity is assigned its unique DID and can hold claims and assets like any other identity. However, child identities cannot create further child identities (no recursion). They only inherit the CDD status from the parent, while any other compliance claims must be attached directly to the child identity.
+
+If desired, a child identity can also be unlinked from its parent. In that case, it will no longer inherit CDD status from the parent's claim and must obtain its own CDD claim from a CDD provider.
