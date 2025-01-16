@@ -72,13 +72,23 @@ Polymesh facilitates claim based compliance directly in its base layer primitive
 
 Polymesh provides financial primitives and business logic, built on top of a distributed storage ledger.
 
-Updates to the ledger are processed across a decentralised network of Polymesh operator nodes.
+Updates to the ledger are processed across a decentralised network of Polymesh operator nodes. The consensus mechanism consists of three main components:
 
-Polymesh is a permissioned network, and in order to run an operator node, the associated identity must be permissioned through an on-chain [governance process](/governance/).
+1. Operator Selection: Nominated Proof-of-Stake (NPoS) determines which permissioned operators will actively participate in block production and finalization. In this system:
 
-Polymesh is built on top of Substrate, and uses BABE block production with a GRANDPA finality gadget. This separates block production from the block finalisation process efficiently, allowing the blockchain to have a high throughput and rapid non-probabilistic finalisation.
+   - Node Operators (validators) indicate their intention to submit blocks and make their candidacy public
+   - Token holders participate as nominators by staking POLYX tokens behind operators they trust
+   - The network through the election algorithm distributes staked tokens to maximize economic security
+   - Operators with the highest backing are elected as active validators
+   - Both operators and nominators (currently disabled) face risk of slashing (loss of staked tokens) for operator misbehavior
 
-Polymesh operators are real world entities, typically regulated or licensed in their home jurisdiction. Requiring a diverse set of high reputation organisations to reach byzantine consensus offers an additional strong security guarantee to the network.
+2. Block Production: Elected operators participate in **BABE** (Blind Assignment for Blockchain Extension), which determines which operator can produce blocks in each time slot
 
-For more details on Consensus see:  
-[Consensus Details](https://docs.substrate.io/learn/consensus/)
+3. Block Finality: These same operators also participate in **GRANDPA** (GHOST-based Recursive ANcestor Deriving Prefix Agreement), which provides rapid finality by having operators vote on chains rather than individual blocks
+
+Polymesh is a permissioned network, and in order to run an operator node, the associated identity must first be permissioned through an on-chain [governance process](/governance/). These operators are typically regulated or licensed entities in their home jurisdiction, adding an additional layer of security through real-world accountability.
+
+For more details on Consensus see:
+
+- [Substrate Consensus Details](https://docs.substrate.io/learn/consensus/)
+- [Polkadot Consensus Details](https://wiki.polkadot.network/docs/learn-consensus)

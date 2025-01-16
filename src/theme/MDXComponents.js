@@ -8,6 +8,7 @@ import OverviewVideoBox from '/src/components/OverviewVideoBox';
 import YoutubePlayer from '/src/components/YoutubePlayer';
 import ActionCard from '/src/components/ActionCard';
 import ActionCardWrapper from '/src/components/ActionCard/ActionCardWrapper';
+import RewardCurve from '/src/components/RewardCurve';
 
 export default {
   // Re-use the default mapping
@@ -22,4 +23,5 @@ export default {
   YoutubePlayer,
   ActionCard,
   ActionCardWrapper,
+  RewardCurve,
 };
