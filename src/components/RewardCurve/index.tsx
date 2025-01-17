@@ -119,8 +119,9 @@ const RewardCurve = () => {
 
   // Generate curves
   const { inflationCurve, rewardCurve, apyRewardCurve } = useMemo(() => {
-    if (!totalIssuance)
+    if (!totalIssuance) {
       return { inflationCurve: [], rewardCurve: [], apyRewardCurve: [] };
+    }
 
     const inflationCurve: { x: number; y: number }[] = [];
     const rewardCurve: { x: number; y: number }[] = [];
@@ -177,19 +178,32 @@ const RewardCurve = () => {
       animation: {
         duration: 100,
       },
-      // interaction: { intersect: false, mode: 'nearest', axis: 'x' },
       scales: {
         x: {
           title: {
             display: true,
             text: `Percent of Total POLYX Staked`,
             color: textColor,
+            font: (context) => {
+              if ('chart' in context) {
+                const chart = context.chart as ChartJS;
+                return {
+                  size: 14 * (chart.width / 958),
+                };
+              }
+              return {
+                size: 14,
+              };
+            },
           },
           ticks: {
             callback: function (value) {
               return value + '%';
             },
             color: textColor,
+            font: (context) => ({
+              size: 14 * (context.chart.width / 958),
+            }),
           },
           grid: {
             color: gridColor,
@@ -202,6 +216,9 @@ const RewardCurve = () => {
               return value + '%';
             },
             color: textColor,
+            font: (context) => ({
+              size: 14 * (context.chart.width / 958),
+            }),
           },
           grid: {
             color: gridColor,
@@ -216,17 +233,30 @@ const RewardCurve = () => {
         title: {
           display: true,
           text: `Polymesh Staking Reward / Inflation Curve`,
-          padding: 20,
+          padding: 0,
           color: textColor,
+          font: (context) => {
+            if ('chart' in context) {
+              return {
+                size: 18 * (context.chart.width / 958),
+              };
+            }
+            return {
+              size: 18,
+            };
+          },
         },
         legend: {
           display: true,
-          position: 'bottom' as const,
+          position: 'top' as const,
           labels: {
             usePointStyle: true,
             pointStyle: 'line',
-            padding: 20,
+            padding: 10,
             color: textColor,
+            font: (context) => ({
+              size: 14 * (context.chart.width / 958),
+            }),
           },
         },
         tooltip: {
@@ -245,6 +275,12 @@ const RewardCurve = () => {
           bodyColor: textColor,
           borderColor: gridColor,
           borderWidth: 1,
+          titleFont: (context) => ({
+            size: 14 * (context.chart.width / 958),
+          }),
+          bodyFont: (context) => ({
+            size: 12 * (context.chart.width / 958),
+          }),
         },
         annotation: {
           annotations: {
@@ -258,13 +294,17 @@ const RewardCurve = () => {
                   xMin: percentTotalStaked,
                   xMax: percentTotalStaked,
                   borderColor: '#170087',
-                  borderWidth: 2,
+                  borderWidth: 1,
                   borderDash: [5, 5],
                   label: {
                     position: '20%',
                     backgroundColor: '#170087',
                     content: `${percentTotalStaked.toFixed(3)} %`,
                     display: true,
+                    font: (context) => ({
+                      size: 14 * (context.chart.width / 958),
+                    }),
+                    padding: 5,
                   },
                 },
                 point1: {
@@ -274,7 +314,7 @@ const RewardCurve = () => {
                   radius: 3,
                   borderColor: '#EC4673',
                   backgroundColor: '#EC4673',
-                  borderWidth: 2,
+                  borderWidth: 1,
                 },
                 point2: {
                   type: 'point',
@@ -283,7 +323,7 @@ const RewardCurve = () => {
                   radius: 3,
                   borderColor: '#D557EA',
                   backgroundColor: '#D557EA',
-                  borderWidth: 2,
+                  borderWidth: 1,
                 },
                 point3: {
                   type: 'point',
@@ -292,7 +332,7 @@ const RewardCurve = () => {
                   radius: 3,
                   borderColor: '#60D3CB',
                   backgroundColor: '#60D3CB',
-                  borderWidth: 2,
+                  borderWidth: 1,
                 },
                 line2: {
                   type: 'line',
@@ -301,13 +341,17 @@ const RewardCurve = () => {
                   xMin: 0,
                   xMax: percentTotalStaked,
                   borderColor: '#D557EA',
-                  borderWidth: 2,
+                  borderWidth: 1,
                   borderDash: [5, 5],
                   label: {
                     position: '50%',
                     backgroundColor: '#D557EA',
-                    content: `APR: ${apr.toFixed(3)} %`,
+                    content: `${apr.toFixed(3)} %`,
                     display: true,
+                    font: (context) => ({
+                      size: 14 * (context.chart.width / 958),
+                    }),
+                    padding: 5,
                   },
                 },
                 line3: {
@@ -317,13 +361,17 @@ const RewardCurve = () => {
                   xMin: 0,
                   xMax: percentTotalStaked,
                   borderColor: '#EC4673',
-                  borderWidth: 2,
+                  borderWidth: 1,
                   borderDash: [5, 5],
                   label: {
                     position: '20%',
                     backgroundColor: '#EC4673',
-                    content: `Inflation: ${inflation.toFixed(3)} %`,
+                    content: `${inflation.toFixed(3)} %`,
                     display: true,
+                    font: (context) => ({
+                      size: 14 * (context.chart.width / 958),
+                    }),
+                    padding: 5,
                   },
                 },
                 line4: {
@@ -333,13 +381,17 @@ const RewardCurve = () => {
                   xMin: 0,
                   xMax: percentTotalStaked,
                   borderColor: '#60D3CB',
-                  borderWidth: 2,
+                  borderWidth: 1,
                   borderDash: [5, 5],
                   label: {
                     position: '20%',
                     backgroundColor: '#60D3CB',
-                    content: `APY: ${apy.toFixed(3)} %`,
+                    content: `${apy.toFixed(3)} %`,
                     display: true,
+                    font: (context) => ({
+                      size: 14 * (context.chart.width / 958),
+                    }),
+                    padding: 5,
                   },
                 },
               }),
@@ -351,6 +403,9 @@ const RewardCurve = () => {
               content: noteContent,
               textAlign: 'right',
               color: textColor,
+              font: (context) => ({
+                size: 14 * (context.chart.width / 958),
+              }),
             },
           },
         },
@@ -369,7 +424,7 @@ const RewardCurve = () => {
           data: apyRewardCurve,
           borderColor: '#60D3CB',
           backgroundColor: '#60D3CB',
-          borderWidth: 2,
+          borderWidth: 1,
           pointRadius: 0,
           yAxisID: 'y',
         },
@@ -378,7 +433,7 @@ const RewardCurve = () => {
           data: rewardCurve,
           borderColor: '#D557EA',
           backgroundColor: '#D557EA',
-          borderWidth: 2,
+          borderWidth: 1,
           pointRadius: 0,
           yAxisID: 'y',
         },
@@ -387,7 +442,7 @@ const RewardCurve = () => {
           data: inflationCurve,
           borderColor: '#EC4673',
           backgroundColor: '#EC4673',
-          borderWidth: 2,
+          borderWidth: 1,
           pointRadius: 0,
           yAxisID: 'y',
         },
