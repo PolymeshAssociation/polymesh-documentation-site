@@ -67,7 +67,7 @@ If desired, a child identity can also be unlinked from its parent. In that case,
 Only the primary key of the parent or child identities can unlink the identities.
 :::
 
-In this tutorial, 'TEST_PARENT' is the Primary Key of our identity (0x1), so we use this key to submit the 'identity::unlinkChildIdentity' transaction. The child identity's DID should be pasted to the 'childDid' field.
+As 'TEST_PARENT' is the Primary Key of our identity (0x1), we use this key to submit the 'identity::unlinkChildIdentity' transaction. The child identity's DID should be pasted to the 'childDid' field.
 
 ![image](images/03-unlink-child-did.png)
 
