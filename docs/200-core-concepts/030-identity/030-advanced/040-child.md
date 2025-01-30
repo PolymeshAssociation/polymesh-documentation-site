@@ -33,7 +33,7 @@ In this tutorial, we will create a secondary key and set it as the child identit
 
 To begin, we create two new keys, called 'TEST_PARENT' and 'TEST_CHILD'. In practice, these keys can be created and secured by two different parties.
 
-![image](images/01-test-child-keys.png)
+![image](images/child-identities/01-test-child-keys.png)
 
 These keys can be created in the [Polymesh Wallet](https://chromewebstore.google.com/detail/polymesh-wallet/jojhfeoedkpkglbfimdfabpdfjaoolaf?pli=1) or using the [Polymesh App](https://mainnet-app.polymesh.network) in the Accounts tab. We've used the latter for this tutorial.
 
@@ -51,7 +51,7 @@ We now create a child identity by calling the 'identity::createChildIdentity' ex
 
 In this tutorial, 'TEST_PARENT' is the Primary Key of our identity (0x1), so we use this key to submit the 'identity::createChildIdentity' transaction.
 
-![image](images/02-create-child-keys.png)
+![image](images/child-identities/02-create-child-keys.png)
 
 :::info
 Call the 'createChildIdentities' to create multiple child identity.
@@ -69,6 +69,6 @@ Only the primary key of the parent or child identities can unlink the identities
 
 As 'TEST_PARENT' is the Primary Key of our identity (0x1), we use this key to submit the 'identity::unlinkChildIdentity' transaction. The child identity's DID should be pasted to the 'childDid' field.
 
-![image](images/03-unlink-child-did.png)
+![image](images/child-identities/03-unlink-child-did.png)
 
 Learn more about child identities in our [SDK documentation] (https://developers.polymesh.network/sdk-docs/classes/API/Entities/Identity/ChildIdentity/)
