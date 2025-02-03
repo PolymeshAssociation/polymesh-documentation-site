@@ -9,8 +9,8 @@ Telegram: @amiri_uk
 
 */
 
- window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", function() {
         window.loadCustomWidget({
             orgId: "564e5207-9fbf-44"
         });
-    });
+});
