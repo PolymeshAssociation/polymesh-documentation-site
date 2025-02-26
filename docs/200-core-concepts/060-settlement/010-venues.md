@@ -9,53 +9,85 @@ tags:
   - venues
 ---
 
-# Overview
+## Overview
 
-Venues on Polymesh are logical groups of instructions and settlements.
-Ultimately, an account is responsible for its own venues, for access rights, and for who can create, cancel, and remove instructions within them.
-Once an instruction has been created inside a venue, it cannot be moved to another. Venues can be reused at any time.
+Venues on Polymesh provide a logical grouping of settlement instructions. They provide a way to organize and control trading activities, with specific venues being used for particular types of transactions such as primary issuance, exchange trading, or fundraising events.
 
-::: info
-Venues are optional for settlement instructions - when creating a new settlement instruction, if the venue is not specified, then the instruction cannot include off-chain legs.
+## Venue Types and Use Cases
+
+Venues can be categorized into different types based on their intended use:
+
+- **Distribution**: Used for primary issuance and initial distribution of assets to investors
+- **Exchange**: Designated for exchange-based trading, allowing organized secondary market trading
+- **STO**: Specifically for Security Token Offerings or fundraising events, managing token sales
+- **Other**: General purpose venue type for specialized use cases
+
+### Common Applications
+
+- **Primary Issuance**: Manage initial token distribution to investors through a controlled venue
+- **Exchange Integration**: Create dedicated venues for specific trading platforms or exchanges
+- **Fundraising**: Organize and control token sales through STO venues
+- **Compliance Management**: Restrict trading to specific approved venues for regulatory compliance
+- **Settlement Tracking**: Group related transactions for better organization and audit trails
+
+:::info
+Venues are optional for settlement instructions. When no venue is specified, the instruction will use a default global venue. However, some assets may be restricted to trading only on specific venues as part of their compliance rules. A venue is required for instructions with an off chain leg as receipts for off chain legs must be signed by a signatory authorized by the venue owner.
 :::
 
-Learn more about venues in the [SDK documentation](https://developers.polymesh.network/sdk-docs/classes/API/Entities/Venue/).
+## Venue Management
 
-# Creating Venues
+Each venue has an owner identity that:
 
-Now let's create a venue. Venues can be created via the Polymesh App or on the Polymesh Portal.
+- Is the sole identity that can create settlement instructions within the venue
+- Can execute fully affirmed instructions associated with that venue
+- Can add or remove receipt signers for off chain legs
 
-## With the Polymesh App
+Once an instruction has been created inside a venue, it cannot be moved to another venue. Venues can be reused at any time.
 
-Venues can be created by calling the 'createVenue' extrinsic within the settlement pallet in the Polymesh App.
+## Technical Implementation
 
-- 'details' : Extra details about a venue, like the venue name.
-- 'signers' : Array of signers that are allowed to sign receipts for this venue.
-- 'typ' : Type of venue being created.
+### Creating Venues
 
-The following venue types can be created:
-- 'Distribution': Primary issuance.
-- 'Exchange': Venue type for exchange.
-- 'Other': Default venue type.
-- 'Sto': Venue type for Offering/Fundraise.
+A venue can be created by calling `settlement::create_venue` with the following parameters:
 
-![image](images/01-create-venue-app.png)
+- `details`: Venue details (such as a descriptive name)
+- `signers`: List of authorized receipt signers (for off chain leg receipts)
+- `typ`: Venue type (Distribution, Exchange, STO, or Other)
 
-Once this extrinsic has been executed, the venue is created with a specific ID associated to it.
-This Venue ID then can be used to create and approve instructions within this venue.
+Upon successful creation, the venue is assigned a unique Venue ID that can be used for creating and approving instructions within that venue. The venue owner can later modify venue properties using:
 
-![image](images/02-create-venue-id.png)
+- `settlement::update_venue_details` to update the venue's details
+- `settlement::update_venue_type` to change the venue type
+- `settlement::set_venue_signers` to update the list of authorized receipt signers
 
-## With the Polymesh Portal
+### Venue Filtering
 
-Venues can be created on the Transfer tab on the Polymesh Portal by clicking on the 'Create Venue' button.
+Asset issuers have granular control over where their assets can be traded through venue filtering transfer restrictions:
 
-![image](images/03-create-new-venue-portal.png)
+#### Global Venue
 
-As always, the transaction must be signed with the wallet.
-After creating the venue, we can go ahead and create instructions within it.
+When no specific venue is provided for a settlement instruction, it automatically uses a global default venue. This makes venue specification optional for basic transfers while still maintaining the ability to track and manage settlements.
 
-### Links
+#### Asset-Level Venue Restrictions
 
-[Polymesh Portal](https://portal.polymesh.network/)
-[Polymesh App](https://app.polymesh.network/)
+Asset issuers can implement venue-based trading restrictions using the following chain methods:
+
+1. **Enabling Venue Filtering**: Use `settlement::set_venue_filtering` to activate venue restrictions for the asset
+2. **Specifying Allowed Venues**: Use `settlement::allow_venues` to create an allowlist of permitted venues
+3. **Managing Permissions**: Use `settlement::disallow_venues` to revoke trading permissions for specific venues
+
+These restrictions provide issuers with:
+
+- Control over where their assets can be traded
+- Ability to ensure trading only occurs on approved or regulated venues
+- Flexibility to adjust trading permissions as needed
+
+When venue filtering is enabled for an asset:
+
+- Settlement instructions involving that asset must use an approved venue
+- Attempts to settle through non-approved venues will fail
+- The global default venue cannot be used
+
+:::note
+Venue filtering is independent of other compliance rules and transfer restrictions. Assets can have both venue restrictions and other compliance rules and transfer restrictions active simultaneously.
+:::
