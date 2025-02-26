@@ -1,6 +1,6 @@
 ---
 title: Trading Venues
-description: Trading Venues
+description: Organizing and controlling settlement instructions through logical groupings
 id: trading-venues
 slug: /settlement/venues
 sidebar_label: Trading Venues

@@ -1,6 +1,6 @@
 ---
 title: Child Identities
-description: Subsidiary Identity Management
+description: Creating and managing subsidiary DIDs derived from a parent identity's CDD claim
 id: child-identities
 slug: /identity/advanced/child
 sidebar_label: Child Identities

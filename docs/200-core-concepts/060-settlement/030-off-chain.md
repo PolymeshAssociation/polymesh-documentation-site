@@ -1,6 +1,6 @@
 ---
 title: Off-Chain Settlement
-description: Receipt Management
+description: Managing and verifying off-chain asset transfers through receipts
 id: off-chain-settlement
 slug: /settlement/off-chain
 sidebar_label: Off-Chain Settlement

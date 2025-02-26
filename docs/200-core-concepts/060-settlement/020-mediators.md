@@ -1,6 +1,6 @@
 ---
 title: Settlement Mediators
-description: Settlement Mediators
+description: Third-party validation and approval in the settlement process
 id: settlement-mediators
 slug: /settlement/mediators
 sidebar_label: Settlement Mediators
@@ -75,8 +75,9 @@ If a mediator is also a party to the instruction (sender or receiver of an asset
 
 - One affirmation as a mediator using `affirm_instruction_as_mediator`
 - Another affirmation as an instruction party for their leg(s) using the standard instruction affirmation
-  Both affirmations are required before the instruction can settle.
-  :::
+
+Both affirmations are required before the instruction can settle.
+:::
 
 :::note
 Both asset-level and instruction-level mediators must provide their affirmation before settlement can proceed. If any mediator withdraws their affirmation or their affirmation expires, the settlement will be blocked until they reaffirm.
