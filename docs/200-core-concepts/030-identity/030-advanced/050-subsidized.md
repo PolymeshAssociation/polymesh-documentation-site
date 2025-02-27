@@ -7,6 +7,7 @@ sidebar_label: Subsidized Accounts
 tags:
   - accounts
   - subsidized
+  - fees
 ---
 
 ## Overview

@@ -79,6 +79,40 @@ For an off-chain leg to be considered complete:
 If a venue's authorized signers are changed, previously submitted receipts remain valid as long as they were signed by an authorized signer at the time of submission.
 :::
 
+### Receipt Generation Process
+
+When generating an off-chain receipt, the following information must be encoded and signed:
+
+1. **Required Receipt Data**:
+
+   - The unique receipt ID (UID)
+   - The instruction ID
+   - The leg ID within the instruction
+   - The sender's identity (DID)
+   - The receiver's identity (DID)
+   - The asset ticker symbol/identifier
+   - The transfer amount
+
+2. **Signature Generation**:
+
+   - The data elements are concatenated in a deterministic order
+   - Each element is hex-encoded
+   - The concatenated hex string forms the payload to be signed
+   - An authorized venue signer creates a cryptographic signature of this payload
+   - The signature can be generated using supported key types (SR25519, ED25519, ECDSA)
+
+3. **Receipt Assembly**:
+   - The final receipt combines:
+     - The receipt UID
+     - The leg ID
+     - The signer's information
+     - The generated signature
+     - Optional metadata about the transfer
+
+:::note
+The exact data encoding and signature generation process must follow the chain's requirements to ensure the receipt is valid when submitted. Tools such as the Polymesh SDK provide helper functions to generate valid receipts.
+:::
+
 ### Receipt Process
 
 The off-chain settlement process follows these steps:
@@ -87,15 +121,19 @@ The off-chain settlement process follows these steps:
 
 2. **Off-Chain Transfer**: The actual transfer occurs in the external system
 
-3. **Receipt Generation**: An authorized venue signer creates a receipt containing:
-   - The instruction ID
-   - The leg ID
-   - A cryptographic signature proving their authorization
-   - Optional metadata about the transfer
+3. **Receipt Generation**: An authorized venue signer creates a receipt as detailed above.
 
-4. **Receipt Submission and Affirmations**: 
-   - Any party can submit the signed receipt using `settlement::add_instruction_leg_receipt`
-   - The receipt's signature is verified against the venue's authorized signers
+:::note
+Each receipt requires a unique ID (UID) that is tracked via the `settlement::ReceiptsUsed` storage. This ensures receipts cannot be reused across different legs or instructions.
+:::
+
+4. **Receipt Submission and Affirmations**:
+
+   - Any party can submit the signed receipt using `settlement::affirm_with_receipts`
+   - If the receipt submitter is also a party to other legs they can simultaneously affirm those legs by using `settlement::affirm_with_receipts_with_count`
+   - The receipt's signature and UID are verified:
+     - Signature must be from a currently authorized signer for the venue
+     - UID must not have been used in any other receipt (tracked via `settlement::ReceiptsUsed` storage)
    - The receipt cannot be modified once submitted
    - Affirmations for other legs in the instruction can occur independently
    - Parties can provide their affirmations either before or after the receipt is submitted
