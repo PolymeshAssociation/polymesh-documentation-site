@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="Polymesh Documentation Portal" href="/polymesh-documentation-site/opensearch.xml"><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.678f6738.css">
-<script src="/polymesh-documentation-site/assets/js/runtime~main.7f4d9304.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/runtime~main.5da6fe30.js" defer="defer"></script>
 <script src="/polymesh-documentation-site/assets/js/main.91e8699b.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -85,12 +85,18 @@
 <p>Subsidizers can establish subsidies using <code>relayer::set_paying_key</code> providing the account key to be subsidized and the maximum POLYX allowance for the subsidy. This transaction creates an <a href="/polymesh-documentation-site/authorizations/">authorization</a> request targeting the key to be subsidized for approval. Once the subsidized key accepts the authorization request, the subsidy relationship will be fully established between the keys.</p>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>Alternatively, the subsidizer can create the authorization request through the <code>identity::add_authorization</code> transaction selecting an authorization type of <code>AddRelayerPayingKey</code>. This alternate option allows an optional expiry to be associated with the authorization request.</p></div></div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="managing-subsidies">Managing Subsidies<a href="#managing-subsidies" class="hash-link" aria-label="Direct link to Managing Subsidies" title="Direct link to Managing Subsidies">​</a></h3>
-<p>Subsidizers have several management options:</p>
+<p>Both the subsidizer and subsidized party have control over the subsidy relationship:</p>
+<p><strong>Subsidizer Controls</strong>:</p>
 <ul>
 <li><code>relayer::decrease_allowance</code>: Reduce the subsidy allowance</li>
 <li><code>relayer::increase_allowance</code>: Increase the subsidy allowance</li>
-<li><code>relayer::remove_paying_key</code>: Remove the subsidy entirely</li>
+<li><code>relayer::remove_paying_key</code>: Remove the subsidy relationship</li>
 </ul>
+<p><strong>Subsidized Party Controls</strong>:</p>
+<ul>
+<li><code>relayer::remove_paying_key</code>: The subsidized key can unilaterally exit the subsidy relationship at any time</li>
+</ul>
+<div class="theme-admonition theme-admonition-important admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>important</div><div class="admonitionContent_BuS1"><p>The ability for the subsidized key to unilaterally exit the relationship is an important protection mechanism. It ensures that the subsidizer cannot censor transactions by maintaining control over the relationship - the subsidized party can always choose to exit the subsidy arrangement and transact normally.</p></div></div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="monitoring-subsidies">Monitoring Subsidies<a href="#monitoring-subsidies" class="hash-link" aria-label="Direct link to Monitoring Subsidies" title="Direct link to Monitoring Subsidies">​</a></h3>
 <p>Participants can monitor subsidy status using chain state queries <code>relayer::subsidies</code> to view the subsidy relationship and remaining allowance.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="transaction-fee-behavior">Transaction Fee Behavior<a href="#transaction-fee-behavior" class="hash-link" aria-label="Direct link to Transaction Fee Behavior" title="Direct link to Transaction Fee Behavior">​</a></h3>
