@@ -1,19 +1,16 @@
 ---
-title: Multisigs
-description: Multisignature Accounts
-id: multisigs
-slug: /identity/advanced/multisig
-sidebar_label: Multisigs
+title: Multisig Walkthrough
+description: Step-by-step guide to creating and managing multisigs
+id: multisig-walkthrough
+slug: /identity/advanced/multisig/walkthrough
+sidebar_label: Multisig Walkthrough
 tags:
   - multisig
   - accounts
+  - walkthrough
 ---
 
-## Overview
-
-Instead of using a public/private key pair as a primary or secondary key on your Polymesh identity, it is possible to use a MultiSig.
-
-MultiSig keys allow specifying a set of associated signers (`n` signers), of which a subset (`m` signers) must agree to execute an on-chain action.
+For detailed steps on creating and managing multisigs, follow this walkthrough. These steps are shown using the https://testnet-app.polymesh.live UI but can also be performed on https://mainnet-app.polymesh.network
 
 ## Creating a MultiSig
 
@@ -31,7 +28,7 @@ To begin, we create three new keys, called `TEST_SIGNER_1/2/3`. In practice, the
 
 ![MultiSig Signers](./images/multisig/1-test_signers.png)
 
-These keys can be created in the Polymesh Wallet or using the Polymesh App (https://mainnet-app.polymesh.network) in the Accounts tab. We've used the latter for this tutorial.
+These keys can be created in any [wallet](/getting-started/keys) compatible with Polymesh or using the Polymesh App (https://mainnet-app.polymesh.network) in the Accounts tab. We've used the latter for this tutorial.
 
 ### Step 2 - Creating A MultiSig
 
@@ -83,7 +80,7 @@ If you added the MultiSig to your Address Book, you should now see its updated b
 
 You can now use your MultiSig to execute actions as your identity. For example, suppose we want to create a new asset; we can call `asset::createAsset`.
 
-Before executing this transaction from our MultiSig, the MultiSig must be permissioned to call the `asset::createAsset` extrinsic as a secondary key. Unless explicitly specified when creating, the MultiSig is assigned no permissions by default.
+Before executing this transaction from our MultiSig, the MultiSig must be permissioned to call the `asset::createAsset` extrinsic as a secondary key. Unless explicitly specified during creation, the MultiSig is assigned no permissions by default.
 
 ![Update Permissions](./images/multisig/12-add_permissions.png)
 

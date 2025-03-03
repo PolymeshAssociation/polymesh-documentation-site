@@ -1,6 +1,6 @@
 ---
 title: Authorizations
-description: Authorization Framework
+description: Secure permission framework for identity and key interactions
 id: authorizations
 slug: /authorizations
 sidebar_label: Authorizations

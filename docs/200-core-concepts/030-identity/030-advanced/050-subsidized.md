@@ -1,6 +1,6 @@
 ---
 title: Subsidized Accounts - Fee Relayer
-description: Fee Subsidization
+description: Enable fee payments on behalf of other accounts
 id: subsidized-accounts
 slug: /accounts/subsidized
 sidebar_label: Subsidized Accounts
