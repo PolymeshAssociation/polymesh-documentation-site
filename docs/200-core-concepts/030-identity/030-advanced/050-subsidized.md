@@ -83,11 +83,21 @@ Alternatively, the subsidizer can create the authorization request through the `
 
 ### Managing Subsidies
 
-Subsidizers have several management options:
+Both the subsidizer and subsidized party have control over the subsidy relationship:
+
+**Subsidizer Controls**:
 
 - `relayer::decrease_allowance`: Reduce the subsidy allowance
 - `relayer::increase_allowance`: Increase the subsidy allowance
-- `relayer::remove_paying_key`: Remove the subsidy entirely
+- `relayer::remove_paying_key`: Remove the subsidy relationship
+
+**Subsidized Party Controls**:
+
+- `relayer::remove_paying_key`: The subsidized key can unilaterally exit the subsidy relationship at any time
+
+:::important
+The ability for the subsidized key to unilaterally exit the relationship is an important protection mechanism. It ensures that the subsidizer cannot censor transactions by maintaining control over the relationship - the subsidized party can always choose to exit the subsidy arrangement and transact normally.
+:::
 
 ### Monitoring Subsidies
 

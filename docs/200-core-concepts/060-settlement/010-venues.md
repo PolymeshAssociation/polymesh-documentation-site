@@ -73,20 +73,20 @@ When no specific venue is provided for a settlement instruction, it automaticall
 Asset issuers can implement venue-based trading restrictions using the following chain methods:
 
 1. **Enabling Venue Filtering**: Use `settlement::set_venue_filtering` to activate venue restrictions for the asset
-2. **Specifying Allowed Venues**: Use `settlement::allow_venues` to create an allowlist of permitted venues
-3. **Managing Permissions**: Use `settlement::disallow_venues` to revoke trading permissions for specific venues
+2. **Managing Allowed Venues**: Use `settlement::allow_venues` and `settlement::disallow_venues` to maintain an allowlist of permitted venues
+
+When venue filtering is enabled for an asset, it works on an allowlist basis:
+
+- Only venues that have been explicitly allowed through `allow_venues` can be used for trading that asset
+- Any venue not in the allowlist will be rejected for settlement instructions involving the asset
+- The global default venue cannot be used while filtering is enabled
+- If venue filtering is enabled but no venues are in the allowlist, no trading can occur
 
 These restrictions provide issuers with:
 
 - Control over where their assets can be traded
 - Ability to ensure trading only occurs on approved or regulated venues
 - Flexibility to adjust trading permissions as needed
-
-When venue filtering is enabled for an asset:
-
-- Settlement instructions involving that asset must use an approved venue
-- Attempts to settle through non-approved venues will fail
-- The global default venue cannot be used
 
 :::note
 Venue filtering is independent of other compliance rules and transfer restrictions. Assets can have both venue restrictions and other compliance rules and transfer restrictions active simultaneously.

@@ -13,7 +13,7 @@ tags:
 
 Off-chain settlement legs in Polymesh enable the representation and verification of asset transfers that occur outside the blockchain. This can include traditional financial transactions like bank transfers, physical asset deliveries, transfers on other blockchain networks, or cross-chain settlement processes. This mechanism is essential for integrating both traditional financial infrastructure and other digital systems with Polymesh's on-chain settlement process.
 
-Each off-chain leg requires verification through a receipt signed by an authorized venue signer, providing cryptographic proof that the external transfer has occurred.
+Each off-chain leg requires a receipt signed by an authorized venue signer, providing a cryptographically signed attestation that the external transfer has occurred. While this is not a cryptographic proof of the transfer itself, it represents a trusted party's confirmation that the off-chain transfer has been completed.
 
 ## Common Use Cases
 
@@ -50,10 +50,10 @@ Settlement instructions containing off-chain legs must be associated with a spec
 
 ## Receipt Signers
 
-Receipt signers are keys authorized by a venue owner to validate off-chain transfers by signing receipts. They serve several key functions:
+Receipt signers are keys authorized by a venue owner to validate off-chain transfers by providing signed attestations. They serve several key functions:
 
-- **Transfer Validation**: Verifying that off-chain transfers have occurred
-- **Receipt Generation**: Creating signed proofs of transfer completion
+- **Transfer Validation**: Verifying and attesting that off-chain transfers have occurred
+- **Receipt Generation**: Creating signed attestations of transfer completion
 - **Settlement Integration**: Bridging external systems with on-chain settlement
 
 ### Managing Receipt Signers
