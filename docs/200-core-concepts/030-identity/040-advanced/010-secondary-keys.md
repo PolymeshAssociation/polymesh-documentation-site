@@ -2,7 +2,7 @@
 title: Secondary Keys
 description: Manage identity access by delegating specific permissions to additional keys while maintaining security and compliance through granular access control
 id: secondary-keys
-slug: /identity/advanced/keys
+slug: /identity/advanced/secondary-keys
 sidebar_label: Secondary Keys
 tags:
   - keys

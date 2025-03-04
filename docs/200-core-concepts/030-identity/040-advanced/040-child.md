@@ -45,7 +45,7 @@ There are two methods for creating child identities, each with different require
 
 Using `identity::create_child_identity`:
 
-- Requires the new child key to already be associated as a [secondary key](/identity/advanced/keys) of the parent identity
+- Requires the new child key to already be associated as a [secondary key](/identity/advanced/secondary-keys) of the parent identity
 - Immediately converts the secondary key into the primary key of the new child identity
 - No additional authorization step is needed
 - Direct and immediate creation process

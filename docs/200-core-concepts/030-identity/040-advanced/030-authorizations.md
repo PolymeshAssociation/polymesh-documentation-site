@@ -45,7 +45,7 @@ Polymesh supports several types of authorizations, each serving different permis
 
 ### Identity Management
 
-- **Join Identity**: Authorize a key to become a [secondary key](/identity/advanced/keys) with specified permissions
+- **Join Identity**: Authorize a key to become a [secondary key](/identity/advanced/secondary-keys) with specified permissions
 - **Rotate Primary Key**: Allow changing of an identity's primary key
 - **Rotate Primary to Secondary**: Convert the current primary key into a secondary key during rotation
 
@@ -74,7 +74,7 @@ Authorization requests can be created using `identity::add_authorization`. Each 
 
 In some special cases, a dedicated method may be provided to create an authorization request. For example, `multisig::add_multisig_signers_via_admin` allows a permissioned admin identity to act on behalf of the multisig to add a new signer.
 
-Some operations also support off-chain authorization signatures as an alternative to the request-approval flow. This includes adding [secondary keys](/identity/advanced/keys/#2-off-chain-authorization) and creating [child identities](/identity/advanced/child#child-identity-creation-from-unlinked-keys). These methods typically require the target key to sign specific authorization data off-chain, enabling operations to complete in a single transaction.
+Some operations also support off-chain authorization signatures as an alternative to the request-approval flow. This includes adding [secondary keys](/identity/advanced/secondary-keys/#2-off-chain-authorization) and creating [child identities](/identity/advanced/child#child-identity-creation-from-unlinked-keys). These methods typically require the target key to sign specific authorization data off-chain, enabling operations to complete in a single transaction.
 
 Each new authorization request is assigned a unique authorization ID which is used to query details of the authorization request and accept or reject it.
 

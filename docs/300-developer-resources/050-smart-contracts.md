@@ -37,6 +37,10 @@ which provides a simple UI to upload, deploy and call smart contracts.
 
 Contracts can be deployed either directly from code, or by referencing code that has been previously uploaded to the chain, via its hash.
 
+:::important
+Any key interacting with smart contracts (including deployment) must be attached to an identity with a valid CDD claim. The smart contract itself must also be attached to an identity with a valid CDD claim to function.
+:::
+
 Contracts are attached to identities as keys in Polymesh. When a contract interaction triggers a call to the native Polymesh layer (for example to interact with issued assets or act as a custodian to a users portfolio) it will do so through the DID of the identity to which it is attached, regardless of what key initiated the contract interaction.
 
 When instantiating a contract, you can choose to:

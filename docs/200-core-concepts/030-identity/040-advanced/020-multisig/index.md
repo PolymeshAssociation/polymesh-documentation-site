@@ -50,7 +50,7 @@ The basic flow for multisig operations:
 
 When a multisig is created by calling `multisig::create_multisig`:
 
-1. It's automatically added as a secondary key to the creator's identity. Optionally the creator can assign [secondary key permissions](/identity/advanced/keys/#secondary-key-permissions) to the multisig when creating.
+1. It's automatically added as a secondary key to the creator's identity. Optionally the creator can assign [secondary key permissions](/identity/advanced/secondary-keys/#secondary-key-permissions) to the multisig when creating.
 2. The creator's identity becomes the paying identity
 3. Authorization requests are sent to all designated signers
 4. Signers must accept their authorizations before participating
