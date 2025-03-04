@@ -1,6 +1,6 @@
 ---
 title: Child Identities
-description: Create subsidiary DIDs derived from a parent identity
+description: Create and manage subsidiary identities derived from a parent identity while maintaining independent control and assets
 id: child-identities
 slug: /identity/advanced/child
 sidebar_label: Child Identities
