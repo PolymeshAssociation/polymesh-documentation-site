@@ -10,8 +10,8 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="Polymesh Documentation Portal" href="/polymesh-documentation-site/opensearch.xml"><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.678f6738.css">
-<script src="/polymesh-documentation-site/assets/js/runtime~main.0737b186.js" defer="defer"></script>
-<script src="/polymesh-documentation-site/assets/js/main.9d46fcde.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/runtime~main.9ae9850e.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/main.e3e60895.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJMHT7WG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -34,6 +34,7 @@ which covers the basic approaches to managing code and storage in smart contract
 which provides a simple UI to upload, deploy and call smart contracts.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="contract-ownership">Contract Ownership<a href="#contract-ownership" class="hash-link" aria-label="Direct link to Contract Ownership" title="Direct link to Contract Ownership">​</a></h2>
 <p>Contracts can be deployed either directly from code, or by referencing code that has been previously uploaded to the chain, via its hash.</p>
+<div class="theme-admonition theme-admonition-important admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>important</div><div class="admonitionContent_BuS1"><p>Any key interacting with smart contracts (including deployment) must be attached to an identity with a valid CDD claim. The smart contract itself must also be attached to an identity with a valid CDD claim to function.</p></div></div>
 <p>Contracts are attached to identities as keys in Polymesh. When a contract interaction triggers a call to the native Polymesh layer (for example to interact with issued assets or act as a custodian to a users portfolio) it will do so through the DID of the identity to which it is attached, regardless of what key initiated the contract interaction.</p>
 <p>When instantiating a contract, you can choose to:</p>
 <ul>
