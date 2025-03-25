@@ -67,6 +67,25 @@ For example, the following rule set requires only a single rule to be satisfied:
 - Rule 4 - no sender restriction; receiver's identity is an agent of the asset.
 - Rule 5 - no sender restriction; receiver has an Exempted claim scoped to the asset from the asset issuer.
 
+## Enforce Compliance Rules
+
+### Token Studio
+
+Compliance rules can be enforced on the Token Studio's Attestations tab.
+Add one or more attestations to any Polymesh Account. Only attestations written by approved attestation providers will be checked when a tokenholder is sending or receiving your security tokens.
+
+![Attestations on Token Studio](../images/attestations_token_studio.png)
+
+### Polymesh Portal
+The Claims Page on the Polymesh Portal shows received and issued claims. You can view more details of them by clicking on the Details button, or sort them by different scopes.
+To create a new claim, click on the 'Create New Claim' button.
+
+![Claims on Polymesh Portal](../images/claims_polymesh_portal.png)
+
+Fill in the details of the claim like the target DID, scope, scope value and claim type then click on the 'Create' button and sign the transaction with your wallet. 
+
+![Create new claim](../images/create_claim_polymesh_portal.png)
+
 ## Additional Transfer Restrictions
 
 Beyond the flexible claim-based compliance manager, asset issuers can apply additional transfer restrictions to control asset trading further.
