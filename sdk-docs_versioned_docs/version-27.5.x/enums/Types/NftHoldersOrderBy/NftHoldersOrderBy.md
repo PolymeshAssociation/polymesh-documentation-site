@@ -1,0 +1,177 @@
+---
+id: "NftHoldersOrderBy"
+title: "Enumeration: NftHoldersOrderBy"
+sidebar_label: "NftHoldersOrderBy"
+---
+
+[types](../../../modules/Types/Types.md).NftHoldersOrderBy
+
+## Enumeration Members
+
+### AssetIdAsc
+
+• **AssetIdAsc** = ``"ASSET_ID_ASC"``
+
+#### Defined in
+
+[middleware/types.ts:5888](https://github.com/PolymeshAssociation/polymesh-sdk/blob/49a0066c3/src/middleware/types.ts#L5888)
+
+___
+
+### AssetIdDesc
+
+• **AssetIdDesc** = ``"ASSET_ID_DESC"``
+
+#### Defined in
+
+[middleware/types.ts:5889](https://github.com/PolymeshAssociation/polymesh-sdk/blob/49a0066c3/src/middleware/types.ts#L5889)
+
+___
+
+### CreatedAtAsc
+
+• **CreatedAtAsc** = ``"CREATED_AT_ASC"``
+
+#### Defined in
+
+[middleware/types.ts:5903](https://github.com/PolymeshAssociation/polymesh-sdk/blob/49a0066c3/src/middleware/types.ts#L5903)
+
+___
+
+### CreatedAtDesc
+
+• **CreatedAtDesc** = ``"CREATED_AT_DESC"``
+
+#### Defined in
+
+[middleware/types.ts:5904](https://github.com/PolymeshAssociation/polymesh-sdk/blob/49a0066c3/src/middleware/types.ts#L5904)
+
+___
+
+### CreatedBlockIdAsc
+
+• **CreatedBlockIdAsc** = ``"CREATED_BLOCK_ID_ASC"``
+
+#### Defined in
+
+[middleware/types.ts:5890](https://github.com/PolymeshAssociation/polymesh-sdk/blob/49a0066c3/src/middleware/types.ts#L5890)
+
+___
+
+### CreatedBlockIdDesc
+
+• **CreatedBlockIdDesc** = ``"CREATED_BLOCK_ID_DESC"``
+
+#### Defined in
+
+[middleware/types.ts:5891](https://github.com/PolymeshAssociation/polymesh-sdk/blob/49a0066c3/src/middleware/types.ts#L5891)
+
+___
+
+### IdAsc
+
+• **IdAsc** = ``"ID_ASC"``
+
+#### Defined in
+
+[middleware/types.ts:5894](https://github.com/PolymeshAssociation/polymesh-sdk/blob/49a0066c3/src/middleware/types.ts#L5894)
+
+___
+
+### IdDesc
+
+• **IdDesc** = ``"ID_DESC"``
+
+#### Defined in
+
+[middleware/types.ts:5895](https://github.com/PolymeshAssociation/polymesh-sdk/blob/49a0066c3/src/middleware/types.ts#L5895)
+
+___
+
+### IdentityIdAsc
+
+• **IdentityIdAsc** = ``"IDENTITY_ID_ASC"``
+
+#### Defined in
+
+[middleware/types.ts:5892](https://github.com/PolymeshAssociation/polymesh-sdk/blob/49a0066c3/src/middleware/types.ts#L5892)
+
+___
+
+### IdentityIdDesc
+
+• **IdentityIdDesc** = ``"IDENTITY_ID_DESC"``
+
+#### Defined in
+
+[middleware/types.ts:5893](https://github.com/PolymeshAssociation/polymesh-sdk/blob/49a0066c3/src/middleware/types.ts#L5893)
+
+___
+
+### Natural
+
+• **Natural** = ``"NATURAL"``
+
+#### Defined in
+
+[middleware/types.ts:5896](https://github.com/PolymeshAssociation/polymesh-sdk/blob/49a0066c3/src/middleware/types.ts#L5896)
+
+___
+
+### NftIdsAsc
+
+• **NftIdsAsc** = ``"NFT_IDS_ASC"``
+
+#### Defined in
+
+[middleware/types.ts:5897](https://github.com/PolymeshAssociation/polymesh-sdk/blob/49a0066c3/src/middleware/types.ts#L5897)
+
+___
+
+### NftIdsDesc
+
+• **NftIdsDesc** = ``"NFT_IDS_DESC"``
+
+#### Defined in
+
+[middleware/types.ts:5898](https://github.com/PolymeshAssociation/polymesh-sdk/blob/49a0066c3/src/middleware/types.ts#L5898)
+
+___
+
+### PrimaryKeyAsc
+
+• **PrimaryKeyAsc** = ``"PRIMARY_KEY_ASC"``
+
+#### Defined in
+
+[middleware/types.ts:5899](https://github.com/PolymeshAssociation/polymesh-sdk/blob/49a0066c3/src/middleware/types.ts#L5899)
+
+___
+
+### PrimaryKeyDesc
+
+• **PrimaryKeyDesc** = ``"PRIMARY_KEY_DESC"``
+
+#### Defined in
+
+[middleware/types.ts:5900](https://github.com/PolymeshAssociation/polymesh-sdk/blob/49a0066c3/src/middleware/types.ts#L5900)
+
+___
+
+### UpdatedBlockIdAsc
+
+• **UpdatedBlockIdAsc** = ``"UPDATED_BLOCK_ID_ASC"``
+
+#### Defined in
+
+[middleware/types.ts:5901](https://github.com/PolymeshAssociation/polymesh-sdk/blob/49a0066c3/src/middleware/types.ts#L5901)
+
+___
+
+### UpdatedBlockIdDesc
+
+• **UpdatedBlockIdDesc** = ``"UPDATED_BLOCK_ID_DESC"``
+
+#### Defined in
+
+[middleware/types.ts:5902](https://github.com/PolymeshAssociation/polymesh-sdk/blob/49a0066c3/src/middleware/types.ts#L5902)
