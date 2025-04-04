@@ -92,4 +92,4 @@ Child identities can be detached from their parent when needed. This process req
 After unlinking, the child identity loses its inherited CDD status and must obtain its own CDD claim to continue transacting on the chain.
 :::
 
-Learn more about child identities in our [SDK documentation](https://developers.polymesh.network/sdk-docs/classes/API/Entities/Identity/ChildIdentity/).
+Learn more about child identities in our [SDK documentation](/sdk-docs/classes/API/Entities/Identity/ChildIdentity).

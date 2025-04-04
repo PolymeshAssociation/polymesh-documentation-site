@@ -273,7 +273,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.vsDark,
       darkTheme: prismThemes.nightOwl,
-      additionalLanguages: ['rust', 'json', 'bash'],
+      additionalLanguages: ['rust', 'json', 'bash', 'toml'],
     },
     mermaid: {
       theme: { light: 'neutral', dark: 'dark' },
