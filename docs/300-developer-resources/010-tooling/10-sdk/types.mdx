@@ -1,0 +1,121 @@
+---
+title: Polymesh Types
+description: TypeScript type definitions for direct interaction with the Polymesh blockchain
+id: polymesh-types
+slug: /development/tooling/sdk/types
+sidebar_label: Polymesh Types
+tags:
+  - types
+  - typescript
+  - polkadot.js
+  - api
+  - development
+  - tooling
+---
+
+## Overview
+
+The `@polymeshassociation/polymesh-types` package is a crucial low-level library providing TypeScript type definitions specifically tailored for the Polymesh blockchain. It bundles the necessary type information, RPC method definitions, runtime API details, and signed extension specifications required for type-safe interaction with a Polymesh node.
+
+## Purpose and Use Cases
+
+While the main [Polymesh SDK](./) abstracts away most direct blockchain interactions, `polymesh-types` serves developers who need to work at a lower level, typically using libraries like [`@polkadot/api`](https://polkadot.js.org/docs/api/).
+
+Its primary purposes are:
+
+1.  **Type Safety:** Enables developers to interact with the Polymesh chain's unique modules, extrinsics, storage items, and events with strong TypeScript typing, reducing runtime errors and improving developer experience.
+2.  **Tooling Development:** Essential for building custom tools, explorers, or backend services that communicate directly with Polymesh nodes.
+3.  **`@polkadot/api` Integration:** Provides the `typesBundle` necessary to correctly initialize `@polkadot/api` for Polymesh, ensuring the API instance understands Polymesh-specific structures.
+
+## Target Audience
+
+You should directly use or be aware of `@polymeshassociation/polymesh-types` if you are:
+
+*   Developing applications using `@polkadot/api` directly against a Polymesh node.
+*   Building custom libraries or tooling that requires detailed knowledge of Polymesh's on-chain types and APIs.
+*   Debugging low-level interactions with the Polymesh chain.
+
+**Important:** If you are using the main `@polymeshassociation/polymesh-sdk` package, you generally **do not** need to install or configure `polymesh-types` yourself. The SDK handles type integration internally. This package primarily serves those working closer to the chain's API layer.
+
+## Key Components
+
+The package exports several key components:
+
+*   **`typesBundle`:** The most commonly used export, designed for initializing `@polkadot/api`. It contains type overrides and definitions for different chain specifications (Polkadot, Substrate, and Polymesh-specific types).
+*   **`rpc`:** Definitions for Polymesh-specific RPC methods.
+*   **`runtime`:** Definitions for Polymesh runtime API calls.
+*   **`signedExtensions`:** Specifications for Polymesh's custom signed extensions, influencing transaction construction and signing.
+
+## Versioning
+
+**Critical:** It is essential to use the version of `@polymeshassociation/polymesh-types` that **exactly matches** the targeted Polymesh node's runtime version (spec version). For example, to interact with a node running Polymesh `v7.0.x`, you must use a `@polymeshassociation/polymesh-types` version compatible with `7.0.x`.
+
+Using mismatched versions will likely result in connection errors, incorrect data interpretation, or failed transactions due to type definition inconsistencies.
+
+The source code repository organizes type definition files (like `7.0.x.json`) within the `src/types/` directory, reflecting this versioning scheme.
+
+## Usage Example with `@polkadot/api`
+
+This example shows how to initialize `@polkadot/api` for Polymesh using the `typesBundle`.
+
+```typescript title="connect.ts"
+import { ApiPromise, WsProvider } from '@polkadot/api';
+// Import from the specific chain version bundle you need
+// Usually, importing from 'bundle' is sufficient as it contains necessary overrides
+import { typesBundle } from '@polymeshassociation/polymesh-types/bundle/polkadot';
+
+async function connectToPolymesh() {
+  // Replace with your actual node WebSocket URL (e.g., from local setup or public testnet)
+  const nodeUrl = 'wss://your-polymesh-node.com';
+  const provider = new WsProvider(nodeUrl);
+
+  console.log(`Connecting to Polymesh node at ${nodeUrl}...`);
+
+  // Initialize the API Promise with the Polymesh typesBundle
+  const api = await ApiPromise.create({
+    provider,
+    typesBundle, // Inject Polymesh specific types
+  });
+
+  await api.isReady;
+
+  console.log(
+    `Connected to chain ${api.runtimeChain} using spec ${api.runtimeVersion.specName} v${api.runtimeVersion.specVersion}`
+  );
+
+  // Example: Fetching chain info with type safety
+  const chainProps = await api.rpc.system.properties();
+  // Autocomplete and type checking should work for Polymesh specific properties if available via RPC
+  console.log(`Token symbol: ${chainProps.tokenSymbol}`); // e.g., POLYX
+  console.log(`Token decimals: ${chainProps.tokenDecimals}`);
+
+  // Example: Querying storage (type safety depends on correct bundle)
+  const currentBlock = await api.rpc.chain.getBlock();
+  console.log(`Current block number: ${currentBlock.block.header.number}`);
+
+  // Example: Accessing a Polymesh specific module (e.g., identity)
+  // Note: Arguments and return types will be typed according to the bundle
+  // const someDid = '0x...';
+  // const didRecord = await api.query.identity.didRecords(someDid);
+  // console.log('DID Record:', didRecord.toHuman());
+
+  await api.disconnect();
+}
+
+connectToPolymesh().catch(error => {
+  console.error('Failed to connect:', error);
+  process.exit(1);
+});
+```
+
+## Relationship to Polymesh SDK
+
+The primary `@polymeshassociation/polymesh-sdk` package uses `polymesh-types` internally. It provides higher-level abstractions (Entities like `Asset`, `Identity`, `Portfolio`; Namespaces like `assets`, `identities`) that simplify common operations and hide much of the direct `@polkadot/api` interaction.
+
+If you are using the SDK, you benefit from the type safety provided by `polymesh-types` without needing to manage the `typesBundle` or interact with `@polkadot/api` directly for most tasks. Stick to the SDK's methods unless you have a specific need for lower-level access.
+
+## Links
+
+*   **GitHub Repository:** [`polymesh-types`](https://github.com/PolymeshAssociation/polymesh-types)
+*   **Polymesh SDK Documentation:** [`/development/tooling/sdk`](/development/tooling/sdk)
+*   **`@polkadot/api` Documentation:** [`https://polkadot.js.org/docs/api/`](https://polkadot.js.org/docs/api/)
