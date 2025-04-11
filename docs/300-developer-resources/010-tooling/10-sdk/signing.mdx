@@ -128,10 +128,9 @@ Polymesh provides several official Signing Manager implementations:
 | **Approval**                       | Node.js          | Workflows requiring explicit approval steps    | Adds Operational Ctrl | Wraps another manager |
 | **WalletConnect**                  | Browser/Node.js  | dApps interacting with mobile wallets        | Medium-High           | Mobile Wallet         |
 
-## Basic Usage Examples
+## Basic Usage Example
 
-<Tabs>
-<TabItem value="local" label="Local Signing Manager (Development)" default>
+### Local Signing Manager (Development)
 
 ```typescript
 import { Polymesh } from '@polymeshassociation/polymesh-sdk';
@@ -148,7 +147,8 @@ async function main() {
   });
 
   // Use the SDK...
-  const signingAccount = await signingManager.getAccounts()[0];
+  const accounts = await signingManager.getAccounts();
+  const signingAccount = accounts[0];
   console.log('Signing Account Address:', signingAccount);
 
   // Example: Get balance
@@ -161,64 +161,6 @@ async function main() {
 
 main().catch(console.error);
 ```
-
-</TabItem>
-<TabItem value="browser" label="Browser Extension (Web dApp)">
-
-```typescript
-import { Polymesh } from '@polymeshassociation/polymesh-sdk';
-import { BrowserExtensionSigningManager } from '@polymeshassociation/browser-extension-signing-manager';
-
-async function main() {
-  // Ensure this code runs in a browser environment where the extension is present
-  if (typeof window === 'undefined' || !window.injectedWeb3) {
-    console.error('Polymesh Wallet extension not found.');
-    return;
-  }
-
-  const appName = 'My Awesome Polymesh dApp';
-  const signingManager = await BrowserExtensionSigningManager.create(appName);
-
-  const sdk = await Polymesh.connect({
-    nodeUrl: 'wss://your-polymesh-node-url', // Replace with actual node URL
-    signingManager,
-  });
-
-  // Get available accounts from the extension (user must authorize)
-  const accounts = await signingManager.getAccounts();
-  if (!accounts.length) {
-    console.error('No accounts authorized in the Polymesh Wallet extension.');
-    await sdk.disconnect();
-    return;
-  }
-
-  // Use the first authorized account for signing
-  sdk.setSigningAccount(accounts[0]);
-
-  console.log('Using account:', accounts[0]);
-  const identity = await sdk.getSigningIdentity();
-  console.log('Identity:', identity?.did);
-
-  // Example: Reserve a ticker (will prompt user in extension)
-  try {
-    const ticker = 'MYDAPPTOKEN';
-    const reserveTx = await sdk.assets.reserveTicker({ ticker });
-    console.log('Reserving ticker...');
-    await reserveTx.run();
-    console.log(`Ticker ${ticker} reserved successfully!`);
-  } catch (error) {
-    console.error('Error reserving ticker:', error);
-  }
-
-  await sdk.disconnect();
-}
-
-main().catch(console.error);
-
-```
-
-</TabItem>
-</Tabs>
 
 ## Offline Signing
 
