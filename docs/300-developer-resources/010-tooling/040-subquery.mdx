@@ -43,8 +43,8 @@ You can explore the schema and run queries using tools like GraphQL Playground o
 **Example Query (Conceptual):**
 
 ```graphql
-query hodersByAsset {
-  assetHolders(filter: { assetId: { equalTo: "$ticker" } }) {
+query holdersByAsset {
+  assetHolders(filter: { assetId: { equalTo: "0x..." } }) {
     nodes {
       identityId
       assetId
