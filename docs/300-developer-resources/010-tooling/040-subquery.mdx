@@ -43,17 +43,15 @@ You can explore the schema and run queries using tools like GraphQL Playground o
 **Example Query (Conceptual):**
 
 ```graphql
-query GetAssetHolders($ticker: String!) {
-  assets(filter: { ticker: { equalTo: $ticker } }) {
+query hodersByAsset {
+  assetHolders(filter: { assetId: { equalTo: "$ticker" } }) {
     nodes {
-      ticker
-      name
-      holders(orderBy: BALANCE_DESC, first: 10) {
-        nodes {
-          identityId
-          balance
-        }
+      identityId
+      assetId
+      asset {
+        ticker
       }
+      amount
     }
   }
 }

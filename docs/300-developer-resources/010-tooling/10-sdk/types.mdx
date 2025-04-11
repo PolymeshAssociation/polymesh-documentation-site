@@ -60,9 +60,8 @@ This example shows how to initialize [`@polkadot/api`](../050-polkadot-api.mdx) 
 
 ```typescript title="connect.ts"
 import { ApiPromise, WsProvider } from '@polkadot/api';
-// Import from the specific chain version bundle you need
-// Usually, importing from 'bundle' is sufficient as it contains necessary overrides
-import { typesBundle } from '@polymeshassociation/polymesh-types/bundle/polkadot';
+// Import from the polymesh-types package
+import { typesBundle } from '@polymeshassociation/polymesh-types';
 
 async function connectToPolymesh() {
   // Replace with your actual node WebSocket URL (e.g., from local setup or public testnet)
