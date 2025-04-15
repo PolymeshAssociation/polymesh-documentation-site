@@ -1,142 +1,111 @@
 ---
 title: Corporate Actions
-description: Corporate Action Management
+description: Manage on-chain events like distributions and voting related to assets
 id: corporate-actions-index
 slug: /corporate-actions
 sidebar_label: Corporate Actions
 tags:
-  - corporate
-  - actions
+  - corporate actions
+  - management
+  - distributions
+  - voting
 ---
+
+import DocCardList from '@theme/DocCardList';
 
 ## Overview
 
-[ca]: https://en.wikipedia.org/wiki/Corporate_action
-[agm]: https://en.wikipedia.org/wiki/Annual_general_meeting
-[asset]: ../assets/
-[pallet_ca]: https://docs.polymesh.live/pallet_corporate_actions/index.html
-[pallet_ballot]: https://docs.polymesh.live/pallet_corporate_actions/ballot/index.html
-[pallet_dist]: https://docs.polymesh.live/pallet_corporate_actions/distribution/index.html
-[checkpoints]: ../assets/#checkpoints
-[`initiate_corporate_action`]: https://docs.polymesh.live/pallet_corporate_actions/enum.Call.html#variant.initiate_corporate_action
-[`reset_caa`]: https://docs.polymesh.live/pallet_corporate_actions/enum.Call.html#variant.remove_ca
-[`change_record_date`]: https://docs.polymesh.live/pallet_corporate_actions/enum.Call.html#variant.change_record_date
-[`set_default_withholding_tax`]: https://docs.polymesh.live/pallet_corporate_actions/enum.Call.html#variant.set_default_withholding_tax
-[`set_did_withholding_tax`]: https://docs.polymesh.live/pallet_corporate_actions/enum.Call.html#variant.set_did_withholding_tax
-[`set_default_targets`]: https://docs.polymesh.live/pallet_corporate_actions/enum.Call.html#variant.set_default_targets
-[`link_ca_doc`]: https://docs.polymesh.live/pallet_corporate_actions/enum.Call.html#variant.link_ca_doc
-[`distribute`]: https://docs.polymesh.live/pallet_corporate_actions/distribution/enum.Call.html#variant.distribute
-[`claim`]: https://docs.polymesh.live/pallet_corporate_actions/distribution/enum.Call.html#variant.claim
-[`push_benefit`]: https://docs.polymesh.live/pallet_corporate_actions/distribution/enum.Call.html#variant.push_benefit
-[`reclaim`]: https://docs.polymesh.live/pallet_corporate_actions/distribution/enum.Call.html#variant.reclaim
-[`remove_distribution`]: https://docs.polymesh.live/pallet_corporate_actions/distribution/enum.Call.html#variant.remove_distribution
-[`attach_ballot`]: https://docs.polymesh.live/pallet_corporate_actions/ballot/enum.Call.html#variant.attach_ballot
-[rcv]: https://en.wikipedia.org/wiki/Ranked_voting
-[`change_end`]: https://docs.polymesh.live/pallet_corporate_actions/ballot/enum.Call.html#variant.change_end
-[`change_meta`]: https://docs.polymesh.live/pallet_corporate_actions/ballot/enum.Call.html#variant.change_meta
-[`change_rcv`]: https://docs.polymesh.live/pallet_corporate_actions/ballot/enum.Call.html#variant.change_rcv
-[`remove_ballot`]: https://docs.polymesh.live/pallet_corporate_actions/ballot/enum.Call.html#variant.remove_ballot
-[`vote`]: https://docs.polymesh.live/pallet_corporate_actions/ballot/enum.Call.html#variant.vote
+Corporate Actions (CAs) are events initiated by an asset issuer that affect the asset or its holders. Polymesh provides a framework for managing various CAs on-chain, automating processes like [capital distributions](/corporate-actions/distributions) and [shareholder voting](/corporate-actions/on-chain-voting).
 
-In the lifecycle of publicly traded companies, e.g., stocks in ACME Inc., there are what is known as [_corporate actions_ (CAs)][ca]. Examples of these include dividend payments, stock splits, and ballot for the [_annual general meeting_ (AGM)][agm].
+The Polymesh Corporate Actions functionality is primarily handled by three pallets:
 
-Assuming ACME has been digitized as an [asset through that pallet][asset], Polymesh can manage some types of CAs as well for you.
+1.  **`corporateAction`**: The base layer for initiating CAs, managing record dates, linking documents, and defining core parameters like taxes and target identities.
+2.  **`capitalDistribution`**: Manages the distribution of benefits (payments, dividends, interest, etc.) linked to a CA. See [Capital Distribution](/corporate-actions/distributions).
+3.  **`corporateBallot`**: Handles on-chain voting linked to a CA. See [On-Chain Voting](/corporate-actions/on-chain-voting).
 
-This is handled through three pallets:
+:::info Regulatory Compliance
+Corporate actions may trigger registration or filing requirements with applicable securities regulators or other governmental authorities. Always consult with legal and financial advisors before initiating a corporate action.
+:::
 
-1. [Corporate Actions][pallet_ca], which is the base layer handling setups, CA initiation, documents linking, and removal.
-2. [Ballots][pallet_ballot], through which corporate ballots for AGMs can be conducted.
-3. [Capital Distributions][pallet_dist], through which benefits, e.g., dividends, can be distributed to investors.
+## Core Concepts
 
-Now let's dig into the details!
+- **Corporate Action (CA)**: An on-chain record representing an event related to a specific [asset](/assets). Each CA has a unique ID (`CAId`) composed of the asset's internal `AssetId` (UUID) and a sequential ID specific to that asset. The sequential ID is automatically assigned when a CA is created, starting at 0 and incrementing for each new CA associated with the same asset. When referencing a CA in API calls, both the asset ID and this local sequential ID are required to uniquely identify the specific corporate action.
+- **Corporate Action Agent (CAA)**: An identity authorized to manage CAs for an asset. By default, this is the asset issuer, but it can be delegated to another identity as an [Agent](/external-agents) of the asset.
+- **Record Date**: The specific point in time, defined by a [Checkpoint](/corporate-actions/checkpoints), used to determine holder entitlements (e.g., who receives dividends or can vote).
+- **CA Kind**: The type of corporate action, determining its purpose and associated functionality (e.g., `IssuerNotice`, `Reorganization`, `PredictableBenefit`, `UnpredictableBenefit`, `Other`).
+- **Declaration Date**: The date the CA was officially declared by the issuer (off-chain). Recorded for informational purposes.
+- **Taxes**: Optional withholding tax percentages (default and DID-specific) applied to distributions.
+- **Targets**: The set of identities eligible to participate in the CA. By default, all asset holders are targeted, but this can be customized (e.g., include/exclude specific identities).
+- **Documents**: Off-chain documents (e.g., prospectuses, notices) can be linked to a CA for reference.
 
-### Initiating a corporate action
+## Corporate Action Lifecycle
 
-All CAs start with [`initiate_corporate_action`], a dispatchable function that creates a CA.
-When creating the CA, the associated asset's ticker, free-form text, and the CA kind, e.g., a notice or a benefit need to be provided.
+### 1. (Optional) Set Asset-Level Defaults
 
-A declaration date should also be provided when initiating a corporate action. This is the date that the corporate action was declared, and should be earlier than both the record date, and the time when the corporate action is initiated on-chain.
+To simplify repeated CA creation, the CAA can set default configurations at the asset level:
 
-Additionally, a record date, withholding taxes, and the targets of the CA can be specified.
+- **Default Withholding Tax**: Use `corporateAction::set_default_withholding_tax` to set a standard tax rate for distributions related to this asset.
+- **DID-Specific Withholding Tax**: Use `corporateAction::set_did_withholding_tax` to set custom tax rates for specific identities.
+- **Default Targets**: Use `corporateAction::set_default_targets` to define a standard set of included/excluded identities for CAs of this asset.
 
-For more on those, read on.
+:::info Immutability of CA Parameters after Creation
+When a CA is created, the asset-level defaults (target identities and tax withholding) are **copied** into the CA structure. Subsequent changes to asset-level defaults will only affect future CAs, not existing ones.
 
-#### Corporate Action Agent (CAA)
+- You can modify asset-level defaults at any time using the functions above
+- Changes to defaults don't affect existing CAs or their active distributions
+- Once a CA is created, most of its parameters (including targets and tax settings) cannot be modified
+- Only the record date can be modified (using `change_record_date`) and only before a distribution starts
 
-The function must be called by the asset's _corporate action agent_ (CAA). By default, the CAA is the asset's owner. Using the authorization system, this can be changed, assigning someone else as CAA.
+This design ensures that ongoing distributions maintain consistent parameters throughout their lifecycle, regardless of changes to asset-level defaults.
+:::
 
-When the owner is not CAA, they can no longer initiate CAs, tweak the setup, ballots, distributions, or related functionality. Who the CAA is can be reset, however, using the dispatchable [`reset_caa`].
+### 2. Initiate Corporate Action
 
-#### Record Dates & Checkpoints
+This is the **essential first step** for any on-chain distribution or voting process. The CAA creates the CA record using `corporateAction::initiate_corporate_action`.
 
-Supposing that ACME is traded frequently, it would be difficult to know the entitlement of each investor in a distribution, or how much voting power each holder can use in an ballot.
-To provide these services with stable reference points, the CA pallet uses [checkpoints](/assets/fungible#checkpoints) to determine an investor's balance and the total supply.
-For CAs, the checkpoint used is known as the _record date_, and is specified when creating the CA.
+**Parameters**:
 
-A record date can be specified in one of three ways:
+- `asset_id`: The internal `AssetId` (UUID) of the target asset.
+- `kind`: The type of Corporate Action:
+  - `PredictableBenefit`/`UnpredictableBenefit`: For distributions like dividends
+  - `IssuerNotice`: For ballots/voting
+  - `Reorganization`: For reorganization of tokens
+  - `Other`: For generic uncategorised CAs
+- `decl_date`: The off-chain declaration date (timestamp).
+- `details`: Free-form text description (bytes) (max length defined by `maxDetailsLength`).
+- `targets` (Optional): Specify target identities if different from the asset default or all holders.
+- `default_withholding_tax` (Optional): Override the asset's default tax rate for this CA.
+- `withholding_tax` (Optional): Provide DID-specific tax rates for this CA, overriding asset defaults.
+- `record_date` (Optional): Specifies the checkpoint to use as the record date. Can be:
+  - An existing Checkpoint ID.
+  - A future timestamp for a scheduled Checkpoint.
+  - An existing Checkpoint Schedule ID.
+    If omitted, the checkpoint created at the time of initiation is used.
 
-1. By providing an existing checkpoint, created in the past.
-2. Specifying a scheduled time at which a checkpoint should be created.
-3. Providing an existing irremovable schedule.
+**Effects**:
 
-Once a CA has been initiated, assuming the services attached to the CA, such as a ballot or a distribution, permit, the record date can still be changed using the dispatchable [`change_record_date`].
+- Creates the CA record on-chain with a unique `CAId`.
+- Establishes the core parameters (kind, record date, taxes, targets) for subsequent actions like distributions or voting.
 
-#### Taxes
+### 3. Attach Specific Functionality (Distribution/Voting)
 
-Some CAs have taxable components. Chief among them are dividends, where the investor receives income by holding the asset. In some jurisdictions, it is the responsibility of the issuer, or the CAA to deduct tax from any dividends and send it to the relevant government. For example, if ACME is based in Sweden, 20% tax would apply.
+Once the CA is initiated, specific functionality can be attached based on its `kind`:
 
-Polymesh can handle this _withholding tax_ natively, allowing you to specify how many % that should be withheld. This % can either be specified generally for all investors (the _default withholding tax_), or customized to specific individual investors (_DID-specific withholding tax_).
+- **For `PredictableBenefit`, `UnpredictableBenefit`**: Attach a distribution using `capitalDistribution::distribute` (or use the combined `corporateAction::initiate_corporate_action_and_distribute`). See [Capital Distribution](/corporate-actions/distributions) for details.
+- **For `IssuerNotice`**: Attach a ballot using `corporateBallot::attach_ballot` (or use the combined `corporateAction::initiate_corporate_action_and_ballot`). See [On-Chain Voting](/corporate-actions/on-chain-voting) for details.
 
-When the same taxes are used over and over again for many CAs, the process can be simplified by specifying asset level defaults. This is achieved using [`set_default_withholding_tax`] and [`set_did_withholding_tax`], where the former is general and the latter is DID-specific.
+:::tip Combined Initiation and Distribution
+For convenience, the `corporateAction` pallet provides the `initiate_corporate_action_and_distribute` and `initiate_corporate_action_and_ballot` extrinsics. These allows the Corporate Action Agent to initiate the CA (providing target `AssetId`, etc.) and create the associated distribution or ballot in a single transaction.
+:::
 
-#### Targeted investors
+### 4. Manage the Corporate Action (Optional)
 
-By default, a CA for some asset will apply to, or _target_, every investor holding any asset balance. Sometimes however, for whatever reason, some identities must be excluded from the target set. When creating a CA, the target set can either be specified inclusively, or alternatively, a set of identities can be excluded explicitly. As with taxes, an asset level default can also be set, using [`set_default_targets`].
+After initiation, the CAA can manage certain aspects:
 
-#### Linked Documentation
+- **Change Record Date**: Use `corporateAction::change_record_date` to modify the record date _before_ the associated distribution/ballot starts, provided the CA `kind` allows it.
+- **Link Documents**: Use `corporateAction::link_ca_doc` to link supporting documents to the corporate action.
+- **Remove Corporate Action**: Use `corporateAction::remove_ca` to remove a CA, typically after it's completed or if it needs to be cancelled before activation. This will also remove any associated distributions or ballots if they haven't yet started.
 
-Where the free-form text is insufficient, or existing documentation relevant for the CA already exists, asset documentation can instead be linked to the CA. Supposing that both a CA and asset documents already exist, they can be related using [`link_ca_doc`], linking the CA to a list of documents.
+## Further Reading
 
-### Capital distribution
-
-Polymesh can do more than merely record CAs on-chain. A capital distribution, such as paying a dividend to investors, can also be handled natively. Once CA of the predictable or unpredictable benefit kind has been created, the dispatchable [`distribute`], in the [capital distributions pallet][pallet_dist], is used to attach a distribution to the CA.
-
-When calling `distribute`, the CA, an amount of a currency to distribute from a portfolio of the CAA, and the start / expiry dates of the distribution, are specified.
-
-Once a distribution exists, and the start time is due, investors can use [`claim`] before any expiry date to pull their benefit to their default portfolio. However, the CAA, or the owner, can also use [`push_benefit`] to push benefits to investors. Once the distribution has expired, the distribution creator can [`reclaim`] any remaining balance.
-
-Before a distribution has started, it can also be cancelled, using [`remove_distribution`].
-
-### Corporate Ballots
-
-Polymesh can also handle ballots on-chain. For example, a corporation's annual general meeting can be conducted using ballots.
-
-#### Ballot Structure
-
-A ballot has a start and end date, during which investors can vote on motions included in the ballot. These motions in turn are associated with descriptions and links to more information.
-
-More importantly, however, motions contain choices, e.g., a) _"aye"_, b) _"aye with X amendment"_, and c) _"nay"_, to which weights can be assigned. These weights or votes are based on how many tokens each investor holds. For example, an investor with 200 tokens will have 200 votes and one with 100 tokens has 100. Those 200 votes could be assigned like so: a) 50, b) 150, c) 0.
-
-Motions are independent of each other. For example, consider a vote on who should be in the board of directors, and a motion to discharge the old board from liability. These would be independent, and therefore, all 200 tokens can be reused on each motion.
-
-Optionally, a ballot can be configured with [_ranked-choice voting (RCV)_][rcv]. This allows voters to specify that the weight, assigned to a choice not making it, should fall back to a different choice. For example, consider 3 choices paired with weights:
-
-- a) 49 votes, no fallback
-- b) 100 votes, fallback to a)
-- c) 120 votes, no fallback.
-
-In this case, c) initially has most weight assigned to it. However, once a) has been discarded, the 49 votes it would move over to b), which now has 149 votes in total. Therefore, b) becomes the adopted choice.
-
-#### Getting Started
-
-Now let's go over how a ballot can be made, tweaked, and voted on. Once a CA of the notice kind has been created, the a ballot can be attached using [`attach_ballot`]. This function will take the aforementioned details such as the motion data.
-
-After the ballot has been created, but before voting has started, the ballot's configuration may be amended, in 3 ways:
-
-- [`change_end`] to change when no more votes will be accepted,
-- [`change_meta`] to change the title and the motions,
-- and [`change_rcv`] to change whether RCV is supported or not.
-
-Moreover, before the start, the ballot can be removed using [`remove_ballot`].
-
-Once the start date is due, any token holder can use [`vote`] to assign votes to all choices. Investors can vote as many times as they want, regretting their choices, until the end is due.
+<DocCardList />
