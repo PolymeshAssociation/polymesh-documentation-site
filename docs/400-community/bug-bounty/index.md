@@ -14,7 +14,7 @@ tags:
 Welcome to the Polymesh Bug Bounty Program.
 Polymesh is the software that powers the nodes of the Polymesh blockchain. We want Polymesh to be robust and be the best it can be. This is where we need your help, to assist us in finding bugs and vulnerabilities. Confirmed bugs or vulnerabilities will get monetary rewards (bounty). Please see our Rules & Rewards section for more details.
 
-To get started, Read the [Rules](/community/bug-bounty/rules) and the [Core Concepts](/core-concepts/) and [Developer Resources](/development) documentation, to learn about how to setup Polymesh and how to approach the bug bounty program.
+To get started, Read the [Rules](/community/bug-bounty/rules) and the Core Concepts and [Developer Resources](/development) documentation, to learn about how to setup Polymesh and how to approach the bug bounty program.
 
 Having some prior knowledge about capital markets and Rust language can be beneficial. If you have still have any questions, reach out to us on our [Discord server](https://discord.gg/ud2deWAnyt), or email us at [bugbounty@polymesh.network](mailto:bugbounty@polymesh.network).
 
