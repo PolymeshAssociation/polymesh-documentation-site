@@ -10,6 +10,10 @@ tags: ['confidential-assets', 'overview']
 
 ## Overview
 
+:::note Polymesh Private Feature
+Confidential Assets are exclusively available on [Polymesh Private](/polymesh-private) deployments and are not currently supported on the public Polymesh network.
+:::
+
 Confidential Assets in Polymesh enable users to transact in assets using a shared global ledger while preserving the privacy of asset balances and transaction amounts.
 
 Confidential Assets offer a range of features tailored for use across regulated markets, including:

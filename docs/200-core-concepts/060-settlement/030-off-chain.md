@@ -104,6 +104,7 @@ When generating an off-chain receipt, the following information must be encoded 
 3. **Receipt Assembly**:
    - The final receipt combines:
      - The receipt UID
+     - The instruction ID
      - The leg ID
      - The signer's information
      - The generated signature
