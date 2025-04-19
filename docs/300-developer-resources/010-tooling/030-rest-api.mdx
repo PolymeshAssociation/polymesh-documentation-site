@@ -1,0 +1,261 @@
+---
+title: REST API
+description: Interact with the Polymesh blockchain via a standard RESTful API
+id: rest-api
+slug: /development/tooling/rest-api
+sidebar_label: REST API
+tags:
+  - development
+  - api
+  - rest
+---
+
+## Overview
+
+The Polymesh REST API provides a developer-friendly interface to interact with the Polymesh blockchain using standard HTTP requests. This API allows you to perform a wide range of operations without needing to interact directly with the lower-level blockchain protocols or the Polymesh SDK, making it accessible from virtually any programming language.
+
+The API is open source and [available on GitHub](https://github.com/PolymeshAssociation/polymesh-rest-api/).
+
+Built on Polymesh, an institutional-grade permissioned blockchain for regulated assets, the REST API offers endpoints covering core functionalities:
+
+-   **Identity Management**: Query identity details, associated keys, claims, and permissions. Register new identities (if authorized).
+-   **Asset Management**: Create, issue, manage, and query both fungible assets and non-fungible tokens (NFTs). Handle asset documents, ownership transfers, and metadata.
+-   **Compliance**: Define, manage, and query compliance rules, requirements, and trusted claim issuers for assets.
+-   **Settlement**: Create and manage settlement instructions and trading venues. Affirm, reject, and execute settlements.
+-   **Corporate Actions**: Initiate and manage dividend distributions, query corporate action configurations, and handle payments/claims.
+-   **Transactions**: Submit pre-signed transactions generated offline or trigger transactions signed by a configured Signing Manager (like HashiCorp Vault or local keys).
+-   **Network Information**: Query network status, block details, transaction history, and account balances.
+-   **Portfolio Management**: Create, manage, and query asset portfolios associated with identities.
+-   **Staking & Governance**: (Functionality may vary depending on API version) Interact with staking operations and governance proposals.
+
+This API is ideal for developers building applications, backend integrations, or scripts that need to interface with Polymesh using familiar RESTful patterns.
+
+:::note Try it Locally!
+Want to run the examples below? Follow the [**Local Development Environment Setup Guide**](/development/tooling/local-setup) to run a complete Polymesh stack (node, indexer, REST APIs) using Docker on your machine. The local setup provides the REST API endpoints (e.g., `http://localhost:3005` for Vault-backed signing) used in the examples.
+:::
+
+## The Value of a Blockchain REST API
+
+Providing a RESTful interface to a sophisticated blockchain like Polymesh offers distinct advantages. Traditionally, blockchain interaction requires specialized libraries (like SDKs specific to a language) or direct interaction with node RPC endpoints, potentially involving intricate data encoding and transaction construction.
+
+A REST API simplifies this significantly:
+
+1.  **Accessibility**: Developers can use any programming language or tool capable of making HTTP requests (e.g., `curl`, Python `requests`, JavaScript `fetch`, Postman), eliminating the need to learn blockchain-specific libraries for basic interactions.
+2.  **Faster Integration**: Integrating Polymesh capabilities into existing applications (web services, enterprise systems) becomes much quicker, leveraging established patterns for API consumption.
+3.  **Reduced Complexity**: The API handles lower-level details like transaction formatting and interaction with the underlying SDK or node, presenting developers with clearer, resource-oriented endpoints.
+4.  **Standardization**: It follows familiar REST principles (standard HTTP methods, status codes, JSON request/response bodies), making it intuitive for a broad range of developers.
+
+This approach allows developers to focus on their application logic rather than the intricacies of blockchain communication, accelerating development and broadening the potential ecosystem of integrated tools and services.
+
+## Authentication
+
+Secure endpoints typically require authentication, often via an API key provided in request headers (e.g., `x-api-key`). The API includes endpoints for managing these keys (`/auth/api-key/*`). Check the documentation for your specific API deployment regarding how to obtain and use authentication credentials. Public data endpoints might not require authentication.
+
+## Signing Transactions
+
+Many state-changing operations (POST, PUT, DELETE) require transaction signing. The REST API manages this through an `options` object in the request body, specifying the `signer` and `processMode`.
+
+```json title="Example Options Object"
+{
+  "options": {
+    "signer": "signer-name-or-address", // Identifies the key to sign with
+    "processMode": "submit" // Controls how the transaction is handled
+  },
+  // ... other request parameters
+}
+```
+
+-   **`signer`**: Specifies which key, managed by the API's configured Signing Manager (e.g., local mnemonic, Vault key like `signer1-1`), should authorize the transaction.
+-   **`processMode`**: Determines execution flow:
+    -   `submit`: Sign, send, and wait for inclusion/failure.
+    -   `offline`: Return the unsigned transaction payload for external signing.
+    -   `submitWithCallback`: Submit and return immediately; results sent via webhook.
+    -   `dryRun`: Simulate without submitting.
+
+The API server uses its Signing Manager to perform the cryptographic signing based on the `signer` identifier.
+
+## Key Features
+
+The API provides endpoints grouped around core Polymesh functionalities:
+
+-   **Assets (`/assets/`)**: Create, issue, query, manage metadata, documents, ownership, compliance, and corporate actions for fungible assets.
+-   **NFTs (`/nfts/`)**: Manage NFT collections and individual non-fungible tokens.
+-   **Identities (`/identities/`)**: Manage on-chain identities, keys, permissions, claims, and related entities like portfolios and authorizations.
+-   **Accounts (`/accounts/`)**: Handle POLYX balances, transfers, transaction history, and account-specific permissions or subsidies.
+-   **Transactions (`/transactions/`)**: Submit externally signed transactions or query transaction status by hash.
+-   **Settlement (`/settlements/`, `/venues/`, `/instructions/`)**: Manage trading venues and the lifecycle of settlement instructions.
+-   **Compliance (`/compliance-requirements/`, `/trusted-claim-issuers/`)**: Configure and query asset compliance rules.
+-   **Corporate Actions (`/corporate-actions/`)**: Handle dividends, checkpoints, and other corporate events linked to assets.
+-   **Network (`/network/`)**: Retrieve blockchain status, block details, and configuration.
+-   **Signer (`/signer/`)**: Map configured signer names to their blockchain addresses.
+-   **Authentication (`/auth/`, `/users/`)**: Manage API access credentials (specific to deployment).
+
+## Using the API with `curl`
+
+These examples demonstrate basic interactions. Assume the API is running at `http://localhost:3005` (as provided by the local development setup using Vault). Set the `REST_API_BASE_URL` environment variable. Use `jq` to pretty-print JSON responses.
+
+```bash
+export REST_API_BASE_URL="http://localhost:3005"
+# Optional: Set API key if needed
+# export MY_API_KEY="your-api-key-here"
+# Add header: -H "x-api-key: ${MY_API_KEY}" to curl commands if needed
+```
+
+### Example 1: Get Network Properties
+
+Fetch basic information about the connected Polymesh network.
+
+```bash
+curl -s -X GET "${REST_API_BASE_URL}/network" \
+  -H "accept: application/json" | jq
+```
+
+**Example Response:**
+
+```json
+{
+  "name": "Development",
+  "version": "9",
+  "genesisHash": "0x..."
+}
+```
+
+### Example 2: Get Asset Details
+
+Fetch details for asset `MYASSET`. Replace with a valid ticker or Asset ID (e.g., one created via the local setup scripts or a previous API call).
+
+```bash
+export ASSET_ID="MYASSET" # Replace with an actual Ticker or Asset ID
+
+curl -s -X GET "${REST_API_BASE_URL}/assets/${ASSET_ID}" \
+  -H "accept: application/json" | jq
+```
+
+**Example Response (structure):**
+
+```json
+{
+  "assetId": "unique-asset-id-string",
+  "ticker": "MYASSET",
+  "owner": "0x...",
+  "assetType": "EquityCommon",
+  "name": "My Example Asset",
+  "totalSupply": "1000000",
+  "isDivisible": true,
+  "securityIdentifiers": [
+    {
+      "type": "Isin",
+      "value": "US123..."
+    }
+  ],
+  "fundingRound": "Series A",
+  "isFrozen": false,
+  "agents": [
+    "0x..."
+  ]
+}
+```
+
+### Example 3: Get Identity Details
+
+Fetch details for an identity by DID. Replace `0x...` with a valid DID (e.g., one associated with `signer1-1` from the local setup).
+
+```bash
+# First get the DID for signer1-1 (assuming Vault setup)
+SIGNER1_ADDR=$(curl -s -X GET "${REST_API_BASE_URL}/signer/signer1-1" -H "accept: application/json" | jq -r .address)
+TARGET_DID=$(curl -s -X GET "${REST_API_BASE_URL}/accounts/${SIGNER1_ADDR}/identity" -H "accept: application/json" | jq -r .did)
+
+echo "Querying DID: $TARGET_DID"
+
+curl -s -X GET "${REST_API_BASE_URL}/identities/${TARGET_DID}" \
+  -H "accept: application/json" | jq
+```
+
+**Example Response (structure):**
+
+```json
+{
+  "did": "0x...",
+  "primaryAccount": {
+    "account": {
+      "signerType": "Account",
+      "address": "5..."
+    },
+    "permissions": {
+      /* ... full permissions ... */
+    }
+  },
+  "secondaryAccounts": [
+    // ... list of secondary accounts if any ...
+  ],
+  "secondaryAccountsFrozen": false
+}
+```
+
+### Example 4: Transfer POLYX
+
+Transfers 50 POLYX from the account managed by `signer1-1` (Vault SM) to the account managed by `signer2-1`.
+
+```bash
+# Get recipient address (assuming signer2-1 is configured)
+SIGNER2_ADDRESS=$(curl -s -X GET "${REST_API_BASE_URL}/signer/signer2-1" -H "accept: application/json" | jq -r .address)
+
+if [ -z "$SIGNER2_ADDRESS" ] || [ "$SIGNER2_ADDRESS" == "null" ]; then
+  echo "Error: Could not resolve address for signer2-1. Make sure local dev setup completed."
+else
+  echo "Recipient (signer2-1) Address: $SIGNER2_ADDRESS"
+
+  # Prepare JSON payload
+  JSON_PAYLOAD=$(cat <<EOF
+  {
+    "options": {
+      "signer": "signer1-1",
+      "processMode": "submit"
+    },
+    "to": "$SIGNER2_ADDRESS",
+    "amount": "50",
+    "memo": "REST API Transfer Example"
+  }
+EOF
+  )
+
+  echo "Submitting POLYX Transfer:"
+  # Send the POST request and pretty-print the JSON response
+  curl -s -X POST "${REST_API_BASE_URL}/accounts/transfer" \
+    -H "Content-Type: application/json" \
+    -H "accept: application/json" \
+    -d "$JSON_PAYLOAD" | jq
+fi
+```
+
+**Example Response (structure):**
+
+```json
+{
+  "transactions": [
+    {
+      "blockHash": "0x...",
+      "transactionHash": "0x...",
+      "blockNumber": "...",
+      "type": "single",
+      "transactionTag": "balances.transferWithMemo"
+    }
+  ],
+  "details": {
+    "status": "Succeeded",
+    "fees": {
+      "protocol": "0",
+      "gas": "...",
+      "total": "..."
+    },
+    "supportsSubsidy": true,
+    "payingAccount": {
+      "balance": "...",
+      "type": "Caller",
+      "address": "..." // Address of signer1-1
+    }
+  }
+}
+```
+
+These examples illustrate how to leverage the REST API for common tasks. Explore the full API specification (if available separately) or use tools like Postman or Swagger UI (if hosted by the API instance) to discover all available endpoints, parameters, and response schemas.
