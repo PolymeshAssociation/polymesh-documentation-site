@@ -30,7 +30,7 @@ Corporate actions may trigger registration or filing requirements with applicabl
 ## Core Concepts
 
 - **Corporate Action (CA)**: An on-chain record representing an event related to a specific [asset](/assets). Each CA has a unique ID (`CAId`) composed of the asset's internal `AssetId` (UUID) and a sequential ID specific to that asset. The sequential ID is automatically assigned when a CA is created, starting at 0 and incrementing for each new CA associated with the same asset. When referencing a CA in API calls, both the asset ID and this local sequential ID are required to uniquely identify the specific corporate action.
-- **Corporate Action Agent (CAA)**: An identity authorized to manage CAs for an asset. By default, this is the asset issuer, but it can be delegated to another identity as an [Agent](/external-agents) of the asset.
+- **Corporate Action Agent (CAA)**: An identity authorized to manage CAs for an asset. By default, this is the asset issuer, but it can be delegated to another identity as an [Agent](/asset-agents) of the asset.
 - **Record Date**: The specific point in time, defined by a [Checkpoint](/corporate-actions/checkpoints), used to determine holder entitlements (e.g., who receives dividends or can vote).
 - **CA Kind**: The type of corporate action, determining its purpose and associated functionality (e.g., `IssuerNotice`, `Reorganization`, `PredictableBenefit`, `UnpredictableBenefit`, `Other`).
 - **Declaration Date**: The date the CA was officially declared by the issuer (off-chain). Recorded for informational purposes.

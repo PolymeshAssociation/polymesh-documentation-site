@@ -24,7 +24,7 @@ Corporate actions like dividend distributions may trigger registration or filing
 - **Target Asset**: The asset whose holders will receive the distribution (identified by its `AssetId`).
 - **Distribution Asset**: The asset used for payment (identified by its `AssetId`).
 - **Checkpoint**: A snapshot of target asset holder balances at a specific time, used to determine entitlements.
-- **Distributor**: The identity (usually the asset issuer or an [authorized agent](/external-agents)) initiating and funding the distribution.
+- **Distributor**: The identity (usually the asset issuer or an [authorized agent](/asset-agents)) initiating and funding the distribution.
 - **Payment Amount**: The total amount of the distribution asset allocated for the distribution.
 - **Payment Per Share**: The amount of distribution asset paid for each unit of the target asset held.
 - **Payment Date**: The date from which holders can claim their payments.

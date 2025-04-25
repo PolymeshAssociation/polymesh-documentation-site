@@ -1,5 +1,11 @@
 {
-  "cSpell.words": ["onboarded", "subsite", "PostgrSQL"],
+  "cSpell.words": [
+    "onboarded",
+    "permissioning",
+    "PostgrSQL",
+    "Subscan",
+    "subsite"
+  ],
   "[mdx]": {
     "editor.wordWrap": "on"
   }

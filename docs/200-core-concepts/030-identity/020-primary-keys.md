@@ -58,7 +58,7 @@ A primary key has unrestricted access to all identity functions and cannot have 
 
 - Creating [multisig](/identity/advanced/multisig) arrangements
 - Transferring asset ownership between identities
-- Granting [agent permissions](/external-agents) for asset management
+- Granting [agent permissions](/asset-agents) for asset management
 - Authorizing [portfolio custody](/portfolios/custody) transfers
 
 :::note

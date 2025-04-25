@@ -53,7 +53,7 @@ Polymesh supports several types of authorizations, each serving different permis
 
 - **Transfer Asset**: Authorize transfer of asset ownership between identities
 - **Transfer Ticker**: Allow transfer of ticker ownership or reservation rights
-- **Become Agent**: Grant permission to act as an [agent](/external-agents) for specific asset operations while defining specific actions the agent can perform
+- **Become Agent**: Grant permission to act as an [agent](/asset-agents) for specific asset operations while defining specific actions the agent can perform
 
 ### Operational Control
 

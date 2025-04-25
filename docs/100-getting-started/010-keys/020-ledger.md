@@ -68,7 +68,7 @@ IN the Polymesh wallet instead of selecting `Create new account`, you can select
 
 If prompted by a browser popup, select your hardware wallet and click “Connect.”
 
-You can then name your Ledger key and select `Continue` to import it to your wallet. The Advanced settings on the import screen let you choose an alternate derivation path, enabling multiple keys from the same Ledger device. The default for the first key import is Account type 0, Address index 0—think of it as a formula for generating child keys. Subsequent key imports will increment the Account type automatically to use a different key from the same device.
+You can then name your Ledger key and select `Continue` to import it to your wallet. The Advanced settings on the import screen let you choose an alternate derivation path, enabling multiple keys from the same Ledger device. The default for the first key import is Account type 0, Address index 0 - think of it as a formula for generating child keys. Subsequent key imports will increment the Account type automatically to use a different key from the same device.
 
 :::note
 If using a custom derivation path it is important to remember the **type** and **index** used so you can reconnect it should it become disconnected.

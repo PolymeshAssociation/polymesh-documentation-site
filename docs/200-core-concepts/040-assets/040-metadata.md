@@ -139,6 +139,6 @@ Metadata entries support three lock states:
 
 ### Access Control
 
-- Only asset issuers or [authorized agents](/external-agents) can modify local metadata
+- Only asset issuers or [authorized agents](/asset-agents) can modify local metadata
 - Global metadata modifications require governance approval
 - Lock status can prevent modifications even by authorized parties

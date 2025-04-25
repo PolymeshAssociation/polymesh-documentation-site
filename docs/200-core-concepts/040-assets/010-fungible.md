@@ -1,6 +1,6 @@
 ---
 title: Fungible Assets
-description: Fungible Token Management
+description: Fungible Asset Management
 id: fungible-assets
 slug: /assets/fungible
 sidebar_label: Fungible Assets
@@ -11,58 +11,59 @@ tags:
 
 ## Overview
 
-Fungible assets on Polymesh can represent any type of digitized asset and are originated and managed through asset primitives implemented within Polymesh's base-layer logic.
+Fungible assets on Polymesh represent digitized value such as shares, bonds, funds, stablecoins, and more. They are managed using the standardized Polymesh asset framework, ensuring all assets benefit from built-in compliance, settlement, and lifecycle management features. For a high-level introduction to assets and the Polymesh asset standard, see [Assets on Polymesh](/assets).
 
-This ensures that all assets are created in a standardized manner, enabling related functionalities—such as corporate actions, settlement, and compliance—to operate seamlessly across all assets.
+Fungible assets are interchangeable tokens with divisible or indivisible supply. Ownership is represented by balances held by different on-chain identities. They allow access to all core features such as compliance, settlement, corporate actions, metadata, and agent permissions, all available natively on-chain. For more on these features, see the relevant dedicated pages:
 
-Once an asset is created, its ownership is represented by balances of that asset's tokens held by different investors.
-
-Ownership of an asset on Polymesh is defined by:
-
-- **Total supply**: the total number of tokens representing ownership in the asset.
-- **Investor balances**: the individual balance held by each investing identity.
-
-For more details, see the [asset pallet documentation](https://docs.polymesh.live/pallet_asset/index.html).
-
-Polymesh allows you to manage the entire lifecycle of an asset directly on the blockchain, including issuance, initial distribution or fundraising, and subsequent corporate actions such as dividend payments, capital distributions, or corporate ballots.
-
-Asset tokens can be either divisible or indivisible.
+- [Compliance](/compliance)
+- [Settlement](/settlement)
+- [Asset Metadata](/assets/metadata)
+- [Asset Agents & Permissions](/asset-agents)
+- [Ownership Transfer](/assets/ownership-transfer)
+- [Corporate Actions](/corporate-actions)
+- [Security Token Offerings](/sto)
 
 ## Asset Creation
 
-Users can create assets and specify the asset type (e.g., Equity, Bond, Fund). Upon creation, Polymesh assigns a unique system-generated Asset ID to the new asset.
+To create a fungible asset, users specify the asset type (e.g., Equity, Bond, Fund), divisibility, and optional metadata. Each asset is assigned a unique Asset ID and can have a unique ticker and external identifiers (such as ISINs, CUSIPs, etc.). For a step-by-step guide, see [Asset Creation](/assets#asset-creation).
 
-Initially, the asset is created with a zero total supply.
+## Issuance and Distribution
 
-In addition to its unique Asset ID, an asset can have a unique ticker and external identifiers (such as ISINs, CUSIPs, CINs, LEIs, and DTIs), which Polymesh validates to ensure consistency (i.e., checksum validation).
+After creation, issuers or their appointed [agents](/asset-agents) can issue tokens to portfolios they control. Tokens can then be distributed to investors through a security token offering or directly using the settlement and compliance engines. See [Settlement](/settlement) and [Security Token Offerings](/sto) for more on fundraising and distribution.
 
-### Issuance Process
+## Key Features Unique to Fungible Assets
 
-Once an issuer has created and configured an asset, they or their appointed [External Agent](/assets#external-agents) can issue tokens representing ownership in the asset to a portfolio they control.
+### Issuance and Redemption
 
-Tokens can then be distributed to investors through a security token offering or directly using the settlement and compliance engines.
+- **Issuance**: An agent of the fungible asset can mint (issue) tokens to a portfolio under their on-chain identity (control of the portfolio can be assigned to another identity before issuing assets). This increases the total supply and the recipient's balance. Tokens are issued by calling the `asset::issue` method, specifying the `asset_id`, `amount`, and target portfolio.
+- **Redemption**: Tokens can be redeemed (burned) from a portfolio owned by an appropriately permissioned agent of the asset, reducing both the total supply and the portfolio's balance. Tokens are redeemed by calling the `asset::redeem` method, specifying the `asset_id`, `value`, and portfolio to redeem the tokens from.
 
-This approach allows for a clear separation between the issuance process, which bypasses the settlement engine, and the distribution process, which leverages both compliance and settlement engine.
+### Divisibility
 
-## Checkpoints
+- Fungible assets can be created as divisible or indivisible. Divisibility is set at creation, but an indivisible asset can later be made divisible using the `asset::make_divisible` method (callable by the asset owner or agent). Once an asset is made divisible, this change is permanent and cannot be reversed.
+- Divisibility affects the granularity of balances and transfers. For example, a divisible asset can represent shares with decimals, while an indivisible asset might represent whole-number units.
 
-An _asset checkpoint_ is a record of the balances of an asset at a specific time. These records capture both the total asset balance and the balances held by each identity.
+:::info
+**Decimals:** All fungible assets on Polymesh use 6 decimals of precision. On-chain, balances are stored as integers, where 1 unit is represented as 1,000,000. If using the Polymesh SDK, it automatically converts between user-facing decimal values and the on-chain integer representation. Applications and user interfaces not using the SDK should account for this when displaying or entering amounts.
+:::
 
-Checkpoints are particularly useful for capital distributions and corporate ballots, where a consistent set of balances at a given time (or block) is needed.
+### Corporate Actions & Checkpoints
 
-### Creating a Checkpoint
+- **Corporate Actions**: Fungible assets support on-chain corporate actions such as distributions and voting. These actions are tightly integrated with the asset's compliance and settlement features, allowing issuers to manage complex processes like dividend payments, shareholder meetings, and other corporate events directly on-chain. See [Corporate Actions](/corporate-actions) for more information.
+- **Checkpoints**: Corporate actions rely on checkpoints, which are a feature of fungible assets only. Checkpoints are snapshots of all holder balances at a specific point in time. Checkpoints are essential for many corporate actions and compliance activities, such as dividend distributions, voting, and regulatory reporting. See [Checkpoint Management](/corporate-actions/checkpoints) for details.
 
-There are two ways to create a checkpoint:
+### Transfer Restrictions
 
-1. **Manual Checkpoint Creation**: Call the `create_checkpoint(assetId)` function in the `checkpoint` pallet. This creates an immediate checkpoint for the asset specified by `AssetId`. The total balance is recorded instantly, while individual balances are recorded lazily (i.e., just before the next transaction involving each identity). If no transactions occur, no records are made for those identities.
+- **Transfer Restrictions**: In addition to identity-based on-chain compliance rules, Polymesh provides advanced transfer restriction features for fungible assets via the statistics pallet. These allow issuers to enforce count and percentage ownership restrictions such as a maximum investor count, maximum ownership percentage, and claim-based restrictions (e.g., jurisdiction, accreditation claim count restrictions). See [Transfer Restrictions](/compliance/transfer-rules) for details.
 
-2. **Scheduled Checkpoints**: Set up a checkpoint schedule with `create_schedule(assetId, schedule)`, specifying a series of `Moment` timestamp values. Scheduled checkpoints are created automatically at the specified times but are otherwise identical to manual checkpoints. Scheduling of the next checkpoint also happens lazily only when an asset transaction or minting occurs. If no transactions happen when a checkpoint is due, it is not rescheduled, and the scheduler accounts for any missed checkpoints.
+## Further Reading
 
-### Accessing an Existing Checkpoint
-
-The checkpoints for an asset form a sequence, indexed starting from 1. The total balance and individual balances for identities are stored at these indices.
-
-- To retrieve the total supply of `assetId` at checkpoint index `i`, call `total_supply_at(assetId, i)` in the `asset` pallet. This directly retrieves the value from runtime storage.
-- To retrieve the checkpoint balance of an `identity`, call `get_balance_at(assetId, identity, i)`. This function finds the balance at index `i` by searching for the closest checkpoint greater than or equal to `i`. If no record exists due to inactivity, returns the current balance of the `identity`.
-
-The time of each checkpoint is stored in a map indexed by checkpoint sequence numbers and can be accessed by referencing the appropriate sequence number.
+- [Asset Management](/assets)
+- [Non-Fungible Assets](/assets/nft)
+- [Asset Metadata](/assets/metadata)
+- [Asset Agents & Permissions](/asset-agents)
+- [Ownership Transfer](/assets/ownership-transfer)
+- [Checkpoint Management](/corporate-actions/checkpoints)
+- [Corporate Actions](/corporate-actions)
+- [Security Token Offerings](/sto)
+- [Transfer Restrictions](/compliance/transfer-rules)
