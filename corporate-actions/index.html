@@ -10,8 +10,8 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="Polymesh Documentation Portal" href="/polymesh-documentation-site/opensearch.xml"><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.96ce32c5.css">
-<script src="/polymesh-documentation-site/assets/js/runtime~main.f1fd999f.js" defer="defer"></script>
-<script src="/polymesh-documentation-site/assets/js/main.52339e10.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/runtime~main.fac47b2b.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/main.2fb7e1e4.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJMHT7WG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -29,7 +29,7 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="core-concepts">Core Concepts<a href="#core-concepts" class="hash-link" aria-label="Direct link to Core Concepts" title="Direct link to Core Concepts">​</a></h2>
 <ul>
 <li><strong>Corporate Action (CA)</strong>: An on-chain record representing an event related to a specific <a href="/polymesh-documentation-site/assets/">asset</a>. Each CA has a unique ID (<code>CAId</code>) composed of the asset&#x27;s internal <code>AssetId</code> (UUID) and a sequential ID specific to that asset. The sequential ID is automatically assigned when a CA is created, starting at 0 and incrementing for each new CA associated with the same asset. When referencing a CA in API calls, both the asset ID and this local sequential ID are required to uniquely identify the specific corporate action.</li>
-<li><strong>Corporate Action Agent (CAA)</strong>: An identity authorized to manage CAs for an asset. By default, this is the asset issuer, but it can be delegated to another identity as an <a href="/polymesh-documentation-site/external-agents/">Agent</a> of the asset.</li>
+<li><strong>Corporate Action Agent (CAA)</strong>: An identity authorized to manage CAs for an asset. By default, this is the asset issuer, but it can be delegated to another identity as an <a href="/polymesh-documentation-site/asset-agents/">Agent</a> of the asset.</li>
 <li><strong>Record Date</strong>: The specific point in time, defined by a <a href="/polymesh-documentation-site/corporate-actions/checkpoints/">Checkpoint</a>, used to determine holder entitlements (e.g., who receives dividends or can vote).</li>
 <li><strong>CA Kind</strong>: The type of corporate action, determining its purpose and associated functionality (e.g., <code>IssuerNotice</code>, <code>Reorganization</code>, <code>PredictableBenefit</code>, <code>UnpredictableBenefit</code>, <code>Other</code>).</li>
 <li><strong>Declaration Date</strong>: The date the CA was officially declared by the issuer (off-chain). Recorded for informational purposes.</li>
