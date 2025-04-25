@@ -10,7 +10,11 @@ tags:
 ---
 
 import { Redirect } from '@docusaurus/router';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
-<Redirect to="/confidential-assets/overview" />
+export default function ConfidentialRedirect() {
+  const to = useBaseUrl('/confidential-assets/overview');
+  return <Redirect to={to} />;
+}
 
 {/* This is a reference page that redirects to the main confidential assets documentation */}
