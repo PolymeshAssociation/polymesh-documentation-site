@@ -19,7 +19,7 @@ The [`@polymeshassociation/polymesh-types`](https://www.npmjs.com/package/@polym
 
 ## Purpose and Use Cases
 
-While the main [Polymesh SDK](./) abstracts away most direct blockchain interactions, [`polymesh-types`](https://www.npmjs.com/package/@polymeshassociation/polymesh-types) serves developers who need to work at a lower level, typically using libraries like [`@polkadot/api`](../050-polkadot-api.mdx).
+While the main [Polymesh SDK](./) abstracts away most direct blockchain interactions, [`polymesh-types`](https://www.npmjs.com/package/@polymeshassociation/polymesh-types) serves developers who need to work at a lower level, typically using libraries like `@polkadot/api`.
 
 Its primary purposes are:
 
@@ -31,7 +31,7 @@ Its primary purposes are:
 
 You should directly use or be aware of [`@polymeshassociation/polymesh-types`](https://www.npmjs.com/package/@polymeshassociation/polymesh-types) if you are:
 
-*   Developing applications using [`@polkadot/api`](../050-polkadot-api.mdx) directly against a Polymesh node.
+*   Developing applications using `@polkadot/api`] directly against a Polymesh node.
 *   Building custom libraries or tooling that requires detailed knowledge of Polymesh's on-chain types and APIs.
 *   Debugging low-level interactions with the Polymesh chain.
 
@@ -56,7 +56,7 @@ The source code repository organizes type definition files (like `7.0.x.json`) w
 
 ## Usage Example with `@polkadot/api`
 
-This example shows how to initialize [`@polkadot/api`](../050-polkadot-api.mdx) for Polymesh using the `typesBundle`.
+This example shows how to initialize `@polkadot/api` for Polymesh using the `typesBundle`.
 
 ```typescript title="connect.ts"
 import { ApiPromise, WsProvider } from '@polkadot/api';
@@ -109,7 +109,7 @@ connectToPolymesh().catch(error => {
 
 ## Relationship to Polymesh SDK
 
-The primary [`@polymeshassociation/polymesh-sdk`](https://www.npmjs.com/package/@polymeshassociation/polymesh-sdk) package uses [`polymesh-types`](https://www.npmjs.com/package/@polymeshassociation/polymesh-types) internally. It provides higher-level abstractions (Entities like `Asset`, `Identity`, `Portfolio`; Namespaces like `assets`, `identities`) that simplify common operations and hide much of the direct [`@polkadot/api`](../050-polkadot-api.mdx) interaction.
+The primary [`@polymeshassociation/polymesh-sdk`](https://www.npmjs.com/package/@polymeshassociation/polymesh-sdk) package uses [`polymesh-types`](https://www.npmjs.com/package/@polymeshassociation/polymesh-types) internally. It provides higher-level abstractions (Entities like `Asset`, `Identity`, `Portfolio`; Namespaces like `assets`, `identities`) that simplify common operations and hide much of the direct `@polkadot/api` interaction.
 
 If you are using the SDK, you benefit from the type safety provided by [`polymesh-types`](https://www.npmjs.com/package/@polymeshassociation/polymesh-types) without needing to manage the `typesBundle` or interact with `@polkadot/api` directly for most tasks. Stick to the SDK's methods unless you have a specific need for lower-level access.
 
@@ -120,5 +120,4 @@ If you are using the SDK, you benefit from the type safety provided by [`polymes
     *   [`@polymeshassociation/polymesh-types`](https://www.npmjs.com/package/@polymeshassociation/polymesh-types)
     *   [`@polymeshassociation/polymesh-sdk`](https://www.npmjs.com/package/@polymeshassociation/polymesh-sdk)
 *   **Polymesh SDK Documentation:** [`/sdk-docs`](/sdk-docs)
-*   **Direct API Interaction:** [`@polkadot/api` Usage](../050-polkadot-api.mdx)
 *   **`@polkadot/api` Official Documentation:** [`https://polkadot.js.org/docs/api/`](https://polkadot.js.org/docs/api/)
