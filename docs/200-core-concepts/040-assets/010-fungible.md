@@ -54,7 +54,7 @@ After creation, issuers or their appointed [agents](/asset-agents) can issue tok
 
 ### Transfer Restrictions
 
-- **Transfer Restrictions**: In addition to identity-based on-chain compliance rules, Polymesh provides advanced transfer restriction features for fungible assets via the statistics pallet. These allow issuers to enforce count and percentage ownership restrictions such as a maximum investor count, maximum ownership percentage, and claim-based restrictions (e.g., jurisdiction, accreditation claim count restrictions). See [Transfer Restrictions](/compliance/transfer-rules) for details.
+- **Transfer Restrictions**: In addition to identity-based on-chain compliance rules, Polymesh provides advanced transfer restriction features for fungible assets via the statistics pallet. These allow issuers to enforce count and percentage ownership restrictions such as a maximum investor count, maximum ownership percentage, and claim-based restrictions (e.g., jurisdiction, accreditation claim count restrictions). See [Transfer Restrictions](/compliance/transfer-restrictions) for details.
 
 ## Further Reading
 
@@ -66,4 +66,4 @@ After creation, issuers or their appointed [agents](/asset-agents) can issue tok
 - [Checkpoint Management](/corporate-actions/checkpoints)
 - [Corporate Actions](/corporate-actions)
 - [Security Token Offerings](/sto)
-- [Transfer Restrictions](/compliance/transfer-rules)
+- [Transfer Restrictions](/compliance/transfer-restrictions)
