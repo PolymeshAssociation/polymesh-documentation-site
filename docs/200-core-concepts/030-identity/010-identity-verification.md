@@ -27,7 +27,7 @@ Similarly to remove an existing CDD service provider, on-chain governance would 
 
 ## CDD Claims
 
-CDD claims are issued by the networks trusted CDD service providers. They would typically have an expiry, meaning customers need to re-authenticate with the CDD service provider periodically to maintain access to the network.
+CDD claims are issued by the networks trusted CDD service providers. They can have an expiry, meaning customers need to re-authenticate with the CDD service provider periodically to maintain access to the network.
 
 An identity must always have a valid CDD claim if it wishes to be able to interact with the network. It may have more than one valid CDD claim, for example if they have KYC'ed with two separate CDD service providers. This provides some additional redundancy if a CDD service provider is removed from the trusted list of providers.
 
