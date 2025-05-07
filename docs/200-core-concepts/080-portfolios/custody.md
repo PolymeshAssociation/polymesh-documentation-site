@@ -11,37 +11,7 @@ tags:
 
 ## Overview
 
-In Polymesh, all assets (excluding the network native token POLYX) are held at the identity level. This allows Polymesh to enforce compliance in real time based on claims also held at the identity level.
-
-To allow users to organise their assets underneath their identity, and to flexibly assign key permissions and custody, Polymesh has the concept of portfolios, also sometimes called sub-accounts.
-
-## Portfolio Diagram
-
-![Peer to peer](./images/custody.png)
-
-## Portfolios
-
-Assets can be partitioned into logical portfolios within a single identity.
-
-A particular asset can have different balances across portfolios within the same identity.
-
-Compliance is applied to the sum of balances across an identities portfolios.
-
-Permissions for keys can be applied at the portfolio granularity.
-
-Portfolios are not related to compliance - i.e. claims remain at the identity level and are shared across all portfolios. Transfer restrictions are at the identity level, not per portfolio.
-
-Transfers of assets between portfolios of the same identity should always be possible (provided the identity has a CDD check) and not subject to any compliance rules.
-
-Secondary keys are managed at the identity level, but can be granted access to specific portfolios under an identity.
-
-The distribution of assets into portfolios, and the association of a portfolio with an identity are publicly stored on-chain.
-
-Every identity has a default portfolio which is used in the case that a specific identity is not specified as part of a transfer or instruction settlement.
-
-## Custody
-
-A user can assign custodianship of a portfolio to another identity. This cleanly separates beneficial ownership of an asset (which always stays under the beneficiaries identity) used for corporate actions, from custodial ownership where another entity may manage those assets on behalf of their beneficiary.
+On Polymesh, users can assign custodianship of a portfolio to another identity. This cleanly separates beneficial ownership of an asset (which always stays under the beneficiaries identity) used for corporate actions, from custodial ownership where another entity may manage those assets on behalf of their beneficiary.
 
 Any assets in a portfolio which has been assigned a custodian are managed exclusively by that custodian, and include any new assets which are transferred into the portfolio.
 
@@ -55,9 +25,9 @@ A portfolio can only be assigned to a single custodian at a time. Once assigned 
 
 The above features allow for different types of custody model that can be used to meet different use-cases and requirements.
 
-The first use-case is when a user wants to delegate the full control and recorded beneficial ownership of assets to a third-party custodian.
-
-The second use-case is when a user wants to retain beneficial ownership, but delegate settlement responsibilities to a third-party custodian.
+**Use cases:**
+- The first use-case is when a user wants to delegate the full control and recorded beneficial ownership of assets to a third-party custodian.
+- The second use-case is when a user wants to retain beneficial ownership, but delegate settlement responsibilities to a third-party custodian.
 
 ### Custody with Full Control and Ownership
 
@@ -113,3 +83,68 @@ NB - this follows a similar approach to ERC-2258 as mentioned in:
 - The beneficial owner, for the purposes of cap tables and corporate actions, remains the investor, not the custodian. So if the issuer were to ask all token holders to vote, each token holder could vote using their own identity without the need for the custodian to intervene/participate.
 
 - A user can assign one custodian per portfolio they own. A portfolio can contain any number of different assets.
+
+# Custody Portfolios
+
+Creating custody portfolios on Polymesh allows asset owners to delegate the management of specific portfolios to third-party custodians, while maintaining beneficial ownership. This is particularly useful for regulated entities and institutions needing to separate asset control from ownership.
+The custodian receives full rights to manage the portfolio, including transferring assets, just like the owner does.
+
+## Custody Portfolio Lifecycle
+
+### 1. Allowing an identity to create Portfolios
+
+An identity can be permitted to create portfolios by calling `portfolio::allow_identity_to_create_portfolios` and entering the DID of the permitted identity.
+This is particularly useful for institutional or custody models, where, for example, a custodian or service provider needs to create and manage portfolios on behalf of clients, but the beneficial ownership remains with the client’s identity.
+
+**Effects**:
+- When the portfolio owner calls `allow_identity_to create_portfolios` and specify a `trusted_identity`, the user is authorizing that identity to use the `create_custody_portfolio` function.
+- This means the trusted identity can create new portfolios that are owned by the user's identity but will immediately be under the custody of the trusted identity.
+
+**Constraints**:
+- The function must be called by the owner of the portfolio.
+- Only one custodian can be assigned per portfolio.
+- The custodian's identity must possess any required compliance claims (such as CDD or other attestations) to hold or manage assets in the portfolio.
+
+This function can be revoked by calling `revoke_create_portfolios_permission` by entering the permissioned identity.
+
+### 2. Creating a Custody Portfolio
+
+Creating custody portfolios on Polymesh allows asset owners to delegate the management of specific portfolios to third-party custodians, while maintaining beneficial ownership. This is particularly useful for regulated entities and institutions needing to separate asset control from ownership.
+
+Custody Portfolios can be created by calling `portfolio::createCustodyPortfolio`.
+
+**Parameters**:
+- `portfolio_owner_id`: The DID that will own the new portfolio.
+- `portfolio_name`: The name of the custody portfolio.
+
+**Effects**:
+- A new numbered portfolio is created under the owner’s identity. The portfolio is owned by the specified identity but is immediately under the custody of the caller (the custodian).
+- Assigning a custodian gives that identity exclusive management rights over the portfolio’s assets, including:
+	- Transfer assets in/out of the portfolio.
+	- Affirm or reject settlements involving the portfolio.
+	- Manage corporate actions for assets in the portfolio.
+- The portfolio owner retains beneficial ownership for corporate actions (e.g., dividends, voting), even though the custodian handles day-to-day management.
+
+**Constraints**:
+- The caller must be pre-authorized by the portfolio owner id using `allow_identity_to_create_portfolios`. Without this, the call will fail.
+- The created portfolio can only have one custodian at a time.
+- The owner cannot revoke custody unilaterally - the custodian must use `portfolio::quit_portfolio_custody` to relinquish control.
+- The portfolio owner cannot manage assets in the custody portfolio unless the custodian quits or transfers custody back.
+- The custodian’s identity must meet compliance requirements (e.g., CDD checks) to hold or manage assets in the portfolio.
+
+### 3. Ending Portfolio Custody
+
+If a custodian no longer wishes to manage the portfolio or cannot fulfill their duties, they can invoke their custodian rights to a portfolio by calling `quit_portfolio_custody`.
+
+**Effects**:
+- This function immediately ends the custodian’s management rights over the portfolio. The portfolio owner regains full control and management authority.
+
+**Constraints**:
+- Only the current custodian of a portfolio can invoke this function.
+
+## Querying Custody Information
+
+Portfolio owners and custodians can access custody information through several query methods:
+- `portfolio::portfolioCustodian` to query the custodian of a particular portfolio.
+- `portfolio::allowedCustodians` shows the custodians allowed to create and take custody of portfolios on an owner's behalf.
+- `portfolio::portfoliosInCustody`: to track all the portfolios in custody of a particular identity.
