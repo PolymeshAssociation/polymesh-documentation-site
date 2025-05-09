@@ -4,7 +4,7 @@ title: Developer Tooling
 description: 'Developer tooling for Polymesh Private'
 subsite: polymesh-private-docs
 id: 'developer-tooling'
-slug: '/developer-tooling'
+slug: '/polymesh-private/developer-tooling'
 tags: ['tooling', 'sdk', 'rest-api']
 ---
 

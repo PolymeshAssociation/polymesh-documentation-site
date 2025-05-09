@@ -13,14 +13,6 @@ tags:
 
 Polymesh includes on-chain governance to manage network upgrades, changing parameters of the network (e.g. slashing percentages), permissioning network roles and distributing treasury funds.
 
-:::info Network Treasury
-
-Polymesh has a special account, designated as the network treasury. POLYX can only be disbursed from the treasury using the governance process, in particular by the submission and ratification of a [PIP](#polymesh-improvement-proposals) which represents a disbursement from the treasury to a specified account.
-
-The intention is that treasury funds are disbursed to facilitate the adoption and development of Polymesh - it may be used for grants, direct payments to identities who perform specified actions for the network or any other purpose that the governance process deems reasonable.
-
-:::
-
 The governance system is designed to allow both community members and technical experts to collaborate on improving Polymesh and managing network changes.
 
 There are three main groups of actors in Polymesh governance:

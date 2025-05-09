@@ -123,20 +123,17 @@ Permissions for secondary keys are divided into three categories that work toget
   - Full access to all assets
   - No access to any assets
   - Access to specific assets only
-  - Access to all assets except specific excluded ones
 
 - **Extrinsics** (transactions): Define which blockchain functions the key can execute
 
   - Full access to all functions
   - No access to any functions
   - Access to specific modules and/or methods
-  - Access to all functions except specific excluded ones
 
 - **Portfolios**: Specify which portfolios the key can access and manage
   - Full access to all portfolios
   - No access to any portfolios
   - Access to specific portfolios only
-  - Access to all portfolios except specific excluded ones
 
 The effective permissions of a secondary key are determined by the intersection of these categories. For example, a key with access to Asset A and Portfolio B can only perform authorized transactions involving Asset A within Portfolio B.
 

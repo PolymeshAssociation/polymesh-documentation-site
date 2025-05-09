@@ -16,7 +16,7 @@ It's important to note that these diagrams offer a low-level representation, inc
 
 When using tools such as the Polymesh Private REST API or the Polymesh Private Typescript SDK, some of the steps depicted in these diagrams are combined into a single user action. These tools can simplify the process for integrators, streamlining the integration of Confidential Assets.
 
-Follow the steps [here](../tutorials/walkthrough-confidential-assets-rest-api.md) to implement these sequences using the [Polymesh Private Development Environment](../tooling.md#development-environment).
+Follow the steps [here](../tutorials/walkthrough-confidential-assets-rest-api.md) to implement these sequences using the [Polymesh Private Development Environment](/polymesh-private/developer-tooling#development-environment).
 
 ## 1 Confidential Account Setup
 
