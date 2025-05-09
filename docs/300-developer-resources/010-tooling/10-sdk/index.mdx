@@ -1,0 +1,109 @@
+---
+title: Polymesh SDK
+description: A TypeScript interface for building applications on the Polymesh blockchain
+id: sdk
+slug: /development/tooling/sdk
+sidebar_label: Typescript SDK
+tags:
+  - sdk
+---
+
+# Polymesh SDK
+
+The Polymesh SDK is a TypeScript/JavaScript library that provides a simple, powerful interface for building applications and integrations on the Polymesh blockchain. It abstracts away blockchain complexity and exposes a feature-rich, user-friendly API for developers.
+
+## Features
+
+- High-level, type-safe API for interacting with Polymesh
+- Supports asset creation, identity management, compliance, settlements, and more
+- Works in Node.js and browser environments
+- Flexible signing manager system for secure key management
+- Extensive documentation and code examples
+
+### 📖 [Full SDK API Reference](https://developers.polymesh.network/sdk-docs/)
+
+## Getting Started
+
+### 1. Install the SDK
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="npm" label="npm" default>
+
+```bash
+npm install @polymeshassociation/polymesh-sdk
+```
+
+  </TabItem>
+  <TabItem value="yarn" label="Yarn">
+
+```bash
+yarn add @polymeshassociation/polymesh-sdk
+```
+
+  </TabItem>
+  <TabItem value="pnpm" label="pnpm">
+
+```bash
+pnpm add @polymeshassociation/polymesh-sdk
+```
+
+  </TabItem>
+</Tabs>
+
+> **Note:** It is highly recommended to use npm, yarn, or pnpm. Other package managers may not support all dependency overrides.
+
+### 2. Initialize the SDK Client
+
+You'll need a Polymesh node endpoint (e.g. `wss://mainnet-rpc.polymesh.network/`) and a [signing manager](/development/tooling/sdk/signing) if you wish to submit transactions.
+
+```typescript
+import { Polymesh } from '@polymeshassociation/polymesh-sdk';
+import { LocalSigningManager } from '@polymeshassociation/local-signing-manager';
+
+async function run() {
+  const signingManager = await LocalSigningManager.create({
+    accounts: [
+      { mnemonic: '//Alice' },
+      // ...add more accounts as needed
+    ],
+  });
+  const polyClient = await Polymesh.connect({
+    nodeUrl: 'wss://mainnet-rpc.polymesh.network/',
+    signingManager,
+  });
+  // Interact with the chain using polyClient
+}
+```
+
+For browser apps, use the [Browser Extension Signing Manager](https://github.com/PolymeshAssociation/browser-extension-signing-manager) to connect to the Polymesh Wallet extension.
+
+### 3. Example: Create an Asset
+
+```typescript
+const createAssetProc = await polyClient.assets.createAsset({
+  name: 'My Asset',
+  ticker: 'TICKER',
+});
+const newAsset = await createAssetProc.run();
+```
+
+### 4. Example: Read Data
+
+```typescript
+const assetsPage = await polyClient.assets.get({ size: new BigNumber(20) });
+const asset = assetsPage.data[0];
+const assetDetails = await asset.details();
+console.log('asset details:', assetDetails);
+```
+
+---
+
+## Related Pages
+
+- [Signing Managers](./signing): Secure and flexible key management for the SDK
+- [Polymesh Types](./types): Type definitions and low-level integration
+- [SDK Examples Repository](https://github.com/PolymeshAssociation/polymesh-sdk-examples): Example scripts and usage patterns
+- [Full SDK API Reference](https://developers.polymesh.network/sdk-docs/)

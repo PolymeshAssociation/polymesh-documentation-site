@@ -1,0 +1,356 @@
+---
+title: Local Development Environment
+description: Setting up local development
+id: local-environment
+slug: /development/tooling/local-setup
+sidebar_label: Local Dev Environment
+tags:
+  - development
+  - local setup
+---
+This tutorial guides you through setting up and using the `polymesh-dev-env` Docker Compose setup for local Polymesh development.
+
+## 1. Introduction
+
+This environment provides a self-contained Polymesh ecosystem running locally using Docker. It includes:
+
+*   A Polymesh blockchain node running in development mode.
+*   Indexing services (Subquery) for efficient data retrieval.
+*   Two instances of the Polymesh REST API (one using local keys, one using HashiCorp Vault).
+*   HashiCorp Vault for secure key management.
+*   Automated setup scripts for Vault initialization and test account creation.
+
+It's designed for developers who want to build applications, test smart contracts, or experiment with Polymesh features without needing to connect to public testnets or mainnet.
+
+## 2. Prerequisites
+
+*   **Docker Desktop** or **Docker Engine + Compose V2**: Ensure Docker is installed, running, and accessible from your terminal. You can verify with `docker ps`. Download instructions: [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
+*   **(Optional) `jq`**: A command-line JSON processor. Useful for parsing `curl` responses from the REST API. Install it via your system's package manager (e.g., `brew install jq`, `apt install jq`).
+*   **(Optional) `curl`**: Command-line tool for making HTTP requests. Usually pre-installed on Linux/macOS.
+
+## 3. Getting Started
+
+1.  **Clone the Repository (if you haven't already):**
+    ```bash
+    git clone https://github.com/PolymeshAssociation/polymesh-dev-env.git
+    cd polymesh-dev-env
+    ```
+
+2.  **Configure Environment:** Copy the desired environment file to `.env`. This file sets the Docker image versions and ports. We'll use `envs/7.2`:
+    ```bash
+    cp envs/7.2 .env
+    ```
+    *Alternatively, you can specify the env file directly when running compose: `docker compose --env-file=envs/7.2 up`.*
+
+3.  **Start the Environment:** Launch all services in detached mode (running in the background):
+    ```bash
+    docker compose up -d
+    ```
+    The first time you run this, Docker will download the necessary images, which might take a few minutes depending on your internet connection. Subsequent starts will be much faster.
+
+4.  **Check Environment Status:** The environment performs several initialization steps (Vault setup, account creation) on the first run. Use the `environment-ready` service logs to know when it's fully operational:
+    ```bash
+    docker compose logs -f environment-ready
+    ```
+    Wait for a message similar to this:
+    ```
+    ************************************************************************************
+    *** Polymesh Environment Ready! (Total initialization time: XXs)                 ***
+    ************************************************************************************
+    ```
+    Press `Ctrl+C` to exit the logs view. On subsequent runs (`docker compose up -d` after a `down`), it should indicate readiness almost immediately.
+
+## 4. Understanding the Services
+
+Here's a breakdown of each service defined in `compose.yaml` and its role:
+
+*   **`polymesh-node`**:
+    *   **Description**: The core Polymesh blockchain node. It runs using the image specified by `POLYMESH_CHAIN_IMAGE` in your `.env` file.
+    *   **Why it's there**: This is the actual blockchain where transactions are processed and blocks are produced. It's configured to run in development mode (`--chain=dev`), which pre-funds common accounts like Alice, Bob, etc., and enables features useful for local testing (like `--force-authoring`).
+    *   **Ports**: Exposes WebSocket (`9944`), RPC (`9933`), and P2P (`30333`) ports.
+
+*   **`postgres`**:
+    *   **Description**: A standard PostgreSQL database instance (version 16.1).
+    *   **Why it's there**: Required by the Subquery indexer (`subquery-node`) to store indexed blockchain data. It also hosts a small `services_status` database used by the `vault-init` and `rest-api-accounts-init` scripts to track their status. The `psql_extensions.sql` script is run on initialization to set up the database and required extensions.
+    *   **Data**: Persists data in the `psql-data` named volume.
+
+*   **`subquery-node`**:
+    *   **Description**: The Polymesh Subquery indexer service. It processes blocks from `polymesh-node` and stores relevant data in the `postgres` database according to a predefined schema.
+    *   **Why it's there**: Provides an efficient way to query historical blockchain data (transactions, events, balances, etc.) without directly querying the node, which is often slower for complex lookups. The REST API relies heavily on this.
+    *   **Dependencies**: Starts after `postgres` and `polymesh-node` are healthy.
+
+*   **`subquery-graphql`**:
+    *   **Description**: A GraphQL server that provides an API endpoint for the data indexed by `subquery-node`.
+    *   **Why it's there**: Offers a structured and powerful way to query the indexed blockchain data. It's used by the Polymesh REST API (`polymesh-rest-api-*`) and can be connected to the Polymesh Portal UI.
+    *   **Ports**: Exposes the GraphQL endpoint on port `3000` (configurable via `POLYMESH_SUBQUERY_GRAPHQL_PORT`).
+
+*   **`vault`**:
+    *   **Description**: An instance of HashiCorp Vault, a tool for managing secrets and protecting sensitive data.
+    *   **Why it's there**: Provides a secure way to manage the private keys used by one of the REST API instances (`polymesh-rest-api-vault-sm`), mimicking a production setup where keys aren't hardcoded or stored insecurely.
+    *   **Ports**: Exposes the Vault API/UI on port `8200` (configurable via `VAULT_PORT`).
+    *   **Data**: Persists data in the `vault-volume` named volume. Configured via `scripts/vault-config.json`.
+
+*   **`vault-init`**:
+    *   **Description**: A temporary service that runs scripts (`vault-init-dependencies.sh` then `vault-init.sh`) to initialize and unseal the `vault` service.
+    *   **Why it's there**: Automates the Vault setup process. On the first run, it initializes Vault, saves the single unseal key and root token to the `vault-root-token` volume, unseals Vault, enables the `transit` secrets engine (used for signing), and creates several ED25519 keys (`admin`, `signer1`, `signer2`, `signer3`, `signer4`). On subsequent runs, it just unseals Vault using the saved key. It also installs necessary tools like `bash`, `jq` and `psql` within its temporary container. Updates status in the `postgres` `services_status` table.
+    *   **Dependencies**: Runs after `vault` starts. The Vault REST API depends on this service completing successfully.
+
+*   **`polymesh-rest-api-vault-sm`**:
+    *   **Description**: An instance of the Polymesh REST API configured to use HashiCorp Vault as its **S**igning **M**anager (SM).
+    *   **Why it's there**: Provides a standard HTTP API for interacting with the Polymesh node, using keys managed securely within Vault. The service automatically retrieves the `VAULT_TOKEN` from the `vault-root-token` volume (created by `vault-init`). Signer identifiers for this API use the format `{key_name}-{key_version}` (e.g., `admin-1`, `signer1-1`).
+    *   **Ports**: Exposes the API on port `3005` (configurable via `POLYMESH_REST_API_VAULT_SM_PORT`).
+    *   **Dependencies**: Starts after `polymesh-node`, `subquery-graphql`, and `vault-init` are ready.
+
+*   **`polymesh-rest-api-vault-sm-init`**:
+    *   **Description**: A temporary service that runs the `rest-api-accounts-init.sh` script.
+    *   **Why it's there**: Automates the setup of on-chain accounts and identities corresponding to the keys created in Vault. It waits for the `polymesh-rest-api-vault-sm` service to be healthy, then uses that API to:
+        1.  Get the Polymesh addresses for `admin-1`, `signer1-1`, ..., `signer4-1`.
+        2.  Use a developer endpoint to make the `admin-1` account a CDD (Customer Due Diligence) provider on the dev chain.
+        3.  Use another developer endpoint (signing as `admin-1`) to create on-chain Identities for `signer1-1`, ..., `signer4-1` and fund them with initial POLYX.
+        4.  Saves the resulting addresses and DIDs to files within the `rest-api-accounts-init` volume for persistence checks.
+        5.  Creates a `.setup-complete` file in that volume to signal completion to the `environment-ready` service. Updates status in the `postgres` `services_status` table.
+    *   **Dependencies**: Runs after `polymesh-rest-api-vault-sm` is healthy.
+
+*   **`polymesh-rest-api-local-sm`**:
+    *   **Description**: A *second*, independent instance of the Polymesh REST API configured to use **Local** **S**igning **M**anager.
+    *   **Why it's there**: Provides an alternative REST API endpoint that uses well-known, hardcoded development keys (Alice, Bob, Charlie) defined by their mnemonics (`//Alice`, etc.). This is simpler for basic tests or examples that rely on these known accounts, without involving Vault.
+    *   **Ports**: Exposes the API on port `3004` (configurable via `POLYMESH_REST_API_LOCAL_SM_PORT`).
+    *   **Dependencies**: Starts after `polymesh-node` and `subquery-graphql` are ready.
+
+*   **`environment-ready`**:
+    *   **Description**: A lightweight container that waits for the `.setup-complete` file to appear in the `rest-api-accounts-init` volume (which is created by `polymesh-rest-api-vault-sm-init`).
+    *   **Why it's there**: Provides a clear signal in the Docker logs (`docker compose logs environment-ready`) that all the automated initialization steps (Vault setup, REST API account creation) have finished, and the environment is fully ready for interaction, especially important on the first launch.
+
+## 5. Choosing a Signing Manager (Local vs. Vault)
+
+This environment runs two REST API instances, allowing you to choose how keys are managed:
+
+*   **Local Signers (`polymesh-rest-api-local-sm` on port `3004`)**:
+    *   Uses predefined development accounts (Alice, Bob, Charlie).
+    *   Keys are derived from hardcoded mnemonics (`//Alice`, etc.).
+    *   Simpler for basic testing or following SDK examples that use these accounts.
+    *   Signer names are simple strings: `alice`, `bob`, `charlie`.
+
+*   **Vault Signers (`polymesh-rest-api-vault-sm` on port `3005`)**:
+    *   Uses keys securely stored and managed by HashiCorp Vault (`admin`, `signer1` to `signer4`).
+    *   More closely mimics a production setup where keys are not exposed directly.
+    *   Required for examples using the accounts automatically set up by `polymesh-rest-api-vault-sm-init`.
+    *   Signer names follow the pattern `{key_name}-{key_version}`: `admin-1`, `signer1-1`, `signer2-1`, etc.
+
+You will interact with one or the other depending on which accounts/keys you need to use. **The following examples primarily use the Vault SM (`localhost:3005`) because those accounts are automatically provisioned with Identities.**
+
+## 6. Interacting with the Environment
+
+### 6.1 Connecting the Polymesh Portal
+
+You can connect the Polymesh Portal to your local node for a visual interface:
+
+1.  Go to the locally built portal web UI. You can get it [here](https://github.com/PolymeshAssociation/polymesh-portal). You most likely won't be able to use the public portal instances due to mixed content restrictions in modern browsers (HTTPS-served portal won't be able to connect to an unsecured WebSocket service).
+2.  Navigate to **Settings**.
+3.  Click the section displaying the current **Node RPC URL** and **Middleware URL**.
+4.  Choose **"Allow connecting to insecure local nodes"** if prompted or required by your browser.
+5.  Enter the following details:
+    *   **Node RPC URL**: `ws://localhost:9944` (or your custom `POLYMESH_CHAIN_WS_PORT`)
+    *   **Middleware URL**: `http://localhost:3000` (or your custom `POLYMESH_SUBQUERY_GRAPHQL_PORT`)
+6.  Save the settings. The portal should now reflect the state of your local chain.
+
+![Setting localhost in Polymesh Portal Settings](/img/portal-settings.png)
+
+To interact with the Portal, you must add one of the built-in accounts to your wallet. Use the following development mnemonics to **restore with recovery phrase**:
+
+- **bottom drive obey lake curtain smoke basket hold race lonely fit walk//Alice**
+- **bottom drive obey lake curtain smoke basket hold race lonely fit walk//Bob**
+- **bottom drive obey lake curtain smoke basket hold race lonely fit walk//Charlie**
+
+etc.
+
+### 6.2 Using the REST APIs with `curl`
+
+You can interact with the REST APIs directly using `curl` or any HTTP client. Remember to target the correct port (3004 for Local SM, 3005 for Vault SM).
+
+**Example: Get Alice's address (Local SM)**
+
+```bash
+curl -s http://localhost:3004/signer/alice | jq
+```
+
+Expected output (address may vary slightly):
+```json
+{
+  "address": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY"
+}
+```
+
+**Example: Get Signer1's address (Vault SM)**
+
+The `rest-api-accounts-init.sh` script already did this and stored it, but you can verify:
+
+```bash
+curl -s http://localhost:3005/signer/signer1-1 | jq
+```
+
+Expected output (address will be different each time the environment is reset with `--volumes`):
+```json
+{
+  "address": "5EXAMPLE..." # Address specific to your Vault key
+}
+```
+
+**Example: Get Signer1's Balance (Vault SM)**
+
+First, get `signer1-1`'s address:
+
+```bash
+SIGNER1_ADDRESS=$(curl -s http://localhost:3005/signer/signer1-1 | jq -r .address)
+echo "Signer1 Address: $SIGNER1_ADDRESS"
+
+# Now get the balance
+curl -s "http://localhost:3005/accounts/${SIGNER1_ADDRESS}/balance" | jq
+```
+
+Expected output (balance should reflect initial funding):
+```json
+{
+  "total": "100000",
+  "locked": "0",
+  "free": "100000"
+}
+```
+
+### 6.3 Example: Transfer POLYX (Vault SM)
+
+Let's transfer 50 POLYX from `signer1-1` to `signer2-1`.
+
+1.  **Get Addresses:**
+    ```bash
+    SIGNER1_ADDRESS=$(curl -s http://localhost:3005/signer/signer1-1 | jq -r .address)
+    SIGNER2_ADDRESS=$(curl -s http://localhost:3005/signer/signer2-1 | jq -r .address)
+    echo "Signer1 Address: $SIGNER1_ADDRESS"
+    echo "Signer2 Address: $SIGNER2_ADDRESS"
+    ```
+
+2.  **Prepare the Transfer Payload:**
+    *   We need to use the `balances.transferWithMemo` extrinsic.
+    *   The `signer` field indicates who pays the transaction fee and signs the request (via Vault).
+
+    ```bash
+    AMOUNT="50"
+
+    # Construct JSON payload
+    JSON_PAYLOAD=$(cat <<EOF
+    {
+      "options": {
+        "signer": "signer1-1",
+        "processMode": "submit"
+      },
+      "to": "$SIGNER2_ADDRESS",
+      "amount": "$AMOUNT",
+      "memo": "Sample transfer"
+    }
+    EOF
+    )
+
+    echo "Payload:"
+    echo $JSON_PAYLOAD | jq
+    ```
+
+3.  **Submit the Transaction:**
+    ```bash
+    curl -s -X POST \
+      http://localhost:3005/accounts/transfer \
+      -H 'Content-Type: application/json' \
+      -d "$JSON_PAYLOAD" | jq
+    ```
+
+4.  **Check Balances (Optional):** You should see `signer1-1`'s balance decreased by 50 POLYX plus transaction fees and `signer2-1`'s balance increased by 50 POLYX.
+    ```bash
+    # Check Signer1 balance
+    curl -s "http://localhost:3005/accounts/${SIGNER1_ADDRESS}/balance" | jq .free
+
+    # Check Signer2 balance
+    curl -s "http://localhost:3005/accounts/${SIGNER2_ADDRESS}/balance" | jq .free
+    ```
+
+### 6.4 Example: Create an Asset/Token (Vault SM)
+
+Let's create a new asset named "MyDevToken" with ticker "MYDEV" using the `singer-3` account.
+
+1.  **Prepare the Asset Creation Payload:**
+    *   We use the `asset.createAsset` extrinsic.
+    *   `name`: Asset's full name.
+    *   `ticker`: Short symbol (must be unique, uppercase, max 12 chars).
+    *   `assetType`: Can be EquityCommon, EquityPreffered, Commodity, etc. We'll use `EquityCommon`.
+    *   `isDivisible`: Whether the token can be held in fractional amounts.
+    *   `initialSupply`: The number of tokens to mint at creation time, which will be assigned to the creator's account.
+    *   `securityIdentifiers`: Globally recognized standardized codes that uniquely identify financial instruments. Options include:
+        * `Cusip` - North American securities
+        * `Cins` - International securities (CUSIP extension)
+        * `Isin` - Global standard for securities
+        * `Lei` - Legal entity identifier
+        * `Figi` - Global financial instrument identifier
+    *   `fundingRound`: Optional label indicating the financing stage of the asset (e.g., "Seed", "Series A", "Series B").
+    *   `documents`: List of documents associated with the asset, including legal disclosures, prospectuses, and other relevant files with their metadata.
+
+    ```bash
+    JSON_PAYLOAD=$(cat <<EOF
+    {
+      "options": {
+        "signer": "signer3-1",
+        "processMode": "submit"
+      },
+      "name": "My Dev Token",
+      "ticker": "MYDEV",
+      "initialSupply": "627880",
+      "isDivisible": true,
+      "assetType": "EquityCommon",
+      "securityIdentifiers": [
+        {
+          "type": "Isin",
+          "value": "US0846707026"
+        }
+      ],
+      "fundingRound": "Series A",
+      "documents": [
+        {
+          "name": "Annual report, 2021",
+          "uri": "https://example.com/sec/10k-05-23-2021.htm",
+          "contentHash": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "type": "Private Placement Memorandum",
+          "filedAt": "2025-04-09T00:00:00.000Z"
+        }
+      ]
+    }
+    EOF
+    )
+
+    echo "Payload:"
+    echo $JSON_PAYLOAD | jq
+    ```
+
+2.  **Submit the Transaction:**
+    ```bash
+    curl -s -X POST \
+      http://localhost:3005/assets/create \
+      -H 'Content-Type: application/json' \
+      -d "$JSON_PAYLOAD" | jq
+    ```
+    The response should contain details about the transaction and the newly created asset (including its ticker "MYDEV").
+
+3.  **Verify Asset Creation (Optional):** You can query the assets endpoint:
+    ```bash
+    curl -s http://localhost:3005/assets/MYDEV | jq
+    ```
+    This should return details about the "MYDEV" token.
+
+## 7. Stopping and Cleaning Up
+
+*   **Stop Services:** To stop the running containers without deleting data:
+    ```bash
+    docker compose down
+    ```
+
+*   **Stop and Remove Volumes:** To stop the containers AND remove all associated data volumes (chain data, database data, vault data, init status), effectively resetting the environment to a clean state for the next start:
+    ```bash
+    docker compose down --volumes
+    ```
+    *Caution: This will delete all blockchain history, indexed data, Vault keys, and created accounts/assets within the Docker environment.*

@@ -1,0 +1,20 @@
+---
+title: Confidential Assets
+description: Private Asset Features
+id: confidential-assets-reference
+slug: /assets/confidential
+sidebar_label: Confidential Assets
+tags:
+  - assets
+  - confidential
+---
+
+import { Redirect } from '@docusaurus/router';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+export default function ConfidentialRedirect() {
+  const to = useBaseUrl('/confidential-assets/overview');
+  return <Redirect to={to} />;
+}
+
+{/* This is a reference page that redirects to the main confidential assets documentation */}

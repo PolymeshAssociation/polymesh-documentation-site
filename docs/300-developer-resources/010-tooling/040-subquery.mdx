@@ -1,0 +1,66 @@
+---
+title: SubQuery Indexer
+description: Efficiently query Polymesh blockchain data using the SubQuery indexer and GraphQL API
+id: subquery
+slug: /development/tooling/subquery
+sidebar_label: SubQuery Indexer
+tags:
+  - subquery
+  - indexer
+  - graphql
+  - api
+  - development
+---
+
+## Overview
+
+The Polymesh SubQuery Indexer is a dedicated service that processes Polymesh blockchain data, transforming it into a structured format that can be easily queried. Built using the [SubQuery framework](https://subquery.network/), it provides an efficient way to access both historical and real-time chain state without directly querying the blockchain node, which can be resource-intensive for complex data retrieval.
+
+The official Polymesh SubQuery project is open source and [available on GitHub](https://github.com/PolymeshAssociation/polymesh-subquery).
+
+## Purpose and Use Cases
+
+Querying blockchain nodes directly for anything beyond basic information (like current balance) can be slow and inefficient, especially for historical data or aggregated results. The SubQuery indexer solves this by:
+
+1.  **Listening** to new blocks and events on the Polymesh chain.
+2.  **Processing** the data according to a predefined schema (defining entities like `Account`, `Asset`, `Settlement`, `Event`, `Extrinsic`, etc.).
+3.  **Storing** this structured data in a PostgreSQL database.
+4.  **Exposing** the data through a standard GraphQL API endpoint.
+
+This approach enables:
+
+-   **Efficient Data Retrieval**: Complex queries for historical transactions, asset holders, event logs, or identity claims become much faster.
+-   **Powering dApps & Frontends**: Provides a performant backend for applications like the [Polymesh Portal](https://portal.polymesh.network/) or custom dashboards.
+-   **Supporting APIs**: The [Polymesh REST API](/development/tooling/rest-api) relies heavily on the SubQuery indexer for many of its endpoints.
+-   **Data Analysis**: Enables easier analysis of on-chain activity and trends.
+
+## GraphQL API
+
+The primary way to interact with the indexed data is through the GraphQL endpoint exposed by the SubQuery service. GraphQL allows clients to request exactly the data they need, reducing over-fetching and improving performance.
+
+You can explore the schema and run queries using tools like GraphQL Playground or Postman, or directly within your application code using GraphQL client libraries.
+
+**Example Query (Conceptual):**
+
+```graphql
+query holdersByAsset {
+  assetHolders(filter: { assetId: { equalTo: "0x..." } }) {
+    nodes {
+      identityId
+      assetId
+      asset {
+        ticker
+      }
+      amount
+    }
+  }
+}
+```
+
+_Note: The actual query structure depends on the specific schema version deployed._
+
+## Running Locally
+
+The SubQuery indexer and its GraphQL endpoint are included in the [**Polymesh Local Development Environment**](/development/tooling/local-setup). Follow that guide to easily run the complete stack, including the indexer service (`subquery-node`) and the GraphQL server (`subquery-graphql`), typically available at `http://localhost:3000`.
+
+This local instance allows you to test integrations and explore the indexed data from your development chain.
