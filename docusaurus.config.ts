@@ -81,28 +81,172 @@ const config: Config = {
         sidebarPath: require.resolve('./sdk-docs-sidebar.ts'),
       },
     ],
-    // [
-    //   '@docusaurus/plugin-client-redirects',
-    //   {
-    //     redirects: [
-    //       {
-    //         to: '/polymesh-docs/polymesh-private/tutorials/walkthrough-confidential-assets-rest-api',
-    //         from: '/polymesh-docs/polymesh-private/development-environment/walkthrough-rest-api',
-    //       },
-    //       {
-    //         to: '/polymesh-docs/polymesh-private/confidential-assets',
-    //         from: '/polymesh-docs/polymesh-private/confidential-assets/overview',
-    //       },
-    //       {
-    //         to: '/polymesh-docs/polymesh-private/tooling',
-    //         from: [
-    //           '/polymesh-docs/polymesh-private/development-environment/overview',
-    //           '/polymesh-docs/polymesh-private/development-environment/tooling',
-    //         ],
-    //       },
-    //     ],
-    //   },
-    // ],
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          // Main docs index
+          { from: '/docs/', to: '/' },
+          { from: '/docs/introduction/', to: '/' },
+          { from: '/docs/introduction/governance/', to: '/governance/' },
+          { from: '/docs/introduction/identity/', to: '/identity/' },
+          { from: '/docs/introduction/polyx/', to: '/polyx/' },
+          { from: '/docs/introduction/why-polymesh/', to: '/' },
+          { from: '/docs/actions/', to: '/corporate-actions/' },
+          {
+            from: '/docs/actions/actions-sdk/',
+            to: '/development/tooling/sdk/',
+          },
+          {
+            from: '/docs/community/bug-bounty/',
+            to: '/development/bug-bounty/',
+          },
+          {
+            from: '/docs/community/bug-bounty-rules/',
+            to: '/development/bug-bounty/rules/',
+          },
+          // Distribute
+          {
+            from: '/docs/distribute/distributing-assets/',
+            to: '/corporate-actions/distributions/',
+          },
+          {
+            from: '/docs/distribute/distribution-process/',
+            to: '/corporate-actions/distributions/',
+          },
+          // KYC
+          {
+            from: '/docs/kyc/know-your-customer/',
+            to: '/identity/verification/',
+          },
+          // Originate
+          { from: '/docs/originate/compliance/', to: '/compliance/' },
+          { from: '/docs/originate/creating-asset/', to: '/assets/' },
+          { from: '/docs/originate/origination-process/', to: '/assets/' },
+          {
+            from: '/docs/originate/secondary-keys/',
+            to: '/identity/advanced/secondary-keys/',
+          },
+          // Quickstart
+          { from: '/docs/quickstart/quickstart-polyx/', to: '/polyx/' },
+          {
+            from: '/docs/quickstart/up-in-ten-minutes/',
+            to: '/getting-started/',
+          },
+          {
+            from: '/docs/quickstart/verification-with-cdd/',
+            to: '/identity/verification/',
+          },
+          {
+            from: '/docs/quickstart/wallet/',
+            to: '/getting-started/keys/polymesh-wallet/',
+          },
+          // Resources
+          {
+            from: '/docs/resources/github-repositories/',
+            to: '/developer-resources/links/',
+          },
+          { from: '/docs/resources/glossary/', to: '/glossary/' },
+          // Settlement
+          {
+            from: '/docs/settlement/settlement-agents/',
+            to: '/settlement/mediators/',
+          },
+          { from: '/docs/settlement/settlement-process/', to: '/settlement/' },
+          { from: '/docs/settlement/transferring-assets/', to: '/settlement/' },
+          // Polymesh Docs (old)
+          { from: '/polymesh-docs/', to: '/core-concepts/' },
+          {
+            from: '/polymesh-docs/network/architecture/',
+            to: '/architecture/',
+          },
+          { from: '/polymesh-docs/network/consensus/', to: '/architecture/' },
+          { from: '/polymesh-docs/network/fees/', to: '/polyx/fees/' },
+          { from: '/polymesh-docs/network/governance/', to: '/governance/' },
+          {
+            from: '/polymesh-docs/network/ledger/',
+            to: '/getting-started/keys/ledger/',
+          },
+          {
+            from: '/polymesh-docs/network/permissioned-roles/',
+            to: '/identity/roles/',
+          },
+          { from: '/polymesh-docs/network/polyx/', to: '/polyx/' },
+          {
+            from: '/polymesh-docs/network/running-a-node-docker/',
+            to: '/node/docker/',
+          },
+          {
+            from: '/polymesh-docs/network/tokenomics/',
+            to: '/polyx/tokenomics/',
+          },
+          {
+            from: '/polymesh-docs/polymesh-private/',
+            to: '/polymesh-private/',
+          },
+          {
+            from: '/polymesh-docs/polymesh-private/confidential-assets/',
+            to: '/confidential-assets/overview/',
+          },
+          {
+            from: '/polymesh-docs/polymesh-private/confidential-assets/diagrams/',
+            to: '/confidential-assets/sequence-diagrams/',
+          },
+          {
+            from: '/polymesh-docs/polymesh-private/confidential-assets/settlement/',
+            to: '/confidential-assets/settlement/',
+          },
+          {
+            from: '/polymesh-docs/polymesh-private/tooling/',
+            to: '/polymesh-private/developer-tooling/',
+          },
+          {
+            from: '/polymesh-docs/polymesh-private/tutorials/walkthrough-confidential-assets-rest-api/',
+            to: '/tutorials/confidential-assets-walkthrough/',
+          },
+          { from: '/polymesh-docs/primitives/assets/', to: '/assets/' },
+          {
+            from: '/polymesh-docs/primitives/assets/fungible_assets/',
+            to: '/assets/fungible/',
+          },
+          {
+            from: '/polymesh-docs/primitives/assets/nfts/',
+            to: '/assets/nft/',
+          },
+          {
+            from: '/polymesh-docs/primitives/authorisations/',
+            to: '/authorizations/',
+          },
+          {
+            from: '/polymesh-docs/primitives/cdd/',
+            to: '/identity/verification/',
+          },
+          { from: '/polymesh-docs/primitives/compliance/', to: '/compliance/' },
+          {
+            from: '/polymesh-docs/primitives/corporate-actions/',
+            to: '/corporate-actions/',
+          },
+          { from: '/polymesh-docs/primitives/identity/', to: '/identity/' },
+          {
+            from: '/polymesh-docs/primitives/multisig/',
+            to: '/identity/advanced/multisig/',
+          },
+          {
+            from: '/polymesh-docs/primitives/portfolios-custody/',
+            to: '/portfolios/custody/',
+          },
+          { from: '/polymesh-docs/primitives/settlement/', to: '/settlement/' },
+          {
+            from: '/polymesh-docs/primitives/settlement/settlement-diagrams/',
+            to: '/core-concepts/settlement/settlement-diagrams/',
+          },
+          {
+            from: '/polymesh-docs/primitives/smart-contracts/',
+            to: '/development/smart-contracts/',
+          },
+        ],
+      },
+    ],
   ],
 
   themeConfig: {
@@ -273,7 +417,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.vsDark,
       darkTheme: prismThemes.nightOwl,
-      additionalLanguages: ['rust', 'json', 'bash', 'toml'],
+      additionalLanguages: ['rust', 'json', 'bash', 'toml', 'ini'],
     },
     mermaid: {
       theme: { light: 'neutral', dark: 'dark' },

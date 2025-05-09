@@ -27,7 +27,7 @@ Secondary keys are authorized by a [Primary Key](#primary-key) to join an identi
 
 ### Session Keys
 
-Session keys are used by the [Node Operator](#node-operator) to sign data necessary for consensus. These keys are stored on the operator node itself. Although session keys do not hold any funds, they can be used to perform actions that could result in penalties, such as double signing. It is therefore critical to keep these keys secure.
+Session keys are cryptographic keys used by the [Node Operator](#node-operator) to sign data necessary for consensus and block production. These keys are stored on the operator node itself and are essential for participating in the network as an operator. Although session keys do not hold any funds, they can be used to perform actions that could result in penalties, such as double signing (equivocation), so it is critical to keep these keys secure.
 
 Session keys can either be generated offline and injected into the operator node or generated within the operator node by calling the appropriate RPC method. Once generated, session keys should be persisted. Session keys must either be stored within the client or mounted from secure storage via external methods.
 
@@ -115,9 +115,13 @@ The process by which multisig signers approve or reject proposals. A proposal is
 
 ## Staking & Node Operations
 
+### Session
+
+A fixed period with a constant set of operators. Operators can only join or leave the set at the start of a session. Sessions are used to rotate keys and update the active operator set.
+
 ### Node Operator
 
-A permissioned entity that runs nodes to collect transactions and produce blocks. Node operators stake their own [POLYX](#polyx), earn rewards for honest behavior, and face [slashing](#slashing) if they misbehave. See [Node Operations](/development/node).
+A permissioned entity that runs nodes to collect transactions and produce blocks. Node operators stake their own [POLYX](#polyx), earn rewards for honest behavior, and face [slashing](#slashing) if they misbehave. See [Node Operations](/developer-resources/validator-node-guide).
 
 ### Nominator
 
@@ -162,11 +166,23 @@ The process of reclaiming staked tokens after a waiting period.
 
 ### Era
 
-A fixed time period (typically 24 hours on Polymesh Mainnet) during which the elected node operators remain active and after which rewards are distributed.
+A fixed time period (typically 24 hours on Polymesh Mainnet) during which the elected node operators remain active and after which rewards are distributed. Each era determines the operator and nominator sets and is the interval for reward distribution.
 
 ### Slashing
 
 Mechanism by which staked tokens are lost if misbehavior occurs.
+
+### Equivocation
+
+Occurs when an operator node commits to two or more conflicting states (for example, by signing multiple blocks for the same slot). Equivocation is considered a serious protocol violation and can result in slashing of staked POLYX and removal from the operator set.
+
+### Immortal Transaction
+
+A transaction valid at any time, not restricted to a specific block or era. When using immortal transactions, care must be taken to ensure the account nonce is correct, as replay protection is not provided by block height or era.
+
+### Warm Spare Node
+
+A synced node configured and ready to replace an active operator node manually in the event of failure or maintenance. A warm spare node does not have session keys active until it is promoted to active status, helping to prevent equivocation penalties.
 
 ---
 
