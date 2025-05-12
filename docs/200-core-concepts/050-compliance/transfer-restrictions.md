@@ -11,7 +11,7 @@ tags:
 
 ## Overview
 
-Transfer restrictions in Polymesh are implemented using the statistics module, and can only be configured for fungible assets (see the [Fungible Assets](/assets/fungible) documentation for more details). The statistics module tracks key metrics ("statistics") about asset holders, and transfer restrictions are enforced based on these statistics at the protocol level. This allows asset issuers to enforce compliance rules such as:
+Transfer restrictions in Polymesh are implemented using the statistics module, and can only be configured for fungible assets (see the [Fungible Assets](/core/assets/fungible) documentation for more details). The statistics module tracks key metrics ("statistics") about asset holders, and transfer restrictions are enforced based on these statistics at the protocol level. This allows asset issuers to enforce compliance rules such as:
 
 - Limiting the number of unique token holders (count-based restrictions)
 - Capping the maximum percentage of the total supply that any single holder can own (percentage-based restrictions)

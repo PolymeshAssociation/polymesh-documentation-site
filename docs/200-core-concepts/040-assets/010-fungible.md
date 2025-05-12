@@ -2,7 +2,7 @@
 title: Fungible Assets
 description: Fungible Asset Management
 id: fungible-assets
-slug: /assets/fungible
+slug: /core/assets/fungible
 sidebar_label: Fungible Assets
 tags:
   - assets
@@ -11,21 +11,21 @@ tags:
 
 ## Overview
 
-Fungible assets on Polymesh represent digitized value such as shares, bonds, funds, stablecoins, and more. They are managed using the standardized Polymesh asset framework, ensuring all assets benefit from built-in compliance, settlement, and lifecycle management features. For a high-level introduction to assets and the Polymesh asset standard, see [Assets on Polymesh](/assets).
+Fungible assets on Polymesh represent digitized value such as shares, bonds, funds, stablecoins, and more. They are managed using the standardized Polymesh asset framework, ensuring all assets benefit from built-in compliance, settlement, and lifecycle management features. For a high-level introduction to assets and the Polymesh asset standard, see [Assets on Polymesh](/core/assets).
 
 Fungible assets are interchangeable tokens with divisible or indivisible supply. Ownership is represented by balances held by different on-chain identities. They allow access to all core features such as compliance, settlement, corporate actions, metadata, and agent permissions, all available natively on-chain. For more on these features, see the relevant dedicated pages:
 
 - [Compliance](/compliance)
 - [Settlement](/settlement)
-- [Asset Metadata](/assets/metadata)
+- [Asset Metadata](/core/assets/metadata)
 - [Asset Agents & Permissions](/asset-agents)
-- [Ownership Transfer](/assets/ownership-transfer)
+- [Ownership Transfer](/core/assets/ownership-transfer)
 - [Corporate Actions](/corporate-actions)
 - [Security Token Offerings](/sto)
 
 ## Asset Creation
 
-To create a fungible asset, users specify the asset type (e.g., Equity, Bond, Fund), divisibility, and optional metadata. Each asset is assigned a unique Asset ID and can have a unique ticker and external identifiers (such as ISINs, CUSIPs, etc.). For a step-by-step guide, see [Asset Creation](/assets#asset-creation).
+To create a fungible asset, users specify the asset type (e.g., Equity, Bond, Fund), divisibility, and optional metadata. Each asset is assigned a unique Asset ID and can have a unique ticker and external identifiers (such as ISINs, CUSIPs, etc.). For a step-by-step guide, see [Asset Creation](/core/assets#asset-creation).
 
 ## Issuance and Distribution
 
@@ -58,11 +58,11 @@ After creation, issuers or their appointed [agents](/asset-agents) can issue tok
 
 ## Further Reading
 
-- [Asset Management](/assets)
-- [Non-Fungible Assets](/assets/nft)
-- [Asset Metadata](/assets/metadata)
+- [Asset Management](/core/assets)
+- [Non-Fungible Assets](/core/assets/nft)
+- [Asset Metadata](/core/assets/metadata)
 - [Asset Agents & Permissions](/asset-agents)
-- [Ownership Transfer](/assets/ownership-transfer)
+- [Ownership Transfer](/core/assets/ownership-transfer)
 - [Checkpoint Management](/corporate-actions/checkpoints)
 - [Corporate Actions](/corporate-actions)
 - [Security Token Offerings](/sto)

@@ -2,7 +2,7 @@
 title: Asset Metadata
 description: Asset Metadata Management
 id: asset-metadata
-slug: /assets/metadata
+slug: /core/assets/metadata
 sidebar_label: Asset Metadata
 tags:
   - assets
@@ -85,7 +85,7 @@ Metadata values (not including NFT properties) can be:
 
 ### NFT Collection Keys
 
-When creating an NFT collection, metadata keys serve as collection keys that define required properties for each NFT in the collection. Refer to the [Non-Fungible Assets](/assets/nft/#collection-metadata-keys) page for more details.
+When creating an NFT collection, metadata keys serve as collection keys that define required properties for each NFT in the collection. Refer to the [Non-Fungible Assets](/core/assets/nft/#collection-metadata-keys) page for more details.
 
 ## Metadata Specifications
 

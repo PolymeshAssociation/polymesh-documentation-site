@@ -6,7 +6,7 @@ tags:
   - ownership
   - management
 sidebar_label: Ownership Transfer
-slug: /assets/ownership-transfer
+slug: /core/assets/ownership-transfer
 ---
 
 Transferring ownership of an asset or a ticker on Polymesh is a critical operation that allows the current issuer/owner to hand over full control to another identity. This is distinct from transferring asset balances and involves the rights to manage, configure, and control the asset or ticker. Tickers are unique but can be unlinked from an asset, allowing the ticker to be transferred to a new asset.

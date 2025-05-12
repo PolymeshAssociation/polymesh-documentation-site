@@ -190,7 +190,7 @@ A synced node configured and ready to replace an active operator node manually i
 
 ### Asset
 
-A digital representation of value on Polymesh. Assets are managed at the protocol level and can have compliance, settlement, and lifecycle rules enforced on-chain. Assets can be either [fungible](#fungible-token--asset) or [non-fungible](#non-fungible-token-nft). Each asset is assigned a unique Asset ID and may have a ticker and external identifiers (such as ISINs, CUSIPs, etc.). See [Assets](/assets/).
+A digital representation of value on Polymesh. Assets are managed at the protocol level and can have compliance, settlement, and lifecycle rules enforced on-chain. Assets can be either [fungible](#fungible-token--asset) or [non-fungible](#non-fungible-token-nft). Each asset is assigned a unique Asset ID and may have a ticker and external identifiers (such as ISINs, CUSIPs, etc.). See [Assets](/core/assets/).
 
 ### Asset ID
 
@@ -198,7 +198,7 @@ A unique 16-byte identifier (UUID) assigned to each asset at creation. Used thro
 
 ### Ticker
 
-A unique, human-readable symbol that can be registered and linked to an asset for discoverability. Tickers can be transferred and unlinked from assets. See [Ownership Transfer](/assets/ownership-transfer).
+A unique, human-readable symbol that can be registered and linked to an asset for discoverability. Tickers can be transferred and unlinked from assets. See [Ownership Transfer](/core/assets/ownership-transfer).
 
 ### Divisibility
 
@@ -222,11 +222,11 @@ Rules that limit the transfer of assets based on criteria such as maximum invest
 
 ### NFT Collection
 
-A group of non-fungible tokens (NFTs) managed under a single asset. Each collection is associated with a unique Asset ID and user-defined metadata. The collection defines the metadata keys that are required to be present for all individual NFTs within it. See [Non-Fungible Assets](/assets/nft).
+A group of non-fungible tokens (NFTs) managed under a single asset. Each collection is associated with a unique Asset ID and user-defined metadata. The collection defines the metadata keys that are required to be present for all individual NFTs within it. See [Non-Fungible Assets](/core/assets/nft).
 
 ### Collection Metadata Keys
 
-Properties that must be defined for each NFT in a collection. Registered before collection creation and stored on-chain for transparency and smart contract use. See [Asset Metadata](/assets/metadata).
+Properties that must be defined for each NFT in a collection. Registered before collection creation and stored on-chain for transparency and smart contract use. See [Asset Metadata](/core/assets/metadata).
 
 ### Token URI
 
@@ -246,7 +246,7 @@ A collection-wide base URI for NFT images, used to construct full image URLs for
 
 ### Asset Metadata
 
-Additional information associated with an asset, such as regulatory details, classifications, investment terms, or external references. Metadata can be local (asset-specific) or global (standardized across assets). See [Asset Metadata](/assets/metadata).
+Additional information associated with an asset, such as regulatory details, classifications, investment terms, or external references. Metadata can be local (asset-specific) or global (standardized across assets). See [Asset Metadata](/core/assets/metadata).
 
 ### Local Metadata
 
@@ -270,11 +270,11 @@ A fundraising method where tokens representing ownership of an asset are sold to
 
 ### Fungible Token / Asset
 
-A fungible token or asset on Polymesh is an interchangeable unit of value, such as a token or share, where each unit is identical and mutually substitutable. Fungible tokens are divisible and can be transferred, issued, or redeemed in fractional or whole amounts. See [Fungible Assets](/assets/fungible).
+A fungible token or asset on Polymesh is an interchangeable unit of value, such as a token or share, where each unit is identical and mutually substitutable. Fungible tokens are divisible and can be transferred, issued, or redeemed in fractional or whole amounts. See [Fungible Assets](/core/assets/fungible).
 
 ### Non-Fungible Token (NFT)
 
-A non-fungible token (NFT) is a unique digital asset on Polymesh that represents ownership of a specific, individually distinguishable item or record. Unlike fungible tokens, each NFT has distinct characteristics or metadata and cannot be exchanged on a one-to-one basis with other tokens. NFTs are commonly used for assets such as collectibles, certificates, or unique financial instruments, and are managed within NFT collections that define required metadata keys for each token. See [Non-Fungible Assets](/assets/nft).
+A non-fungible token (NFT) is a unique digital asset on Polymesh that represents ownership of a specific, individually distinguishable item or record. Unlike fungible tokens, each NFT has distinct characteristics or metadata and cannot be exchanged on a one-to-one basis with other tokens. NFTs are commonly used for assets such as collectibles, certificates, or unique financial instruments, and are managed within NFT collections that define required metadata keys for each token. See [Non-Fungible Assets](/core/assets/nft).
 
 ### Portfolio
 

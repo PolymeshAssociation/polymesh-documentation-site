@@ -45,7 +45,7 @@ An **asset** on Polymesh is a uniquely identified, on-chain record that can repr
 
 ## Asset Creation
 
-Assets are created on-chain by an identity (the issuer) using either the `create_asset` or `create_asset_with_custom_type` methods. You must specify the [asset name](#asset-name-renaming), [divisibility](/assets/fungible/#divisibility), [asset type](#asset-types), and can optionally include [external identifiers](#securities-identifiers) and a [funding round](#funding-round) name. Each asset receives a unique `AssetId`.
+Assets are created on-chain by an identity (the issuer) using either the `create_asset` or `create_asset_with_custom_type` methods. You must specify the [asset name](#asset-name-renaming), [divisibility](/core/assets/fungible/#divisibility), [asset type](#asset-types), and can optionally include [external identifiers](#securities-identifiers) and a [funding round](#funding-round) name. Each asset receives a unique `AssetId`.
 
 - **Fungible Assets:** Created directly with the chosen type and properties.
 - **NFTs:** After creating the asset, you must register any local NFT keys or metadata types to the asset before creating the NFT collection. See [Non-Fungible Assets](/core/assets/nft) for details. If specifying local NFT keys, always create the asset first, then register keys, then create the collection.
