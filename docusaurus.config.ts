@@ -122,8 +122,8 @@ const config: Config = {
           },
           // Originate
           { from: '/docs/originate/compliance/', to: '/compliance/' },
-          { from: '/docs/originate/creating-asset/', to: '/assets/' },
-          { from: '/docs/originate/origination-process/', to: '/assets/' },
+          { from: '/docs/originate/creating-asset/', to: '/core/assets/' },
+          { from: '/docs/originate/origination-process/', to: '/core/assets/' },
           {
             from: '/docs/originate/secondary-keys/',
             to: '/identity/advanced/secondary-keys/',
@@ -205,14 +205,14 @@ const config: Config = {
             from: '/polymesh-docs/polymesh-private/tutorials/walkthrough-confidential-assets-rest-api/',
             to: '/tutorials/confidential-assets-walkthrough/',
           },
-          { from: '/polymesh-docs/primitives/assets/', to: '/assets/' },
+          { from: '/polymesh-docs/primitives/assets/', to: '/core/assets/' },
           {
             from: '/polymesh-docs/primitives/assets/fungible_assets/',
-            to: '/assets/fungible/',
+            to: '/core/assets/fungible/',
           },
           {
             from: '/polymesh-docs/primitives/assets/nfts/',
-            to: '/assets/nft/',
+            to: '/core/assets/nft/',
           },
           {
             from: '/polymesh-docs/primitives/authorisations/',

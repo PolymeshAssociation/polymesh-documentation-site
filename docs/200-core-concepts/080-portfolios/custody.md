@@ -11,7 +11,7 @@ tags:
 
 ## Overview
 
-Polymesh is designed to support several common custody models, including the ability to assign custodianship of a portfolio to another [identity](/identity). This separates beneficial ownership (which always stays with the beneficiary's identity for corporate actions) from custodial control, where another entity manages the [assets](/assets) on behalf of the beneficiary.
+Polymesh is designed to support several common custody models, including the ability to assign custodianship of a portfolio to another [identity](/identity). This separates beneficial ownership (which always stays with the beneficiary's identity for corporate actions) from custodial control, where another entity manages the [assets](/core/assets) on behalf of the beneficiary.
 
 When control of a portfolio is assigned, the custodian can:
 
