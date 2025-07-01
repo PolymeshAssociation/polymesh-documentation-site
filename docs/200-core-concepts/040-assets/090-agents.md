@@ -171,6 +171,11 @@ The [`AssetPermissions`](/sdk-docs/api/entities/Identity/AssetPermissions/classe
 
 Acceptance of an authorization request to become an agent is done with the [Authorizations](/sdk-docs/classes/API/Entities/Identity/#authorizations) (accessed via `identity.authorizations`).
 
+## With the SDK
+
+- Use the [Permissions Class](https://developers.polymesh.network/sdk-docs/classes/API/Entities/Asset/Base/Permissions) for basic agent operations on the Asset level.
+- Use the [AssetPermissions Class](https://developers.polymesh.network/sdk-docs/classes/API/Entities/Identity/AssetPermissions/) for basic agent related functionality on the Identity level. 
+
 ## Summary
 
 Polymesh's agent system provides a robust and granular framework for delegating asset management responsibilities. By leveraging predefined and custom agent groups, issuers can securely grant specific permissions to third parties or internal teams, ensuring compliance and operational efficiency while adhering to the principle of least privilege. The two-stage invitation/acceptance process adds a layer of security, requiring explicit consent from the designated agent.
