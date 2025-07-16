@@ -15,7 +15,7 @@ This glossary provides definitions for key terms and concepts used throughout th
 
 ### Permissioned Identity
 
-On Polymesh, all keys (excluding [Session Keys](#session-keys)) must be linked to an on-chain [DID](/identity/) with a valid [CDD](#cdd-customer-due-diligence) claim to receive [POLYX](#polyx) and submit transactions. A node operator's DID must be granted an additional role making it a permissioned identity. Only keys linked to this identity will be allowed to be [Stash keys](#stash).
+On Polymesh, all keys that participates in identity and asset related transactions (excluding [Session Keys](#session-keys)) must be linked to an on-chain [DID](/identity/) with a valid [CDD](#cdd-customer-due-diligence). A node operator's DID must be granted an additional role making it a permissioned identity. Only keys linked to this identity will be allowed to be [Stash keys](#stash).
 
 ### Primary Key
 
@@ -302,7 +302,7 @@ Protocol-level rules that govern asset transfers and ownership. Compliance ensur
 
 ### CDD (Customer Due Diligence)
 
-A process by which an identity is verified and approved to participate on Polymesh. CDD claims are required for most network actions. See [CDD](/identity/verification/).
+A process by which an identity is verified and approved to participate on Polymesh. CDD claims are required for every Asset and Identoty related network actions. See [CDD](/identity/verification/).
 
 ### KYC (Know Your Customer)
 

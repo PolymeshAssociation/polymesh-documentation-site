@@ -103,13 +103,13 @@ The signature generation process involves:
    - The identity's current off-chain authorization nonce (retrieved via `identity::OffChainAuthorizationNonce`)
    - Expiry timestamp for the authorization
 2. **Payload Creation**:
-   - Concatenate the hex values (DID + nonce + expiry) without separators into a single payload
+   - Concatenate the hex or byte values (DID + nonce + expiry) without separators into a single payload
 3. **Signing**:
    - Sign the payload using the future secondary key
    - The resulting signature must be provided when adding the secondary key
 
 :::note
-Off-chain authorization signatures provide a secure way to prove that the new key consents to becoming a secondary key without requiring preliminary on-chain transactions.
+Off-chain authorization signatures provide a secure way to prove that the new key consents to becoming a secondary key without requiring preliminary on-chain transactions. Off-chain signatures for adding secondary keys with authorization are verified as both wrapped and unwrapped.
 :::
 
 This method enables bulk addition of secondary keys without requiring each key to submit separate transactions to accept joining the identity.

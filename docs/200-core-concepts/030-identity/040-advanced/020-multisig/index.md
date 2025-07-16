@@ -33,7 +33,7 @@ Multisigs have three important relationships:
 
 1. **Identity Association**: Like any key, a multisig must be linked to an identity to perform most operations
 2. **Admin Control**: An optional admin identity can manage the multisig configuration
-3. **Fee Payment**: Initially the creator's identity pays for proposal fees, but this can be removed to make the multisig self-paying
+3. **Fee Payment**: Initially the creator's identity pays for proposal fees, but this can be removed to make the multisig self-paying. Multisig accounts can also be [subsidized](/accounts/subsidized).
 
 ### Operational Flow
 
