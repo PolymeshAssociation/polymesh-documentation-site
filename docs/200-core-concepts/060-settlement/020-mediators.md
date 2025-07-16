@@ -67,6 +67,7 @@ For a settlement to execute when mediators are involved:
 2. Mediators have additional control options:
    - `settlement::withdraw_affirmation_as_mediator`: Remove a previously given affirmation
    - `settlement::reject_instruction_as_mediator`: Reject and cancel the instruction entirely
+   - `settlement::lockInstruction`: Lock instruction if the instruction is pending or has failed at least one time
 
 The instruction cannot settle until all required affirmations are in place and valid (not expired).
 

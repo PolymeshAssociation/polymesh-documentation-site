@@ -17,13 +17,13 @@ Different roles on the Polymesh network have different levels of permissioning r
 
 ## Network Users
 
-All users of Polymesh go through a [Customer Due Diligence](/identity/verification/) process. With a valid CDD claim, a user can send and receive POLYX and interact with the Polymesh primitives to create and manage their identities and assets, settle instructions and so on.
+Every user wishes to manage identites and assets on Polymesh must go through a [Customer Due Diligence](/identity/verification/) process. With a valid CDD claim, a user can create and manage their identities and assets, settle instructions and so on.
 
 ## Operators
 
 Operators nodes are special nodes in the Polymesh network which author new blocks, and participate in finalising the blockchain.
 
-Unlike a permissionless network, in order to run an operator node, a user must be permissioned through the on-chain governance process. This is done via a [Polymesh Improvement Proposal](/governance#polymesh-improvement-proposals).
+Unlike a permissionless network, in order to run an operator node, a user must be permissioned through CDD and the on-chain governance process. This is done via a [Polymesh Improvement Proposal](/governance#polymesh-improvement-proposals).
 
 ## Customer Due Diligence Service Providers
 

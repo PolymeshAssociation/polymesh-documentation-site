@@ -22,6 +22,7 @@ When control of a portfolio is assigned, the custodian can:
 
 **Restrictions:**
 
+- The default portfolio cannot have a custodian. A custodian must be assigned to a user portfolio.
 - The custodian cannot move assets to portfolios under a different DID; only between portfolios of the same owner.
 - The custodian cannot delete the portfolio.
 - The custodian cannot rename the portfolio.
