@@ -142,3 +142,6 @@ Metadata entries support three lock states:
 - Only asset issuers or [authorized agents](/asset-agents) can modify local metadata
 - Global metadata modifications require governance approval
 - Lock status can prevent modifications even by authorized parties
+
+### With the SDK
+The [Metadata class](https://developers.polymesh.network/sdk-docs/classes/API/Entities/Asset/Base/Metadata/) handles all asset metadata related functionality.
