@@ -62,11 +62,12 @@ Using `identity::create_child_identities`:
   - The target Identity's DID (future parent)
   - The parent identity's off-chain authorization nonce (retrieved via `identity::offchain_authorization_nonce`)
   - An expiry date for the authorization
+- The payload data must be wrapped with `<Bytes>` and `</Bytes>` tags before signing
 
 This method enables bulk creation of child identities without first linking the keys to the parent identity.
 
-:::info
-Only the primary key of the parent identity can initiate either creation process.
+:::info Primary Key Requirement
+Only the **primary key** of the parent identity can initiate either creation process. This is one of the few identity management functions that cannot be delegated to secondary keys, ensuring strict control over identity hierarchy creation.
 :::
 
 ### Capabilities and Limitations

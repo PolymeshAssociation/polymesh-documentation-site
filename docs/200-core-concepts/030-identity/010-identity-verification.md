@@ -13,7 +13,7 @@ tags:
 
 Polymesh has a unique on-boarding Customer Due Diligence (CDD) process that leverages a federation of professional KYC companies to quickly and easily on-board users, whilst providing the network and its participants stronger security. Given the domain of Polymesh is regulated assets and capital markets, this allows investors, institutions and other users to interact with confidence on Polymesh, strengthening its value and aiding ecosystem adoption.
 
-Every identity and asset related transaction that is executed on-chain in Polymesh must be associated with an identity that has a valid CDD claim. To be valid a CDD claim must be issued by one of a group of permissioned identities representing professional KYC companies.
+Every **identity** and **asset** related transaction that is executed on-chain in Polymesh must be associated with an identity that has a valid CDD claim. To be valid a CDD claim must be issued by one of a group of permissioned identities representing professional KYC companies.
 
 To on-board into Polymesh, a user must go through a simple due diligence process with a Polymesh CDD service provider - that CDD service provider will then create the users identity and attach a CDD claim.
 
@@ -29,6 +29,6 @@ Similarly to remove an existing CDD service provider, on-chain governance would 
 
 CDD claims are issued by the networks trusted CDD service providers. They can have an expiry, meaning customers need to re-authenticate with the CDD service provider periodically to maintain access to the network.
 
-An identity must always have a valid CDD claim if it wishes to be able to interact with any Identity and Asset related transaction the network. It may have more than one valid CDD claim, for example if they have KYC'ed with two separate CDD service providers. This provides some additional redundancy if a CDD service provider is removed from the trusted list of providers.
+An identity must always have a valid CDD claim if it wishes to be able to interact with any identity and asset related transaction the network. It may have more than one valid CDD claim, for example if they have KYC'ed with two separate CDD service providers. This provides some additional redundancy if a CDD service provider is removed from the trusted list of providers.
 
 A user can also have multiple identities. In this case each identity must have a valid CDD claim, although these could be issued by the same CDD service provider meaning the user only needs to KYC once.

@@ -62,11 +62,15 @@ When selecting signing keys for a multisig consider the following requirements:
 
 ### Administration
 
-A multisig can optionally have an admin identity that can unilaterally manage its configuration. An admin identity can be added by creating a multisig proposal with a call of `multisig::add_admin`. The admin identity's primary key can then:
+A multisig can optionally have an admin identity that can unilaterally manage its configuration. An admin identity can be added by creating a multisig proposal with a call of `multisig::add_admin`. The admin identity's **primary key** can then:
 
 - Add a signer to the multisig (`multisig::add_multisig_signers_via_admin`)
 - Remove a signer from the multisig (`multisig::remove_multisig_signers_via_admin`)
 - Change the required number of signatures (`multisig::change_sigs_required_via_admin`)
+
+:::warning Primary Key Requirement
+Multisig administration functions require the **primary key** of the admin identity - these cannot be delegated to secondary keys. This ensures strict control over multisig configuration changes.
+:::
 
 :::note
 See [Proposal Voting](#proposal-states) for details on how configuration changes affect existing proposals.
@@ -110,10 +114,14 @@ Important points about the paying identity:
 - It is automatically set to the creator's identity when the multisig is created
 - It can be removed either by:
   - The multisig itself using `multisig::remove_payer`
-  - The paying identity using `multisig::remove_payer_via_payer`
+  - The **paying identity's primary key** using `multisig::remove_payer_via_payer`
 - It cannot be changed to a different identity
 - Once removed, the multisig must pay its own transaction fees from its POLYX balance
 - The removal is permanent - after removing the paying identity, the multisig cannot revert to using a paying identity
+
+:::warning Primary Key Requirement
+The `multisig::remove_payer_via_payer` function requires the **primary key** of the paying identity - this cannot be delegated to secondary keys.
+:::
 
 :::tip
 Once a paying identity has been removed, if another key is required to pay transaction fees, a [account subsidy](/accounts/subsidized) relationship can be set up.

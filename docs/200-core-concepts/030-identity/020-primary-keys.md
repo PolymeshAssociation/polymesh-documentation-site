@@ -44,13 +44,10 @@ A primary key has unrestricted access to all identity functions and cannot have 
 
 - Creating and managing [child identities](/identity/advanced/child)
 - Adding, removing, and modifying permissions of [secondary keys](/identity/advanced/secondary-keys)
-- Creating [authorization](/authorizations) requests for identity operations
 - Freezing/unfreezing all secondary keys (using `identity::freeze_secondary_keys`/`identity::unfreeze_secondary_keys`)
-- Initiating primary key rotation
 
 ### Key Management Operations
 
-- Adding secondary keys (via `identity::add_authorization` with type `JoinIdentity`)
 - Removing secondary keys (via `identity::remove_secondary_keys`)
 - Setting and modifying secondary key permissions (via `identity::set_secondary_key_permissions`)
 
@@ -63,6 +60,10 @@ A primary key has unrestricted access to all identity functions and cannot have 
 
 :::note
 While primary keys can execute any transaction the identity is authorized for, it's recommended to use properly permissioned [secondary keys](/identity/advanced/secondary-keys) for routine operations and reserve the primary key for critical identity management functions.
+:::
+
+:::warning Authorization Capabilities
+While primary keys have unrestricted access, [secondary keys](/identity/advanced/secondary-keys) with `add_authorization` permissions can also create authorization requests for sensitive operations, including primary key rotation. Carefully audit which secondary keys have authorization permissions and consider them as having significant security implications for your identity.
 :::
 
 ## Key Management
@@ -83,9 +84,9 @@ If you're concerned about potential primary key loss or compromise, you can crea
 
 ### Key Rotation
 
-Primary keys can be rotated through a controlled process [authorization](/authorizations) that requires:
+Primary keys can be rotated through a controlled [authorization](/authorizations) process that requires:
 
-1. Authorization from the current primary key
+1. Creation of a rotation authorization (by primary key or secondary key with `add_authorization` permissions)
 2. Acceptance by the new primary key
 
 The rotation process can be done in two ways:

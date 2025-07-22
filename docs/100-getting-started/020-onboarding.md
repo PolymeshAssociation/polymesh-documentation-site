@@ -11,13 +11,13 @@ tags:
 
 ## Customer Due Diligence (CDD)
 
-Every Polymesh user that participates in asset and identity related transactions must pass a **minimal identity verification** before being permitted to transact on the network. This verification is called **customer due diligence (CDD)**. Accounts that are used for POLYX transfers and staking are not subject to the verification process.
+Polymesh users who participates in **asset** and **identity** related transactions must complete a **minimal identity verification** before being permitted to transact on the network. This verification is called **Customer Due Diligence (CDD)**. Accounts used solely for POLYX transfers and staking (excluding validator activities) are not subject to this verification process.
 
-Verifying your identity for CDD purposes involves applying through a CDD service provider. They will verify the information you submit and write an identity claim to the blockchain for you.
+To verify your identity for CDD purposes, you must apply through a CDD service provider. The provider will review your submitted information and, upon approval, write an identity claim to the blockchain on your behalf.
 
 :::note
 
-Everyone who participates in asset and identity related transactions on Polymesh must complete onboarding. This is not a substitution for KYC requirements of regulated assets. Asset issuers will typically enforce additional KYC requirements. Asset issuers cannot circumvent the minimum requirement for a key to be associated with an on-chain identity with a valid CDD claim.
+Everyone who participates in asset and identity related transactions on Polymesh must complete onboarding. This is not a substitute for the KYC requirements of regulated assets. Asset issuers will typically enforce additional KYC requirements. Asset issuers cannot circumvent the minimum requirement for a key to be associated with an on-chain identity with a valid CDD claim.
 
 :::
 

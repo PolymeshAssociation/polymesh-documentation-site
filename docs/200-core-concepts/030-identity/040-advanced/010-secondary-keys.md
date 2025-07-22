@@ -103,13 +103,14 @@ The signature generation process involves:
    - The identity's current off-chain authorization nonce (retrieved via `identity::OffChainAuthorizationNonce`)
    - Expiry timestamp for the authorization
 2. **Payload Creation**:
-   - Concatenate the hex or byte values (DID + nonce + expiry) without separators into a single payload
+   - Concatenate the hex values (DID + nonce + expiry) without separators
+   - Wrap the concatenated string with `<Bytes>` and `</Bytes>` tags to form the final payload
 3. **Signing**:
-   - Sign the payload using the future secondary key
+   - Sign the wrapped payload using the future secondary key
    - The resulting signature must be provided when adding the secondary key
 
 :::note
-Off-chain authorization signatures provide a secure way to prove that the new key consents to becoming a secondary key without requiring preliminary on-chain transactions. Off-chain signatures for adding secondary keys with authorization are verified as both wrapped and unwrapped.
+Off-chain authorization signatures provide a secure way to prove that the new key consents to becoming a secondary key without requiring preliminary on-chain transactions. The payload data must be wrapped with `<Bytes>` and `</Bytes>` tags before signing.
 :::
 
 This method enables bulk addition of secondary keys without requiring each key to submit separate transactions to accept joining the identity.
@@ -152,23 +153,43 @@ The primary key can modify permissions for any secondary key at any time:
 ### Limitations and Considerations
 
 - A single key can only be associated with one identity (either as primary or secondary key)
-- Secondary keys cannot add other secondary keys
+- Secondary keys cannot add other secondary keys directly without explicit `add_authorization` permission
 - There's a limit to the complexity and number of permissions that can be assigned
 - Secondary keys can voluntarily leave an identity but cannot modify their own permissions
 - Frozen secondary keys cannot perform any operations until unfrozen by the primary key
-- Many critical identity management functions can only be performed by the primary key:
-  - Setting or modifying permissions of secondary keys
-  - Removing secondary keys from an identity
-  - Creating child identities
-  - Adding secondary keys
-  - Freezing/unfreezing secondary keys
-  - Creating multisigs
-  - Initiating primary key rotation
+
+**Primary Key Exclusive Functions:**
+
+The following critical identity management functions can **only** be performed by the primary key:
+
+- Setting or modifying permissions of secondary keys (`set_secondary_key_permissions`)
+- Adding/removing secondary keys (`add_secondary_keys_with_authorization`, `remove_secondary_keys`)
+- Creating and managing child identities (`create_child_identities`, `unlink_child_identity`)
+- Freezing/unfreezing secondary keys (`freeze_secondary_keys`, `unfreeze_secondary_keys`)
+- Multisig administration (when designated as admin or payer identity)
+
+**Secondary Key Authorization Capabilities:**
+
+Secondary keys with permission to call `add_authorization` can create authorization requests for sensitive operations, including:
+
+- Primary key rotation requests
+- Asset ownership transfers
+- Portfolio custody changes
+- Other identity-level permissions
+
+:::warning Critical Security Consideration
+Granting a secondary key permission to call `add_authorization` effectively allows it to initiate **primary key rotation** and other sensitive identity operations. While the target must still accept these authorizations, this permission should be granted with extreme caution as it can serve as a backup mechanism to regain identity control if the primary key is lost.
+
+**Recommendation**: Only grant `add_authorization` permissions to highly trusted secondary keys that you intend to use as emergency backup keys for identity recovery scenarios.
+:::
+
+**Key Recovery Implications:**
+
 - If a secondary key leaves or is removed from an identity, it cannot transact on the Polymesh blockchain until it either:
   - Receives its own DID and CDD claim (becoming a primary key for a new identity)
   - Joins another identity that has a valid CDD claim
 
-These restrictions are enforced at the protocol level, ensuring that control over identity structure and permissions remains with the primary key holder.
+These restrictions are enforced at the protocol level, ensuring that control over core identity structure remains secure while allowing controlled delegation of specific capabilities.
 
 ### Transaction Fee Management
 

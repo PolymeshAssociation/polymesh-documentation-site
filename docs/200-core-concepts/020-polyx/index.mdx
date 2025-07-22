@@ -11,14 +11,21 @@ tags:
 
 ## Overview
 
-POLYX is the native token of the Polymesh network.
+POLYX is the native utility token of the Polymesh network.
 
-It is used in Polymesh for staking, for both operators and non-operators, signalling on governance issues and paying for transactions on the network.
+It serves several key functions:
 
-Additional POLYX is only created when block rewards are minted in order to reward operators and stakers.
+- **Transaction Fees:** POLYX is required to pay for transaction fees on the network.
+- **Staking:** Both operators (validators) and non-operators (nominators) can stake POLYX to help secure the network and earn rewards.
+- **Governance:** POLYX holders can signal on governance issues and participate in network proposals.
+- **Block Rewards:** New POLYX is minted only as block rewards, distributed to operators and stakers for supporting network security and consensus.
 
-POLYX can be [staked](/polyx/tokenomics/) in order to receive a proportional amount of the block reward assigned to stakers. Operators may also be required to stake a minimum bond in order to run an authoring node.
+POLYX can be [staked](/polyx/tokenomics/) to receive a proportional share of block rewards. Operators may be required to stake a minimum bond to run an authoring node.
 
 ## Security
 
-Nodes which participate in the [consensus](/architecture#consensus) mechanism of Polymesh and produce new blocks, may also stake POLYX. This stake is at risk if the operator fails to behave correctly, for example being offline, or producing inconsistent consensus messages. This provides security to the network by incentivising operators to ensure the network remains live and finalises blocks rapidly.
+Nodes participating in the [consensus](/architecture#consensus) mechanism of Polymesh must stake POLYX. This stake is at risk if the operator misbehaves (e.g., goes offline or produces invalid consensus messages), incentivizing operators to maintain network reliability and rapid block finalization.
+
+## Accessibility
+
+POLYX is freely transferable between keys. Unlike asset and identity related transactions, POLYX transfers and staking (except validator activities) do not require [identity verification](/identity/verification) or a Customer Due Diligence (CDD) claim.
