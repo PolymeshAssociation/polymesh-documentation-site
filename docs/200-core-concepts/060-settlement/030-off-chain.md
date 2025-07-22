@@ -97,8 +97,8 @@ When generating an off-chain receipt, the following information must be encoded 
 
    - The data elements are concatenated in a deterministic order
    - Each element is hex-encoded
-   - The concatenated hex string forms the payload to be signed
-   - An authorized venue signer creates a cryptographic signature of this payload
+   - The concatenated hex string is wrapped with `<Bytes>` and `</Bytes>` tags to form the final payload
+   - An authorized venue signer creates a cryptographic signature of this wrapped payload
    - The signature can be generated using supported key types (SR25519, ED25519, ECDSA)
 
 3. **Receipt Assembly**:
@@ -111,7 +111,7 @@ When generating an off-chain receipt, the following information must be encoded 
      - Optional metadata about the transfer
 
 :::note
-The exact data encoding and signature generation process must follow the chain's requirements to ensure the receipt is valid when submitted. Tools such as the Polymesh SDK provide helper functions to generate valid receipts.
+The exact data encoding and signature generation process must follow the chain's requirements to ensure the receipt is valid when submitted. The payload data must be wrapped with `<Bytes>` and `</Bytes>` tags before signing. Tools such as the Polymesh SDK provide helper functions to generate valid receipts with the correct format.
 :::
 
 ### Receipt Process

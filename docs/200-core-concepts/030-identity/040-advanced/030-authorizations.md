@@ -72,9 +72,19 @@ Authorization requests can be created using `identity::add_authorization`. Each 
 - Any required authorization data (e.g., permissions for secondary keys)
 - Optional expiry time
 
+:::warning Authorization Security Considerations
+The `add_authorization` function can be called by **secondary keys** with appropriate permissions, not just primary keys. This means a secondary key with permission to call `add_authorization` can create sensitive authorization requests including:
+
+- **Primary key rotation requests** - Potentially allowing identity recovery if the primary key is lost
+- **Asset ownership transfers** - Initiating transfer of asset control
+- **Portfolio custody changes** - Requesting changes to portfolio management rights
+
+**Security Recommendation**: Only grant `add_authorization` permissions to highly trusted secondary keys. While targets must still accept these authorizations, the ability to initiate such requests should be carefully controlled as it can serve as a powerful backup mechanism for identity management.
+:::
+
 In some special cases, a dedicated method may be provided to create an authorization request. For example, `multisig::add_multisig_signers_via_admin` allows a permissioned admin identity to act on behalf of the multisig to add a new signer.
 
-Some operations also support off-chain authorization signatures as an alternative to the request-approval flow. This includes adding [secondary keys](/identity/advanced/secondary-keys/#2-off-chain-authorization) and creating [child identities](/identity/advanced/child#child-identity-creation-from-unlinked-keys). These methods typically require the target key to sign specific authorization data off-chain, enabling operations to complete in a single transaction.
+Some operations also support off-chain authorization signatures as an alternative to the request-approval flow. This includes adding [secondary keys](/identity/advanced/secondary-keys/#2-off-chain-authorization) and creating [child identities](/identity/advanced/child#child-identity-creation-from-unlinked-keys). These methods typically require the target key to sign specific authorization data off-chain, with the payload data wrapped in `<Bytes>` and `</Bytes>` tags before signing, enabling operations to complete in a single transaction.
 
 Each new authorization request is assigned a unique authorization ID which is used to query details of the authorization request and accept or reject it.
 

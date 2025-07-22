@@ -17,26 +17,32 @@ Different roles on the Polymesh network have different levels of permissioning r
 
 ## Network Users
 
-Every user wishes to manage identites and assets on Polymesh must go through a [Customer Due Diligence](/identity/verification/) process. With a valid CDD claim, a user can create and manage their identities and assets, settle instructions and so on.
+Network users interact with Polymesh in various ways, from transferring POLYX to managing identities and assets. Any user who wishes to manage identities and assets on Polymesh must go through a [Identity Verification](/identity/verification/) process. With a valid CDD claim, a user can manage their identity, created and manage assets, settle transfer instructions, and access advanced network features.
+
+:::note
+
+Identity verification is not required for POLYX transfers or staking, except for validator activities. This makes basic token operations accessible to all users, while asset and identity-related transactions remain permissioned.
+
+:::
 
 ## Operators
 
-Operators nodes are special nodes in the Polymesh network which author new blocks, and participate in finalising the blockchain.
+Operator nodes are special nodes in the Polymesh network that author new blocks and participate in finalising the blockchain.
 
-Unlike a permissionless network, in order to run an operator node, a user must be permissioned through CDD and the on-chain governance process. This is done via a [Polymesh Improvement Proposal](/governance#polymesh-improvement-proposals).
+To run an operator node, a user must be permissioned through both identity verification and the on-chain governance process. This is managed via a [Polymesh Improvement Proposal](/governance#polymesh-improvement-proposals). Operators play a critical role in maintaining network security and consensus.
 
 ## Customer Due Diligence Service Providers
 
-Unlike other claims, only certain permissioned identities are allowed to issue CDD claims. These are companies that offer an onboarding service to Polymesh users, providing a fast and simple due diligence process and identity creation.
+CDD service providers are trusted entities permitted to issue CDD claims. These companies offer identity verification and onboarding services to Polymesh users, providing a streamlined due diligence process and identity creation.
 
-CDD service providers are added and removed via a PIP executed through the on-chain governance process.
+Only explicitly permissioned identities can issue CDD claims. Service providers are added or removed via a PIP executed through the on-chain governance process.
 
 ## Committee Membership
 
-Committees are able to send PIPs directly to the Governing Council for ratification. There may be several committees, each with a different specialisation and membership.
+Committees are specialized groups that can send PIPs directly to the Governing Council for ratification. There may be several committees, each with a different specialization and membership.
 
-A committee manages their own membership, voting to add or remove new members.
+Committees manage their own membership, voting to add or remove members as needed.
 
 ## Governing Council Membership
 
-The Governance Council ratify and reject PIPs and schedule their execution. Like committees, the governing council manage their own membership via their usual voting process.
+The Governing Council is responsible for ratifying or rejecting PIPs and scheduling their execution. Like committees, the council manages its own membership through its established voting process.
