@@ -1,0 +1,794 @@
+---
+sidebar_label: "Account"
+---
+
+# Class: Account
+
+Defined in: [src/api/entities/Account/index.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L76)
+
+Represents an Account in the Polymesh blockchain. Accounts can hold POLYX, control Identities and vote on proposals (among other things)
+
+## Extends
+
+- [`Entity`](../../Entity/classes/Entity.mdx)\<`UniqueIdentifiers`, `string`\>
+
+## Extended by
+
+- [`MultiSig`](../MultiSig/classes/MultiSig.mdx)
+
+## Properties
+
+### address
+
+> **address**: `string`
+
+Defined in: [src/api/entities/Account/index.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L90)
+
+Polymesh-specific address of the Account. Serves as an identifier
+
+***
+
+### authorizations
+
+> **authorizations**: [`Authorizations`](../../common/namespaces/Authorizations/classes/Authorizations.mdx)\<`Account`\>
+
+Defined in: [src/api/entities/Account/index.ts:99](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L99)
+
+***
+
+### key
+
+> **key**: `string`
+
+Defined in: [src/api/entities/Account/index.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L96)
+
+A hex representation of the cryptographic public key of the Account. This is consistent across
+Substrate chains, while the address depends on the chain as well.
+
+***
+
+### staking
+
+> **staking**: [`Staking`](../Staking/classes/Staking.mdx)
+
+Defined in: [src/api/entities/Account/index.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L101)
+
+***
+
+### subsidies
+
+> **subsidies**: [`Subsidies`](../../Subsidies/classes/Subsidies.mdx)
+
+Defined in: [src/api/entities/Account/index.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L100)
+
+***
+
+### uuid
+
+> **uuid**: `string`
+
+Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L46)
+
+#### Inherited from
+
+[`Entity`](../../Entity/classes/Entity.mdx).[`uuid`](../../Entity/classes/Entity.mdx#uuid)
+
+## Methods
+
+### checkPermissions()
+
+> **checkPermissions**(`permissions`: [`SimplePermissions`](../../types/interfaces/SimplePermissions.mdx)): `Promise`\<[`CheckPermissionsResult`](../../types/interfaces/CheckPermissionsResult.mdx)\<[`Account`](../../types/enumerations/SignerType.mdx#account)\>\>
+
+Defined in: [src/api/entities/Account/index.ts:375](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L375)
+
+Check if this Account possesses certain Permissions to act on behalf of its corresponding Identity
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`permissions`
+
+</td>
+<td>
+
+[`SimplePermissions`](../../types/interfaces/SimplePermissions.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`CheckPermissionsResult`](../../types/interfaces/CheckPermissionsResult.mdx)\<[`Account`](../../types/enumerations/SignerType.mdx#account)\>\>
+
+which permissions the Account is missing (if any) and the final result
+
+***
+
+### exists()
+
+> **exists**(): `Promise`\<`boolean`\>
+
+Defined in: [src/api/entities/Account/index.ts:458](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L458)
+
+Determine whether this Account exists on chain
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+#### Overrides
+
+[`Entity`](../../Entity/classes/Entity.mdx).[`exists`](../../Entity/classes/Entity.mdx#exists)
+
+***
+
+### getBalance()
+
+#### Call Signature
+
+> **getBalance**(): `Promise`\<[`Balance`](../types/interfaces/Balance.mdx)\>
+
+Defined in: [src/api/entities/Account/index.ts:125](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L125)
+
+Get the free/locked POLYX balance of the Account
+
+##### Returns
+
+`Promise`\<[`Balance`](../types/interfaces/Balance.mdx)\>
+
+Promise that resolves to the Account's POLYX balance information
+
+#### Call Signature
+
+> **getBalance**(`callback`: [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<[`Balance`](../types/interfaces/Balance.mdx)\>): `Promise`\<[`UnsubCallback`](../../types/type-aliases/UnsubCallback.mdx)\>
+
+Defined in: [src/api/entities/Account/index.ts:136](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L136)
+
+Get the free/locked POLYX balance of the Account (with subscription support)
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+[`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<[`Balance`](../types/interfaces/Balance.mdx)\>
+
+</td>
+<td>
+
+Callback function that receives balance updates
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`UnsubCallback`](../../types/type-aliases/UnsubCallback.mdx)\>
+
+Promise that resolves to an unsubscribe function
+
+##### Note
+
+can be subscribed to, if connected to node using a web socket
+
+***
+
+### getCurrentNonce()
+
+> **getCurrentNonce**(): `Promise`\<`BigNumber`\>
+
+Defined in: [src/api/entities/Account/index.ts:472](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L472)
+
+Retrieve the current nonce for this Account
+
+#### Returns
+
+`Promise`\<`BigNumber`\>
+
+***
+
+### getIdentity()
+
+> **getIdentity**(): `Promise`\<`null` \| [`Identity`](../../Identity/classes/Identity.mdx)\>
+
+Defined in: [src/api/entities/Account/index.ts:155](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L155)
+
+Retrieve the Identity associated to this Account (null if there is none)
+
+#### Returns
+
+`Promise`\<`null` \| [`Identity`](../../Identity/classes/Identity.mdx)\>
+
+***
+
+### getMultiSig()
+
+> **getMultiSig**(): `Promise`\<`null` \| [`MultiSig`](../MultiSig/classes/MultiSig.mdx)\>
+
+Defined in: [src/api/entities/Account/index.ts:430](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L430)
+
+Fetch the MultiSig this Account is part of. If this Account is not a signer on any MultiSig, return null
+
+#### Returns
+
+`Promise`\<`null` \| [`MultiSig`](../MultiSig/classes/MultiSig.mdx)\>
+
+***
+
+### getNextAssetId()
+
+> **getNextAssetId**(): `Promise`\<`string`\>
+
+Defined in: [src/api/entities/Account/index.ts:617](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L617)
+
+Returns next assetID that will be generated for this Identity
+
+#### Returns
+
+`Promise`\<`string`\>
+
+***
+
+### getOffChainReceipts()
+
+> **getOffChainReceipts**(): `Promise`\<`BigNumber`[]\>
+
+Defined in: [src/api/entities/Account/index.ts:590](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L590)
+
+Returns all off chain receipts used by this Account
+
+#### Returns
+
+`Promise`\<`BigNumber`[]\>
+
+***
+
+### getPendingProposals()
+
+> **getPendingProposals**(): `Promise`\<[`MultiSigProposal`](../../MultiSigProposal/classes/MultiSigProposal.mdx)[]\>
+
+Defined in: [src/api/entities/Account/index.ts:574](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L574)
+
+Returns pending MultiSig proposals for this Account
+
+#### Returns
+
+`Promise`\<[`MultiSigProposal`](../../MultiSigProposal/classes/MultiSigProposal.mdx)[]\>
+
+#### Note
+
+uses the middleware
+
+#### Throws
+
+if the Account is not a signer on any MultiSig
+
+***
+
+### getPermissions()
+
+> **getPermissions**(): `Promise`\<[`Permissions`](../../types/interfaces/Permissions.mdx)\>
+
+Defined in: [src/api/entities/Account/index.ts:322](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L322)
+
+Retrieve the Permissions this Account has as a Permissioned Account for its corresponding Identity
+
+#### Returns
+
+`Promise`\<[`Permissions`](../../types/interfaces/Permissions.mdx)\>
+
+#### Throws
+
+if there is no Identity associated with the Account
+
+***
+
+### getPolyxTransactions()
+
+> **getPolyxTransactions**(`filters`: `object`): `Promise`\<[`ResultSet`](../../types/interfaces/ResultSet.mdx)\<[`HistoricPolyxTransaction`](../types/interfaces/HistoricPolyxTransaction.mdx)\>\>
+
+Defined in: [src/api/entities/Account/index.ts:556](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L556)
+
+Returns POLYX transactions associated with this account
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`filters`
+
+</td>
+<td>
+
+\{ `size?`: `BigNumber`; `start?`: `BigNumber`; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`filters.size?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+page size
+
+</td>
+</tr>
+<tr>
+<td>
+
+`filters.start?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+page offset
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`ResultSet`](../../types/interfaces/ResultSet.mdx)\<[`HistoricPolyxTransaction`](../types/interfaces/HistoricPolyxTransaction.mdx)\>\>
+
+#### Note
+
+uses the middleware
+
+***
+
+### getTransactionHistory()
+
+> **getTransactionHistory**(`filters`: `object`): `Promise`\<[`ResultSet`](../../types/interfaces/ResultSet.mdx)\<[`ExtrinsicData`](../../../client/types/interfaces/ExtrinsicData.mdx)\>\>
+
+Defined in: [src/api/entities/Account/index.ts:191](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L191)
+
+Retrieve a list of transactions signed by this Account. Can be filtered using parameters
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`filters`
+
+</td>
+<td>
+
+\{ `blockHash?`: `string`; `blockNumber?`: `BigNumber`; `orderBy?`: [`ExtrinsicsOrderBy`](../../../../types/enumerations/ExtrinsicsOrderBy.mdx); `size?`: `BigNumber`; `start?`: `BigNumber`; `success?`: `boolean`; `tag?`: [`TxTag`](../../../../types/type-aliases/TxTag.mdx); \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`filters.blockHash?`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`filters.blockNumber?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`filters.orderBy?`
+
+</td>
+<td>
+
+[`ExtrinsicsOrderBy`](../../../../types/enumerations/ExtrinsicsOrderBy.mdx)
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`filters.size?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+page size
+
+</td>
+</tr>
+<tr>
+<td>
+
+`filters.start?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+page offset
+
+</td>
+</tr>
+<tr>
+<td>
+
+`filters.success?`
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
+
+whether the transaction was successful or not
+
+</td>
+</tr>
+<tr>
+<td>
+
+`filters.tag?`
+
+</td>
+<td>
+
+[`TxTag`](../../../../types/type-aliases/TxTag.mdx)
+
+</td>
+<td>
+
+tag associated with the transaction
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`ResultSet`](../../types/interfaces/ResultSet.mdx)\<[`ExtrinsicData`](../../../client/types/interfaces/ExtrinsicData.mdx)\>\>
+
+#### Note
+
+if both `blockNumber` and `blockHash` are passed, only `blockNumber` is taken into account.
+Also, for ordering by block_id, one should pass `ExtrinsicsOrderBy.BlockIdAsc` or `ExtrinsicsOrderBy.BlockIdDesc`
+in order of their choice (since block ID is a string field in middleware v2)
+
+#### Note
+
+uses the middleware v2
+
+***
+
+### getTypeInfo()
+
+> **getTypeInfo**(): `Promise`\<[`AccountTypeInfo`](../types/interfaces/AccountTypeInfo.mdx)\>
+
+Defined in: [src/api/entities/Account/index.ts:493](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L493)
+
+Retrieve the type of Account, and its relation to an Identity, if applicable
+
+#### Returns
+
+`Promise`\<[`AccountTypeInfo`](../types/interfaces/AccountTypeInfo.mdx)\>
+
+***
+
+### isEqual()
+
+> **isEqual**(`entity`: [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>): `boolean`
+
+Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L61)
+
+Determine whether this Entity is the same as another one
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`entity`
+
+</td>
+<td>
+
+[`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+[`Entity`](../../Entity/classes/Entity.mdx).[`isEqual`](../../Entity/classes/Entity.mdx#isequal)
+
+***
+
+### isFrozen()
+
+> **isFrozen**(): `Promise`\<`boolean`\>
+
+Defined in: [src/api/entities/Account/index.ts:301](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L301)
+
+Check whether this Account is frozen. If frozen, it cannot perform any Identity related action until the primary Account of the Identity unfreezes all secondary Accounts
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+#### Note
+
+returns false if the Account isn't associated to any Identity
+
+***
+
+### toHuman()
+
+> **toHuman**(): `string`
+
+Defined in: [src/api/entities/Account/index.ts:465](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/index.ts#L465)
+
+Return the Account's address
+
+#### Returns
+
+`string`
+
+#### Overrides
+
+[`Entity`](../../Entity/classes/Entity.mdx).[`toHuman`](../../Entity/classes/Entity.mdx#tohuman)
+
+***
+
+### generateUuid()
+
+> `static` **generateUuid**\<`Identifiers`\>(`identifiers`: `Identifiers`): `string`
+
+Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L14)
+
+Generate the Entity's UUID from its identifying properties
+
+#### Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`Identifiers`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`identifiers`
+
+</td>
+<td>
+
+`Identifiers`
+
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+[`Entity`](../../Entity/classes/Entity.mdx).[`generateUuid`](../../Entity/classes/Entity.mdx#generateuuid)
+
+***
+
+### unserialize()
+
+> `static` **unserialize**\<`Identifiers`\>(`serialized`: `string`): `Identifiers`
+
+Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L23)
+
+Unserialize a UUID into its Unique Identifiers
+
+#### Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`Identifiers`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`serialized`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+UUID to unserialize
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Identifiers`
+
+#### Inherited from
+
+[`Entity`](../../Entity/classes/Entity.mdx).[`unserialize`](../../Entity/classes/Entity.mdx#unserialize)

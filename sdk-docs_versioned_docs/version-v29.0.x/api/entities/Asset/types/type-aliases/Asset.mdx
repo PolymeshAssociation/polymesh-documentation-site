@@ -1,0 +1,12 @@
+---
+sidebar_label: "Asset"
+---
+
+# Type Alias: Asset
+
+> **Asset** = [`FungibleAsset`](../../Fungible/classes/FungibleAsset.mdx) \| [`NftCollection`](../../NonFungible/NftCollection/classes/NftCollection.mdx)
+
+Defined in: [src/api/entities/Asset/types.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L32)
+
+Represents a generic asset on chain. Common functionality (e.g. documents) can be interacted with directly. For type specific functionality (e.g. issue) the type can
+be narrowed via `instanceof` operator, or by using a more specific getter

@@ -1,0 +1,47 @@
+---
+sidebar_label: "OffChainFundingReceipt"
+---
+
+# Interface: OffChainFundingReceipt
+
+Defined in: [src/api/entities/Offering/types.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Offering/types.ts#L103)
+
+## Properties
+
+### metadata
+
+> **metadata**: `undefined` \| `string`
+
+Defined in: [src/api/entities/Offering/types.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Offering/types.ts#L119)
+
+(optional) Metadata value that can be used to attach messages to the receipt
+
+***
+
+### signature
+
+> **signature**: [`OffChainSignature`](../../../../procedures/types/interfaces/OffChainSignature.mdx)
+
+Defined in: [src/api/entities/Offering/types.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Offering/types.ts#L115)
+
+Signature confirming the receipt details
+
+***
+
+### signer
+
+> **signer**: `string` \| [`Account`](../../../Account/classes/Account.mdx)
+
+Defined in: [src/api/entities/Offering/types.ts:111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Offering/types.ts#L111)
+
+Signer of this receipt
+
+***
+
+### uid
+
+> **uid**: `BigNumber`
+
+Defined in: [src/api/entities/Offering/types.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Offering/types.ts#L107)
+
+Unique receipt number set by the signer for their receipts

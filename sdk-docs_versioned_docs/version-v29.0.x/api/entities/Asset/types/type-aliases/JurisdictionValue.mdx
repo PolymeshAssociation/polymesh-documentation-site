@@ -1,0 +1,74 @@
+---
+sidebar_label: "JurisdictionValue"
+---
+
+# Type Alias: JurisdictionValue
+
+> **JurisdictionValue** = `object`
+
+Defined in: [src/api/entities/Asset/types.ts:419](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L419)
+
+For Jurisdiction claims - tracks holders by country code and those without jurisdiction
+
+## Properties
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+<a id="countrycode"></a> `countryCode`
+
+</td>
+<td>
+
+[`CountryCode`](../../../../../types/enumerations/CountryCode.mdx) \| `null`
+
+</td>
+<td>
+
+The country code of the jurisdiction
+
+**Note**
+
+null if the jurisdiction is not specified (no jurisdiction claim)
+
+</td>
+<td>
+
+[src/api/entities/Asset/types.ts:424](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L424)
+
+</td>
+</tr>
+<tr>
+<td>
+
+<a id="value"></a> `value`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+The number of individual Asset holders with this jurisdiction (or without any jurisdiction if countryCode is null), or the total balance of tokens held by all such holders
+
+</td>
+<td>
+
+[src/api/entities/Asset/types.ts:429](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L429)
+
+</td>
+</tr>
+</tbody>
+</table>

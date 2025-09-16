@@ -150,26 +150,26 @@ The Polymesh SDK provides convenient methods to interact with the chain extrinsi
 
 ### Permissions (Asset Side)
 
-The [`Permissions`](/sdk-docs/classes/API/Entities/Asset/Base/Permissions) class (accessed via `asset.permissions`) provides methods for managing and querying an asset agent roles and permissions across a asset:
+The [`Permissions`](/sdk-docs/api/entities/Asset/Base/Permissions/classes/Permissions/) class (accessed via `asset.permissions`) provides methods for managing and querying an asset agent roles and permissions across a asset:
 
-- [`inviteAgent`](/sdk-docs/classes/API/Entities/Asset/Base/Permissions#inviteagent): Invites an Identity to become an agent for the asset within a specific group. Handles the `identity::addAuthorization` call.
-- [`removeAgent`](/sdk-docs/classes/API/Entities/Asset/Base/Permissions#removeagent): Removes an agent associated with the asset. Handles the `externalAgents::removeAgent` call.
-- [`createGroup`](/sdk-docs/classes/API/Entities/Asset/Base/Permissions#creategroup): Creates a new custom permission group. Handles the `externalAgents::createGroup` call.
-- [`getAgents`](/sdk-docs/classes/API/Entities/Asset/Base/Permissions#getagents): Retrieves a list of agents and their associated groups for the asset.
-- [`getGroup`](/sdk-docs/classes/API/Entities/Asset/Base/Permissions#getgroup): Retrieves details for a specific permission group.
-- [`getGroups`](/sdk-docs/classes/API/Entities/Asset/Base/Permissions#getgroups): Retrieves all permission groups associated with the asset.
+- [`inviteAgent`](/sdk-docs/api/entities/Asset/Base/Permissions/classes/Permissions/#inviteagent): Invites an Identity to become an agent for the asset within a specific group. Handles the `identity::addAuthorization` call.
+- [`removeAgent`](/sdk-docs/api/entities/Asset/Base/Permissions/classes/Permissions/#removeagent): Removes an agent associated with the asset. Handles the `externalAgents::removeAgent` call.
+- [`createGroup`](/sdk-docs/api/entities/Asset/Base/Permissions/classes/Permissions/#creategroup): Creates a new custom permission group. Handles the `externalAgents::createGroup` call.
+- [`getAgents`](/sdk-docs/api/entities/Asset/Base/Permissions/classes/Permissions/#getagents): Retrieves a list of agents and their associated groups for the asset.
+- [`getGroup`](/sdk-docs/api/entities/Asset/Base/Permissions/classes/Permissions/#getgroup): Retrieves details for a specific permission group.
+- [`getGroups`](/sdk-docs/api/entities/Asset/Base/Permissions/classes/Permissions/#getgroups): Retrieves all permission groups associated with the asset.
 
 ### AssetPermissions (Identity Side)
 
-The [`AssetPermissions`](/sdk-docs/classes/API/Entities/Identity/AssetPermissions) class provides methods for managing and querying an Identity's agent roles and permissions across assets:
+The [`AssetPermissions`](/sdk-docs/api/entities/Identity/AssetPermissions/classes/AssetPermissions/) class provides methods for managing and querying an Identity's agent roles and permissions across assets:
 
-- [`get`](/sdk-docs/classes/API/Entities/Identity/AssetPermissions#get): Retrieve all assets over which this Identity has agent permissions, with the corresponding permission group.
-- [`getGroup`](/sdk-docs/classes/API/Entities/Identity/AssetPermissions#getgroup): Retrieve this Identity's permission group for a specific asset.
-- [`checkPermissions`](/sdk-docs/classes/API/Entities/Identity/AssetPermissions#checkpermissions): Check whether this Identity has specific transaction permissions over an asset.
-- [`setGroup`](/sdk-docs/classes/API/Entities/Identity/AssetPermissions#setgroup): Assign this Identity to a different permission group for a given asset.
-- [`waive`](/sdk-docs/classes/API/Entities/Identity/AssetPermissions#waive): Abdicate from the current permission group for a given asset (removes all permissions for that asset).
+- [`get`](/sdk-docs/api/entities/Identity/AssetPermissions/classes/AssetPermissions/#get): Retrieve all assets over which this Identity has agent permissions, with the corresponding permission group.
+- [`getGroup`](/sdk-docs/api/entities/Identity/AssetPermissions/classes/AssetPermissions/#getgroup): Retrieve this Identity's permission group for a specific asset.
+- [`checkPermissions`](/sdk-docs/api/entities/Identity/AssetPermissions/classes/AssetPermissions/#checkpermissions): Check whether this Identity has specific transaction permissions over an asset.
+- [`setGroup`](/sdk-docs/api/entities/Identity/AssetPermissions/classes/AssetPermissions/#setgroup): Assign this Identity to a different permission group for a given asset.
+- [`waive`](/sdk-docs/api/entities/Identity/AssetPermissions/classes/AssetPermissions/#waive): Abdicate from the current permission group for a given asset (removes all permissions for that asset).
 
-Acceptance of an authorization request to become an agent is done with the [Authorizations](/sdk-docs/classes/API/Entities/Identity/#authorizations) (accessed via `identity.authorizations`).
+Acceptance of an authorization request to become an agent is done with the [Authorizations](/sdk-docs/api/entities/Identity/classes/Identity/#authorizations) (accessed via `identity.authorizations`).
 
 ## Summary
 

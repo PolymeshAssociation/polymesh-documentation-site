@@ -1,0 +1,90 @@
+---
+sidebar_label: "RotatePrimaryKeyToSecondaryParams"
+---
+
+# Type Alias: RotatePrimaryKeyToSecondaryParams
+
+> **RotatePrimaryKeyToSecondaryParams** = `object`
+
+Defined in: [src/api/procedures/types.ts:881](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L881)
+
+## Properties
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+<a id="expiry"></a> `expiry?`
+
+</td>
+<td>
+
+`Date`
+
+</td>
+<td>
+
+(optional) when the generated authorization should expire
+
+</td>
+<td>
+
+[src/api/procedures/types.ts:890](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L890)
+
+</td>
+</tr>
+<tr>
+<td>
+
+<a id="permissions"></a> `permissions`
+
+</td>
+<td>
+
+[`PermissionsLike`](../../../entities/types/type-aliases/PermissionsLike.mdx)
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+<td>
+
+[src/api/procedures/types.ts:882](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L882)
+
+</td>
+</tr>
+<tr>
+<td>
+
+<a id="targetaccount"></a> `targetAccount`
+
+</td>
+<td>
+
+`string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
+
+</td>
+<td>
+
+The Account that should function as the primary key of the newly created Identity. Can be ss58 encoded address or an instance of Account
+
+</td>
+<td>
+
+[src/api/procedures/types.ts:886](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L886)
+
+</td>
+</tr>
+</tbody>
+</table>

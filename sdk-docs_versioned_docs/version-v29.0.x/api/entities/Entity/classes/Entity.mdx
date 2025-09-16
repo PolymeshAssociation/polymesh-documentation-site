@@ -1,0 +1,301 @@
+---
+sidebar_label: "Entity"
+---
+
+# Abstract Class: Entity\<UniqueIdentifiers, HumanReadable\>
+
+Defined in: [src/api/entities/Entity.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L8)
+
+Represents an object or resource in the Polymesh Ecosystem with its own set of properties and functionality
+
+## Extended by
+
+- [`Account`](../../Account/classes/Account.mdx)
+- [`BaseAsset`](../../Asset/Base/BaseAsset/classes/BaseAsset.mdx)
+- [`Nft`](../../Asset/NonFungible/Nft/classes/Nft.mdx)
+- [`AuthorizationRequest`](../../AuthorizationRequest/classes/AuthorizationRequest.mdx)
+- [`Checkpoint`](../../Checkpoint/classes/Checkpoint.mdx)
+- [`CheckpointSchedule`](../../CheckpointSchedule/classes/CheckpointSchedule.mdx)
+- [`CorporateActionBase`](../../CorporateActionBase/classes/CorporateActionBase.mdx)
+- [`Identity`](../../Identity/classes/Identity.mdx)
+- [`Instruction`](../../Instruction/classes/Instruction.mdx)
+- [`MetadataEntry`](../../MetadataEntry/classes/MetadataEntry.mdx)
+- [`MultiSigProposal`](../../MultiSigProposal/classes/MultiSigProposal.mdx)
+- [`Offering`](../../Offering/classes/Offering.mdx)
+- [`PermissionGroup`](../../PermissionGroup/classes/PermissionGroup.mdx)
+- [`Portfolio`](../../Portfolio/classes/Portfolio.mdx)
+- [`Subsidy`](../../Subsidy/classes/Subsidy.mdx)
+- [`TickerReservation`](../../TickerReservation/classes/TickerReservation.mdx)
+- [`Venue`](../../Venue/classes/Venue.mdx)
+
+## Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`UniqueIdentifiers`
+
+</td>
+</tr>
+<tr>
+<td>
+
+`HumanReadable`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## Properties
+
+### uuid
+
+> **uuid**: `string`
+
+Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L46)
+
+## Methods
+
+### exists()
+
+> `abstract` **exists**(): `Promise`\<`boolean`\>
+
+Defined in: [src/api/entities/Entity.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L68)
+
+Determine whether this Entity exists on chain
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+***
+
+### isEqual()
+
+> **isEqual**(`entity`: `Entity`\<`unknown`, `unknown`\>): `boolean`
+
+Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L61)
+
+Determine whether this Entity is the same as another one
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`entity`
+
+</td>
+<td>
+
+`Entity`\<`unknown`, `unknown`\>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`boolean`
+
+***
+
+### toHuman()
+
+> `abstract` **toHuman**(): `HumanReadable`
+
+Defined in: [src/api/entities/Entity.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L73)
+
+Returns Entity data in a human readable (JSON) format
+
+#### Returns
+
+`HumanReadable`
+
+***
+
+### generateUuid()
+
+> `static` **generateUuid**\<`Identifiers`\>(`identifiers`: `Identifiers`): `string`
+
+Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L14)
+
+Generate the Entity's UUID from its identifying properties
+
+#### Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`Identifiers`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`identifiers`
+
+</td>
+<td>
+
+`Identifiers`
+
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`string`
+
+***
+
+### isUniqueIdentifiers()
+
+> `static` **isUniqueIdentifiers**(`identifiers`: `unknown`): `boolean`
+
+Defined in: [src/api/entities/Entity.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L42)
+
+Typeguard that checks whether the object passed corresponds to the unique identifiers of the class. Must be overridden
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`identifiers`
+
+</td>
+<td>
+
+`unknown`
+
+</td>
+<td>
+
+object to type check
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`boolean`
+
+***
+
+### unserialize()
+
+> `static` **unserialize**\<`Identifiers`\>(`serialized`: `string`): `Identifiers`
+
+Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L23)
+
+Unserialize a UUID into its Unique Identifiers
+
+#### Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`Identifiers`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`serialized`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+UUID to unserialize
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Identifiers`

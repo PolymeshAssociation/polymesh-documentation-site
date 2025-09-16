@@ -1,0 +1,345 @@
+---
+sidebar_label: "Settlements"
+---
+
+# Class: Settlements
+
+Defined in: [src/api/client/Settlements.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Settlements.ts#L33)
+
+Handles all Settlement related functionality
+
+## Methods
+
+### addInstruction()
+
+> **addInstruction**(`args`: [`AddInstructionWithVenueIdParams`](../../../procedures/types/type-aliases/AddInstructionWithVenueIdParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Instruction`](../../../entities/Instruction/classes/Instruction.mdx)[], [`Instruction`](../../../entities/Instruction/classes/Instruction.mdx)\>\>
+
+Defined in: [src/api/client/Settlements.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Settlements.ts#L119)
+
+Create an Instruction to exchange Assets
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`AddInstructionWithVenueIdParams`](../../../procedures/types/type-aliases/AddInstructionWithVenueIdParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Instruction`](../../../entities/Instruction/classes/Instruction.mdx)[], [`Instruction`](../../../entities/Instruction/classes/Instruction.mdx)\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [addInstruction.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### affirmInstruction()
+
+> **affirmInstruction**(`args`: [`InstructionIdParams`](../../../procedures/types/interfaces/InstructionIdParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Instruction`](../../../entities/Instruction/classes/Instruction.mdx), [`Instruction`](../../../entities/Instruction/classes/Instruction.mdx)\>\>
+
+Defined in: [src/api/client/Settlements.ts:128](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Settlements.ts#L128)
+
+Affirm an Instruction (authorize)
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`InstructionIdParams`](../../../procedures/types/interfaces/InstructionIdParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Instruction`](../../../entities/Instruction/classes/Instruction.mdx), [`Instruction`](../../../entities/Instruction/classes/Instruction.mdx)\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [affirmInstruction.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### createVenue()
+
+> **createVenue**(`args`: [`CreateVenueParams`](../../../procedures/types/interfaces/CreateVenueParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Venue`](../../../entities/Venue/classes/Venue.mdx), [`Venue`](../../../entities/Venue/classes/Venue.mdx)\>\>
+
+Defined in: [src/api/client/Settlements.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Settlements.ts#L114)
+
+Create a Venue under the ownership of the signing Identity
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`CreateVenueParams`](../../../procedures/types/interfaces/CreateVenueParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Venue`](../../../entities/Venue/classes/Venue.mdx), [`Venue`](../../../entities/Venue/classes/Venue.mdx)\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [createVenue.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### getHistoricalInstructions()
+
+> **getHistoricalInstructions**(`filter`: [`HistoricalInstructionFilters`](../../types/interfaces/HistoricalInstructionFilters.mdx)): `Promise`\<[`ResultSet`](../../../entities/types/interfaces/ResultSet.mdx)\<[`HistoricInstruction`](../../../entities/Venue/types/type-aliases/HistoricInstruction.mdx)\>\>
+
+Defined in: [src/api/client/Settlements.ts:137](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Settlements.ts#L137)
+
+Retrieve all Instructions that have been associated with this Identity's DID
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`filter`
+
+</td>
+<td>
+
+[`HistoricalInstructionFilters`](../../types/interfaces/HistoricalInstructionFilters.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`ResultSet`](../../../entities/types/interfaces/ResultSet.mdx)\<[`HistoricInstruction`](../../../entities/Venue/types/type-aliases/HistoricInstruction.mdx)\>\>
+
+#### Note
+
+uses the middleware V2
+
+#### Note
+
+supports pagination
+
+***
+
+### getInstruction()
+
+> **getInstruction**(`args`: `object`): `Promise`\<[`Instruction`](../../../entities/Instruction/classes/Instruction.mdx)\>
+
+Defined in: [src/api/client/Settlements.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Settlements.ts#L95)
+
+Retrieve an Instruction by its ID
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `id`: `BigNumber`; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.id`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+identifier number of the Instruction
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`Instruction`](../../../entities/Instruction/classes/Instruction.mdx)\>
+
+***
+
+### getVenue()
+
+> **getVenue**(`args`: `object`): `Promise`\<[`Venue`](../../../entities/Venue/classes/Venue.mdx)\>
+
+Defined in: [src/api/client/Settlements.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Settlements.ts#L74)
+
+Retrieve a Venue by its ID
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `id`: `BigNumber`; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.id`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+identifier number of the Venue
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`Venue`](../../../entities/Venue/classes/Venue.mdx)\>

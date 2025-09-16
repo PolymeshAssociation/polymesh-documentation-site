@@ -1,0 +1,79 @@
+---
+sidebar_label: "CreateBallotParams"
+---
+
+# Interface: CreateBallotParams
+
+Defined in: [src/api/procedures/types.ts:1833](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1833)
+
+## Properties
+
+### declarationDate
+
+> **declarationDate**: `Date`
+
+Defined in: [src/api/procedures/types.ts:1864](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1864)
+
+Date on which the Corporate Action is declared
+
+***
+
+### description
+
+> **description**: `string`
+
+Defined in: [src/api/procedures/types.ts:1852](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1852)
+
+Description of the Corporate Action to which the Ballot is attached
+
+***
+
+### endDate
+
+> **endDate**: `Date`
+
+Defined in: [src/api/procedures/types.ts:1847](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1847)
+
+Date when Ballot voting ends
+
+***
+
+### meta
+
+> **meta**: [`BallotMeta`](../../../entities/CorporateBallot/types/interfaces/BallotMeta.mdx)
+
+Defined in: [src/api/procedures/types.ts:1837](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1837)
+
+Title and motions of the Ballot
+
+***
+
+### rcv
+
+> **rcv**: `boolean`
+
+Defined in: [src/api/procedures/types.ts:1869](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1869)
+
+Specifies whether Ranked Choice Voting (RCV) is enabled for this ballot.
+
+***
+
+### startDate
+
+> **startDate**: `Date`
+
+Defined in: [src/api/procedures/types.ts:1842](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1842)
+
+Date when Ballot voting starts
+
+***
+
+### targets?
+
+> `optional` **targets**: [`InputCorporateActionTargets`](../type-aliases/InputCorporateActionTargets.mdx)
+
+Defined in: [src/api/procedures/types.ts:1859](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1859)
+
+Asset Holder Identities to be included (or excluded) from the Ballot. Inclusion/exclusion is controlled by the `treatment`
+  property. When the value is `Include`, all Asset Holders not present in the array are excluded, and vice-versa. If no value is passed,
+  the default value for the Asset is used. If there is no default value, all Asset Holders will be part of the Ballot

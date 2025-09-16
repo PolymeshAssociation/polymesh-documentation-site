@@ -1,0 +1,164 @@
+---
+sidebar_label: "InstructionDetails"
+---
+
+# Type Alias: InstructionDetails
+
+> **InstructionDetails** = `object` & [`InstructionEndCondition`](InstructionEndCondition.mdx)
+
+Defined in: [src/api/entities/Instruction/types.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Instruction/types.ts#L45)
+
+## Type declaration
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`createdAt`
+
+</td>
+<td>
+
+`Date` \| `null`
+
+</td>
+<td>
+
+Date at which the instruction was created
+
+**Note**
+
+From 7.x chain, this value becomes null when instruction has been executed.
+
+</td>
+<td>
+
+[src/api/entities/Instruction/types.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Instruction/types.ts#L51)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`memo`
+
+</td>
+<td>
+
+`string` \| `null`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+<td>
+
+[src/api/entities/Instruction/types.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Instruction/types.ts#L65)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`status`
+
+</td>
+<td>
+
+[`InstructionStatus`](../enumerations/InstructionStatus.mdx)
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+<td>
+
+[src/api/entities/Instruction/types.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Instruction/types.ts#L46)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`tradeDate`
+
+</td>
+<td>
+
+`Date` \| `null`
+
+</td>
+<td>
+
+Date at which the trade was agreed upon (optional, for offchain trades)
+
+</td>
+<td>
+
+[src/api/entities/Instruction/types.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Instruction/types.ts#L55)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`valueDate`
+
+</td>
+<td>
+
+`Date` \| `null`
+
+</td>
+<td>
+
+Date at which the trade was executed (optional, for offchain trades)
+
+</td>
+<td>
+
+[src/api/entities/Instruction/types.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Instruction/types.ts#L59)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`venue`
+
+</td>
+<td>
+
+[`Venue`](../../../Venue/classes/Venue.mdx) \| `null`
+
+</td>
+<td>
+
+Venue to which the Instruction belongs to
+
+**Note**
+
+From 7.x chain, Instructions can be created without a Venue. Hence the possible null value.
+
+</td>
+<td>
+
+[src/api/entities/Instruction/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Instruction/types.ts#L64)
+
+</td>
+</tr>
+</tbody>
+</table>

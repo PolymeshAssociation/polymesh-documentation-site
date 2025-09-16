@@ -1,0 +1,60 @@
+---
+sidebar_label: "CheckPermissionsResult"
+---
+
+# Interface: CheckPermissionsResult\<Type\>
+
+Defined in: [src/api/entities/types.ts:722](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L722)
+
+Result of a `checkPermissions` call. If `Type` is `Account`, represents whether the Account
+  has all the necessary secondary key Permissions. If `Type` is `Identity`, represents whether the
+  Identity has all the necessary external agent Permissions
+
+## Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`Type` *extends* [`SignerType`](../enumerations/SignerType.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## Properties
+
+### message?
+
+> `optional` **message**: `string`
+
+Defined in: [src/api/entities/types.ts:734](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L734)
+
+optional message explaining the reason for failure in special cases
+
+***
+
+### missingPermissions?
+
+> `optional` **missingPermissions**: `Type` *extends* [`Account`](../enumerations/SignerType.mdx#account) ? [`SimplePermissions`](SimplePermissions.mdx) : `null` \| [`TxTag`](../../../../types/type-aliases/TxTag.mdx)[]
+
+Defined in: [src/api/entities/types.ts:726](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L726)
+
+required permissions which the signer *DOESN'T* have. Only present if `result` is `false`
+
+***
+
+### result
+
+> **result**: `boolean`
+
+Defined in: [src/api/entities/types.ts:730](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L730)
+
+whether the signer complies with the required permissions or not

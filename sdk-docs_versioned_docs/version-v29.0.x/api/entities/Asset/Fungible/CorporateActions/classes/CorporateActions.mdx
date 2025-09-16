@@ -1,0 +1,187 @@
+---
+sidebar_label: "CorporateActions"
+---
+
+# Class: CorporateActions
+
+Defined in: [src/api/entities/Asset/Fungible/CorporateActions/index.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/CorporateActions/index.ts#L31)
+
+Handles all Asset Corporate Actions related functionality
+
+## Extends
+
+- `Namespace`\<[`FungibleAsset`](../../classes/FungibleAsset.mdx)\>
+
+## Properties
+
+### ballots
+
+> **ballots**: [`Ballots`](../Ballots/classes/Ballots.mdx)
+
+Defined in: [src/api/entities/Asset/Fungible/CorporateActions/index.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/CorporateActions/index.ts#L33)
+
+***
+
+### distributions
+
+> **distributions**: [`Distributions`](../Distributions/classes/Distributions.mdx)
+
+Defined in: [src/api/entities/Asset/Fungible/CorporateActions/index.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/CorporateActions/index.ts#L32)
+
+***
+
+### initiate
+
+> **initiate**: [`ProcedureMethod`](../../../../../procedures/types/interfaces/ProcedureMethod.mdx)\<[`InitiateCorporateActionParams`](../../../../../procedures/types/type-aliases/InitiateCorporateActionParams.mdx), [`CorporateAction`](../../../../CorporateAction/classes/CorporateAction.mdx)\>
+
+Defined in: [src/api/entities/Asset/Fungible/CorporateActions/index.ts:148](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/CorporateActions/index.ts#L148)
+
+## Methods
+
+### getAgents()
+
+> **getAgents**(): `Promise`\<[`Identity`](../../../../Identity/classes/Identity.mdx)[]\>
+
+Defined in: [src/api/entities/Asset/Fungible/CorporateActions/index.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/CorporateActions/index.ts#L77)
+
+Retrieve a list of agent Identities
+
+#### Returns
+
+`Promise`\<[`Identity`](../../../../Identity/classes/Identity.mdx)[]\>
+
+***
+
+### getDefaultConfig()
+
+> **getDefaultConfig**(): `Promise`\<[`CorporateActionDefaultConfig`](../types/interfaces/CorporateActionDefaultConfig.mdx)\>
+
+Defined in: [src/api/entities/Asset/Fungible/CorporateActions/index.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/CorporateActions/index.ts#L113)
+
+Retrieve default config comprising of targets, global tax withholding percentage and per-Identity tax withholding percentages.
+
+#### Returns
+
+`Promise`\<[`CorporateActionDefaultConfig`](../types/interfaces/CorporateActionDefaultConfig.mdx)\>
+
+#### Note
+
+This config is applied to every Corporate Action that is created until they are modified. Modifying the default config
+  does not impact existing Corporate Actions.
+  When creating a Corporate Action, values passed explicitly will override this default config
+
+***
+
+### remove()
+
+> **remove**(`args`: [`RemoveCorporateActionParams`](../../../../../procedures/types/interfaces/RemoveCorporateActionParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/Fungible/CorporateActions/index.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/CorporateActions/index.ts#L72)
+
+Remove a Corporate Action
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`RemoveCorporateActionParams`](../../../../../procedures/types/interfaces/RemoveCorporateActionParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [remove.checkAuthorization](../../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### setDefaultConfig()
+
+> **setDefaultConfig**(`args`: [`ModifyCaDefaultConfigParams`](../../../../../procedures/types/type-aliases/ModifyCaDefaultConfigParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/Fungible/CorporateActions/index.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/CorporateActions/index.ts#L67)
+
+Assign default config values(targets, global tax withholding percentage and per-Identity tax withholding percentages)
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`ModifyCaDefaultConfigParams`](../../../../../procedures/types/type-aliases/ModifyCaDefaultConfigParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+These config values are applied to every Corporate Action that is created until they are modified. Modifying these values
+  does not impact existing Corporate Actions.
+  When creating a Corporate Action, values passed explicitly will override these default config values
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [setDefaultConfig.checkAuthorization](../../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it

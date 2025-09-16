@@ -1,0 +1,1038 @@
+---
+sidebar_label: "Claims"
+---
+
+# Class: Claims
+
+Defined in: [src/api/client/Claims.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Claims.ts#L61)
+
+Handles all Claims related functionality
+
+## Methods
+
+### addClaims()
+
+> **addClaims**(`args`: `Pick`\<[`ModifyClaimsParams`](../../../procedures/types/type-aliases/ModifyClaimsParams.mdx), `"claims"`\>, `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/client/Claims.ts:133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Claims.ts#L133)
+
+Add claims to Identities
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+`Pick`\<[`ModifyClaimsParams`](../../../procedures/types/type-aliases/ModifyClaimsParams.mdx), `"claims"`\>
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+required roles:
+  - Customer Due Diligence Provider: if there is at least one CDD claim in the arguments
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [addClaims.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### editClaims()
+
+> **editClaims**(`args`: `Pick`\<[`ModifyClaimsParams`](../../../procedures/types/type-aliases/ModifyClaimsParams.mdx), `"claims"`\>, `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/client/Claims.ts:141](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Claims.ts#L141)
+
+Edit claims associated to Identities (only the expiry date can be modified)
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+`Pick`\<[`ModifyClaimsParams`](../../../procedures/types/type-aliases/ModifyClaimsParams.mdx), `"claims"`\>
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+required roles:
+  - Customer Due Diligence Provider: if there is at least one CDD claim in the arguments
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [editClaims.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### getAllCustomClaimTypes()
+
+> **getAllCustomClaimTypes**(`opts`: `object`): `Promise`\<[`ResultSet`](../../../entities/types/interfaces/ResultSet.mdx)\<[`CustomClaimTypeWithDid`](../../types/type-aliases/CustomClaimTypeWithDid.mdx)\>\>
+
+Defined in: [src/api/client/Claims.ts:623](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Claims.ts#L623)
+
+Retrieve registered CustomClaimTypes
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`opts`
+
+</td>
+<td>
+
+\{ `dids?`: `string`[]; `size?`: `BigNumber`; `start?`: `BigNumber`; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.dids?`
+
+</td>
+<td>
+
+`string`[]
+
+</td>
+<td>
+
+Fetch CustomClaimTypes issued by the given `dids`
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.size?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.start?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`ResultSet`](../../../entities/types/interfaces/ResultSet.mdx)\<[`CustomClaimTypeWithDid`](../../types/type-aliases/CustomClaimTypeWithDid.mdx)\>\>
+
+#### Note
+
+supports pagination
+
+#### Note
+
+uses the middlewareV2 (Required)
+
+***
+
+### getCddClaims()
+
+> **getCddClaims**(`opts`: `object`): `Promise`\<[`ClaimData`](../../../entities/types/interfaces/ClaimData.mdx)\<[`CddClaim`](../../../entities/types/interfaces/CddClaim.mdx)\>[]\>
+
+Defined in: [src/api/client/Claims.ts:395](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Claims.ts#L395)
+
+Retrieve the list of CDD claims for a target Identity
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`opts`
+
+</td>
+<td>
+
+\{ `includeExpired?`: `boolean`; `target?`: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx); \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.includeExpired?`
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
+
+whether to include expired claims. Defaults to true
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.target?`
+
+</td>
+<td>
+
+`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
+
+</td>
+<td>
+
+Identity for which to fetch CDD claims (optional, defaults to the signing Identity)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`ClaimData`](../../../entities/types/interfaces/ClaimData.mdx)\<[`CddClaim`](../../../entities/types/interfaces/CddClaim.mdx)\>[]\>
+
+***
+
+### getClaimScopes()
+
+> **getClaimScopes**(`opts`: `object`): `Promise`\<[`ClaimScope`](../../../entities/types/interfaces/ClaimScope.mdx)[]\>
+
+Defined in: [src/api/client/Claims.ts:281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Claims.ts#L281)
+
+Retrieve all scopes in which claims have been made for the target Identity.
+  If the scope is an asset DID, the corresponding ticker is returned as well
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`opts`
+
+</td>
+<td>
+
+\{ `target?`: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx); \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.target?`
+
+</td>
+<td>
+
+`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
+
+</td>
+<td>
+
+Identity for which to fetch claim scopes (optional, defaults to the signing Identity)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`ClaimScope`](../../../entities/types/interfaces/ClaimScope.mdx)[]\>
+
+#### Note
+
+in order for scopes to include scopes for custom claims, middlewareV2 is required
+
+***
+
+### getCustomClaimTypeById()
+
+> **getCustomClaimTypeById**(`id`: `BigNumber`): `Promise`\<`null` \| [`CustomClaimType`](../../types/type-aliases/CustomClaimType.mdx)\>
+
+Defined in: [src/api/client/Claims.ts:598](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Claims.ts#L598)
+
+Retrieves a custom claim type based on its ID
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`id`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+The ID of the custom claim type to retrieve
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<`null` \| [`CustomClaimType`](../../types/type-aliases/CustomClaimType.mdx)\>
+
+***
+
+### getCustomClaimTypeByName()
+
+> **getCustomClaimTypeByName**(`name`: `string`): `Promise`\<`null` \| [`CustomClaimType`](../../types/type-aliases/CustomClaimType.mdx)\>
+
+Defined in: [src/api/client/Claims.ts:575](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Claims.ts#L575)
+
+Retrieves a custom claim type based on its name
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`name`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+The name of the custom claim type to retrieve
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<`null` \| [`CustomClaimType`](../../types/type-aliases/CustomClaimType.mdx)\>
+
+***
+
+### getIdentitiesWithClaims()
+
+> **getIdentitiesWithClaims**(`opts`: `object`): `Promise`\<[`ResultSet`](../../../entities/types/interfaces/ResultSet.mdx)\<[`IdentityWithClaims`](../../../entities/types/interfaces/IdentityWithClaims.mdx)\>\>
+
+Defined in: [src/api/client/Claims.ts:195](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Claims.ts#L195)
+
+Retrieve a list of Identities with claims associated to them. Can be filtered using parameters
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`opts`
+
+</td>
+<td>
+
+\{ `claimTypes?`: [`TrustedFor`](../../../entities/types/type-aliases/TrustedFor.mdx)[]; `includeExpired?`: `boolean`; `scope?`: [`Scope`](../../../entities/types/interfaces/Scope.mdx); `size?`: `BigNumber`; `start?`: `BigNumber`; `targets?`: (`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx))[]; `trustedClaimIssuers?`: (`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx))[]; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.claimTypes?`
+
+</td>
+<td>
+
+[`TrustedFor`](../../../entities/types/type-aliases/TrustedFor.mdx)[]
+
+</td>
+<td>
+
+types of the claims to fetch. Defaults to any type
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.includeExpired?`
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
+
+whether to include expired claims. Defaults to true
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.scope?`
+
+</td>
+<td>
+
+[`Scope`](../../../entities/types/interfaces/Scope.mdx)
+
+</td>
+<td>
+
+scope of the claims to fetch. Defaults to any scope
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.size?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+page size
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.start?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+page offset
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.targets?`
+
+</td>
+<td>
+
+(`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx))[]
+
+</td>
+<td>
+
+Identities (or Identity IDs) for which to fetch targeting claims. Defaults to all targets
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.trustedClaimIssuers?`
+
+</td>
+<td>
+
+(`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx))[]
+
+</td>
+<td>
+
+Identity IDs of claim issuers. Defaults to all claim issuers
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`ResultSet`](../../../entities/types/interfaces/ResultSet.mdx)\<[`IdentityWithClaims`](../../../entities/types/interfaces/IdentityWithClaims.mdx)\>\>
+
+#### Note
+
+supports pagination
+
+#### Note
+
+uses the middleware V2
+
+***
+
+### getIssuedClaims()
+
+> **getIssuedClaims**(`opts`: `object`): `Promise`\<[`ResultSet`](../../../entities/types/interfaces/ResultSet.mdx)\<[`ClaimData`](../../../entities/types/interfaces/ClaimData.mdx)\<[`Claim`](../../../entities/types/type-aliases/Claim.mdx)\>\>\>
+
+Defined in: [src/api/client/Claims.ts:160](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Claims.ts#L160)
+
+Retrieve all claims issued by an Identity
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`opts`
+
+</td>
+<td>
+
+\{ `includeExpired?`: `boolean`; `size?`: `BigNumber`; `start?`: `BigNumber`; `target?`: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx); \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.includeExpired?`
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
+
+whether to include expired claims. Defaults to true
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.size?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.start?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.target?`
+
+</td>
+<td>
+
+`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
+
+</td>
+<td>
+
+Identity (optional, defaults to the signing Identity)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`ResultSet`](../../../entities/types/interfaces/ResultSet.mdx)\<[`ClaimData`](../../../entities/types/interfaces/ClaimData.mdx)\<[`Claim`](../../../entities/types/type-aliases/Claim.mdx)\>\>\>
+
+#### Note
+
+supports pagination
+
+#### Note
+
+uses the middlewareV2
+
+***
+
+### getTargetingClaims()
+
+> **getTargetingClaims**(`opts`: `object`): `Promise`\<[`ResultSet`](../../../entities/types/interfaces/ResultSet.mdx)\<[`IdentityWithClaims`](../../../entities/types/interfaces/IdentityWithClaims.mdx)\>\>
+
+Defined in: [src/api/client/Claims.ts:483](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Claims.ts#L483)
+
+Retrieve all claims issued about an Identity, grouped by claim issuer
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`opts`
+
+</td>
+<td>
+
+\{ `includeExpired?`: `boolean`; `scope?`: [`Scope`](../../../entities/types/interfaces/Scope.mdx); `size?`: `BigNumber`; `start?`: `BigNumber`; `target?`: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx); `trustedClaimIssuers?`: (`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx))[]; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.includeExpired?`
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
+
+whether to include expired claims. Defaults to true
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.scope?`
+
+</td>
+<td>
+
+[`Scope`](../../../entities/types/interfaces/Scope.mdx)
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.size?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.start?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.target?`
+
+</td>
+<td>
+
+`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
+
+</td>
+<td>
+
+Identity for which to fetch targeting claims (optional, defaults to the signing Identity)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.trustedClaimIssuers?`
+
+</td>
+<td>
+
+(`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx))[]
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`ResultSet`](../../../entities/types/interfaces/ResultSet.mdx)\<[`IdentityWithClaims`](../../../entities/types/interfaces/IdentityWithClaims.mdx)\>\>
+
+#### Note
+
+supports pagination
+
+#### Note
+
+uses the middlewareV2 (optional)
+
+***
+
+### registerCustomClaimType()
+
+> **registerCustomClaimType**(`args`: [`RegisterCustomClaimTypeParams`](../../../procedures/types/interfaces/RegisterCustomClaimTypeParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`BigNumber`, `BigNumber`\>\>
+
+Defined in: [src/api/client/Claims.ts:568](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Claims.ts#L568)
+
+Creates a custom claim type using the `name` and returns the `id` of the created claim type
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`RegisterCustomClaimTypeParams`](../../../procedures/types/interfaces/RegisterCustomClaimTypeParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`BigNumber`, `BigNumber`\>\>
+
+#### Throws
+
+if
+ - the `name` is longer than allowed
+ - a custom claim type with the same `name` already exists
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [registerCustomClaimType.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### revokeClaims()
+
+> **revokeClaims**(`args`: `Pick`\<[`ModifyClaimsParams`](../../../procedures/types/type-aliases/ModifyClaimsParams.mdx), `"claims"`\>, `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/client/Claims.ts:149](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Claims.ts#L149)
+
+Revoke claims from Identities
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+`Pick`\<[`ModifyClaimsParams`](../../../procedures/types/type-aliases/ModifyClaimsParams.mdx), `"claims"`\>
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+required roles:
+  - Customer Due Diligence Provider: if there is at least one CDD claim in the arguments
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [revokeClaims.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it

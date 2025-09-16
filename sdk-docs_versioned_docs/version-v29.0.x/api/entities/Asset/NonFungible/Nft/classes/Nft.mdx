@@ -1,0 +1,397 @@
+---
+sidebar_label: "Nft"
+---
+
+# Class: Nft
+
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/NonFungible/Nft.ts#L43)
+
+Class used to manage Nft functionality. Each NFT belongs to an NftCollection, which specifies the expected metadata values for each NFT
+
+## Extends
+
+- [`Entity`](../../../../Entity/classes/Entity.mdx)\<[`NftUniqueIdentifiers`](../type-aliases/NftUniqueIdentifiers.mdx), [`HumanReadable`](../interfaces/HumanReadable.mdx)\>
+
+## Properties
+
+### collection
+
+> **collection**: [`NftCollection`](../../NftCollection/classes/NftCollection.mdx)
+
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/NonFungible/Nft.ts#L49)
+
+The [NftCollection](../../NftCollection/classes/NftCollection.mdx) this NFT belongs to
+
+***
+
+### id
+
+> **id**: `BigNumber`
+
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/NonFungible/Nft.ts#L44)
+
+***
+
+### uuid
+
+> **uuid**: `string`
+
+Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L46)
+
+#### Inherited from
+
+[`Entity`](../../../../Entity/classes/Entity.mdx).[`uuid`](../../../../Entity/classes/Entity.mdx#uuid)
+
+## Methods
+
+### exists()
+
+> **exists**(): `Promise`\<`boolean`\>
+
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:124](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/NonFungible/Nft.ts#L124)
+
+Determine if the NFT exists on chain
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+#### Overrides
+
+[`Entity`](../../../../Entity/classes/Entity.mdx).[`exists`](../../../../Entity/classes/Entity.mdx#exists)
+
+***
+
+### getImageUri()
+
+> **getImageUri**(): `Promise`\<`null` \| `string`\>
+
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/NonFungible/Nft.ts#L146)
+
+Get the conventional image URI for the NFT
+
+This function will check for a token level value and a collection level value. Token level values take precedence over base values in case of a conflict.
+
+When creating a collection an issuer can either require per token images by specifying global metadata key `imageUri` as a collection key or by
+setting a collection base image URL by setting a value on the collection corresponding to the global metadata key `baseImageUri`.
+
+This method will return `null` if the NFT issuer did not configure the collection according to the convention.
+
+Per token URIs provide the most flexibility, but require more chain space to store, increasing the POLYX fee to issue each token.
+
+The URI values can include `{tokenId}` that will be replaced with the NFTs ID. If a base URI does not specify this the ID will be appended onto the URL. Examples:
+ - `https://example.com/nfts/{tokenId}/image.png` becomes `https://example.com/nfts/1/image.png`
+ - `https://example.com/nfts` becomes `https://example.com/nfts/1` if used a base value, but remain unchanged as a local value
+
+#### Returns
+
+`Promise`\<`null` \| `string`\>
+
+***
+
+### getMetadata()
+
+> **getMetadata**(): `Promise`\<[`NftMetadata`](../../../types/interfaces/NftMetadata.mdx)[]\>
+
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/NonFungible/Nft.ts#L92)
+
+Get metadata associated with this token
+
+#### Returns
+
+`Promise`\<[`NftMetadata`](../../../types/interfaces/NftMetadata.mdx)[]\>
+
+***
+
+### getOwner()
+
+> **getOwner**(): `Promise`\<`null` \| [`DefaultPortfolio`](../../../../DefaultPortfolio/classes/DefaultPortfolio.mdx) \| [`NumberedPortfolio`](../../../../NumberedPortfolio/classes/NumberedPortfolio.mdx)\>
+
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:207](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/NonFungible/Nft.ts#L207)
+
+Get owner of the NFT
+
+#### Returns
+
+`Promise`\<`null` \| [`DefaultPortfolio`](../../../../DefaultPortfolio/classes/DefaultPortfolio.mdx) \| [`NumberedPortfolio`](../../../../NumberedPortfolio/classes/NumberedPortfolio.mdx)\>
+
+#### Note
+
+This method returns `null` if there is no existing holder for the token. This may happen even if the token has been redeemed/burned
+
+***
+
+### getTokenUri()
+
+> **getTokenUri**(): `Promise`\<`null` \| `string`\>
+
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/NonFungible/Nft.ts#L182)
+
+Get the conventional token URI for the NFT
+
+This function will check for a token level value and a collection level value. Token level values take precedence over base values in case of a conflict.
+
+When creating a collection an issuer can either require per token URL by specifying global metadata key `tokenURI` as a collection key or by
+setting a collection base URL by setting a value on the collection corresponding to the global metadata key `baseTokenUri` on the collection.
+
+This method will return `null` if the NFT issuer did not configure the collection according to the convention.
+
+Per token URIs provide the most flexibility, but require more chain space to store, increasing the POLYX fee to issue each token.
+
+The URI values can include `{tokenId}` that will be replaced with the NFTs ID. If a base URI does not specify this the ID will be appended onto the URL. Examples:
+ - `https://example.com/nfts/{tokenId}/info.json` becomes `https://example.com/nfts/1/info.json`
+ - `https://example.com/nfts` becomes `https://example.com/nfts/1` if used a base value, but remain unchanged as a local value
+
+#### Returns
+
+`Promise`\<`null` \| `string`\>
+
+***
+
+### isEqual()
+
+> **isEqual**(`entity`: [`Entity`](../../../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>): `boolean`
+
+Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L61)
+
+Determine whether this Entity is the same as another one
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`entity`
+
+</td>
+<td>
+
+[`Entity`](../../../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+[`Entity`](../../../../Entity/classes/Entity.mdx).[`isEqual`](../../../../Entity/classes/Entity.mdx#isequal)
+
+***
+
+### isLocked()
+
+> **isLocked**(): `Promise`\<`boolean`\>
+
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:239](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/NonFungible/Nft.ts#L239)
+
+Check if the NFT is locked in any settlement instruction
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+#### Throws
+
+if NFT has no owner (has been redeemed)
+
+***
+
+### redeem()
+
+> **redeem**(`args?`: [`RedeemNftParams`](../../../../../procedures/types/interfaces/RedeemNftParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/NonFungible/Nft.ts#L54)
+
+Redeem (or "burns") the NFT, removing it from circulation
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args?`
+
+</td>
+<td>
+
+[`RedeemNftParams`](../../../../../procedures/types/interfaces/RedeemNftParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [OptionalArgsProcedureMethod](../../../../../procedures/types/interfaces/OptionalArgsProcedureMethod.mdx), which means you can call [redeem.checkAuthorization](../../../../../procedures/types/interfaces/OptionalArgsProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### generateUuid()
+
+> `static` **generateUuid**\<`Identifiers`\>(`identifiers`: `Identifiers`): `string`
+
+Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L14)
+
+Generate the Entity's UUID from its identifying properties
+
+#### Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`Identifiers`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`identifiers`
+
+</td>
+<td>
+
+`Identifiers`
+
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+[`Entity`](../../../../Entity/classes/Entity.mdx).[`generateUuid`](../../../../Entity/classes/Entity.mdx#generateuuid)
+
+***
+
+### unserialize()
+
+> `static` **unserialize**\<`Identifiers`\>(`serialized`: `string`): `Identifiers`
+
+Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L23)
+
+Unserialize a UUID into its Unique Identifiers
+
+#### Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`Identifiers`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`serialized`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+UUID to unserialize
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Identifiers`
+
+#### Inherited from
+
+[`Entity`](../../../../Entity/classes/Entity.mdx).[`unserialize`](../../../../Entity/classes/Entity.mdx#unserialize)

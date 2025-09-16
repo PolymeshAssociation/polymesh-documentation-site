@@ -1,0 +1,419 @@
+---
+sidebar_label: "Portfolios"
+---
+
+# Class: Portfolios
+
+Defined in: [src/api/entities/Identity/Portfolios.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Identity/Portfolios.ts#L35)
+
+Handles all Portfolio related functionality on the Identity side
+
+## Extends
+
+- `Namespace`\<[`Identity`](../../classes/Identity.mdx)\>
+
+## Methods
+
+### delete()
+
+> **delete**(`args`: `object`, `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Identity/Portfolios.ts:224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Identity/Portfolios.ts#L224)
+
+Delete a Portfolio by ID
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `portfolio`: `BigNumber` \| [`NumberedPortfolio`](../../../NumberedPortfolio/classes/NumberedPortfolio.mdx); \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.portfolio`
+
+</td>
+<td>
+
+`BigNumber` \| [`NumberedPortfolio`](../../../NumberedPortfolio/classes/NumberedPortfolio.mdx)
+
+</td>
+<td>
+
+Portfolio instance or portfolio ID to delete
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+The calling Identity must be the custodian of the Portfolio
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [delete.checkAuthorization](../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### getCustodiedPortfolios()
+
+> **getCustodiedPortfolios**(`paginationOpts?`: [`PaginationOptions`](../../../types/interfaces/PaginationOptions.mdx)): `Promise`\<[`ResultSet`](../../../types/interfaces/ResultSet.mdx)\<[`DefaultPortfolio`](../../../DefaultPortfolio/classes/DefaultPortfolio.mdx) \| [`NumberedPortfolio`](../../../NumberedPortfolio/classes/NumberedPortfolio.mdx)\>\>
+
+Defined in: [src/api/entities/Identity/Portfolios.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Identity/Portfolios.ts#L96)
+
+Retrieve all Portfolios custodied by this Identity.
+This only includes portfolios owned by a different Identity but custodied by this one.
+To fetch Portfolios owned by this Identity, use [getPortfolios](#getportfolios)
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`paginationOpts?`
+
+</td>
+<td>
+
+[`PaginationOptions`](../../../types/interfaces/PaginationOptions.mdx)
+
+</td>
+<td>
+
+Optional pagination options
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`ResultSet`](../../../types/interfaces/ResultSet.mdx)\<[`DefaultPortfolio`](../../../DefaultPortfolio/classes/DefaultPortfolio.mdx) \| [`NumberedPortfolio`](../../../NumberedPortfolio/classes/NumberedPortfolio.mdx)\>\>
+
+A ResultSet of portfolios (Default or Numbered) and pagination metadata
+
+#### Note
+
+supports pagination
+
+***
+
+### getPortfolio()
+
+#### Call Signature
+
+> **getPortfolio**(): `Promise`\<[`DefaultPortfolio`](../../../DefaultPortfolio/classes/DefaultPortfolio.mdx)\>
+
+Defined in: [src/api/entities/Identity/Portfolios.ts:143](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Identity/Portfolios.ts#L143)
+
+Retrieve the Default Portfolio for this Identity
+
+##### Returns
+
+`Promise`\<[`DefaultPortfolio`](../../../DefaultPortfolio/classes/DefaultPortfolio.mdx)\>
+
+Promise that resolves to the Default Portfolio
+
+#### Call Signature
+
+> **getPortfolio**(`args`: `object`): `Promise`\<[`NumberedPortfolio`](../../../NumberedPortfolio/classes/NumberedPortfolio.mdx)\>
+
+Defined in: [src/api/entities/Identity/Portfolios.ts:151](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Identity/Portfolios.ts#L151)
+
+Retrieve a Numbered Portfolio by its ID
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `portfolioId`: `BigNumber`; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.portfolioId`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+ID of the Portfolio to retrieve
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`NumberedPortfolio`](../../../NumberedPortfolio/classes/NumberedPortfolio.mdx)\>
+
+Promise that resolves to the requested Numbered Portfolio
+
+***
+
+### getPortfolioByName()
+
+> **getPortfolioByName**(`args`: `object`): `Promise`\<[`NumberedPortfolio`](../../../NumberedPortfolio/classes/NumberedPortfolio.mdx)\>
+
+Defined in: [src/api/entities/Identity/Portfolios.ts:188](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Identity/Portfolios.ts#L188)
+
+Retrieve a Numbered Portfolio by its name
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `name`: `string`; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.name`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+Name of the Portfolio to fetch
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`NumberedPortfolio`](../../../NumberedPortfolio/classes/NumberedPortfolio.mdx)\>
+
+Promise that resolves to the Portfolio with the given name
+
+#### Throws
+
+if no Portfolio exists with the given name
+
+***
+
+### getPortfolios()
+
+> **getPortfolios**(): `Promise`\<\[[`DefaultPortfolio`](../../../DefaultPortfolio/classes/DefaultPortfolio.mdx), `...NumberedPortfolio[]`\]\>
+
+Defined in: [src/api/entities/Identity/Portfolios.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Identity/Portfolios.ts#L62)
+
+Retrieve all the Portfolios owned by this Identity
+
+#### Returns
+
+`Promise`\<\[[`DefaultPortfolio`](../../../DefaultPortfolio/classes/DefaultPortfolio.mdx), `...NumberedPortfolio[]`\]\>
+
+An array where the first item is always the Default Portfolio, followed by any Numbered Portfolios owned by this Identity
+
+***
+
+### getTransactionHistory()
+
+> **getTransactionHistory**(`filters`: `object`): `Promise`\<[`HistoricSettlement`](../../../Portfolio/types/interfaces/HistoricSettlement.mdx)[]\>
+
+Defined in: [src/api/entities/Identity/Portfolios.ts:236](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Identity/Portfolios.ts#L236)
+
+Retrieve a list of transactions where this identity was involved. Can be filtered using parameters
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`filters`
+
+</td>
+<td>
+
+\{ `account?`: `string`; `assetId?`: `string`; `ticker?`: `string`; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`filters.account?`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+Account involved in the settlement
+
+</td>
+</tr>
+<tr>
+<td>
+
+`filters.assetId?`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+Asset ID to filter by (overrides ticker if both provided)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`filters.ticker?`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+ticker involved in the transaction
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`HistoricSettlement`](../../../Portfolio/types/interfaces/HistoricSettlement.mdx)[]\>
+
+Promise that resolves to an array of historical settlements
+
+#### Note
+
+uses the middlewareV2

@@ -1,0 +1,59 @@
+---
+sidebar_label: "HistoricSettlement"
+---
+
+# Interface: HistoricSettlement
+
+Defined in: [src/api/entities/Portfolio/types.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Portfolio/types.ts#L31)
+
+## Properties
+
+### accounts
+
+> **accounts**: [`Account`](../../../Account/classes/Account.mdx)[]
+
+Defined in: [src/api/entities/Portfolio/types.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Portfolio/types.ts#L38)
+
+Array of Accounts that participated by affirming the settlement
+
+***
+
+### blockHash
+
+> **blockHash**: `string`
+
+Defined in: [src/api/entities/Portfolio/types.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Portfolio/types.ts#L33)
+
+***
+
+### blockNumber
+
+> **blockNumber**: `BigNumber`
+
+Defined in: [src/api/entities/Portfolio/types.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Portfolio/types.ts#L32)
+
+***
+
+### instruction?
+
+> `optional` **instruction**: [`Instruction`](../../../Instruction/classes/Instruction.mdx)
+
+Defined in: [src/api/entities/Portfolio/types.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Portfolio/types.ts#L43)
+
+This value is null when depicting portfolio movements
+
+***
+
+### legs
+
+> **legs**: [`SettlementLeg`](../type-aliases/SettlementLeg.mdx)[]
+
+Defined in: [src/api/entities/Portfolio/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Portfolio/types.ts#L39)
+
+***
+
+### status
+
+> **status**: [`InstructionStatusEnum`](../../../../client/types/enumerations/InstructionStatusEnum.mdx)
+
+Defined in: [src/api/entities/Portfolio/types.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Portfolio/types.ts#L34)

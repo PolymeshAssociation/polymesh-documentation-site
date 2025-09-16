@@ -1,0 +1,37 @@
+---
+sidebar_label: "AttestPrimaryKeyRotationParams"
+---
+
+# Interface: AttestPrimaryKeyRotationParams
+
+Defined in: [src/api/procedures/types.ts:852](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L852)
+
+## Properties
+
+### expiry?
+
+> `optional` **expiry**: `Date`
+
+Defined in: [src/api/procedures/types.ts:866](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L866)
+
+(optional) when the generated authorization should expire
+
+***
+
+### identity
+
+> **identity**: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
+
+Defined in: [src/api/procedures/types.ts:861](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L861)
+
+Identity or the DID of the Identity that is to be rotated
+
+***
+
+### targetAccount
+
+> **targetAccount**: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
+
+Defined in: [src/api/procedures/types.ts:856](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L856)
+
+The Account that will be attested to become the primary key of the `identity`. Can be ss58 encoded address or an instance of Account

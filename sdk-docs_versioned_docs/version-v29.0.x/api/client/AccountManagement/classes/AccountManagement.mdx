@@ -1,0 +1,1133 @@
+---
+sidebar_label: "AccountManagement"
+---
+
+# Class: AccountManagement
+
+Defined in: [src/api/client/AccountManagement.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L48)
+
+Handles functionality related to Account Management
+
+## Methods
+
+### acceptPrimaryKey()
+
+> **acceptPrimaryKey**(`args`: [`AcceptPrimaryKeyRotationParams`](../../../procedures/types/interfaces/AcceptPrimaryKeyRotationParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/client/AccountManagement.ts:336](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L336)
+
+Accepts the authorization to become the new primary key of the issuing identity.
+
+If a CDD service provider approved this change (or this is not required), primary key of the Identity is updated.
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`AcceptPrimaryKeyRotationParams`](../../../procedures/types/interfaces/AcceptPrimaryKeyRotationParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+The caller (new primary key) must be either a secondary key of the issuing identity, or
+unlinked to any identity.
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [acceptPrimaryKey.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### addSecondaryAccounts()
+
+> **addSecondaryAccounts**(`args`: [`AddSecondaryAccountsParams`](../../../procedures/types/interfaces/AddSecondaryAccountsParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Identity`](../../../entities/Identity/classes/Identity.mdx), [`Identity`](../../../entities/Identity/classes/Identity.mdx)\>\>
+
+Defined in: [src/api/client/AccountManagement.ts:149](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L149)
+
+Adds a list of secondary Accounts to the signing Identity
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`AddSecondaryAccountsParams`](../../../procedures/types/interfaces/AddSecondaryAccountsParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Identity`](../../../entities/Identity/classes/Identity.mdx), [`Identity`](../../../entities/Identity/classes/Identity.mdx)\>\>
+
+#### Throws
+
+if the signing Account is not the primary Account of the Identity
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [addSecondaryAccounts.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### createMultiSigAccount()
+
+> **createMultiSigAccount**(`args`: [`CreateMultiSigParams`](../../../procedures/types/interfaces/CreateMultiSigParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`MultiSig`](../../../entities/Account/MultiSig/classes/MultiSig.mdx), [`MultiSig`](../../../entities/Account/MultiSig/classes/MultiSig.mdx)\>\>
+
+Defined in: [src/api/client/AccountManagement.ts:200](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L200)
+
+Create a MultiSig Account
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`CreateMultiSigParams`](../../../procedures/types/interfaces/CreateMultiSigParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`MultiSig`](../../../entities/Account/MultiSig/classes/MultiSig.mdx), [`MultiSig`](../../../entities/Account/MultiSig/classes/MultiSig.mdx)\>\>
+
+#### Note
+
+this will create an [Authorization Request](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx) for each signing Account which will have to be accepted before they can approve transactions. None of the signing Accounts can be associated with an Identity when accepting the Authorization
+  An [Account](../../../entities/Account/classes/Account.mdx) or [Identity](../../../entities/types/type-aliases/Identity.mdx) can fetch its pending Authorization Requests by calling [authorizations.getReceived](../../../entities/common/namespaces/Authorizations/classes/Authorizations.mdx#getreceived).
+  Also, an Account or Identity can directly fetch the details of an Authorization Request by calling [authorizations.getOne](../../../entities/common/namespaces/Authorizations/classes/Authorizations.mdx#getone)
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [createMultiSigAccount.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### freezeSecondaryAccounts()
+
+> **freezeSecondaryAccounts**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/client/AccountManagement.ts:177](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L177)
+
+Freeze all of the secondary Accounts in the signing Identity. This means revoking their permission to perform any operation on the blockchain and freezing their funds until the Accounts are unfrozen via [unfreezeSecondaryAccounts](#unfreezesecondaryaccounts)
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx), which means you can call [freezeSecondaryAccounts.checkAuthorization](../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### generateOffChainAuthSignature()
+
+> **generateOffChainAuthSignature**(`args`: `object`): `Promise`\<`` `0x${string}` ``\>
+
+Defined in: [src/api/client/AccountManagement.ts:345](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L345)
+
+Generate an offchain authorization signature with a specified signer
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `expiry`: `Date`; `signer`: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx); `target`: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx); \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.expiry`
+
+</td>
+<td>
+
+`Date`
+
+</td>
+<td>
+
+date after which the authorization expires
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.signer`
+
+</td>
+<td>
+
+`string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
+
+</td>
+<td>
+
+Signer to be used to generate the off chain auth signature
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.target`
+
+</td>
+<td>
+
+`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
+
+</td>
+<td>
+
+DID of the identity to which signer is targeting the authorization
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<`` `0x${string}` ``\>
+
+***
+
+### getAccount()
+
+> **getAccount**(`args`: `object`): `Promise`\<[`Account`](../../../entities/Account/classes/Account.mdx) \| [`MultiSig`](../../../entities/Account/MultiSig/classes/MultiSig.mdx)\>
+
+Defined in: [src/api/client/AccountManagement.ts:274](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L274)
+
+Return an Account instance from an address. If the Account has multiSig signers, the returned value will be a [MultiSig](../../../entities/Account/MultiSig/classes/MultiSig.mdx) instance
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `address`: `string`; \}
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.address`
+
+</td>
+<td>
+
+`string`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`Account`](../../../entities/Account/classes/Account.mdx) \| [`MultiSig`](../../../entities/Account/MultiSig/classes/MultiSig.mdx)\>
+
+***
+
+### getAccountBalance()
+
+#### Call Signature
+
+> **getAccountBalance**(`args?`: `object`): `Promise`\<[`Balance`](../../../entities/Account/types/interfaces/Balance.mdx)\>
+
+Defined in: [src/api/client/AccountManagement.ts:209](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L209)
+
+Get the free/locked POLYX balance of an Account
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args?`
+
+</td>
+<td>
+
+\{ `account`: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx); \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.account?`
+
+</td>
+<td>
+
+`string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
+
+</td>
+<td>
+
+The account to get balance for (defaults to the signing Account)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`Balance`](../../../entities/Account/types/interfaces/Balance.mdx)\>
+
+The account's POLYX balance information
+
+##### Note
+
+can be subscribed to, if connected to node using a web socket
+
+#### Call Signature
+
+> **getAccountBalance**(`callback`: [`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<[`Balance`](../../../entities/Account/types/interfaces/Balance.mdx)\>): `Promise`\<[`UnsubCallback`](../../../entities/types/type-aliases/UnsubCallback.mdx)\>
+
+Defined in: [src/api/client/AccountManagement.ts:218](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L218)
+
+Get the free/locked POLYX balance of the signing Account (with subscription)
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+[`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<[`Balance`](../../../entities/Account/types/interfaces/Balance.mdx)\>
+
+</td>
+<td>
+
+Callback function to receive balance updates
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`UnsubCallback`](../../../entities/types/type-aliases/UnsubCallback.mdx)\>
+
+An unsubscribe function
+
+##### Note
+
+can be subscribed to, if connected to node using a web socket
+
+#### Call Signature
+
+> **getAccountBalance**(`args`: `object`, `callback`: [`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<[`Balance`](../../../entities/Account/types/interfaces/Balance.mdx)\>): `Promise`\<[`UnsubCallback`](../../../entities/types/type-aliases/UnsubCallback.mdx)\>
+
+Defined in: [src/api/client/AccountManagement.ts:228](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L228)
+
+Get the free/locked POLYX balance of an Account (with subscription)
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `account`: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx); \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.account`
+
+</td>
+<td>
+
+`string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
+
+</td>
+<td>
+
+The account to get balance for
+
+</td>
+</tr>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+[`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<[`Balance`](../../../entities/Account/types/interfaces/Balance.mdx)\>
+
+</td>
+<td>
+
+Callback function to receive balance updates
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`UnsubCallback`](../../../entities/types/type-aliases/UnsubCallback.mdx)\>
+
+An unsubscribe function
+
+##### Note
+
+can be subscribed to, if connected to node using a web socket
+
+***
+
+### getSigningAccount()
+
+> **getSigningAccount**(): `null` \| [`Account`](../../../entities/Account/classes/Account.mdx)
+
+Defined in: [src/api/client/AccountManagement.ts:281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L281)
+
+Return the signing Account, or null if no signing Account has been set
+
+#### Returns
+
+`null` \| [`Account`](../../../entities/Account/classes/Account.mdx)
+
+***
+
+### getSigningAccounts()
+
+> **getSigningAccounts**(): `Promise`\<[`Account`](../../../entities/Account/classes/Account.mdx)[]\>
+
+Defined in: [src/api/client/AccountManagement.ts:294](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L294)
+
+Return a list that contains all the signing Accounts associated to the SDK instance's Signing Manager
+
+#### Returns
+
+`Promise`\<[`Account`](../../../entities/Account/classes/Account.mdx)[]\>
+
+#### Throws
+
+— if there is no Signing Manager attached to the SDK
+
+***
+
+### getSubsidy()
+
+> **getSubsidy**(`args`: `object`): [`Subsidy`](../../../entities/Subsidy/classes/Subsidy.mdx)
+
+Defined in: [src/api/client/AccountManagement.ts:301](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L301)
+
+Return an Subsidy instance for a pair of beneficiary and subsidizer Account
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `beneficiary`: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx); `subsidizer`: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx); \}
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.beneficiary`
+
+</td>
+<td>
+
+`string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.subsidizer`
+
+</td>
+<td>
+
+`string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+[`Subsidy`](../../../entities/Subsidy/classes/Subsidy.mdx)
+
+***
+
+### inviteAccount()
+
+> **inviteAccount**(`args`: [`InviteAccountParams`](../../../procedures/types/interfaces/InviteAccountParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx), [`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
+
+Defined in: [src/api/client/AccountManagement.ts:172](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L172)
+
+Send an invitation to an Account to join the signing Identity as a secondary Account
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`InviteAccountParams`](../../../procedures/types/interfaces/InviteAccountParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx), [`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
+
+#### Note
+
+this will create an [Authorization Request](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx) which has to be accepted by the `targetAccount`.
+  An [Account](../../../entities/Account/classes/Account.mdx) or [Identity](../../../entities/types/type-aliases/Identity.mdx) can fetch its pending Authorization Requests by calling [authorizations.getReceived](../../../entities/common/namespaces/Authorizations/classes/Authorizations.mdx#getreceived).
+  Also, an Account or Identity can directly fetch the details of an Authorization Request by calling [authorizations.getOne](../../../entities/common/namespaces/Authorizations/classes/Authorizations.mdx#getone)
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [inviteAccount.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### isValidAddress()
+
+> **isValidAddress**(`args`: `object`): `boolean`
+
+Defined in: [src/api/client/AccountManagement.ts:318](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L318)
+
+Returns `true`
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `address`: `string`; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.address`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+is a valid ss58 address for the connected network
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`boolean`
+
+***
+
+### leaveIdentity()
+
+> **leaveIdentity**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/client/AccountManagement.ts:137](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L137)
+
+Disassociate the signing Account from its Identity. This operation can only be done if the signing Account is a secondary Account
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx), which means you can call [leaveIdentity.checkAuthorization](../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### modifyPermissions()
+
+> **modifyPermissions**(`args`: [`ModifySignerPermissionsParams`](../../../procedures/types/interfaces/ModifySignerPermissionsParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/client/AccountManagement.ts:163](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L163)
+
+Modify all permissions of a list of secondary Accounts associated with the signing Identity
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`ModifySignerPermissionsParams`](../../../procedures/types/interfaces/ModifySignerPermissionsParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Throws
+
+if the signing Account is not the primary Account of the Identity whose secondary Account permissions are being modified
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [modifyPermissions.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### removeSecondaryAccounts()
+
+> **removeSecondaryAccounts**(`args`: [`RemoveSecondaryAccountsParams`](../../../procedures/types/interfaces/RemoveSecondaryAccountsParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/client/AccountManagement.ts:142](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L142)
+
+Remove a list of secondary Accounts associated with the signing Identity
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`RemoveSecondaryAccountsParams`](../../../procedures/types/interfaces/RemoveSecondaryAccountsParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [removeSecondaryAccounts.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### revokePermissions()
+
+> **revokePermissions**(`args`: `object`, `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/client/AccountManagement.ts:156](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L156)
+
+Revoke all permissions of a list of secondary Accounts associated with the signing Identity
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `secondaryAccounts`: (`string` \| [`Account`](../../../entities/Account/classes/Account.mdx))[]; \}
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.secondaryAccounts`
+
+</td>
+<td>
+
+(`string` \| [`Account`](../../../entities/Account/classes/Account.mdx))[]
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Throws
+
+if the signing Account is not the primary Account of the Identity whose secondary Account permissions are being revoked
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [revokePermissions.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### subsidizeAccount()
+
+> **subsidizeAccount**(`args`: [`SubsidizeAccountParams`](../../../procedures/types/interfaces/SubsidizeAccountParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx), [`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
+
+Defined in: [src/api/client/AccountManagement.ts:191](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L191)
+
+Send an Authorization Request to an Account to subsidize its transaction fees
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`SubsidizeAccountParams`](../../../procedures/types/interfaces/SubsidizeAccountParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx), [`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
+
+#### Note
+
+this will create an [Authorization Request](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx) which has to be accepted by the `beneficiary` Account.
+  An [Account](../../../entities/Account/classes/Account.mdx) or [Identity](../../../entities/types/type-aliases/Identity.mdx) can fetch its pending Authorization Requests by calling [authorizations.getReceived](../../../entities/common/namespaces/Authorizations/classes/Authorizations.mdx#getreceived).
+  Also, an Account or Identity can directly fetch the details of an Authorization Request by calling [authorizations.getOne](../../../entities/common/namespaces/Authorizations/classes/Authorizations.mdx#getone)
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [subsidizeAccount.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### unfreezeSecondaryAccounts()
+
+> **unfreezeSecondaryAccounts**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/client/AccountManagement.ts:182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/AccountManagement.ts#L182)
+
+Unfreeze all of the secondary Accounts in the signing Identity. This will restore their permissions as they were before being frozen
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx), which means you can call [unfreezeSecondaryAccounts.checkAuthorization](../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it

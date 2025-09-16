@@ -1,0 +1,46 @@
+---
+sidebar_label: "MetadataValueDetails"
+---
+
+# Type Alias: MetadataValueDetails
+
+> **MetadataValueDetails** = `object` & \{ `lockStatus`: `Exclude`\<[`MetadataLockStatus`](../enumerations/MetadataLockStatus.mdx), [`LockedUntil`](../enumerations/MetadataLockStatus.mdx#lockeduntil)\>; \} \| \{ `lockedUntil`: `Date`; `lockStatus`: [`LockedUntil`](../enumerations/MetadataLockStatus.mdx#lockeduntil) \| `undefined`; \} \| \{ `lockStatus`: `undefined`; \}
+
+Defined in: [src/api/entities/MetadataEntry/types.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/MetadataEntry/types.ts#L27)
+
+## Type declaration
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`expiry?`
+
+</td>
+<td>
+
+`Date` \| `null`
+
+</td>
+<td>
+
+Date at which the Metadata value expires, null if it never expires
+
+</td>
+<td>
+
+[src/api/entities/MetadataEntry/types.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/MetadataEntry/types.ts#L31)
+
+</td>
+</tr>
+</tbody>
+</table>

@@ -1,0 +1,53 @@
+---
+sidebar_label: "Permissions"
+---
+
+# Interface: Permissions
+
+Defined in: [src/api/entities/types.ts:647](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L647)
+
+Permissions a Secondary Key has over the Identity. A null value means the key has
+  all permissions of that type (e.g. if `assets` is null, the key has permissions over all
+  of the Identity's Assets)
+
+## Properties
+
+### assets
+
+> **assets**: `null` \| [`SectionPermissions`](SectionPermissions.mdx)\<[`FungibleAsset`](../../Asset/Fungible/classes/FungibleAsset.mdx)\>
+
+Defined in: [src/api/entities/types.ts:651](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L651)
+
+Assets over which this key has permissions
+
+***
+
+### portfolios
+
+> **portfolios**: `null` \| [`SectionPermissions`](SectionPermissions.mdx)\<[`DefaultPortfolio`](../../DefaultPortfolio/classes/DefaultPortfolio.mdx) \| [`NumberedPortfolio`](../../NumberedPortfolio/classes/NumberedPortfolio.mdx)\>
+
+Defined in: [src/api/entities/types.ts:665](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L665)
+
+***
+
+### transactionGroups
+
+> **transactionGroups**: [`TxGroup`](../../../procedures/types/enumerations/TxGroup.mdx)[]
+
+Defined in: [src/api/entities/types.ts:663](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L663)
+
+list of Transaction Groups this key can execute. Having permissions over a TxGroup
+  means having permissions over every TxTag in said group. Partial group permissions are not
+  covered by this value. For a full picture of transaction permissions, see the `transactions` property
+
+NOTE: If transactions is null, ignore this value
+
+***
+
+### transactions
+
+> **transactions**: `null` \| [`TransactionPermissions`](TransactionPermissions.mdx)
+
+Defined in: [src/api/entities/types.ts:655](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L655)
+
+Transactions this key can execute

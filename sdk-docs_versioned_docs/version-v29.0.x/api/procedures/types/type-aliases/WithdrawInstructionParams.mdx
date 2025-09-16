@@ -1,0 +1,50 @@
+---
+sidebar_label: "WithdrawInstructionParams"
+---
+
+# Type Alias: WithdrawInstructionParams
+
+> **WithdrawInstructionParams** = `object`
+
+Defined in: [src/api/procedures/types.ts:1009](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1009)
+
+## Properties
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+<a id="portfolios"></a> `portfolios?`
+
+</td>
+<td>
+
+[`PortfolioLike`](../../../entities/types/type-aliases/PortfolioLike.mdx)[]
+
+</td>
+<td>
+
+(optional) Portfolios that the signer controls and wants to affirm the instruction or withdraw affirmation
+
+**Note**
+
+if empty, all the legs containing any custodied Portfolios of the signer will be affirmed/affirmation will be withdrawn, based on the operation.
+
+</td>
+<td>
+
+[src/api/procedures/types.ts:1015](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1015)
+
+</td>
+</tr>
+</tbody>
+</table>

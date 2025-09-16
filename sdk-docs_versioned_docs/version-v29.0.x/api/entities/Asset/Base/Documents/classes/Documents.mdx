@@ -1,0 +1,111 @@
+---
+sidebar_label: "Documents"
+---
+
+# Class: Documents
+
+Defined in: [src/api/entities/Asset/Base/Documents/index.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/Documents/index.ts#L16)
+
+Handles all Asset Document related functionality
+
+## Extends
+
+- `Namespace`\<[`BaseAsset`](../../BaseAsset/classes/BaseAsset.mdx)\>
+
+## Methods
+
+### get()
+
+> **get**(`paginationOpts?`: [`PaginationOptions`](../../../../types/interfaces/PaginationOptions.mdx)): `Promise`\<[`ResultSet`](../../../../types/interfaces/ResultSet.mdx)\<[`AssetDocument`](../../../types/interfaces/AssetDocument.mdx)\>\>
+
+Defined in: [src/api/entities/Asset/Base/Documents/index.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/Documents/index.ts#L39)
+
+Retrieve all documents linked to the Asset
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`paginationOpts?`
+
+</td>
+<td>
+
+[`PaginationOptions`](../../../../types/interfaces/PaginationOptions.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`ResultSet`](../../../../types/interfaces/ResultSet.mdx)\<[`AssetDocument`](../../../types/interfaces/AssetDocument.mdx)\>\>
+
+#### Note
+
+supports pagination
+
+***
+
+### set()
+
+> **set**(`args`: [`SetAssetDocumentsParams`](../../../../../procedures/types/interfaces/SetAssetDocumentsParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/Base/Documents/index.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/Documents/index.ts#L32)
+
+Assign a new list of documents to the Asset by replacing the existing list of documents with the ones passed in the parameters
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`SetAssetDocumentsParams`](../../../../../procedures/types/interfaces/SetAssetDocumentsParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [set.checkAuthorization](../../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it

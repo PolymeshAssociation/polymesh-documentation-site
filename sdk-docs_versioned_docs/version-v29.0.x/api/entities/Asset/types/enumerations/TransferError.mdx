@@ -1,0 +1,174 @@
+---
+sidebar_label: "TransferError"
+---
+
+# Enumeration: TransferError
+
+Defined in: [src/api/entities/Asset/types.ts:285](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L285)
+
+Akin to TransferStatus, these are a bit more granular and specific. Every TransferError translates to
+  a [TransferStatus](TransferStatus.mdx), but two or more TransferErrors can represent the same TransferStatus, and
+  not all Transfer Statuses are represented by a TransferError
+
+## Enumeration Members
+
+### AssetDoesNotExists
+
+> **AssetDoesNotExists**: `"AssetDoesNotExists"`
+
+Defined in: [src/api/entities/Asset/types.ts:363](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L363)
+
+occurs if asset to be check for transfer, no longer exists
+
+***
+
+### BalanceOverflow
+
+> **BalanceOverflow**: `"BalanceOverflow"`
+
+Defined in: [src/api/entities/Asset/types.ts:368](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L368)
+
+occurs if receiver balance will overflow on receiving the transfer amount
+
+***
+
+### ComplianceFailure
+
+> **ComplianceFailure**: `"ComplianceFailure"`
+
+Defined in: [src/api/entities/Asset/types.ts:353](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L353)
+
+translates to TransferStatus.ComplianceFailure
+
+occurs if some compliance rule would prevent the transfer
+
+***
+
+### InsufficientBalance
+
+> **InsufficientBalance**: `"InsufficientBalance"`
+
+Defined in: [src/api/entities/Asset/types.ts:322](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L322)
+
+translates to TransferStatus.InsufficientBalance
+
+occurs if the sender Identity does not have enough balance to cover the amount
+
+***
+
+### InsufficientPortfolioBalance
+
+> **InsufficientPortfolioBalance**: `"InsufficientPortfolioBalance"`
+
+Defined in: [src/api/entities/Asset/types.ts:346](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L346)
+
+translates to TransferStatus.PortfolioFailure
+
+occurs if the sender Portfolio does not have enough balance to cover the amount
+
+***
+
+### InvalidGranularity
+
+> **InvalidGranularity**: `"InvalidGranularity"`
+
+Defined in: [src/api/entities/Asset/types.ts:291](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L291)
+
+translates to TransferStatus.InvalidGranularity
+
+occurs if attempting to transfer decimal amounts of a non-divisible token
+
+***
+
+### InvalidReceiverCdd
+
+> **InvalidReceiverCdd**: `"InvalidReceiverCdd"`
+
+Defined in: [src/api/entities/Asset/types.ts:303](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L303)
+
+translates to TransferStatus.InvalidReceiverIdentity
+
+occurs if the receiver Identity doesn't have a valid CDD claim
+
+***
+
+### InvalidReceiverPortfolio
+
+> **InvalidReceiverPortfolio**: `"InvalidReceiverPortfolio"`
+
+Defined in: [src/api/entities/Asset/types.ts:340](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L340)
+
+translates to TransferStatus.PortfolioFailure
+
+occurs if the receiver Portfolio doesn't exist
+
+***
+
+### InvalidSenderCdd
+
+> **InvalidSenderCdd**: `"InvalidSenderCdd"`
+
+Defined in: [src/api/entities/Asset/types.ts:309](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L309)
+
+translates to TransferStatus.InvalidSenderIdentity
+
+occurs if the receiver Identity doesn't have a valid CDD claim
+
+***
+
+### InvalidSenderPortfolio
+
+> **InvalidSenderPortfolio**: `"InvalidSenderPortfolio"`
+
+Defined in: [src/api/entities/Asset/types.ts:334](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L334)
+
+translates to TransferStatus.PortfolioFailure
+
+occurs if the sender Portfolio doesn't exist
+
+***
+
+### ScopeClaimMissing
+
+> **ScopeClaimMissing**: `"ScopeClaimMissing"`
+
+Defined in: [src/api/entities/Asset/types.ts:316](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L316)
+
+translates to TransferStatus.ScopeClaimMissing
+
+occurs if one of the participants doesn't have a valid Investor Uniqueness Claim for
+  the Asset
+
+***
+
+### SelfTransfer
+
+> **SelfTransfer**: `"SelfTransfer"`
+
+Defined in: [src/api/entities/Asset/types.ts:297](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L297)
+
+translates to TransferStatus.InvalidReceiverIdentity
+
+occurs if the origin and destination Identities are the same
+
+***
+
+### TransferNotAllowed
+
+> **TransferNotAllowed**: `"TransferNotAllowed"`
+
+Defined in: [src/api/entities/Asset/types.ts:358](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L358)
+
+occurs if some statistics transfer condition would prevent the transfer
+
+***
+
+### TransfersFrozen
+
+> **TransfersFrozen**: `"TransfersFrozen"`
+
+Defined in: [src/api/entities/Asset/types.ts:328](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L328)
+
+translates to TransferStatus.TransfersHalted
+
+occurs if the Asset's transfers are frozen

@@ -1,0 +1,41 @@
+---
+sidebar_label: "InviteExternalAgentParams"
+---
+
+# Interface: InviteExternalAgentParams
+
+Defined in: [src/api/procedures/types.ts:1437](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1437)
+
+## Properties
+
+### expiry?
+
+> `optional` **expiry**: `Date`
+
+Defined in: [src/api/procedures/types.ts:1454](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1454)
+
+date at which the authorization request for invitation expires (optional)
+
+#### Note
+
+if expiry date is not set, the invitation will never expire
+
+#### Note
+
+due to chain limitations, the expiry will be ignored if the passed `permissions` don't correspond to an existing Permission Group
+
+***
+
+### permissions
+
+> **permissions**: [`CustomPermissionGroup`](../../../entities/CustomPermissionGroup/classes/CustomPermissionGroup.mdx) \| [`KnownPermissionGroup`](../../../entities/KnownPermissionGroup/classes/KnownPermissionGroup.mdx) \| \{ `transactions`: `null` \| [`TransactionPermissions`](../../../entities/types/interfaces/TransactionPermissions.mdx); \} \| \{ `transactionGroups`: [`TxGroup`](../enumerations/TxGroup.mdx)[]; \}
+
+Defined in: [src/api/procedures/types.ts:1439](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1439)
+
+***
+
+### target
+
+> **target**: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
+
+Defined in: [src/api/procedures/types.ts:1438](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1438)

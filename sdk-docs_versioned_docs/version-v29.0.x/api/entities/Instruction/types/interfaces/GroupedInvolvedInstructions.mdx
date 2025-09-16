@@ -1,0 +1,27 @@
+---
+sidebar_label: "GroupedInvolvedInstructions"
+---
+
+# Interface: GroupedInvolvedInstructions
+
+Defined in: [src/api/entities/Instruction/types.ts:153](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Instruction/types.ts#L153)
+
+## Properties
+
+### custodied
+
+> **custodied**: [`GroupedInstructions`](GroupedInstructions.mdx)
+
+Defined in: [src/api/entities/Instruction/types.ts:157](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Instruction/types.ts#L157)
+
+Instructions where the Identity is the custodian of the leg portfolios
+
+***
+
+### owned
+
+> **owned**: `Omit`\<[`GroupedInstructions`](GroupedInstructions.mdx), `"affirmed"`\>
+
+Defined in: [src/api/entities/Instruction/types.ts:161](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Instruction/types.ts#L161)
+
+Instructions where the Identity is the owner of the leg portfolios

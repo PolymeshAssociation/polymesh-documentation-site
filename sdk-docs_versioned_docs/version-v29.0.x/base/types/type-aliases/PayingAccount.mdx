@@ -1,0 +1,142 @@
+---
+sidebar_label: "PayingAccount"
+---
+
+# Type Alias: PayingAccount
+
+> **PayingAccount** = \{ `account`: [`Account`](../../../api/entities/Account/classes/Account.mdx); `allowance`: `BigNumber`; `type`: [`Subsidy`](../enumerations/PayingAccountType.mdx#subsidy); \} \| \{ `account`: [`Account`](../../../api/entities/Account/classes/Account.mdx); `type`: [`Caller`](../enumerations/PayingAccountType.mdx#caller) \| [`Other`](../enumerations/PayingAccountType.mdx#other) \| [`MultiSigCreator`](../enumerations/PayingAccountType.mdx#multisigcreator); \}
+
+Defined in: [src/base/types.ts:136](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L136)
+
+Data representing the Account responsible for paying fees for a transaction
+
+## Type declaration
+
+\{ `account`: [`Account`](../../../api/entities/Account/classes/Account.mdx); `allowance`: `BigNumber`; `type`: [`Subsidy`](../enumerations/PayingAccountType.mdx#subsidy); \}
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`account`
+
+</td>
+<td>
+
+[`Account`](../../../api/entities/Account/classes/Account.mdx)
+
+</td>
+<td>
+
+Account that pays for the transaction
+
+</td>
+<td>
+
+[src/base/types.ts:142](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L142)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`allowance`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+total amount that can be paid for
+
+</td>
+<td>
+
+[src/base/types.ts:146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L146)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`type`
+
+</td>
+<td>
+
+[`Subsidy`](../enumerations/PayingAccountType.mdx#subsidy)
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+<td>
+
+[src/base/types.ts:138](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L138)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+\{ `account`: [`Account`](../../../api/entities/Account/classes/Account.mdx); `type`: [`Caller`](../enumerations/PayingAccountType.mdx#caller) \| [`Other`](../enumerations/PayingAccountType.mdx#other) \| [`MultiSigCreator`](../enumerations/PayingAccountType.mdx#multisigcreator); \}
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`account`
+
+</td>
+<td>
+
+[`Account`](../../../api/entities/Account/classes/Account.mdx)
+
+</td>
+<td>
+
+[src/base/types.ts:150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L150)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`type`
+
+</td>
+<td>
+
+[`Caller`](../enumerations/PayingAccountType.mdx#caller) \| [`Other`](../enumerations/PayingAccountType.mdx#other) \| [`MultiSigCreator`](../enumerations/PayingAccountType.mdx#multisigcreator)
+
+</td>
+<td>
+
+[src/base/types.ts:149](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L149)
+
+</td>
+</tr>
+</tbody>
+</table>

@@ -1,0 +1,129 @@
+---
+sidebar_label: "ConfigureDividendDistributionParams"
+---
+
+# Interface: ConfigureDividendDistributionParams
+
+Defined in: [src/api/procedures/types.ts:1328](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1328)
+
+## Properties
+
+### checkpoint
+
+> **checkpoint**: [`InputCaCheckpoint`](../../../entities/Asset/Fungible/Checkpoints/types/type-aliases/InputCaCheckpoint.mdx)
+
+Defined in: [src/api/procedures/types.ts:1353](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1353)
+
+checkpoint to be used to calculate Dividends. If a Schedule is passed, the next Checkpoint it creates will be used.
+  If a Date is passed, a Checkpoint will be created at that date and used
+
+***
+
+### currency
+
+> **currency**: `string`
+
+Defined in: [src/api/procedures/types.ts:1361](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1361)
+
+ticker of the currency in which Dividends will be distributed
+
+***
+
+### declarationDate?
+
+> `optional` **declarationDate**: `Date`
+
+Defined in: [src/api/procedures/types.ts:1332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1332)
+
+date at which the issuer publicly declared the Dividend Distribution. Optional, defaults to the current date
+
+***
+
+### defaultTaxWithholding?
+
+> `optional` **defaultTaxWithholding**: `BigNumber`
+
+Defined in: [src/api/procedures/types.ts:1343](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1343)
+
+default percentage (0-100) of the Benefits to be held for tax purposes
+
+***
+
+### description
+
+> **description**: `string`
+
+Defined in: [src/api/procedures/types.ts:1333](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1333)
+
+***
+
+### expiryDate?
+
+> `optional` **expiryDate**: `Date`
+
+Defined in: [src/api/procedures/types.ts:1377](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1377)
+
+optional, defaults to never expiring
+
+***
+
+### maxAmount
+
+> **maxAmount**: `BigNumber`
+
+Defined in: [src/api/procedures/types.ts:1369](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1369)
+
+maximum amount of `currency` to distribute in total
+
+***
+
+### originPortfolio?
+
+> `optional` **originPortfolio**: `BigNumber` \| [`NumberedPortfolio`](../../../entities/NumberedPortfolio/classes/NumberedPortfolio.mdx)
+
+Defined in: [src/api/procedures/types.ts:1357](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1357)
+
+portfolio from which the Dividends will be distributed. Optional, defaults to the Dividend Distributions Agent's Default Portfolio
+
+***
+
+### paymentDate
+
+> **paymentDate**: `Date`
+
+Defined in: [src/api/procedures/types.ts:1373](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1373)
+
+date from which Asset Holders can claim their Dividends
+
+***
+
+### perShare
+
+> **perShare**: `BigNumber`
+
+Defined in: [src/api/procedures/types.ts:1365](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1365)
+
+amount of `currency` to distribute per each share of the Asset that a target holds
+
+***
+
+### targets?
+
+> `optional` **targets**: [`InputCorporateActionTargets`](../type-aliases/InputCorporateActionTargets.mdx)
+
+Defined in: [src/api/procedures/types.ts:1339](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1339)
+
+Asset Holder Identities to be included (or excluded) from the Dividend Distribution. Inclusion/exclusion is controlled by the `treatment`
+  property. When the value is `Include`, all Asset Holders not present in the array are excluded, and vice-versa. If no value is passed,
+  the default value for the Asset is used. If there is no default value, all Asset Holders will be part of the Dividend Distribution
+
+***
+
+### taxWithholdings?
+
+> `optional` **taxWithholdings**: [`InputCorporateActionTaxWithholdings`](../type-aliases/InputCorporateActionTaxWithholdings.mdx)
+
+Defined in: [src/api/procedures/types.ts:1348](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1348)
+
+percentage (0-100) of the Benefits to be held for tax purposes from individual Asset Holder Identities.
+  This overrides the value of `defaultTaxWithholding`

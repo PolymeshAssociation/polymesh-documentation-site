@@ -1,0 +1,51 @@
+---
+sidebar_label: "RegisterIdentityParams"
+---
+
+# Interface: RegisterIdentityParams
+
+Defined in: [src/api/procedures/types.ts:832](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L832)
+
+## Properties
+
+### createCdd?
+
+> `optional` **createCdd**: `boolean`
+
+Defined in: [src/api/procedures/types.ts:845](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L845)
+
+(optional) also issue a CDD claim for the created DID, completing the onboarding process for the Account
+
+***
+
+### expiry?
+
+> `optional` **expiry**: `Date`
+
+Defined in: [src/api/procedures/types.ts:849](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L849)
+
+(optional) when the generated CDD claim should expire, `createCdd` must be true if specified
+
+***
+
+### secondaryAccounts?
+
+> `optional` **secondaryAccounts**: [`Modify`](../../../../types/utils/type-aliases/Modify.mdx)\<[`PermissionedAccount`](../../../entities/types/interfaces/PermissionedAccount.mdx), \{ `permissions`: [`PermissionsLike`](../../../entities/types/type-aliases/PermissionsLike.mdx); \}\>[]
+
+Defined in: [src/api/procedures/types.ts:841](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L841)
+
+(optional) secondary accounts for the new Identity with their corresponding permissions.
+
+#### Note
+
+Each Account will need to accept the generated authorizations before being linked to the Identity
+
+***
+
+### targetAccount
+
+> **targetAccount**: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
+
+Defined in: [src/api/procedures/types.ts:836](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L836)
+
+The Account that should function as the primary key of the newly created Identity. Can be ss58 encoded address or an instance of Account

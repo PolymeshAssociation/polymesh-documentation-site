@@ -1,0 +1,54 @@
+---
+sidebar_label: "ResultSet"
+---
+
+# Interface: ResultSet\<T\>
+
+Defined in: [src/api/entities/types.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L101)
+
+## Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`T`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## Properties
+
+### count?
+
+> `optional` **count**: `BigNumber`
+
+Defined in: [src/api/entities/types.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L107)
+
+#### Note
+
+methods will have `count` defined when middleware is configured, but be undefined otherwise. This happens when the chain node is queried directly
+
+***
+
+### data
+
+> **data**: `T`[]
+
+Defined in: [src/api/entities/types.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L102)
+
+***
+
+### next
+
+> **next**: [`NextKey`](../type-aliases/NextKey.mdx)
+
+Defined in: [src/api/entities/types.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L103)

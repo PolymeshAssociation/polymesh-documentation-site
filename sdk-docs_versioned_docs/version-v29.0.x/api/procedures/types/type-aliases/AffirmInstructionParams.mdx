@@ -1,0 +1,74 @@
+---
+sidebar_label: "AffirmInstructionParams"
+---
+
+# Type Alias: AffirmInstructionParams
+
+> **AffirmInstructionParams** = `object`
+
+Defined in: [src/api/procedures/types.ts:1056](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1056)
+
+## Properties
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+<a id="portfolios"></a> `portfolios?`
+
+</td>
+<td>
+
+[`PortfolioLike`](../../../entities/types/type-aliases/PortfolioLike.mdx)[]
+
+</td>
+<td>
+
+(optional) Portfolios that the signer controls and wants to affirm the instruction
+
+**Note**
+
+if empty, all the legs containing any custodied Portfolios of the signer will be affirmed
+
+</td>
+<td>
+
+[src/api/procedures/types.ts:1062](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1062)
+
+</td>
+</tr>
+<tr>
+<td>
+
+<a id="receipts"></a> `receipts?`
+
+</td>
+<td>
+
+[`OffChainAffirmationReceipt`](../interfaces/OffChainAffirmationReceipt.mdx)[]
+
+</td>
+<td>
+
+(optional) list of offchain receipts required for affirming offchain legs(if any) in the instruction
+
+Receipt can be generated using [generateOffChainAffirmationReceipt](../../../entities/Instruction/classes/Instruction.mdx#generateoffchainaffirmationreceipt) method
+
+</td>
+<td>
+
+[src/api/procedures/types.ts:1069](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1069)
+
+</td>
+</tr>
+</tbody>
+</table>

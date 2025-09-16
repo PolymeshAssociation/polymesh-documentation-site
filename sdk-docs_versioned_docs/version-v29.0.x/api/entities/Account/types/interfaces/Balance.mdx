@@ -1,0 +1,41 @@
+---
+sidebar_label: "Balance"
+---
+
+# Interface: Balance
+
+Defined in: [src/api/entities/Account/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/types.ts#L7)
+
+## Extended by
+
+- [`PortfolioBalance`](../../../Portfolio/types/interfaces/PortfolioBalance.mdx)
+
+## Properties
+
+### free
+
+> **free**: `BigNumber`
+
+Defined in: [src/api/entities/Account/types.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/types.ts#L11)
+
+balance available for transferring and paying fees
+
+***
+
+### locked
+
+> **locked**: `BigNumber`
+
+Defined in: [src/api/entities/Account/types.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/types.ts#L15)
+
+unavailable balance, either bonded for staking or locked for some other purpose
+
+***
+
+### total
+
+> **total**: `BigNumber`
+
+Defined in: [src/api/entities/Account/types.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/types.ts#L19)
+
+free + locked

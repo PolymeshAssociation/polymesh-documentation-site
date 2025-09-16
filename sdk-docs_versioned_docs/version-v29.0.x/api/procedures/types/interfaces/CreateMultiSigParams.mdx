@@ -1,0 +1,37 @@
+---
+sidebar_label: "CreateMultiSigParams"
+---
+
+# Interface: CreateMultiSigParams
+
+Defined in: [src/api/procedures/types.ts:1656](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1656)
+
+## Properties
+
+### permissions?
+
+> `optional` **permissions**: [`PermissionsLike`](../../../entities/types/type-aliases/PermissionsLike.mdx)
+
+Defined in: [src/api/procedures/types.ts:1665](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1665)
+
+Grants permissions to the MultiSig upon creation. The caller must be the primary key of the Identity for these to work
+
+***
+
+### requiredSignatures
+
+> **requiredSignatures**: `BigNumber`
+
+Defined in: [src/api/procedures/types.ts:1661](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1661)
+
+***
+
+### signers
+
+> **signers**: [`Signer`](../../../entities/types/type-aliases/Signer.mdx)[]
+
+Defined in: [src/api/procedures/types.ts:1660](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1660)
+
+#### Note
+
+Signer must be an Account as of v7

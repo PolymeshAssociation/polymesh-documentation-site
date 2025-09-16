@@ -1,0 +1,191 @@
+---
+sidebar_label: "Offerings"
+---
+
+# Class: Offerings
+
+Defined in: [src/api/entities/Asset/Fungible/Offerings/index.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/Offerings/index.ts#L29)
+
+Handles all Asset Offering related functionality
+
+## Extends
+
+- `Namespace`\<[`FungibleAsset`](../../classes/FungibleAsset.mdx)\>
+
+## Methods
+
+### get()
+
+> **get**(`opts`: `object`): `Promise`\<[`OfferingWithDetails`](../../../../types/interfaces/OfferingWithDetails.mdx)[]\>
+
+Defined in: [src/api/entities/Asset/Fungible/Offerings/index.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/Offerings/index.ts#L78)
+
+Retrieve all of the Asset's Offerings and their details. Can be filtered using parameters
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`opts`
+
+</td>
+<td>
+
+\{ `status?`: `Partial`\<[`OfferingStatus`](../../../../Offering/types/interfaces/OfferingStatus.mdx)\>; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.status?`
+
+</td>
+<td>
+
+`Partial`\<[`OfferingStatus`](../../../../Offering/types/interfaces/OfferingStatus.mdx)\>
+
+</td>
+<td>
+
+status of the Offerings to fetch. If defined, only Offerings that have all passed statuses will be returned
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`OfferingWithDetails`](../../../../types/interfaces/OfferingWithDetails.mdx)[]\>
+
+***
+
+### getOne()
+
+> **getOne**(`args`: `object`): `Promise`\<[`Offering`](../../../../Offering/classes/Offering.mdx)\>
+
+Defined in: [src/api/entities/Asset/Fungible/Offerings/index.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/Offerings/index.ts#L56)
+
+Retrieve a single Offering associated to this Asset by its ID
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `id`: `BigNumber`; \}
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.id`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`Offering`](../../../../Offering/classes/Offering.mdx)\>
+
+#### Throws
+
+if there is no Offering with the passed ID
+
+***
+
+### launch()
+
+> **launch**(`args`: [`LaunchOfferingParams`](../../../../../procedures/types/interfaces/LaunchOfferingParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Offering`](../../../../Offering/classes/Offering.mdx), [`Offering`](../../../../Offering/classes/Offering.mdx)\>\>
+
+Defined in: [src/api/entities/Asset/Fungible/Offerings/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/Offerings/index.ts#L49)
+
+Launch an Asset Offering
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`LaunchOfferingParams`](../../../../../procedures/types/interfaces/LaunchOfferingParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Offering`](../../../../Offering/classes/Offering.mdx), [`Offering`](../../../../Offering/classes/Offering.mdx)\>\>
+
+#### Note
+
+required roles:
+  - Offering Portfolio Custodian
+  - Raising Portfolio Custodian
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [launch.checkAuthorization](../../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it

@@ -1,0 +1,49 @@
+---
+sidebar_label: "TransferBreakdown"
+---
+
+# Interface: TransferBreakdown
+
+Defined in: [src/api/entities/Asset/types.ts:131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L131)
+
+Object containing every reason why a specific Asset transfer would fail
+
+## Properties
+
+### compliance
+
+> **compliance**: [`Compliance`](../../../types/interfaces/Compliance.mdx)
+
+Defined in: [src/api/entities/Asset/types.ts:139](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L139)
+
+how the transfer adheres to the asset's compliance rules
+
+***
+
+### general
+
+> **general**: [`TransferError`](../enumerations/TransferError.mdx)[]
+
+Defined in: [src/api/entities/Asset/types.ts:135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L135)
+
+list of general transfer errors
+
+***
+
+### restrictions
+
+> **restrictions**: [`TransferRestrictionResult`](TransferRestrictionResult.mdx)[]
+
+Defined in: [src/api/entities/Asset/types.ts:143](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L143)
+
+list of transfer restrictions and whether the transfer satisfies each one
+
+***
+
+### result
+
+> **result**: `boolean`
+
+Defined in: [src/api/entities/Asset/types.ts:147](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L147)
+
+true if the transfer is possible

@@ -1,0 +1,58 @@
+---
+sidebar_label: "ProcedureAuthorizationStatus"
+---
+
+# Interface: ProcedureAuthorizationStatus
+
+Defined in: [src/api/procedures/types.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L66)
+
+## Properties
+
+### accountFrozen
+
+> **accountFrozen**: `boolean`
+
+Defined in: [src/api/procedures/types.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L82)
+
+whether the Account is frozen (i.e. can't perform any transactions)
+
+***
+
+### agentPermissions
+
+> **agentPermissions**: [`CheckPermissionsResult`](../../../entities/types/interfaces/CheckPermissionsResult.mdx)\<[`Identity`](../../../entities/types/enumerations/SignerType.mdx#identity)\>
+
+Defined in: [src/api/procedures/types.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L70)
+
+whether the Identity complies with all required Agent permissions
+
+***
+
+### noIdentity
+
+> **noIdentity**: `boolean`
+
+Defined in: [src/api/procedures/types.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L87)
+
+true only if the Procedure requires an Identity but the signing Account
+  doesn't have one associated
+
+***
+
+### roles
+
+> **roles**: [`CheckRolesResult`](../../../entities/types/interfaces/CheckRolesResult.mdx)
+
+Defined in: [src/api/procedures/types.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L78)
+
+whether the Identity complies with all required Roles
+
+***
+
+### signerPermissions
+
+> **signerPermissions**: [`CheckPermissionsResult`](../../../entities/types/interfaces/CheckPermissionsResult.mdx)\<[`Account`](../../../entities/types/enumerations/SignerType.mdx#account)\>
+
+Defined in: [src/api/procedures/types.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L74)
+
+whether the Account complies with all required Signer permissions
