@@ -1,0 +1,118 @@
+---
+sidebar_label: "TransferRestrictionStatValues"
+---
+
+# Interface: TransferRestrictionStatValues
+
+Defined in: [src/api/entities/Asset/types.ts:442](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L442)
+
+Asset Stat along with its current value
+
+## Properties
+
+### claim?
+
+> `optional` **claim**: `object`
+
+Defined in: [src/api/entities/Asset/types.ts:448](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L448)
+
+The claim of the stat
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`claimType`
+
+</td>
+<td>
+
+[`TrustedFor`](../../../types/type-aliases/TrustedFor.mdx)
+
+</td>
+<td>
+
+[src/api/entities/Asset/types.ts:450](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L450)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`issuer`
+
+</td>
+<td>
+
+[`Identity`](../../../Identity/classes/Identity.mdx)
+
+</td>
+<td>
+
+[src/api/entities/Asset/types.ts:449](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L449)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`value?`
+
+</td>
+<td>
+
+[`ClaimValue`](../type-aliases/ClaimValue.mdx) \| [`JurisdictionValue`](../type-aliases/JurisdictionValue.mdx)[]
+
+</td>
+<td>
+
+[src/api/entities/Asset/types.ts:451](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L451)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Note
+
+for scoped stats, this is the claim of the stat
+
+#### Note
+
+for count stats, this is undefined
+
+***
+
+### type
+
+> **type**: [`StatType`](../../../types/enumerations/StatType.mdx)
+
+Defined in: [src/api/entities/Asset/types.ts:457](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L457)
+
+The type of the stat
+
+***
+
+### value
+
+> **value**: `BigNumber`
+
+Defined in: [src/api/entities/Asset/types.ts:463](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L463)
+
+The total value of of the Asset Stat
+
+#### Note
+
+for scoped stats, this is the total value of all claims
+
+#### Note
+
+for count stats, this is the value of the stat

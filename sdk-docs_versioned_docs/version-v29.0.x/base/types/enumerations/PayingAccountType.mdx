@@ -1,0 +1,51 @@
+---
+sidebar_label: "PayingAccountType"
+---
+
+# Enumeration: PayingAccountType
+
+Defined in: [src/base/types.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L112)
+
+Type of relationship between a paying account and a beneficiary
+
+## Enumeration Members
+
+### Caller
+
+> **Caller**: `"Caller"`
+
+Defined in: [src/base/types.ts:126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L126)
+
+the caller Account is responsible of paying the fees
+
+***
+
+### MultiSigCreator
+
+> **MultiSigCreator**: `"MultiSigCreator"`
+
+Defined in: [src/base/types.ts:130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L130)
+
+The creator of the MultiSig is responsible for paying the fees
+
+***
+
+### Other
+
+> **Other**: `"Other"`
+
+Defined in: [src/base/types.ts:122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L122)
+
+the paying Account is paying for a specific transaction because of
+  chain-specific constraints (e.g. the caller is accepting an invitation to an Identity
+  and cannot have any funds to pay for it by definition)
+
+***
+
+### Subsidy
+
+> **Subsidy**: `"Subsidy"`
+
+Defined in: [src/base/types.ts:116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L116)
+
+the paying Account is currently subsidizing the caller

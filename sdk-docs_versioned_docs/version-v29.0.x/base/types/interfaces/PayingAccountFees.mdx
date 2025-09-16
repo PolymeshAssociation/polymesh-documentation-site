@@ -1,0 +1,67 @@
+---
+sidebar_label: "PayingAccountFees"
+---
+
+# Interface: PayingAccountFees
+
+Defined in: [src/base/types.ts:157](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L157)
+
+Breakdown of the fees that will be paid by a specific Account for a transaction, along
+  with data associated to the Paying account
+
+## Properties
+
+### fees
+
+> **fees**: [`Fees`](../../../api/client/types/interfaces/Fees.mdx)
+
+Defined in: [src/base/types.ts:161](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L161)
+
+fees that will be paid by the Account
+
+***
+
+### payingAccountData
+
+> **payingAccountData**: [`PayingAccount`](../type-aliases/PayingAccount.mdx) & `object`
+
+Defined in: [src/base/types.ts:165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L165)
+
+data related to the Account responsible of paying for the transaction
+
+#### Type declaration
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`balance`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+free balance of the Account
+
+</td>
+<td>
+
+[src/base/types.ts:169](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L169)
+
+</td>
+</tr>
+</tbody>
+</table>

@@ -1,0 +1,489 @@
+---
+sidebar_label: "TickerReservation"
+---
+
+# Class: TickerReservation
+
+Defined in: [src/api/entities/TickerReservation/index.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/TickerReservation/index.ts#L44)
+
+Represents a reserved Asset symbol in the Polymesh blockchain. Ticker reservations expire
+  after a set length of time, after which they can be reserved by another Identity.
+  A Ticker must be previously reserved by an Identity for that Identity to be able create an Asset with it
+
+## Extends
+
+- [`Entity`](../../Entity/classes/Entity.mdx)\<[`UniqueIdentifiers`](../interfaces/UniqueIdentifiers.mdx), `string`\>
+
+## Properties
+
+### ticker
+
+> **ticker**: `string`
+
+Defined in: [src/api/entities/TickerReservation/index.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/TickerReservation/index.ts#L58)
+
+reserved ticker
+
+***
+
+### uuid
+
+> **uuid**: `string`
+
+Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L46)
+
+#### Inherited from
+
+[`Entity`](../../Entity/classes/Entity.mdx).[`uuid`](../../Entity/classes/Entity.mdx#uuid)
+
+## Methods
+
+### createAsset()
+
+> **createAsset**(`args`: [`CreateAssetParams`](../../../procedures/types/interfaces/CreateAssetParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`FungibleAsset`](../../Asset/Fungible/classes/FungibleAsset.mdx), [`FungibleAsset`](../../Asset/Fungible/classes/FungibleAsset.mdx)\>\>
+
+Defined in: [src/api/entities/TickerReservation/index.ts:210](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/TickerReservation/index.ts#L210)
+
+Create an Asset using the reserved ticker
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`CreateAssetParams`](../../../procedures/types/interfaces/CreateAssetParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`FungibleAsset`](../../Asset/Fungible/classes/FungibleAsset.mdx), [`FungibleAsset`](../../Asset/Fungible/classes/FungibleAsset.mdx)\>\>
+
+#### Note
+
+required role:
+  - Ticker Owner
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [createAsset.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### details()
+
+#### Call Signature
+
+> **details**(): `Promise`\<[`TickerReservationDetails`](../types/type-aliases/TickerReservationDetails.mdx)\>
+
+Defined in: [src/api/entities/TickerReservation/index.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/TickerReservation/index.ts#L96)
+
+Retrieve the Reservation's owner, expiry date and status
+
+##### Returns
+
+`Promise`\<[`TickerReservationDetails`](../types/type-aliases/TickerReservationDetails.mdx)\>
+
+#### Call Signature
+
+> **details**(`callback`: [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<[`TickerReservationDetails`](../types/type-aliases/TickerReservationDetails.mdx)\>): `Promise`\<[`UnsubCallback`](../../types/type-aliases/UnsubCallback.mdx)\>
+
+Defined in: [src/api/entities/TickerReservation/index.ts:105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/TickerReservation/index.ts#L105)
+
+Retrieve the Reservation's owner, expiry date and status
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+[`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<[`TickerReservationDetails`](../types/type-aliases/TickerReservationDetails.mdx)\>
+
+</td>
+<td>
+
+Callback function that can be used to listen for changes to the reservation details
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`UnsubCallback`](../../types/type-aliases/UnsubCallback.mdx)\>
+
+##### Note
+
+can be subscribed to, if connected to node using a web socket
+
+***
+
+### exists()
+
+> **exists**(): `Promise`\<`boolean`\>
+
+Defined in: [src/api/entities/TickerReservation/index.ts:228](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/TickerReservation/index.ts#L228)
+
+Determine whether this Ticker Reservation exists on chain
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+#### Overrides
+
+[`Entity`](../../Entity/classes/Entity.mdx).[`exists`](../../Entity/classes/Entity.mdx#exists)
+
+***
+
+### extend()
+
+> **extend**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`TickerReservation`, `TickerReservation`\>\>
+
+Defined in: [src/api/entities/TickerReservation/index.ts:202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/TickerReservation/index.ts#L202)
+
+Extend the Reservation time period of the ticker for 60 days from now
+to later use it in the creation of an Asset.
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`TickerReservation`, `TickerReservation`\>\>
+
+#### Note
+
+required role:
+  - Ticker Owner
+
+#### Note
+
+this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx), which means you can call [extend.checkAuthorization](../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### isEqual()
+
+> **isEqual**(`entity`: [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>): `boolean`
+
+Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L61)
+
+Determine whether this Entity is the same as another one
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`entity`
+
+</td>
+<td>
+
+[`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+[`Entity`](../../Entity/classes/Entity.mdx).[`isEqual`](../../Entity/classes/Entity.mdx#isequal)
+
+***
+
+### toHuman()
+
+> **toHuman**(): `string`
+
+Defined in: [src/api/entities/TickerReservation/index.ts:247](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/TickerReservation/index.ts#L247)
+
+Return the Reservation's ticker
+
+#### Returns
+
+`string`
+
+#### Overrides
+
+[`Entity`](../../Entity/classes/Entity.mdx).[`toHuman`](../../Entity/classes/Entity.mdx#tohuman)
+
+***
+
+### transferOwnership()
+
+> **transferOwnership**(`args`: [`TransferTickerOwnershipParams`](../../../procedures/types/interfaces/TransferTickerOwnershipParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`AuthorizationRequest`](../../AuthorizationRequest/classes/AuthorizationRequest.mdx), [`AuthorizationRequest`](../../AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
+
+Defined in: [src/api/entities/TickerReservation/index.ts:223](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/TickerReservation/index.ts#L223)
+
+Transfer ownership of the Ticker Reservation to another Identity. This generates an authorization request that must be accepted
+  by the target
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`TransferTickerOwnershipParams`](../../../procedures/types/interfaces/TransferTickerOwnershipParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`AuthorizationRequest`](../../AuthorizationRequest/classes/AuthorizationRequest.mdx), [`AuthorizationRequest`](../../AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
+
+#### Note
+
+this will create [Authorization Request](../../AuthorizationRequest/classes/AuthorizationRequest.mdx) which has to be accepted by the `target` Identity.
+  An [Account](../../Account/classes/Account.mdx) or [Identity](../../Identity/classes/Identity.mdx) can fetch its pending Authorization Requests by calling [authorizations.getReceived](../../common/namespaces/Authorizations/classes/Authorizations.mdx#getreceived).
+  Also, an Account or Identity can directly fetch the details of an Authorization Request by calling [authorizations.getOne](../../common/namespaces/Authorizations/classes/Authorizations.mdx#getone)
+
+#### Note
+
+required role:
+  - Ticker Owner
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [transferOwnership.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### generateUuid()
+
+> `static` **generateUuid**\<`Identifiers`\>(`identifiers`: `Identifiers`): `string`
+
+Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L14)
+
+Generate the Entity's UUID from its identifying properties
+
+#### Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`Identifiers`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`identifiers`
+
+</td>
+<td>
+
+`Identifiers`
+
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+[`Entity`](../../Entity/classes/Entity.mdx).[`generateUuid`](../../Entity/classes/Entity.mdx#generateuuid)
+
+***
+
+### unserialize()
+
+> `static` **unserialize**\<`Identifiers`\>(`serialized`: `string`): `Identifiers`
+
+Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L23)
+
+Unserialize a UUID into its Unique Identifiers
+
+#### Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`Identifiers`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`serialized`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+UUID to unserialize
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Identifiers`
+
+#### Inherited from
+
+[`Entity`](../../Entity/classes/Entity.mdx).[`unserialize`](../../Entity/classes/Entity.mdx#unserialize)

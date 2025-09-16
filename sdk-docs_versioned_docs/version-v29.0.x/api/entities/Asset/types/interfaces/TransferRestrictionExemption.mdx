@@ -1,0 +1,33 @@
+---
+sidebar_label: "TransferRestrictionExemption"
+---
+
+# Interface: TransferRestrictionExemption
+
+Defined in: [src/api/entities/Asset/types.ts:500](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L500)
+
+Identities that are exempt from Transfer Restrictions.
+
+## Note
+
+if these entities are removed from exemptions but are
+in violation of any Transfer Restrictions then they will only
+be able to trade in a manner that brings them more inline. e.g.
+Exceeding a percentage restriction means tokens can only be sent
+and not received
+
+## Properties
+
+### exemptKey
+
+> **exemptKey**: [`TransferExemptKey`](TransferExemptKey.mdx)
+
+Defined in: [src/api/entities/Asset/types.ts:502](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L502)
+
+***
+
+### identity
+
+> **identity**: [`Identity`](../../../Identity/classes/Identity.mdx)
+
+Defined in: [src/api/entities/Asset/types.ts:501](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/types.ts#L501)

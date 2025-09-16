@@ -1,0 +1,80 @@
+---
+sidebar_label: "AssetHolders"
+---
+
+# Class: AssetHolders
+
+Defined in: [src/api/entities/Asset/NonFungible/AssetHolders/index.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/NonFungible/AssetHolders/index.ts#L13)
+
+Handles all NFT Holders related functionality
+
+## Extends
+
+- `Namespace`\<[`NftCollection`](../../../../types/type-aliases/NftCollection.mdx)\>
+
+## Methods
+
+### get()
+
+> **get**(`opts`: `object`): `Promise`\<[`ResultSet`](../../../../types/interfaces/ResultSet.mdx)\<[`IdentityHeldNfts`](../../../types/interfaces/IdentityHeldNfts.mdx)\>\>
+
+Defined in: [src/api/entities/Asset/NonFungible/AssetHolders/index.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/NonFungible/AssetHolders/index.ts#L19)
+
+Retrieve all the NFT Holders with their holdings
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`opts`
+
+</td>
+<td>
+
+\{ `size?`: `BigNumber`; `start?`: `BigNumber`; \}
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.size?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.start?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`ResultSet`](../../../../types/interfaces/ResultSet.mdx)\<[`IdentityHeldNfts`](../../../types/interfaces/IdentityHeldNfts.mdx)\>\>
+
+#### Note
+
+uses the middlewareV2

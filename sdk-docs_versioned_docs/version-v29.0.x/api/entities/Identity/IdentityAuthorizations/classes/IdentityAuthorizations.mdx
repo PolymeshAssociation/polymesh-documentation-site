@@ -1,0 +1,323 @@
+---
+sidebar_label: "IdentityAuthorizations"
+---
+
+# Class: IdentityAuthorizations
+
+Defined in: [src/api/entities/Identity/IdentityAuthorizations.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Identity/IdentityAuthorizations.ts#L12)
+
+Handles all Identity Authorization related functionality
+
+## Extends
+
+- [`Authorizations`](../../../common/namespaces/Authorizations/classes/Authorizations.mdx)\<[`Identity`](../../classes/Identity.mdx)\>
+
+## Methods
+
+### getHistoricalAuthorizations()
+
+> **getHistoricalAuthorizations**(`opts`: `object`): `Promise`\<[`ResultSet`](../../../types/interfaces/ResultSet.mdx)\<[`AuthorizationRequest`](../../../AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
+
+Defined in: [src/api/entities/common/namespaces/Authorizations.ts:150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/common/namespaces/Authorizations.ts#L150)
+
+Fetch all historical Authorization Requests for which this Signer is the target
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`opts`
+
+</td>
+<td>
+
+\{ `size?`: `BigNumber`; `start?`: `BigNumber`; `status?`: [`AuthorizationStatusEnum`](../../../../../types/enumerations/AuthorizationStatusEnum.mdx); `type?`: [`AuthTypeEnum`](../../../../../types/enumerations/AuthTypeEnum.mdx); \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.size?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+page size
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.start?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+page offset
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.status?`
+
+</td>
+<td>
+
+[`AuthorizationStatusEnum`](../../../../../types/enumerations/AuthorizationStatusEnum.mdx)
+
+</td>
+<td>
+
+fetch only authorizations with this status. Fetches all statuses if not passed
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.type?`
+
+</td>
+<td>
+
+[`AuthTypeEnum`](../../../../../types/enumerations/AuthTypeEnum.mdx)
+
+</td>
+<td>
+
+fetch only authorizations of this type. Fetches all types if not passed
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`ResultSet`](../../../types/interfaces/ResultSet.mdx)\<[`AuthorizationRequest`](../../../AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
+
+#### Note
+
+supports pagination
+
+#### Note
+
+uses the middlewareV2
+
+#### Inherited from
+
+[`Authorizations`](../../../common/namespaces/Authorizations/classes/Authorizations.mdx).[`getHistoricalAuthorizations`](../../../common/namespaces/Authorizations/classes/Authorizations.mdx#gethistoricalauthorizations)
+
+***
+
+### getOne()
+
+> **getOne**(`args`: `object`): `Promise`\<[`AuthorizationRequest`](../../../AuthorizationRequest/classes/AuthorizationRequest.mdx)\>
+
+Defined in: [src/api/entities/Identity/IdentityAuthorizations.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Identity/IdentityAuthorizations.ts#L60)
+
+Retrieve a single Authorization Request targeting or issued by this Identity by its ID
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `id`: `BigNumber`; \}
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.id`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`AuthorizationRequest`](../../../AuthorizationRequest/classes/AuthorizationRequest.mdx)\>
+
+#### Throws
+
+if there is no Authorization Request with the passed ID targeting or issued by this Identity
+
+#### Overrides
+
+[`Authorizations`](../../../common/namespaces/Authorizations/classes/Authorizations.mdx).[`getOne`](../../../common/namespaces/Authorizations/classes/Authorizations.mdx#getone)
+
+***
+
+### getReceived()
+
+> **getReceived**(`opts?`: `object`): `Promise`\<[`AuthorizationRequest`](../../../AuthorizationRequest/classes/AuthorizationRequest.mdx)[]\>
+
+Defined in: [src/api/entities/common/namespaces/Authorizations.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/common/namespaces/Authorizations.ts#L42)
+
+Fetch all pending Authorization Requests for which this Signer is the target
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+\{ `includeExpired?`: `boolean`; `type?`: [`AuthorizationType`](../../../types/enumerations/AuthorizationType.mdx); \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.includeExpired?`
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
+
+whether to include expired authorizations. Defaults to true
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.type?`
+
+</td>
+<td>
+
+[`AuthorizationType`](../../../types/enumerations/AuthorizationType.mdx)
+
+</td>
+<td>
+
+fetch only authorizations of this type. Fetches all types if not passed
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`AuthorizationRequest`](../../../AuthorizationRequest/classes/AuthorizationRequest.mdx)[]\>
+
+#### Inherited from
+
+[`Authorizations`](../../../common/namespaces/Authorizations/classes/Authorizations.mdx).[`getReceived`](../../../common/namespaces/Authorizations/classes/Authorizations.mdx#getreceived)
+
+***
+
+### getSent()
+
+> **getSent**(`paginationOpts?`: [`PaginationOptions`](../../../types/interfaces/PaginationOptions.mdx)): `Promise`\<[`ResultSet`](../../../types/interfaces/ResultSet.mdx)\<[`AuthorizationRequest`](../../../AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
+
+Defined in: [src/api/entities/Identity/IdentityAuthorizations.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Identity/IdentityAuthorizations.ts#L18)
+
+Fetch all pending authorization requests issued by this Identity
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`paginationOpts?`
+
+</td>
+<td>
+
+[`PaginationOptions`](../../../types/interfaces/PaginationOptions.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`ResultSet`](../../../types/interfaces/ResultSet.mdx)\<[`AuthorizationRequest`](../../../AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
+
+#### Note
+
+supports pagination

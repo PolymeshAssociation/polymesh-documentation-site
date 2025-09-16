@@ -1,0 +1,514 @@
+---
+sidebar_label: "PolymeshTransaction"
+---
+
+# Class: PolymeshTransaction\<ReturnValue, TransformedReturnValue, Args\>
+
+Defined in: [src/base/PolymeshTransaction.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransaction.ts#L14)
+
+Wrapper class for a Polymesh Transaction
+
+## Extends
+
+- [`PolymeshTransactionBase`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx)\<`ReturnValue`, `TransformedReturnValue`\>
+
+## Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+<th>Default type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`ReturnValue`
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`TransformedReturnValue`
+
+</td>
+<td>
+
+`ReturnValue`
+
+</td>
+</tr>
+<tr>
+<td>
+
+`Args` *extends* `unknown`[] \| \[\]
+
+</td>
+<td>
+
+`unknown`[]
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## Properties
+
+### args
+
+> **args**: `Args`
+
+Defined in: [src/base/PolymeshTransaction.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransaction.ts#L40)
+
+arguments for the transaction in SCALE format (polkadot.js Codec)
+
+***
+
+### blockHash?
+
+> `optional` **blockHash**: `string`
+
+Defined in: [src/base/PolymeshTransactionBase.ts:106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransactionBase.ts#L106)
+
+hash of the block where this transaction resides (status: `Succeeded`, `Failed`)
+
+#### Inherited from
+
+[`PolymeshTransactionBase`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx).[`blockHash`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#blockhash)
+
+***
+
+### blockNumber?
+
+> `optional` **blockNumber**: `BigNumber`
+
+Defined in: [src/base/PolymeshTransactionBase.ts:111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransactionBase.ts#L111)
+
+number of the block where this transaction resides (status: `Succeeded`, `Failed`)
+
+#### Inherited from
+
+[`PolymeshTransactionBase`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx).[`blockNumber`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#blocknumber)
+
+***
+
+### error?
+
+> `optional` **error**: [`PolymeshError`](../../PolymeshError/classes/PolymeshError.mdx)
+
+Defined in: [src/base/PolymeshTransactionBase.ts:86](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransactionBase.ts#L86)
+
+stores errors thrown while running the transaction (status: `Failed`, `Aborted`)
+
+#### Inherited from
+
+[`PolymeshTransactionBase`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx).[`error`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#error)
+
+***
+
+### multiSig
+
+> **multiSig**: `null` \| [`MultiSig`](../../../api/entities/Account/MultiSig/classes/MultiSig.mdx)
+
+Defined in: [src/base/PolymeshTransactionBase.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransactionBase.ts#L119)
+
+This will be set if the signingAddress is a MultiSig signer, otherwise `null`
+
+When set it indicates the transaction will be wrapped as a proposal for the MultiSig,
+meaning `.runAsProposal` should be used instead of `.run`
+
+#### Inherited from
+
+[`PolymeshTransactionBase`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx).[`multiSig`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#multisig)
+
+***
+
+### receipt?
+
+> `optional` **receipt**: `ISubmittableResult`
+
+Defined in: [src/base/PolymeshTransactionBase.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransactionBase.ts#L91)
+
+stores the transaction receipt (if successful)
+
+#### Inherited from
+
+[`PolymeshTransactionBase`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx).[`receipt`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#receipt)
+
+***
+
+### status
+
+> **status**: [`TransactionStatus`](../../types/enumerations/TransactionStatus.mdx) = `TransactionStatus.Idle`
+
+Defined in: [src/base/PolymeshTransactionBase.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransactionBase.ts#L81)
+
+current status of the transaction
+
+#### Inherited from
+
+[`PolymeshTransactionBase`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx).[`status`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#status)
+
+***
+
+### tag
+
+> **tag**: [`TxTag`](../../../types/type-aliases/TxTag.mdx)
+
+Defined in: [src/base/PolymeshTransaction.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransaction.ts#L45)
+
+type of transaction represented by this instance (mostly for display purposes)
+
+***
+
+### txHash?
+
+> `optional` **txHash**: `string`
+
+Defined in: [src/base/PolymeshTransactionBase.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransactionBase.ts#L96)
+
+transaction hash (status: `Running`, `Succeeded`, `Failed`)
+
+#### Inherited from
+
+[`PolymeshTransactionBase`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx).[`txHash`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#txhash)
+
+***
+
+### txIndex?
+
+> `optional` **txIndex**: `BigNumber`
+
+Defined in: [src/base/PolymeshTransactionBase.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransactionBase.ts#L101)
+
+transaction index within its block (status: `Succeeded`, `Failed`)
+
+#### Inherited from
+
+[`PolymeshTransactionBase`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx).[`txIndex`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#txindex)
+
+## Accessors
+
+### isSuccess
+
+#### Get Signature
+
+> **get** **isSuccess**(): `boolean`
+
+Defined in: [src/base/PolymeshTransactionBase.ts:902](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransactionBase.ts#L902)
+
+returns true if transaction has completed successfully
+
+##### Returns
+
+`boolean`
+
+#### Inherited from
+
+[`PolymeshTransactionBase`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx).[`isSuccess`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#issuccess)
+
+***
+
+### result
+
+#### Get Signature
+
+> **get** **result**(): `TransformedReturnValue`
+
+Defined in: [src/base/PolymeshTransactionBase.ts:818](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransactionBase.ts#L818)
+
+returns the transaction result - this is the same value as the Promise run returns
+
+##### Note
+
+it is generally preferable to `await` the `Promise` returned by [transaction.run()](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#run) instead of reading this property
+
+##### Throws
+
+if the [transaction.isSuccess](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#issuccess) property is false — be sure to check that before accessing!
+
+##### Returns
+
+`TransformedReturnValue`
+
+#### Inherited from
+
+[`PolymeshTransactionBase`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx).[`result`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#result)
+
+## Methods
+
+### getProtocolFees()
+
+> **getProtocolFees**(): `Promise`\<`BigNumber`\>
+
+Defined in: [src/base/PolymeshTransaction.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransaction.ts#L115)
+
+Return this transaction's protocol fees. These are extra fees charged for
+  specific operations on the chain. Not to be confused with network fees (which
+  depend on the complexity of the operation), protocol fees are set by governance and/or
+  chain upgrades
+
+#### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### Overrides
+
+[`PolymeshTransactionBase`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx).[`getProtocolFees`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#getprotocolfees)
+
+***
+
+### getTotalFees()
+
+> **getTotalFees**(): `Promise`\<[`PayingAccountFees`](../../types/interfaces/PayingAccountFees.mdx)\>
+
+Defined in: [src/base/PolymeshTransactionBase.ts:544](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransactionBase.ts#L544)
+
+Retrieve a breakdown of the fees required to run this transaction, as well as the Account responsible for paying them
+
+#### Returns
+
+`Promise`\<[`PayingAccountFees`](../../types/interfaces/PayingAccountFees.mdx)\>
+
+#### Note
+
+these values might be inaccurate if the transaction is run at a later time. This can be due to a governance vote or other
+  chain related factors (like modifications to a specific subsidizer relationship or a chain upgrade)
+
+#### Inherited from
+
+[`PolymeshTransactionBase`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx).[`getTotalFees`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#gettotalfees)
+
+***
+
+### onProcessedByMiddleware()
+
+> **onProcessedByMiddleware**(`listener`: (`err?`: [`PolymeshError`](../../PolymeshError/classes/PolymeshError.mdx)) => `void`): [`UnsubCallback`](../../../api/entities/types/type-aliases/UnsubCallback.mdx)
+
+Defined in: [src/base/PolymeshTransactionBase.ts:584](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransactionBase.ts#L584)
+
+Subscribe to the results of this transaction being processed by the indexing service (and as such, available to the middleware)
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`listener`
+
+</td>
+<td>
+
+(`err?`: [`PolymeshError`](../../PolymeshError/classes/PolymeshError.mdx)) => `void`
+
+</td>
+<td>
+
+callback function that will be called whenever the middleware is updated with the latest data.
+  If there is an error (timeout or middleware offline) it will be passed to this callback
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+[`UnsubCallback`](../../../api/entities/types/type-aliases/UnsubCallback.mdx)
+
+unsubscribe function
+
+#### Note
+
+this event will be fired even if the queue fails
+
+#### Throws
+
+if the middleware wasn't enabled when instantiating the SDK client
+
+#### Inherited from
+
+[`PolymeshTransactionBase`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx).[`onProcessedByMiddleware`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#onprocessedbymiddleware)
+
+***
+
+### onStatusChange()
+
+> **onStatusChange**(`listener`: (`transaction`: [`GenericPolymeshTransaction`](../../../api/procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`ReturnValue`, `TransformedReturnValue`\>) => `void`): [`UnsubCallback`](../../../api/entities/types/type-aliases/UnsubCallback.mdx)
+
+Defined in: [src/base/PolymeshTransactionBase.ts:526](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransactionBase.ts#L526)
+
+Subscribe to status changes
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`listener`
+
+</td>
+<td>
+
+(`transaction`: [`GenericPolymeshTransaction`](../../../api/procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`ReturnValue`, `TransformedReturnValue`\>) => `void`
+
+</td>
+<td>
+
+callback function that will be called whenever the status changes
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+[`UnsubCallback`](../../../api/entities/types/type-aliases/UnsubCallback.mdx)
+
+unsubscribe function
+
+#### Inherited from
+
+[`PolymeshTransactionBase`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx).[`onStatusChange`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#onstatuschange)
+
+***
+
+### run()
+
+> **run**(): `Promise`\<`TransformedReturnValue`\>
+
+Defined in: [src/base/PolymeshTransactionBase.ts:271](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransactionBase.ts#L271)
+
+Run the transaction, update its status and return a result if applicable.
+  Certain transactions create Entities on the blockchain, and those Entities are returned
+  for convenience. For example, when running a transaction that creates an Asset, the Asset itself
+  is returned
+
+#### Returns
+
+`Promise`\<`TransformedReturnValue`\>
+
+#### Inherited from
+
+[`PolymeshTransactionBase`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx).[`run`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#run)
+
+***
+
+### runAsProposal()
+
+> **runAsProposal**(): `Promise`\<[`MultiSigProposal`](../../../api/entities/MultiSigProposal/classes/MultiSigProposal.mdx)\>
+
+Defined in: [src/base/PolymeshTransactionBase.ts:228](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransactionBase.ts#L228)
+
+Run the transaction as a multiSig proposal
+
+#### Returns
+
+`Promise`\<[`MultiSigProposal`](../../../api/entities/MultiSigProposal/classes/MultiSigProposal.mdx)\>
+
+#### Inherited from
+
+[`PolymeshTransactionBase`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx).[`runAsProposal`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#runasproposal)
+
+***
+
+### supportsSubsidy()
+
+> **supportsSubsidy**(): `boolean`
+
+Defined in: [src/base/PolymeshTransaction.ts:140](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransaction.ts#L140)
+
+Return whether the transaction can be subsidized. If the result is false
+  AND the caller is being subsidized by a third party, the transaction can't be executed and trying
+  to do so will result in an error
+
+#### Returns
+
+`boolean`
+
+#### Note
+
+this depends on the type of transaction itself (e.g. `staking.bond` can't be subsidized, but `asset.createAsset` can)
+
+#### Overrides
+
+[`PolymeshTransactionBase`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx).[`supportsSubsidy`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#supportssubsidy)
+
+***
+
+### toSignablePayload()
+
+> **toSignablePayload**(`metadata`: `Record`\<`string`, `string`\>): `Promise`\<[`TransactionPayload`](../../types/interfaces/TransactionPayload.mdx)\>
+
+Defined in: [src/base/PolymeshTransactionBase.ts:839](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/PolymeshTransactionBase.ts#L839)
+
+Returns a representation intended for offline signers.
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`metadata`
+
+</td>
+<td>
+
+`Record`\<`string`, `string`\>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`TransactionPayload`](../../types/interfaces/TransactionPayload.mdx)\>
+
+#### Note
+
+Usually `.run()` should be preferred due to is simplicity.
+
+#### Note
+
+When using this method, details like account nonces, and transaction mortality require extra consideration. Generating a payload for offline sign implies asynchronicity. If using this API, be sure each procedure is created with the correct nonce, accounting for in flight transactions, and the lifetime is sufficient.
+
+#### Inherited from
+
+[`PolymeshTransactionBase`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx).[`toSignablePayload`](../../PolymeshTransactionBase/classes/PolymeshTransactionBase.mdx#tosignablepayload)

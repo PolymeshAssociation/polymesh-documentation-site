@@ -1,0 +1,54 @@
+---
+sidebar_label: "BondPolyxParams"
+---
+
+# Interface: BondPolyxParams
+
+Defined in: [src/api/procedures/types.ts:1775](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1775)
+
+## Properties
+
+### amount
+
+> **amount**: `BigNumber`
+
+Defined in: [src/api/procedures/types.ts:1799](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1799)
+
+The amount of POLYX to bond (up to 6 decimals of precision)
+
+#### Note
+
+It is strongly recommended against bonding 100% an account's POLYX balance.
+At the minimum a stash account needs enough POLYX to sign the unbond extrinsic ()
+
+***
+
+### autoStake
+
+> **autoStake**: `boolean`
+
+Defined in: [src/api/procedures/types.ts:1791](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1791)
+
+Can be set to `true` if `rewardDestination` is the signing account. Auto stake will stake all rewards so the balance will compound
+
+***
+
+### controller
+
+> **controller**: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
+
+Defined in: [src/api/procedures/types.ts:1781](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1781)
+
+The controller is the account responsible for managing staked POLYX. This can be the stash,
+but designating a different key can make it easier to update nomination preferences and maintain
+the POLYX in a more secure, but inconvenient, stash key.
+
+***
+
+### payee
+
+> **payee**: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
+
+Defined in: [src/api/procedures/types.ts:1786](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1786)
+
+The account that should receive the stashing rewards

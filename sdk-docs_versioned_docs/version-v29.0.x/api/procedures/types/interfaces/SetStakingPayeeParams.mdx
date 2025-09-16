@@ -1,0 +1,31 @@
+---
+sidebar_label: "SetStakingPayeeParams"
+---
+
+# Interface: SetStakingPayeeParams
+
+Defined in: [src/api/procedures/types.ts:1809](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1809)
+
+## Properties
+
+### autoStake
+
+> **autoStake**: `boolean`
+
+Defined in: [src/api/procedures/types.ts:1819](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1819)
+
+If set to true then rewards will be auto staked in order to compound
+
+#### Note
+
+The payee must be the stash account in order to auto stake
+
+***
+
+### payee
+
+> **payee**: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
+
+Defined in: [src/api/procedures/types.ts:1813](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1813)
+
+The account who will receive the staking rewards

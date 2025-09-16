@@ -1,0 +1,71 @@
+---
+sidebar_label: "ProcedureOpts"
+---
+
+# Interface: ProcedureOpts
+
+Defined in: [src/api/procedures/types.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L113)
+
+## Properties
+
+### mortality?
+
+> `optional` **mortality**: [`MortalityProcedureOpt`](../type-aliases/MortalityProcedureOpt.mdx)
+
+Defined in: [src/api/procedures/types.ts:133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L133)
+
+This option allows for transactions that never expire, aka "immortal". By default, a transaction is only valid for approximately 5 minutes (250 blocks) after its construction. Allows for transaction construction to be decoupled from its submission, such as requiring manual approval for the signing or providing "at least once" guarantees.
+
+More information can be found [here](https://wiki.polkadot.network/docs/build-protocol-info#transaction-mortality). Note the Polymesh chain will **never** reap Accounts, so the risk of a replay attack is mitigated.
+
+***
+
+### multiSigOpts?
+
+> `optional` **multiSigOpts**: [`MultiSigProcedureOpt`](MultiSigProcedureOpt.mdx)
+
+Defined in: [src/api/procedures/types.ts:138](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L138)
+
+These options will only apply when the `signingAccount` is a MultiSig signer and the transaction is being wrapped as a proposal
+
+***
+
+### nonce?
+
+> `optional` **nonce**: `BigNumber` \| `Promise`\<`BigNumber`\> \| () => `BigNumber` \| `Promise`\<`BigNumber`\>
+
+Defined in: [src/api/procedures/types.ts:126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L126)
+
+nonce value for signing the transaction
+
+An [Account](../../../entities/Account/classes/Account.mdx) can directly fetch its current nonce by calling [account.getCurrentNonce](../../../entities/Account/classes/Account.mdx#getcurrentnonce). More information can be found at: https://polkadot.js.org/docs/api/cookbook/tx/#how-do-i-take-the-pending-tx-pool-into-account-in-my-nonce
+
+#### Note
+
+the passed value can be either the nonce itself or a function that returns the nonce. This allows, for example, passing a closure that increases the returned value every time it's called, or a function that fetches the nonce from the chain or a different source
+
+***
+
+### signingAccount?
+
+> `optional` **signingAccount**: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
+
+Defined in: [src/api/procedures/types.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L117)
+
+Account or address of a signing key to replace the current one (for this procedure only)
+
+***
+
+### skipChecks?
+
+> `optional` **skipChecks**: [`SkipChecksOpt`](SkipChecksOpt.mdx)
+
+Defined in: [src/api/procedures/types.ts:147](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L147)
+
+This option allows for skipping checks for the Procedure. By default, all checks are performed.
+
+This can be useful while batching transactions which could have failed due to insufficient roles or permissions individually, but you don't want to fail the entire batch.
+
+#### Note
+
+even if the checks are skipped from being validated on the SDK, they will still be validated on the chain

@@ -1,0 +1,247 @@
+---
+sidebar_label: "TrustedClaimIssuers"
+---
+
+# Class: TrustedClaimIssuers
+
+Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L26)
+
+Handles all Asset Default Trusted Claim Issuers related functionality
+
+## Extends
+
+- `Namespace`\<[`BaseAsset`](../../../BaseAsset/classes/BaseAsset.mdx)\>
+
+## Methods
+
+### add()
+
+> **add**(`args`: [`ModifyAssetTrustedClaimIssuersAddSetParams`](../../../../../../procedures/types/interfaces/ModifyAssetTrustedClaimIssuersAddSetParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L84)
+
+Add the supplied Identities to the Asset's list of trusted claim issuers
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`ModifyAssetTrustedClaimIssuersAddSetParams`](../../../../../../procedures/types/interfaces/ModifyAssetTrustedClaimIssuersAddSetParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [add.checkAuthorization](../../../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### get()
+
+#### Call Signature
+
+> **get**(): `Promise`\<[`TrustedClaimIssuer`](../../../../../types/interfaces/TrustedClaimIssuer.mdx)\<`true`\>[]\>
+
+Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L96)
+
+Retrieve the current Default Trusted Claim Issuers of the Asset
+
+##### Returns
+
+`Promise`\<[`TrustedClaimIssuer`](../../../../../types/interfaces/TrustedClaimIssuer.mdx)\<`true`\>[]\>
+
+Promise that resolves to the list of default trusted claim issuers
+
+#### Call Signature
+
+> **get**(`callback`: [`SubCallback`](../../../../../types/type-aliases/SubCallback.mdx)\<[`TrustedClaimIssuer`](../../../../../types/interfaces/TrustedClaimIssuer.mdx)\<`true`\>[]\>): `Promise`\<[`UnsubCallback`](../../../../../types/type-aliases/UnsubCallback.mdx)\>
+
+Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L106)
+
+Retrieve the current Default Trusted Claim Issuers of the Asset
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+[`SubCallback`](../../../../../types/type-aliases/SubCallback.mdx)\<[`TrustedClaimIssuer`](../../../../../types/interfaces/TrustedClaimIssuer.mdx)\<`true`\>[]\>
+
+</td>
+<td>
+
+Callback function that receives trusted claim issuers updates
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`UnsubCallback`](../../../../../types/type-aliases/UnsubCallback.mdx)\>
+
+Promise that resolves to an unsubscribe function
+
+##### Note
+
+can be subscribed to, if connected to node using a web socket
+
+***
+
+### remove()
+
+> **remove**(`args`: [`ModifyAssetTrustedClaimIssuersRemoveParams`](../../../../../../procedures/types/interfaces/ModifyAssetTrustedClaimIssuersRemoveParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L89)
+
+Remove the supplied Identities from the Asset's list of trusted claim issuers   *
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`ModifyAssetTrustedClaimIssuersRemoveParams`](../../../../../../procedures/types/interfaces/ModifyAssetTrustedClaimIssuersRemoveParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [remove.checkAuthorization](../../../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### set()
+
+> **set**(`args`: [`ModifyAssetTrustedClaimIssuersAddSetParams`](../../../../../../procedures/types/interfaces/ModifyAssetTrustedClaimIssuersAddSetParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:79](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L79)
+
+Assign a new default list of trusted claim issuers to the Asset by replacing the existing ones with the list passed as a parameter
+
+This requires two transactions
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`ModifyAssetTrustedClaimIssuersAddSetParams`](../../../../../../procedures/types/interfaces/ModifyAssetTrustedClaimIssuersAddSetParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [set.checkAuthorization](../../../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it

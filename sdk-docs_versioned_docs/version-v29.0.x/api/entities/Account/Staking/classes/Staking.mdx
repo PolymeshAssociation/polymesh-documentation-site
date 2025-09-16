@@ -1,0 +1,254 @@
+---
+sidebar_label: "Staking"
+---
+
+# Class: Staking
+
+Defined in: [src/api/entities/Account/Staking/index.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/Staking/index.ts#L26)
+
+Handles Account staking related functionality
+
+## Extends
+
+- `Namespace`\<[`Account`](../../classes/Account.mdx)\>
+
+## Methods
+
+### getCommission()
+
+> **getCommission**(): `Promise`\<`null` \| [`StakingCommission`](../../types/interfaces/StakingCommission.mdx)\>
+
+Defined in: [src/api/entities/Account/Staking/index.ts:243](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/Staking/index.ts#L243)
+
+Fetch the commission settings for this validator account
+
+#### Returns
+
+`Promise`\<`null` \| [`StakingCommission`](../../types/interfaces/StakingCommission.mdx)\>
+
+The commission details or null if the account is not seeking nominations as a validator
+
+***
+
+### getController()
+
+#### Call Signature
+
+> **getController**(): `Promise`\<`null` \| [`Account`](../../classes/Account.mdx)\>
+
+Defined in: [src/api/entities/Account/Staking/index.ts:184](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/Staking/index.ts#L184)
+
+Fetch the controller associated to this account if there is one
+
+##### Returns
+
+`Promise`\<`null` \| [`Account`](../../classes/Account.mdx)\>
+
+The controller account or null if the account is not a stash
+
+##### Note
+
+a stash can be its own controller
+
+#### Call Signature
+
+> **getController**(`callback`: [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<`null` \| [`Account`](../../classes/Account.mdx)\>): `Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
+
+Defined in: [src/api/entities/Account/Staking/index.ts:195](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/Staking/index.ts#L195)
+
+Fetch the controller associated to this account if there is one
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+[`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<`null` \| [`Account`](../../classes/Account.mdx)\>
+
+</td>
+<td>
+
+Callback function that can be used to listen for changes to the controller
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
+
+The controller account or null if the account is not a stash
+
+##### Note
+
+can be subscribed to, if connected to node using a web socket
+
+##### Note
+
+a stash can be its own controller
+
+***
+
+### getLedger()
+
+> **getLedger**(): `Promise`\<`null` \| [`StakingLedger`](../../types/interfaces/StakingLedger.mdx)\>
+
+Defined in: [src/api/entities/Account/Staking/index.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/Staking/index.ts#L32)
+
+Fetch the ledger information for a stash account
+
+#### Returns
+
+`Promise`\<`null` \| [`StakingLedger`](../../types/interfaces/StakingLedger.mdx)\>
+
+The staking ledger information or null if the account is not a controller
+
+***
+
+### getNomination()
+
+#### Call Signature
+
+> **getNomination**(): `Promise`\<`null` \| [`StakingNomination`](../../types/interfaces/StakingNomination.mdx)\>
+
+Defined in: [src/api/entities/Account/Staking/index.ts:124](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/Staking/index.ts#L124)
+
+Fetch this account's current nominations
+
+##### Returns
+
+`Promise`\<`null` \| [`StakingNomination`](../../types/interfaces/StakingNomination.mdx)\>
+
+The nomination details or null if the account is not a controller
+
+#### Call Signature
+
+> **getNomination**(`callback`: [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<`null` \| [`StakingNomination`](../../types/interfaces/StakingNomination.mdx)\>): `Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
+
+Defined in: [src/api/entities/Account/Staking/index.ts:134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/Staking/index.ts#L134)
+
+Fetch this account's current nominations
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+[`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<`null` \| [`StakingNomination`](../../types/interfaces/StakingNomination.mdx)\>
+
+</td>
+<td>
+
+Callback function that can be used to listen for changes to the nominations
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
+
+The nomination details or null if the account is not a controller
+
+##### Note
+
+can be subscribed to, if connected to node using a web socket
+
+***
+
+### getPayee()
+
+#### Call Signature
+
+> **getPayee**(): `Promise`\<`null` \| [`StakingPayee`](../../types/interfaces/StakingPayee.mdx)\>
+
+Defined in: [src/api/entities/Account/Staking/index.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/Staking/index.ts#L56)
+
+Fetch the payee that will receive a stash account's rewards
+
+##### Returns
+
+`Promise`\<`null` \| [`StakingPayee`](../../types/interfaces/StakingPayee.mdx)\>
+
+The payee account or null if the account is not a stash
+
+#### Call Signature
+
+> **getPayee**(`callback`: [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<`null` \| [`StakingPayee`](../../types/interfaces/StakingPayee.mdx)\>): `Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
+
+Defined in: [src/api/entities/Account/Staking/index.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/Staking/index.ts#L66)
+
+Fetch the payee that will receive a stash account's rewards
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+[`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<`null` \| [`StakingPayee`](../../types/interfaces/StakingPayee.mdx)\>
+
+</td>
+<td>
+
+Callback function that can be used to listen for changes to the staking payee
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
+
+The payee account or null if the account is not a stash
+
+##### Note
+
+can be subscribed to, if connected to node using a web socket

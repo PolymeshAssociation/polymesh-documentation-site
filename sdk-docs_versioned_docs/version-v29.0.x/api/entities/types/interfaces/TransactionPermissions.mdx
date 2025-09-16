@@ -1,0 +1,54 @@
+---
+sidebar_label: "TransactionPermissions"
+---
+
+# Interface: TransactionPermissions
+
+Defined in: [src/api/entities/types.ts:632](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L632)
+
+Permissions related to Transactions. Can include/exclude individual transactions or entire modules
+
+## Extends
+
+- [`SectionPermissions`](SectionPermissions.mdx)\<[`TxTag`](../../../../types/type-aliases/TxTag.mdx) \| [`ModuleName`](../../../../types/enumerations/ModuleName.mdx)\>
+
+## Properties
+
+### exceptions?
+
+> `optional` **exceptions**: [`TxTag`](../../../../types/type-aliases/TxTag.mdx)[]
+
+Defined in: [src/api/entities/types.ts:639](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L639)
+
+Transactions to be exempted from inclusion/exclusion. This allows more granularity when
+  setting permissions. For example, let's say we want to include only the `asset` and `staking` modules,
+  but exclude the `asset.registerTicker` transaction. We could add both modules to `values`, and add
+  `TxTags.asset.registerTicker` to `exceptions`
+
+***
+
+### type
+
+> **type**: [`PermissionType`](../enumerations/PermissionType.mdx)
+
+Defined in: [src/api/entities/types.ts:626](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L626)
+
+Whether the permissions are inclusive or exclusive
+
+#### Inherited from
+
+[`SectionPermissions`](SectionPermissions.mdx).[`type`](SectionPermissions.mdx#type)
+
+***
+
+### values
+
+> **values**: ([`TxTag`](../../../../types/type-aliases/TxTag.mdx) \| [`ModuleName`](../../../../types/enumerations/ModuleName.mdx))[]
+
+Defined in: [src/api/entities/types.ts:622](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L622)
+
+Values to be included/excluded
+
+#### Inherited from
+
+[`SectionPermissions`](SectionPermissions.mdx).[`values`](SectionPermissions.mdx#values)

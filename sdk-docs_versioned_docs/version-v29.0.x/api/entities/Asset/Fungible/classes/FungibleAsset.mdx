@@ -1,0 +1,1478 @@
+---
+sidebar_label: "FungibleAsset"
+---
+
+# Class: FungibleAsset
+
+Defined in: [src/api/entities/Asset/Fungible/index.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/index.ts#L45)
+
+Class used to manage all Fungible Asset functionality
+
+## Extends
+
+- [`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx)
+
+## Properties
+
+### assetHolders
+
+> **assetHolders**: [`AssetHolders`](../AssetHolders/classes/AssetHolders.mdx)
+
+Defined in: [src/api/entities/Asset/Fungible/index.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/index.ts#L47)
+
+***
+
+### checkpoints
+
+> **checkpoints**: [`Checkpoints`](../Checkpoints/classes/Checkpoints.mdx)
+
+Defined in: [src/api/entities/Asset/Fungible/index.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/index.ts#L51)
+
+***
+
+### compliance
+
+> **compliance**: [`Compliance`](../../Base/Compliance/classes/Compliance.mdx)
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L70)
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`compliance`](../../Base/BaseAsset/classes/BaseAsset.mdx#compliance)
+
+***
+
+### corporateActions
+
+> **corporateActions**: [`CorporateActions`](../CorporateActions/classes/CorporateActions.mdx)
+
+Defined in: [src/api/entities/Asset/Fungible/index.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/index.ts#L52)
+
+***
+
+### documents
+
+> **documents**: [`Documents`](../../Base/Documents/classes/Documents.mdx)
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L71)
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`documents`](../../Base/BaseAsset/classes/BaseAsset.mdx#documents)
+
+***
+
+### id
+
+> **id**: `string`
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L78)
+
+Unique ID of the Asset in UUID format
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`id`](../../Base/BaseAsset/classes/BaseAsset.mdx#id)
+
+***
+
+### issuance
+
+> **issuance**: [`Issuance`](../Issuance/classes/Issuance.mdx)
+
+Defined in: [src/api/entities/Asset/Fungible/index.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/index.ts#L48)
+
+***
+
+### metadata
+
+> **metadata**: [`Metadata`](../../Base/Metadata/classes/Metadata.mdx)
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L72)
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`metadata`](../../Base/BaseAsset/classes/BaseAsset.mdx#metadata)
+
+***
+
+### offerings
+
+> **offerings**: [`Offerings`](../Offerings/classes/Offerings.mdx)
+
+Defined in: [src/api/entities/Asset/Fungible/index.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/index.ts#L50)
+
+***
+
+### permissions
+
+> **permissions**: [`Permissions`](../../Base/Permissions/classes/Permissions.mdx)
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L73)
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`permissions`](../../Base/BaseAsset/classes/BaseAsset.mdx#permissions)
+
+***
+
+### settlements
+
+> **settlements**: [`FungibleSettlements`](../../Base/Settlements/classes/FungibleSettlements.mdx)
+
+Defined in: [src/api/entities/Asset/Fungible/index.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/index.ts#L46)
+
+***
+
+### transferRestrictions
+
+> **transferRestrictions**: [`TransferRestrictions`](../TransferRestrictions/classes/TransferRestrictions.mdx)
+
+Defined in: [src/api/entities/Asset/Fungible/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/index.ts#L49)
+
+***
+
+### uuid
+
+> **uuid**: `string`
+
+Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L46)
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`uuid`](../../Base/BaseAsset/classes/BaseAsset.mdx#uuid)
+
+## Accessors
+
+### rawId
+
+#### Get Signature
+
+> **get** **rawId**(): `string`
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:85](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L85)
+
+Unique ID of the Asset in hex format
+
+##### Note
+
+Although UUID format is the usual representation of asset IDs, generic polkadot/substrate tools usually expect it in hex format
+
+##### Returns
+
+`string`
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`rawId`](../../Base/BaseAsset/classes/BaseAsset.mdx#rawid)
+
+## Methods
+
+### addRequiredMediators()
+
+> **addRequiredMediators**(`args`: [`AssetMediatorParams`](../../../../procedures/types/interfaces/AssetMediatorParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L212)
+
+Add required mediators. Mediators must approve any trades involving the asset
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`AssetMediatorParams`](../../../../procedures/types/interfaces/AssetMediatorParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [addRequiredMediators.checkAuthorization](../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`addRequiredMediators`](../../Base/BaseAsset/classes/BaseAsset.mdx#addrequiredmediators)
+
+***
+
+### controllerTransfer()
+
+> **controllerTransfer**(`args`: [`ControllerTransferParams`](../../../../procedures/types/interfaces/ControllerTransferParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/Fungible/index.ts:138](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/index.ts#L138)
+
+Force a transfer from a given Portfolio to the caller’s default Portfolio
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`ControllerTransferParams`](../../../../procedures/types/interfaces/ControllerTransferParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [controllerTransfer.checkAuthorization](../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### createdAt()
+
+> **createdAt**(): `Promise`\<`null` \| [`EventIdentifier`](../../../../client/types/interfaces/EventIdentifier.mdx)\>
+
+Defined in: [src/api/entities/Asset/Fungible/index.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/index.ts#L84)
+
+Retrieve the identifier data (block number, date and event index) of the event that was emitted when the token was created
+
+#### Returns
+
+`Promise`\<`null` \| [`EventIdentifier`](../../../../client/types/interfaces/EventIdentifier.mdx)\>
+
+#### Note
+
+uses the middlewareV2
+
+#### Note
+
+there is a possibility that the data is not ready by the time it is requested. In that case, `null` is returned
+
+***
+
+### currentFundingRound()
+
+#### Call Signature
+
+> **currentFundingRound**(): `Promise`\<`null` \| `string`\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:499](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L499)
+
+Retrieve the Asset's funding round
+
+##### Returns
+
+`Promise`\<`null` \| `string`\>
+
+Promise that resolves to the current funding round name or null if not set
+
+##### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`currentFundingRound`](../../Base/BaseAsset/classes/BaseAsset.mdx#currentfundinground)
+
+#### Call Signature
+
+> **currentFundingRound**(`callback`: [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<`null` \| `string`\>): `Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:509](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L509)
+
+Retrieve the Asset's funding round
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+[`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<`null` \| `string`\>
+
+</td>
+<td>
+
+Callback function that receives funding round updates
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
+
+Promise that resolves to an unsubscribe function
+
+##### Note
+
+can be subscribed to, if connected to node using a web socket
+
+##### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`currentFundingRound`](../../Base/BaseAsset/classes/BaseAsset.mdx#currentfundinground)
+
+***
+
+### details()
+
+#### Call Signature
+
+> **details**(): `Promise`\<[`AssetDetails`](../../types/interfaces/AssetDetails.mdx)\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L332)
+
+Retrieve the Asset's data
+
+##### Returns
+
+`Promise`\<[`AssetDetails`](../../types/interfaces/AssetDetails.mdx)\>
+
+Promise that resolves to the Asset details
+
+##### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`details`](../../Base/BaseAsset/classes/BaseAsset.mdx#details)
+
+#### Call Signature
+
+> **details**(`callback`: [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<[`AssetDetails`](../../types/interfaces/AssetDetails.mdx)\>): `Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:342](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L342)
+
+Retrieve the Asset's data
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+[`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<[`AssetDetails`](../../types/interfaces/AssetDetails.mdx)\>
+
+</td>
+<td>
+
+Callback function that receives Asset details updates
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
+
+Promise that resolves to an unsubscribe function
+
+##### Note
+
+can be subscribed to, if connected to node using a web socket
+
+##### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`details`](../../Base/BaseAsset/classes/BaseAsset.mdx#details)
+
+***
+
+### exists()
+
+> **exists**(): `Promise`\<`boolean`\>
+
+Defined in: [src/api/entities/Asset/Fungible/index.ts:251](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/index.ts#L251)
+
+Determine whether this FungibleAsset exists on chain
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+#### Overrides
+
+`BaseAsset.exists`
+
+***
+
+### freeze()
+
+> **freeze**(`opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L202)
+
+Freeze transfers of the Asset
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [NoArgsProcedureMethod](../../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx), which means you can call [freeze.checkAuthorization](../../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`freeze`](../../Base/BaseAsset/classes/BaseAsset.mdx#freeze)
+
+***
+
+### getIdentifiers()
+
+#### Call Signature
+
+> **getIdentifiers**(): `Promise`\<[`SecurityIdentifier`](../../types/interfaces/SecurityIdentifier.mdx)[]\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:241](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L241)
+
+Retrieve the Asset's identifiers list
+
+##### Returns
+
+`Promise`\<[`SecurityIdentifier`](../../types/interfaces/SecurityIdentifier.mdx)[]\>
+
+Promise that resolves to the list of security identifiers
+
+##### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`getIdentifiers`](../../Base/BaseAsset/classes/BaseAsset.mdx#getidentifiers)
+
+#### Call Signature
+
+> **getIdentifiers**(`callback?`: [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<[`SecurityIdentifier`](../../types/interfaces/SecurityIdentifier.mdx)[]\>): `Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:251](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L251)
+
+Retrieve the Asset's identifiers list
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback?`
+
+</td>
+<td>
+
+[`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<[`SecurityIdentifier`](../../types/interfaces/SecurityIdentifier.mdx)[]\>
+
+</td>
+<td>
+
+Callback function that receives identifier updates
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
+
+Promise that resolves to an unsubscribe function
+
+##### Note
+
+can be subscribed to, if connected to node using a web socket
+
+##### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`getIdentifiers`](../../Base/BaseAsset/classes/BaseAsset.mdx#getidentifiers)
+
+***
+
+### getOperationHistory()
+
+> **getOperationHistory**(): `Promise`\<[`HistoricAgentOperation`](../../types/interfaces/HistoricAgentOperation.mdx)[]\>
+
+Defined in: [src/api/entities/Asset/Fungible/index.ts:147](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/index.ts#L147)
+
+Retrieve this Asset's Operation History
+
+#### Returns
+
+`Promise`\<[`HistoricAgentOperation`](../../types/interfaces/HistoricAgentOperation.mdx)[]\>
+
+#### Note
+
+Operations are grouped by the agent Identity who performed them
+
+#### Note
+
+uses the middlewareV2
+
+***
+
+### getRequiredMediators()
+
+> **getRequiredMediators**(): `Promise`\<[`Identity`](../../../Identity/classes/Identity.mdx)[]\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:444](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L444)
+
+Get required Asset mediators. These Identities must approve any Instruction involving the asset
+
+#### Returns
+
+`Promise`\<[`Identity`](../../../Identity/classes/Identity.mdx)[]\>
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`getRequiredMediators`](../../Base/BaseAsset/classes/BaseAsset.mdx#getrequiredmediators)
+
+***
+
+### getTransactionHistory()
+
+> **getTransactionHistory**(`opts`: `object`): `Promise`\<[`ResultSet`](../../../types/interfaces/ResultSet.mdx)\<[`HistoricAssetTransaction`](../../types/interfaces/HistoricAssetTransaction.mdx)\>\>
+
+Defined in: [src/api/entities/Asset/Fungible/index.ts:178](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/index.ts#L178)
+
+Retrieve this Asset's transaction History
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`opts`
+
+</td>
+<td>
+
+\{ `size?`: `BigNumber`; `start?`: `BigNumber`; \}
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.size?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts.start?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`ResultSet`](../../../types/interfaces/ResultSet.mdx)\<[`HistoricAssetTransaction`](../../types/interfaces/HistoricAssetTransaction.mdx)\>\>
+
+#### Note
+
+uses the middlewareV2
+
+***
+
+### getVenueFilteringDetails()
+
+> **getVenueFilteringDetails**(): `Promise`\<[`VenueFilteringDetails`](../../types/interfaces/VenueFilteringDetails.mdx)\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:464](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L464)
+
+Get venue filtering details
+
+#### Returns
+
+`Promise`\<[`VenueFilteringDetails`](../../types/interfaces/VenueFilteringDetails.mdx)\>
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`getVenueFilteringDetails`](../../Base/BaseAsset/classes/BaseAsset.mdx#getvenuefilteringdetails)
+
+***
+
+### investorCount()
+
+> **investorCount**(): `Promise`\<`BigNumber`\>
+
+Defined in: [src/api/entities/Asset/Fungible/index.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/index.ts#L112)
+
+Retrieve the amount of unique investors that hold this Asset
+
+#### Returns
+
+`Promise`\<`BigNumber`\>
+
+***
+
+### isEqual()
+
+> **isEqual**(`entity`: [`Entity`](../../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>): `boolean`
+
+Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L61)
+
+Determine whether this Entity is the same as another one
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`entity`
+
+</td>
+<td>
+
+[`Entity`](../../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`isEqual`](../../Base/BaseAsset/classes/BaseAsset.mdx#isequal)
+
+***
+
+### isFrozen()
+
+#### Call Signature
+
+> **isFrozen**(): `Promise`\<`boolean`\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:289](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L289)
+
+Check whether transfers are frozen for the Asset
+
+##### Returns
+
+`Promise`\<`boolean`\>
+
+Promise that resolves to true if transfers are frozen, false otherwise
+
+##### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`isFrozen`](../../Base/BaseAsset/classes/BaseAsset.mdx#isfrozen)
+
+#### Call Signature
+
+> **isFrozen**(`callback`: [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<`boolean`\>): `Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:299](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L299)
+
+Check whether transfers are frozen for the Asset
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+[`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<`boolean`\>
+
+</td>
+<td>
+
+Callback function that receives frozen status updates
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
+
+Promise that resolves to an unsubscribe function
+
+##### Note
+
+can be subscribed to, if connected to node using a web socket
+
+##### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`isFrozen`](../../Base/BaseAsset/classes/BaseAsset.mdx#isfrozen)
+
+***
+
+### linkTicker()
+
+> **linkTicker**(`args`: [`LinkTickerToAssetParams`](../../../../procedures/types/interfaces/LinkTickerToAssetParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L225)
+
+Link ticker to the asset
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`LinkTickerToAssetParams`](../../../../procedures/types/interfaces/LinkTickerToAssetParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+if ticker is already reserved, then required role:
+- Ticker Owner
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [linkTicker.checkAuthorization](../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`linkTicker`](../../Base/BaseAsset/classes/BaseAsset.mdx#linkticker)
+
+***
+
+### modify()
+
+> **modify**(`args`: [`ModifyAssetParams`](../../../../procedures/types/type-aliases/ModifyAssetParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Asset`](../../types/type-aliases/Asset.mdx), [`Asset`](../../types/type-aliases/Asset.mdx)\>\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L121)
+
+Modify some properties of the Asset
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`ModifyAssetParams`](../../../../procedures/types/type-aliases/ModifyAssetParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Asset`](../../types/type-aliases/Asset.mdx), [`Asset`](../../types/type-aliases/Asset.mdx)\>\>
+
+#### Throws
+
+if the passed values result in no changes being made to the Asset
+
+#### Throws
+
+if the passed assetType is not a known asset type or a custom type that has not been created on the chain
+
+#### Throws
+
+if trying to modify an NftCollection's assetType
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [modify.checkAuthorization](../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`modify`](../../Base/BaseAsset/classes/BaseAsset.mdx#modify)
+
+***
+
+### redeem()
+
+> **redeem**(`args`: [`RedeemTokensParams`](../../../../procedures/types/interfaces/RedeemTokensParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/Fungible/index.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/index.ts#L107)
+
+Redeem (burn) an amount of this Asset's tokens
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`RedeemTokensParams`](../../../../procedures/types/interfaces/RedeemTokensParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [redeem.checkAuthorization](../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### removeRequiredMediators()
+
+> **removeRequiredMediators**(`args`: [`AssetMediatorParams`](../../../../procedures/types/interfaces/AssetMediatorParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:217](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L217)
+
+Remove required mediators
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`AssetMediatorParams`](../../../../procedures/types/interfaces/AssetMediatorParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [removeRequiredMediators.checkAuthorization](../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`removeRequiredMediators`](../../Base/BaseAsset/classes/BaseAsset.mdx#removerequiredmediators)
+
+***
+
+### setVenueFiltering()
+
+> **setVenueFiltering**(`args`: [`SetVenueFilteringParams`](../../../../procedures/types/type-aliases/SetVenueFilteringParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L102)
+
+Enable/disable venue filtering for this Asset and/or set allowed/disallowed venues
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`SetVenueFilteringParams`](../../../../procedures/types/type-aliases/SetVenueFilteringParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [setVenueFiltering.checkAuthorization](../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`setVenueFiltering`](../../Base/BaseAsset/classes/BaseAsset.mdx#setvenuefiltering)
+
+***
+
+### toHuman()
+
+> **toHuman**(): `string`
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:565](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L565)
+
+Return the BaseAsset's ID
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`toHuman`](../../Base/BaseAsset/classes/BaseAsset.mdx#tohuman)
+
+***
+
+### transferOwnership()
+
+> **transferOwnership**(`args`: [`TransferAssetOwnershipParams`](../../../../procedures/types/interfaces/TransferAssetOwnershipParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`AuthorizationRequest`](../../../AuthorizationRequest/classes/AuthorizationRequest.mdx), [`AuthorizationRequest`](../../../AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:97](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L97)
+
+Transfer ownership of the Asset to another Identity. This generates an authorization request that must be accepted
+  by the recipient
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`TransferAssetOwnershipParams`](../../../../procedures/types/interfaces/TransferAssetOwnershipParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`AuthorizationRequest`](../../../AuthorizationRequest/classes/AuthorizationRequest.mdx), [`AuthorizationRequest`](../../../AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
+
+#### Note
+
+this will create [Authorization Request](../../../types/type-aliases/AuthorizationRequest.mdx) which has to be accepted by the `target` Identity.
+  An [Account](../../../Account/classes/Account.mdx) or [Identity](../../../Identity/classes/Identity.mdx) can fetch its pending Authorization Requests by calling [authorizations.getReceived](../../../common/namespaces/Authorizations/classes/Authorizations.mdx#getreceived).
+  Also, an Account or Identity can directly fetch the details of an Authorization Request by calling [authorizations.getOne](../../../common/namespaces/Authorizations/classes/Authorizations.mdx#getone)
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [transferOwnership.checkAuthorization](../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`transferOwnership`](../../Base/BaseAsset/classes/BaseAsset.mdx#transferownership)
+
+***
+
+### unfreeze()
+
+> **unfreeze**(`opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:207](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L207)
+
+Unfreeze transfers of the Asset
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [NoArgsProcedureMethod](../../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx), which means you can call [unfreeze.checkAuthorization](../../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`unfreeze`](../../Base/BaseAsset/classes/BaseAsset.mdx#unfreeze)
+
+***
+
+### unlinkTicker()
+
+> **unlinkTicker**(`opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:234](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Base/BaseAsset.ts#L234)
+
+Unlink ticker from the Asset
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+Only the ticker owner is allowed to unlink the Asset
+
+#### Throws
+
+if there is no ticker to unlink
+
+#### Note
+
+this method is of type [NoArgsProcedureMethod](../../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx), which means you can call [unlinkTicker.checkAuthorization](../../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`unlinkTicker`](../../Base/BaseAsset/classes/BaseAsset.mdx#unlinkticker)
+
+***
+
+### generateUuid()
+
+> `static` **generateUuid**\<`Identifiers`\>(`identifiers`: `Identifiers`): `string`
+
+Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L14)
+
+Generate the Entity's UUID from its identifying properties
+
+#### Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`Identifiers`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`identifiers`
+
+</td>
+<td>
+
+`Identifiers`
+
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`generateUuid`](../../Base/BaseAsset/classes/BaseAsset.mdx#generateuuid)
+
+***
+
+### unserialize()
+
+> `static` **unserialize**\<`Identifiers`\>(`serialized`: `string`): `Identifiers`
+
+Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L23)
+
+Unserialize a UUID into its Unique Identifiers
+
+#### Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`Identifiers`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`serialized`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+UUID to unserialize
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Identifiers`
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`unserialize`](../../Base/BaseAsset/classes/BaseAsset.mdx#unserialize)

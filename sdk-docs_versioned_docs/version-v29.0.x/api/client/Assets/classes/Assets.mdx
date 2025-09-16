@@ -1,0 +1,1079 @@
+---
+sidebar_label: "Assets"
+---
+
+# Class: Assets
+
+Defined in: [src/api/client/Assets.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Assets.ts#L54)
+
+Handles all Asset related functionality
+
+## Methods
+
+### createAsset()
+
+> **createAsset**(`args`: [`CreateAssetWithTickerParams`](../../../procedures/types/interfaces/CreateAssetWithTickerParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`FungibleAsset`](../../../entities/Asset/Fungible/classes/FungibleAsset.mdx), [`FungibleAsset`](../../../entities/Asset/Fungible/classes/FungibleAsset.mdx)\>\>
+
+Defined in: [src/api/client/Assets.ts:104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Assets.ts#L104)
+
+Create an Asset
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`CreateAssetWithTickerParams`](../../../procedures/types/interfaces/CreateAssetWithTickerParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`FungibleAsset`](../../../entities/Asset/Fungible/classes/FungibleAsset.mdx), [`FungibleAsset`](../../../entities/Asset/Fungible/classes/FungibleAsset.mdx)\>\>
+
+#### Note
+
+if ticker is already reserved, then required role:
+  - Ticker Owner
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [createAsset.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### createNftCollection()
+
+> **createNftCollection**(`args`: [`CreateNftCollectionParams`](../../../procedures/types/interfaces/CreateNftCollectionParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`NftCollection`](../../../entities/Asset/NonFungible/NftCollection/classes/NftCollection.mdx), [`NftCollection`](../../../entities/Asset/NonFungible/NftCollection/classes/NftCollection.mdx)\>\>
+
+Defined in: [src/api/client/Assets.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Assets.ts#L112)
+
+Create an NftCollection
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`CreateNftCollectionParams`](../../../procedures/types/interfaces/CreateNftCollectionParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`NftCollection`](../../../entities/Asset/NonFungible/NftCollection/classes/NftCollection.mdx), [`NftCollection`](../../../entities/Asset/NonFungible/NftCollection/classes/NftCollection.mdx)\>\>
+
+#### Note
+
+if ticker is already reserved, then required role:
+  - Ticker Owner
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [createNftCollection.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### get()
+
+> **get**(`paginationOpts?`: [`PaginationOptions`](../../../entities/types/interfaces/PaginationOptions.mdx)): `Promise`\<[`ResultSet`](../../../entities/types/interfaces/ResultSet.mdx)\<[`Asset`](../../../entities/Asset/types/type-aliases/Asset.mdx)\>\>
+
+Defined in: [src/api/client/Assets.ts:401](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Assets.ts#L401)
+
+Retrieve all the Assets on chain
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`paginationOpts?`
+
+</td>
+<td>
+
+[`PaginationOptions`](../../../entities/types/interfaces/PaginationOptions.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`ResultSet`](../../../entities/types/interfaces/ResultSet.mdx)\<[`Asset`](../../../entities/Asset/types/type-aliases/Asset.mdx)\>\>
+
+#### Note
+
+supports pagination
+
+***
+
+### getAsset()
+
+#### Call Signature
+
+> **getAsset**(`args`: `object`): `Promise`\<[`Asset`](../../../entities/Asset/types/type-aliases/Asset.mdx)\>
+
+Defined in: [src/api/client/Assets.ts:224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Assets.ts#L224)
+
+Retrieve a FungibleAsset or NftCollection by ticker
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `ticker`: `string`; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.ticker`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+Unique ticker of the Asset
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`Asset`](../../../entities/Asset/types/type-aliases/Asset.mdx)\>
+
+##### Note
+
+`getFungibleAsset` and `getNftCollection` are similar to this method, but return a more specific type
+
+#### Call Signature
+
+> **getAsset**(`args`: `object`): `Promise`\<[`Asset`](../../../entities/Asset/types/type-aliases/Asset.mdx)\>
+
+Defined in: [src/api/client/Assets.ts:233](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Assets.ts#L233)
+
+Retrieve a FungibleAsset or NftCollection by Asset ID
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `assetId`: `string`; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.assetId`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+Unique identifier of the Asset
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`Asset`](../../../entities/Asset/types/type-aliases/Asset.mdx)\>
+
+##### Note
+
+`getFungibleAsset` and `getNftCollection` are similar to this method, but return a more specific type
+
+***
+
+### getAssets()
+
+> **getAssets**(`args?`: `object`): `Promise`\<[`Asset`](../../../entities/Asset/types/type-aliases/Asset.mdx)[]\>
+
+Defined in: [src/api/client/Assets.ts:254](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Assets.ts#L254)
+
+Retrieve all of the Assets owned by an Identity
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args?`
+
+</td>
+<td>
+
+\{ `owner`: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx); \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.owner?`
+
+</td>
+<td>
+
+`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
+
+</td>
+<td>
+
+Identity representation or Identity ID as stored in the blockchain
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`Asset`](../../../entities/Asset/types/type-aliases/Asset.mdx)[]\>
+
+#### Note
+
+Assets with unreadable characters in their tickers will be left out
+
+***
+
+### getFungibleAsset()
+
+#### Call Signature
+
+> **getFungibleAsset**(`args`: `object`): `Promise`\<[`FungibleAsset`](../../../entities/Asset/Fungible/classes/FungibleAsset.mdx)\>
+
+Defined in: [src/api/client/Assets.ts:302](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Assets.ts#L302)
+
+Retrieve a FungibleAsset by Asset ID
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `assetId`: `string`; `skipExistsCheck?`: `boolean`; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.assetId`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+Unique identifier of the Fungible Asset
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.skipExistsCheck?`
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
+
+When true, method will not check if Asset exists before returning instance. Defaults to false
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`FungibleAsset`](../../../entities/Asset/Fungible/classes/FungibleAsset.mdx)\>
+
+#### Call Signature
+
+> **getFungibleAsset**(`args`: `object`): `Promise`\<[`FungibleAsset`](../../../entities/Asset/Fungible/classes/FungibleAsset.mdx)\>
+
+Defined in: [src/api/client/Assets.ts:314](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Assets.ts#L314)
+
+Retrieve a FungibleAsset by ticker
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `ticker`: `string`; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.ticker`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+Unique ticker of the Fungible Asset
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`FungibleAsset`](../../../entities/Asset/Fungible/classes/FungibleAsset.mdx)\>
+
+##### Note
+
+The Asset must exist on chain to be retrieved by ticker
+
+***
+
+### getGlobalMetadataKeys()
+
+> **getGlobalMetadataKeys**(): `Promise`\<[`GlobalMetadataKey`](../../../entities/MetadataEntry/types/type-aliases/GlobalMetadataKey.mdx)[]\>
+
+Defined in: [src/api/client/Assets.ts:442](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Assets.ts#L442)
+
+Retrieve all the Asset Global Metadata on chain. This includes metadata id, name and specs
+
+#### Returns
+
+`Promise`\<[`GlobalMetadataKey`](../../../entities/MetadataEntry/types/type-aliases/GlobalMetadataKey.mdx)[]\>
+
+***
+
+### getNextCustomAssetTypeId()
+
+> **getNextCustomAssetTypeId**(): `Promise`\<`BigNumber`\>
+
+Defined in: [src/api/client/Assets.ts:495](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Assets.ts#L495)
+
+Gets the next custom Asset type Id
+
+#### Returns
+
+`Promise`\<`BigNumber`\>
+
+***
+
+### getNftCollection()
+
+#### Call Signature
+
+> **getNftCollection**(`args`: `object`): `Promise`\<[`NftCollection`](../../../entities/Asset/NonFungible/NftCollection/classes/NftCollection.mdx)\>
+
+Defined in: [src/api/client/Assets.ts:353](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Assets.ts#L353)
+
+Retrieve an NftCollection by ticker
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `ticker`: `string`; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.ticker`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+Unique ticker of the NftCollection
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`NftCollection`](../../../entities/Asset/NonFungible/NftCollection/classes/NftCollection.mdx)\>
+
+##### Note
+
+The NftCollection must exist on chain to be retrieved by ticker
+
+#### Call Signature
+
+> **getNftCollection**(`args`: `object`): `Promise`\<[`NftCollection`](../../../entities/Asset/NonFungible/NftCollection/classes/NftCollection.mdx)\>
+
+Defined in: [src/api/client/Assets.ts:361](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Assets.ts#L361)
+
+Retrieve an NftCollection by Asset ID
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `assetId`: `string`; `skipExistsCheck?`: `boolean`; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.assetId`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+Unique identifier of the NftCollection (for spec version 6.x, this is same as ticker)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.skipExistsCheck?`
+
+</td>
+<td>
+
+`boolean`
+
+</td>
+<td>
+
+When true, method will not check if the NftCollection exists before returning instance. Defaults to false
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`NftCollection`](../../../entities/Asset/NonFungible/NftCollection/classes/NftCollection.mdx)\>
+
+***
+
+### getTickerReservation()
+
+> **getTickerReservation**(`args`: `object`): [`TickerReservation`](../../../entities/TickerReservation/classes/TickerReservation.mdx)
+
+Defined in: [src/api/client/Assets.ts:210](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Assets.ts#L210)
+
+Retrieve a Ticker Reservation
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `ticker`: `string`; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.ticker`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+Asset ticker
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+[`TickerReservation`](../../../entities/TickerReservation/classes/TickerReservation.mdx)
+
+***
+
+### getTickerReservations()
+
+> **getTickerReservations**(`args?`: `object`): `Promise`\<[`TickerReservation`](../../../entities/TickerReservation/classes/TickerReservation.mdx)[]\>
+
+Defined in: [src/api/client/Assets.ts:169](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Assets.ts#L169)
+
+Retrieve all the ticker reservations currently owned by an Identity. This doesn't include tickers already
+associated with an Asset
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args?`
+
+</td>
+<td>
+
+\{ `owner`: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx); \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.owner?`
+
+</td>
+<td>
+
+`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
+
+</td>
+<td>
+
+The identity whose reservations to return. Defaults to the signing Identity if omitted.
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`TickerReservation`](../../../entities/TickerReservation/classes/TickerReservation.mdx)[]\>
+
+A list of active `TickerReservation` instances
+
+#### Note
+
+Reservations with unreadable ticker characters are excluded.
+
+***
+
+### isTickerAvailable()
+
+#### Call Signature
+
+> **isTickerAvailable**(`args`: `object`): `Promise`\<`boolean`\>
+
+Defined in: [src/api/client/Assets.ts:121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Assets.ts#L121)
+
+Check if a ticker hasn't been reserved
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `ticker`: `string`; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.ticker`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+Ticker symbol to check availability for
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<`boolean`\>
+
+Promise that resolves to true if ticker is available, false otherwise
+
+#### Call Signature
+
+> **isTickerAvailable**(`args`: `object`, `callback`: [`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<`boolean`\>): `Promise`\<[`UnsubCallback`](../../../entities/types/type-aliases/UnsubCallback.mdx)\>
+
+Defined in: [src/api/client/Assets.ts:133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Assets.ts#L133)
+
+Check if a ticker hasn't been reserved (with subscription support)
+
+##### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+\{ `ticker`: `string`; \}
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+</tr>
+<tr>
+<td>
+
+`args.ticker`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+Ticker symbol to check availability for
+
+</td>
+</tr>
+<tr>
+<td>
+
+`callback`
+
+</td>
+<td>
+
+[`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<`boolean`\>
+
+</td>
+<td>
+
+Callback function that receives availability status updates
+
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Returns
+
+`Promise`\<[`UnsubCallback`](../../../entities/types/type-aliases/UnsubCallback.mdx)\>
+
+Promise that resolves to an unsubscribe function
+
+##### Note
+
+can be subscribed to, if connected to node using a web socket
+
+***
+
+### registerCustomAssetType()
+
+> **registerCustomAssetType**(`args`: [`RegisterCustomAssetTypeParams`](../../../procedures/types/interfaces/RegisterCustomAssetTypeParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`BigNumber`, `BigNumber`\>\>
+
+Defined in: [src/api/client/Assets.ts:490](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Assets.ts#L490)
+
+Register a custom asset type
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`RegisterCustomAssetTypeParams`](../../../procedures/types/interfaces/RegisterCustomAssetTypeParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`BigNumber`, `BigNumber`\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [registerCustomAssetType.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### reserveTicker()
+
+> **reserveTicker**(`args`: [`ReserveTickerParams`](../../../procedures/types/interfaces/ReserveTickerParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`TickerReservation`](../../../entities/TickerReservation/classes/TickerReservation.mdx), [`TickerReservation`](../../../entities/TickerReservation/classes/TickerReservation.mdx)\>\>
+
+Defined in: [src/api/client/Assets.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/client/Assets.ts#L96)
+
+Reserve a ticker symbol under the ownership of the signing Identity to later use in the creation of an Asset.
+  The ticker will expire after a set amount of time, after which other users can reserve it
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`ReserveTickerParams`](../../../procedures/types/interfaces/ReserveTickerParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`TickerReservation`](../../../entities/TickerReservation/classes/TickerReservation.mdx), [`TickerReservation`](../../../entities/TickerReservation/classes/TickerReservation.mdx)\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [reserveTicker.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it

@@ -1,0 +1,55 @@
+---
+sidebar_label: "PermissionGroupType"
+---
+
+# Enumeration: PermissionGroupType
+
+Defined in: [src/api/entities/types.ts:737](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L737)
+
+## Enumeration Members
+
+### ExceptMeta
+
+> **ExceptMeta**: `"ExceptMeta"`
+
+Defined in: [src/api/entities/types.ts:746](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L746)
+
+not authorized:
+  - externalAgents
+
+***
+
+### Full
+
+> **Full**: `"Full"`
+
+Defined in: [src/api/entities/types.ts:741](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L741)
+
+all transactions authorized
+
+***
+
+### PolymeshV1Caa
+
+> **PolymeshV1Caa**: `"PolymeshV1Caa"`
+
+Defined in: [src/api/entities/types.ts:753](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L753)
+
+authorized:
+  - corporateAction
+  - corporateBallot
+  - capitalDistribution
+
+***
+
+### PolymeshV1Pia
+
+> **PolymeshV1Pia**: `"PolymeshV1Pia"`
+
+Defined in: [src/api/entities/types.ts:761](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L761)
+
+authorized:
+  - asset.issue
+  - asset.redeem
+  - asset.controllerTransfer
+  - sto (except for sto.invest)

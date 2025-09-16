@@ -1,0 +1,27 @@
+---
+sidebar_label: "MoveFundsParams"
+---
+
+# Interface: MoveFundsParams
+
+Defined in: [src/api/procedures/types.ts:1641](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1641)
+
+## Properties
+
+### items
+
+> **items**: [`PortfolioMovement`](../../../entities/types/type-aliases/PortfolioMovement.mdx)[]
+
+Defined in: [src/api/procedures/types.ts:1649](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1649)
+
+list of Assets (and the corresponding token amounts) that will be moved
+
+***
+
+### to?
+
+> `optional` **to**: `BigNumber` \| [`DefaultPortfolio`](../../../entities/DefaultPortfolio/classes/DefaultPortfolio.mdx) \| [`NumberedPortfolio`](../../../entities/NumberedPortfolio/classes/NumberedPortfolio.mdx)
+
+Defined in: [src/api/procedures/types.ts:1645](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1645)
+
+portfolio (or portfolio ID) that will receive the funds. Optional, if no value is passed, the funds will be moved to the default Portfolio of this Portfolio's owner

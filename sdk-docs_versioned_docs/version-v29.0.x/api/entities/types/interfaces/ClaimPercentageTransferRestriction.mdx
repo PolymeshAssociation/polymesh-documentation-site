@@ -1,0 +1,63 @@
+---
+sidebar_label: "ClaimPercentageTransferRestriction"
+---
+
+# Interface: ClaimPercentageTransferRestriction
+
+Defined in: [src/api/entities/types.ts:538](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L538)
+
+## Extends
+
+- `TransferRestrictionBase`
+
+## Properties
+
+### claim
+
+> **claim**: [`InputStatClaim`](../type-aliases/InputStatClaim.mdx)
+
+Defined in: [src/api/entities/types.ts:542](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L542)
+
+The type of investors this restriction applies to. e.g. Canadian investor
+
+***
+
+### exemptedIds?
+
+> `optional` **exemptedIds**: `string`[]
+
+Defined in: [src/api/entities/types.ts:509](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L509)
+
+array of Identity IDs that are exempted from the Restriction
+
+#### Inherited from
+
+`TransferRestrictionBase.exemptedIds`
+
+***
+
+### issuer
+
+> **issuer**: [`Identity`](../../Identity/classes/Identity.mdx)
+
+Defined in: [src/api/entities/types.ts:552](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L552)
+
+***
+
+### max
+
+> **max**: `BigNumber`
+
+Defined in: [src/api/entities/types.ts:550](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L550)
+
+The maximum percentage of the total supply that investors meeting the Claim criteria must hold
+
+***
+
+### min
+
+> **min**: `BigNumber`
+
+Defined in: [src/api/entities/types.ts:546](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/types.ts#L546)
+
+The minimum percentage of the total supply that investors meeting the Claim criteria must hold

@@ -1,0 +1,61 @@
+---
+sidebar_label: "PortfolioBalance"
+---
+
+# Interface: PortfolioBalance
+
+Defined in: [src/api/entities/Portfolio/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Portfolio/types.ts#L7)
+
+## Extends
+
+- [`Balance`](../../../Account/types/interfaces/Balance.mdx)
+
+## Properties
+
+### asset
+
+> **asset**: [`FungibleAsset`](../../../Asset/Fungible/classes/FungibleAsset.mdx)
+
+Defined in: [src/api/entities/Portfolio/types.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Portfolio/types.ts#L8)
+
+***
+
+### free
+
+> **free**: `BigNumber`
+
+Defined in: [src/api/entities/Account/types.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/types.ts#L11)
+
+balance available for transferring and paying fees
+
+#### Inherited from
+
+[`Balance`](../../../Account/types/interfaces/Balance.mdx).[`free`](../../../Account/types/interfaces/Balance.mdx#free)
+
+***
+
+### locked
+
+> **locked**: `BigNumber`
+
+Defined in: [src/api/entities/Account/types.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/types.ts#L15)
+
+unavailable balance, either bonded for staking or locked for some other purpose
+
+#### Inherited from
+
+[`Balance`](../../../Account/types/interfaces/Balance.mdx).[`locked`](../../../Account/types/interfaces/Balance.mdx#locked)
+
+***
+
+### total
+
+> **total**: `BigNumber`
+
+Defined in: [src/api/entities/Account/types.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/types.ts#L19)
+
+free + locked
+
+#### Inherited from
+
+[`Balance`](../../../Account/types/interfaces/Balance.mdx).[`total`](../../../Account/types/interfaces/Balance.mdx#total)

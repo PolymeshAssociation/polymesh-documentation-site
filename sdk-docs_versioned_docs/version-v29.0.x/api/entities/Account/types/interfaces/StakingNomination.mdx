@@ -1,0 +1,45 @@
+---
+sidebar_label: "StakingNomination"
+---
+
+# Interface: StakingNomination
+
+Defined in: [src/api/entities/Account/types.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/types.ts#L113)
+
+## Properties
+
+### submittedInEra
+
+> **submittedInEra**: `BigNumber`
+
+Defined in: [src/api/entities/Account/types.ts:123](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/types.ts#L123)
+
+The era in which the nomination was submitted
+
+#### Note
+
+nominations only effect future eras (1 era is approximately 1 day)
+
+***
+
+### suppressed
+
+> **suppressed**: `boolean`
+
+Defined in: [src/api/entities/Account/types.ts:130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/types.ts#L130)
+
+Nominations maybe suppressed if they fail to meet the minimum bond or validators are over subscribed
+
+#### Note
+
+nominations are rarely suppressed on Polymesh
+
+***
+
+### targets
+
+> **targets**: [`Account`](../../classes/Account.mdx)[]
+
+Defined in: [src/api/entities/Account/types.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Account/types.ts#L117)
+
+The nominated validators

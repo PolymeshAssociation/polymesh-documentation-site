@@ -1,0 +1,77 @@
+---
+sidebar_label: "TransactionPayload"
+---
+
+# Interface: TransactionPayload
+
+Defined in: [src/base/types.ts:176](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L176)
+
+Unsigned transaction data in JSON a format
+
+## Properties
+
+### metadata
+
+> `readonly` **metadata**: `Record`\<`string`, `string`\>
+
+Defined in: [src/base/types.ts:202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L202)
+
+Additional information attached to the payload, such as IDs or memos about the transaction.
+
+#### Note
+
+this is not chain data. Its for convenience for attaching a trace ID
+
+***
+
+### method
+
+> `readonly` **method**: `` `0x${string}` ``
+
+Defined in: [src/base/types.ts:195](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L195)
+
+A hex representation of the core extrinsic information. i.e. the extrinsic and args, but does not contain information about who is to sign the transaction.
+
+***
+
+### multiSig
+
+> `readonly` **multiSig**: `null` \| `string`
+
+Defined in: [src/base/types.ts:209](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L209)
+
+The address of the MultiSig if the transaction is a proposal.
+
+Will be set only if the signing account is a MultiSig signer and the transaction is not approving or rejecting an existing proposal
+
+***
+
+### payload
+
+> `readonly` **payload**: `SignerPayloadJSON`
+
+Defined in: [src/base/types.ts:182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L182)
+
+This is what a Polkadot signer ".signPayload" method expects
+
+#### Note
+
+this field is recommended to be passed in with the signature when submitting a signed transaction
+
+***
+
+### rawPayload
+
+> `readonly` **rawPayload**: `SignerPayloadRaw`
+
+Defined in: [src/base/types.ts:190](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/base/types.ts#L190)
+
+An alternative representation of the payload for which Polkadot signers providing ".signRaw" expect.
+
+#### Note
+
+using the field `payload` is generally recommended. The raw version is included so any polkadot compliant signer can sign.
+
+#### Note
+
+`signRaw` typically returns just the signature. However signatures must be prefixed with a byte to indicate the type. For ed25519 signatures prepend a zero byte (`0x00`), for sr25519 `0x01` byte to indicate sr25519 if the signer implementation does not already do so.

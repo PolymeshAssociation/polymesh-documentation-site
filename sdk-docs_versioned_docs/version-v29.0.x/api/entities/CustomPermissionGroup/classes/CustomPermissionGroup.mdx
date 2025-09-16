@@ -1,0 +1,333 @@
+---
+sidebar_label: "CustomPermissionGroup"
+---
+
+# Class: CustomPermissionGroup
+
+Defined in: [src/api/entities/CustomPermissionGroup.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/CustomPermissionGroup.ts#L27)
+
+Represents a group of custom permissions for an Asset
+
+## Extends
+
+- [`PermissionGroup`](../../PermissionGroup/classes/PermissionGroup.mdx)
+
+## Properties
+
+### asset
+
+> **asset**: [`BaseAsset`](../../Asset/Base/BaseAsset/classes/BaseAsset.mdx)
+
+Defined in: [src/api/entities/PermissionGroup.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/PermissionGroup.ts#L19)
+
+Asset for which this group specifies permissions
+
+#### Inherited from
+
+[`PermissionGroup`](../../PermissionGroup/classes/PermissionGroup.mdx).[`asset`](../../PermissionGroup/classes/PermissionGroup.mdx#asset)
+
+***
+
+### id
+
+> **id**: `BigNumber`
+
+Defined in: [src/api/entities/CustomPermissionGroup.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/CustomPermissionGroup.ts#L38)
+
+***
+
+### uuid
+
+> **uuid**: `string`
+
+Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L46)
+
+#### Inherited from
+
+[`PermissionGroup`](../../PermissionGroup/classes/PermissionGroup.mdx).[`uuid`](../../PermissionGroup/classes/PermissionGroup.mdx#uuid)
+
+## Methods
+
+### exists()
+
+> **exists**(): `Promise`\<`boolean`\>
+
+Defined in: [src/api/entities/CustomPermissionGroup.ts:97](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/CustomPermissionGroup.ts#L97)
+
+Determine whether this Custom Permission Group exists on chain
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+#### Overrides
+
+[`PermissionGroup`](../../PermissionGroup/classes/PermissionGroup.mdx).[`exists`](../../PermissionGroup/classes/PermissionGroup.mdx#exists)
+
+***
+
+### getPermissions()
+
+> **getPermissions**(): `Promise`\<[`GroupPermissions`](../../types/type-aliases/GroupPermissions.mdx)\>
+
+Defined in: [src/api/entities/CustomPermissionGroup.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/CustomPermissionGroup.ts#L64)
+
+Retrieve the list of permissions and transaction groups associated with this Permission Group
+
+#### Returns
+
+`Promise`\<[`GroupPermissions`](../../types/type-aliases/GroupPermissions.mdx)\>
+
+#### Overrides
+
+[`PermissionGroup`](../../PermissionGroup/classes/PermissionGroup.mdx).[`getPermissions`](../../PermissionGroup/classes/PermissionGroup.mdx#getpermissions)
+
+***
+
+### isEqual()
+
+> **isEqual**(`entity`: [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>): `boolean`
+
+Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L61)
+
+Determine whether this Entity is the same as another one
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`entity`
+
+</td>
+<td>
+
+[`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+[`PermissionGroup`](../../PermissionGroup/classes/PermissionGroup.mdx).[`isEqual`](../../PermissionGroup/classes/PermissionGroup.mdx#isequal)
+
+***
+
+### setPermissions()
+
+> **setPermissions**(`args`: [`SetGroupPermissionsParams`](../../../procedures/types/interfaces/SetGroupPermissionsParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/CustomPermissionGroup.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/CustomPermissionGroup.ts#L59)
+
+Modify the group's permissions
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`SetGroupPermissionsParams`](../../../procedures/types/interfaces/SetGroupPermissionsParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [setPermissions.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### toHuman()
+
+> **toHuman**(): [`HumanReadable`](../interfaces/HumanReadable.mdx)
+
+Defined in: [src/api/entities/CustomPermissionGroup.ts:111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/CustomPermissionGroup.ts#L111)
+
+Return the Group's static data
+
+#### Returns
+
+[`HumanReadable`](../interfaces/HumanReadable.mdx)
+
+#### Overrides
+
+[`PermissionGroup`](../../PermissionGroup/classes/PermissionGroup.mdx).[`toHuman`](../../PermissionGroup/classes/PermissionGroup.mdx#tohuman)
+
+***
+
+### generateUuid()
+
+> `static` **generateUuid**\<`Identifiers`\>(`identifiers`: `Identifiers`): `string`
+
+Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L14)
+
+Generate the Entity's UUID from its identifying properties
+
+#### Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`Identifiers`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`identifiers`
+
+</td>
+<td>
+
+`Identifiers`
+
+</td>
+<td>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+[`PermissionGroup`](../../PermissionGroup/classes/PermissionGroup.mdx).[`generateUuid`](../../PermissionGroup/classes/PermissionGroup.mdx#generateuuid)
+
+***
+
+### unserialize()
+
+> `static` **unserialize**\<`Identifiers`\>(`serialized`: `string`): `Identifiers`
+
+Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Entity.ts#L23)
+
+Unserialize a UUID into its Unique Identifiers
+
+#### Type Parameters
+
+<table>
+<thead>
+<tr>
+<th>Type Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`Identifiers`
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`serialized`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+UUID to unserialize
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Identifiers`
+
+#### Inherited from
+
+[`PermissionGroup`](../../PermissionGroup/classes/PermissionGroup.mdx).[`unserialize`](../../PermissionGroup/classes/PermissionGroup.mdx#unserialize)

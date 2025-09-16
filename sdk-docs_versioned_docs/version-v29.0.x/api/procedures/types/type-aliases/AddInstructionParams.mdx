@@ -1,0 +1,138 @@
+---
+sidebar_label: "AddInstructionParams"
+---
+
+# Type Alias: AddInstructionParams
+
+> **AddInstructionParams** = `object` & \{ `endBlock?`: `BigNumber`; \} \| \{ `endAfterBlock?`: `BigNumber`; \} \| \{ `endAfterLock?`: `true`; \}
+
+Defined in: [src/api/procedures/types.ts:934](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L934)
+
+## Type declaration
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`legs`
+
+</td>
+<td>
+
+[`InstructionLeg`](InstructionLeg.mdx)[]
+
+</td>
+<td>
+
+array of Asset movements
+
+</td>
+<td>
+
+[src/api/procedures/types.ts:938](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L938)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`mediators?`
+
+</td>
+<td>
+
+(`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx))[]
+
+</td>
+<td>
+
+additional identities that must affirm the instruction
+
+**Note**
+
+mediators are mandatory if settlement is to be locked for execution (providing `endAfterLock`)
+
+</td>
+<td>
+
+[src/api/procedures/types.ts:956](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L956)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`memo?`
+
+</td>
+<td>
+
+`string`
+
+</td>
+<td>
+
+identifier string to help differentiate instructions
+
+</td>
+<td>
+
+[src/api/procedures/types.ts:950](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L950)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`tradeDate?`
+
+</td>
+<td>
+
+`Date`
+
+</td>
+<td>
+
+date at which the trade was agreed upon (optional, for off chain trades)
+
+</td>
+<td>
+
+[src/api/procedures/types.ts:942](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L942)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`valueDate?`
+
+</td>
+<td>
+
+`Date`
+
+</td>
+<td>
+
+date at which the trade was executed (optional, for off chain trades)
+
+</td>
+<td>
+
+[src/api/procedures/types.ts:946](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L946)
+
+</td>
+</tr>
+</tbody>
+</table>

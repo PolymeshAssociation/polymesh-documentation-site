@@ -1,0 +1,26 @@
+---
+sidebar_label: "OffChainSignature"
+---
+
+# Interface: OffChainSignature
+
+Defined in: [src/api/procedures/types.ts:1024](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1024)
+
+## Properties
+
+### type
+
+> **type**: [`SignerKeyRingType`](../enumerations/SignerKeyRingType.mdx)
+
+Defined in: [src/api/procedures/types.ts:1025](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1025)
+
+***
+
+### value
+
+> **value**: `` `0x${string}` ``
+
+Defined in: [src/api/procedures/types.ts:1030](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1030)
+
+The off chain signature value.
+NOTE: The off chain payload should be wrapped with bytes before signing. For e.g. `<Bytes>Off chain payload</Bytes>` should be signed to get the signature value

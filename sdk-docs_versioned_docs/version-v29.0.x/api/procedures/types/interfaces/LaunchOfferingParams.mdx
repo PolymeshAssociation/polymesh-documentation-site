@@ -1,0 +1,99 @@
+---
+sidebar_label: "LaunchOfferingParams"
+---
+
+# Interface: LaunchOfferingParams
+
+Defined in: [src/api/procedures/types.ts:1387](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1387)
+
+## Properties
+
+### end?
+
+> `optional` **end**: `Date`
+
+Defined in: [src/api/procedures/types.ts:1415](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1415)
+
+end date of the Offering (optional, defaults to never)
+
+***
+
+### minInvestment
+
+> **minInvestment**: `BigNumber`
+
+Defined in: [src/api/procedures/types.ts:1424](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1424)
+
+minimum amount that can be spent on this offering
+
+***
+
+### name
+
+> **name**: `string`
+
+Defined in: [src/api/procedures/types.ts:1407](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1407)
+
+***
+
+### offeringPortfolio
+
+> **offeringPortfolio**: [`PortfolioLike`](../../../entities/types/type-aliases/PortfolioLike.mdx)
+
+Defined in: [src/api/procedures/types.ts:1391](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1391)
+
+portfolio in which the Asset tokens to be sold are stored
+
+***
+
+### raisingCurrency
+
+> **raisingCurrency**: `string`
+
+Defined in: [src/api/procedures/types.ts:1400](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1400)
+
+ticker symbol of the currency in which the funds are being raised (e.g. 'USD' or 'CAD').
+  Other Assets can be used as currency as well
+
+***
+
+### raisingPortfolio
+
+> **raisingPortfolio**: [`PortfolioLike`](../../../entities/types/type-aliases/PortfolioLike.mdx)
+
+Defined in: [src/api/procedures/types.ts:1395](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1395)
+
+portfolio in which the raised funds will be stored
+
+***
+
+### start?
+
+> `optional` **start**: `Date`
+
+Defined in: [src/api/procedures/types.ts:1411](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1411)
+
+start date of the Offering (optional, defaults to right now)
+
+***
+
+### tiers
+
+> **tiers**: [`OfferingTier`](../../../entities/Offering/types/interfaces/OfferingTier.mdx)[]
+
+Defined in: [src/api/procedures/types.ts:1420](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1420)
+
+array of sale tiers. Each tier consists of an amount of Assets to be sold at a certain price.
+  Tokens in a tier can only be bought when all tokens in previous tiers have been bought
+
+***
+
+### venue?
+
+> `optional` **venue**: [`Venue`](../../../entities/Venue/classes/Venue.mdx)
+
+Defined in: [src/api/procedures/types.ts:1406](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1406)
+
+venue through which all offering related trades will be settled
+  (optional, defaults to the first `Sto` type Venue owned by the owner of the Offering Portfolio.
+  If passed, it must be of type `Sto`)

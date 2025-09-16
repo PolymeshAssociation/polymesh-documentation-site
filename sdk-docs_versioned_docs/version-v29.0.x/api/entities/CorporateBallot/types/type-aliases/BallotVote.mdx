@@ -1,0 +1,80 @@
+---
+sidebar_label: "BallotVote"
+---
+
+# Type Alias: BallotVote
+
+> **BallotVote** = `object`
+
+Defined in: [src/api/entities/CorporateBallot/types.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/CorporateBallot/types.ts#L21)
+
+## Properties
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+<a id="fallback"></a> `fallback?`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+The fallback vote to be used if the choice is not found in the ballot.
+
+**Note**
+
+This is only allowed for RCV ballots.
+
+**Note**
+
+Must point to a choice in a motion (index of the choice in the motion choices array).
+
+**Note**
+
+Must not point to the same choice as the `vote` property (index != choiceIndex).
+
+</td>
+<td>
+
+[src/api/entities/CorporateBallot/types.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/CorporateBallot/types.ts#L33)
+
+</td>
+</tr>
+<tr>
+<td>
+
+<a id="power"></a> `power`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+The power of the vote.
+
+</td>
+<td>
+
+[src/api/entities/CorporateBallot/types.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/CorporateBallot/types.ts#L25)
+
+</td>
+</tr>
+</tbody>
+</table>

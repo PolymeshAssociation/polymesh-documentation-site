@@ -1,0 +1,18 @@
+---
+sidebar_label: "SetAssetRequirementsParams"
+---
+
+# Interface: SetAssetRequirementsParams
+
+Defined in: [src/api/procedures/types.ts:1277](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1277)
+
+## Properties
+
+### requirements
+
+> **requirements**: [`InputCondition`](../../../entities/types/type-aliases/InputCondition.mdx)[][]
+
+Defined in: [src/api/procedures/types.ts:1282](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/procedures/types.ts#L1282)
+
+array of array of conditions. For a transfer to be successful, it must comply with all the conditions of at least one of the arrays.
+  In other words, higher level arrays are *OR* between them, while conditions inside each array are *AND* between them

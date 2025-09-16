@@ -1,0 +1,315 @@
+---
+sidebar_label: "TransferRestrictions"
+---
+
+# Class: TransferRestrictions
+
+Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L55)
+
+Handles all Transfer Restriction related functionality.
+
+## Extends
+
+- `Namespace`\<[`FungibleAsset`](../../classes/FungibleAsset.mdx)\>
+
+## Methods
+
+### addExemptions()
+
+> **addExemptions**(`args`: [`TransferRestrictionExemptionParams`](../../../../../procedures/types/type-aliases/TransferRestrictionExemptionParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:489](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L489)
+
+Exempt identities from Transfer Restrictions. These identities will not be subject to Transfer Restriction rules.
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`TransferRestrictionExemptionParams`](../../../../../procedures/types/type-aliases/TransferRestrictionExemptionParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [addExemptions.checkAuthorization](../../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### getExemptions()
+
+> **getExemptions**(): `Promise`\<[`TransferRestrictionExemption`](../../../types/interfaces/TransferRestrictionExemption.mdx)[]\>
+
+Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:432](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L432)
+
+Return identities with exemptions.
+
+#### Returns
+
+`Promise`\<[`TransferRestrictionExemption`](../../../types/interfaces/TransferRestrictionExemption.mdx)[]\>
+
+***
+
+### getRestrictions()
+
+> **getRestrictions**(): `Promise`\<[`ActiveTransferRestrictions`](../../../types/interfaces/ActiveTransferRestrictions.mdx)\>
+
+Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L130)
+
+Get all current restrictions for this asset.
+
+#### Returns
+
+`Promise`\<[`ActiveTransferRestrictions`](../../../types/interfaces/ActiveTransferRestrictions.mdx)\>
+
+***
+
+### getStats()
+
+> **getStats**(): `Promise`\<[`AssetStat`](../../../types/interfaces/AssetStat.mdx)[]\>
+
+Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L150)
+
+Return active asset stats.
+
+#### Returns
+
+`Promise`\<[`AssetStat`](../../../types/interfaces/AssetStat.mdx)[]\>
+
+***
+
+### getValues()
+
+> **getValues**(): `Promise`\<[`TransferRestrictionStatValues`](../../../types/interfaces/TransferRestrictionStatValues.mdx)[]\>
+
+Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:299](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L299)
+
+Get the values of all active transfer restrictions for this Asset
+
+#### Returns
+
+`Promise`\<[`TransferRestrictionStatValues`](../../../types/interfaces/TransferRestrictionStatValues.mdx)[]\>
+
+an array of objects containing the values of all active transfer restrictions for this Asset
+
+***
+
+### removeExemptions()
+
+> **removeExemptions**(`args`: [`TransferRestrictionExemptionParams`](../../../../../procedures/types/type-aliases/TransferRestrictionExemptionParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:496](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L496)
+
+Remove identities from Transfer Restriction exemptions.
+
+The given identities will no longer be exempt from Transfer Restrictions.
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`TransferRestrictionExemptionParams`](../../../../../procedures/types/type-aliases/TransferRestrictionExemptionParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [removeExemptions.checkAuthorization](../../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### setRestrictions()
+
+> **setRestrictions**(`args`: [`TransferRestrictionParams`](../../../../../procedures/types/type-aliases/TransferRestrictionParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:469](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L469)
+
+Set all Transfer Restrictions on this Asset.
+
+Transfer Restrictions control ownership requirements based on investor statistics.
+For example, TransferRestrictionType.Count can limit the number of investors.
+TransferRestrictionType.Percentage can limit the maximum percentage an individual investor may hold.
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`TransferRestrictionParams`](../../../../../procedures/types/type-aliases/TransferRestrictionParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+The relevant stat must be enabled by including it in setStats before the restriction can be created.
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [setRestrictions.checkAuthorization](../../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### setStats()
+
+> **setStats**(`args`: [`SetTransferRestrictionStatParams`](../../../../../procedures/types/type-aliases/SetTransferRestrictionStatParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:484](https://github.com/PolymeshAssociation/polymesh-sdk/blob/bee6a2fe7a8ce5db42a6982e793782182cde2153/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L484)
+
+Set the enabled statistics for an Asset.
+
+Transfer Restrictions require the relevant stat to be enabled before they can be set.
+Calling this method will override the currently enabled stats with the provided set,
+which means it can also be used to remove previously enabled stats.
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`SetTransferRestrictionStatParams`](../../../../../procedures/types/type-aliases/SetTransferRestrictionStatParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+If you attempt to remove a stat that is currently required by an active transfer restriction,
+the chain will throw an error.
+
+#### Note
+
+Count-based stats must be given an initial value. The counter is only updated automatically with each transfer of tokens after the stat has been enabled.
+As such, the initial value for the stat should be passed in, which can be fetched with [FungibleAsset.investorCount](../../classes/FungibleAsset.mdx#investorcount).
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [setStats.checkAuthorization](../../../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
