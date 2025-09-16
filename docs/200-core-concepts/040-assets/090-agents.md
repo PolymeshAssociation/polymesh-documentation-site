@@ -169,7 +169,7 @@ The [`AssetPermissions`](/sdk-docs/api/entities/Identity/AssetPermissions/classe
 - [`setGroup`](/sdk-docs/api/entities/Identity/AssetPermissions/classes/AssetPermissions/#setgroup): Assign this Identity to a different permission group for a given asset.
 - [`waive`](/sdk-docs/api/entities/Identity/AssetPermissions/classes/AssetPermissions/#waive): Abdicate from the current permission group for a given asset (removes all permissions for that asset).
 
-Acceptance of an authorization request to become an agent is done with the [Authorizations](/sdk-docs/classes/API/Entities/Identity/#authorizations) (accessed via `identity.authorizations`).
+Acceptance of an authorization request to become an agent is done with the [Authorizations](/sdk-docs/api/entities/Identity/classes/Identity/#authorizations) (accessed via `identity.authorizations`).
 
 ## With the SDK
 
