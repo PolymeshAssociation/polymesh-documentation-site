@@ -9,6 +9,7 @@ import YoutubePlayer from '/src/components/YoutubePlayer';
 import ActionCard from '/src/components/ActionCard';
 import ActionCardWrapper from '/src/components/ActionCard/ActionCardWrapper';
 import RewardCurve from '/src/components/RewardCurve';
+import ZoomableMermaid from '../components/ZoomableMermaid';
 
 export default {
   // Re-use the default mapping
@@ -24,4 +25,5 @@ export default {
   ActionCard,
   ActionCardWrapper,
   RewardCurve,
+  ZoomableMermaid,
 };

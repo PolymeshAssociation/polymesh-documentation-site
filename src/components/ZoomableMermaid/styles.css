@@ -1,0 +1,110 @@
+.zoomable-mermaid {
+  position: relative;
+  cursor: zoom-in;
+}
+
+/* Fullscreen mode fills the browser window */
+.zoomable-mermaid-emulated-fullscreen {
+  position: fixed !important;
+  inset: 0 !important;
+  background: var(--ifm-background-surface-color);
+  z-index: 9999 !important;
+  padding: var(--ifm-global-spacing);
+  overflow: auto;
+}
+
+/* Custom transform wrapper styling for proper fullscreen behavior */
+.zoomable-mermaid__transform-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  display: block !important;
+  max-width: none !important;
+  box-sizing: border-box;
+  cursor: grab;
+  /* CSS containment prevents ResizeObserver loops during panning */
+  contain: layout;
+}
+
+.zoomable-mermaid__transform-wrapper.is-panning {
+  cursor: grabbing;
+}
+
+/* Ensure the inner transform content fills available width
+   react-zoom-pan-pinch defaults this to width: fit-content; */
+.zoomable-mermaid__transform-content {
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  display: block !important;
+  box-sizing: border-box;
+}
+
+/* Ensure mermaid container expands in fullscreen */
+.zoomable-mermaid-emulated-fullscreen .docusaurus-mermaid-container {
+  display: block !important;
+  box-sizing: border-box;
+  max-width: none !important;
+  width: 100% !important;
+  overflow: auto;
+}
+
+/* Ensure SVG is not capped by inline max-width set by Mermaid/Docusaurus */
+.zoomable-mermaid-emulated-fullscreen .docusaurus-mermaid-container svg {
+  display: block;
+  box-sizing: border-box;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+}
+
+/* Controls pill in fullscreen */
+.zoomable-mermaid__controls {
+  position: fixed;
+  top: calc(var(--ifm-global-spacing) * 0.75);
+  right: calc(var(--ifm-global-spacing) * 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: calc(var(--ifm-global-spacing) * 0.35)
+    calc(var(--ifm-global-spacing) * 0.5);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  box-shadow: var(--ifm-global-shadow-lw);
+  border-radius: 999px;
+  z-index: 3;
+  backdrop-filter: blur(4px);
+}
+
+.zoomable-mermaid__iconbtn {
+  border: none;
+  background: transparent;
+  color: var(--ifm-font-color-base);
+  width: calc(var(--ifm-global-spacing) * 1.75);
+  height: calc(var(--ifm-global-spacing) * 1.75);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(var(--ifm-global-spacing) * 0.375);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  font-size: large;
+  font-weight: 600;
+}
+
+.zoomable-mermaid__iconbtn:hover {
+  background: var(--ifm-hover-overlay);
+}
+
+.zoomable-mermaid__divider {
+  display: inline-block;
+  width: calc(var(--ifm-global-spacing) * 1.375);
+  height: 1px;
+  background: var(--ifm-color-emphasis-300);
+  margin: 0 calc(var(--ifm-global-spacing) * 0.25);
+}
+
+/* When fullscreen is active, prevent the main document from scrolling */
+body.zoomable-mermaid-no-scroll {
+  overflow: hidden !important;
+}
