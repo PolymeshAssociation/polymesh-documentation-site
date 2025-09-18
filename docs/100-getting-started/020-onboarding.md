@@ -73,3 +73,4 @@ On the [Testnet instance of the Polymesh Portal](https://portal.polymesh.live/),
 
 - [Polymesh Portal Mainnet](https://portal.polymesh.network)
 - [Polymesh Portal Testnet](https://portal.polymesh.live)
+- [Polymesh Identity SDK Documentation](/sdk-docs/api/client/Identities/classes/Identities/)

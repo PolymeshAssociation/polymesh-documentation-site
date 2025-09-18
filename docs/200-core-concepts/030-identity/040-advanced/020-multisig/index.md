@@ -204,3 +204,8 @@ Invalidated proposals must be recreated as new proposals if required.
 :::note
 Historical proposal details can be retrieved via the [SubQuery](/development/tooling/subquery) chain indexing service or by querying historical blocks on an archive node.
 :::
+
+#### With the SDK
+
+- The [MultiSig](/sdk-docs/api/entities/Account/MultiSig/classes/MultiSig/) class represents a multisig account and all associated information.
+- The [MultiSigProposal](/sdk-docs/api/entities/MultiSigProposal/classes/MultiSigProposal/) class represents the proposal and handles all functionality related to multisig proposals.

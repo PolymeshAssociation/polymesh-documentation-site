@@ -253,3 +253,7 @@ Choose based on your needs:
 ## Conclusion
 
 Secondary keys provide a powerful way to implement secure and flexible identity management on Polymesh. When properly implemented with appropriate permissions and controls, they enable organizations to maintain strong security while supporting efficient operations. Understanding the relationship between secondary keys, smart contracts, and child identities allows for creating sophisticated and secure organizational structures on the blockchain.
+
+### With the SDK
+
+- The [AccountManagement](/sdk-docs/api/client/AccountManagement/classes/AccountManagement/) class handles functionality related to the management of secondary keys, including adding or removing keys, and primary key rotation.
