@@ -1,0 +1,68 @@
+---
+title: Compliance & Regulation
+description: Auditors, mediators, PoB, and operational controls
+sidebar_label: Compliance & Regulation
+slug: /confidential-assets/compliance-and-regulation
+id: confidential-assets-compliance
+---
+
+# Compliance & Regulation in Confidential Assets
+
+Polymesh Confidential Assets are designed for regulated assets. Instead of treating compliance as an afterthought, they introduce **asset-specific access hooks** that can support retrospective audit and prospective control while keeping the public ledger confidential.
+
+## Roles
+
+| Feature                  | Auditors                                                                                                      | Mediators                                                                       |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| **Role in Lifecycle**    | Hidden, passive compliance entities.                                                                          | Hidden, active participants in the transaction lifecycle.                       |
+| **Function**             | Can decrypt and inspect encrypted transaction details for a specific asset type (retrospective auditability). | Must explicitly affirm or reject transfers when required (prospective control). |
+| **Impact on Settlement** | Do not delay settlement; enable post-facto checks.                                                            | Settlement remains pending until affirmed/rejected.                             |
+
+Notes:
+
+- **Asset-specific:** Auditors/mediators are designated per asset type.
+- **Scoped visibility:** They decrypt encrypted payloads for the assets they are assigned to.
+- **Key-privacy requirement:** Polymesh publishes an on-chain record mapping asset types to their auditor/mediator keys. If ciphertexts revealed which key was used, an observer could identify the asset type. The protocol therefore requires encryption schemes that hide both the message and which key was used (key-privacy), preventing asset-type leakage while keeping transaction amounts confidential.
+
+## Receiver Affirmation
+
+Receivers explicitly accept or reject incoming assets before the incoming value becomes spendable.
+
+Why this matters:
+
+- It matches how regulated transfers often work: the receiver may assume legal/tax obligations.
+- It prevents “forced delivery” of assets.
+- It implies **multi-step settlement**: you need at least a sender-side action and a receiver-side action before a transfer is fully finalized.
+
+## Proof of Balance (PoB)
+
+Proof of balance (PoB) lets a verifier ask: “What is your balance for asset X?” without requiring the prover to reveal their full transaction history.
+
+PoB is needed because receiver affirmation creates _in-between_ states: balances may be split between a finalized balance and pending legs.
+
+### Approach 1: Auditor-assisted
+
+- Prover reveals (and proves) finalized balance and pending counter to the asset’s auditor.
+- Prover points to relevant legs; auditor decrypts those legs (for that asset) and checks totals.
+
+### Approach 2: Generic PoB
+
+Allows proving balance to any verifier without auditor decryption.
+
+- If all finalized + pending legs are referenced, the verifier can link those legs together.
+- Counter-update transactions reduce counters associated with finalized legs so PoB can reference fewer historical items and leak less linkage.
+
+## Operational Controls
+
+These controls are relevant for regulated assets; availability depends on network release and policy.
+
+### Account freezing
+
+Prevent further updates (or gate them) for an account/asset context in exceptional cases by proving the targeted account state without revealing its private values.
+
+### Forced transfer (clawback / key loss recovery)
+
+Support policy-driven recovery flows:
+
+- **Key loss recovery:** re-encrypt value under a newly generated key.
+- **Clawback:** enable issuer-controlled recovery flows under policy.

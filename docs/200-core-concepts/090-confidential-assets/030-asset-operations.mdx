@@ -1,0 +1,68 @@
+---
+title: Asset Operations
+description: Create confidential assets, register accounts, and mint balances with a proof service
+sidebar_label: Asset Operations
+slug: /confidential-assets/asset-operations
+id: confidential-assets-asset-operations
+---
+
+# Asset Operations
+
+This page explains how to create a confidential asset, register confidential accounts for that asset, and mint balances.
+
+What you can do here:
+
+- Create a confidential asset with issuer-embedded compliance hooks (auditors and/or mediators)
+- Register confidential accounts for that asset (asset-specific state commitments)
+- Mint supply while keeping prior balances private
+
+## Prerequisites
+
+- A Polymesh DID and signing key to submit transactions
+- A proof service (e.g., WASM library or remote prover) with your confidential account and encryption keys loaded
+- Auditor and/or mediator encryption keys if the asset requires compliance participants
+
+## 1) Create a confidential asset
+
+Define the asset and its compliance configuration, then publish it on-chain.
+
+- Capture asset details (name, symbol, decimals, optional metadata).
+- Assign compliance participants: auditors for retrospective visibility and/or mediators for prospective control; provide their encryption public keys. (A minimum of one is required)
+- Request the proof service to build the creation proof and submit `createAsset`.
+- On success, the chain emits `AssetCreated` with the new asset ID and records the issuer → asset → compliance keys mapping for future lookups.
+
+Outcomes:
+
+- Asset exists on-chain with its compliance hooks baked in.
+- Regulatory metadata is visible (who the issuer is and which auditor/mediator keys apply) without revealing any balances or future transactions.
+
+## 2) Register your account for the asset
+
+Confidential accounts are asset-specific: the same key can register many assets, but each asset gets its own state commitment. This keeps proving scoped to the asset you are using.
+
+- Prerequisites: your confidential account is registered on-chain and unlocked in the proof service.
+- Generate a **register-account-asset proof** that proves ownership of the account keys and initializes a zero balance for the chosen asset.
+- Submit `registerAccountAssets` with the proof; cache the returned state commitment and leaf path locally.
+
+Outcomes:
+
+- The account is linked to the asset. The asset registration of the confidential account is publicly visible.
+- A zero-balance commitment for that asset is inserted into the curve-tree accumulator; nothing about balances is revealed.
+
+## 3) Mint supply (issuer only)
+
+Minting increases supply for the issuer while keeping prior balances confidential.
+
+- Prerequisites: issuer’s account-asset state and leaf path available to the proof service.
+- Produce a **minting proof**: spend the old state, reveal a nullifier for it, and create a new state commitment with the increased balance.
+- Submit `mintAsset` with the proof; persist the updated state and leaf path for future actions.
+
+Outcomes:
+
+- Public total supply increases; the issuer’s new confidential balance is committed on-chain, and the spent state is prevented from reuse via its nullifier.
+- The old balance remains hidden; only the new commitment and proof validity are public.
+
+## Operational tips
+
+- Keep encrypted backups of account-asset state (commitments, leaf paths, counters) after each successful transaction.
+- When using a remote proof service, encrypt seeds/state in transit and at rest.

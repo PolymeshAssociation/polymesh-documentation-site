@@ -1,0 +1,154 @@
+---
+title: Glossary
+description: Core cryptographic and protocol terms used in Polymesh Confidential Assets
+sidebar_label: Glossary
+slug: /confidential-assets/glossary
+id: confidential-assets-glossary
+---
+
+# Confidential Assets Glossary
+
+This glossary defines terms used across the Confidential Assets documentation.
+
+## Foundational Cryptographic Primitives
+
+### Public Key Encryption (PKE)
+
+Encrypts settlement payloads (e.g., leg details) so only designated parties can read them.
+
+**Key-privacy is a protocol requirement.** Standard encryption hides the message content but may leak which public key was used. Polymesh publishes an on-chain record mapping each asset type to its designated auditor/mediator keys. If a ciphertext revealed which key was used, an observer could reference this mapping to identify the asset type being transacted. The protocol mandates key-privacy-preserving encryption so that ciphertexts do not leak which auditor key was used, maintaining asset-type confidentiality.
+
+### Commitment Schemes
+
+Hide values while binding the prover to them.
+
+In Confidential Assets, commitments are used to represent **account states** on-chain without revealing balances.
+
+### Pseudorandom Functions (PRF)
+
+Deterministically derives secret values from secret keys and context.
+
+Used to generate randomness/nullifiers in a way that can be reproduced by the rightful holder.
+
+## Protocol Concepts
+
+### DART vs. Polymesh Confidential Assets
+
+#### DART (original research)
+
+- An account-based confidential payments model that targets a large anonymity set with constant-size on‑chain proofs.
+- Uses commitments, accumulators (e.g., curve trees), nullifiers, and zero‑knowledge proofs to update account states privately.
+- Introduces receiver‑side acceptance semantics and auditability concepts in an account model (as opposed to UTXO notes).
+- Serves as the conceptual baseline for later Polymesh work.
+
+#### P-DART — Polymesh “Decentralized, Anonymous, and Regulation-friendly Tokenization”
+
+- Polymesh’s evolution of DART to support regulated settlement on chain.
+- Adds a settlement container with encrypted legs, explicit sender/receiver affirmations, and optional mediation.
+- Defines compliance hooks (asset-specific auditors and mediators) with key-privacy goals for encryption.
+- Details Proof of Balance approaches (auditor-assisted and generic) and the use of counters/counter-updates.
+- Describes operational controls such as account freezing and forced transfer for exceptional scenarios.
+
+:::info References
+
+- P-DART paper: https://assets.polymesh.network/P-DART-v1.pdf
+- DART paper: https://eprint.iacr.org/2025/239
+
+:::
+
+### Settlement
+
+A container for one or more **legs** that will be executed under an affirmation workflow.
+
+If you think in terms of transfers: a settlement executes one or more transfers; when there’s just one leg, settlement ≈ transfer.
+
+### Leg
+
+A single transfer intent inside a settlement (sender, receiver, asset type, value), typically stored on-chain in encrypted form.
+
+### Transfer
+
+The conceptual movement of value from a sender to a receiver for a given asset. In this design, a transfer is represented as a **leg** within a **settlement**. When there’s one leg, “settlement” and “transfer” are effectively the same operation from an end‑user perspective.
+
+### Settlement Creator
+
+The party that creates a settlement and publishes the encrypted legs and a settlement proof.
+
+### Affirmation
+
+An explicit accept/reject decision recorded on-chain by a counterparty (sender/receiver) or by a mediator when required.
+
+In the implementation you’ll see proof types like `SenderAffirmationProof`, `ReceiverAffirmationProof`, and `MediatorAffirmationProof`.
+
+### Claim
+
+A receiver-side step that credits value into the receiver’s finalized balance (and updates counters accordingly).
+
+In the implementation this corresponds to a `ReceiverClaimProof`.
+
+## Advanced Systems
+
+### Zero-Knowledge Proofs (ZKP)
+
+Allow public verification of correctness without revealing secrets.
+
+Examples:
+
+- “This account state transition is well-formed.”
+- “The sender can afford this debit.”
+- “This encrypted leg corresponds to a valid settlement leg.”
+
+### Curve Trees / Accumulators
+
+Compactly represent a set of valid commitments and support **membership proofs**.
+
+In Polymesh you’ll see curve-tree roots for account/asset state, updated as leaves are added.
+
+### Relayer
+
+Third-party broadcaster that submits confidential transactions on behalf of users. Verifies anonymous fee proofs first, then signs and broadcasts the transaction, and is reimbursed from the pooled fee account.
+
+### Pooled System Fee Account
+
+Shared on-chain POLYX pool used to decouple user identity from fee payment. Deposits are linked to confidential fee accounts, and reimbursements to relayers come from this pool without revealing which user funded them.
+
+### Anonymous Fee Proof
+
+Zero-knowledge proof showing a confidential fee account holds enough hidden POLYX to cover network fee plus relayer commission, without revealing balance, deposit linkage, or account identity. Used with the relayer flow and the pooled fee account.
+
+## Ledger Mechanics
+
+### Account State Commitment
+
+The on-chain representation of a private account state (e.g., balances/counters) committed under a commitment scheme.
+
+### Nullifier
+
+A public tag revealed when consuming an old account state, used to prevent re-use (double-spend) of that old state.
+
+### Finalized Balance
+
+The spendable balance for an asset.
+
+### Pending Counter
+
+A counter used to support receiver affirmation and PoB. Roughly: “how many legs are still in-flight and must be accounted for”.
+
+### Counter Update
+
+A transaction that reduces counters for finalized legs so PoB can be performed without forcing the prover to link a long history of finalized transactions.
+
+## Architectural Concepts
+
+### Account-Based Model
+
+Balances update via account state transitions, not UTXO-style coins.
+
+The target is full anonymity in an account model with constant-size on-chain proofs.
+
+### Auditors & Mediators
+
+- **Auditors:** Retrospective visibility; can decrypt asset-specific settlement payloads to inspect.
+- **Mediators:** Prospective control; can be required to affirm or reject before settlement proceeds.
+
+See [Compliance & Regulation](/confidential-assets/compliance-and-regulation).

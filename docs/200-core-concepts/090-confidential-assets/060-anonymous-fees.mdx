@@ -1,0 +1,131 @@
+---
+title: Anonymous Fee Management
+description: Ensuring unlinkability through the Relayer Flow and Pooled System Account
+sidebar_label: Anonymous Fees
+slug: /confidential-assets/anonymous-fees
+id: confidential-assets-anonymous-fees
+---
+
+# Anonymous Fee Management: Ensuring Unlinkability through the Relayer Flow
+
+To protect user privacy while ensuring network transaction costs are paid, Polymesh Confidential Assets (PCA) employ a sophisticated transaction **Relayer Flow** centered around a **Pooled System Account**. This mechanism decouples the identity of the user from the public payment of fees, enabling fully anonymous on-chain fee settlements.
+
+## Overview
+
+Unlike off-chain relayer reimbursement (where a user pays a relayer privately and the relayer covers fees from their own account), the Relayer Flow enables users to pay network fees through the blockchain using their confidential POLYX balance, while maintaining full anonymity. All user fee contributions flow through a single system-wide pooled account, where individual contributions are indistinguishable.
+
+## The Pooled Fee System
+
+All relayer fee payments are managed through a single system-wide account. This pool acts as a **cryptographic mixing vault** where individual user contributions remain anonymous. Observers can see the total amount of POLYX entering and leaving the pool, but cannot identify which confidential account was credited with an encrypted balance or how those funds are later spent.
+
+The onchain address for the Pooled System Fee Account is:
+
+- **Mainnet SS58 address:** `2EvQQsqdCSiF6Xm4Tr4TrWb4LovaozjtPsmt9QxRRZYp3mNq`
+- **Testnet SS58 address:** `5EYCAe5ijAx3nHtydpTBBYZojNDQTVdW46PpbvFTKDPSVRQy`
+- **Hex public key:** `0x6d6f646c706d2f64617274660000000000000000000000000000000000000000`
+
+## Fee Account Registration
+
+A user begins by registering a **confidential fee-paying account** specifically for the POLYX asset type. At registration, this account is initialized with a **balance of zero**.
+
+Because it is a confidential account:
+
+- Its identity is hidden within the global accumulator
+- Its state is represented as a cryptographic commitment
+- No public record links this account to the user's identity
+
+## Top-up (Funding the Pool)
+
+Funding a fee account is a **protocol-driven, atomic operation** and must **not** be performed via a standard POLYX transfer to the pool account.
+
+The process works as follows:
+
+1. The user generates an **account state transition** for their confidential POLYX account
+2. This transition produces:
+   - A new **cryptographic commitment** representing the updated state
+   - A **secret witness** that the user retains (used for future fee proofs)
+3. Simultaneously, the protocol executes a **linked public transfer** of POLYX into the Pooled System Fee Account
+4. While the transfer is visible on-chain, it is **cryptographically bound to the hidden commitment**
+
+:::warning
+
+A manual transfer to the system account without this state transition results in **irrecoverable funds**. The protocol requires the atomic coupling of the confidential state transition and the public transfer.
+
+:::
+
+**Privacy guarantee:** Observers can see the total amount entering the pool, but cannot identify:
+
+- Which confidential account was credited
+- How much any individual user deposited
+- How those funds are later spent
+
+## Anonymous Fee Proof Generation
+
+When a user wants to execute a confidential asset transfer via a relayer service and needs to pay network fees, they generate a **Zero-Knowledge Fee Proof**.
+
+This proof demonstrates:
+
+- The user possesses sufficient **hidden POLYX balance** within the Pooled System Account
+- The balance covers both the **network fee** and **relayer commission**
+- Without revealing:
+  - Which specific top-up belongs to the user
+  - Their total remaining fee balance
+  - Any linkability to previous transactions
+
+### Public fee values vs. confidential proof
+
+- **Fee and commission are public values:** The network fee and relayer commission are not encrypted for the relayer. They are public inputs to the fee proof and are not part of the ZKP witness.
+- **Sufficiency without revelation:** The fee proof shows the user’s hidden fee balance is sufficient to cover those public amounts, without revealing the balance itself or which top-up it came from.
+- **Accumulator membership:** The proof also shows the user’s confidential fee account state is valid and unspent in the global accumulator.
+- **DoS protection for relayers:** Relayers verify the fee proof first, so they do not spend their own POLYX to broadcast a junk transaction.
+
+## Anonymous Submission & Relayer Broadcast
+
+1. The user sends their ZKP to a relayer via an **anonymous channel** (e.g., VPN or Tor)
+2. The relayer **verifies the fee proof first**, checking for:
+   - Valid cryptographic proof
+   - Sufficient fee amount (DoS protection)
+3. Upon validation, the relayer:
+   - **Signs** the transaction with their own key
+   - **Broadcasts** it to the Polymesh network
+   - Uses their own POLYX to cover the initial execution cost
+
+## Automatic Reimbursement from Pool
+
+Once the chain validates the ZKP:
+
+1. The protocol **deducts the fee and commission** from the user's hidden state in the Pooled System Account
+2. The user's confidential POLYX commitment is updated to reflect the reduced balance
+3. The relayer is **automatically reimbursed** the POLYX fee and commission from the pool
+
+**On-chain visibility:**
+
+- The public sees POLYX movement from the Pooled System Account to the relayer
+- The specific user connection remains **cryptographically obscured**
+- No observer can determine which confidential account funded the fee
+
+## Key Differences from Off-Chain Relayer Services
+
+| Aspect                   | Off-Chain Relayer                     | Anonymous Fee Proofs                         |
+| ------------------------ | ------------------------------------- | -------------------------------------------- |
+| **User pays relayer**    | Via private channel (off-chain)       | Via confidential on-chain proof              |
+| **Network fees paid by** | Relayer's public account              | Pooled System Account                        |
+| **Proof of payment**     | Trust/contract outside chain          | Cryptographic on-chain proof                 |
+| **Privacy**              | Relies on off-chain secrecy           | Built into protocol mechanism                |
+| **Traceability**         | Off-chain payment could leak identity | On-chain movement is mixed in pool           |
+| **Fee overhead**         | Standard transaction fee              | Additional on-chain processing for fee proof |
+
+:::note Fee Overhead
+Transactions submitted via a relayer that include an anonymous fee proof require a slightly higher network fee to cover the additional on-chain processing required to verify the fee payment proof and transfer POLYX from the pool in addition to the main confidential asset transaction.
+:::
+
+## Summary
+
+By using a pooled system account and Zero-Knowledge Proofs, the Relayer Flow ensures that:
+
+- Users can pay network fees anonymously through the blockchain
+- The total amount of POLYX flowing through the pool is visible (for transparency)
+- The specific connection between a user and their fee payment is **cryptographically obscured**
+- It is effectively a **private tab maintained within a public vault**
+
+This mechanism is essential for applications requiring full on-chain anonymity while still respecting the network's requirement that transaction fees be paid in POLYX.

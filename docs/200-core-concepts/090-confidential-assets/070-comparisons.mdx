@@ -1,0 +1,116 @@
+---
+title: Comparisons
+description: How Polymesh Confidential Assets compare to other privacy/ZK approaches
+sidebar_label: Comparisons
+slug: /confidential-assets/comparisons
+id: confidential-assets-comparisons
+---
+
+# How Confidential Assets Compare to Other Privacy Approaches
+
+Polymesh Confidential Assets (PCA) are not “just ZK”. They target **full anonymity**, an **account-based model**, and a **regulated settlement (transfers) workflow** (receiver affirmation, optional mediation, and scoped audit access).
+
+This page gives a conceptual comparison to other common privacy approaches.
+
+## Property Matrix
+
+The matrix below summarizes practical properties across representative systems. Symbols: ✓ = supported; ✗ = not supported; △ = possible with reasonable modifications. Transaction size is shown relative to anonymity parameter `k`.
+
+| System              | Full anonymity | Proof of balance | Concurrency | Receiver affirmation | Non‑interactive | Multi‑party tx | Tx size  |
+| :------------------ | :------------: | :--------------: | :---------: | :------------------: | :-------------: | :------------: | :------: |
+| Zerocash            |       ✓        |        ✗         |      ✓      |          ✗           |        ✓        |       ✗        |   O(1)   |
+| Monero              |       ✗        |        ✗         |      ✓      |          ✗           |        ✓        |       ✓        |   O(k)   |
+| zkLedger            |      ✓\*       |        ✓         |      ✓      |          ✗           |        ✓        |       ✓        |   O(k)   |
+| QuisQuis            |       ✗        |        ✗         |      ✗      |          ✗           |        ✓        |       ✓        |   O(k)   |
+| Zether              |       ✗        |        △         |      ✗      |          ✗           |        ✓        |       ✗        |   O(k)   |
+| Anonymous Zether    |       ✗        |        △         |      ✗      |          ✗           |        ✓        |       ✓        |   O(k)   |
+| Veksel              |       ✗        |        ✗         |      ✓      |          ✗           |        ✓        |       ✗        |   O(1)   |
+| Platypus            |       ✓        |        △         |      ✓      |         ✓\*          |        ✗        |       ✗        |   O(1)   |
+| PEReDi              |       ✓        |        △         |      ✓      |         ✓\*          |        ✗        |       ✗        |   O(1)   |
+| PriDe CT            |       ✗        |        △         |      ✗      |          ✗           |        ✓        |       ✓        |   O(k)   |
+| PARScoin            |       ✓        |        ✗         |      ✓      |          ✗           |        ✓        |       ✗        |   O(1)   |
+| Ocash               |       ✓        |        ✗         |      ✓      |          ✗           |        ✓        |       ✓        |   O(1)   |
+| PriFHEte            |       ✓        |        △         |      ✗      |          ✗           |        ✓        |       ✗        |   O(1)   |
+| **Polymesh (DART)** |     **✓**      |      **✓**       |    **✓**    |        **✓**         |      **✓**      |     **✓**      | **O(1)** |
+
+Notes:
+
+- ✓\* under “Full anonymity” indicates systems that target small user sets.
+- ✓\* under “Receiver affirmation” reflects interactive designs where receiver affirmation is inherent.
+- This summary is adapted from public research for clarity; naming and headings are adjusted for implementation focus.
+
+## A quick mental model
+
+- **UTXO privacy systems** (Zcash-style): spend and create notes; anonymity sets are often phrased in terms of coins/notes.
+- **Account-based privacy systems** (Zether-style): balances live under accounts; transactions often form an anonymity ring of size `k`.
+- **Polymesh Confidential Assets**: keep an account-style abstraction while targeting full anonymity and constant-size on-chain proofs, and add regulated-transfer mechanics.
+
+## Compared to UTXO-based shielded payments (Zerocash/Zcash-style)
+
+Similarities:
+
+- Both rely on commitments + zero-knowledge proofs.
+- Both use nullifier-like constructs to prevent double-use.
+- Both can have constant-size transactions relative to anonymity set size.
+
+Key differences:
+
+- **Bookkeeping model:** UTXO systems distribute a user’s balance across many notes; Confidential Assets use account-style state transitions.
+- **Proof of balance:** Confidential Assets target PoB (with counters and optional counter-updates). UTXO designs typically don’t provide PoB out of the box because balances are spread across many notes.
+- **Receiver affirmation:** Confidential Assets include accept/reject semantics as a first-class feature.
+- **Settlement legs:** Confidential Assets are designed around multi-leg settlement (transfers) workflows (more like capital-markets settlement than simple payments).
+
+## Compared to ring-based privacy (Monero-style)
+
+Ring-based systems typically provide sender ambiguity via ring signatures and often have transaction size that grows with the ring size `k`.
+
+PCA target:
+
+- larger anonymity sets (conceptually “all participants”),
+- constant-size on-chain proofs relative to anonymity set size,
+- explicit regulatory flow (affirmation, mediation, auditing).
+
+## Compared to account-based rings (Zether / Anonymous Zether-style)
+
+These designs often select a ring of size `k` (sender/receiver plus dummies) and prove correctness over that ring.
+
+Typical trade-offs in ring-based account privacy:
+
+- transaction size and verification work can scale with `k`,
+- concurrency constraints (epoch-based updates, state rollovers) may appear,
+- anonymity depends on ring selection.
+
+The design goal is to avoid a small fixed `k` anonymity set and to avoid requiring validators to touch “every account” on each transaction.
+
+## Compared to mixers and application-layer privacy
+
+Mixers can provide unlinkability for specific assets but usually:
+
+- don’t integrate receiver-affirmation style settlement,
+- don’t provide per-asset compliance access controls,
+- may not support multi-leg regulated settlement flows.
+
+PCA bake these requirements into the protocol design.
+
+## Compared to privacy rollups
+
+Rollups can hide details inside an off-chain execution environment and publish proofs/data to L1.
+
+PCA differ in that:
+
+- settlement workflow and compliance hooks are designed at the protocol level,
+- the model is described as an account-based anonymous payment/settlement system rather than a general-purpose private VM.
+
+## Benefits and trade-offs (practical)
+
+Benefits:
+
+- Regulated-market semantics (receiver affirmation, mediation).
+- Scoped compliance access (auditors/mediators per asset type).
+- Full anonymity goal with constant-size on-chain proofs.
+
+Trade-offs:
+
+- Proof generation cost and client complexity (wallets typically need to track state and scan for relevant legs).
+- PoB is non-trivial: counters and counter-updates exist to balance verifiability against privacy leakage.
+- Key management becomes more complex (account keys, encryption keys, and signing keys).
