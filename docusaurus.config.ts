@@ -15,7 +15,6 @@ const config: Config = {
   // baseUrl: '/polymesh-documentation-site/',
   onBrokenLinks: 'throw',
   onBrokenAnchors: 'throw',
-  onBrokenMarkdownLinks: 'throw',
   onDuplicateRoutes: 'throw',
   favicon: 'img/favicon.ico',
 
@@ -439,7 +438,10 @@ const config: Config = {
       },
     },
   } satisfies Preset.ThemeConfig,
-  markdown: { mermaid: true },
+  markdown: {
+    mermaid: true,
+    hooks: { onBrokenMarkdownLinks: 'throw' },
+  },
   themes: ['@docusaurus/theme-mermaid'],
 };
 export default config;
