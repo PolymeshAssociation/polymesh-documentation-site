@@ -5,19 +5,20 @@ FROM node:lts-alpine AS builder
 ################################################################
 
 WORKDIR /home/node
+RUN corepack enable
 USER node
 
 ################################################################
 
-COPY --chown=node:node package.json package-lock.json /home/node/
-RUN npm ci --ignore-scripts
+COPY --chown=node:node package.json yarn.lock /home/node/
+RUN yarn install --frozen-lockfile
 
 ################################################################
 
 COPY --chown=node:node . /home/node/
 RUN sed --quiet 's/^\(.*\)=.*$/\1=__\1__/p' .env > .env.template && \
     mv .env.template .env && \
-    npm run build && \
+    yarn build && \
     sed 's/^\(.*\)=.*$/\1/' .env > /home/node/env.var.list && \
     rm .env
 
