@@ -144,6 +144,14 @@ const ZoomableMermaid: React.FC<Props> = ({ children, title }) => {
     enterFullscreen();
   };
 
+  const onWrapperKeyDown: React.KeyboardEventHandler<HTMLDivElement> = (e) => {
+    if (isFullscreen) return;
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      enterFullscreen();
+    }
+  };
+
   if (isFullscreen) {
     return (
       <div
@@ -178,7 +186,10 @@ const ZoomableMermaid: React.FC<Props> = ({ children, title }) => {
     <div
       className="zoomable-mermaid"
       aria-label={title ?? 'Mermaid diagram'}
+      role="button"
+      tabIndex={0}
       onClick={onWrapperClick}
+      onKeyDown={onWrapperKeyDown}
     >
       {children}
     </div>

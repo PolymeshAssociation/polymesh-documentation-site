@@ -15,7 +15,7 @@ Polymesh Private is tailored for entities that require a secure platform for blo
 
 ## Key Features
 
-Polymesh Private allows entities to benefit from Polymesh’s comprehensive features for tokenization with extra privacy and control. Sophisticated cryptography secures and maintains data onchain confidentially, mitigating concerns for regulatory compliance. Compatibility with the public network means users can benefit from its global community and access continuous updates, features, and tools. It also provides easy migration to the public network, future-proofing entities for adaptation to the evolving regulatory landscape.
+Polymesh Private allows entities to benefit from Polymesh's comprehensive features for tokenization with extra privacy and control. Sophisticated cryptography secures and maintains data onchain confidentially, mitigating concerns for regulatory compliance. Compatibility with the public network means users can benefit from its global community and access continuous updates, features, and tools. It also provides easy migration to the public network, future-proofing entities for adaptation to the evolving regulatory landscape.
 
 Benefiting from ongoing development within the public Polymesh infrastructure by both the Polymesh Association and the wider community, Polymesh Private users can seamlessly access continuous updates, features, and tools. As the chain operator, you retain full control over the adoption of on-chain upgrades, ensuring compatibility and stability between public and private instances.
 

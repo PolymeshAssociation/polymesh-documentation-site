@@ -16,7 +16,7 @@ This page gives a conceptual comparison to other common privacy approaches.
 
 The matrix below summarizes practical properties across representative systems. Symbols: ✓ = supported; ✗ = not supported; △ = possible with reasonable modifications. Transaction size is shown relative to anonymity parameter `k`.
 
-| System              | Full anonymity | Proof of balance | Concurrency | Receiver affirmation | Non‑interactive | Multi‑party tx | Tx size  |
+| System              | Full anonymity | Proof of balance | Concurrency | Receiver affirmation | Non-interactive | Multi-party tx | Tx size  |
 | :------------------ | :------------: | :--------------: | :---------: | :------------------: | :-------------: | :------------: | :------: |
 | Zerocash            |       ✓        |        ✗         |      ✓      |          ✗           |        ✓        |       ✗        |   O(1)   |
 | Monero              |       ✗        |        ✗         |      ✓      |          ✗           |        ✓        |       ✓        |   O(k)   |
@@ -55,8 +55,8 @@ Similarities:
 
 Key differences:
 
-- **Bookkeeping model:** UTXO systems distribute a user’s balance across many notes; Confidential Assets use account-style state transitions.
-- **Proof of balance:** Confidential Assets target PoB (with counters and optional counter-updates). UTXO designs typically don’t provide PoB out of the box because balances are spread across many notes.
+- **Bookkeeping model:** UTXO systems distribute a user's balance across many notes; Confidential Assets use account-style state transitions.
+- **Proof of balance:** Confidential Assets target PoB (with counters and optional counter-updates). UTXO designs typically don't provide PoB out of the box because balances are spread across many notes.
 - **Receiver affirmation:** Confidential Assets include accept/reject semantics as a first-class feature.
 - **Settlement legs:** Confidential Assets are designed around multi-leg settlement (transfers) workflows (more like capital-markets settlement than simple payments).
 
@@ -86,8 +86,8 @@ The design goal is to avoid a small fixed `k` anonymity set and to avoid requiri
 
 Mixers can provide unlinkability for specific assets but usually:
 
-- don’t integrate receiver-affirmation style settlement,
-- don’t provide per-asset compliance access controls,
+- don't integrate receiver-affirmation style settlement,
+- don't provide per-asset compliance access controls,
 - may not support multi-leg regulated settlement flows.
 
 PCA bake these requirements into the protocol design.

@@ -35,12 +35,12 @@ The architecture enables:
 
 The pending counter mechanism allows multiple in-flight transactions without state conflicts.
 
-### 3. Account-Based Model with Asset-Specific Accounts
+### 3. Account-Based Model with Per-Asset State
 
 The architecture uses an account-based model for confidential state:
 
 - **Account-based state**: More intuitive "table of balances" representation compared to UTXO models
-- **Asset-specific accounts**: Each account holds one asset type, so proving work scales with the specific asset being transacted, not all assets held
+- **Per-asset commitments**: One account key can register many assets; each account-asset pair maintains its own commitment and pending counter, so proofs include only the state of the asset being transacted and do not grow with the account's other assets
 
 This simplifies operations like Proof of Balance while maintaining privacy guarantees.
 
@@ -130,40 +130,40 @@ A single key pair can register many assets, but each asset gets its own on-chain
 
 These components are never revealed on-chain:
 
-- **Finalized balance** – The spendable amount for the asset
-- **Pending counter** – Tracks in-flight transactions awaiting receiver claim; enables concurrent operations and Proof of Balance
-- **Account key** – Used to generate zero-knowledge proofs for state transitions
-- **Encryption key** – Used to encrypt/decrypt settlement leg payloads
-- **Randomness** – Secret values that derive commitments and nullifiers
+- **Finalized balance** - The spendable amount for the asset
+- **Pending counter** - Tracks in-flight transactions awaiting receiver claim; enables concurrent operations and Proof of Balance
+- **Account key** - Used to generate zero-knowledge proofs for state transitions
+- **Encryption key** - Used to encrypt/decrypt settlement leg payloads
+- **Randomness** - Secret values that derive commitments and nullifiers
 
 ### Public State (published on-chain)
 
 These components are visible to validators but don't reveal the private state:
 
-- **State commitment** – Cryptographic commitment to the private state, stored in the curve tree accumulator
-- **Nullifier** – Emitted when spending an old account state; prevents double-spending without revealing which account was updated
+- **State commitment** - Cryptographic commitment to the private state, stored in the curve tree accumulator
+- **Nullifier** - Emitted when spending an old account state; prevents double-spending without revealing which account was updated
 
 ### Cryptographic Relationships
 
-- **State commitment**: Derived from the previous account state (balance/counter/asset data) blinded with Pseudorandom Function(PRF) derived randomness; published to the curve tree accumulator.
-- **Nullifier**: Derived from the previous state using deterministic randomness (PRF over secret key + counter) so the old state cannot be spent twice.
-- **Deterministic recovery**: Because the randomness is derived (not purely random), a user can recompute commitments/nullifiers from historical data with their secret key, enabling state recovery if local state is lost.
+- **State commitment**: Each account state (balance, counter, asset id, etc.) is committed with a one-time PRF-derived randomness seeded from the holder's secret key and public asset context (identity, asset id, counter). After initialization, the randomness evolves deterministically from the prior value for every state update, and each resulting commitment is published to the curve-tree accumulator.
+- **Nullifier**: Every state also yields a nullifier derived from the same deterministic chain of secret, per-asset randomness. That chain advances on each transition, so an old state's nullifier can't be reused (prevents double-spends).
+- **Deterministic recovery**: Because commitments and nullifiers rely on PRF-derived, forward-evolving randomness (not ad-hoc randomness), a user who retains their secret key and asset context can recompute historical commitments and nullifiers to recover state if local data is lost.
 
 :::info
 
-Pseudorandom Function (PRF): a deterministic function keyed by the confidential account secret key that outputs values indistinguishable from random; used here to derive per-state randomness.
+Pseudorandom Function (PRF): A deterministic, secret-keyed function that produces values indistinguishable from random. It seeds the initial per-asset randomness; later randomness values are derived deterministically from the prior one, so no additional PRF calls are needed after initialization.
 
 :::
 
-### Asset-Specific Design
+### Per-Asset State Handling
 
-The architecture uses **asset-specific accounts** rather than multi-asset accounts. This design choice has important implications:
+The protocol isolates state per account-asset pair, not by forcing separate confidential accounts (separate keys) per asset:
 
-- **Scalable proving**: Proof generation complexity scales with the specific asset being transacted, not all assets held
-- **Asset privacy**: The asset type itself is hidden within the anonymity set
-- **Simplified state management**: Each account-asset pair has independent state, reducing complexity
+- **Independent account-asset state**: Each registered asset gets its own commitment, balance, pending counter, and randomness. Proof witnesses stay scoped to the asset being transacted regardless of how many assets the account holds.
+- **No cross-asset invalidations**: Counters advance independently per asset, so a pending proof for Asset B remains valid if the same account transacts Asset C.
+- **Scoped oversight**: Auditor or mediator decryption keys are registered per asset, keeping oversight limited to the assets they govern without revealing holder assets they are not authorized to view.
 
-Users may have multiple confidential accounts for different assets, but each account-asset relationship has its own balance, counter, and state commitment.
+State isolation lets a holder keep one confidential account key across multiple assets while proofs, counters, and oversight remain scoped per asset; this minimizes settlement scanning and key management overhead. Additional confidential accounts can optionally be used for operational separation.
 
 ## Settlement Overview
 
@@ -171,7 +171,7 @@ The settlement lifecycle, roles, and proofs are documented in [Settlement Workfl
 
 ## Proof of Balance (PoB)
 
-For PoB mechanics, trade‑offs (auditor‑assisted vs. generic), and counter‑update transactions, see [Compliance & Regulation](/confidential-assets/compliance-and-regulation) and [Settlement Workflow](/confidential-assets/settlement-workflow).
+For PoB mechanics, trade-offs (auditor-assisted vs. generic), and counter-update transactions, see [Compliance & Regulation](/confidential-assets/compliance-and-regulation) and [Settlement Workflow](/confidential-assets/settlement-workflow).
 
 ## Compliance Hooks
 

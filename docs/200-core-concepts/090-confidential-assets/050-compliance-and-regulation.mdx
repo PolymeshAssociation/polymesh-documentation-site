@@ -42,7 +42,7 @@ PoB is needed because receiver affirmation creates _in-between_ states: balances
 
 ### Approach 1: Auditor-assisted
 
-- Prover reveals (and proves) finalized balance and pending counter to the asset’s auditor.
+- Prover reveals (and proves) finalized balance and pending counter to the asset's auditor.
 - Prover points to relevant legs; auditor decrypts those legs (for that asset) and checks totals.
 
 ### Approach 2: Generic PoB
@@ -54,7 +54,11 @@ Allows proving balance to any verifier without auditor decryption.
 
 ## Operational Controls
 
-These controls are relevant for regulated assets; availability depends on network release and policy.
+:::note Future Features
+
+The following operational controls are planned for future releases and are not currently implemented in Polymesh Confidential Assets.
+
+:::
 
 ### Account freezing
 

@@ -19,9 +19,9 @@ At a high level, participants submit **Zero-Knowledge Proofs** (**ZKP**) that a 
 
 :::note Reference
 
-Polymesh Confidential Assets are the Polymesh implementation of the P‑DART paper (the underlying protocol design), which builds on the DART paper.
+Polymesh Confidential Assets are the Polymesh implementation of the P-DART paper (the underlying protocol design), which builds on the DART paper.
 
-- P‑DART paper: https://assets.polymesh.network/P-DART-v1.pdf
+- P-DART paper: https://assets.polymesh.network/P-DART-v1.pdf
 - DART paper: https://eprint.iacr.org/2025/239
 
 :::
@@ -54,9 +54,9 @@ The following sections detail what is kept **Private (Confidentiality)** versus 
 
 P-DART/PCA achieves **full anonymity** by ensuring that sensitive transactional data is only verifiable via cryptographic proofs, concealing the details of the transfer and the identity of the confidential account owners.
 
-- **Account State Secrets:** The entirety of a user’s internal account state is kept private. This includes the **account secret key** , the **finalized (spendable) balance**, the pending transaction **counter**, and the secret **randomness** values used to derive the nullifier and generate the commitment.
+- **Account State Secrets:** The entirety of a user's internal account state is kept private. This includes the **account secret key** , the **finalized (spendable) balance**, the pending transaction **counter**, and the secret **randomness** values used to derive the nullifier and generate the commitment.
 - **Transaction Value and Asset Type:** The actual **transferred value** between accounts and the specific **asset type** involved are concealed through commitment or encryption within the Zero-Knowledge Proof (ZKP).
-- **Identity and Linkability:** The **identities/public keys** of the sender and receiver are concealed within the transaction. Crucially, the protocol guarantees **unlinkability** between a participant’s successive account states, preventing tracing of a user's transaction history.
+- **Identity and Linkability:** The **identities/public keys** of the sender and receiver are concealed within the transaction. Crucially, the protocol guarantees **unlinkability** between a participant's successive account states, preventing tracing of a user's transaction history.
 - **Auditor/Mediator Keys in Transactions:** While the **public encryption key** of the designated auditor/mediator is publicly known, the protocol requires that this key be **concealed** during the confidential transaction itself. This concealment is necessary to prevent revealing the underlying asset type, as the mapping between the asset and the auditor is publicly known.
 - **Decoupled Signing Key:** The confidential account keys used to generate the ZKP are kept secret and are distinct from the standard [public keys](/getting-started/keys) used to sign and submit the transaction to the network. This ensures that the validity of the confidential transfer relies solely on the ZKP integrity, not the public signing key, though practical anonymity requires [additional considerations](#key-nuances-in-execution-and-fee-payment) to avoid linking the public signing key to the activity.
 
@@ -67,7 +67,7 @@ For the blockchain to maintain integrity, prevent fraud, and facilitate regulati
 - **Commitments and Accumulator:** A cryptographic representation of the new account state, the **account commitment**, is publicly published after a transaction. These commitments are aggregated into a global, publicly maintained **Accumulator**.
 - **Nullifiers (Double-Spending Tags):** To prevent an old account state from being spent twice, the unique, deterministic **nullifier** associated with the _spent_ account commitment is publicly revealed and recorded in the **List of Nullifiers**. The nullifier ensures that double-spending attempts fail validation.
 - **Proof Validity:** The **Zero-Knowledge Proof** itself is public information, which allows any consensus member to execute the `Validate` function and verify the **validity of the underlying computation** without accessing the hidden transaction data.
-- **Regulatory Lists:** The **Issuer–Asset–Auditor list (LIAA)** and the **Key–Asset list (LKA)** are publicly maintained lists used for compliance lookups and asset registration.
+- **Regulatory Lists:** The **Issuer-Asset-Auditor list (LIAA)** and the **Key-Asset list (LKA)** are publicly maintained lists used for compliance lookups and asset registration.
 - **Settlement Status and Metadata:** The fact that a transaction occurred, its unique identifier, and the transition of its **settlement status** (e.g., from pending to finalized) are recorded publicly.
 
 ### Key Nuances in Execution and Fee Payment
@@ -85,7 +85,7 @@ While PCA ensures that asset details and account balances remain confidential, t
 
 To maintain full anonymity, users should consider the following options to decouple their identity from their confidential transactions:
 
-- **One-Time Use Wallets (Large Pool Funding):** A user can generate a fresh wallet for a confidential transaction. To prevent this new wallet from being linked back to their main identity, it should be funded from a **large, mixed pool**, such as a withdrawal from a **Centralized Exchange (CEX)**. This breaks the on-chain link between the user’s primary holdings and the fee-paying account.
+- **One-Time Use Wallets (Large Pool Funding):** A user can generate a fresh wallet for a confidential transaction. To prevent this new wallet from being linked back to their main identity, it should be funded from a **large, mixed pool**, such as a withdrawal from a **Centralized Exchange (CEX)**. This breaks the on-chain link between the user's primary holdings and the fee-paying account.
 - **Third-Party Relayer Services (Off-chain Payment):** Users can employ a **relayer** to submit transactions on their behalf. The relayer pays the on-chain POLYX fee using their own account. The user can then reimburse the relayer through a **separate, private channel** (such as an off-chain payment or a different cryptocurrency), ensuring no traceable POLYX movement appears on the Polymesh ledger.
 - **Anonymous Fee mechanism:** For users who want to pay network fees directly on-chain, without managing additional keys, while maintaining anonymity, PCA provides an on-chain anonymous fee payment mechanism. Users fund a confidential fee account and generate Zero-Knowledge Proofs to authorize fee deductions from a pooled system account. This proof is then shared with a Relayer Service that submits the transaction on your behalf. For detailed mechanics, see [Anonymous Fees](./anonymous-fees).
 - **Network-Level Anonymity:** Even with these fee strategies, "network leakage" (such as an IP address) can reveal a user's identity. For maximum privacy, these fee-hiding techniques should be used alongside network-layer protections like a **VPN or the Tor network**.

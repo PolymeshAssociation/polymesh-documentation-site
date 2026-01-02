@@ -18,7 +18,7 @@ Unlike off-chain relayer reimbursement (where a user pays a relayer privately an
 
 All relayer fee payments are managed through a single system-wide account. This pool acts as a **cryptographic mixing vault** where individual user contributions remain anonymous. Observers can see the total amount of POLYX entering and leaving the pool, but cannot identify which confidential account was credited with an encrypted balance or how those funds are later spent.
 
-The onchain address for the Pooled System Fee Account is:
+The on-chain address for the Pooled System Fee Account is:
 
 - **Mainnet SS58 address:** `2EvQQsqdCSiF6Xm4Tr4TrWb4LovaozjtPsmt9QxRRZYp3mNq`
 - **Testnet SS58 address:** `5EYCAe5ijAx3nHtydpTBBYZojNDQTVdW46PpbvFTKDPSVRQy`
@@ -53,11 +53,7 @@ A manual transfer to the system account without this state transition results in
 
 :::
 
-**Privacy guarantee:** Observers can see the total amount entering the pool, but cannot identify:
-
-- Which confidential account was credited
-- How much any individual user deposited
-- How those funds are later spent
+**Privacy guarantee:** During top-up, the creditor's public key, confidential account public key and amount are **visible on-chain**. However, observers cannot identify how those funds are later spent in subsequent fee payments (where the confidential account public key becomes hidden and POLYX is transferred from the Pooled System Fee Account)
 
 ## Anonymous Fee Proof Generation
 
@@ -75,8 +71,8 @@ This proof demonstrates:
 ### Public fee values vs. confidential proof
 
 - **Fee and commission are public values:** The network fee and relayer commission are not encrypted for the relayer. They are public inputs to the fee proof and are not part of the ZKP witness.
-- **Sufficiency without revelation:** The fee proof shows the user’s hidden fee balance is sufficient to cover those public amounts, without revealing the balance itself or which top-up it came from.
-- **Accumulator membership:** The proof also shows the user’s confidential fee account state is valid and unspent in the global accumulator.
+- **Sufficiency without revelation:** The fee proof shows the user's hidden fee balance is sufficient to cover those public amounts, without revealing the balance itself or which top-up it came from.
+- **Accumulator membership:** The proof also shows the user's confidential fee account state is valid and unspent in the global accumulator.
 - **DoS protection for relayers:** Relayers verify the fee proof first, so they do not spend their own POLYX to broadcast a junk transaction.
 
 ## Anonymous Submission & Relayer Broadcast

@@ -3,7 +3,7 @@ title: Settlement Workflow
 description: Settlement lifecycle and transaction workflows for confidential assets
 sidebar_label: Settlement Workflow
 slug: /confidential-assets/settlement-workflow
-id: confidential-assets-protocol
+id: confidential-assets-settlement-workflow
 ---
 
 # Confidential Assets: Settlement Workflow
@@ -12,7 +12,7 @@ This page describes the lifecycle and mechanics of confidential settlements (tra
 
 ## Overview
 
-Confidential settlement is intentionally multi‑phase to align with regulated‑market requirements and architectural constraints:
+Confidential settlement is intentionally multi-phase to align with regulated-market requirements and architectural constraints:
 
 - **Creation (publish)**: Encrypted legs and a settlement proof are recorded; no balances change.
 - **Affirmations (consent)**: Sender/receiver (and mediator, if required) explicitly affirm or reject.
@@ -21,7 +21,7 @@ Confidential settlement is intentionally multi‑phase to align with regulated�
 Why this design?
 
 - **Receiver affirmation**: Mirrors institutional securities workflows where receivers must accept obligations before credit.
-- **Non‑interactivity**: Parties act asynchronously; senders can initiate while receivers are offline.
+- **Non-interactivity**: Parties act asynchronously; senders can initiate while receivers are offline.
 - **Concurrency handling**: Pending counters prevent state conflicts and make Proof of Balance workable.
 - **Compliance gating**: Mediators provide prospective control when asset policy requires it.
 
@@ -32,9 +32,9 @@ Confidential settlements involve clearly defined roles:
 - **Sender:** Affirms the leg that transfers value. When affirmed, their spendable balance is debited and the pending counter increases.
 - **Receiver:** Explicitly affirms acceptance of value; later claims to credit the incoming amount into the finalized balance.
 - **Mediator (optional):** Active compliance participant who must affirm or reject when required by asset policy; gates execution.
-- **Auditor (optional):** Passive compliance participant who can decrypt asset‑specific leg details for retrospective verification; does not gate execution.
+- **Auditor (optional):** Passive compliance participant who can decrypt asset-specific leg details for retrospective verification; does not gate execution.
 
-This dual model (mediators vs. auditors) provides prospective control and retrospective visibility without sacrificing on‑chain confidentiality.
+This dual model (mediators vs. auditors) provides prospective control and retrospective visibility without sacrificing on-chain confidentiality.
 
 ## Settlement Lifecycle
 
@@ -188,16 +188,16 @@ All parties to a settlement (sender, receiver, mediator, auditor) must first dis
 
 ### Verifiability and Privacy (Decrypting Leg Data)
 
-Leg payloads are encrypted so only designated parties can read them (sender, receiver, and asset‑specific mediator and auditor keys). A public registry maps assets to their mediator and auditor keys, enabling:
+Leg payloads are encrypted so only designated parties can read them (sender, receiver, and asset-specific mediator and auditor keys). A public registry maps assets to their mediator and auditor keys, enabling:
 
-- **Selective disclosure:** Authorized parties can decrypt and inspect the leg details.
+- **Scoped visibility:** Authorized parties can decrypt and inspect the leg details for assets they oversee.
 - **Public confidentiality:** Observers cannot read private values; they only see commitments, nullifiers, and proof validity.
 
-This design preserves privacy on the public ledger while supporting per‑asset auditability and optional prospective control via mediation.
+This design preserves privacy on the public ledger while supporting per-asset auditability and optional prospective control via mediation.
 
 :::note
 
-Account balances are not included in leg ciphertexts. Balances are represented as commitments and validated via zero‑knowledge proofs, so even authorized decryption of a leg does not reveal a participant’s overall balance.
+Account balances are not included in leg ciphertexts. Balances are represented as commitments and validated via zero-knowledge proofs, so even authorized decryption of a leg does not reveal a participant's overall balance.
 
 :::
 
@@ -284,7 +284,7 @@ Counters make PoB proofs accountable to pending obligations while keeping transa
 
 These operations maintain flexibility and efficiency: reversion lets senders reclaim funds from rejected settlements (see [Sender revert](#sender-revert)), while counter updates reduce PoB proof size by batch-finalizing completed legs (see [Sender counter update](#sender-counter-update)).
 
-## Querying On‑Chain Settlement Information
+## Querying On-Chain Settlement Information
 
 Applications and authorized participants can inspect settlement state via chain queries. Typical queries include:
 
@@ -292,49 +292,50 @@ Applications and authorized participants can inspect settlement state via chain 
 - **Encrypted legs:** Returns the encrypted leg payloads by index; only authorized keys can decrypt.
 - **Memo:** Returns any optional memo attached to the settlement.
 - **Pending affirmations:** Returns how many affirmations are still required before execution.
-- **Pending finalizations:** Returns how many post‑execution steps (claims or counter updates) remain before finalization.
+- **Pending finalizations:** Returns how many post-execution steps (claims or counter updates) remain before finalization.
 
 These queries enable UIs and services to track lifecycle progression without revealing confidential values.
 
-## Batchability and Multi‑Party Transactions (MPT)
+## Batchability and Multi-Party Transactions (MPT)
 
 Polymesh Confidential Assets (PCA) support batching multiple proof operations into a single transaction for efficiency. Most operations require an accumulator membership proof (the heaviest part of ZKP computation), so combining related actions reduces transaction count and proving work while preserving confidentiality.
 
 ### Supported batching patterns
 
-- **Multi‑party transfers (one sender → many receivers):**
+- **Multi-party transfers (one sender → many receivers):**
 
   - A sender publishes multiple encrypted legs to different receivers in one account state transition.
-  - The sender’s proof shows the total debit equals the sum of all leg values, requiring just one accumulator membership proof.
+  - The sender's proof shows the total debit equals the sum of all leg values, requiring just one accumulator membership proof.
 
-- **Multi‑party affirmations (one receiver ← many senders):**
+- **Multi-party affirmations (one receiver ← many senders):**
 
   - A receiver scans for pending legs addressed to them and affirms several in one transaction.
   - The proof demonstrates they can decrypt each selected leg and that the credited amount equals the sum of affirmed values.
 
 - **Aggregatable reversions (sender reclaim):**
 
-  - A sender reclaims funds from multiple un‑affirmed legs in a single submission.
+  - A sender reclaims funds from multiple un-affirmed legs in a single submission.
   - The proof shows the sender authored the referenced legs and updates their balance by the aggregate reversed amount in one state transition.
 
 - **Efficient account maintenance (PoB helpers):**
 
   - **Counter updates (CU):** Batch pointers to finalized legs to reduce the pending counter in one step.
-  - **Pending‑balance updates (PBU):** Batch updates to reduce hidden pending balance records in one step.
+  - **Pending-balance updates (PBU):** Batch updates to reduce hidden pending balance records in one step.
 
 - **Atomic instant settlements:**
 
   - Parties can combine `ExecuteInstantSettlement` with `InstantSenderAffirmation` and `InstantReceiverAffirmation` into a single atomic batch.
-  - This creates and fully affirms a settlement in one transaction, assuming off‑chain coordination of commitments.
+  - This creates and fully affirms a settlement in one transaction, assuming off-chain coordination of commitments.
+  - Unlike the normal multi-phase flow, instant settlements update balances for both parties without changing counters (sender balance decreases, receiver balance increases, both counters remain unchanged as the complete settlement executes in a single transaction).
 
 - **Mixed operational batching:**
   - A single submission can include different proof types, for example: a receiver claim for an older leg, a new sender affirmation, and a sender counter update—all verified together.
 
 ### Important properties
 
-- **Independent leg tracking:** Even when created or affirmed in a batch, each leg’s status is tracked independently on‑chain. One leg can be reversed or claimed without affecting others.
-- **Per‑party decryption responsibilities:** Each receiver must still independently discover and decrypt their leg before affirming; batching does not change who can see what.
-- **Constant‑size on‑chain proofs:** Batching reduces how many times expensive membership proofs are generated and verified, while maintaining the constant‑size on‑chain footprint per transaction.
+- **Independent leg tracking:** Each leg's per-party affirmation status (sender affirmed, receiver affirmed, mediator decision, etc.) is tracked independently on-chain. This granular tracking allows the system to record which parties have acted on each leg. However, if any leg in a settlement is rejected (e.g., by a mediator), the entire settlement is rejected. Whether remaining legs can be reversed or claimed depends on the settlement's overall status.
+- **Per-party decryption responsibilities:** Batching does not compromise participant privacy. Each receiver must still independently discover and decrypt only the legs intended for them using their unique encryption key; unauthorized parties cannot see other participants' leg details even within a batch.
+- **Amortized proving efficiency:** Batching multiple actions—such as instant settlements or multi-receiver transfers—into a single transaction reduces the cost per action. The most computationally expensive part is the accumulator membership proof; batching allows multiple actions to share a single membership proof and state transition, reducing total on-chain submissions and verification overhead compared to separate transactions.
 
 ## Operational considerations for batching
 
@@ -342,10 +343,10 @@ Batching improves efficiency but introduces practical nuances you should account
 
 - **Concurrency safety:**
 
-  - In PCA, only the account owner can update their confidential state; third‑party re‑randomization is disallowed. This avoids the classic “proof built on state A becomes invalid when someone else updates to state B.”
-  - The chain stores a window of recent accumulator roots so a proof against a slightly older root remains valid during broadcast, improving reliability with relayers.
+  - Only the account owner can submit transactions that update their account state. This design prevents a scenario where another user's settlement execution invalidates your pending proof (e.g., your receiver affirmation proof becomes invalid because a third party's settlement changed the chain state you built your proof against).
+  - The chain stores a window of recent accumulator roots so a proof against a slightly older root remains valid during broadcast, improving reliability with relayers and enabling asynchronous multi-party affirmations.
 
-- **Linkability trade‑off in maintenance:**
+- **Linkability trade-off in maintenance:**
 
   - Batching multiple finalized references into one update creates ephemeral linkability between the referenced items (observers can tell those references were processed together in one account update, but amounts and identities remain hidden).
   - If maximum privacy is required, perform updates sequentially; if cost and simplicity are the priority, batch them.
@@ -355,5 +356,5 @@ Batching improves efficiency but introduces practical nuances you should account
   - The fee proof is verified first. If it fails, the transaction is rejected immediately, preventing unfunded, complex batches from consuming resources.
 
 - **Integrity of batched legs:**
-  - Sender‑side MPT proofs must still ensure value conservation (total debit equals sum of leg values) and correct construction of ciphertexts.
-  - Receiver‑side affirmation proofs must still prove decryptability and correct crediting, regardless of batching.
+  - Sender-side MPT proofs must still ensure value conservation (total debit equals sum of leg values) and correct construction of ciphertexts.
+  - Receiver-side affirmation proofs must still prove decryptability and correct crediting, regardless of batching.

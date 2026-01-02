@@ -40,7 +40,7 @@ Outcomes:
 
 Confidential accounts are asset-specific: the same key can register many assets, but each asset gets its own state commitment. This keeps proving scoped to the asset you are using.
 
-- Prerequisites: your confidential account is registered on-chain and unlocked in the proof service.
+- Prerequisites: your confidential account is registered on-chain and confidential account keys are available to the proof service.
 - Generate a **register-account-asset proof** that proves ownership of the account keys and initializes a zero balance for the chosen asset.
 - Submit `registerAccountAssets` with the proof; cache the returned state commitment and leaf path locally.
 
@@ -53,13 +53,13 @@ Outcomes:
 
 Minting increases supply for the issuer while keeping prior balances confidential.
 
-- Prerequisites: issuer’s account-asset state and leaf path available to the proof service.
+- Prerequisites: issuer's account-asset state and leaf path available to the proof service.
 - Produce a **minting proof**: spend the old state, reveal a nullifier for it, and create a new state commitment with the increased balance.
 - Submit `mintAsset` with the proof; persist the updated state and leaf path for future actions.
 
 Outcomes:
 
-- Public total supply increases; the issuer’s new confidential balance is committed on-chain, and the spent state is prevented from reuse via its nullifier.
+- Public total supply increases; the issuer's new confidential balance is committed on-chain, and the spent state is prevented from reuse via its nullifier.
 - The old balance remains hidden; only the new commitment and proof validity are public.
 
 ## Operational tips

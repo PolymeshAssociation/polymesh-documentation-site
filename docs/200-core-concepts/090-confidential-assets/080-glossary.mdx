@@ -36,14 +36,14 @@ Used to generate randomness/nullifiers in a way that can be reproduced by the ri
 
 #### DART (original research)
 
-- An account-based confidential payments model that targets a large anonymity set with constant-size on‑chain proofs.
-- Uses commitments, accumulators (e.g., curve trees), nullifiers, and zero‑knowledge proofs to update account states privately.
-- Introduces receiver‑side acceptance semantics and auditability concepts in an account model (as opposed to UTXO notes).
+- An account-based confidential payments model that targets a large anonymity set with constant-size on-chain proofs.
+- Uses commitments, accumulators (e.g., curve trees), nullifiers, and zero-knowledge proofs to update account states privately.
+- Introduces receiver-side acceptance semantics and auditability concepts in an account model (as opposed to UTXO notes).
 - Serves as the conceptual baseline for later Polymesh work.
 
 #### P-DART — Polymesh “Decentralized, Anonymous, and Regulation-friendly Tokenization”
 
-- Polymesh’s evolution of DART to support regulated settlement on chain.
+- Polymesh's evolution of DART to support regulated settlement on chain.
 - Adds a settlement container with encrypted legs, explicit sender/receiver affirmations, and optional mediation.
 - Defines compliance hooks (asset-specific auditors and mediators) with key-privacy goals for encryption.
 - Details Proof of Balance approaches (auditor-assisted and generic) and the use of counters/counter-updates.
@@ -60,7 +60,7 @@ Used to generate randomness/nullifiers in a way that can be reproduced by the ri
 
 A container for one or more **legs** that will be executed under an affirmation workflow.
 
-If you think in terms of transfers: a settlement executes one or more transfers; when there’s just one leg, settlement ≈ transfer.
+If you think in terms of transfers: a settlement executes one or more transfers; when there's just one leg, settlement ≈ transfer.
 
 ### Leg
 
@@ -68,7 +68,7 @@ A single transfer intent inside a settlement (sender, receiver, asset type, valu
 
 ### Transfer
 
-The conceptual movement of value from a sender to a receiver for a given asset. In this design, a transfer is represented as a **leg** within a **settlement**. When there’s one leg, “settlement” and “transfer” are effectively the same operation from an end‑user perspective.
+The conceptual movement of value from a sender to a receiver for a given asset. In this design, a transfer is represented as a **leg** within a **settlement**. When there's one leg, “settlement” and “transfer” are effectively the same operation from an end-user perspective.
 
 ### Settlement Creator
 
@@ -78,11 +78,11 @@ The party that creates a settlement and publishes the encrypted legs and a settl
 
 An explicit accept/reject decision recorded on-chain by a counterparty (sender/receiver) or by a mediator when required.
 
-In the implementation you’ll see proof types like `SenderAffirmationProof`, `ReceiverAffirmationProof`, and `MediatorAffirmationProof`.
+In the implementation you'll see proof types like `SenderAffirmationProof`, `ReceiverAffirmationProof`, and `MediatorAffirmationProof`.
 
 ### Claim
 
-A receiver-side step that credits value into the receiver’s finalized balance (and updates counters accordingly).
+A receiver-side step that credits value into the receiver's finalized balance (and updates counters accordingly).
 
 In the implementation this corresponds to a `ReceiverClaimProof`.
 
@@ -102,7 +102,7 @@ Examples:
 
 Compactly represent a set of valid commitments and support **membership proofs**.
 
-In Polymesh you’ll see curve-tree roots for account/asset state, updated as leaves are added.
+In Polymesh you'll see curve-tree roots for account/asset state, updated as leaves are added.
 
 ### Relayer
 
