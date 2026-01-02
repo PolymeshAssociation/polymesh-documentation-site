@@ -5,7 +5,7 @@ FROM node:lts-alpine AS builder
 ################################################################
 
 WORKDIR /home/node
-RUN corepack enable
+RUN apk add --no-cache python3 make g++ && corepack enable
 USER node
 
 ################################################################
