@@ -175,3 +175,7 @@ Use [secondary keys](/identity/advanced/secondary-keys) for:
 - Cannot be replaced without proper rotation
 - Must maintain sufficient POLYX for transaction fees
 - Cannot act as a secondary key for another identity
+
+#### With the SDK
+
+- The [AccountManagement](/sdk-docs/api/client/AccountManagement/classes/AccountManagement/) class handles functionality related to account management, like creating or freezing accounts.
