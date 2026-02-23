@@ -141,7 +141,7 @@ When an Identity creates an asset, that Identity is automatically assigned to th
 ## Ownership Transfer Considerations
 
 :::warning Critical Note
-Agent permissions are tied to the asset, not the asset owner's Identity. When asset ownership (control) is transferred to a new Identity, the previous owner retains their agent permissions unless explicitly removed. Managing agent permissions is a key step during ownership changes. The new owner must first be added as an agent (typically to the `Full` group) before the previous owner can be removed or have their permissions reduced.
+Agent permissions are tied to the asset, not the asset owner's Identity. When asset ownership (control) is transferred to a new Identity, the previous owner is removed as an agent and the new owner is added as a `Full` agent automatically. Other agents and their permissions remain unchanged, so managing agent permissions is still a key step during ownership changes.
 :::
 
 ## SDK Integration

@@ -52,18 +52,15 @@ Subsidies are established at the account level. All transactions from the subsid
 Before implementing subsidized accounts, be aware of these important limitations:
 
 1. **Account Restrictions**:
-
    - When an account has an active subsidy, it cannot submit non-subsidized transactions
-   - Only specific transactions, defined in the chain runtime are eligible for subsidization. All transaction related to Asset and Identity management are supported.
+   - Only specific transactions, defined in the chain runtime are eligible for subsidization. AAll transaction related to Asset and Identity management are supported.
    - This restriction helps prevent fee circumvention and ensures proper subsidy tracking
 
 2. **Batch Transaction Restrictions**:
-
    - When using subsidies, batch transactions are limited to a maximum of 7 transactions
    - Nested batch calls are not supported when using subsidies
 
 3. **Allowance Management**:
-
    - Subsidies have a maximum allowance that cannot be exceeded
    - Once an allowance is exhausted, it must be renewed by the subsidizer before the key can transact again
 

@@ -13,6 +13,10 @@ It's important to note that these diagrams offer a low-level representation, inc
 
 When using tools such as the Polymesh REST API or the Polymesh TypeScript SDK, some of the steps depicted in these diagrams are combined into a single user action. These tools can simplify the process for integrators, streamlining the integration of Assets.
 
+:::note
+These diagrams cover settlement flows for both traditional portfolio-based transfers and Account ID-based transfers (introduced in v7.4.0). The mechanics are the same regardless of whether senders and receivers hold assets in portfolios or at Account IDs.
+:::
+
 ## Asset Creation
 
 In this sequence diagram, the asset issuer creates, configures, and issues an asset. In this flow, the issuer performs these actions directly, but it is also possible to delegate the configuration and issuance steps to an agent once the asset has been created.
@@ -208,4 +212,50 @@ end
 I ->> P: Execute Settlement Instruction
 Note over I,P: Fully affirmed instructions can optionally be executed by any party to the instruction
 P ->> P: Sender and Receiver Balances<br>Updated and Lock Removed
+```
+
+## Simplified Account ID Transfer (`transfer_asset`)
+
+Starting with v7.4.0, Polymesh provides a simplified API (`asset::transfer_asset`) for single-leg fungible asset transfers between Account IDs. This flow is much simpler than the multi-leg settlement instruction process because it auto-affirms the sender and automatically executes when the receiver affirms or if the receiver has pre-approved the asset.
+
+:::note
+The `transfer_asset` function is designed for Account ID to Account ID transfers only. For transfers involving portfolios, first move the balance to an Account ID using `portfolio::move_portfolio_funds` or alternatively use the full settlement instruction flow shown above.
+:::
+
+```mermaid
+sequenceDiagram
+participant S as Asset Sender<br>(Account ID)
+participant R as Asset Receiver<br>(Account ID)
+participant P as Polymesh
+
+S ->> P: Call transfer_asset with:
+Note over S,P: Receiver Account ID, Asset ID, Amount, optional memo
+
+par
+  P ->> P: Resolve sender and receiver DIDs<br>from Account IDs
+  P ->> P: Create settlement instruction<br>with single leg
+and
+  P ->> P: Auto-affirm sender<br>Lock sender assets
+end
+
+alt Receiver has pre-approved the asset
+  P ->> P: Auto-execute instruction<br>Transfer assets immediately
+  P -->> S: Transfer complete
+  P -->> R: Assets received
+else Receiver has NOT pre-approved
+  P -->> R: Pending affirmation required
+  Note over S,P: Instruction awaits receiver affirmation
+
+  alt Receiver affirms
+    R ->> P: Call receiver_affirm_asset_transfer
+    P ->> P: Affirm receiver and<br>attempt execution
+    P ->> P: Transfer assets
+    P -->> S: Transfer complete
+    P -->> R: Assets received
+  else Receiver rejects
+    R ->> P: Call reject_asset_transfer
+    P ->> P: Release sender lock
+    P -->> S: Transfer rejected
+  end
+end
 ```

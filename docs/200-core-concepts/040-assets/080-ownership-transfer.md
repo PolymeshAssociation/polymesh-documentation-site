@@ -25,9 +25,9 @@ If there is a **Ticker** linked to an asset, the ownership of that ticker will a
 :::
 
 :::warning Important Warning
-**Transferring asset ownership does NOT automatically add the new owner as an asset agent or remove existing asset agents.**
+**Transferring asset ownership updates agent assignments automatically.** The previous owner is removed as an agent and the new owner is added as a `Full` agent when the transfer completes. Other agents and their permissions are unchanged.
 
-Asset agents are managed independently of ownership. As part of the asset transfer, the previous owner should make the new owner a full agent of the asset. After a transfer, the new owner should review and update the list of asset agents and their permissions to ensure only trusted parties retain access. Failing to do so may leave previous agents with unintended control over the asset.
+After a transfer, the new owner should review and update the list of asset agents and their permissions to ensure only trusted parties retain access.
 
 See [Asset Agents & Permissions](/asset-agents) for more information.
 :::

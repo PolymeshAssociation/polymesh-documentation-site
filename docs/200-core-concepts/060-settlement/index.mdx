@@ -11,14 +11,14 @@ tags:
 
 ## Overview
 
-Settlement in Polymesh is the process by which assets are transferred between identities in a regulated and compliant fashion. It requires all counterparties to affirm (agree) an instruction (a set of asset transfers) before the instruction settles (completes).
+Settlement in Polymesh is the process by which assets are transferred between identities in a regulated and compliant fashion. Asset balances can be held in portfolios under an identity or signing accounts (public key address) linked to an identity. It requires all counterparties to affirm (agree) an instruction (a set of asset transfers) before the instruction settles (completes).
 
 Key characteristics of Polymesh settlement:
 
 - **Multi-party coordination**: All counterparties must explicitly authorize transfers
 - **Double spending prevention**: Assets are locked upon sender affirmation
 - **Flexible execution**: Multiple settlement types accommodate different workflow requirements
-- **Unilateral rejection**: Any counterparty can reject an instruction at any time
+- **Unilateral rejection**: Any counterparty can reject an instruction at any time prior to execution
 - **Optional mediation**: Third-party validation through [settlement mediators](/settlement/mediators) (e.g. a transfer agent)
 
 ## Settlement Types
@@ -45,14 +45,14 @@ These date fields are purely informational metadata and are **not enforced** by 
 
 Instructions can settle via:
 
-- **On-chain movement**: Direct transfer of on-chain assets between portfolios
+- **On-chain movement**: Direct transfer of on-chain assets between any combination of portfolios and Account IDs.
 - **Off-chain payment receipts**: Signed attestations that off-chain asset transfers occurred. See [Off-Chain Settlement](/settlement/off-chain/) for details.
 
 ## Double Spending Prevention
 
 Polymesh prevents double spending through immediate asset locking:
 
-- When a sender affirms an instruction, required assets are immediately locked in their portfolio
+- When a sender affirms an instruction, required assets are immediately locked (whether held in a portfolio or at an Account ID)
 - Locked assets cannot be used in other transactions until released
 - Asset locks are only released when:
   - The instruction is successfully executed (assets are transferred)
@@ -166,21 +166,21 @@ Each leg within an instruction specifies:
 - **Asset**: The specific asset to be transferred (identified by Asset ID)
 - **Amount**: The quantity of the asset to transfer (for fungible assets)
 - **NFTs**: The specific NFT IDs to transfer (for non-fungible assets, up to 10 NFTs per leg)
-- **Sender portfolio**: The portfolio from which assets will be transferred
-- **Receiver portfolio**: The portfolio that will receive the assets
+- **Sender**: The portfolio or Account ID from which assets will be transferred
+- **Receiver**: The portfolio or Account ID that will receive the assets
 - **Leg type**: On-chain transfer or off-chain receipt
 
 ### Leg Types
 
 **Fungible legs**:
 
-- Transfer a specific quantity of fungible tokens between portfolios
+- Transfer a specific quantity of fungible tokens between any combination of portfolios and Account IDs
 - Assets are locked when the sender affirms and transferred upon execution
 - Most common type for security tokens and other divisible assets
 
 **Non-fungible legs**:
 
-- Transfer specific NFT IDs from a single collection between portfolios
+- Transfer specific NFT IDs from a single collection between any combination of portfolios and Account IDs
 - Can transfer up to 10 individual NFTs per leg from the same collection
 - Each NFT is identified by its unique NFT ID within the collection
 - Assets are locked when the sender affirms and transferred upon execution
@@ -221,6 +221,56 @@ Instructions progress through several status states:
 2. **Affirmation**: Counterparties (and mediators if required) affirm the instruction (assets locked for senders). Where [portfolio custody](/portfolios/custody/) has been assigned, the controller of that portfolio is responsible for affirmation rather than the portfolio owner.
 3. **Execution**: Instruction settles based on its settlement type
 4. **Completion**: Assets transferred and instruction marked as successful
+
+## Portfolio and Account ID Transfer Path
+
+With v7.4.0, settlement enables transfers between portfolios and Account IDs (signing key balances) in both directions. This represents a shift from the previous Portfolio only and aligns with traditional key based balance models of other chains while still leveraging the settlement engine for compliance and regulatory requirements. The settlement engine handles all transfers between portfolios and Account IDs, ensuring consistent compliance checks, double-spend prevention, and regulatory controls regardless of the transfer path.
+
+Account ID balances were introduced as a non breaking change in v7.4.0 by extending the `PortfolioKind` type to support a type of `AccountId`. Settlement instructions still require the sender and receiver's DIDs to be looked up and provided as part of the instruction creation step when using the settlement pallet.
+
+Future chain updates may simplify the settlement instruction creation process by allowing the chain to automatically resolve the sender and receiver DIDs from their Account IDs, eliminating the need for clients to pre-resolve and provide this information while leveraging the full capabilities of the multi leg settlement engine.
+
+## Account ID Transfers (`transfer_asset`)
+
+Polymesh v7.4 introduces `asset::transfer_asset`, a simplified single-leg fungible asset transfer API that accepts a receiver's Account ID directly, eliminating the need for clients to pre-resolve the receiver's DID. The chain resolves the receiver's DID internally via on-chain identity lookup for compliance checks. This creates a streamlined Account ID to Account ID transfer model while still leveraging the settlement engine under the hood.
+
+:::info
+
+The `asset::transfer_asset` function is designed for simple single-leg transfers between Account IDs. If a sender only holds an asset in a [Portfolio](/portfolios/) they must first [move](/portfolios/#moving-funds-between-portfolios) the asset to their Account ID using `portfolio::move_portfolio_funds` before calling `asset::transfer_asset`.
+
+:::
+
+### How Account ID Transfers Work
+
+Account ID transfers work with balances held directly at the signing key's Account ID (using `PortfolioKind::AccountId` rather than explicit portfolios):
+
+1. **Sender initiates transfer**: Sender calls `transfer_asset` with:
+   - Receiver's Account ID (public address)
+   - Asset ID
+   - Amount
+   - Optional memo
+
+2. **On-chain DID resolution**: The chain automatically resolves the sender and receiver's DID from their Account IDs for compliance checks, removing any client-side lookups
+
+3. **Instruction creation**: A settlement [instruction](#instruction-structure) is created with a single leg:
+   - From: Sender's Account ID
+   - To: Receiver's Account ID
+   - Asset: The specified asset ID
+   - Amount: The transfer quantity
+
+4. **Sender affirmation**: The sending account is automatically [affirmed](#affirmation-requirements) and assets are locked
+
+5. **Settlement happens based on receiver status**:
+   - **If receiver [pre-approved](#asset-exemptions-and-pre-affirmation) the asset**: Instruction executes immediately in the same block without pending affirmation.
+   - **If receiver has NOT pre-approved**: Instruction created with a pending status and requires the receiver to call `asset::receiver_affirm_asset_transfer` or affirm via the settlement engine. This call also automatically resolves the receiver's DID and attempts instruction execution in the same block.
+   - Receiver can alternatively reject with `asset::reject_asset_transfer`
+
+### Key Characteristics
+
+- **Single-leg only**: Account ID transfers cannot have multiple legs (no multi-leg atomicity)
+- **No explicit portfolio support**: Transfers work directly with the signing key's Account ID balance
+- **Auto-execution on receiver approval**: When receiver affirms, execution happens atomically in the same transaction - no scheduler delay, immediate feedback on success or failure.
+- **Same engine**: Despite simplified API, uses the full settlement engine for compliance checks, double-spend prevention, and regulatory requirements
 
 ## Execution Behavior
 

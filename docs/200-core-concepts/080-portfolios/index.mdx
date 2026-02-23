@@ -11,7 +11,9 @@ tags:
 
 ## Overview
 
-In Polymesh, all [assets](/core/assets) (excluding the network native token [POLYX](/polyx)) are held at the [identity](/identity) level, or more correctly in Portfolios associated with an identity. This allows Polymesh to enforce [compliance](/compliance) in real time based on claims also held at the identity level.
+In Polymesh, all [assets](/core/assets) (excluding the network native token [POLYX](/polyx)) are held at the [identity](/identity) level, most commonly in portfolios associated with an identity. This allows Polymesh to enforce [compliance](/compliance) in real time based on claims also held at the identity level.
+
+Starting in v7.4.0, assets can also be held directly by signing keys using `PortfolioKind::AccountId`. This is additive to the portfolio model, which remains the default for most asset workflows.
 
 Portfolios allow users to organize their assets underneath their identity, and to flexibly assign key permissions and custody. A particular asset can have different balances across portfolios within the same identity.
 
@@ -87,6 +89,17 @@ graph TD
     P3 --> A5
     P4 --> A6
 ```
+
+## Account ID Balances (PortfolioKind::AccountId)
+
+Account ID balances let a signing key hold assets directly using `PortfolioKind::AccountId`. This is useful for simplified transfers to an Account ID without pre-fetching a DID and for workflows that do not require advanced portfolio features.
+
+Key points:
+
+- The balance is associated with a signing key, but compliance still applies based on the key's DID.
+- The settlement engine is still used for transfers, typically between default portfolios derived from DIDs.
+- Account ID portfolios do not support custody
+- Account ID portfolios are not supported by portfolio-level secondary-key permissions.
 
 ## Managing Portfolios
 

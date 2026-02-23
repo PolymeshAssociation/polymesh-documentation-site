@@ -29,14 +29,14 @@ To create a fungible asset, users specify the asset type (e.g., Equity, Bond, Fu
 
 ## Issuance and Distribution
 
-After creation, issuers or their appointed [agents](/asset-agents) can issue tokens to portfolios they control. Tokens can then be distributed to investors through a security token offering or directly using the settlement and compliance engines. See [Settlement](/settlement) and [Security Token Offerings](/sto) for more on fundraising and distribution.
+After creation, issuers or their appointed [agents](/asset-agents) can issue tokens to portfolios or accounts associated with their identity. Tokens can then be distributed to investors through a security token offering or directly using the settlement and compliance engines. See [Settlement](/settlement) and [Security Token Offerings](/sto) for more on fundraising and distribution.
 
 ## Key Features Unique to Fungible Assets
 
 ### Issuance and Redemption
 
-- **Issuance**: An agent of the fungible asset can mint (issue) tokens to a portfolio under their on-chain identity (control of the portfolio can be assigned to another identity before issuing assets). This increases the total supply and the recipient's balance. Tokens are issued by calling the `asset::issue` method, specifying the `asset_id`, `amount`, and target portfolio.
-- **Redemption**: Tokens can be redeemed (burned) from a portfolio owned by an appropriately permissioned agent of the asset, reducing both the total supply and the portfolio's balance. Tokens are redeemed by calling the `asset::redeem` method, specifying the `asset_id`, `value`, and portfolio to redeem the tokens from.
+- **Issuance**: An agent of the fungible asset can mint (issue) tokens to a portfolio or account under their on-chain identity (control of a portfolio can be assigned to another identity before issuing assets). This increases the total supply and the agents balance. Tokens are issued by calling the `asset::issue` method, specifying the `asset_id`, `amount`, and target portfolio or account.
+- **Redemption**: Tokens can be redeemed (burned) from a portfolio or account owned by an appropriately permissioned agent of the asset, reducing both the total supply and the portfolio or account's balance. Tokens are redeemed by calling the `asset::redeem` method, specifying the `asset_id`, `value`, and portfolio or account to redeem the tokens from.
 
 ### Divisibility
 
