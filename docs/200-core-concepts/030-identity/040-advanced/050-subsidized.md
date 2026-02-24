@@ -53,7 +53,7 @@ Before implementing subsidized accounts, be aware of these important limitations
 
 1. **Account Restrictions**:
    - When an account has an active subsidy, it cannot submit non-subsidized transactions
-   - Only specific transactions, defined in the chain runtime are eligible for subsidization. AAll transaction related to Asset and Identity management are supported.
+   - Only specific transactions, defined in the chain runtime are eligible for subsidization. All transactions related to Asset and Identity management are supported.
    - This restriction helps prevent fee circumvention and ensures proper subsidy tracking
 
 2. **Batch Transaction Restrictions**:
