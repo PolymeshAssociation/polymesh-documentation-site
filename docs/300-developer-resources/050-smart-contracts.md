@@ -135,7 +135,7 @@ The Upgradable Polymesh Ink Contract can be found at:
 https://github.com/PolymeshAssociation/Polymesh/tree/develop/contracts/upgradeable-polymesh-ink
 and is a normal Polymesh smart contract, that has an API designed to be called by other smart contracts (rather than directly through the `Contracts::call` extrinsic).
 
-This contract is maintained by the Polymesh Association, with the intention that if there are breaking changes during an upgrade that mean any of its functionality no longer works, a new fixed version will be deployed and made available ahead of these breaking changes.
+This contract is maintained by Polymesh Labs Limited, with the intention that if there are breaking changes during an upgrade that mean any of its functionality no longer works, a new fixed version will be deployed and made available ahead of these breaking changes.
 
 It presents a clean API such as:
 

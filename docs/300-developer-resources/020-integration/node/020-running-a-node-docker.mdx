@@ -16,7 +16,7 @@ tags:
 
 Docker is an open source containerization platform which allows developers to pack, ship, and run any application as a lightweight, portable, self-sufficient container.
 
-For convenience the Polymesh Association offers precompiled Docker container images of Polymesh. These images allow a user to quickly deploy the Polymesh software and it's dependencies. Prebuilt container image can be fetched from the [Polymesh Association Docker Hub repository](https://hub.docker.com/r/polymeshassociation/polymesh/tags). The Polymesh Association also published a sample [Docker-Compose file](https://github.com/PolymeshAssociation/polymesh-tools/tree/main/docker-compose) which can be used to quickly deploy a Polymesh node as part of a multi container environment. The use of Docker Compose is not covered in this guide.
+For convenience Polymesh offers precompiled Docker container images of Polymesh. These images allow a user to quickly deploy the Polymesh software and it's dependencies. Prebuilt container image can be fetched from the [Polymesh Docker Hub repository](https://hub.docker.com/r/polymeshassociation/polymesh/tags). Polymesh also published a sample [Docker-Compose file](https://github.com/PolymeshAssociation/polymesh-tools/tree/main/docker-compose) which can be used to quickly deploy a Polymesh node as part of a multi container environment. The use of Docker Compose is not covered in this guide.
 
 ---
 
@@ -38,7 +38,7 @@ It is recommend to use a specific `version` number for deterministic versioning.
 
 **Note: The specified Docker container health checks will not work with the distroless image, but it's more lightweight and safer.**
 
-Refer to the [Polymesh Association Docker Hub repository](https://hub.docker.com/r/polymeshassociation/polymesh/tags) for the available release tags. Your desired release tag can be pulled with the command:
+Refer to the [Polymesh Docker Hub repository](https://hub.docker.com/r/polymeshassociation/polymesh/tags) for the available release tags. Your desired release tag can be pulled with the command:
 
 ```bash
 sudo docker pull polymeshassociation/polymesh:6.0.0-testnet-distroless
@@ -46,7 +46,7 @@ sudo docker pull polymeshassociation/polymesh:6.0.0-testnet-distroless
 
 The tag `:6.0.0-testnet-distroless` should be replaced with the desired release tag.
 
-The Polymesh Association does not publish a `:latest` build. If a release tag is omitted the docker pull command will error.
+Polymesh does not publish a `:latest` build. If a release tag is omitted the docker pull command will error.
 
 By default, if the Polymesh container image has not previously been pulled from the repository, it will be pulled when first attempting to run it. You can verify the version installed by running the following command:
 

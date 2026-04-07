@@ -419,7 +419,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Polymesh Association, All Rights Reserved`,
+      copyright: `Copyright © ${new Date().getFullYear()} Polymesh Labs Limited, All Rights Reserved`,
       logo: {
         width: '150px',
         alt: 'Polymesh Logo',

@@ -131,4 +131,4 @@ You can now use this key to interact with Polymesh on Polymesh App. If you selec
 
 - [Ledger Polymesh App GitHub](https://github.com/LedgerHQ/app-polymesh)
 - [Ledger Polymesh App support page](https://support.ledger.com/article/4641803176221-zd)
-- [Polymesh Association Support Requests](https://polymesh.network/contact-us)
+- [Polymesh Support Requests](https://polymesh.network/contact-us)

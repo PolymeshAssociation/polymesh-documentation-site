@@ -31,13 +31,13 @@ Following are **_out of scope_**:
 
 ### Rules
 
-- Rewards will be decided on a per case basis. This bug bounty program's terms and conditions are at the sole discretion of the Polymesh Association.
+- Rewards will be decided on a per case basis. This bug bounty program's terms and conditions are at the sole discretion of Polymesh.
 - Rewards will vary depending on the severity of the issue.
 - Disclose the bug only through the approved channels: [Immunefi](https://immunefi.com/bounty/polymesh/), email, or Discord. Do not disclose a bug or vulnerability publicly until it has been addressed, especially for critical issues. Public disclosure before resolution may disqualify the submission from a reward.
 - The bugs being considered for the reward are based on a first come, first served basis; duplicate bugs will not be considered.
 - If you want to add more information to a provided issue, edit the original report or continue the conversation in the same thread; do not create a new submission.
 - Other variables considered for rewards include: the quality of the issue description, the instructions for reproducibility, and the quality of the fix (if included).
-- Determinations of eligibility, score, and all terms related to an award are at the sole and final discretion of the Polymesh Association.
+- Determinations of eligibility, score, and all terms related to an award are at the sole and final discretion of Polymesh.
 - Submissions need to be related to the Bounty Scope. Submissions out of the Bounty Scope won't be eligible for a reward.
 - Any interference with the protocol, client, or platform services, on purpose or not during the process, will make the submission process invalid.
 - It is mandatory to read and follow the responsible disclosure policy available in the references. Submissions not following the disclosure policy will not be eligible for a reward.
@@ -61,14 +61,14 @@ While researching, please refrain from:
 - Denial of service in general and of Public RPC nodes
 - Attacks that consume a substantial amount of Testnet POLYX and which would otherwise be cost-prohibitive on Mainnet
 - Spamming
-- Social engineering (including phishing) of Polymesh Association's staff
-- Any physical attempts against Polymesh Association's property or data centres
+- Social engineering (including phishing) of Polymesh's staff
+- Any physical attempts against Polymesh's property or data centres
 
 ### Safe Harbor
 
 Any activities conducted in a manner consistent with this policy will be considered authorized conduct and we will not initiate legal action against you. If legal action is initiated by a third party against you in connection with activities conducted under this policy, we will take steps to make it known that your actions were conducted in compliance with this policy.
 
-However, please understand that if your security research involves the networks, systems, information, applications, products, or services of a third party, that third party is not bound by the rules of this program and may determine, at their sole discretion, whether to pursue legal action. The Polymesh Association cannot and does not authorize security research on other entities.
+However, please understand that if your security research involves the networks, systems, information, applications, products, or services of a third party, that third party is not bound by the rules of this program and may determine, at their sole discretion, whether to pursue legal action. Polymesh cannot and does not authorize security research on other entities.
 
 Please see [Safe Harbor Conditions](/development/bug-bounty/rules#23-safe-harbor-provisions) in our [Terms and Conditions](/development/bug-bounty/rules) for full details.
 

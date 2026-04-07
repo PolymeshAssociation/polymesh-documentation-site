@@ -22,7 +22,7 @@ Polymesh is a permissioned network, meaning potential operators must undergo a g
 
 ## Becoming an Operator
 
-The node operator role on Polymesh requires a permission to be assigned. All Operators satisfy selection criteria determined by the Polymesh Association and be approved by the the Polymesh Governing Council.
+The node operator role on Polymesh requires a permission to be assigned. All Operators satisfy selection criteria determined by Polymesh and be approved by the the Polymesh Governing Council.
 
 To become an operator on Polymesh, you also need to bond (lock) POLYX in the system. This facilitates the economic incentives on which Polymesh's security relies. The account that stores your bonded POLYX is called the Stash account, while the account that manages the bonded POLYX is called the Controller account. Rewards generated for running an operator node can be sent to the Stash account or another specified account.
 
@@ -107,7 +107,6 @@ The `--reserved-only` flag, combined with the `--reserved-nodes` parameter, allo
 To function properly, Polymesh nodes require the following traffic to be whitelisted:
 
 - **All Nodes**:
-
   - **Port 443 Egress (HTTPS)** (optional but recommended): Used to send basic telemetry to Polymesh servers. Enabling telemetry allows your node to appear on the [Polymesh Telemetry page](https://stats.polymesh.network/).
 
   - **NTP Egress**: System clock drift can cause a node to fail to produce blocks due to mismatched timestamps. Ensure your nodes are synchronized with a reliable NTP server.
@@ -422,7 +421,6 @@ To become an operator on Polymesh, you must bond (lock) some POLYX. The account 
    ![Bonding preferences](./images/node-operator/bonding-preferences.png 'Bonding preferences')
 
 4. **Complete the following fields:**
-
    - **Payment destination**: Specify where validation rewards should be sent.
 
 5. Click **Bond** and sign the transaction using your stash account. After a few seconds, an `ExtrinsicSuccess` message should appear. Refresh the page if necessary to view your new bonded account details.

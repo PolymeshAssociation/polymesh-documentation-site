@@ -29,7 +29,7 @@ This tooling facilitates:
 
 ## Github Repos
 
-The Polymesh Private chain and associated tooling is available within the [Polymesh Association Github](https://github.com/PolymeshAssociation) organisation.
+The Polymesh Private chain and associated tooling is available within the [Polymesh Github](https://github.com/PolymeshAssociation) organisation.
 
 Each repository has its own README.md file to help get started with building and deploying the chain and each tool.
 
