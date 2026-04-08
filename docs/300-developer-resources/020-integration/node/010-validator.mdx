@@ -22,7 +22,7 @@ Polymesh is a permissioned network, meaning potential operators must undergo a g
 
 ## Becoming an Operator
 
-The node operator role on Polymesh requires a permission to be assigned. All Operators satisfy selection criteria determined by Polymesh and be approved by the the Polymesh Governing Council.
+The node operator role on Polymesh requires a permission to be assigned. All operators must satisfy selection criteria determined by Polymesh and be approved by the Polymesh Governing Council.
 
 To become an operator on Polymesh, you also need to bond (lock) POLYX in the system. This facilitates the economic incentives on which Polymesh's security relies. The account that stores your bonded POLYX is called the Stash account, while the account that manages the bonded POLYX is called the Controller account. Rewards generated for running an operator node can be sent to the Stash account or another specified account.
 
@@ -52,7 +52,7 @@ Session keys must either be stored within the client or mounted from secure stor
 
 ### Permissioned Identity
 
-On Polymesh all keys (excluding Session keys) must be linked to a on chain DID with a valid CDD claim to be able to receive POLYX and submit transactions. A node operators DID must be granted an additional role making it a permissioned identity. Only keys linked to this identity will be allowed to be Stash keys.
+On Polymesh all keys (excluding Session keys) must be linked to an on-chain DID with a valid CDD claim to be able to receive POLYX and submit transactions. A node operator's DID must be granted an additional role making it a permissioned identity. Only keys linked to this identity will be allowed to be Stash keys.
 
 ### Primary key
 
@@ -186,9 +186,9 @@ To do so:
 1. (If not already done) Generate a new set of session keys for the warm spare operator node.
 2. Navigate to [Staking > Account Actions](https://mainnet-app.polymesh.network/#/staking/actions).
 3. Click "Set Session Key" for your bonding account.
-4. Enter the session keys from the warm spare node in the field and click "Set Session Key."
+4. Enter the `keys` value from the warm spare node and provide the associated `proof`, then click "Set Session Key."
 
-See [Running an Operator Node](#running-an-operator-node) for instructions on using the `author_rotateKeys` RPC method to generate session keys.
+See [Running an Operator Node](#running-an-operator-node) for instructions on using the `author_rotateKeysWithOwner` RPC method to generate session keys and ownership proof.
 
 The change in operator session keys will only take effect in the next session. **For safety, we recommend waiting at least two sessions before proceeding.** If the current session is `N`, wait until session `N + 2` before continuing.
 
@@ -200,7 +200,7 @@ If a warm spare is unavailable, you may perform an in-place upgrade by stopping 
 
 Since Polymesh is a public blockchain, node backups are not strictly required, as you can always synchronize from scratch. However, syncing from scratch can be time-consuming. To minimize the delay between node creation and readiness, you may choose to back up the full blockchain database regularly.
 
-This does not need to be done for every node—a single database backup can be used across nodes, provided they use the same `--pruning` setting. Operator nodes run with an implicit `--pruning archive` setting, so we recommend explicitly setting this parameter on all nodes to allow sharing a single database backup.
+This does not need to be done for every node—a single database backup can be used across nodes, provided they use the same pruning settings. In v8, all nodes including operators use the same default pruning: `--state-pruning 256` and `--blocks-pruning archive-canonical`. These defaults are appropriate for consensus participation. If you create backups with these settings, they can be shared across operator nodes.
 
 Database backups should be performed on an offline node. A typical approach is:
 
@@ -243,7 +243,7 @@ For binary-based nodes, we recommend using a supervisor process. Most modern Lin
    Type=simple
    Restart=always
    RestartSec=5
-   ExecStart=/usr/local/bin/polymesh --chain mainnet --pruning archive --name <your-node-name> --operator
+   ExecStart=/usr/local/bin/polymesh --chain mainnet --name <your-node-name> --validator
 
    [Install]
    WantedBy=multi-user.target
@@ -276,71 +276,153 @@ Refer to the `journalctl` man pages for additional details.
 Recommended options for running a Polymesh node include:
 
 - `--name <name>` (optional): Human-readable name reported to telemetry services.
-- `--pruning archive`: Maintain a full blockchain copy.
 - `--chain mainnet`: Run a Mainnet node (default is Testnet if omitted).
 - `--wasm-execution compiled`: Use compiled WASM for better performance.
 - `--base-path <path>` (optional): Specify the location for DB files and the keystore.
+- `--node-key-file <path>` (optional): Use an explicit node key path when you manage node key outside the default "network" folder.
 - `--db-cache <cache size in MiB>` (optional): Increase in-memory cache for better performance. On a node with 8GB of available RAM, a reasonable value is `4096`. (default `128` MiB)
 - `--db-max-total-wal-size <WAL database size in MiB>` (optional): Limit the total storage capacity that the database can use for WAL files. Recommended minimum value `1024`.
+- `--state-pruning` and `--blocks-pruning` (optional): Configure pruning behavior. Refer to [Configuring Pruning](/node/docker#configuring-pruning) for details. The v8 defaults (`--state-pruning 256` and `--blocks-pruning archive-canonical`) are appropriate for operator nodes.
 
 **Note:** The `<name>` parameter will be publicly visible when telemetry is enabled (default setting).
 
-To see a full list of available options and their descriptions you can viewed by including the `--help` command.
+To see a full list of available options and their descriptions, run the `--help` command.
 
 ## Running an Operator Node
 
 To run an operator node, use the following in addition to the [common parameters](#common-parameters-for-running-a-polymesh-node):
 
-- `--operator`: Enable operator mode.
+- `--validator`: Enable validator mode.
 
 To connect only to trusted peers, use these options:
 
 - `--reserved-only`: Restrict connections to reserved peers.
 - `--reserved-nodes`: A space-separated list of libp2p peer addresses in the format `/ip4/<IP>/tcp/30333/p2p/<Node ID>` or `/dns4/<Hostname>/tcp/30333/p2p/<Node ID>`. If omitted, peers must be added via the `system_addReservedPeer` RPC method.
 
+For validator operations, keep a stable node key persisted under your `--base-path`. With default settings, the node key is stored in the chain-specific network folder:
+
+- `/<base-path>/chains/<chain-name>/network/secret_ed25519`
+
+If the key is stored in this default location, you do not need to pass `--node-key-file`.
+
+Use `--node-key-file` when you intentionally store the node key in a custom location.
+
+For testing you can avoid separate key generation by using`--unsafe-force-node-key-generation`. This forces key generation if the node-key-file file does not exist on container start, which is useful for testing but not recommended for production.:
+
+`--unsafe-force-node-key-generation` is considered unsafe for active authorities because identity changes can break connectivity with peers that expect a stable peer ID.
+
+### Generating and Inspecting Node Keys
+
+Before starting a validator, generate and verify the node key explicitly.
+
+Generate a node key in the default chain network location under your `--base-path`:
+
+```bash
+polymesh key generate-node-key --base-path <base-path> --chain mainnet
+```
+
+With `--base-path <base-path>` and `--chain mainnet`, this writes the key to:
+
+```plaintext
+<base-path>/chains/mainnet/network/secret_ed25519
+```
+
+If you run testnet, the path is:
+
+```plaintext
+<base-path>/chains/testnet/network/secret_ed25519
+```
+
+Inspect the key and print the peer ID:
+
+```bash
+polymesh key inspect-node-key --file <base-path>/chains/mainnet/network/secret_ed25519
+```
+
+If you keep the key in the default location, no explicit node-key argument is required at startup. Use `--node-key-file` only when you intentionally store the key in a custom path.
+
 Next, generate the node's session keys.
 
 ### Generating Session Keys with Access to the Node's RPC Port
 
-The `author_rotateKeys` method can be called against a running operator node to generate session keys.
+Use `author_rotateKeysWithOwner` to generate session keys and the required ownership proof in one call.
+
+The `owner` parameter must be your **stash AccountId** in hex format: `0x` + the 32-byte raw public key bytes.
 
 ```bash
-curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933 | jq -r .result
+curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":"author_rotateKeysWithOwner", "params":["<stash_account_id_hex>"]}' http://localhost:9944 | jq .result
 ```
 
 You will get an output similar to:
 
-```plaintext
-0x2bd908203ae740b513f5907fdcc2e29a6bd2835618da917c03d2cfe65d96745\
-b54d59fe4dc5a106c130be0e677596eb023164c314d6fb5cc62ead1bcaee6a443\
-fe5df859fc1de372580abaa98a22fee962bcff580bf57138adc12955aa698a5fa\
-a923978d9c16014205af96da9d2e213083aefcb53982927a2756ffa83d81658
+```json
+{
+  "keys": "0x4c28da...cfefe26",
+  "proof": "0x59e7e5...85901"
+}
 ```
 
-Take note of this string: it contains the **public** portion of your session keys. The private keys are stored in a keystore on your operator server in the `/<base path>/chains/<chain name>/keystore/` directory. The filenames of these keys are the public key portion of the respective session key, and the file contents represent the private key.
+Record both values:
+
+- `keys`: The concatenated **public** session keys.
+- `proof`: The ownership proof required when setting/updating session keys on-chain.
+
+Important behavior changes:
+
+- Each call to `author_rotateKeysWithOwner` rotates to a fresh set of session keys.
+- Save `keys` and `proof` immediately; if lost, you must rotate again and re-submit the new values on-chain.
+- There is no RPC to generate ownership proofs for existing session keys already in the keystore.
+- Manual external key generation/insertion workflows that do not produce a proof are not sufficient for setting keys on-chain.
+
+The private keys are stored in a keystore on your operator server in the `/<base path>/chains/<chain name>/keystore/` directory. The filenames of these keys are the public key portion of the respective session key, and the file contents represent the private key.
+
+The `keys` output includes five concatenated public keys in this order: `GRANDPA`, `BABE`, `I'm Online`, `Authority Discovery`, `BEEFY`.
+
+Keystore filenames are prefixed with 4-byte key type identifiers (hex-encoded ASCII), followed by the public key:
+
+- `gran` = `6772616e` (GRANDPA)
+- `babe` = `62616265` (BABE)
+- `imon` = `696d6f6e` (I'm Online)
+- `audi` = `61756469` (Authority Discovery)
+- `beef` = `62656566` (BEEFY)
+
+Example filenames:
+
+```plaintext
+617564692ea2449927f86a7d67bb6d83f3052201540b3fdb05d4590e3f14ca8088ffd61b
+62616265c6cb0c45331ff2c69dfed5fe58d213e1783f9102f336eeb78eae7c8b1b583339
+62656566033be800f15a7ee3bd599d25ad1e3cb1f690cbdc27c3f5e1a68784db804cfefe26
+6772616e4c28da7efceb18a51eeb605cd42d9d8b0781e25d33215e89837e6a30fdcca3d0
+696d6f6ea0efe6d5be790ad3865df836cfc432908e418e6daa0d1d5fb5c0d27535be1930
+```
 
 **Wait until your operator node is fully synced with the chain and production-ready before activation.**
 
 ### Generating Session Keys in Containerized Polymesh Nodes
 
-Our official container images include a utility to rotate session keys without requiring additional tools like `curl` or exposing unsafe RPC methods outside the container. This utility is located at `/usr/local/bin/rotate`. Running it will produce a newline-terminated string containing the public session keys used for bonding.
+Our official container images include a utility to rotate session keys without requiring additional tools like `curl` or exposing unsafe RPC methods outside the container. This utility is located at `/usr/local/bin/rotate`.
+
+In v8, this workflow requires the owner account ID in hex and returns both `keys` and `proof` (equivalent to `author_rotateKeysWithOwner`).
 
 To run the utility inside your container:
 
 ```bash
-docker exec <container_name> /usr/local/bin/rotate
+docker exec <container_name> /usr/local/bin/rotate <stash_account_id_hex>
 ```
 
 See our [guide to running a node with Docker](/node/docker#generating-node-session-keys) for more details.
 
 ### Getting the Identity of a Node
 
-When your node is first initialized a Local node identity is generated if none is present in your nodes `network` folder. The key used to generate it is stored so your nodes peer ID persists across restarts.
+In v8+, node network keys are not automatically generated when missing. You should provision a persistent node key (for example via `--node-key-file`) and back it up. If you intentionally create a new key with `--unsafe-force-node-key-generation`, use it only for initial bootstrap and remove the flag afterward.
 
-There are two ways to obtain the public identity of a node:
+As long as the same node key is preserved, your node peer ID will remain stable across restarts.
+
+There are three ways to obtain the public identity of a node:
 
 - From the operator node logs
 - Via an RPC call
+- Via the `polymesh key inspect-node-key` command
 
 #### From the Operator Node Logs
 
@@ -371,7 +453,7 @@ In this example, the node's identity is `12D3KooWSDAHjBmA6j2GyBZPktEz2gLZmtJAc2b
 Call the `system_localPeerId` method and read the `result` value:
 
 ```bash
-curl -s -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "system_localPeerId", "params":[]}' http://localhost:9933 | jq -r .result
+curl -s -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "system_localPeerId", "params":[]}' http://localhost:9944 | jq -r .result
 ```
 
 ### Metrics and Monitoring
@@ -438,7 +520,7 @@ Use the session keys generated during your operator node setup.
 1. Go to the [Staking section](https://mainnet-app.polymesh.network/#/staking/actions).
 2. Click **Account Actions**.
 3. Locate your bonded account and click **Session Key**.
-4. Paste the `author_rotateKeys` result ([generated earlier](#generating-session-keys-with-access-to-the-nodes-rpc-port)) into the provided field.
+4. Paste the `keys` value from the `author_rotateKeysWithOwner` result ([generated earlier](#generating-session-keys-with-access-to-the-nodes-rpc-port)) and provide the corresponding `proof`.
 5. Click **Set Session Key** and submit the extrinsic.
 
    ![Set session key](./images/node-operator/set-session-keys.png 'Set session key')
