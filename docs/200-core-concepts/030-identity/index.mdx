@@ -15,7 +15,7 @@ Identity is central to Polymesh. Network participants must have an on-chain iden
 
 Each identity:
 
-- Is created through a [Customer Due Diligence (CDD) process](/identity/verification)
+- Is created through DID onboarding and registration (self-registration or registrar-assisted)
 - Is referenced by a pseudo-anonymous decentralized identifier (DID), e.g., `0xfc0d2fc058d02c0a89c2cc2ff11726971dd39886a0b80ecfaa80fa3f196d65ce`
 - Can hold [asset](/core/assets) balances in associated [portfolios](/portfolios) or Account IDs (signing key public addresses) connected to the identity.
 - Can be associated with [claims](/compliance/#claims) and have [permissioned roles](/identity/roles)
@@ -39,7 +39,7 @@ An identity is not required for:
 
 ### Identity Creation & Verification
 
-Identities are created through [permissioned CDD service providers](/identity/verification#cdd-service-providers) who verify user information, create an on-chain DID and issue CDD claims required for network access.
+Identities are created through DID registration. Users can self-register using `identity::register_did`, or a permissioned DID registrar can register a DID for a target key.
 
 ### Asset Management
 
@@ -57,7 +57,6 @@ Each identity has:
 - Optional [secondary keys](/identity/advanced/secondary-keys) with configurable permissions
 - Support for [multisig](/identity/advanced/multisig) keys as either primary or secondary keys
 - Support for [smart contracts](/development/smart-contracts/) as either primary or secondary keys
-- The ability to create [child identities](/identity/advanced/child)
 
 Keys can also enter into a [subsidized](/accounts/subsidized/) relationship with another key, allowing the subsidizer to pay transaction fees on its behalf.
 
@@ -67,23 +66,24 @@ Polymesh provides robust [authorization](/authorizations) and [permission](/iden
 
 ## Identity Diagrams
 
-The following diagrams help visualize and clarify the relationships between key aspects of on-chain identities in Polymesh. Each diagram focuses on a specific concept, such as [Customer Due Diligence (CDD)](/identity/verification), [primary and secondary keys](/identity/advanced/secondary-keys), [portfolios](/portfolios), [custody](/portfolios/custody), [claims and compliance](/compliance), [agent permissions](/asset-agents), [subsidized accounts](/accounts/subsidized), and [secondary key permissions](/identity/advanced/secondary-keys#secondary-key-permissions). For more details, see the linked documentation pages for each topic.
+The following diagrams help visualize and clarify the relationships between key aspects of on-chain identities in Polymesh. Each diagram focuses on a specific concept, such as DID onboarding, [primary and secondary keys](/identity/advanced/secondary-keys), [portfolios](/portfolios), [custody](/portfolios/custody), [claims and compliance](/compliance), [agent permissions](/asset-agents), [subsidized accounts](/accounts/subsidized), and [secondary key permissions](/identity/advanced/secondary-keys#secondary-key-permissions). For more details, see the linked documentation pages for each topic.
 
-### Identity Onboarding & CDD
+### Identity Onboarding
 
-This diagram shows how a user is onboarded to Polymesh through a [CDD (Customer Due Diligence) provider](/identity/verification), resulting in the creation of an on-chain identity and issuance of a [CDD claim](/identity/verification#cdd-claims).
+This diagram shows DID onboarding through self-registration or a permissioned DID registrar.
 
 ```mermaid
 flowchart TD
     User["User"]
-    CDD["CDD Provider"]
-    OnboardID["Creates on-chain Identity ID"]
-    CDDClaim["Generates CDD claim<br/>and adds on-chain to Identity"]
-    User -->|"Provides identity<br/>verification Data<br/>and primary signing key"| CDD
-    CDD --> OnboardID
-    CDD --> CDDClaim
-    OnboardID --> MainDID["On-chain Identity (DID)"]
-    CDDClaim --> MainDID
+    UserKey["Primary Signing Key"]
+    SelfReg["Self-register DID<br/>identity::register_did"]
+    Registrar["Permissioned DID Registrar<br/>registers DID for user"]
+    MainDID["On-chain Identity (DID)"]
+    User --> UserKey
+    UserKey --> SelfReg
+    UserKey --> Registrar
+    SelfReg --> MainDID
+    Registrar --> MainDID
 ```
 
 ---
@@ -197,7 +197,7 @@ flowchart TD
 
 ### Claims & Compliance
 
-This diagram illustrates how [claims](/compliance#claims) (such as KYC or accreditation) are issued to an identity by a claim issuer (e.g., a [CDD provider](/identity/verification) or another identity), and how they are used for [compliance](/compliance) purposes. Multiple claims from different issuers can be attached to a single identity and may be scoped to specific assets, identities or custom identifiers.
+This diagram illustrates how [claims](/compliance#claims) (such as KYC or accreditation) are issued to an identity by claim issuers, and how they are used for [compliance](/compliance) purposes. Multiple claims from different issuers can be attached to a single identity and may be scoped to specific assets, identities or custom identifiers.
 
 ```mermaid
 flowchart TD
@@ -250,20 +250,4 @@ flowchart TD
     RelayerID --> RelayerKey
     KeyToSubsidize -.->|"Transaction fees subsidized by"| RelayerKey
     MainDID -.->|"Can be the same identity"| RelayerID
-```
-
----
-
-### Identity Structure: Primary & Sub-Identities
-
-This diagram illustrates the relationship between a primary on-chain identity and its [sub-identities (child identities)](/identity/advanced/child), including inheritance of [CDD claims](/identity/verification#cdd-claims).
-
-```mermaid
-flowchart TD
-    MainDID["On-chain Identity (DID)"]
-    SubDID["Sub-Identity (DID)"]
-    AddSubDID["Additional Sub-Identities"]
-    MainDID --> SubDID
-    MainDID --> AddSubDID
-    SubDID -.->|"Inherits CDD claim"| MainDID
 ```

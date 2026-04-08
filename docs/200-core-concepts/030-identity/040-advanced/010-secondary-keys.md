@@ -120,13 +120,11 @@ This method enables bulk addition of secondary keys without requiring each key t
 Permissions for secondary keys are divided into three categories that work together to define the key's capabilities:
 
 - **Assets**: Control which assets the key can interact with
-
   - Full access to all assets
   - No access to any assets
   - Access to specific assets only
 
 - **Extrinsics** (transactions): Define which blockchain functions the key can execute
-
   - Full access to all functions
   - No access to any functions
   - Access to specific modules and/or methods
@@ -164,7 +162,6 @@ The following critical identity management functions can **only** be performed b
 
 - Setting or modifying permissions of secondary keys (`set_secondary_key_permissions`)
 - Adding/removing secondary keys (`add_secondary_keys_with_authorization`, `remove_secondary_keys`)
-- Creating and managing child identities (`create_child_identities`, `unlink_child_identity`)
 - Freezing/unfreezing secondary keys (`freeze_secondary_keys`, `unfreeze_secondary_keys`)
 - Multisig administration (when designated as admin or payer identity)
 
@@ -185,9 +182,7 @@ Granting a secondary key permission to call `add_authorization` effectively allo
 
 **Key Recovery Implications:**
 
-- If a secondary key leaves or is removed from an identity, it cannot transact on the Polymesh blockchain until it either:
-  - Receives its own DID and CDD claim (becoming a primary key for a new identity)
-  - Joins another identity that has a valid CDD claim
+- If a secondary key leaves or is removed from an identity, it cannot interact with asset or identity related transactions on the Polymesh blockchain until it receives its own DID through onboarding or joins another identity as a secondary key.
 
 These restrictions are enforced at the protocol level, ensuring that control over core identity structure remains secure while allowing controlled delegation of specific capabilities.
 
@@ -207,40 +202,31 @@ When implementing a multi-key strategy for your identity, make sure to account f
 
 [Smart contracts](/development/smart-contracts) and [Multisigs](/identity/advanced/multisig) can also be attached to identities as secondary keys in Polymesh, providing powerful functionality for implementing strict controls or automated business logic while maintaining proper identity management.
 
-### Secondary Keys vs Child Identities
+### Secondary Keys and Separate DIDs
 
-Learn more about [child identities](/identity/advanced/child) and understand when to use each option:
+When managing complex organizational or operational structures on Polymesh, you may need to decide between delegating access via secondary keys within the same identity, or creating a fully independent identity for a separate key through DID registration.
 
-| Secondary Keys                       | Child Identities                   |
+| Secondary Keys                       | Separate DIDs                      |
 | ------------------------------------ | ---------------------------------- |
-| Share DID with primary key           | Have their own DID                 |
+| Share DID with primary key           | Each key has its own DID           |
 | Share compliance status              | Independent compliance status      |
 | Limited by permissions               | Full identity capabilities         |
 | Cannot have their own secondary keys | Can have their own secondary keys  |
 | Best for delegating tasks            | Best for organizational separation |
 
-Choose based on your needs:
-
-- **Delegate limited permissions** → Use secondary keys
-- **Create separate but related identities** → Use child identities
-- **Implement automated logic** → Consider smart contracts as either secondary keys or child identity primary keys
-
 ## Best Practices
 
 1. **Primary Key Security**
-
    - Store primary key securely and minimize its use
    - Use properly permissioned secondary keys for routine operations
    - Implement clear key rotation policies
 
 2. **Permission Management**
-
    - Follow least-privilege principle when assigning permissions
    - Document all key permissions and their intended use
    - Regularly audit and update permissions as needed
 
 3. **Operational Controls**
-
    - Create clear policies for key usage and sharing
    - Implement role-based access through appropriate permissions
    - Maintain documentation of all key management procedures
@@ -252,4 +238,4 @@ Choose based on your needs:
 
 ## Conclusion
 
-Secondary keys provide a powerful way to implement secure and flexible identity management on Polymesh. When properly implemented with appropriate permissions and controls, they enable organizations to maintain strong security while supporting efficient operations. Understanding the relationship between secondary keys, smart contracts, and child identities allows for creating sophisticated and secure organizational structures on the blockchain.
+Secondary keys provide a powerful way to implement secure and flexible identity management on Polymesh. When properly implemented with appropriate permissions and controls, they enable organizations to maintain strong security while supporting efficient operations. Understanding the relationship between secondary keys and smart contracts allows for creating sophisticated and secure organizational structures on the blockchain.

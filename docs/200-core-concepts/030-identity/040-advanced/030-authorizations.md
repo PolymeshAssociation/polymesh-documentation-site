@@ -84,7 +84,7 @@ The `add_authorization` function can be called by **secondary keys** with approp
 
 In some special cases, a dedicated method may be provided to create an authorization request. For example, `multisig::add_multisig_signers_via_admin` allows a permissioned admin identity to act on behalf of the multisig to add a new signer.
 
-Some operations also support off-chain authorization signatures as an alternative to the request-approval flow. This includes adding [secondary keys](/identity/advanced/secondary-keys/#2-off-chain-authorization) and creating [child identities](/identity/advanced/child#child-identity-creation-from-unlinked-keys). These methods typically require the target key to sign specific authorization data off-chain, with the payload data wrapped in `<Bytes>` and `</Bytes>` tags before signing, enabling operations to complete in a single transaction.
+Some operations also support off-chain authorization signatures as an alternative to the request-approval flow. This includes adding [secondary keys](/identity/advanced/secondary-keys/#2-off-chain-authorization). These methods typically require the target key to sign specific authorization data off-chain, with the payload data wrapped in `<Bytes>` and `</Bytes>` tags before signing, enabling operations to complete in a single transaction.
 
 Each new authorization request is assigned a unique authorization ID which is used to query details of the authorization request and accept or reject it.
 

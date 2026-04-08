@@ -1,6 +1,6 @@
 ---
 title: Onboarding
-description: Identity Verification Process
+description: Identity onboarding and DID registration
 id: onboarding
 slug: /getting-started/onboarding
 sidebar_label: Onboarding
@@ -9,65 +9,93 @@ tags:
   - onboarding
 ---
 
-## Customer Due Diligence (CDD)
+## Overview
 
-Polymesh users who participates in **asset** and **identity** related transactions must complete a **minimal identity verification** before being permitted to transact on the network. This verification is called **Customer Due Diligence (CDD)**. Accounts used solely for POLYX transfers and staking (excluding validator activities) are not subject to this verification process.
+Polymesh users who participate in **asset** and **identity** related transactions must have an on-chain identity (DID). Accounts used solely for POLYX transfers and staking (excluding validator activities) are not subject to this requirement.
 
-To verify your identity for CDD purposes, you must apply through a CDD service provider. The provider will review your submitted information and, upon approval, write an identity claim to the blockchain on your behalf.
+From Polymesh v8, onboarding is to receive a DID and supports two paths:
+
+- **Self-registration**: The user calls `identity::register_did` for their own key and pays the transaction fee.
+- **Registrar-assisted registration**: A permissioned DID registrar registers a DID for a user key and pays the transaction fee.
+
+If you are new to Polymesh, a practical flow is:
+
+1. Set up your wallet
+2. Acquire POLYX
+3. Complete DID onboarding when you want to use identity and asset related features
+
+This helps reduce onboarding friction for users who only need basic POLYX transfers or staking. If you self-register a DID, you will need POLYX to pay the registration fee.
 
 :::note
 
-Everyone who participates in asset and identity related transactions on Polymesh must complete onboarding. This is not a substitute for the KYC requirements of regulated assets. Asset issuers will typically enforce additional KYC requirements. Asset issuers cannot circumvent the minimum requirement for a key to be associated with an on-chain identity with a valid CDD claim.
+Onboarding to obtain a DID is not a substitute for issuer-specific KYC requirements on regulated assets. Asset issuers can enforce additional compliance requirements through claims and compliance rules.
 
 :::
 
-## Assign Account
+## Connect Wallet and Select Key
 
-When you first create an account, it will display as an unassigned key, meaning there is no on-chain identity associated with it.
+When you first create an account, it appears as an unassigned key, meaning no on-chain identity (DID) is linked yet.
 
 ![new account](images/onboarding/new_account.png)
 
-If using the Polymesh wallet the `Assign` button appears when you hover over an unassigned signing key. Clicking it will take you to the Polymesh Portal on either the [Polymesh Mainnet](https://portal.polymesh.network/) or [Polymesh Testnet](https://portal.polymesh.live/).
-
-![assign account](images/onboarding/assign.png)
-
-When connecting to Polymesh Portal for the first time, you will be prompted to select a wallet to connect. Choose your wallet from the list of available options and authorize the wallet connection to the Portal.
+Open the [Polymesh Portal Mainnet](https://portal.polymesh.network/) or [Polymesh Portal Testnet](https://portal.polymesh.live/), then connect your wallet and select the key you want to onboard.
 
 ![connect wallet](images/onboarding/connect_wallet.png)
 
-**Note:** You can also enter a key manually by clicking on 'Manually enter a wallet key.' Manually entered keys that are not stored in the connected wallet only allow view-only functionality. To fully utilize Polymesh, connect a key stored in a supported wallet.
+:::note
+You can also use "Manually enter a wallet key" for view-only access. To complete onboarding and sign transactions, use a key from a connected supported wallet.
+:::
 
-On the next screen, select the wallet address to connect and click 'Proceed.' Once connected, the Portal will display information specific to that key.
+Once connected, the Overview page shows the selected key and its current identity status.
 
 ![connect address](images/onboarding/connect_account.png)
 
-## Complete the Customer Due Diligence Process
+## Complete Onboarding (Self-Assign DID)
 
-Click the `Verify Identity` (or `Complete Onboarding`) button to begin the onboarding process.
+For keys that are not yet linked to an identity, Portal should show "This key is not linked to an identity" and a `Get On-Chain Identity (DID)` button.
 
-![Verify Identity](images/onboarding/verify_identity.png)
+Self-assigning a DID submits an on-chain transaction, where the user pays the transaction fee. Therefore the user must have some POLYX in the signing key before proceeding.
 
-You will be presented with a list of CDD service providers to choose from. Click on the CDD provider's card to proceed with onboarding.
+When the user clicks this action:
 
-![Select CDD Provider](images/onboarding/select_cdd_provider.png)
+1. Portal prepares an `identity::register_did` transaction for the selected key.
+2. The wallet signing interface opens and prompts the user to sign.
+3. After the user signs, the transaction is submitted.
+4. After successful execution, the key is linked to a new DID.
 
-Follow the on-screen instructions to onboard with the chosen CDD provider. This will involve being redirected to the CDD providers website or application. Once you complete the onboarding application, the Portal will show a "Pending" status for identity verification.
+### Registrar-assisted onboarding (optional)
 
-![Identity Verification Pending](images/onboarding/verify_identity_pending.png)
+DID registrars are a permissioned network role approved through on-chain governance.
 
-After submitting your application, it may take up to two business days for the provider to verify your identity. You can return to the portal anytime to check if the application has been approved. Clicking on the "Verify Identity" button when the status is pending will display information related to your application.
+Platforms may use registrar-assisted onboarding when a third party should assign the DID, for example:
 
-![Existing Application](images/onboarding/existing_application_found.png)
+- to sponsor onboarding fees for users
+- to support users who do not yet hold POLYX
+- to keep onboarding managed by platform operations rather than end users
+- to support platform models where available signing methods are intentionally restricted
 
-Once the CDD provider completes the verification, you will see a card at the top of the Portal indicating that onboarding is complete.
+In this flow, the registrar submits DID registration for the user key and pays the fee on the user's behalf.
 
-![Onboarding Completed](images/onboarding/onboarding_completed.png)
+### DID persistence across platforms
 
-### Testnet Mock Customer Due Diligence Process
+Once assigned, a DID is linked to the key on-chain, not to the platform that submitted the registration transaction.
 
-On the [Testnet instance of the Polymesh Portal](https://portal.polymesh.live/), you will instead see a screen that allows you to select the "MockId [TESTNET]" provider. Selecting this option will automatically create a DID, assign a CDD claim, and seed the account with POLYX tokens for testing without an identity verification process.
+- If that same key is later used in another wallet or platform, the DID remains valid.
+- The registrar that originally assigned the DID cannot revoke that DID assignment through the registrar role.
 
-![Choose a CDD Provider - Testnet](images/onboarding/onboarding-choose-cdd-provider-testnet.png)
+This differs from historical CDD claims (pre v8), which were separate claim records and could be updated or revoked.
+
+### Testnet onboarding
+
+On the [Testnet instance of the Polymesh Portal](https://portal.polymesh.live/), onboarding is done by a DID registrar and seeds accounts with test POLYX for experimentation.
+
+## Extrinsic reference
+
+- `identity::register_did(target_account)`
+  - Registers a DID for the target account.
+  - Supports assigning a DID to a single key.
+- `identity::cdd_register_did` and `identity::cdd_register_did_with_cdd`
+  - Deprecated in v8, legacy onboarding extrinsics retained temporarily for transition.
 
 ## Links
 

@@ -44,9 +44,9 @@ Polymesh is tailored to the needs of regulated assets and global capital markets
 
 ### Identity
 
-[Identity](/identity/) is at the core of Polymesh. Polymesh implements a federated root of trust for onboarding all users, via permissioned Customer Due Diligence service providers. Every transaction in Polymesh is associated with an identity.
+[Identity](/identity/) is at the core of Polymesh. Polymesh uses DID-based onboarding where users can self-register a DID or use a permissioned DID registrar to assign a DID. Identity and asset related transactions in Polymesh require an on-chain identity, represented by a DID.
 
-Identities provide attestation and key management. All users must act through an on-chain identity when interacting with any identity and asset related transaction on Polymesh. Identities are referenced through DIDs (decentralised identifiers).
+Identities provide attestation and key management. All users must act through an on-chain identity when interacting with identity and asset related transactions on Polymesh. Identities are referenced through DIDs (decentralised identifiers).
 
 Identity attestations allow asset issuers to enforce compliance on-chain in real-time as assets are issued, traded and settled between different parties.
 

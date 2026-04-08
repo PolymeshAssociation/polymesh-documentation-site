@@ -15,7 +15,7 @@ This glossary provides definitions for key terms and concepts used throughout th
 
 ### Permissioned Identity
 
-On Polymesh, all keys that participates in identity and asset related transactions (excluding [Session Keys](#session-keys)) must be linked to an on-chain [DID](/identity/) with a valid [CDD](#cdd-customer-due-diligence). A node operator's DID must be granted an additional role making it a permissioned identity. Only keys linked to this identity will be allowed to be [Stash keys](#stash).
+On Polymesh, keys that participate in identity and asset related transactions (excluding [Session Keys](#session-keys)) must be linked to an on-chain [DID](/identity/). A node operator's DID must be granted an additional role making it a permissioned identity. Only keys linked to this identity will be allowed to be [Stash keys](#stash).
 
 ### Primary Key
 
@@ -46,14 +46,6 @@ A formal on-chain request to grant permissions or perform actions (such as addin
 ### Rotate Primary Key / Rotate Primary to Secondary
 
 Authorization types for changing the primary key of an identity or converting the current primary key into a secondary key and replacing it with a new primary key. These operations require explicit authorization and acceptance.
-
-### Child Identity / Child Identities
-
-A subsidiary identity derived from a parent identity, inheriting CDD status but maintaining independent control and assets. Used for organizational structure, security, or smart contract isolation. See [Child Identities](/identity/advanced/child).
-
-### Parent Identity
-
-The original identity from which one or more child identities are derived. The parent can create, manage, and unlink child identities.
 
 ### Agent / Agent Permissions
 
@@ -89,7 +81,7 @@ The minimum number of approvals needed to execute a multisig transaction. This v
 
 ### Off-chain Authorization
 
-A method of granting permissions or performing actions by signing data off-chain, enabling certain operations to complete in a single transaction. Used for adding secondary keys or creating child identities.
+A method of granting permissions or performing actions by signing data off-chain, enabling certain operations to complete in a single transaction. Used for adding secondary keys and other authorization-driven workflows.
 
 ### Identity Freezing / Unfreezing
 
@@ -105,7 +97,7 @@ The identity to which a multisig key is linked. Multisig keys must be associated
 
 ### Smart Contract
 
-A smart contract is a programmatic account deployed on Polymesh that enables custom, automated, or complex business logic to be executed on-chain. Smart contracts are compiled to WebAssembly (Wasm), with [Ink!](https://ink.substrate.io/) recommended for development. On Polymesh, a smart contract can serve as a primary or secondary key for an identity, allowing it to control assets, act as a custodian, or manage permissions. Beyond acting as a key, smart contracts can interact with native Polymesh modules, extend protocol functionality, and implement custom workflows such as decentralized exchanges, compliance logic, or asset management. All smart contracts must be attached to an identity with a valid CDD claim to function. See [Smart Contracts](/development/smart-contracts/).
+A smart contract is a programmatic account deployed on Polymesh that enables custom, automated, or complex business logic to be executed on-chain. Smart contracts are compiled to WebAssembly (Wasm), with [Ink!](https://ink.substrate.io/) recommended for development. On Polymesh, a smart contract can serve as a primary or secondary key for an identity, allowing it to control assets, act as a custodian, or manage permissions. Beyond acting as a key, smart contracts can interact with native Polymesh modules, extend protocol functionality, and implement custom workflows such as decentralized exchanges, compliance logic, or asset management. Smart contracts interacting with assets must be attached to an identity (DID) to function. See [Smart Contracts](/development/smart-contracts/).
 
 ### Proposal Voting (Multisig)
 
@@ -302,15 +294,15 @@ Protocol-level rules that govern asset transfers and ownership. Compliance ensur
 
 ### CDD (Customer Due Diligence)
 
-A process by which an identity is verified and approved to participate on Polymesh. CDD claims are required for every Asset and Identoty related network actions. See [CDD](/identity/verification/).
+A legacy identity claim type and onboarding concept used in Polymesh version prior to v8. From v8 DID registration is the functional onboarding requirement for identity and asset related network actions. See [Identity Onboarding](/identity/onboarding/).
 
 ### KYC (Know Your Customer)
 
-KYC is a regulatory process to verify the identity and suitability of participants. On Polymesh, CDD providers perform identity verification as part of the CDD process, but this alone will not satisfy all regulatory KYC requirements for asset issuers. Asset issuers should assess and implement their own KYC procedures based on the type of asset and relevant jurisdiction. KYC claims can then be added to identities and used in conjunction with compliance rules as appropriate. On-chain, KYC is typically enforced via KYC claims, which can be referenced in compliance rules.
+KYC is a regulatory process to verify the identity and suitability of participants. On Polymesh, having a DID does not by itself satisfy all regulatory KYC requirements for asset issuers. Asset issuers should assess and implement their own KYC procedures based on the type of asset and relevant jurisdiction. KYC claims can then be added to identities and used in conjunction with compliance rules as appropriate. On-chain, KYC is typically enforced via KYC claims, which can be referenced in compliance rules.
 
 ### Claim / Attestation
 
-A statement made by one identity about another, such as a CDD claim. Claims are used for compliance and can be attached to identities. See [Claims](/identity/verification/).
+A statement made by one identity about another, such as a KYC or accreditation claim. Claims are used for compliance and can be attached to identities. See [Claims](/compliance#claims).
 
 ---
 
@@ -416,7 +408,7 @@ A Rust-based language and toolset for writing smart contracts for Substrate-base
 
 ### Identity
 
-The requirement that all users act through on-chain identities, with federated onboarding and key management. See [Identity](/identity/).
+An on-chain entity identified by a DID that represents a person, organization, multisig, or smart contract on Polymesh. Keys are linked to an identity (primary and secondary) and act using that identity's permissions and claims for identity and asset related operations. Keys must complete DID onboarding before performing these regulated actions. See [Identity](/identity/) and [Identity Onboarding](/identity/onboarding/).
 
 ### POLYX
 

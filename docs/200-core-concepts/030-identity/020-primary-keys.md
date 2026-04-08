@@ -42,7 +42,6 @@ A primary key has unrestricted access to all identity functions and cannot have 
 
 ### Identity Management
 
-- Creating and managing [child identities](/identity/advanced/child)
 - Adding, removing, and modifying permissions of [secondary keys](/identity/advanced/secondary-keys)
 - Freezing/unfreezing all secondary keys (using `identity::freeze_secondary_keys`/`identity::unfreeze_secondary_keys`)
 
@@ -149,7 +148,6 @@ Use your primary key for:
 
 - Adding or removing secondary keys
 - Modifying permissions of secondary keys
-- Creating child identities
 - Critical identity management operations
 - Key rotation procedures
 

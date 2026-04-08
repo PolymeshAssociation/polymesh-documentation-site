@@ -105,7 +105,7 @@ Here's a breakdown of each service defined in `compose.yaml` and its role:
     *   **Description**: A temporary service that runs the `rest-api-accounts-init.sh` script.
     *   **Why it's there**: Automates the setup of on-chain accounts and identities corresponding to the keys created in Vault. It waits for the `polymesh-rest-api-vault-sm` service to be healthy, then uses that API to:
         1.  Get the Polymesh addresses for `admin-1`, `signer1-1`, ..., `signer4-1`.
-        2.  Use a developer endpoint to make the `admin-1` account a CDD (Customer Due Diligence) provider on the dev chain.
+        2.  Use a developer endpoint to make the `admin-1` account a DID registrar on the dev chain.
         3.  Use another developer endpoint (signing as `admin-1`) to create on-chain Identities for `signer1-1`, ..., `signer4-1` and fund them with initial POLYX.
         4.  Saves the resulting addresses and DIDs to files within the `rest-api-accounts-init` volume for persistence checks.
         5.  Creates a `.setup-complete` file in that volume to signal completion to the `environment-ready` service. Updates status in the `postgres` `services_status` table.

@@ -17,11 +17,11 @@ Different roles on the Polymesh network have different levels of permissioning r
 
 ## Network Users
 
-Network users interact with Polymesh in various ways, from transferring POLYX to managing identities and assets. Any user who wishes to manage identities and assets on Polymesh must go through a [Identity Verification](/identity/verification/) process. With a valid CDD claim, a user can manage their identity, created and manage assets, settle transfer instructions, and access advanced network features.
+Network users interact with Polymesh in various ways, from transferring POLYX to managing identities and assets. Any user who wishes to manage identities and assets on Polymesh must complete [identity onboarding](/identity/onboarding/) so their key is linked to a DID. With a DID, a user can manage their identity, create and manage assets, settle transfer instructions, and access advanced network features.
 
 :::note
 
-Identity verification is not required for POLYX transfers or staking, except for validator activities. This makes basic token operations accessible to all users, while asset and identity-related transactions remain permissioned.
+Identity onboarding (DID linkage) is not required for POLYX transfers or staking, except for validator activities. This makes basic token operations accessible to all users, while asset and identity-related transactions remain permissioned.
 
 :::
 
@@ -29,13 +29,13 @@ Identity verification is not required for POLYX transfers or staking, except for
 
 Operator nodes are special nodes in the Polymesh network that author new blocks and participate in finalising the blockchain.
 
-To run an operator node, a user must be permissioned through both identity verification and the on-chain governance process. This is managed via a [Polymesh Improvement Proposal](/governance#polymesh-improvement-proposals). Operators play a critical role in maintaining network security and consensus.
+To run an operator node, a user must have a DID linked to a permissioned operator identity and be approved through the on-chain governance process. This is managed via a [Polymesh Improvement Proposal](/governance#polymesh-improvement-proposals). Operators play a critical role in maintaining network security and consensus.
 
-## Customer Due Diligence Service Providers
+## DID Registrars
 
-CDD service providers are trusted entities permitted to issue CDD claims. These companies offer identity verification and onboarding services to Polymesh users, providing a streamlined due diligence process and identity creation.
+DID registrars are trusted entities permitted to register DIDs for user keys. This allows platforms to offer streamlined onboarding where the registrar can pay the registration fee on behalf of the user.
 
-Only explicitly permissioned identities can issue CDD claims. Service providers are added or removed via a PIP executed through the on-chain governance process.
+Only explicitly permissioned identities can act as DID registrars. Registrars are added or removed via a PIP executed through the on-chain governance process.
 
 ## Committee Membership
 

@@ -117,7 +117,7 @@ const config: Config = {
           // KYC
           {
             from: '/docs/kyc/know-your-customer/',
-            to: '/identity/verification/',
+            to: '/identity/onboarding/',
           },
           // Originate
           { from: '/docs/originate/compliance/', to: '/compliance/' },
@@ -135,7 +135,7 @@ const config: Config = {
           },
           {
             from: '/docs/quickstart/verification-with-cdd/',
-            to: '/identity/verification/',
+            to: '/identity/onboarding/',
           },
           {
             from: '/docs/quickstart/wallet/',
@@ -218,8 +218,20 @@ const config: Config = {
             to: '/authorizations/',
           },
           {
+            from: '/identity/advanced/child/',
+            to: '/identity/advanced/',
+          },
+          {
             from: '/polymesh-docs/primitives/cdd/',
-            to: '/identity/verification/',
+            to: '/identity/onboarding/',
+          },
+          {
+            from: '/identity/verification/',
+            to: '/identity/onboarding/',
+          },
+          {
+            from: '/identity/verification',
+            to: '/identity/onboarding/',
           },
           { from: '/polymesh-docs/primitives/compliance/', to: '/compliance/' },
           {

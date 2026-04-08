@@ -42,7 +42,7 @@ Polymesh supports a range of custody models to meet diverse requirements, allowi
 - **Omnibus custody:** A custodian pools assets for multiple clients in a single portfolio, with client balances tracked off-chain.
 - **Segregated custody (omnibus segregation):** A custodian manages assets for multiple clients, but each client’s assets are held in separate on-chain portfolios under the custodian’s identity, providing on-chain segregation.
 - **Delegated control (portfolio custody):** The owner retains beneficial ownership, but delegates management and [settlement](/settlement) responsibilities for a specific portfolio to a custodian, who cannot move assets outside the owner’s identity.
-- **Sub-identity (full segregation):** The custodian creates a separate on-chain [identity](/identity/advanced/child) for each client, providing the highest level of on-chain segregation and regulatory clarity.
+- **Separate-identity (full segregation):** The custodian creates a separate on-chain identity for each client, providing the highest level of on-chain segregation and regulatory clarity.
 
 These models can be combined or tailored to meet specific regulatory or operational requirements.
 
@@ -139,6 +139,46 @@ flowchart TD
 
 This model is often used by custodians, asset managers, or broker-dealers who want to provide clients with segregated accounts while retaining operational efficiency and compliance oversight. It can also be extended by creating separate identities for large clients or business units, further enhancing segregation and control.
 
+#### Separate Identities (Full Segregation)
+
+In this model, the custodian provisions a separate on-chain identity for each client. Each client identity has its own DID, key set, portfolios, assets, and claims, and operates independently at the protocol level.
+
+Unlike secondary-key delegation or custody within a single identity, there is no protocol-level parent-child identity relationship in this approach. Segregation is achieved by operating distinct identities rather than by nesting identities.
+
+This approach is often preferred when custodians need strict client-level segregation, independent compliance treatment per identity, and clear regulatory boundaries. The trade-off is higher operational complexity in [key management](/identity/advanced/secondary-keys), [identity onboarding](/identity/onboarding), and [POLYX](/polyx) fee funding across many identities.
+
+```mermaid
+flowchart TD
+   CustodianOps["Custodian Operations Team"]
+   ClientID1["Client 1 Identity"]
+   ClientID2["Client 2 Identity"]
+   ClientID3["Client 3 Identity"]
+   Key1["Key Set for Client 1 Identity"]
+   Key2["Key Set for Client 2 Identity"]
+   Key3["Key Set for Client 3 Identity"]
+   Portfolio1["Client 1 Portfolios"]
+   Portfolio2["Client 2 Portfolios"]
+   Portfolio3["Client 3 Portfolios"]
+   AssetA["ASSET A"]
+   AssetB["ASSET B"]
+   AssetC["ASSET C"]
+
+   CustodianOps -.->|"Operates via designated keys"| Key1
+   CustodianOps -.->|"Operates via designated keys"| Key2
+   CustodianOps -.->|"Operates via designated keys"| Key3
+   Key1 --> ClientID1
+   Key2 --> ClientID2
+   Key3 --> ClientID3
+   ClientID1 --> Portfolio1
+   ClientID2 --> Portfolio2
+   ClientID3 --> Portfolio3
+   Portfolio1 --> AssetA
+   Portfolio2 --> AssetB
+   Portfolio3 --> AssetC
+```
+
+In this structure, each client identity is fully independent for asset management, compliance evaluation, and key control. It provides the strongest on-chain segregation, with governance and operations handled separately per identity.
+
 ---
 
 ### Custody with Beneficial Interest Separated from Asset Control
@@ -189,53 +229,6 @@ flowchart TD
 - **Operational restrictions**: Custodians can only move assets between portfolios under the same identity (DID), cannot delete portfolios, and cannot transfer assets to external identities without using the settlement engine.
 - **Regulatory considerations**: This model is often preferred by regulated entities that must maintain beneficial ownership for compliance reasons but want to delegate operational responsibilities to qualified custodians.
 - **Transparent governance**: For voting and other governance activities, the beneficial owner (investor) participates directly, maintaining a clear separation between custody services and ownership rights.
-
-### Sub-Identities (Full Segregation)
-
-In this model, the custodian creates a separate on-chain identity ([sub-identity](/identity/advanced/child)) for each client. Each sub-identity inherits the CDD claim from the parent (custodian) identity but otherwise behaves as a fully independent identity. This allows for complete on-chain segregation of client assets, with each sub-identity requiring its own unique key to transact. The parent (custodian) cannot directly access the assets of the sub-identity. Only those with access to keys associated with the sub identity can transact on behalf of the sub-identity. Each sub-identity can hold its own portfolios, assets, and claims.
-
-This approach is ideal for custodians or organizations that require strict asset segregation and regulatory clarity, as each client's assets are managed under a distinct on-chain identity. It does however require a more complex [key management](/identity/advanced/secondary-keys) strategy and [POLYX](/polyx) management for transaction fees.
-
-```mermaid
-flowchart TD
-    CustodianID["Custodian Identity (Parent)"]
-    SubID1["Sub-Identity 1 (Client 1)"]
-    SubID2["Sub-Identity 2 (Client 2)"]
-    SubID3["Sub-Identity 3 (Client 3)"]
-    Key1["Key for Sub-Identity 1<br/>(Custodian Managed)"]
-    Key2["Key for Sub-Identity 2<br/>(Custodian Managed)"]
-    Key3["Key for Sub-Identity 3<br/>(Custodian Managed)"]
-    Portfolio1["Sub ID 1 Portfolio"]
-    Portfolio2["Sub ID 2 Portfolio"]
-    Portfolio3["Sub ID 3 Portfolio"]
-    AssetA["ASSET A"]
-    AssetB["ASSET B"]
-    AssetC["ASSET C"]
-    AssetA1["ASSET A"]
-    AssetB1["ASSET B"]
-    AssetC1["ASSET C"]
-
-    CustodianID ---> SubID1
-    CustodianID ---> SubID2
-    CustodianID ---> SubID3
-    SubID1 -.->|"Inherits CDD claim"| CustodianID
-    SubID2 -.->|"Inherits CDD claim"| CustodianID
-    SubID3 -.->|"Inherits CDD claim"| CustodianID
-    Key1 --> SubID1
-    Key2 --> SubID2
-    Key3 --> SubID3
-    SubID1 --> Portfolio1
-    SubID2 --> Portfolio2
-    SubID3 --> Portfolio3
-    Portfolio1 --> AssetA
-    Portfolio1 --> AssetB
-    Portfolio2 --> AssetB1
-    Portfolio2 --> AssetC
-    Portfolio3 --> AssetA1
-    Portfolio3 --> AssetC1
-```
-
-In this structure, each sub-identity is fully independent for asset management, compliance, and key control, while benefiting from the parent identity's CDD claim. This is the most robust model for on-chain segregation of client assets.
 
 ## Custody Portfolios
 

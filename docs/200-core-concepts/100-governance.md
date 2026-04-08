@@ -43,7 +43,7 @@ A PIP is an on-chain dispatchable function w/ parameters alongside some metadata
 
 These PIP dispatchables can only be executed by the Governing Council and not an individual user.
 
-PIPs are also used to permission certain on-chain identities to have special privileged roles. This includes adding and removing permissioned operators and CDD service providers.
+PIPs are also used to permission certain on-chain identities to have special privileged roles. This includes adding and removing permissioned operators and DID registrars.
 
 Some common examples include:
 
@@ -55,7 +55,7 @@ Some common examples include:
 
 - adding new permissioned operators
 
-- adding new permissioned CDD service providers
+- adding new permissioned DID registrars
 
 ## Signalling
 
@@ -95,7 +95,7 @@ The Governance Council can be thought of as a multisig controlled by its members
 
 These non-PIP actions include managing the membership of the Governing Council itself, with existing members needing to agree and vote on the addition or removal of members, as well as changes to the voting structure, for example the voting threshold.
 
-The Governing Council is also able to issue a [Customer Due Diligence](/identity/verification/) claim should the need arise.
+The Governing Council is also able to manage permissioned roles such as operator identities and DID registrars through governance actions.
 
 ## Release Coordinator
 
