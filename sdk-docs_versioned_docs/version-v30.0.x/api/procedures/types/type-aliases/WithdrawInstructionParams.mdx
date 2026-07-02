@@ -1,0 +1,54 @@
+---
+sidebar_label: "WithdrawInstructionParams~~"
+---
+
+# ~~Type Alias: WithdrawInstructionParams~~
+
+> **WithdrawInstructionParams** = `object`
+
+Defined in: [src/api/procedures/types.ts:1171](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1171)
+
+## Deprecated
+
+withdrawing affirmation is no longer supported in chain v8
+
+## Properties
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+<a id="property-holders"></a> ~~`holders?`~~
+
+</td>
+<td>
+
+[`AssetHolderLike`](../../../entities/types/type-aliases/AssetHolderLike.mdx)[]
+
+</td>
+<td>
+
+(optional) Asset holders that the signer controls and wants to affirm the instruction or withdraw affirmation
+
+**Note**
+
+if empty, all the legs containing any custodied Asset Holders of the signer will be affirmed/affirmation will be withdrawn, based on the operation.
+
+</td>
+<td>
+
+[src/api/procedures/types.ts:1177](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1177)
+
+</td>
+</tr>
+</tbody>
+</table>

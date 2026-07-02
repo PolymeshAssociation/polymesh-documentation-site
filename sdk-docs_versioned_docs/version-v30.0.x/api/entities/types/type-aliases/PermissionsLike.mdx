@@ -1,0 +1,76 @@
+---
+sidebar_label: "PermissionsLike"
+---
+
+# Type Alias: PermissionsLike
+
+> **PermissionsLike** = `object` & \{ `transactions?`: [`TransactionPermissions`](../interfaces/TransactionPermissions.mdx) \| `null`; \} \| \{ `transactionGroups?`: [`TxGroup`](../../../procedures/types/enumerations/TxGroup.mdx)[]; \}
+
+Defined in: [src/api/entities/types.ts:847](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L847)
+
+Permissions to grant to a Signer over an Identity
+
+[Permissions](../interfaces/Permissions.mdx)
+
+## Type Declaration
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`assets?`
+
+</td>
+<td>
+
+[`SectionPermissions`](../interfaces/SectionPermissions.mdx)\<`string` \| [`FungibleAsset`](FungibleAsset.mdx)\> \| `null`
+
+</td>
+<td>
+
+Assets on which to grant permissions. A null value represents full permissions
+
+</td>
+<td>
+
+[src/api/entities/types.ts:851](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L851)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`portfolios?`
+
+</td>
+<td>
+
+[`SectionPermissions`](../interfaces/SectionPermissions.mdx)\<[`PortfolioLike`](PortfolioLike.mdx)\> \| `null`
+
+</td>
+<td>
+
+Portfolios on which to grant permissions. A null value represents full permissions
+
+</td>
+<td>
+
+[src/api/entities/types.ts:855](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L855)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+## Note
+
+TxGroups in the `transactionGroups` array will be transformed into their corresponding `TxTag`s
