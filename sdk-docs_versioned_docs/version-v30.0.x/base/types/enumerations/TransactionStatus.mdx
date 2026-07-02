@@ -1,0 +1,98 @@
+---
+sidebar_label: "TransactionStatus"
+---
+
+# Enumeration: TransactionStatus
+
+Defined in: [src/base/types.ts:20](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/types.ts#L20)
+
+## Enumeration Members
+
+### Aborted
+
+> **Aborted**: `"Aborted"`
+
+Defined in: [src/base/types.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/types.ts#L57)
+
+the transaction couldn't be broadcast. It was either dropped, usurped or invalidated
+see https://github.com/paritytech/substrate/blob/master/primitives/transaction-pool/src/pool.rs#L58-L110
+
+***
+
+### Failed
+
+> **Failed**: `"Failed"`
+
+Defined in: [src/base/types.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/types.ts#L52)
+
+the transaction's execution failed due to a an on-chain validation error, insufficient balance for fees, or other such reasons
+
+***
+
+### Future
+
+> **Future**: `"Future"`
+
+Defined in: [src/base/types.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/types.ts#L40)
+
+the transaction is scheduled for the future
+
+***
+
+### Idle
+
+> **Idle**: `"Idle"`
+
+Defined in: [src/base/types.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/types.ts#L24)
+
+the transaction is prepped to run
+
+***
+
+### InBlock
+
+> **InBlock**: `"InBlock"`
+
+Defined in: [src/base/types.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/types.ts#L36)
+
+the transaction is in a block
+
+***
+
+### Rejected
+
+> **Rejected**: `"Rejected"`
+
+Defined in: [src/base/types.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/types.ts#L44)
+
+the transaction was rejected by the signer
+
+***
+
+### Running
+
+> **Running**: `"Running"`
+
+Defined in: [src/base/types.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/types.ts#L32)
+
+the transaction is being executed
+
+***
+
+### Succeeded
+
+> **Succeeded**: `"Succeeded"`
+
+Defined in: [src/base/types.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/types.ts#L48)
+
+the transaction was run successfully
+
+***
+
+### Unapproved
+
+> **Unapproved**: `"Unapproved"`
+
+Defined in: [src/base/types.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/types.ts#L28)
+
+the transaction is waiting for the user's signature

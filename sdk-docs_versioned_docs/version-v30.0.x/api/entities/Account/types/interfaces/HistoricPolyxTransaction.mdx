@@ -1,0 +1,173 @@
+---
+sidebar_label: "HistoricPolyxTransaction"
+---
+
+# Interface: HistoricPolyxTransaction
+
+Defined in: [src/api/entities/Account/types.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L78)
+
+## Extends
+
+- [`EventIdentifier`](../../../../client/types/interfaces/EventIdentifier.mdx)
+
+## Properties
+
+### amount
+
+> **amount**: `BigNumber`
+
+Defined in: [src/api/entities/Account/types.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L100)
+
+***
+
+### blockDate
+
+> **blockDate**: `Date`
+
+Defined in: [src/api/client/types.ts:183](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L183)
+
+#### Inherited from
+
+[`EventIdentifier`](../../../../client/types/interfaces/EventIdentifier.mdx).[`blockDate`](../../../../client/types/interfaces/EventIdentifier.mdx#blockdate)
+
+***
+
+### blockHash
+
+> **blockHash**: `string`
+
+Defined in: [src/api/client/types.ts:182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L182)
+
+#### Inherited from
+
+[`EventIdentifier`](../../../../client/types/interfaces/EventIdentifier.mdx).[`blockHash`](../../../../client/types/interfaces/EventIdentifier.mdx#blockhash)
+
+***
+
+### blockNumber
+
+> **blockNumber**: `BigNumber`
+
+Defined in: [src/api/client/types.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L181)
+
+#### Inherited from
+
+[`EventIdentifier`](../../../../client/types/interfaces/EventIdentifier.mdx).[`blockNumber`](../../../../client/types/interfaces/EventIdentifier.mdx#blocknumber)
+
+***
+
+### callId
+
+> **callId**: [`CallIdEnum`](../../../../../types/enumerations/CallIdEnum.mdx) \| `undefined`
+
+Defined in: [src/api/entities/Account/types.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L108)
+
+***
+
+### eventId
+
+> **eventId**: [`EventIdEnum`](../../../../../types/enumerations/EventIdEnum.mdx)
+
+Defined in: [src/api/entities/Account/types.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L110)
+
+***
+
+### eventIndex
+
+> **eventIndex**: `BigNumber`
+
+Defined in: [src/api/client/types.ts:184](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L184)
+
+#### Inherited from
+
+[`EventIdentifier`](../../../../client/types/interfaces/EventIdentifier.mdx).[`eventIndex`](../../../../client/types/interfaces/EventIdentifier.mdx#eventindex)
+
+***
+
+### extrinsicIdx
+
+> **extrinsicIdx**: `BigNumber` \| `undefined`
+
+Defined in: [src/api/entities/Account/types.ts:106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L106)
+
+***
+
+### fromAccount
+
+> **fromAccount**: [`Account`](../../classes/Account.mdx) \| `undefined`
+
+Defined in: [src/api/entities/Account/types.ts:88](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L88)
+
+Account from which the POLYX transaction has been initiated/deducted in case of a transfer.
+
+#### Note
+
+this can be null in cases where some balance are endowed/transferred from treasury
+
+***
+
+### fromIdentity
+
+> **fromIdentity**: [`Identity`](../../../Identity/classes/Identity.mdx) \| `undefined`
+
+Defined in: [src/api/entities/Account/types.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L83)
+
+Identity from which the POLYX transaction has been initiated/deducted in case of a transfer.
+
+#### Note
+
+this can be null in cases where some balance are endowed/transferred from treasury
+
+***
+
+### memo
+
+> **memo**: `string` \| `undefined`
+
+Defined in: [src/api/entities/Account/types.ts:105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L105)
+
+identifier string to help differentiate transfers
+
+***
+
+### moduleId
+
+> **moduleId**: [`ModuleIdEnum`](../../../../../types/enumerations/ModuleIdEnum.mdx)
+
+Defined in: [src/api/entities/Account/types.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L109)
+
+***
+
+### toAccount
+
+> **toAccount**: [`Account`](../../classes/Account.mdx) \| `undefined`
+
+Defined in: [src/api/entities/Account/types.ts:98](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L98)
+
+Account in which the POLYX amount was deposited.
+
+#### Note
+
+this can be null in case when account balance was burned
+
+***
+
+### toIdentity
+
+> **toIdentity**: [`Identity`](../../../Identity/classes/Identity.mdx) \| `undefined`
+
+Defined in: [src/api/entities/Account/types.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L93)
+
+Identity in which the POLYX amount was deposited.
+
+#### Note
+
+this can be null in case when account balance was burned
+
+***
+
+### type
+
+> **type**: [`BalanceTypeEnum`](../../../../../types/enumerations/BalanceTypeEnum.mdx)
+
+Defined in: [src/api/entities/Account/types.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L101)

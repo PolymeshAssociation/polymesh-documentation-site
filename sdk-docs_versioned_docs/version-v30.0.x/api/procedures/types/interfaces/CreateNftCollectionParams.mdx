@@ -1,0 +1,110 @@
+---
+sidebar_label: "CreateNftCollectionParams"
+---
+
+# Interface: CreateNftCollectionParams
+
+Defined in: [src/api/procedures/types.ts:880](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L880)
+
+## Properties
+
+### assetId?
+
+> `optional` **assetId?**: `string`
+
+Defined in: [src/api/procedures/types.ts:887](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L887)
+
+The ID of the asset to be used to create the collection.
+If no assetId is provided, a new asset with `NonFungible` asset type will be created
+
+#### Note
+
+for spec version before 7.x, this value is overwritten by `ticker` value
+
+***
+
+### collectionKeys
+
+> **collectionKeys**: [`CollectionKeyInput`](../type-aliases/CollectionKeyInput.mdx)[]
+
+Defined in: [src/api/procedures/types.ts:916](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L916)
+
+The required metadata values each NFT in the collection will have
+
+#### Note
+
+Images — Most Polymesh networks (mainnet, testnet, etc.) have global metadata keys registered to help standardize displaying images
+If `imageUri` is specified as a collection key, then each token will need to be issued with an image URI.
+
+***
+
+### documents?
+
+> `optional` **documents?**: [`AssetDocument`](../../../entities/Asset/types/interfaces/AssetDocument.mdx)[]
+
+Defined in: [src/api/procedures/types.ts:920](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L920)
+
+Links to off chain documents related to the NftCollection
+
+***
+
+### fundingRound?
+
+> `optional` **fundingRound?**: `string`
+
+Defined in: [src/api/procedures/types.ts:925](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L925)
+
+A optional field that can be used to provide information about the funding state of the asset
+
+***
+
+### name?
+
+> `optional` **name?**: `string`
+
+Defined in: [src/api/procedures/types.ts:900](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L900)
+
+The collection name. defaults to `ticker`
+
+***
+
+### nftType
+
+> **nftType**: `string` \| `BigNumber`
+
+Defined in: [src/api/procedures/types.ts:905](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L905)
+
+#### Throws
+
+if provided string that does not have a custom type
+
+#### Throws
+
+if provided a BigNumber that does not correspond to a custom type
+
+***
+
+### securityIdentifiers?
+
+> `optional` **securityIdentifiers?**: [`SecurityIdentifier`](../../../entities/Asset/types/interfaces/SecurityIdentifier.mdx)[]
+
+Defined in: [src/api/procedures/types.ts:909](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L909)
+
+array of domestic or international alphanumeric security identifiers for the Asset (e.g. ISIN, CUSIP, FIGI)
+
+***
+
+### ticker?
+
+> `optional` **ticker?**: `string`
+
+Defined in: [src/api/procedures/types.ts:896](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L896)
+
+The primary identifier for the collection.
+The ticker must either be free, or the signer has appropriate permissions if reserved.
+
+Since spec version 7.x, this value (if provided) is then linked to `assetId` asset
+
+#### Note
+
+This value is mandatory for spec version before 7.x

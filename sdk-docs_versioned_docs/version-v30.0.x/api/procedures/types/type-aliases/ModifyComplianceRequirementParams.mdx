@@ -1,0 +1,70 @@
+---
+sidebar_label: "ModifyComplianceRequirementParams"
+---
+
+# Type Alias: ModifyComplianceRequirementParams
+
+> **ModifyComplianceRequirementParams** = `object`
+
+Defined in: [src/api/procedures/types.ts:1463](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1463)
+
+## Properties
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+<a id="property-conditions"></a> `conditions`
+
+</td>
+<td>
+
+[`InputCondition`](../../../entities/types/type-aliases/InputCondition.mdx)[]
+
+</td>
+<td>
+
+array of conditions to replace the existing array of conditions for the requirement (identified by `id`).
+  Conditions within a requirement are *AND* between them. This means that in order
+  for a transfer to comply with this requirement, it must fulfill *ALL* conditions
+
+</td>
+<td>
+
+[src/api/procedures/types.ts:1473](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1473)
+
+</td>
+</tr>
+<tr>
+<td>
+
+<a id="property-id"></a> `id`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+ID of the Compliance Requirement
+
+</td>
+<td>
+
+[src/api/procedures/types.ts:1467](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1467)
+
+</td>
+</tr>
+</tbody>
+</table>
