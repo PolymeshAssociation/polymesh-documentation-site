@@ -294,7 +294,7 @@ Protocol-level rules that govern asset transfers and ownership. Compliance ensur
 
 ### CDD (Customer Due Diligence)
 
-A legacy identity claim type and onboarding concept used in Polymesh version prior to v8. From v8 DID registration is the functional onboarding requirement for identity and asset related network actions. See [Identity Onboarding](/identity/onboarding/).
+A legacy identity claim type and onboarding concept used in Polymesh versions prior to v8. From v8, DID registration is the functional onboarding requirement for identity and asset-related network actions. See [Identity Onboarding](/identity/onboarding/).
 
 ### KYC (Know Your Customer)
 

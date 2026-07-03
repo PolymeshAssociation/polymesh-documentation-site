@@ -229,10 +229,6 @@ const config: Config = {
             from: '/identity/verification/',
             to: '/identity/onboarding/',
           },
-          {
-            from: '/identity/verification',
-            to: '/identity/onboarding/',
-          },
           { from: '/polymesh-docs/primitives/compliance/', to: '/compliance/' },
           {
             from: '/polymesh-docs/primitives/corporate-actions/',

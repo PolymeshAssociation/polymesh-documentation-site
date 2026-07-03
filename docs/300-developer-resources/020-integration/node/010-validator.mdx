@@ -307,7 +307,7 @@ If the key is stored in this default location, you do not need to pass `--node-k
 
 Use `--node-key-file` when you intentionally store the node key in a custom location.
 
-For testing you can avoid separate key generation by using`--unsafe-force-node-key-generation`. This forces key generation if the node-key-file file does not exist on container start, which is useful for testing but not recommended for production.:
+For testing you can avoid separate key generation by using `--unsafe-force-node-key-generation`. This forces key generation if the node-key-file does not exist on container start, which is useful for testing but not recommended for production.
 
 `--unsafe-force-node-key-generation` is considered unsafe for active authorities because identity changes can break connectivity with peers that expect a stable peer ID.
 
@@ -347,7 +347,7 @@ Next, generate the node's session keys.
 
 Use `author_rotateKeysWithOwner` to generate session keys and the required ownership proof in one call.
 
-The `owner` parameter must be your **stash AccountId** in hex format: `0x` + the 32-byte raw public key bytes.
+The `owner` parameter must be your **stash AccountId** in hex format: `0x` + the 32-byte raw public key bytes. An account transformation tool such as https://polymesh.subscan.io/tools/format_transform can be used to convert your stash account address to the required hex public key format.
 
 ```bash
 curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":"author_rotateKeysWithOwner", "params":["<stash_account_id_hex>"]}' http://localhost:9944 | jq .result
@@ -376,7 +376,7 @@ Important behavior changes:
 
 The private keys are stored in a keystore on your operator server in the `/<base path>/chains/<chain name>/keystore/` directory. The filenames of these keys are the public key portion of the respective session key, and the file contents represent the private key.
 
-The `keys` output includes five concatenated public keys in this order: `GRANDPA`, `BABE`, `I'm Online`, `Authority Discovery`, `BEEFY`.
+The `keys` output includes five concatenated public keys in this order: `GRANDPA`, `BABE`, `I'm Online`, `Authority Discovery`, `BEEFY`. Prior to the v8 runtime update of Polymesh only 4 keys were generated, excluding the BEEFY key. The keystore will contain a file for each of these keys.
 
 Keystore filenames are prefixed with 4-byte key type identifiers (hex-encoded ASCII), followed by the public key:
 

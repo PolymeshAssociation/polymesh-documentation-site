@@ -27,9 +27,9 @@ This tooling facilitates:
 - The creation of zero-knowledge proofs necessary for Confidential Asset transfers.
 - Verification and auditing of Confidential Asset transfers.
 
-## Github Repos
+## GitHub Repos
 
-The Polymesh Private chain and associated tooling is available within the [Polymesh Github](https://github.com/PolymeshAssociation) organisation.
+The Polymesh Private chain and associated tooling is available within the [Polymesh GitHub](https://github.com/PolymeshAssociation) organisation.
 
 Each repository has its own README.md file to help get started with building and deploying the chain and each tool.
 

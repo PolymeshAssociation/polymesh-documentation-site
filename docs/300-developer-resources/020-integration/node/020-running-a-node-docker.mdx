@@ -137,7 +137,7 @@ Preferred one-time key generation:
 
 ```bash
 sudo docker run \
---user $(id -u polymesh):$(id -g polymesh) \
+--user root \
 --rm -it \
 --volume=/var/lib/polymesh/:/var/lib/polymesh/ \
 polymeshassociation/polymesh:8.0.0-testnet-distroless \
@@ -148,7 +148,7 @@ Optional: inspect the generated key and print its peer ID:
 
 ```bash
 sudo docker run \
---user $(id -u polymesh):$(id -g polymesh) \
+--user root \
 --rm -it \
 --volume=/var/lib/polymesh/:/var/lib/polymesh/ \
 polymeshassociation/polymesh:8.0.0-testnet-distroless \
@@ -161,13 +161,13 @@ If you use the default location shown above, no explicit node-key argument is re
 --node-key-file /secure/node-keys/validator-1-secret_ed25519
 ```
 
-For testing you can avoid separate key generation by using`--unsafe-force-node-key-generation`. This forces key generation if the node-key-file file does not exist on container start, which is useful for testing but not recommended for production.:
+For testing you can avoid separate key generation by using `--unsafe-force-node-key-generation`. This forces key generation if the node-key-file does not exist on container start, which is useful for testing but not recommended for production.
 
 `--unsafe-force-node-key-generation` is considered unsafe for active authorities because identity changes can break connectivity with peers that expect a stable peer ID.
 
 ```bash
 sudo docker run \
---user $(id -u polymesh):$(id -g polymesh) \
+--user root \
 --rm -it \
 --volume=/var/lib/polymesh/:/var/lib/polymesh/ \
 polymeshassociation/polymesh:8.0.0-testnet-distroless \
@@ -442,13 +442,13 @@ Polymesh uses five session keys:
 - BABE: sr25519
 - I'm Online: sr25519
 - Authority Discovery: sr25519
-- BEEFY: ecdsa
+- BEEFY: ecdsa (Polymesh V8+ only)
 
 These keys can either be generated offline and injected in the operator node or can be generated within the operator node by calling the appropriate RPC method. Once generated the session keys should be persisted.
 
 The official Polymesh docker images contain a small binary to generate the session keys and insert them in the keystore. This is the simplest method to generate session keys as it does not require exposing unsafe RPC methods externally or installing `curl` in the container or in a sidecar.
 
-This binary is located in `/usr/local/bin/rotate`. In v8, session key rotation requires an ownership proof, so the rotate workflow uses `author_rotateKeysWithOwner` and requires your **stash AccountId** in hex as input (`0x` + 32-byte raw public key bytes).
+This binary is located in `/usr/local/bin/rotate`. In v8, session key rotation requires an ownership proof, so the rotate workflow uses `author_rotateKeysWithOwner` and requires your **stash AccountId** in hex as input (`0x` + 32-byte raw public key bytes). An account transformation tool such as https://polymesh.subscan.io/tools/format_transform can be used to convert your stash account address to the required hex public key format.
 
 ```bash
 sudo docker exec -u $(id -u polymesh):$(id -g polymesh) my-container-name /usr/local/bin/rotate <stash_account_id_hex>
