@@ -17,6 +17,10 @@ Polymesh Confidential Assets (**PCA**) enable privacy-preserving transfers of di
 
 At a high level, participants submit **Zero-Knowledge Proofs** (**ZKP**) that a balance update is valid (e.g., “I can afford this debit”, “this state transition is well-formed”) without revealing the underlying amounts or linking the sender/receiver identities. Separately, encrypted settlement details can be made accessible to designated compliance participants.
 
+:::info Network Availability
+Confidential Assets is live on **Testnet** as of Polymesh v8. It is not yet available on **Mainnet**, and the pre-release interface may still change before it reaches Mainnet. Build and test against Testnet.
+:::
+
 :::note Reference
 
 Polymesh Confidential Assets are the Polymesh implementation of the P-DART paper (the underlying protocol design), which builds on the DART paper.
@@ -138,7 +142,7 @@ This separation enables “accept/reject first, credit later” semantics for re
 ## Proof of Balance and Operational Controls
 
 :::info Implementation Status
-Proof of Balance, account freezing, and forced transfer features are **not available in the initial devnet launch**. Support for these capabilities will be added in future releases.
+Proof of Balance, account freezing, and forced transfer features are **not yet available on Testnet**. Support for these capabilities will be added in future releases.
 :::
 
 - **Proof of Balance (PoB):** Prove an asset balance to a verifier without revealing history. Implemented via counters and optionally counter-update transactions.

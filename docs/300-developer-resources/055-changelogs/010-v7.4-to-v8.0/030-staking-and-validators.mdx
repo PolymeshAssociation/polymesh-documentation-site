@@ -1,0 +1,181 @@
+---
+title: Staking & Validators Changelog - v7.4 to v8.0
+description: Breaking changes to the Staking pallet in Polymesh chain v8 - the new Validators pallet, bond/controller signature changes, paged payouts, and ledger migration.
+id: v7.4-to-v8.0-staking-and-validators
+slug: /development/changelogs/v7.4-to-v8.0/staking-and-validators
+sidebar_label: Staking & Validators
+tags:
+  - migration
+  - changelog
+  - runtime
+  - staking
+  - validators
+---
+
+This page covers changes to the `Staking` pallet and the new `Validators` pallet. It is part of the [v7.4 → v8.0 changelog](./010-overview.mdx).
+
+**Audience:** anyone calling staking extrinsics directly, running tooling against staking events/storage, or operating a validator node.
+
+For CLI and node-operation changes (session keys, node keys, pruning), see [Node operators](#node-operators) below, which points to the already-updated operational guides.
+
+---
+
+## Overview
+
+In chain v7, `Staking` was a single Polymesh-specific pallet combining standard staking mechanics (bonding, nominating, payouts) with Polymesh's permissioned-validator governance (which identities may run a validator, commission caps, slashing switches). In chain v8, that pallet is split in two:
+
+- **`Staking`** (runtime index 17) — the standard upstream `pallet-staking`.
+- **`Validators`** (runtime index 16) — a new Polymesh pallet holding everything permissioning-related.
+
+The two are wired together: `pallet_staking::Config::Permissioned = Validators`, so `Staking` calls into `Validators` to check whether an identity is allowed to validate. `Validators` also owns the reward-curve/inflation configuration (`EraPayout = pallet_validators::PolymeshConvertCurve<...>`).
+
+If your integration calls the permissioning extrinsics below, or depends on the old combined pallet, update it — the calls didn't disappear, but they now live at a different pallet index.
+
+## Breaking changes
+
+### 1. Permissioning calls, events, and errors moved to `Validators`
+
+These calls move from `Staking` to `Validators` (index 16) unchanged in signature:
+
+- `add_permissioned_validator`
+- `remove_permissioned_validator`
+- `payout_stakers_by_system`
+- `change_slashing_allowed_for`
+- `update_permissioned_validator_intended_count`
+- `chill_from_governance`
+- `set_commission_cap`
+
+Along with the events `PermissionedIdentityAdded`, `PermissionedIdentityRemoved`, `InvalidatedNominators`, `SlashingAllowedForChanged`, `RewardPaymentSchedulingInterrupted`, `CommissionCapUpdated`, and errors `StashIdentityDoesNotExist`, `StashIdentityNotPermissioned`, `IdentityIsAlreadyPermissioned`, `IntendedCountIsExceedingConsensusLimit`, `IdentityNotFound`, `ValidatorNotFound`, `CommissionTooHigh`, `CommissionUnchanged`.
+
+`Validators` also declares a `Nominated` event, but nothing in v8 actually emits it. The upstream `pallet-staking` doesn't have a nomination event at all, and this Polymesh-specific one (which used to include the nominator's identity) wasn't reintroduced when the pallet split happened. Don't build tooling that waits for it.
+
+One error is renamed as part of this move, reflecting the DID-only terminology shift: `StashIdentityNotCDDed` / `IdentityIsMissingCDD` → `IdentityIsInactive`.
+
+### 2. `bond` no longer takes a controller
+
+```
+// v7.4
+bond(controller: AccountIdLookup, value: Compact<Balance>, payee: RewardDestination)
+
+// v8.0
+bond(value: Compact<Balance>, payee: RewardDestination)
+```
+
+### 3. `set_controller` no longer takes an argument
+
+```
+// v7.4
+set_controller(controller: AccountIdLookup)
+
+// v8.0
+set_controller()
+```
+
+Calling `set_controller` now always resets the controller **to the stash address** — you can no longer point the controller at a different account. It errors with `AlreadyPaired` if the stash is already its own controller. Existing bonds that already have a separate controller keep working after the upgrade; nothing forces them onto the controller-less model. Migration is opt-in and stash-initiated: the stash owner calls `set_controller` (or the admin-only `deprecate_controller_batch`, below) whenever they choose to. `nominate` and other controller-gated calls are still signed by whichever account is currently the controller — for a stash that hasn't migrated, that's still the separate controller account, not the stash.
+
+### 4. `chill_other` takes a stash, not a controller
+
+```
+// v7.4
+chill_other(controller: AccountId)
+
+// v8.0
+chill_other(stash: AccountId)
+```
+
+### 5. New calls
+
+| Call                                                                    | Purpose                                                                                                                                                                                                                                                                                       |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `payout_stakers_by_page(validator_stash, era, page)`                    | Pays out a single page of a validator's era rewards. Replaces the unpaged `payout_stakers` for validators with large nominator sets                                                                                                                                                           |
+| `update_payee(controller)`                                              | Re-reads and re-stores the reward destination for a controller whose payee configuration needs refreshing                                                                                                                                                                                     |
+| `deprecate_controller_batch(controllers)`                               | Governance-only call (not self-service) that migrates a batch of stashes still using a separate controller to the controller-less model. There is no plan to force-migrate legacy controllers this way — migration is expected to happen via individual stash owners calling `set_controller` |
+| `restore_ledger(stash, maybe_controller, maybe_total, maybe_unlocking)` | Admin call to repair a corrupted staking ledger                                                                                                                                                                                                                                               |
+| `migrate_currency(stash)`                                               | Migrates a stash's bonded balance from the old `Currency` locks to `Fungible` holds                                                                                                                                                                                                           |
+| `manual_slash(validator_stash, era, slash_fraction)`                    | Admin call to apply a slash directly, outside the normal offence-reporting path                                                                                                                                                                                                               |
+
+### 6. `Rewarded` event drops `identity`, adds `dest`
+
+```
+// v7.4
+Rewarded { identity: IdentityId, stash: AccountId, amount: Balance }
+
+// v8.0
+Rewarded { stash: AccountId, dest: RewardDestination<AccountId>, amount: Balance }
+```
+
+`dest` is one of `RewardDestination::Staked` (paid to the stash and re-bonded), `::Stash` (paid to the stash, not re-bonded), `::Account(AccountId)` (paid to an arbitrary account), or the deprecated `::Controller` (paid to the controller — still decodable, but no longer settable going forward). `Rewarded` tells you the destination _policy_, not necessarily a single credited account in an easily-parseable way for `Staked`/`Stash` — for a definitive record of which account was actually credited and by how much, use the accompanying `balances.Deposit { who, amount }` event instead (see [Balances & Transfers](./020-balances-and-transfers.mdx)). Every reward payout mints funds via the standard `pallet-balances` deposit path, which always emits `Deposit`, regardless of which `RewardDestination` variant is in effect.
+
+### 7. `PayoutStarted` event gains paging fields, and payouts can span multiple pages
+
+```
+// v7.4
+PayoutStarted { era_index: EraIndex, validator_stash: AccountId }
+
+// v8.0
+PayoutStarted { era_index: EraIndex, validator_stash: AccountId, page: Page, next: Option<Page> }
+```
+
+In v7.4, a validator's era reward was always a single unpaged payout: one `PayoutStarted` followed by one `Rewarded` per nominator. In v8, large nominator sets are split across multiple pages (via `payout_stakers_by_page`), so a single validator's era reward can now produce **multiple** `PayoutStarted` + `Rewarded` groups — one per page, each with its own `page` index and a `next` field pointing at the next page (or `None` on the last one). Don't assume "one `PayoutStarted` per validator per era" when indexing payouts; group by `(validator_stash, era_index, page)` instead.
+
+Use the new `StakingApi::eras_stakers_page_count(era, validator_stash)` Runtime API to find out how many pages a validator's era reward has, and `StakingApi::pending_rewards(era, account)` to check whether a specific account still has an unpaid page — see [Runtime APIs & RPC](./120-runtime-apis-and-rpc.mdx#stakingapi--method-set-fully-replaced). Unlike the old `staking_getCurve`, none of these new methods have a JSON-RPC wrapper — they're `state_call`-only.
+
+### 8. `set_staking_configs` gains `max_staked_rewards`
+
+```
+// v7.4
+set_staking_configs(min_nominator_bond, min_validator_bond, max_nominator_count, max_validator_count, chill_threshold, min_commission)
+
+// v8.0
+set_staking_configs(min_nominator_bond, min_validator_bond, max_nominator_count, max_validator_count, chill_threshold, min_commission, max_staked_rewards: ConfigOp<Percent>)
+```
+
+Governance-only call; the new parameter caps what share of total issuance can be paid out as staking rewards, tracked in the new `MaxStakedRewards` storage.
+
+### 9. New errors on `Staking`
+
+`InvalidPage`, `ControllerDeprecated`, `CannotRestoreLedger`, `RewardDestinationRestricted`, `NotEnoughFunds`, `VirtualStakerNotAllowed`, `CannotReapStash`, `AlreadyMigrated`, `Restricted`. Match by name — index positions are not stable across this upgrade.
+
+### 10. Removed calls (no replacement)
+
+`update_permissioned_validator_intended_count` and `chill_from_governance` exist on `Staking` in v7.4; in v8.0 the same-named calls exist only on `Validators` (see #1) — calling them on `Staking` no longer works.
+
+### 11. `MaxNominations` constant removed — limit unchanged, just not queryable
+
+v7.4 exposed `Staking::MaxNominations` as a queryable runtime constant (`= 16`). v8 replaces it with `type NominationsQuota = pallet_staking::FixedNominationsQuota<16>` — the effective limit is still 16 nominations per nominator, but it's no longer exposed as a simple `Get<u32>` constant you can query via the metadata/API. If your tooling reads `api.consts.staking.maxNominations`, hardcode `16` instead (or derive it from documentation, since it's compiled into the runtime rather than queryable) — or call the new `StakingApi::nominations_quota(balance)` Runtime API, which is queryable (see [Runtime APIs & RPC](./120-runtime-apis-and-rpc.mdx#stakingapi--method-set-fully-replaced)).
+
+### 12. Other storage and constants
+
+New storage backing the paged-exposure model: `ErasStakersOverview`, `ErasStakersPaged`, `ClaimedRewards` (which pages of a validator's era reward have been claimed), `VirtualStakers` and `CounterForVirtualStakers` (accounts that stake without a real bonded balance, e.g. via a pooled-staking design — see the `VirtualStakerNotAllowed` error above), and `MaxStakedRewards` (backing `set_staking_configs` above). `Payee` changes from a `ValueQuery` map (missing entries decode to a default) to an `OptionQuery` map (missing entries decode to `None`) — if you query it directly rather than through a helper, handle the `None` case explicitly now.
+
+Removed storage: `OffendingValidators`, `PermissionedIdentity`, `PolymeshStorageVersion`, `SlashingAllowedFor`, `ValidatorCommissionCap` — all governance/permissioning state that moved to `Validators` (see #1). Removed constants: `FixedYearlyReward`, `MaxNominatorRewardedPerValidator`, `MaxValidatorPerIdentity`, `MaxVariableInflationTotalIssuance` — reward-curve and permissioning parameters that are now owned by `Validators`' config instead. New constants: `MaxExposurePageSize` (64) caps how many nominators fit on one exposure page; `MaxValidatorSet` (1000) caps the validator set size.
+
+### 13. `Session` pallet: new events, `DisabledValidators` gains severity
+
+Alongside the `SessionKeys` change (BEEFY key, see [Node operators](#node-operators) below), `Session` gains three new events: `NewQueued` (new session keys queued for the next session), `ValidatorDisabled { validator }`, and `ValidatorReenabled { validator }`. The `DisabledValidators` storage changes from a plain list of validator indices to `Vec<(u32, OffenceSeverity)>`, tracking how severely a validator was disabled — which is what makes `ValidatorReenabled` (partial reinstatement after a lesser offence) possible. New constant `KeyDeposit`.
+
+## Node operators
+
+Node-level setup, session keys, and CLI flags are covered in the [Validator Node Guide](/developer-resources/validator-node-guide/) and [Running a Node with Docker](/node/docker), both already updated for v8. Highlights relevant if you're upgrading:
+
+- A fifth session key (**BEEFY**, `ecdsa`) is now required alongside GRANDPA, BABE, I'm Online, and Authority Discovery — generate session keys with `author_rotateKeysWithOwner` (or the container `rotate` utility), which now also requires your stash account ID and returns an ownership `proof`.
+- Node network keys are no longer auto-generated — provision and back up a persistent node key explicitly.
+- State/block pruning is configured with `--state-pruning` and `--blocks-pruning`; defaults are `256` and `archive-canonical`.
+- The `--operator` CLI flag is removed. It was an alias for `--validator` in v7.4; only `--validator` works on v8. Update any startup scripts that used `--operator`.
+- `--ws-port` is removed. HTTP and WebSocket JSON-RPC are served from the same endpoint, configured with `--rpc-port`.
+
+See those guides for full steps — this page only covers pallet-level (call/event/error) changes.
+
+## Migration checklist
+
+1. Update `bond` calls to drop the `controller` argument.
+2. Update `set_controller` calls to drop the `controller` argument — it now only ever resets the controller to the stash. Legacy stashes with a separate controller keep working unmigrated; there's no self-service call to force it, and no planned forced migration.
+3. Update `chill_other` calls to pass a stash instead of a controller.
+4. Move any calls to `add_permissioned_validator`, `remove_permissioned_validator`, `payout_stakers_by_system`, `change_slashing_allowed_for`, `update_permissioned_validator_intended_count`, `chill_from_governance`, or `set_commission_cap` from `Staking` to `Validators`. Don't wait on the `Nominated` event — it's declared but never emitted.
+5. If you page through or index validator payouts, switch to `payout_stakers_by_page` and group by `(validator_stash, era_index, page)` rather than assuming one payout per validator per era — handle the new `page`/`next` fields on `PayoutStarted`.
+6. Update `Rewarded` event decoding for the `dest` field replacing `identity`; for a reliable record of which account was actually credited and how much, consume `balances.Deposit` alongside it.
+7. If you hardcode a nomination limit from `Staking::MaxNominations`, note it's no longer queryable — the value (16) is unchanged, just no longer exposed as a runtime constant.
+8. If you query `Staking::Payee` storage directly, handle `None` — it's no longer a `ValueQuery` map.
+9. If you operate a validator node, generate a BEEFY session key and review the [Validator Node Guide](/developer-resources/validator-node-guide/) before upgrading.
+
+For the complete literal list of every added/removed/modified call, event, error, storage item, and constant on `Staking`, `Validators`, and `Session`, see the [Full Pallet API Reference](./110-pallet-api-reference.mdx). For the `StakingApi` Runtime API changes (`get_curve` removed, `nominations_quota`/`eras_stakers_page_count`/`pending_rewards` added) and the removal of the `staking_getCurve` JSON-RPC method, see [Runtime APIs & RPC](./120-runtime-apis-and-rpc.mdx).

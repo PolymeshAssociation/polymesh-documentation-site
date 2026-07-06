@@ -1,0 +1,971 @@
+---
+title: Full Pallet API Reference - v7.4 to v8.0
+description: Mechanically generated, pallet-by-pallet reference of every added, removed, and modified call, event, error, storage item, and constant between Polymesh chain v7.4 and v8.0, derived from on-chain runtime metadata.
+id: v7.4-to-v8.0-pallet-api-reference
+slug: /development/changelogs/v7.4-to-v8.0/pallet-api-reference
+sidebar_label: Full Pallet API Reference
+tags:
+  - migration
+  - changelog
+  - runtime
+  - metadata
+---
+
+This page is a mechanically generated reference of every structural API change between Polymesh chain **v7.4** and **v8.0**, extracted directly from each release's runtime metadata (metadata v14, the only version available for both releases). It complements the narrative pages in the [v7.4 → v8.0 changelog](./010-overview.mdx) with a literal, pallet-by-pallet diff: every call, event, error, storage item, and constant that was added, removed, or had its argument/field shape change.
+
+**Scope and method:**
+
+- Comparison is by **name**, not by index. Call/event/error/storage indices are not stable across this upgrade (see the [overview](./010-overview.mdx)) and are ignored here entirely — an item that kept the same name and shape but moved to a different index is **not** listed as changed.
+- "Modified" means the named item's argument names or underlying types changed. Cosmetic Rust-side renames introduced by the Polkadot SDK upgrade (for example `T::BlockNumber` becoming `BlockNumberFor<T>`) are resolved to their underlying structural type before comparing, so they are **not** flagged as modified when nothing observable actually changed.
+- For **constants**, only a type change counts as "modified" — constant _values_ (weight tables, fee coefficients, limits) are runtime tuning, not an API change, so value-only drift is not listed. The current value is still shown for reference, truncated if it's a long byte blob (e.g. a weight schedule).
+- Pallets with no structural changes at all are omitted from the per-pallet detail below (they still appear as fully absent — nothing to migrate).
+- The `v7.4` / `v8.0` columns show the Rust-level argument list or type signature, not the SCALE-encoded wire format.
+
+## Pallets added
+
+`Beefy`, `ConfidentialAssets` (Testnet only), `DidRegistrars`, `Mmr`, `MmrLeaf`, `MultiBlockMigrations`, `PolymeshTransactionPayment`, `Revive`, `Validators`
+
+## Pallets removed
+
+`CddServiceProviders`, `RandomnessCollectiveFlip`
+
+Renamed pallets (for example `CddServiceProviders` → `DidRegistrars`) are not detected as renames by this name-based diff — they show up as one pallet removed and a different one added. See the [Identity & Onboarding](./060-identity-and-onboarding.mdx) page for the narrative mapping.
+
+## Summary
+
+| Pallet                                                        | Calls +/-/~ | Events +/-/~ | Errors +/-/~ | Storage +/-/~ | Constants +/-/~ |
+| ------------------------------------------------------------- | ----------- | ------------ | ------------ | ------------- | --------------- |
+| [Asset](#asset)                                               | 1/0/3       | 2/0/2        | 6/2/0        | 1/0/0         | —               |
+| [AuthorityDiscovery](#authoritydiscovery)                     | —           | —            | —            | 2/0/0         | —               |
+| [Babe](#babe)                                                 | 0/0/2       | —            | —            | —             | 1/0/0           |
+| [Balances](#balances)                                         | 8/4/0       | 24/1/6       | 11/1/0       | 5/0/1         | 3/0/0           |
+| [Base](#base)                                                 | —           | 0/1/0        | —            | —             | —               |
+| [CommitteeMembership](#committeemembership)                   | —           | 0/1/0        | —            | —             | —               |
+| [Contracts](#contracts)                                       | 1/0/3       | 2/0/3        | 11/2/0       | 3/2/1         | 6/2/0           |
+| [ElectionProviderMultiPhase](#electionprovidermultiphase)     | 0/0/1       | —            | 1/0/0        | 0/0/1         | 2/6/0           |
+| [Grandpa](#grandpa)                                           | —           | —            | —            | 1/0/0         | 1/0/0           |
+| [Historical](#historical)                                     | —           | 2/0/0        | —            | 2/0/0         | —               |
+| [Identity](#identity)                                         | 2/5/2       | 0/5/0        | 6/9/0        | 0/5/0         | —               |
+| [ImOnline](#imonline)                                         | —           | —            | —            | 0/0/1         | —               |
+| [Indices](#indices)                                           | 1/0/0       | 1/0/0        | —            | —             | —               |
+| [MultiSig](#multisig)                                         | —           | —            | 0/1/0        | —             | —               |
+| [Nft](#nft)                                                   | 1/0/3       | 1/1/0        | 3/3/0        | 0/1/1         | —               |
+| [Offences](#offences)                                         | —           | —            | —            | 0/1/0         | —               |
+| [Permissions](#permissions)                                   | —           | —            | —            | 2/0/0         | —               |
+| [Pips](#pips)                                                 | 0/0/1       | —            | 1/0/0        | —             | —               |
+| [PolymeshContracts](#polymeshcontracts)                       | 0/2/0       | —            | 0/3/0        | —             | —               |
+| [Portfolio](#portfolio)                                       | 0/0/2       | —            | 0/2/0        | 0/1/1         | —               |
+| [Preimage](#preimage)                                         | 1/0/0       | —            | 2/0/0        | 1/0/1         | —               |
+| [Relayer](#relayer)                                           | 5/3/0       | 6/3/1        | 4/6/0        | 2/0/0         | —               |
+| [Scheduler](#scheduler)                                       | 4/0/0       | 4/0/0        | —            | 1/0/1         | —               |
+| [Session](#session)                                           | —           | 3/0/0        | —            | 1/0/1         | 1/0/0           |
+| [Settlement](#settlement)                                     | 3/3/11      | 3/2/4        | 8/0/0        | 3/1/2         | 3/1/0           |
+| [Staking](#staking)                                           | 6/7/4       | 4/7/4        | 9/10/0       | 6/5/1         | 2/5/0           |
+| [Sto](#sto)                                                   | 0/0/1       | —            | 1/0/0        | —             | —               |
+| [System](#system)                                             | 3/0/0       | 2/0/2        | 3/0/0        | 5/1/1         | —               |
+| [TechnicalCommitteeMembership](#technicalcommitteemembership) | —           | 0/1/0        | —            | —             | —               |
+| [TransactionPayment](#transactionpayment)                     | 0/1/0       | —            | —            | 1/0/0         | 1/2/0           |
+| [UpgradeCommitteeMembership](#upgradecommitteemembership)     | —           | 0/1/0        | —            | —             | —               |
+| [Utility](#utility)                                           | 0/1/0       | 0/1/0        | 0/3/0        | 0/1/0         | —               |
+
+## Pallet detail
+
+### Asset
+
+#### Calls
+
+| Status   | Name                  | v7.4                                                                | v8.0                                                                                        |
+| -------- | --------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Added    | `approve`             | _(none)_                                                            | `asset_id: AssetId, spender: T::AccountId, amount: Balance`                                 |
+| Modified | `controller_transfer` | `asset_id: AssetId, value: Balance, from_portfolio: PortfolioId`    | `asset_id: AssetId, value: Balance, source: AssetHolder, destination_kind: AssetHolderKind` |
+| Modified | `issue`               | `asset_id: AssetId, amount: Balance, portfolio_kind: PortfolioKind` | `asset_id: AssetId, amount: Balance, asset_holder_kind: AssetHolderKind`                    |
+| Modified | `redeem`              | `asset_id: AssetId, value: Balance, portfolio_kind: PortfolioKind`  | `asset_id: AssetId, value: Balance, asset_holder_kind: AssetHolderKind`                     |
+
+#### Events
+
+| Status   | Name                  | v7.4                                                                                            | v8.0                                                                                                                 |
+| -------- | --------------------- | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Added    | `AllowanceSpent`      | _(none)_                                                                                        | `owner: T::AccountId, spender: T::AccountId, asset_id: AssetId, amount_spent: Balance, remaining_allowance: Balance` |
+| Added    | `Approval`            | _(none)_                                                                                        | `owner: T::AccountId, spender: T::AccountId, asset_id: AssetId, amount: Balance`                                     |
+| Modified | `AssetBalanceUpdated` | `IdentityId, AssetId, Balance, Option<PortfolioId>, Option<PortfolioId>, PortfolioUpdateReason` | `IdentityId, AssetId, Balance, Option<AssetHolder>, Option<AssetHolder>, HoldingsUpdateReason`                       |
+| Modified | `ControllerTransfer`  | `IdentityId, AssetId, PortfolioId, Balance`                                                     | `IdentityId, AssetId, AssetHolder, Balance`                                                                          |
+
+#### Errors
+
+| Status  | Name                                |
+| ------- | ----------------------------------- |
+| Added   | `InsufficientAllowance`             |
+| Added   | `InsufficientTokensLocked`          |
+| Added   | `InvalidTransferInvalidReceiverDID` |
+| Added   | `KeyNotFoundForDid`                 |
+| Added   | `SelfOwnershipTransferNotAllowed`   |
+| Added   | `UnauthorizedHolderKey`             |
+| Removed | `InvalidTransferInvalidReceiverCDD` |
+| Removed | `InvalidTransferInvalidSenderCDD`   |
+
+#### Storage
+
+| Status | Name         | v7.4     | v8.0                                                                                                                                              |
+| ------ | ------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Added  | `Allowances` | _(none)_ | `DoubleMap/NMap (Default) — hashers: Blake2_128Concat, Blake2_128Concat, Blake2_128Concat, key: (AccountId32, AccountId32, AssetId), value: U128` |
+
+### AuthorityDiscovery
+
+#### Storage
+
+| Status | Name       | v7.4     | v8.0                                       |
+| ------ | ---------- | -------- | ------------------------------------------ |
+| Added  | `Keys`     | _(none)_ | `Plain (Default) — WeakBoundedVec<Public>` |
+| Added  | `NextKeys` | _(none)_ | `Plain (Default) — WeakBoundedVec<Public>` |
+
+### Babe
+
+#### Calls
+
+| Status   | Name                           | v7.4                                                                                       | v8.0                                                                                          |
+| -------- | ------------------------------ | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
+| Modified | `report_equivocation`          | `equivocation_proof: Box<EquivocationProof<T::Header>>, key_owner_proof: T::KeyOwnerProof` | `equivocation_proof: Box<EquivocationProof<HeaderFor<T>>>, key_owner_proof: T::KeyOwnerProof` |
+| Modified | `report_equivocation_unsigned` | `equivocation_proof: Box<EquivocationProof<T::Header>>, key_owner_proof: T::KeyOwnerProof` | `equivocation_proof: Box<EquivocationProof<HeaderFor<T>>>, key_owner_proof: T::KeyOwnerProof` |
+
+#### Constants
+
+| Status | Name            | v7.4     | v8.0         |
+| ------ | --------------- | -------- | ------------ |
+| Added  | `MaxNominators` | _(none)_ | `U32 = 1024` |
+
+### Balances
+
+#### Calls
+
+| Status  | Name                                   | v7.4                                                                                 | v8.0                                                |
+| ------- | -------------------------------------- | ------------------------------------------------------------------------------------ | --------------------------------------------------- |
+| Added   | `burn`                                 | _(none)_                                                                             | `value: T::Balance, keep_alive: bool`               |
+| Added   | `force_adjust_total_issuance`          | _(none)_                                                                             | `direction: AdjustmentDirection, delta: T::Balance` |
+| Added   | `force_set_balance`                    | _(none)_                                                                             | `who: AccountIdLookupOf<T>, new_free: T::Balance`   |
+| Added   | `force_unreserve`                      | _(none)_                                                                             | `who: AccountIdLookupOf<T>, amount: T::Balance`     |
+| Added   | `transfer_all`                         | _(none)_                                                                             | `dest: AccountIdLookupOf<T>, keep_alive: bool`      |
+| Added   | `transfer_allow_death`                 | _(none)_                                                                             | `dest: AccountIdLookupOf<T>, value: T::Balance`     |
+| Added   | `transfer_keep_alive`                  | _(none)_                                                                             | `dest: AccountIdLookupOf<T>, value: T::Balance`     |
+| Added   | `upgrade_accounts`                     | _(none)_                                                                             | `who: Vec<T::AccountId>`                            |
+| Removed | `burn_account_balance`                 | `amount: Balance`                                                                    | _(none)_                                            |
+| Removed | `deposit_block_reward_reserve_balance` | `value: Balance`                                                                     | _(none)_                                            |
+| Removed | `set_balance`                          | `who: <T::Lookup as StaticLookup>::Source, new_free: Balance, new_reserved: Balance` | _(none)_                                            |
+| Removed | `transfer`                             | `dest: <T::Lookup as StaticLookup>::Source, value: Balance`                          | _(none)_                                            |
+
+#### Events
+
+| Status   | Name                   | v7.4                                                                                        | v8.0                                                                                              |
+| -------- | ---------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Added    | `Burned`               | _(none)_                                                                                    | `who: T::AccountId, amount: T::Balance`                                                           |
+| Added    | `BurnedDebt`           | _(none)_                                                                                    | `amount: T::Balance`                                                                              |
+| Added    | `BurnedHeld`           | _(none)_                                                                                    | `reason: T::RuntimeHoldReason, who: T::AccountId, amount: T::Balance`                             |
+| Added    | `Deposit`              | _(none)_                                                                                    | `who: T::AccountId, amount: T::Balance`                                                           |
+| Added    | `DustLost`             | _(none)_                                                                                    | `account: T::AccountId, amount: T::Balance`                                                       |
+| Added    | `Frozen`               | _(none)_                                                                                    | `who: T::AccountId, amount: T::Balance`                                                           |
+| Added    | `Held`                 | _(none)_                                                                                    | `reason: T::RuntimeHoldReason, who: T::AccountId, amount: T::Balance`                             |
+| Added    | `Issued`               | _(none)_                                                                                    | `amount: T::Balance`                                                                              |
+| Added    | `Locked`               | _(none)_                                                                                    | `who: T::AccountId, amount: T::Balance`                                                           |
+| Added    | `Minted`               | _(none)_                                                                                    | `who: T::AccountId, amount: T::Balance`                                                           |
+| Added    | `MintedCredit`         | _(none)_                                                                                    | `amount: T::Balance`                                                                              |
+| Added    | `Released`             | _(none)_                                                                                    | `reason: T::RuntimeHoldReason, who: T::AccountId, amount: T::Balance`                             |
+| Added    | `Rescinded`            | _(none)_                                                                                    | `amount: T::Balance`                                                                              |
+| Added    | `Restored`             | _(none)_                                                                                    | `who: T::AccountId, amount: T::Balance`                                                           |
+| Added    | `Slashed`              | _(none)_                                                                                    | `who: T::AccountId, amount: T::Balance`                                                           |
+| Added    | `Suspended`            | _(none)_                                                                                    | `who: T::AccountId, amount: T::Balance`                                                           |
+| Added    | `Thawed`               | _(none)_                                                                                    | `who: T::AccountId, amount: T::Balance`                                                           |
+| Added    | `TotalIssuanceForced`  | _(none)_                                                                                    | `old: T::Balance, new: T::Balance`                                                                |
+| Added    | `TransferAndHold`      | _(none)_                                                                                    | `reason: T::RuntimeHoldReason, source: T::AccountId, dest: T::AccountId, transferred: T::Balance` |
+| Added    | `TransferOnHold`       | _(none)_                                                                                    | `reason: T::RuntimeHoldReason, source: T::AccountId, dest: T::AccountId, amount: T::Balance`      |
+| Added    | `Unexpected`           | _(none)_                                                                                    | `UnexpectedKind`                                                                                  |
+| Added    | `Unlocked`             | _(none)_                                                                                    | `who: T::AccountId, amount: T::Balance`                                                           |
+| Added    | `Upgraded`             | _(none)_                                                                                    | `who: T::AccountId`                                                                               |
+| Added    | `Withdraw`             | _(none)_                                                                                    | `who: T::AccountId, amount: T::Balance`                                                           |
+| Removed  | `AccountBalanceBurned` | `IdentityId, T::AccountId, Balance`                                                         | _(none)_                                                                                          |
+| Modified | `BalanceSet`           | `IdentityId, T::AccountId, Balance, Balance`                                                | `who: T::AccountId, free: T::Balance`                                                             |
+| Modified | `Endowed`              | `Option<IdentityId>, T::AccountId, Balance`                                                 | `account: T::AccountId, free_balance: T::Balance`                                                 |
+| Modified | `ReserveRepatriated`   | `T::AccountId, T::AccountId, Balance, Status`                                               | `from: T::AccountId, to: T::AccountId, amount: T::Balance, destination_status: Status`            |
+| Modified | `Reserved`             | `T::AccountId, Balance`                                                                     | `who: T::AccountId, amount: T::Balance`                                                           |
+| Modified | `Transfer`             | `Option<IdentityId>, T::AccountId, Option<IdentityId>, T::AccountId, Balance, Option<Memo>` | `from: T::AccountId, to: T::AccountId, amount: T::Balance`                                        |
+| Modified | `Unreserved`           | `T::AccountId, Balance`                                                                     | `who: T::AccountId, amount: T::Balance`                                                           |
+
+#### Errors
+
+| Status  | Name                      |
+| ------- | ------------------------- |
+| Added   | `DeadAccount`             |
+| Added   | `DeltaZero`               |
+| Added   | `ExistingVestingSchedule` |
+| Added   | `Expendability`           |
+| Added   | `IssuanceDeactivated`     |
+| Added   | `LockIdentifierNotFound`  |
+| Added   | `MaxLocksExceeded`        |
+| Added   | `TooManyFreezes`          |
+| Added   | `TooManyHolds`            |
+| Added   | `TooManyReserves`         |
+| Added   | `VestingBalance`          |
+| Removed | `ReceiverCddMissing`      |
+
+#### Storage
+
+| Status   | Name               | v7.4                                                                                         | v8.0                                                                                                                |
+| -------- | ------------------ | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Added    | `Account`          | _(none)_                                                                                     | `Map (Default) — hashers: Blake2_128Concat, key: AccountId32, value: AccountData<U128>`                             |
+| Added    | `Freezes`          | _(none)_                                                                                     | `Map (Default) — hashers: Blake2_128Concat, key: AccountId32, value: BoundedVec<IdAmount<[U8; 8], U128>>`           |
+| Added    | `Holds`            | _(none)_                                                                                     | `Map (Default) — hashers: Blake2_128Concat, key: AccountId32, value: BoundedVec<IdAmount<RuntimeHoldReason, U128>>` |
+| Added    | `InactiveIssuance` | _(none)_                                                                                     | `Plain (Default) — U128`                                                                                            |
+| Added    | `Reserves`         | _(none)_                                                                                     | `Map (Default) — hashers: Blake2_128Concat, key: AccountId32, value: BoundedVec<ReserveData<[U8; 8], U128>>`        |
+| Modified | `Locks`            | `Map (Default) — hashers: Blake2_128Concat, key: AccountId32, value: Vec<BalanceLock<U128>>` | `Map (Default) — hashers: Blake2_128Concat, key: AccountId32, value: WeakBoundedVec<BalanceLock<U128>>`             |
+
+#### Constants
+
+| Status | Name          | v7.4     | v8.0       |
+| ------ | ------------- | -------- | ---------- |
+| Added  | `MaxFreezes`  | _(none)_ | `U32 = 0`  |
+| Added  | `MaxLocks`    | _(none)_ | `U32 = 50` |
+| Added  | `MaxReserves` | _(none)_ | `U32 = 50` |
+
+### Base
+
+#### Events
+
+| Status  | Name              | v7.4                    | v8.0     |
+| ------- | ----------------- | ----------------------- | -------- |
+| Removed | `UnexpectedError` | `Option<DispatchError>` | _(none)_ |
+
+### CommitteeMembership
+
+#### Events
+
+| Status  | Name    | v7.4     | v8.0     |
+| ------- | ------- | -------- | -------- |
+| Removed | `Dummy` | _(none)_ | _(none)_ |
+
+### Contracts
+
+#### Calls
+
+| Status   | Name                               | v7.4                                                                                                                                                                        | v8.0                                                                                                                                                                        |
+| -------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Added    | `migrate`                          | _(none)_                                                                                                                                                                    | `weight_limit: Weight`                                                                                                                                                      |
+| Modified | `call_old_weight`                  | `dest: AccountIdLookupOf<T>, value: BalanceOf<T>, gas_limit: OldWeight, storage_deposit_limit: Option<<BalanceOf<T> as codec::HasCompact>::Type>, data: Vec<u8>`            | `dest: AccountIdLookupOf<T>, value: BalanceOf<T>, gas_limit: OldWeight, storage_deposit_limit: Option<<BalanceOf<T> as codec::HasCompact>::Type>, data: Vec<u8>`            |
+| Modified | `instantiate_old_weight`           | `value: BalanceOf<T>, gas_limit: OldWeight, storage_deposit_limit: Option<<BalanceOf<T> as codec::HasCompact>::Type>, code_hash: CodeHash<T>, data: Vec<u8>, salt: Vec<u8>` | `value: BalanceOf<T>, gas_limit: OldWeight, storage_deposit_limit: Option<<BalanceOf<T> as codec::HasCompact>::Type>, code_hash: CodeHash<T>, data: Vec<u8>, salt: Vec<u8>` |
+| Modified | `instantiate_with_code_old_weight` | `value: BalanceOf<T>, gas_limit: OldWeight, storage_deposit_limit: Option<<BalanceOf<T> as codec::HasCompact>::Type>, code: Vec<u8>, data: Vec<u8>, salt: Vec<u8>`          | `value: BalanceOf<T>, gas_limit: OldWeight, storage_deposit_limit: Option<<BalanceOf<T> as codec::HasCompact>::Type>, code: Vec<u8>, data: Vec<u8>, salt: Vec<u8>`          |
+
+#### Events
+
+| Status   | Name                                   | v7.4                                           | v8.0                                                                        |
+| -------- | -------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------- |
+| Added    | `StorageDepositTransferredAndHeld`     | _(none)_                                       | `from: T::AccountId, to: T::AccountId, amount: BalanceOf<T>`                |
+| Added    | `StorageDepositTransferredAndReleased` | _(none)_                                       | `from: T::AccountId, to: T::AccountId, amount: BalanceOf<T>`                |
+| Modified | `Called`                               | `caller: T::AccountId, contract: T::AccountId` | `caller: Origin<T>, contract: T::AccountId`                                 |
+| Modified | `CodeRemoved`                          | `code_hash: T::Hash`                           | `code_hash: T::Hash, deposit_released: BalanceOf<T>, remover: T::AccountId` |
+| Modified | `CodeStored`                           | `code_hash: T::Hash`                           | `code_hash: T::Hash, deposit_held: BalanceOf<T>, uploader: T::AccountId`    |
+
+#### Errors
+
+| Status  | Name                                |
+| ------- | ----------------------------------- |
+| Added   | `CannotAddSelfAsDelegateDependency` |
+| Added   | `CodeInfoNotFound`                  |
+| Added   | `DelegateDependencyAlreadyExists`   |
+| Added   | `DelegateDependencyNotFound`        |
+| Added   | `InvalidSchedule`                   |
+| Added   | `MaxDelegateDependenciesReached`    |
+| Added   | `MigrationInProgress`               |
+| Added   | `NoMigrationPerformed`              |
+| Added   | `OutOfTransientStorage`             |
+| Added   | `StateChangeDenied`                 |
+| Added   | `XCMDecodeFailed`                   |
+| Removed | `DeletionQueueFull`                 |
+| Removed | `InvalidScheduleVersion`            |
+
+#### Storage
+
+| Status   | Name                   | v7.4                                                                     | v8.0                                                                      |
+| -------- | ---------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
+| Added    | `CodeInfoOf`           | _(none)_                                                                 | `Map (Optional) — hashers: Identity, key: H256, value: CodeInfo`          |
+| Added    | `DeletionQueueCounter` | _(none)_                                                                 | `Plain (Default) — DeletionQueueManager`                                  |
+| Added    | `MigrationInProgress`  | _(none)_                                                                 | `Plain (Optional) — BoundedVec<U8>`                                       |
+| Removed  | `CodeStorage`          | `Map (Optional) — hashers: Identity, key: H256, value: PrefabWasmModule` | _(none)_                                                                  |
+| Removed  | `OwnerInfoOf`          | `Map (Optional) — hashers: Identity, key: H256, value: OwnerInfo`        | _(none)_                                                                  |
+| Modified | `DeletionQueue`        | `Plain (Default) — BoundedVec<DeletedContract>`                          | `Map (Optional) — hashers: Twox64Concat, key: U32, value: BoundedVec<U8>` |
+
+#### Constants
+
+| Status  | Name                           | v7.4                        | v8.0                  |
+| ------- | ------------------------------ | --------------------------- | --------------------- |
+| Added   | `ApiVersion`                   | _(none)_                    | `ApiVersion = 0x0400` |
+| Added   | `CodeHashLockupDepositPercent` | _(none)_                    | `Perbill = 30%`       |
+| Added   | `DefaultDepositLimit`          | _(none)_                    | `U128 = 63068160000`  |
+| Added   | `Environment`                  | _(none)_                    | `Environment = 0x`    |
+| Added   | `MaxDelegateDependencies`      | _(none)_                    | `U32 = 32`            |
+| Added   | `MaxTransientStorageSize`      | _(none)_                    | `U32 = 1048576`       |
+| Removed | `DeletionQueueDepth`           | `U32 = 1024`                | _(none)_              |
+| Removed | `DeletionWeightLimit`          | `Weight = 0x070088526a7400` | _(none)_              |
+
+### ElectionProviderMultiPhase
+
+#### Calls
+
+| Status   | Name                  | v7.4                                                            | v8.0     |
+| -------- | --------------------- | --------------------------------------------------------------- | -------- |
+| Modified | `governance_fallback` | `maybe_max_voters: Option<u32>, maybe_max_targets: Option<u32>` | _(none)_ |
+
+#### Errors
+
+| Status | Name                        |
+| ------ | --------------------------- |
+| Added  | `PreDispatchDifferentRound` |
+
+#### Storage
+
+| Status   | Name       | v7.4                               | v8.0                                                                                         |
+| -------- | ---------- | ---------------------------------- | -------------------------------------------------------------------------------------------- |
+| Modified | `Snapshot` | `Plain (Optional) — RoundSnapshot` | `Plain (Optional) — RoundSnapshot<AccountId32, (AccountId32, U64, BoundedVec<AccountId32>)>` |
+
+#### Constants
+
+| Status  | Name                      | v7.4              | v8.0          |
+| ------- | ------------------------- | ----------------- | ------------- |
+| Added   | `MaxBackersPerWinner`     | _(none)_          | `U32 = 40000` |
+| Added   | `MinerMaxWinners`         | _(none)_          | `U32 = 1000`  |
+| Removed | `BetterUnsignedThreshold` | `Perbill = 0.01%` | _(none)_      |
+| Removed | `MaxElectableTargets`     | `U16 = 10000`     | _(none)_      |
+| Removed | `MaxElectingVoters`       | `U32 = 40000`     | _(none)_      |
+| Removed | `SignedDepositBase`       | `U128 = 0`        | _(none)_      |
+| Removed | `SignedPhase`             | `U32 = 0`         | _(none)_      |
+| Removed | `UnsignedPhase`           | `U32 = 150`       | _(none)_      |
+
+### Grandpa
+
+#### Storage
+
+| Status | Name          | v7.4     | v8.0                                              |
+| ------ | ------------- | -------- | ------------------------------------------------- |
+| Added  | `Authorities` | _(none)_ | `Plain (Default) — WeakBoundedVec<(Public, U64)>` |
+
+#### Constants
+
+| Status | Name            | v7.4     | v8.0         |
+| ------ | --------------- | -------- | ------------ |
+| Added  | `MaxNominators` | _(none)_ | `U32 = 1024` |
+
+### Historical
+
+#### Events
+
+| Status | Name          | v7.4     | v8.0                  |
+| ------ | ------------- | -------- | --------------------- |
+| Added  | `RootStored`  | _(none)_ | `index: SessionIndex` |
+| Added  | `RootsPruned` | _(none)_ | `up_to: SessionIndex` |
+
+#### Storage
+
+| Status | Name                 | v7.4     | v8.0                                                                   |
+| ------ | -------------------- | -------- | ---------------------------------------------------------------------- |
+| Added  | `HistoricalSessions` | _(none)_ | `Map (Optional) — hashers: Twox64Concat, key: U32, value: (H256, U32)` |
+| Added  | `StoredRange`        | _(none)_ | `Plain (Optional) — (U32, U32)`                                        |
+
+### Identity
+
+#### Calls
+
+| Status   | Name                                     | v7.4                                                                                | v8.0                           |
+| -------- | ---------------------------------------- | ----------------------------------------------------------------------------------- | ------------------------------ |
+| Added    | `register_did`                           | _(none)_                                                                            | `target_account: T::AccountId` |
+| Added    | `self_register_did`                      | _(none)_                                                                            | _(none)_                       |
+| Removed  | `change_cdd_requirement_for_mk_rotation` | `auth_required: bool`                                                               | _(none)_                       |
+| Removed  | `create_child_identities`                | `child_keys: Vec<CreateChildIdentityWithAuth<T::AccountId>>, expires_at: T::Moment` | _(none)_                       |
+| Removed  | `create_child_identity`                  | `secondary_key: T::AccountId`                                                       | _(none)_                       |
+| Removed  | `invalidate_cdd_claims`                  | `cdd: IdentityId, disable_from: T::Moment, expiry: Option<T::Moment>`               | _(none)_                       |
+| Removed  | `unlink_child_identity`                  | `child_did: IdentityId`                                                             | _(none)_                       |
+| Modified | `accept_primary_key`                     | `rotation_auth_id: u64, optional_cdd_auth_id: Option<u64>`                          | `rotation_auth_id: u64`        |
+| Modified | `rotate_primary_key_to_secondary`        | `auth_id: u64, optional_cdd_auth_id: Option<u64>`                                   | `auth_id: u64`                 |
+
+#### Events
+
+| Status  | Name                                 | v7.4                                   | v8.0     |
+| ------- | ------------------------------------ | -------------------------------------- | -------- |
+| Removed | `AssetDidRegistered`                 | `IdentityId, Ticker`                   | _(none)_ |
+| Removed | `CddClaimsInvalidated`               | `IdentityId, T::Moment`                | _(none)_ |
+| Removed | `CddRequirementForPrimaryKeyUpdated` | `bool`                                 | _(none)_ |
+| Removed | `ChildDidCreated`                    | `IdentityId, IdentityId, T::AccountId` | _(none)_ |
+| Removed | `ChildDidUnlinked`                   | `IdentityId, IdentityId, IdentityId`   | _(none)_ |
+
+#### Errors
+
+| Status  | Name                                         |
+| ------- | -------------------------------------------- |
+| Added   | `IdentityNotFoundForAccountPortfolio`        |
+| Added   | `InvalidAuthorizationFromDidRegistrar`       |
+| Added   | `NotDidRegistrarAttestation`                 |
+| Added   | `TargetDidInactive`                          |
+| Added   | `UnAuthorizedDidRegistrar`                   |
+| Added   | `UnauthorizedCallerDidInactive`              |
+| Removed | `AccountBasedPortfoliosCannotHaveCustodians` |
+| Removed | `InvalidAuthorizationFromCddProvider`        |
+| Removed | `IsChildIdentity`                            |
+| Removed | `NoParentIdentity`                           |
+| Removed | `NotCddProviderAttestation`                  |
+| Removed | `NotParentOrChildIdentity`                   |
+| Removed | `TargetHasNoCdd`                             |
+| Removed | `UnAuthorizedCddProvider`                    |
+| Removed | `UnauthorizedCallerDidMissingCdd`            |
+
+#### Storage
+
+| Status  | Name                           | v7.4                                                                                                 | v8.0     |
+| ------- | ------------------------------ | ---------------------------------------------------------------------------------------------------- | -------- |
+| Removed | `CddAuthForPrimaryKeyRotation` | `Plain (Default) — Bool`                                                                             | _(none)_ |
+| Removed | `ChildDid`                     | `DoubleMap/NMap (Default) — hashers: Identity, Identity, key: (IdentityId, IdentityId), value: Bool` | _(none)_ |
+| Removed | `CurrentPayer`                 | `Plain (Optional) — AccountId32`                                                                     | _(none)_ |
+| Removed | `ParentDid`                    | `Map (Optional) — hashers: Identity, key: IdentityId, value: IdentityId`                             | _(none)_ |
+| Removed | `StorageVersion`               | `Plain (Default) — Version`                                                                          | _(none)_ |
+
+### ImOnline
+
+#### Storage
+
+| Status   | Name                 | v7.4                                                                                                                                | v8.0                                                                                            |
+| -------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Modified | `ReceivedHeartbeats` | `DoubleMap/NMap (Optional) — hashers: Twox64Concat, Twox64Concat, key: (U32, U32), value: WrapperOpaque<BoundedOpaqueNetworkState>` | `DoubleMap/NMap (Optional) — hashers: Twox64Concat, Twox64Concat, key: (U32, U32), value: Bool` |
+
+### Indices
+
+#### Calls
+
+| Status | Name           | v7.4     | v8.0                     |
+| ------ | -------------- | -------- | ------------------------ |
+| Added  | `poke_deposit` | _(none)_ | `index: T::AccountIndex` |
+
+#### Events
+
+| Status | Name           | v7.4     | v8.0                                                                                              |
+| ------ | -------------- | -------- | ------------------------------------------------------------------------------------------------- |
+| Added  | `DepositPoked` | _(none)_ | `who: T::AccountId, index: T::AccountIndex, old_deposit: BalanceOf<T>, new_deposit: BalanceOf<T>` |
+
+### MultiSig
+
+#### Errors
+
+| Status  | Name               |
+| ------- | ------------------ |
+| Removed | `ChangeNotAllowed` |
+
+### Nft
+
+#### Calls
+
+| Status   | Name                  | v7.4                                                                                                   | v8.0                                                                                                    |
+| -------- | --------------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| Added    | `transfer_nft`        | _(none)_                                                                                               | `nfts: NFTs, to: T::AccountId, memo: Option<Memo>`                                                      |
+| Modified | `controller_transfer` | `nfts: NFTs, source_portfolio: PortfolioId, callers_portfolio_kind: PortfolioKind`                     | `nfts: NFTs, source: AssetHolder, destination_kind: AssetHolderKind`                                    |
+| Modified | `issue_nft`           | `asset_id: AssetId, nft_metadata_attributes: Vec<NFTMetadataAttribute>, portfolio_kind: PortfolioKind` | `asset_id: AssetId, nft_metadata_attributes: Vec<NFTMetadataAttribute>, holdings_kind: AssetHolderKind` |
+| Modified | `redeem_nft`          | `asset_id: AssetId, nft_id: NFTId, portfolio_kind: PortfolioKind, number_of_keys: Option<u8>`          | `asset_id: AssetId, nft_id: NFTId, holdings_kind: AssetHolderKind, number_of_keys: Option<u8>`          |
+
+#### Events
+
+| Status  | Name                  | v7.4                                                                                | v8.0                                                                               |
+| ------- | --------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Added   | `NFTHoldingsUpdated`  | _(none)_                                                                            | `IdentityId, NFTs, Option<AssetHolder>, Option<AssetHolder>, HoldingsUpdateReason` |
+| Removed | `NFTPortfolioUpdated` | `IdentityId, NFTs, Option<PortfolioId>, Option<PortfolioId>, PortfolioUpdateReason` | _(none)_                                                                           |
+
+#### Errors
+
+| Status  | Name                                            |
+| ------- | ----------------------------------------------- |
+| Added   | `InvalidNFTTransferInvalidReceiverDID`          |
+| Added   | `InvalidNFTTransferSenderDidMatchesReceiverDid` |
+| Added   | `NFTIsNotLocked`                                |
+| Removed | `InvalidNFTTransferInvalidReceiverCDD`          |
+| Removed | `InvalidNFTTransferInvalidSenderCDD`            |
+| Removed | `InvalidNFTTransferSenderIdMatchesReceiverId`   |
+
+#### Storage
+
+| Status   | Name        | v7.4                                                                                                                              | v8.0                                                                                                                                              |
+| -------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Removed  | `NFTOwner`  | `DoubleMap/NMap (Optional) — hashers: Blake2_128Concat, Blake2_128Concat, key: (AssetId, NFTId), value: PortfolioId`              | _(none)_                                                                                                                                          |
+| Modified | `NFTHolder` | `DoubleMap/NMap (Default) — hashers: Twox64Concat, Blake2_128Concat, key: (AccountId32, (AssetId, NFTId)), value: NFTOwnerStatus` | `DoubleMap/NMap (Default) — hashers: Twox64Concat, Blake2_128Concat, Blake2_128Concat, key: (AccountId32, AssetId, NFTId), value: NFTOwnerStatus` |
+
+### Offences
+
+#### Storage
+
+| Status  | Name                 | v7.4                                                                   | v8.0     |
+| ------- | -------------------- | ---------------------------------------------------------------------- | -------- |
+| Removed | `ReportsByKindIndex` | `Map (Default) — hashers: Twox64Concat, key: [U8; 16], value: Vec<U8>` | _(none)_ |
+
+### Permissions
+
+#### Storage
+
+| Status | Name                      | v7.4     | v8.0                              |
+| ------ | ------------------------- | -------- | --------------------------------- |
+| Added  | `CurrentDispatchableName` | _(none)_ | `Plain (Default) — ExtrinsicName` |
+| Added  | `CurrentPalletName`       | _(none)_ | `Plain (Default) — PalletName`    |
+
+### Pips
+
+#### Calls
+
+| Status   | Name       | v7.4     | v8.0         |
+| -------- | ---------- | -------- | ------------ |
+| Modified | `snapshot` | _(none)_ | `limit: u32` |
+
+#### Errors
+
+| Status | Name                    |
+| ------ | ----------------------- |
+| Added  | `SnapshotLimitTooSmall` |
+
+### PolymeshContracts
+
+#### Calls
+
+| Status  | Name                                   | v7.4                                                                                                                                  | v8.0     |
+| ------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| Removed | `instantiate_with_code_as_primary_key` | `endowment: Balance, gas_limit: Weight, storage_deposit_limit: Option<Balance>, code: Vec<u8>, data: Vec<u8>, salt: Vec<u8>`          | _(none)_ |
+| Removed | `instantiate_with_hash_as_primary_key` | `endowment: Balance, gas_limit: Weight, storage_deposit_limit: Option<Balance>, code_hash: CodeHash<T>, data: Vec<u8>, salt: Vec<u8>` | _(none)_ |
+
+#### Errors
+
+| Status  | Name                         |
+| ------- | ---------------------------- |
+| Removed | `CallerNotAPrimaryKey`       |
+| Removed | `InstantiatorWithNoIdentity` |
+| Removed | `MissingKeyPermissions`      |
+
+### Portfolio
+
+#### Calls
+
+| Status   | Name               | v7.4                                           | v8.0                                                                   |
+| -------- | ------------------ | ---------------------------------------------- | ---------------------------------------------------------------------- |
+| Modified | `delete_portfolio` | `num: PortfolioNumber`                         | `portfolio_number: PortfolioNumber`                                    |
+| Modified | `rename_portfolio` | `num: PortfolioNumber, to_name: PortfolioName` | `portfolio_number: PortfolioNumber, new_portfolio_name: PortfolioName` |
+
+#### Errors
+
+| Status  | Name                                         |
+| ------- | -------------------------------------------- |
+| Removed | `AccountBasedPortfoliosCannotHaveCustodians` |
+| Removed | `InvalidTransferSenderIdMatchesReceiverId`   |
+
+#### Storage
+
+| Status   | Name             | v7.4                                                                                                                    | v8.0                                                                                                                                    |
+| -------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Removed  | `StorageVersion` | `Plain (Default) — Version`                                                                                             | _(none)_                                                                                                                                |
+| Modified | `PortfolioNFT`   | `DoubleMap/NMap (Default) — hashers: Twox64Concat, Blake2_128Concat, key: (PortfolioId, (AssetId, NFTId)), value: Bool` | `DoubleMap/NMap (Default) — hashers: Twox64Concat, Blake2_128Concat, Blake2_128Concat, key: (PortfolioId, AssetId, NFTId), value: Bool` |
+
+### Preimage
+
+#### Calls
+
+| Status | Name             | v7.4     | v8.0                   |
+| ------ | ---------------- | -------- | ---------------------- |
+| Added  | `ensure_updated` | _(none)_ | `hashes: Vec<T::Hash>` |
+
+#### Errors
+
+| Status | Name      |
+| ------ | --------- |
+| Added  | `TooFew`  |
+| Added  | `TooMany` |
+
+#### Storage
+
+| Status   | Name               | v7.4                                                                                     | v8.0                                                                                                  |
+| -------- | ------------------ | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Added    | `RequestStatusFor` | _(none)_                                                                                 | `Map (Optional) — hashers: Identity, key: H256, value: RequestStatus<AccountId32, HoldConsideration>` |
+| Modified | `StatusFor`        | `Map (Optional) — hashers: Identity, key: H256, value: RequestStatus<AccountId32, U128>` | `Map (Optional) — hashers: Identity, key: H256, value: OldRequestStatus<AccountId32, U128>`           |
+
+### Relayer
+
+#### Calls
+
+| Status  | Name                | v7.4                                               | v8.0                                                                                                                                  |
+| ------- | ------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Added   | `accept_subsidy`    | _(none)_                                           | `paying_key: T::AccountId`                                                                                                            |
+| Added   | `approve_subsidy`   | _(none)_                                           | `user_key: T::AccountId, polyx_limit: Balance`                                                                                        |
+| Added   | `relay_tx`          | _(none)_                                           | `target: T::AccountId, signature: T::OffChainSignature, call: Box<<T as pallet_utility::Config>::RuntimeCall>, expires_at: T::Moment` |
+| Added   | `remove_subsidy`    | _(none)_                                           | `user_key: T::AccountId, paying_key: T::AccountId`                                                                                    |
+| Added   | `revoke_subsidy`    | _(none)_                                           | `user_key: T::AccountId`                                                                                                              |
+| Removed | `accept_paying_key` | `auth_id: u64`                                     | _(none)_                                                                                                                              |
+| Removed | `remove_paying_key` | `user_key: T::AccountId, paying_key: T::AccountId` | _(none)_                                                                                                                              |
+| Removed | `set_paying_key`    | `user_key: T::AccountId, polyx_limit: Balance`     | _(none)_                                                                                                                              |
+
+#### Events
+
+| Status   | Name                    | v7.4                                                     | v8.0                                                                                           |
+| -------- | ----------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Added    | `AcceptedSubsidy`       | _(none)_                                                 | `user_key: T::AccountId, paying_key: T::AccountId, initial_polyx_limit: Balance`               |
+| Added    | `ApprovedSubsidy`       | _(none)_                                                 | `user_key: T::AccountId, paying_key: T::AccountId, initial_polyx_limit: Balance`               |
+| Added    | `RelayedTx`             | _(none)_                                                 | `caller: T::AccountId, target: T::AccountId, result: DispatchResult`                           |
+| Added    | `RemovedPendingSubsidy` | _(none)_                                                 | `user_key: T::AccountId, paying_key: T::AccountId, initial_polyx_limit: Balance`               |
+| Added    | `RemovedSubsidy`        | _(none)_                                                 | `user_key: T::AccountId, paying_key: T::AccountId, remaining: Balance`                         |
+| Added    | `SubsidyDebited`        | _(none)_                                                 | `user_key: T::AccountId, paying_key: T::AccountId, amount: Balance`                            |
+| Removed  | `AcceptedPayingKey`     | `EventDid, T::AccountId, T::AccountId`                   | _(none)_                                                                                       |
+| Removed  | `AuthorizedPayingKey`   | `EventDid, T::AccountId, T::AccountId, Balance, u64`     | _(none)_                                                                                       |
+| Removed  | `RemovedPayingKey`      | `EventDid, T::AccountId, T::AccountId`                   | _(none)_                                                                                       |
+| Modified | `UpdatedPolyxLimit`     | `EventDid, T::AccountId, T::AccountId, Balance, Balance` | `user_key: T::AccountId, paying_key: T::AccountId, remaining: Balance, old_remaining: Balance` |
+
+#### Errors
+
+| Status  | Name                        |
+| ------- | --------------------------- |
+| Added   | `ExpiredRelayTx`            |
+| Added   | `InvalidSignature`          |
+| Added   | `NoPendingSubsidy`          |
+| Added   | `NotAuthorized`             |
+| Removed | `BadAuthorizationType`      |
+| Removed | `IdentityNotFound`          |
+| Removed | `NotAuthorizedForPayingKey` |
+| Removed | `NotAuthorizedForUserKey`   |
+| Removed | `PayingKeyCddMissing`       |
+| Removed | `UserKeyCddMissing`         |
+
+#### Storage
+
+| Status | Name               | v7.4     | v8.0                                                                                                                    |
+| ------ | ------------------ | -------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Added  | `PendingSubsidies` | _(none)_ | `DoubleMap/NMap (Optional) — hashers: Blake2_128Concat, Blake2_128Concat, key: (AccountId32, AccountId32), value: U128` |
+| Added  | `RelayTxNonces`    | _(none)_ | `Map (Default) — hashers: Twox64Concat, key: AccountId32, value: U64`                                                   |
+
+### Scheduler
+
+#### Calls
+
+| Status | Name                 | v7.4     | v8.0                                                                           |
+| ------ | -------------------- | -------- | ------------------------------------------------------------------------------ |
+| Added  | `cancel_retry`       | _(none)_ | `task: TaskAddress<BlockNumberFor<T>>`                                         |
+| Added  | `cancel_retry_named` | _(none)_ | `id: TaskName`                                                                 |
+| Added  | `set_retry`          | _(none)_ | `task: TaskAddress<BlockNumberFor<T>>, retries: u8, period: BlockNumberFor<T>` |
+| Added  | `set_retry_named`    | _(none)_ | `id: TaskName, retries: u8, period: BlockNumberFor<T>`                         |
+
+#### Events
+
+| Status | Name               | v7.4     | v8.0                                                                                                 |
+| ------ | ------------------ | -------- | ---------------------------------------------------------------------------------------------------- |
+| Added  | `AgendaIncomplete` | _(none)_ | `when: BlockNumberFor<T>`                                                                            |
+| Added  | `RetryCancelled`   | _(none)_ | `task: TaskAddress<BlockNumberFor<T>>, id: Option<TaskName>`                                         |
+| Added  | `RetryFailed`      | _(none)_ | `task: TaskAddress<BlockNumberFor<T>>, id: Option<TaskName>`                                         |
+| Added  | `RetrySet`         | _(none)_ | `task: TaskAddress<BlockNumberFor<T>>, id: Option<TaskName>, period: BlockNumberFor<T>, retries: u8` |
+
+#### Storage
+
+| Status   | Name      | v7.4                                                                                                                                                    | v8.0                                                                                                                                                                 |
+| -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Added    | `Retries` | _(none)_                                                                                                                                                | `Map (Optional) — hashers: Blake2_128Concat, key: (U32, U32), value: RetryConfig<U32>`                                                                               |
+| Modified | `Agenda`  | `Map (Default) — hashers: Twox64Concat, key: U32, value: BoundedVec<Option<Scheduled<[U8; 32], Bounded<RuntimeCall>, U32, OriginCaller, AccountId32>>>` | `Map (Default) — hashers: Twox64Concat, key: U32, value: BoundedVec<Option<Scheduled<[U8; 32], Bounded<RuntimeCall, BlakeTwo256>, U32, OriginCaller, AccountId32>>>` |
+
+### Session
+
+#### Events
+
+| Status | Name                 | v7.4     | v8.0                        |
+| ------ | -------------------- | -------- | --------------------------- |
+| Added  | `NewQueued`          | _(none)_ | _(none)_                    |
+| Added  | `ValidatorDisabled`  | _(none)_ | `validator: T::ValidatorId` |
+| Added  | `ValidatorReenabled` | _(none)_ | `validator: T::ValidatorId` |
+
+#### Storage
+
+| Status   | Name                 | v7.4                         | v8.0                                                                  |
+| -------- | -------------------- | ---------------------------- | --------------------------------------------------------------------- |
+| Added    | `ExternallySetKeys`  | _(none)_                     | `Map (Optional) — hashers: Twox64Concat, key: AccountId32, value: ()` |
+| Modified | `DisabledValidators` | `Plain (Default) — Vec<U32>` | `Plain (Default) — Vec<(U32, OffenceSeverity)>`                       |
+
+#### Constants
+
+| Status | Name         | v7.4     | v8.0       |
+| ------ | ------------ | -------- | ---------- |
+| Added  | `KeyDeposit` | _(none)_ | `U128 = 0` |
+
+### Settlement
+
+#### Calls
+
+| Status   | Name                                 | v7.4                                                                                                                                                                                                                                                                                                                               | v8.0                                                                                                                                                                                                                                                                                                                                    |
+| -------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Added    | `set_mandatory_receiver_affirmation` | _(none)_                                                                                                                                                                                                                                                                                                                           | `requirement: AffirmationRequirement`                                                                                                                                                                                                                                                                                                   |
+| Added    | `transfer_funds`                     | _(none)_                                                                                                                                                                                                                                                                                                                           | `from: Option<AssetHolder>, to: AssetHolder, fund: Fund`                                                                                                                                                                                                                                                                                |
+| Added    | `unlock_instruction`                 | _(none)_                                                                                                                                                                                                                                                                                                                           | `inst_id: InstructionId`                                                                                                                                                                                                                                                                                                                |
+| Removed  | `withdraw_affirmation`               | `id: InstructionId, portfolios: BoundedBTreeSet<PortfolioId, T::MaxNumberOfPortfolios>`                                                                                                                                                                                                                                            | _(none)_                                                                                                                                                                                                                                                                                                                                |
+| Removed  | `withdraw_affirmation_as_mediator`   | `instruction_id: InstructionId`                                                                                                                                                                                                                                                                                                    | _(none)_                                                                                                                                                                                                                                                                                                                                |
+| Removed  | `withdraw_affirmation_with_count`    | `id: InstructionId, portfolios: BoundedBTreeSet<PortfolioId, T::MaxNumberOfPortfolios>, number_of_assets: Option<AffirmationCount>`                                                                                                                                                                                                | _(none)_                                                                                                                                                                                                                                                                                                                                |
+| Modified | `add_and_affirm_instruction`         | `venue_id: Option<VenueId>, settlement_type: SettlementType<T::BlockNumber>, trade_date: Option<T::Moment>, value_date: Option<T::Moment>, legs: Vec<Leg>, portfolios: BoundedBTreeSet<PortfolioId, T::MaxNumberOfPortfolios>, instruction_memo: Option<Memo>`                                                                     | `venue_id: Option<VenueId>, settlement_type: SettlementType<BlockNumberFor<T>>, trade_date: Option<T::Moment>, value_date: Option<T::Moment>, legs: Vec<Leg>, holder_set: BoundedBTreeSet<AssetHolder, T::MaxNumberOfAssetHolders>, instruction_memo: Option<Memo>`                                                                     |
+| Modified | `add_and_affirm_with_mediators`      | `venue_id: Option<VenueId>, settlement_type: SettlementType<T::BlockNumber>, trade_date: Option<T::Moment>, value_date: Option<T::Moment>, legs: Vec<Leg>, portfolios: BoundedBTreeSet<PortfolioId, T::MaxNumberOfPortfolios>, instruction_memo: Option<Memo>, mediators: BoundedBTreeSet<IdentityId, T::MaxInstructionMediators>` | `venue_id: Option<VenueId>, settlement_type: SettlementType<BlockNumberFor<T>>, trade_date: Option<T::Moment>, value_date: Option<T::Moment>, legs: Vec<Leg>, holder_set: BoundedBTreeSet<AssetHolder, T::MaxNumberOfAssetHolders>, instruction_memo: Option<Memo>, mediators: BoundedBTreeSet<IdentityId, T::MaxInstructionMediators>` |
+| Modified | `affirm_instruction`                 | `id: InstructionId, portfolios: BoundedBTreeSet<PortfolioId, T::MaxNumberOfPortfolios>`                                                                                                                                                                                                                                            | `id: InstructionId, holder_set: BoundedBTreeSet<AssetHolder, T::MaxNumberOfAssetHolders>`                                                                                                                                                                                                                                               |
+| Modified | `affirm_instruction_with_count`      | `id: InstructionId, portfolios: BoundedBTreeSet<PortfolioId, T::MaxNumberOfPortfolios>, number_of_assets: Option<AffirmationCount>`                                                                                                                                                                                                | `id: InstructionId, holder_set: BoundedBTreeSet<AssetHolder, T::MaxNumberOfAssetHolders>, number_of_assets: Option<AffirmationCount>`                                                                                                                                                                                                   |
+| Modified | `affirm_with_receipts`               | `id: InstructionId, receipt_details: Vec<ReceiptDetails<T::AccountId, T::OffChainSignature>>, portfolios: BoundedBTreeSet<PortfolioId, T::MaxNumberOfPortfolios>`                                                                                                                                                                  | `id: InstructionId, receipt_details: Vec<ReceiptDetails<T::AccountId, T::OffChainSignature, T::Moment>>, holder_set: BoundedBTreeSet<AssetHolder, T::MaxNumberOfAssetHolders>`                                                                                                                                                          |
+| Modified | `affirm_with_receipts_with_count`    | `id: InstructionId, receipt_details: Vec<ReceiptDetails<T::AccountId, T::OffChainSignature>>, portfolios: BoundedBTreeSet<PortfolioId, T::MaxNumberOfPortfolios>, number_of_assets: Option<AffirmationCount>`                                                                                                                      | `id: InstructionId, receipt_details: Vec<ReceiptDetails<T::AccountId, T::OffChainSignature, T::Moment>>, holder_set: BoundedBTreeSet<AssetHolder, T::MaxNumberOfAssetHolders>, number_of_assets: Option<AffirmationCount>`                                                                                                              |
+| Modified | `create_venue`                       | `details: VenueDetails, signers: Vec<T::AccountId>, typ: VenueType`                                                                                                                                                                                                                                                                | `details: VenueDetails, signers: BTreeSet<T::AccountId>, typ: VenueType`                                                                                                                                                                                                                                                                |
+| Modified | `execute_manual_instruction`         | `id: InstructionId, portfolio: Option<PortfolioId>, fungible_transfers: u32, nfts_transfers: u32, offchain_transfers: u32, weight_limit: Option<Weight>`                                                                                                                                                                           | `id: InstructionId, asset_holder: Option<AssetHolder>, fungible_transfers: u32, nfts_transfers: u32, offchain_transfers: u32, weight_limit: Option<Weight>`                                                                                                                                                                             |
+| Modified | `reject_instruction`                 | `id: InstructionId, portfolio: PortfolioId`                                                                                                                                                                                                                                                                                        | `id: InstructionId, asset_holder: AssetHolder`                                                                                                                                                                                                                                                                                          |
+| Modified | `reject_instruction_with_count`      | `id: InstructionId, portfolio: PortfolioId, number_of_assets: Option<AssetCount>`                                                                                                                                                                                                                                                  | `id: InstructionId, asset_holder: AssetHolder, number_of_assets: Option<AssetCount>`                                                                                                                                                                                                                                                    |
+| Modified | `update_venue_signers`               | `id: VenueId, signers: Vec<T::AccountId>, add_signers: bool`                                                                                                                                                                                                                                                                       | `id: VenueId, signers: BTreeSet<T::AccountId>, add_signers: bool`                                                                                                                                                                                                                                                                       |
+
+#### Events
+
+| Status   | Name                               | v7.4                                           | v8.0                                                |
+| -------- | ---------------------------------- | ---------------------------------------------- | --------------------------------------------------- |
+| Added    | `FundsTransferred`                 | _(none)_                                       | `IdentityId, AssetHolder, AssetHolder, Fund`        |
+| Added    | `InstructionUnlocked`              | _(none)_                                       | `IdentityId, InstructionId`                         |
+| Added    | `MandatoryReceiverAffirmationSet`  | _(none)_                                       | `IdentityId, AffirmationRequirement`                |
+| Removed  | `InstructionRescheduled`           | `IdentityId, InstructionId`                    | _(none)_                                            |
+| Removed  | `SchedulingFailed`                 | `InstructionId, DispatchError`                 | _(none)_                                            |
+| Modified | `AffirmationWithdrawn`             | `IdentityId, PortfolioId, InstructionId`       | `IdentityId, AssetHolder, InstructionId`            |
+| Modified | `InstructionAffirmed`              | `IdentityId, PortfolioId, InstructionId`       | `IdentityId, AssetHolder, InstructionId`            |
+| Modified | `InstructionAutomaticallyAffirmed` | `IdentityId, PortfolioId, InstructionId`       | `IdentityId, AssetHolder, InstructionId`            |
+| Modified | `VenueSignersUpdated`              | `IdentityId, VenueId, Vec<T::AccountId>, bool` | `IdentityId, VenueId, BTreeSet<T::AccountId>, bool` |
+
+#### Errors
+
+| Status | Name                            |
+| ------ | ------------------------------- |
+| Added  | `AllowancesNotSupportedForNFTs` |
+| Added  | `InstructionAlreadyLocked`      |
+| Added  | `InstructionNotLocked`          |
+| Added  | `MaxRelockCountExceeded`        |
+| Added  | `MissingInstructionMediators`   |
+| Added  | `ReceiptExpired`                |
+| Added  | `RelockCooldownNotExpired`      |
+| Added  | `SenderSameAsReceiver`          |
+
+#### Storage
+
+| Status   | Name                           | v7.4                                                                                                                          | v8.0                                                                                                                          |
+| -------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Added    | `InstructionRelockCount`       | _(none)_                                                                                                                      | `Map (Default) — hashers: Twox64Concat, key: InstructionId, value: U32`                                                       |
+| Added    | `MandatoryReceiverAffirmation` | _(none)_                                                                                                                      | `Map (Default) — hashers: Identity, key: IdentityId, value: Bool`                                                             |
+| Added    | `UnlockedTimestamp`            | _(none)_                                                                                                                      | `Map (Optional) — hashers: Twox64Concat, key: InstructionId, value: U64`                                                      |
+| Removed  | `StorageVersion`               | `Plain (Default) — Version`                                                                                                   | _(none)_                                                                                                                      |
+| Modified | `AffirmsReceived`              | `DoubleMap/NMap (Default) — hashers: Twox64Concat, Twox64Concat, key: (InstructionId, PortfolioId), value: AffirmationStatus` | `DoubleMap/NMap (Default) — hashers: Twox64Concat, Twox64Concat, key: (InstructionId, AssetHolder), value: AffirmationStatus` |
+| Modified | `UserAffirmations`             | `DoubleMap/NMap (Default) — hashers: Twox64Concat, Twox64Concat, key: (PortfolioId, InstructionId), value: AffirmationStatus` | `DoubleMap/NMap (Default) — hashers: Twox64Concat, Twox64Concat, key: (AssetHolder, InstructionId), value: AffirmationStatus` |
+
+#### Constants
+
+| Status  | Name                      | v7.4        | v8.0             |
+| ------- | ------------------------- | ----------- | ---------------- |
+| Added   | `MaxNumberOfAssetHolders` | _(none)_    | `U32 = 220`      |
+| Added   | `MaxRelockCount`          | _(none)_    | `U32 = 3`        |
+| Added   | `RelockCooldown`          | _(none)_    | `U64 = 14400000` |
+| Removed | `MaxNumberOfPortfolios`   | `U32 = 220` | _(none)_         |
+
+### Staking
+
+#### Calls
+
+| Status   | Name                                           | v7.4                                                                                                                                                                                                                                    | v8.0                                                                                                                                                                                                                                                                           |
+| -------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Added    | `deprecate_controller_batch`                   | _(none)_                                                                                                                                                                                                                                | `controllers: BoundedVec<T::AccountId, T::MaxControllersInDeprecationBatch>`                                                                                                                                                                                                   |
+| Added    | `manual_slash`                                 | _(none)_                                                                                                                                                                                                                                | `validator_stash: T::AccountId, era: EraIndex, slash_fraction: Perbill`                                                                                                                                                                                                        |
+| Added    | `migrate_currency`                             | _(none)_                                                                                                                                                                                                                                | `stash: T::AccountId`                                                                                                                                                                                                                                                          |
+| Added    | `payout_stakers_by_page`                       | _(none)_                                                                                                                                                                                                                                | `validator_stash: T::AccountId, era: EraIndex, page: Page`                                                                                                                                                                                                                     |
+| Added    | `restore_ledger`                               | _(none)_                                                                                                                                                                                                                                | `stash: T::AccountId, maybe_controller: Option<T::AccountId>, maybe_total: Option<BalanceOf<T>>, maybe_unlocking: Option<BoundedVec<UnlockChunk<BalanceOf<T>>, T:: MaxUnlockingChunks>>`                                                                                       |
+| Added    | `update_payee`                                 | _(none)_                                                                                                                                                                                                                                | `controller: T::AccountId`                                                                                                                                                                                                                                                     |
+| Removed  | `add_permissioned_validator`                   | `identity: IdentityId, intended_count: Option<u32>`                                                                                                                                                                                     | _(none)_                                                                                                                                                                                                                                                                       |
+| Removed  | `change_slashing_allowed_for`                  | `slashing_switch: SlashingSwitch`                                                                                                                                                                                                       | _(none)_                                                                                                                                                                                                                                                                       |
+| Removed  | `chill_from_governance`                        | `identity: IdentityId, stash_keys: Vec<T::AccountId>`                                                                                                                                                                                   | _(none)_                                                                                                                                                                                                                                                                       |
+| Removed  | `payout_stakers_by_system`                     | `validator_stash: T::AccountId, era: EraIndex`                                                                                                                                                                                          | _(none)_                                                                                                                                                                                                                                                                       |
+| Removed  | `remove_permissioned_validator`                | `identity: IdentityId`                                                                                                                                                                                                                  | _(none)_                                                                                                                                                                                                                                                                       |
+| Removed  | `set_commission_cap`                           | `new_cap: Perbill`                                                                                                                                                                                                                      | _(none)_                                                                                                                                                                                                                                                                       |
+| Removed  | `update_permissioned_validator_intended_count` | `identity: IdentityId, new_intended_count: u32`                                                                                                                                                                                         | _(none)_                                                                                                                                                                                                                                                                       |
+| Modified | `bond`                                         | `controller: AccountIdLookupOf<T>, value: BalanceOf<T>, payee: RewardDestination<T::AccountId>`                                                                                                                                         | `value: BalanceOf<T>, payee: RewardDestination<T::AccountId>`                                                                                                                                                                                                                  |
+| Modified | `chill_other`                                  | `controller: T::AccountId`                                                                                                                                                                                                              | `stash: T::AccountId`                                                                                                                                                                                                                                                          |
+| Modified | `set_controller`                               | `controller: AccountIdLookupOf<T>`                                                                                                                                                                                                      | _(none)_                                                                                                                                                                                                                                                                       |
+| Modified | `set_staking_configs`                          | `min_nominator_bond: ConfigOp<BalanceOf<T>>, min_validator_bond: ConfigOp<BalanceOf<T>>, max_nominator_count: ConfigOp<u32>, max_validator_count: ConfigOp<u32>, chill_threshold: ConfigOp<Percent>, min_commission: ConfigOp<Perbill>` | `min_nominator_bond: ConfigOp<BalanceOf<T>>, min_validator_bond: ConfigOp<BalanceOf<T>>, max_nominator_count: ConfigOp<u32>, max_validator_count: ConfigOp<u32>, chill_threshold: ConfigOp<Percent>, min_commission: ConfigOp<Perbill>, max_staked_rewards: ConfigOp<Percent>` |
+
+#### Events
+
+| Status   | Name                                 | v7.4                                                                                                                  | v8.0                                                                                 |
+| -------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Added    | `ControllerBatchDeprecated`          | _(none)_                                                                                                              | `failures: u32`                                                                      |
+| Added    | `CurrencyMigrated`                   | _(none)_                                                                                                              | `stash: T::AccountId, force_withdraw: BalanceOf<T>`                                  |
+| Added    | `SnapshotTargetsSizeExceeded`        | _(none)_                                                                                                              | `size: u32`                                                                          |
+| Added    | `SnapshotVotersSizeExceeded`         | _(none)_                                                                                                              | `size: u32`                                                                          |
+| Removed  | `CommissionCapUpdated`               | `governance_councill_did: IdentityId, old_commission_cap: Perbill, new_commission_cap: Perbill`                       | _(none)_                                                                             |
+| Removed  | `InvalidatedNominators`              | `governance_councill_did: IdentityId, governance_councill_account: IdentityId, expired_nominators: Vec<T::AccountId>` | _(none)_                                                                             |
+| Removed  | `Nominated`                          | `nominator_identity: IdentityId, stash: T::AccountId, targets: Vec<T::AccountId>`                                     | _(none)_                                                                             |
+| Removed  | `PermissionedIdentityAdded`          | `governance_councill_did: IdentityId, validators_identity: IdentityId`                                                | _(none)_                                                                             |
+| Removed  | `PermissionedIdentityRemoved`        | `governance_councill_did: IdentityId, validators_identity: IdentityId`                                                | _(none)_                                                                             |
+| Removed  | `RewardPaymentSchedulingInterrupted` | `account_id: T::AccountId, era: EraIndex, error: DispatchError`                                                       | _(none)_                                                                             |
+| Removed  | `SlashingAllowedForChanged`          | `slashing_switch: SlashingSwitch`                                                                                     | _(none)_                                                                             |
+| Modified | `Bonded`                             | `identity: IdentityId, stash: T::AccountId, amount: BalanceOf<T>`                                                     | `stash: T::AccountId, amount: BalanceOf<T>`                                          |
+| Modified | `PayoutStarted`                      | `era_index: EraIndex, validator_stash: T::AccountId`                                                                  | `era_index: EraIndex, validator_stash: T::AccountId, page: Page, next: Option<Page>` |
+| Modified | `Rewarded`                           | `identity: IdentityId, stash: T::AccountId, amount: BalanceOf<T>`                                                     | `stash: T::AccountId, dest: RewardDestination<T::AccountId>, amount: BalanceOf<T>`   |
+| Modified | `Unbonded`                           | `identity: IdentityId, stash: T::AccountId, amount: BalanceOf<T>`                                                     | `stash: T::AccountId, amount: BalanceOf<T>`                                          |
+
+#### Errors
+
+| Status  | Name                                     |
+| ------- | ---------------------------------------- |
+| Added   | `AlreadyMigrated`                        |
+| Added   | `CannotReapStash`                        |
+| Added   | `CannotRestoreLedger`                    |
+| Added   | `ControllerDeprecated`                   |
+| Added   | `InvalidPage`                            |
+| Added   | `NotEnoughFunds`                         |
+| Added   | `Restricted`                             |
+| Added   | `RewardDestinationRestricted`            |
+| Added   | `VirtualStakerNotAllowed`                |
+| Removed | `CommissionTooHigh`                      |
+| Removed | `CommissionUnchanged`                    |
+| Removed | `IdentityIsAlreadyPermissioned`          |
+| Removed | `IdentityIsMissingCDD`                   |
+| Removed | `IdentityNotFound`                       |
+| Removed | `IntendedCountIsExceedingConsensusLimit` |
+| Removed | `StashIdentityDoesNotExist`              |
+| Removed | `StashIdentityNotCDDed`                  |
+| Removed | `StashIdentityNotPermissioned`           |
+| Removed | `ValidatorNotFound`                      |
+
+#### Storage
+
+| Status   | Name                       | v7.4                                                                                             | v8.0                                                                                                                                                  |
+| -------- | -------------------------- | ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Added    | `ClaimedRewards`           | _(none)_                                                                                         | `DoubleMap/NMap (Default) — hashers: Twox64Concat, Twox64Concat, key: (U32, AccountId32), value: Vec<U32>`                                            |
+| Added    | `CounterForVirtualStakers` | _(none)_                                                                                         | `Plain (Default) — U32`                                                                                                                               |
+| Added    | `ErasStakersOverview`      | _(none)_                                                                                         | `DoubleMap/NMap (Optional) — hashers: Twox64Concat, Twox64Concat, key: (U32, AccountId32), value: PagedExposureMetadata<U128>`                        |
+| Added    | `ErasStakersPaged`         | _(none)_                                                                                         | `DoubleMap/NMap (Optional) — hashers: Twox64Concat, Twox64Concat, Twox64Concat, key: (U32, AccountId32, U32), value: ExposurePage<AccountId32, U128>` |
+| Added    | `MaxStakedRewards`         | _(none)_                                                                                         | `Plain (Optional) — Percent`                                                                                                                          |
+| Added    | `VirtualStakers`           | _(none)_                                                                                         | `Map (Optional) — hashers: Twox64Concat, key: AccountId32, value: ()`                                                                                 |
+| Removed  | `OffendingValidators`      | `Plain (Default) — Vec<(U32, Bool)>`                                                             | _(none)_                                                                                                                                              |
+| Removed  | `PermissionedIdentity`     | `Map (Optional) — hashers: Twox64Concat, key: IdentityId, value: PermissionedIdentityPrefs`      | _(none)_                                                                                                                                              |
+| Removed  | `PolymeshStorageVersion`   | `Plain (Default) — Version`                                                                      | _(none)_                                                                                                                                              |
+| Removed  | `SlashingAllowedFor`       | `Plain (Default) — SlashingSwitch`                                                               | _(none)_                                                                                                                                              |
+| Removed  | `ValidatorCommissionCap`   | `Plain (Default) — Perbill`                                                                      | _(none)_                                                                                                                                              |
+| Modified | `Payee`                    | `Map (Default) — hashers: Twox64Concat, key: AccountId32, value: RewardDestination<AccountId32>` | `Map (Optional) — hashers: Twox64Concat, key: AccountId32, value: RewardDestination<AccountId32>`                                                     |
+
+#### Constants
+
+| Status  | Name                                | v7.4                      | v8.0         |
+| ------- | ----------------------------------- | ------------------------- | ------------ |
+| Added   | `MaxExposurePageSize`               | _(none)_                  | `U32 = 64`   |
+| Added   | `MaxValidatorSet`                   | _(none)_                  | `U32 = 1000` |
+| Removed | `FixedYearlyReward`                 | `U128 = 140000000000000`  | _(none)_     |
+| Removed | `MaxNominations`                    | `U32 = 16`                | _(none)_     |
+| Removed | `MaxNominatorRewardedPerValidator`  | `U32 = 1024`              | _(none)_     |
+| Removed | `MaxValidatorPerIdentity`           | `Permill = 33%`           | _(none)_     |
+| Removed | `MaxVariableInflationTotalIssuance` | `U128 = 1000000000000000` | _(none)_     |
+
+### Sto
+
+#### Calls
+
+| Status   | Name     | v7.4                                                                                                                                                                                                        | v8.0                                                                                                                                                                                                                   |
+| -------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Modified | `invest` | `offering_asset: AssetId, fundraiser_id: FundraiserId, investment_portfolio: PortfolioId, funding: FundingMethod<T::AccountId, T::OffChainSignature>, purchase_amount: Balance, max_price: Option<Balance>` | `offering_asset: AssetId, fundraiser_id: FundraiserId, investment_portfolio: PortfolioId, funding: FundingMethod<T::AccountId, T::OffChainSignature, T::Moment>, purchase_amount: Balance, max_price: Option<Balance>` |
+
+#### Errors
+
+| Status | Name             |
+| ------ | ---------------- |
+| Added  | `ReceiptExpired` |
+
+### System
+
+#### Calls
+
+| Status | Name                               | v7.4     | v8.0                 |
+| ------ | ---------------------------------- | -------- | -------------------- |
+| Added  | `apply_authorized_upgrade`         | _(none)_ | `code: Vec<u8>`      |
+| Added  | `authorize_upgrade`                | _(none)_ | `code_hash: T::Hash` |
+| Added  | `authorize_upgrade_without_checks` | _(none)_ | `code_hash: T::Hash` |
+
+#### Events
+
+| Status   | Name                               | v7.4                                                         | v8.0                                                              |
+| -------- | ---------------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------- |
+| Added    | `RejectedInvalidAuthorizedUpgrade` | _(none)_                                                     | `code_hash: T::Hash, error: DispatchError`                        |
+| Added    | `UpgradeAuthorized`                | _(none)_                                                     | `code_hash: T::Hash, check_version: bool`                         |
+| Modified | `ExtrinsicFailed`                  | `dispatch_error: DispatchError, dispatch_info: DispatchInfo` | `dispatch_error: DispatchError, dispatch_info: DispatchEventInfo` |
+| Modified | `ExtrinsicSuccess`                 | `dispatch_info: DispatchInfo`                                | `dispatch_info: DispatchEventInfo`                                |
+
+#### Errors
+
+| Status | Name                          |
+| ------ | ----------------------------- |
+| Added  | `MultiBlockMigrationsOngoing` |
+| Added  | `NothingAuthorized`           |
+| Added  | `Unauthorized`                |
+
+#### Storage
+
+| Status   | Name                       | v7.4                                                                                                | v8.0                                                                                                      |
+| -------- | -------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Added    | `AuthorizedUpgrade`        | _(none)_                                                                                            | `Plain (Optional) — CodeUpgradeAuthorization`                                                             |
+| Added    | `BlockSize`                | _(none)_                                                                                            | `Plain (Optional) — U32`                                                                                  |
+| Added    | `BlocksTillUpgrade`        | _(none)_                                                                                            | `Plain (Optional) — U8`                                                                                   |
+| Added    | `ExtrinsicWeightReclaimed` | _(none)_                                                                                            | `Plain (Default) — Weight`                                                                                |
+| Added    | `InherentsApplied`         | _(none)_                                                                                            | `Plain (Default) — Bool`                                                                                  |
+| Removed  | `AllExtrinsicsLen`         | `Plain (Optional) — U32`                                                                            | _(none)_                                                                                                  |
+| Modified | `Account`                  | `Map (Default) — hashers: Blake2_128Concat, key: AccountId32, value: AccountInfo<U32, AccountData>` | `Map (Default) — hashers: Blake2_128Concat, key: AccountId32, value: AccountInfo<U32, AccountData<U128>>` |
+
+### TechnicalCommitteeMembership
+
+#### Events
+
+| Status  | Name    | v7.4     | v8.0     |
+| ------- | ------- | -------- | -------- |
+| Removed | `Dummy` | _(none)_ | _(none)_ |
+
+### TransactionPayment
+
+#### Calls
+
+| Status  | Name               | v7.4          | v8.0     |
+| ------- | ------------------ | ------------- | -------- |
+| Removed | `set_disable_fees` | `value: bool` | _(none)_ |
+
+#### Storage
+
+| Status | Name              | v7.4     | v8.0                                         |
+| ------ | ----------------- | -------- | -------------------------------------------- |
+| Added  | `TxPaymentCredit` | _(none)_ | `Plain (Optional) — NoDrop<Imbalance<U128>>` |
+
+#### Constants
+
+| Status  | Name                       | v7.4                                                                 | v8.0     |
+| ------- | -------------------------- | -------------------------------------------------------------------- | -------- |
+| Added   | `OperationalFeeMultiplier` | _(none)_                                                             | `U8 = 5` |
+| Removed | `TransactionByteFee`       | `U128 = 100`                                                         | _(none)_ |
+| Removed | `WeightToFeeConst`         | `Vec<WeightToFeeCoefficient<U128>> = 0x0400000000…000001 (23 bytes)` | _(none)_ |
+
+### UpgradeCommitteeMembership
+
+#### Events
+
+| Status  | Name    | v7.4     | v8.0     |
+| ------- | ------- | -------- | -------- |
+| Removed | `Dummy` | _(none)_ | _(none)_ |
+
+### Utility
+
+#### Calls
+
+| Status  | Name       | v7.4                                                                                                  | v8.0     |
+| ------- | ---------- | ----------------------------------------------------------------------------------------------------- | -------- |
+| Removed | `relay_tx` | `target: T::AccountId, signature: T::OffChainSignature, call: UniqueCall<<T as Config>::RuntimeCall>` | _(none)_ |
+
+#### Events
+
+| Status  | Name        | v7.4                                                                   | v8.0     |
+| ------- | ----------- | ---------------------------------------------------------------------- | -------- |
+| Removed | `RelayedTx` | `caller_did: IdentityId, target: T::AccountId, result: DispatchResult` | _(none)_ |
+
+#### Errors
+
+| Status  | Name               |
+| ------- | ------------------ |
+| Removed | `InvalidNonce`     |
+| Removed | `InvalidSignature` |
+| Removed | `TargetCddMissing` |
+
+#### Storage
+
+| Status  | Name     | v7.4                                                                  | v8.0     |
+| ------- | -------- | --------------------------------------------------------------------- | -------- |
+| Removed | `Nonces` | `Map (Default) — hashers: Twox64Concat, key: AccountId32, value: U64` | _(none)_ |
