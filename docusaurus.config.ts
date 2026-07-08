@@ -186,15 +186,15 @@ const config: Config = {
           },
           {
             from: '/polymesh-docs/polymesh-private/confidential-assets/',
-            to: '/confidential-assets/overview/',
+            to: '/confidential-assets/',
           },
           {
             from: '/polymesh-docs/polymesh-private/confidential-assets/diagrams/',
-            to: '/confidential-assets/sequence-diagrams/',
+            to: '/confidential-assets/',
           },
           {
             from: '/polymesh-docs/polymesh-private/confidential-assets/settlement/',
-            to: '/confidential-assets/settlement/',
+            to: '/confidential-assets/',
           },
           {
             from: '/polymesh-docs/polymesh-private/tooling/',
@@ -202,7 +202,7 @@ const config: Config = {
           },
           {
             from: '/polymesh-docs/polymesh-private/tutorials/walkthrough-confidential-assets-rest-api/',
-            to: '/tutorials/confidential-assets-walkthrough/',
+            to: '/confidential-assets/',
           },
           { from: '/polymesh-docs/primitives/assets/', to: '/core/assets/' },
           {

@@ -28,7 +28,3 @@ The entity managing the chain retains control over on-chain governance, determin
 ## Network tokens
 
 Polymesh Private eliminates the need for publicly traded utility tokens, reducing uncertainty surrounding operating costs and token provenance. Transaction fees can be set to zero or managed using a native utility token for accounting and activity metering purposes, offering users flexibility in operational models.
-
-## Confidentiality
-
-Polymesh Private introduces support for [Confidential Assets](confidential-assets/index.md), to enable secure asset transactions on a global ledger without exposing asset balances or transaction amounts. This feature is initially available exclusively to users of Polymesh Private.

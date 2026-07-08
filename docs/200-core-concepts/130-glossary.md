@@ -97,7 +97,7 @@ The identity to which a multisig key is linked. Multisig keys must be associated
 
 ### Smart Contract
 
-A smart contract is a programmatic account deployed on Polymesh that enables custom, automated, or complex business logic to be executed on-chain. Smart contracts are compiled to WebAssembly (Wasm), with [Ink!](https://ink.substrate.io/) recommended for development. On Polymesh, a smart contract can serve as a primary or secondary key for an identity, allowing it to control assets, act as a custodian, or manage permissions. Beyond acting as a key, smart contracts can interact with native Polymesh modules, extend protocol functionality, and implement custom workflows such as decentralized exchanges, compliance logic, or asset management. Smart contracts interacting with assets must be attached to an identity (DID) to function. See [Smart Contracts](/development/smart-contracts/).
+A smart contract is a programmatic account deployed on Polymesh that enables custom, automated, or complex business logic to be executed on-chain. Smart contracts run on `pallet-revive`, executing on [PolkaVM](#polkavm), with EVM/Solidity compatibility supported as one interface into the same pallet. On Polymesh, a smart contract can serve as a primary or secondary key for an identity, allowing it to control assets, act as a custodian, or manage permissions. Beyond acting as a key, smart contracts can interact with native Polymesh modules, extend protocol functionality, and implement custom workflows such as decentralized exchanges, compliance logic, or asset management. Smart contracts interacting with assets must be attached to an identity (DID) to function. See [Smart Contracts](/development/smart-contracts/).
 
 ### Proposal Voting (Multisig)
 
@@ -127,11 +127,11 @@ Stash keys can:
 
 - Bond POLYX
 - Bond extra POLYX
-- Set the [Controller key](#controller) of the stash. If a separate controller key is not provided, the stash key is automatically made the controller.
+- Manage bonded funds directly. New bonds are always managed by the stash key itself; a separate [Controller key](#controller) is a legacy pattern only, retained for stashes bonded before this changed.
 
 ### Controller
 
-The controller key is used to manage bonded funds, vote with bonded funds, and perform similar on-chain actions. This key is not directly required by the operator node and should never be shared with it. It is recommended to use a [multisig](#multisig) address or a supported hardware wallet for the controller key. These keys can hold funds and directly control bonded funds, so they must be stored securely. Consider the controller key a semi-cold wallet.
+The controller key is used to manage bonded funds, vote with bonded funds, and perform similar on-chain actions. New bonds no longer support setting a separate controller — the stash key itself is always the controller. A separate controller key is a legacy pattern retained only for stashes bonded before this change; calling `set_controller` on such a stash resets its controller back to the stash key, it can no longer be pointed at a different key. Where a legacy separate controller is still in use, it is recommended to use a [multisig](#multisig) address or a supported hardware wallet for it, since these keys can hold funds and directly control bonded funds. Consider the controller key a semi-cold wallet.
 
 Controller keys can:
 
@@ -268,9 +268,17 @@ A fungible token or asset on Polymesh is an interchangeable unit of value, such 
 
 A non-fungible token (NFT) is a unique digital asset on Polymesh that represents ownership of a specific, individually distinguishable item or record. Unlike fungible tokens, each NFT has distinct characteristics or metadata and cannot be exchanged on a one-to-one basis with other tokens. NFTs are commonly used for assets such as collectibles, certificates, or unique financial instruments, and are managed within NFT collections that define required metadata keys for each token. See [Non-Fungible Assets](/core/assets/nft).
 
+### Asset Holdings (AssetHolder)
+
+The two ways an identity's assets can be held on Polymesh: in a [Portfolio](#portfolio), or directly on an [Account ID Balance](#account-id-balance). Represented on-chain by the `AssetHolder` type (`Account` or `Portfolio`), used throughout the Asset, NFT, and Settlement pallets. See [Asset Holdings](/asset-holdings/).
+
+### Account ID Balance
+
+Assets held directly on a signing key's account rather than in a portfolio, represented on-chain as `AssetHolder::Account`. Does not support custody or portfolio-level secondary-key permissions. See [Asset Holdings](/asset-holdings/). (See also: [Asset Holdings (AssetHolder)](#asset-holdings-assetholder))
+
 ### Portfolio
 
-A logical grouping of assets owned by an identity. Portfolios allow users to organize, segregate, and control digital assets with flexible permissions. Each identity has a default portfolio and can create additional numbered portfolios. See [Portfolios](/portfolios/).
+A logical grouping of assets owned by an identity, one of two ways an identity's assets can be held (see [Asset Holdings](#asset-holdings-assetholder)). Portfolios allow users to organize, segregate, and control digital assets with flexible permissions. Each identity has a default portfolio and can create additional numbered portfolios. See [Portfolios](/portfolios/).
 
 ### Default Portfolio
 
@@ -398,13 +406,13 @@ The protocol used to determine which operator produces each block in Polymesh.
 
 The protocol used for rapid block finality in Polymesh, where operators vote on chains rather than individual blocks.
 
-### Wasm (WebAssembly)
+### PolkaVM
 
-A binary instruction format for a stack-based virtual machine, used for running smart contracts on Polymesh and other Substrate-based chains.
+A RISC-V based execution engine used by `pallet-revive` to run Polymesh smart contracts. EVM/Solidity compatibility is supported as one interface into the same pallet, alongside native PolkaVM contracts. See [Smart Contracts](/development/smart-contracts/).
 
-### Ink!
+### pallet-revive
 
-A Rust-based language and toolset for writing smart contracts for Substrate-based blockchains, recommended for Polymesh smart contract development.
+The smart contract pallet on Polymesh, providing PolkaVM contract execution with EVM compatibility (Solidity contracts, standard Ethereum JSON-RPC tooling via the `eth-rpc` proxy). See [Smart Contracts](/development/smart-contracts/).
 
 ### Identity
 
@@ -448,15 +456,11 @@ A private, permissioned version of the Polymesh blockchain, designed for enterpr
 
 ### Confidential Asset
 
-An asset type available on Polymesh Private that supports confidential balances and transfers using zero-knowledge proofs and homomorphic encryption. See [Confidential Assets](/confidential-assets/overview/). (See also: [Zero-Knowledge Proof (ZKP)](#zero-knowledge-proof-zkp))
+An asset type that supports confidential balances and transfers using zero-knowledge proofs, while still supporting regulated-market workflows such as receiver affirmation and asset-specific auditor/mediator compliance access. See [Confidential Assets](/confidential-assets/). (See also: [Zero-Knowledge Proof (ZKP)](#zero-knowledge-proof-zkp))
 
 ### Confidentiality
 
-The ability to maintain privacy over certain transactions and balances, especially via confidential assets and zero-knowledge proofs. See [Confidential Assets](/confidential-assets/overview/).
-
-### Proof API (Polymesh Private)
-
-A service for generating and verifying zero-knowledge proofs required for confidential asset operations. Used by the REST API and SDK. See [Proof API](/polymesh-private/developer-tooling/#polymesh-proof-api).
+The ability to maintain privacy over certain transactions and balances, especially via confidential assets and zero-knowledge proofs. See [Confidential Assets](/confidential-assets/).
 
 ### Zero-Knowledge Proof (ZKP)
 

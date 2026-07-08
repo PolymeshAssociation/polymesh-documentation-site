@@ -23,7 +23,7 @@ When control of a portfolio is assigned, the custodian can:
 **Restrictions:**
 
 - The default portfolio cannot have a custodian. A custodian must be assigned to a user portfolio.
-- Account ID based portfolios (`PortfolioKind::AccountId`) cannot be placed under custody.
+- Account ID based holdings (`AssetHolder::Account`) cannot be placed under custody — see [Asset Holdings](/asset-holdings) for the alternative to portfolio-based holding.
 - The custodian cannot move assets to portfolios under a different DID; only between portfolios of the same owner.
 - The custodian cannot delete the portfolio.
 - The custodian cannot rename the portfolio.

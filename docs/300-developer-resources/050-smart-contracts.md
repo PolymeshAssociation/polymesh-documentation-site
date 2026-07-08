@@ -21,262 +21,82 @@ This allows teams to keep core regulated operations on the native layer while im
 - permissioned operations with custom approval paths
 - upgradeable application-level policy logic
 
-## Ink! and Tooling
+## `pallet-revive`: PolkaVM contracts with EVM compatibility
 
-Polymesh smart contracts are written in Ink! and compiled to WASM.
+The smart contract pallet on Polymesh is `pallet-revive`.
 
-- [Ink! documentation](https://use.ink/)
-- Polymesh App Contracts UI:
-  - [Mainnet Contracts UI](https://mainnet-app.polymesh.network/#/contracts)
-  - [Testnet Contracts UI](https://testnet-app.polymesh.live/#/contracts)
-  - [Staging Contracts UI](https://staging-app.polymesh.dev/#/contracts)
+Contracts execute on **PolkaVM**, a RISC-V-based execution engine. EVM compatibility — Solidity contracts, standard Ethereum JSON-RPC tooling — is one supported way to interact with `pallet-revive`, not the whole of what it does. Native PolkaVM contracts and EVM-bytecode contracts both run on the same pallet.
 
-The Contracts UI supports upload, instantiate, and call flows.
+## Address mapping
 
-## Contract Identity and Ownership Model
+Polymesh accounts are 32-byte (`AccountId32`), not 20-byte Ethereum addresses. `AddressMapper = pallet_revive::AccountId32Mapper<Self>` bridges the two, and the two directions work differently:
 
-Contracts on Polymesh are identity-aware.
+- **Native account → Ethereum address**: computed by hashing the 32-byte account with Keccak-256 and taking the last 20 bytes. This is a one-way derivation — the original 32-byte account cannot be recovered from the 20-byte hash output alone.
+- **Ethereum address → native account**: if the account has previously called `map_account`, the chain looks up the real account via the stored `OriginalAccount` mapping. If it hasn't, the chain falls back to a deterministic **fallback account**: the 20-byte address padded with twelve `0xEE` bytes to make 32 bytes. `unmap_account` removes a stored mapping.
 
-:::important
-A contract deployment and contract interaction must pass Polymesh permission checks.
-At instantiation time, the contract account is linked to the caller's identity.
+:::danger Map your account before receiving tokens at its Ethereum-style address
+The native-to-Ethereum direction above is a one-way hash, so the chain cannot invert it on its own. Until an account calls `map_account`, any transfer sent to that account's derived Ethereum-style address is credited to the `0xEE`-padded **fallback account** instead — a distinct 32-byte account from the real one.
 
-This does not mean every contract method needs broad identity permissions.
-Extra permissions are required when contract logic calls identity-governed native modules such as identity, asset, portfolio, or settlement operations.
-
-Native POLYX balance flows (receiving, holding, and transferring POLYX) do not by themselves require those additional identity-method permissions.
+This is not automatically lost: the real account holder can call `dispatch_as_fallback_account` to dispatch a call (e.g. a transfer) as that fallback account and move the funds out, since the runtime re-derives the same fallback account from their signed origin. But this is a manual recovery step that most wallets and tooling won't surface by default, so **the safe practice is to call `map_account` before ever advertising or receiving funds at your derived Ethereum-style address** — mapped accounts receive transfers directly, with no recovery step ever needed.
 :::
 
-### How identity context works in practice
+Tools such as [Subscan's account-conversion utility](https://polymesh.subscan.io/tools/format_transform) can compute both directions for you (Ethereum → SS58 pads with `0xEE`; SS58 → Ethereum performs the Keccak-256 derivation) — useful for looking up addresses, but it does not perform or substitute for the on-chain `map_account` call.
 
-- A contract call can be initiated by one key, but native runtime calls made by contract logic execute under the contract identity context.
-- This enables controlled delegation patterns where external callers can trigger behavior, while the contract identity remains the authority used for governed native actions.
-- Method-level permissions are enforced when the contract calls identity-governed native functionality.
+## Calls
 
-### Deployment options
+`pallet-revive` exposes the standard upstream call set — Polymesh has not added or removed any calls at the pallet level; customization is entirely in runtime configuration (below):
 
-Contracts can be instantiated:
+- `eth_transact` — submit a raw signed Ethereum transaction
+- `call`, `instantiate`, `instantiate_with_code` — native calls to invoke or deploy a contract
+- `eth_instantiate_with_code`, `eth_call`, `eth_substrate_call` — EVM-flavored equivalents
+- `upload_code`, `remove_code`, `set_code` — manage contract code independently of instances
+- `map_account`, `unmap_account` — manage the reversible `AccountId32` ↔ Ethereum address mapping
+- `dispatch_as_fallback_account` — dispatch a call as a contract's fallback account
 
-- from uploaded code bytes
-- from an existing on-chain code hash
+## Runtime configuration
 
-By default, the standard `Contracts` instantiate flow links the new contract as a secondary key with no permissions.
+Values set in `impl pallet_revive::Config for Runtime`:
 
-Polymesh also supports deployment with explicit identity linkage behavior:
+| Setting            | Value                                                               | Notes                                                                                       |
+| ------------------ | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `ChainId`          | `1_641_820` (Mainnet), `1_641_819` (Testnet), `1_641_818` (Develop) | The EVM chain ID wallets and tooling (MetaMask, ethers.js) need to target the right network |
+| `NativeToEthRatio` | `10^12`                                                             | Bridges Polymesh's 6-decimal POLYX to Ethereum's 18-decimal wei convention                  |
+| `AllowEVMBytecode` | `true`                                                              | EVM bytecode execution is enabled, in addition to native PolkaVM contracts                  |
+| `GasScale`         | `100`                                                               | Scales EVM gas to Polymesh's weight-based fee model                                         |
+| `Precompiles`      | `()`                                                                | No custom precompiles configured yet — see [Precompiles](#precompiles) below                |
+| `AddressMapper`    | `AccountId32Mapper`                                                 | See [Address mapping](#address-mapping) above                                               |
 
-- as a secondary key with custom permissions
-- as a primary key through key-authorization and rotation flows
+## Interacting with native Polymesh functionality
 
-These are exposed through the `polymeshContracts` pallet instantiate extrinsics.
+### Precompiles
 
-### Practical deployment patterns
+A precompile is a fixed contract address that, instead of running interpreted bytecode, triggers native logic on the runtime side — from a contract's perspective it looks like a normal contract implementing some interface (an ABI, for the EVM case), but calls to it are handled directly by a pallet rather than by executing PolkaVM/EVM code. This is the mechanism `pallet-revive` uses to expose native chain functionality to contracts: `impl pallet_revive::Config for Runtime` has a `Precompiles` associated type (see the [runtime configuration](#runtime-configuration) table above) that lists which precompiles are wired in for a given network.
 
-The deployment model affects how much authority the contract has and how tightly it is coupled to other keys.
+:::caution No native-asset precompiles yet
+As of this writing, Polymesh's `Precompiles` configuration is empty (`()`) on Mainnet, Testnet, and Develop. There is currently **no** supported way for a contract — PolkaVM or EVM — to call into the `Asset`, `Settlement`, or `Identity` pallets. Contracts are limited to their own storage and native POLYX balance flows (receiving, holding, transferring), which don't depend on a precompile.
 
-- A non-custodial DEX or protocol controller may be best isolated from day-to-day operator keys, with the contract later becoming the primary key of a dedicated identity through authorization and rotation flows.
-- A workflow contract for asset administration can be attached as a secondary key with tightly scoped permissions, for example only the asset-documentation extrinsics.
-- A custody workflow contract can be attached as a secondary key on the custodian identity, allowing external users to trigger contract logic that operates through the custodian's governed permissions.
+Precompiles for interacting with native assets (such as an ERC-20-style interface for fungible assets — `transfer`, `approve`, `transferFrom`, `balanceOf`, `allowance`) are planned for a future release. This page will be updated once they ship; until then, treat contract-driven native-asset interaction as a planned capability, not an available one.
+:::
 
-A contract can also become the primary key of an existing identity by accepting a primary-key rotation authorization. Similarly, a contract acting as a primary key can encode logic to issue additional authorizations, such as adding secondary keys under controlled conditions.
+### Allowances (`asset::approve` / `settlement::transfer_funds`)
 
-![Smart Contract Diagram](./images/smart-contracts/smart_contract_keys.png)
+The `Asset` and `Settlement` pallets provide an ERC-20-style `approve`/`transferFrom` pattern at the chain level: an asset holder calls `asset::approve(asset_id, spender, amount)` to authorize a spender to move up to `amount` of the asset on their behalf, without granting the spender a broader identity permission. The spender then calls `settlement::transfer_funds` naming the owner's account as the source — no separate signature from the owner is required for that transfer, and the allowance is drawn down accordingly. See [Allowances](/core/assets/fungible#allowances) and [Direct Transfers](/settlement#direct-transfers-transfer_funds) for the full mechanics. This is a general chain feature usable today by any permitted caller (an off-chain service, another pallet, or — once the precompile above ships — a contract); it does not itself require a contract.
 
-## Using Native Polymesh Functionality from Contracts
+## Running EVM JSON-RPC
 
-Contracts can interact with native runtime logic in two main ways:
+`pallet-revive` is a Substrate pallet, not a full Ethereum node — it doesn't speak Ethereum's JSON-RPC (`eth_call`, `eth_sendRawTransaction`, `eth_getBalance`, etc.) directly. A separate proxy process, `pallet-revive-eth-rpc` (binary name `eth-rpc`), translates standard Ethereum JSON-RPC into calls against the node. Run it alongside your node to point MetaMask, ethers.js, or other standard Ethereum tooling at Polymesh, using the `ChainId` for your target network from the table above.
 
-- query chain storage
-- dispatch whitelisted runtime extrinsics
+:::info Polkadot's smart contracts documentation
+Polymesh's `pallet-revive` is built on the same upstream pallet used across the Polkadot ecosystem, so [Polkadot's smart contracts documentation](https://docs.polkadot.com/smart-contracts/) is a useful reference for standard EVM/Solidity tooling and workflows — dev environments (Remix, Hardhat, Foundry), libraries (ethers.js, viem, web3.js), an ERC-20/NFT/Uniswap cookbook, and general EVM-vs-PVM concepts. Treat it as a guide to the surrounding tooling ecosystem, not to Polymesh's own configuration: runtime settings like `ChainId`, `Precompiles`, and address mapping are specific to Polymesh's deployment and are documented above.
+:::
 
-This enables patterns such as:
+## Error handling
 
-- checking identity or portfolio state before execution
-- executing asset or settlement operations from contract logic
-- building policy and orchestration layers over native primitives
+`pallet-revive` has a large, themed error surface (contract/code lookup, execution & gas, calls & reentrancy, storage & deposits, code/blob validation, delegate dependencies, account mapping & syscalls, and EVM/Ethereum compatibility). For a full list of error definitions refer to the chain's own metadata for the network and runtime version you're targeting (via [Subscan runtime explorer](https://polymesh-testnet.subscan.io/runtime/Revive), [polymesh developer app](https://mainnet-app.polymesh.network/), polkadot.js apps, subxt, or the Polymesh SDK's generated types). If you're building a wallet, indexer, or dApp framework against `pallet-revive`, treat the metadata as the source of truth; expect most error conditions to be execution or storage-limit conditions specific to the PolkaVM environment.
 
-## Runtime Call Whitelist
+## Getting started checklist
 
-For safety, runtime extrinsics callable from contracts are whitelisted by governance.
-
-- whitelist storage: `polymeshContracts::callRuntimeWhitelist`
-- governance updates this set as needed
-
-If your use case requires additional runtime calls from contracts, request review through Polymesh developer channels.
-
-## Chain Extensions
-
-Polymesh provides chain extensions for contract-side runtime access, including:
-
-- key-to-DID lookup
-- storage reads
-- runtime call dispatch
-- API upgrade discovery helpers
-
-Reference implementation:
-[Polymesh chain extension implementation](https://github.com/PolymeshAssociation/Polymesh/blob/develop/pallets/contracts/src/chain_extension.rs)
-
-Example pattern for DID lookup:
-
-```rust
-fn get_key_did_example(acc: AccountId) -> Result<IdentityId, Error> {
-    Self::env()
-        .extension()
-        .get_key_did(acc)?
-        .ok_or(Error::MissingIdentity)
-}
-```
-
-## Polymesh API for Ink Contracts
-
-The Polymesh API crates provide typed query and call interfaces so contracts can avoid low-level encoding logic.
-
-Typical flow:
-
-- query counters or state
-- construct typed call inputs
-- submit runtime extrinsics through API helpers
-
-Example pattern:
-
-```rust
-let api = Api::new();
-
-let instruction_id = api
-  .query()
-  .settlement()
-  .instruction_counter()
-  .map(|v| v.into())?;
-
-api.call()
-  .settlement()
-  .execute_manual_instruction(
-      instruction_id,
-      1,
-      None
-  )
-  .submit()?;
-```
-
-The `api.query()` and `api.call()` helpers provide a typed interface for native Polymesh storage access and runtime dispatch, while also handling Polymesh-specific parameter and error types.
-
-Use signatures from the release and branch you are targeting, as APIs can evolve between major versions.
-
-## Upgradable Polymesh Ink Contract
-
-To reduce breakage risk across runtime upgrades, Polymesh provides an upgradable Polymesh Ink API contract and library.
-
-Repository path:
-[Upgradable Polymesh Ink contract](https://github.com/PolymeshAssociation/Polymesh/tree/develop/contracts/upgradeable-polymesh-ink)
-
-### Why use it
-
-- presents a stable contract-facing API
-- absorbs runtime interface changes across major upgrades
-- lets application contracts delegate to maintained API logic
-
-### How it works
-
-- the library resolves the latest API code hash from chain state
-- calls are performed through delegate call using that hash
-- governance can schedule next upgrades, then activate them at the appropriate chain version
-
-Relevant storage:
-
-- `polymeshContracts::currentApiHash`
-- `polymeshContracts::apiNextUpgrade`
-
-### Usage guidance
-
-Within a contract message:
-
-- instantiate `PolymeshInk` at the start of the message
-- reuse that instance within the same message call
-- create a new instance again on the next message call
-
-This balances freshness and execution cost.
-
-Example pattern:
-
-```rust
-let api = PolymeshInk::new()?;
-let portfolio_id = api.accept_portfolio_custody(auth_id, portfolio)?;
-```
-
-Under the hood, `PolymeshInk` uses delegate calls into the upgradable API contract, allowing application contracts to keep a stable interface while governance updates the underlying implementation across runtime upgrades.
-
-## Polymesh Contracts vs Substrate Contracts Pallet
-
-There are two related layers:
-
-- Substrate `Contracts` capability (upload, instantiate, execute)
-- Polymesh-specific contract features in `polymeshContracts`
-
-Polymesh adds identity and permission-aware behavior on top of baseline contract flows, plus:
-
-- deployment with custom secondary-key permissions
-- deployment as a primary key through authorization and rotation flows
-- runtime call whitelist management
-- upgradable API code-hash tracking
-
-## Deterministic Compilation
-
-WASM outputs are not always deterministic across environments by default.
-For reproducibility and verification, deterministic build workflows are recommended.
-
-Example deterministic build container:
-
-```bash
-docker pull quay.io/subscan-explorer/wasm-compile-build:amd64-stable-1.70.0-v3.2.0
-docker run --rm -it -v .:/builds/contract -v ./target:/target/ quay.io/subscan-explorer/wasm-compile-build:amd64-stable-1.70.0-v3.2.0 cargo contract build --release
-```
-
-Example reference:
-[Verifiable build reference](https://github.com/PolymeshAssociation/Polymesh/blob/develop/contracts/upgradeable-polymesh-ink/README.md#verifiable-build)
-
-## Example Case Study: Wrapped POLYX
-
-Reference contract:
-[Wrapped POLYX contract](https://github.com/PolymeshAssociation/Polymesh/tree/develop/contracts/wrapped-polyx)
-
-The wrapped POLYX example shows:
-
-- using `PolymeshInk` for governed native operations
-- portfolio custody flows
-- mint and redeem logic coordinated with native asset operations
-- native POLYX in/out flows around the wrapped asset lifecycle
-
-### Direct API approach vs Upgradable API approach
-
-Direct low-level API calls are possible, but the upgradable `PolymeshInk` approach is preferred for long-lived production contracts because it is designed to remain compatible across runtime upgrades.
-
-Current style for wrapped asset creation through `PolymeshInk`:
-
-```rust
-api.asset_create_and_issue(
-    AssetName(b"Wrapped POLYX".to_vec()),
-    self.ticker,
-    AssetType::EquityCommon,
-    true,
-    None,
-)?;
-```
-
-### Build and deploy summary
-
-For local development you can build directly with `cargo contract build --release`, while deterministic Docker-based compilation is better for reproducibility and verification.
-
-- build contract artifacts with `cargo contract`
-- upload contract bundle using the Contracts UI
-- instantiate with the chosen identity linkage model
-- configure required permissions and authorizations for governed native operations
-- call contract methods through UI or integration tooling
-
-By default, deployment through the standard Contracts UI links the contract as a secondary key with no permissions. If you need custom secondary-key permissions or primary-key deployment flows, use the `polymeshContracts` extrinsics instead.
-
-After compilation, the `target/ink` directory typically includes the WASM binary, the ABI JSON, and the combined `.contract` bundle used by the Contracts UI.
-
-Typical artifacts:
-
-- `wrapped_polyx.wasm`
-- `wrapped_polyx.json`
-- `wrapped_polyx.contract`
+1. Target `pallet-revive` for all contract work on Polymesh.
+2. To interact with contracts using standard Ethereum tooling, run the `eth-rpc` proxy alongside your node and use the correct `ChainId` for your network.
+3. Have users call `map_account` **before** they receive funds at their derived Ethereum-style address — see the warning in [Address mapping](#address-mapping).
+4. Contracts cannot yet call into native Polymesh pallets (no precompiles are configured) — see [Precompiles](#precompiles). Native-asset precompiles are planned for a future release.

@@ -59,7 +59,6 @@ Polymesh supports several types of authorizations, each serving different permis
 
 - **Portfolio Custody**: Enable third part [portfolio custody](/portfolios/custody) management or control of specific portfolios while maintaining beneficial ownership under the original onchain identity
 - **Add MultiSig Signer**: Authorize addition of new signers to a [multisig](/identity/advanced/multisig) arrangement.
-- **Add Relayer Paying Key**: Set up [subsidized account](/accounts/subsidized) relationships
 
 ## Managing Authorizations
 
@@ -111,9 +110,12 @@ The following acceptance methods have their transaction fees paid by the authori
 - `identity::rotate_primary_key_to_secondary`
 - `identity::accept_primary_key`
 - `multisig::accept_multisig_signer`
-- `relayer::accept_paying_key`
 
 For all other authorization acceptance methods, the transaction fee is paid by the accepting party's key.
+
+:::note
+Subsidy setup no longer goes through the authorization system: `relayer::approve_subsidy` and `relayer::accept_subsidy` manage the relationship directly, without an authorization ID. See [Subsidized Accounts](/accounts/subsidized).
+:::
 
 When removing/rejecting an authorization request, the caller can optionally specify that the primary key of the requestor's identity pays the transaction fee by setting the `auth_issuer_pays` parameter to `true`.
 

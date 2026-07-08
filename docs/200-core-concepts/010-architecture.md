@@ -21,7 +21,7 @@ Polymesh has a native token, used for security and payments, [POLYX](/polyx/).
 
 Polymesh provides core business logic and financial abstractions at its base layer, called primitives. These provide a rich set of embedded on-chain actions (called extrinsics) that a user can initiate, such as creating an asset, settling securities instructions or participating in on-chain governance.
 
-Polymesh also supports Layer 2 [Smart Contract](../development/smart-contracts/) logic, allowing network users to extend and leverage the base layer primitives to build on-chain financial and identity based protocols. Polymesh smart contracts compile to [WebAssembly (Wasm)](https://webassembly.org/). Using Wasm expands the family of languages available to smart contract developers to include Rust, C/C++, C#, Typescript, Haxe amd Kotlin, as well as allowing for the use of standard development tools. For Polymesh we recommend the use of [Ink!](https://ink.substrate.io/), which is a subset of Rust specifically designed by Parity for Substrate based chains. Ink! offers significantly greater performance and safety when compared with other programming languages such as Solidity.
+Polymesh also supports Layer 2 [Smart Contract](../development/smart-contracts/) logic via `pallet-revive`, allowing network users to extend and leverage the base layer primitives to build on-chain financial and identity based protocols. Polymesh smart contracts execute on [PolkaVM](https://github.com/paritytech/polkavm), a RISC-V based execution engine, with EVM compatibility (Solidity contracts, standard Ethereum JSON-RPC tooling) supported as one interface into the same pallet rather than a separate system.
 
 ## Architecture
 
@@ -34,7 +34,6 @@ While Polymesh is a public-permissioned blockchain, [Polymesh Private](/polymesh
 Polymesh Private shares much of Polymesh's functionality, with the following differences:
 
 - Polymesh Private chains are intended to run among a limited set of peers on a private network.
-- Polymesh Private includes a [Confidential Asset](/confidential-assets/overview/) module to allow private asset settlements between counterparties.
 - Polymesh Private does not use the [POLYX](/polyx/) token. While transactions may still incur fees, they are paid in a token specific to each Polymesh Private instance, which is not expected to have intrinsic value. Alternatively, Polymesh Private transactions can be configured to have no fees.
 - The use of Polymesh Private is governed by a license; see [the Polymesh Private license details](https://github.com/PolymeshAssociation/polymesh-private?tab=readme-ov-file#license) for more information.
 
@@ -62,7 +61,7 @@ The Polymesh governance system is designed to further decentralise over time.
 
 ### Confidentiality
 
-Confidentiality allows Polymesh users to maintain privacy over certain aspects of their securities transactions. The [Confidential Asset](/confidential-assets/overview/) protocol, implemented in Polymesh Private, is designed to allow confidentiality within asset transfers using homomorphic encryption and zero-knowledge proofs. There is also ongoing research on how to improve and update confidentiality in Polymesh to support the full spectrum of confidentiality and securities use-cases.
+Confidentiality allows Polymesh users to maintain privacy over certain aspects of their securities transactions. The [Confidential Assets](/confidential-assets/) pallet is designed to allow confidentiality within asset transfers using zero-knowledge proofs, while still supporting regulated-market workflows such as receiver affirmation and asset-specific auditor/mediator compliance access. It is live on Testnet as a pre-release feature and not yet available on Mainnet.
 
 ### Compliance
 

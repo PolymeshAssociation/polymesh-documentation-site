@@ -18,15 +18,15 @@ The API is open source and [available on GitHub](https://github.com/PolymeshAsso
 
 Built on Polymesh, an institutional-grade permissioned blockchain for regulated assets, the REST API offers endpoints covering core functionalities:
 
--   **Identity Management**: Query identity details, associated keys, claims, and permissions. Register new identities (if authorized).
--   **Asset Management**: Create, issue, manage, and query both fungible assets and non-fungible tokens (NFTs). Handle asset documents, ownership transfers, and metadata.
--   **Compliance**: Define, manage, and query compliance rules, requirements, and trusted claim issuers for assets.
--   **Settlement**: Create and manage settlement instructions and trading venues. Affirm, reject, and execute settlements.
--   **Corporate Actions**: Initiate and manage dividend distributions, query corporate action configurations, and handle payments/claims.
--   **Transactions**: Submit pre-signed transactions generated offline or trigger transactions signed by a configured Signing Manager (like HashiCorp Vault or local keys).
--   **Network Information**: Query network status, block details, transaction history, and account balances.
--   **Portfolio Management**: Create, manage, and query asset portfolios associated with identities.
--   **Staking & Governance**: (Functionality may vary depending on API version) Interact with staking operations and governance proposals.
+- **Identity Management**: Query identity details, associated keys, claims, and permissions. Register new identities (if authorized).
+- **Asset Management**: Create, issue, manage, and query both fungible assets and non-fungible tokens (NFTs). Handle asset documents, ownership transfers, and metadata.
+- **Compliance**: Define, manage, and query compliance rules, requirements, and trusted claim issuers for assets.
+- **Settlement**: Create and manage settlement instructions and trading venues. Affirm, reject, and execute settlements.
+- **Corporate Actions**: Initiate and manage dividend distributions, query corporate action configurations, and handle payments/claims.
+- **Transactions**: Submit pre-signed transactions generated offline or trigger transactions signed by a configured Signing Manager (like HashiCorp Vault or local keys).
+- **Network Information**: Query network status, block details, transaction history, and account balances.
+- **Portfolio Management**: Create, manage, and query asset portfolios associated with identities.
+- **Staking & Governance**: (Functionality may vary depending on API version) Interact with staking operations and governance proposals.
 
 This API is ideal for developers building applications, backend integrations, or scripts that need to interface with Polymesh using familiar RESTful patterns.
 
@@ -60,17 +60,17 @@ Many state-changing operations (POST, PUT, DELETE) require transaction signing. 
   "options": {
     "signer": "signer-name-or-address", // Identifies the key to sign with
     "processMode": "submit" // Controls how the transaction is handled
-  },
+  }
   // ... other request parameters
 }
 ```
 
--   **`signer`**: Specifies which key, managed by the API's configured Signing Manager (e.g., local mnemonic, Vault key like `signer1-1`), should authorize the transaction.
--   **`processMode`**: Determines execution flow:
-    -   `submit`: Sign, send, and wait for inclusion/failure.
-    -   `offline`: Return the unsigned transaction payload for external signing.
-    -   `submitWithCallback`: Submit and return immediately; results sent via webhook.
-    -   `dryRun`: Simulate without submitting.
+- **`signer`**: Specifies which key, managed by the API's configured Signing Manager (e.g., local mnemonic, Vault key like `signer1-1`), should authorize the transaction.
+- **`processMode`**: Determines execution flow:
+  - `submit`: Sign, send, and wait for inclusion/failure.
+  - `offline`: Return the unsigned transaction payload for external signing.
+  - `submitWithCallback`: Submit and return immediately; results sent via webhook.
+  - `dryRun`: Simulate without submitting.
 
 The API server uses its Signing Manager to perform the cryptographic signing based on the `signer` identifier.
 
@@ -78,17 +78,17 @@ The API server uses its Signing Manager to perform the cryptographic signing bas
 
 The API provides endpoints grouped around core Polymesh functionalities:
 
--   **Assets (`/assets/`)**: Create, issue, query, manage metadata, documents, ownership, compliance, and corporate actions for fungible assets.
--   **NFTs (`/nfts/`)**: Manage NFT collections and individual non-fungible tokens.
--   **Identities (`/identities/`)**: Manage on-chain identities, keys, permissions, claims, and related entities like portfolios and authorizations.
--   **Accounts (`/accounts/`)**: Handle POLYX balances, transfers, transaction history, and account-specific permissions or subsidies.
--   **Transactions (`/transactions/`)**: Submit externally signed transactions or query transaction status by hash.
--   **Settlement (`/settlements/`, `/venues/`, `/instructions/`)**: Manage trading venues and the lifecycle of settlement instructions.
--   **Compliance (`/compliance-requirements/`, `/trusted-claim-issuers/`)**: Configure and query asset compliance rules.
--   **Corporate Actions (`/corporate-actions/`)**: Handle dividends, checkpoints, and other corporate events linked to assets.
--   **Network (`/network/`)**: Retrieve blockchain status, block details, and configuration.
--   **Signer (`/signer/`)**: Map configured signer names to their blockchain addresses.
--   **Authentication (`/auth/`, `/users/`)**: Manage API access credentials (specific to deployment).
+- **Assets (`/assets/`)**: Create, issue, query, manage metadata, documents, ownership, compliance, and corporate actions for fungible assets.
+- **NFTs (`/nfts/`)**: Manage NFT collections and individual non-fungible tokens.
+- **Identities (`/identities/`)**: Manage on-chain identities, keys, permissions, claims, and related entities like portfolios and authorizations.
+- **Accounts (`/accounts/`)**: Handle POLYX balances, transfers, transaction history, and account-specific permissions or subsidies.
+- **Transactions (`/transactions/`)**: Submit externally signed transactions or query transaction status by hash.
+- **Settlement (`/settlements/`, `/venues/`, `/instructions/`)**: Manage trading venues and the lifecycle of settlement instructions.
+- **Compliance (`/compliance-requirements/`, `/trusted-claim-issuers/`)**: Configure and query asset compliance rules.
+- **Corporate Actions (`/corporate-actions/`)**: Handle dividends, checkpoints, and other corporate events linked to assets.
+- **Network (`/network/`)**: Retrieve blockchain status, block details, and configuration.
+- **Signer (`/signer/`)**: Map configured signer names to their blockchain addresses.
+- **Authentication (`/auth/`, `/users/`)**: Manage API access credentials (specific to deployment).
 
 ## Using the API with `curl`
 
@@ -150,9 +150,7 @@ curl -s -X GET "${REST_API_BASE_URL}/assets/${ASSET_ID}" \
   ],
   "fundingRound": "Series A",
   "isFrozen": false,
-  "agents": [
-    "0x..."
-  ]
+  "agents": ["0x..."]
 }
 ```
 

@@ -35,8 +35,18 @@ After creation, issuers or their appointed [agents](/asset-agents) can issue tok
 
 ### Issuance and Redemption
 
-- **Issuance**: An agent of the fungible asset can mint (issue) tokens to a portfolio or account under their on-chain identity (control of a portfolio can be assigned to another identity before issuing assets). This increases the total supply and the agents balance. Tokens are issued by calling the `asset::issue` method, specifying the `asset_id`, `amount`, and target portfolio or account.
-- **Redemption**: Tokens can be redeemed (burned) from a portfolio or account owned by an appropriately permissioned agent of the asset, reducing both the total supply and the portfolio or account's balance. Tokens are redeemed by calling the `asset::redeem` method, specifying the `asset_id`, `value`, and portfolio or account to redeem the tokens from.
+- **Issuance**: An agent of the fungible asset can mint (issue) tokens to a portfolio or account under their on-chain identity (control of a portfolio can be assigned to another identity before issuing assets). This increases the total supply and the agents balance. Tokens are issued by calling the `asset::issue` method, specifying the `asset_id`, `amount`, and an `AssetHolderKind` (`Account`, `DefaultPortfolio`, or `UserPortfolio`) selecting the target.
+- **Redemption**: Tokens can be redeemed (burned) from a portfolio or account owned by an appropriately permissioned agent of the asset, reducing both the total supply and the portfolio or account's balance. Tokens are redeemed by calling the `asset::redeem` method, specifying the `asset_id`, `value`, and an `AssetHolderKind` selecting the source to redeem the tokens from.
+
+### Allowances
+
+`asset::approve(asset_id, spender, amount)` lets an asset holder authorize another account (`spender`, typically a smart contract or other third party) to move up to `amount` of the asset on their behalf, without granting the spender any broader identity or portfolio permission. Calling `approve` again replaces any existing allowance for that `(owner, spender, asset_id)` combination rather than adding to it. Setting `amount` to `0` removes the allowance. The current allowance can be queried via the `AssetApi::allowance(owner, spender, asset_id)` runtime API.
+
+:::note Unlimited allowances
+Setting `amount` to the maximum value of the on-chain `Balance` type (`Balance::MAX`, i.e. the maximum `u128` value) grants an unlimited allowance: it is never decremented as the spender draws it down via `transfer_funds`. This is the standard way to grant an allowance without needing to track or periodically top up a specific remaining amount.
+:::
+
+The `spender` draws down the allowance by calling `settlement::transfer_funds`, naming the owner's account as the source — see [Direct Transfers](/settlement#direct-transfers-transfer_funds). This pairing (`approve` + `transfer_funds`) mirrors the ERC-20 `approve`/`transferFrom` pattern, and is the recommended way for a smart contract to move a user's tokens without requiring that user to co-sign every individual transfer. `approve` emits an `Approval` event when the allowance is set, and each draw-down via `transfer_funds` emits `AllowanceSpent` with the amount spent and the remaining allowance (unless the allowance is unlimited, in which case it isn't decremented). Allowances only apply to fungible assets — NFTs have no allowance concept.
 
 ### Divisibility
 

@@ -134,7 +134,6 @@ This process ensures continuous access to identity-associated assets during upgr
 :::warning
 Smart contract interactions with the chain runtime can potentially be broken in a major chain upgrade. To mitigate this:
 
-- Use the [Upgradable Polymesh Ink Contract](/development/smart-contracts/#upgradable-polymesh-ink-contract) for native chain interactions
 - Implement a proxy pattern for contract upgrades
 - Test thoroughly before each network upgrade
 

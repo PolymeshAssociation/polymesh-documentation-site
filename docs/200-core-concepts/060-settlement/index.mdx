@@ -11,7 +11,7 @@ tags:
 
 ## Overview
 
-Settlement in Polymesh is the process by which assets are transferred between identities in a regulated and compliant fashion. Asset balances can be held in portfolios under an identity or signing accounts (public key address) linked to an identity. It requires all counterparties to affirm (agree) an instruction (a set of asset transfers) before the instruction settles (completes).
+Settlement in Polymesh is the process by which assets are transferred between identities in a regulated and compliant fashion. Asset balances can be held in [portfolios or directly on signing accounts](/asset-holdings) linked to an identity. It requires all counterparties to affirm (agree) an instruction (a set of asset transfers) before the instruction settles (completes).
 
 Key characteristics of Polymesh settlement:
 
@@ -56,8 +56,7 @@ Polymesh prevents double spending through immediate asset locking:
 - Locked assets cannot be used in other transactions until released
 - Asset locks are only released when:
   - The instruction is successfully executed (assets are transferred)
-  - The instruction is explicitly rejected by any counterparty
-  - Affirmations are manually withdrawn by the sending counterparty
+  - The instruction is explicitly rejected by any counterparty (`reject_instruction` unaffirms and unlocks all counterparty legs, including ones previously affirmed)
 - The asset owner maintains beneficial ownership even when locked
 
 :::note Asset Locks vs Mediator Locks
@@ -224,15 +223,13 @@ Instructions progress through several status states:
 
 ## Portfolio and Account ID Transfer Path
 
-With v7.4.0, settlement enables transfers between portfolios and Account IDs (signing key balances) in both directions. This represents a shift from the previous Portfolio only and aligns with traditional key based balance models of other chains while still leveraging the settlement engine for compliance and regulatory requirements. The settlement engine handles all transfers between portfolios and Account IDs, ensuring consistent compliance checks, double-spend prevention, and regulatory controls regardless of the transfer path.
+Settlement supports transfers between portfolios and Account IDs (signing key balances) in any combination, aligning with traditional key based balance models of other chains while still leveraging the settlement engine for compliance and regulatory requirements. The settlement engine handles all transfers between portfolios and Account IDs, ensuring consistent compliance checks, double-spend prevention, and regulatory controls regardless of the transfer path.
 
-Account ID balances were introduced as a non breaking change in v7.4.0 by extending the `PortfolioKind` type to support a type of `AccountId`. Settlement instructions still require the sender and receiver's DIDs to be looked up and provided as part of the instruction creation step when using the settlement pallet.
-
-Future chain updates may simplify the settlement instruction creation process by allowing the chain to automatically resolve the sender and receiver DIDs from their Account IDs, eliminating the need for clients to pre-resolve and provide this information while leveraging the full capabilities of the multi leg settlement engine.
+Both holding types are represented by the `AssetHolder` type (`Account` or `Portfolio`), used throughout the `Asset`, `Nft`, and `Settlement` pallets. Settlement instructions still require the sender and receiver's DIDs to be resolvable on-chain: an `AssetHolder::Account` is looked up against the account's identity key record, and the call fails if the account isn't linked to any identity.
 
 ## Account ID Transfers (`transfer_asset`)
 
-Polymesh v7.4 introduces `asset::transfer_asset`, a simplified single-leg fungible asset transfer API that accepts a receiver's Account ID directly, eliminating the need for clients to pre-resolve the receiver's DID. The chain resolves the receiver's DID internally via on-chain identity lookup for compliance checks. This creates a streamlined Account ID to Account ID transfer model while still leveraging the settlement engine under the hood.
+`asset::transfer_asset` is a simplified single-leg fungible asset transfer API that accepts a receiver's Account ID directly, eliminating the need for clients to pre-resolve the receiver's DID. The chain resolves the receiver's DID internally via on-chain identity lookup for compliance checks. This creates a streamlined Account ID to Account ID transfer model while still leveraging the settlement engine under the hood.
 
 :::info
 
@@ -242,7 +239,7 @@ The `asset::transfer_asset` function is designed for simple single-leg transfers
 
 ### How Account ID Transfers Work
 
-Account ID transfers work with balances held directly at the signing key's Account ID (using `PortfolioKind::AccountId` rather than explicit portfolios):
+Account ID transfers work with balances held directly at the signing key's Account ID (`AssetHolder::Account` rather than an `AssetHolder::Portfolio`):
 
 1. **Sender initiates transfer**: Sender calls `transfer_asset` with:
    - Receiver's Account ID (public address)
@@ -271,6 +268,18 @@ Account ID transfers work with balances held directly at the signing key's Accou
 - **No explicit portfolio support**: Transfers work directly with the signing key's Account ID balance
 - **Auto-execution on receiver approval**: When receiver affirms, execution happens atomically in the same transaction - no scheduler delay, immediate feedback on success or failure.
 - **Same engine**: Despite simplified API, uses the full settlement engine for compliance checks, double-spend prevention, and regulatory requirements
+
+By default, receiver affirmation is automatic in the model above. Receivers can opt into requiring explicit affirmation for their account by calling `settlement::set_mandatory_receiver_affirmation`.
+
+## Direct Transfers (`transfer_funds`)
+
+`settlement::transfer_funds(from: Option<AssetHolder>, to: AssetHolder, fund: Fund)` moves a fungible amount or a set of NFTs directly between any two `AssetHolder`s — accounts or portfolios, in any combination. If nothing requires the receiver to affirm — no [mandatory receiver affirmation](#account-id-transfers-transfer_asset) set for the receiving account and no mandatory mediators on the asset — the transfer executes immediately in the same call, either succeeding or failing right away with no scheduler delay and no separate manual execution step, and a successful transfer emits `FundsTransferred(IdentityId, AssetHolder, AssetHolder, Fund)`. If the receiver requires explicit affirmation, or the asset has mandatory mediators, `transfer_funds` instead creates a settlement instruction behind the scenes and follows the normal [affirmation](#affirmation-requirements) and [execution](#execution-behavior) flow for it.
+
+If the caller is not the owner of an account-based `from`, `transfer_funds` draws down an allowance previously granted via `asset::approve` instead of requiring the owner's signature on the transfer itself — see [Allowances](/core/assets/fungible#allowances). This is the mechanism a smart contract or other third party uses to move a pre-approved amount of a user's tokens without that user co-signing every transfer. NFTs have no allowance concept, so a third-party `transfer_funds` call for an NFT `fund` fails.
+
+### NFT Transfers (`transfer_nft`)
+
+`nft::transfer_nft(nfts, to, memo)` is the NFT equivalent of `transfer_asset`: a direct, account-to-account transfer of specific NFTs from a single collection, with no settlement instruction and no affirm/reject cycle — it completes immediately in the same call. Unlike `transfer_asset`, it does not accept a portfolio on either side; use `transfer_funds` instead if a portfolio is involved. See [Non-Fungible Assets](/core/assets/nft#nfts-and-the-settlement-pallet) for the full call details.
 
 ## Execution Behavior
 

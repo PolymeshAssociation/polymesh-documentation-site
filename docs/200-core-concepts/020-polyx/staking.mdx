@@ -80,8 +80,11 @@ This is because the election of node operators occurs at the start of each era a
 When initially configuring staking, you can click the "show advanced options" button to access additional staking options.
 This includes:
 
-- defining a [Controller key](/glossary#controller), which is a separate key that can control some aspects of a staking account but does not have direct access to the bonded tokens. This is useful for security purposes as it allows you to keep your [Stash key](/glossary#stash) secure while still being able to perform actions such as updating nominations from a separate key. For a list of actions that can be performed by the controller key, please refer to the [glossary](/glossary#controller).
-- setting a reward destination for rewards. This can be set to automatically stake rewards, send rewards to the stash address, send rewards to the controller address, or send rewards to a separate address.
+- setting a reward destination for rewards. This can be set to automatically stake rewards, send rewards to the stash address, or send rewards to a separate address.
+
+:::note
+Newly bonded stashes no longer support a separate [Controller key](/glossary#controller) — the stash key itself always manages the bonded funds. A separate controller is a legacy pattern retained only for stashes bonded before this change, and their controller can still be reset to the stash key at any time.
+:::
 
 ### Additional actions
 
@@ -89,7 +92,7 @@ Once you have staked your POLYX, you will have access to additional actions thro
 
 - **Bond More POLYX** - Increases the amount of POLYX you have bonded.
 - **Change Nominations** - Update the node operators you are nominating.
-- **Change Controller Address** - Update the controller key for the account.
+- **Change Controller Address** - Reset a legacy separate controller back to the stash key. New bonds do not support setting a separate controller key.
 - **Change Reward Destination** - Update the destination for rewards.
 - **Remove Nominations** - Remove all nominations from the account.
 - **Unbond POLYX** - Initiate the unbonding process for your staked tokens.

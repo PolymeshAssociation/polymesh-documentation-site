@@ -61,8 +61,7 @@ Mediators have several control mechanisms during the settlement process:
 
 **Optional Control Actions:**
 
-- `settlement::withdraw_affirmation_as_mediator` - Remove previous affirmation
-- `settlement::reject_instruction_as_mediator` - Cancel instruction entirely
+- `settlement::reject_instruction_as_mediator` - cancels the instruction entirely if called before executing
 - `settlement::lock_instruction` - Lock instruction for execution (SettleAfterLock only)
 
 **Affirmation Rules:**
@@ -92,7 +91,6 @@ Settlement locking is particularly valuable for:
 2. **Standard Affirmation Process**: All parties and mediators affirm the instruction normally
 
 3. **Locking Phase**: A mediator calls `settlement::lock_instruction` to lock the instruction for execution
-
    - **Required Parameters**: The call requires both the `instruction_id` to specify which instruction to lock and a `weightLimit` parameter
    - **Weight Mechanism**: Weight in Substrate chains acts similar to gas in Ethereum - it measures computational cost and prevents infinite loops. If the weight limit is too low, the transaction will fail before execution begins
    - **Runtime API Available**: Use the `settlement::lock_instruction_weight` runtime API to get the correct weight for a specific instruction and ensure proper fee calculation
@@ -102,7 +100,6 @@ Settlement locking is particularly valuable for:
    - A timestamp is recorded for the locking period
 
 4. **Protected Period**: During the lock period:
-
    - Parties cannot withdraw affirmations or reject the instruction
    - The instruction is protected from cancellation
    - Assets remain locked until settlement or lock expiry

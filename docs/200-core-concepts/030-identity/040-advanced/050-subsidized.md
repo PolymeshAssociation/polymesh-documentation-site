@@ -72,11 +72,9 @@ Before implementing subsidized accounts, be aware of these important limitations
 
 ### Setting Up Subsidies
 
-Subsidizers can establish subsidies using `relayer::set_paying_key` providing the account key to be subsidized and the maximum POLYX allowance for the subsidy. This transaction creates an [authorization](/authorizations) request targeting the key to be subsidized for approval. Once the subsidized key accepts the authorization request, the subsidy relationship will be fully established between the keys.
+Subsidizers establish a subsidy by calling `relayer::approve_subsidy`, providing the account key to be subsidized and the maximum POLYX allowance for the subsidy. This writes the pending subsidy directly to chain state — unlike most delegated permissions on Polymesh, it does **not** go through the [authorization](/authorizations) system, so there is no authorization ID involved. The subsidized key then calls `relayer::accept_subsidy`, naming the paying key, to establish the relationship.
 
-:::note
-Alternatively, the subsidizer can create the authorization request through the `identity::add_authorization` transaction selecting an authorization type of `AddRelayerPayingKey`. This alternate option allows an optional expiry to be associated with the authorization request.
-:::
+Before the subsidized key accepts, the subsidizer can cancel the pending offer by calling `relayer::revoke_subsidy`.
 
 ### Managing Subsidies
 
@@ -86,11 +84,12 @@ Both the subsidizer and subsidized party have control over the subsidy relations
 
 - `relayer::decrease_allowance`: Reduce the subsidy allowance
 - `relayer::increase_allowance`: Increase the subsidy allowance
-- `relayer::remove_paying_key`: Remove the subsidy relationship
+- `relayer::revoke_subsidy`: Cancel a pending, not-yet-accepted subsidy offer
+- `relayer::remove_subsidy`: Remove an established subsidy relationship
 
 **Subsidized Party Controls**:
 
-- `relayer::remove_paying_key`: The subsidized key can unilaterally exit the subsidy relationship at any time
+- `relayer::remove_subsidy`: The subsidized key can unilaterally exit the subsidy relationship at any time
 
 :::important
 The ability for the subsidized key to unilaterally exit the relationship is an important protection mechanism. It ensures that the subsidizer cannot censor transactions by maintaining control over the relationship - the subsidized party can always choose to exit the subsidy arrangement and transact normally.
