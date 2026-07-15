@@ -121,9 +121,9 @@ flowchart TD
 
 Secondary keys can be granted fine-grained [permissions](/identity/advanced/secondary-keys#secondary-key-permissions), allowing them to perform only specific actions or access certain resources. Permissions can be scoped to:
 
-- **Assets**: Restrict which assets the key can interact with (e.g., only certain tokens).
-- **Portfolios**: Restrict which portfolios the key can access or manage.
-- **Transactions**: Restrict which types of transactions the key can sign (e.g., transfers, settlements, etc.).
+- **Transactions**: Restrict which blockchain functions the key can call (e.g., transfers, settlements, etc.).
+- **Portfolios**: Restrict which portfolios the key can access or manage — this is what governs the key's ability to move and transfer assets not directly held by their key.
+- **Assets**: Restrict which assets the key can administer **as an external agent** (issuance, compliance, and other agent actions). Asset permissions do **not** restrict ordinary transfers of an asset out of a portfolio — that is governed by portfolio permissions. See [Asset permissions do not restrict transfers](/identity/advanced/secondary-keys#secondary-key-permissions).
 
 The diagram below illustrates how secondary key permissions can be configured:
 

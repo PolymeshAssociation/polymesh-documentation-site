@@ -16,7 +16,7 @@ tags:
 A primary key is the ultimate controller of a Polymesh identity. Each identity must have exactly one primary key that serves as its root of authority, able to manage all aspects of the identity including assets, permissions, and key management.
 
 :::warning
-Primary keys cannot be replaced if lost - they can only be rotated to a new key through a controlled [authorization](/authorizations) process requiring the primary key to initiate the rotation. Secure storage and backup of primary keys is critical.
+Primary keys cannot be replaced if lost — they can only be rotated to a new key through a controlled [authorization](/authorizations) process. The rotation is normally initiated by the primary key, but a [secondary key](/identity/advanced/secondary-keys) with `add_authorization` permission can also initiate it — which is what makes such a key usable as a recovery path if the primary key is lost. Secure storage and backup of primary keys is critical.
 :::
 
 ## Supported Key Types
@@ -38,31 +38,36 @@ Each type has its own security and operational considerations:
 
 ## Core Capabilities and Operations
 
-A primary key has unrestricted access to all identity functions and cannot have its permissions limited. The following operations can only be performed by primary keys:
+A primary key has unrestricted access to all identity functions and cannot have its permissions limited. It can perform any operation the identity is authorized for.
 
-### Identity Management
+### Functions exclusive to the primary key
 
-- Adding, removing, and modifying permissions of [secondary keys](/identity/advanced/secondary-keys)
-- Freezing/unfreezing all secondary keys (using `identity::freeze_secondary_keys`/`identity::unfreeze_secondary_keys`)
+A small set of secondary-key management functions can **only** be performed by the primary key. The runtime enforces this directly — it rejects these calls from any secondary key, regardless of that key's permissions:
 
-### Key Management Operations
+- Setting or modifying secondary key permissions (`identity::set_secondary_key_permissions`)
+- Adding secondary keys directly via `identity::add_secondary_keys_with_authorization`
+- Removing secondary keys (`identity::remove_secondary_keys`)
+- Freezing/unfreezing all secondary keys (`identity::freeze_secondary_keys` / `identity::unfreeze_secondary_keys`)
+- Acting as a [multisig](/identity/advanced/multisig)'s admin or paying identity (the multisig `..._via_admin` / `..._via_payer` calls, which require the caller to be the primary key of the designated admin/payer identity)
 
-- Removing secondary keys (via `identity::remove_secondary_keys`)
-- Setting and modifying secondary key permissions (via `identity::set_secondary_key_permissions`)
+### Operations the primary key can perform, but which are not exclusive to it
 
-### Asset and Portfolio Control
+The primary key can also carry out identity-level operations such as:
 
 - Creating [multisig](/identity/advanced/multisig) arrangements
 - Transferring asset ownership between identities
 - Granting [agent permissions](/asset-agents) for asset management
 - Authorizing [portfolio custody](/portfolios/custody) transfers
+- Initiating [primary key rotation](#key-rotation)
+
+These are **not** restricted to the primary key. A [secondary key](/identity/advanced/secondary-keys) with the appropriate extrinsic permissions — plus permission to call `identity::add_authorization` where the operation uses the [authorization](/authorizations) system — can perform them too. Reserve them for the primary key as a matter of operational policy, not because the protocol requires it.
 
 :::note
 While primary keys can execute any transaction the identity is authorized for, it's recommended to use properly permissioned [secondary keys](/identity/advanced/secondary-keys) for routine operations and reserve the primary key for critical identity management functions.
 :::
 
-:::warning Authorization Capabilities
-While primary keys have unrestricted access, [secondary keys](/identity/advanced/secondary-keys) with `add_authorization` permissions can also create authorization requests for sensitive operations, including primary key rotation. Carefully audit which secondary keys have authorization permissions and consider them as having significant security implications for your identity.
+:::warning Extrinsic permissions delegate authority
+While primary keys have unrestricted access, extrinsic (transaction) permissions granted to [secondary keys](/identity/advanced/secondary-keys) delegate the full authority of the calls they allow. A secondary key with `add_authorization` permission can create authorization requests for sensitive operations, including primary key rotation; more generally, a key permitted to call any permission, key, or authorization-management extrinsic can obtain or grant permissions broader than its own. `Assets`/`Portfolios` scoping does not contain this — those scopes bound only portfolio access (asset transfers) and external-agent actions, not identity-management authority. Carefully audit which secondary keys hold such permissions. See [Extrinsic Permissions Delegate the Authority of the Calls They Allow](/identity/advanced/secondary-keys#extrinsic-permissions-delegate-the-authority-of-the-calls-they-allow).
 :::
 
 ## Key Management

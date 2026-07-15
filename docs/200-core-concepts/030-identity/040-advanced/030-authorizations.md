@@ -79,6 +79,8 @@ The `add_authorization` function can be called by **secondary keys** with approp
 - **Portfolio custody changes** - Requesting changes to portfolio management rights
 
 **Security Recommendation**: Only grant `add_authorization` permissions to highly trusted secondary keys. While targets must still accept these authorizations, the ability to initiate such requests should be carefully controlled as it can serve as a powerful backup mechanism for identity management.
+
+`add_authorization` is one instance of a broader principle: extrinsic permissions delegate the full authority of the calls they allow, so permission to call any permission-, key-, or authorization-management extrinsic effectively delegates that management authority. See [Extrinsic Permissions Delegate the Authority of the Calls They Allow](/identity/advanced/secondary-keys#extrinsic-permissions-delegate-the-authority-of-the-calls-they-allow).
 :::
 
 In some special cases, a dedicated method may be provided to create an authorization request. For example, `multisig::add_multisig_signers_via_admin` allows a permissioned admin identity to act on behalf of the multisig to add a new signer.

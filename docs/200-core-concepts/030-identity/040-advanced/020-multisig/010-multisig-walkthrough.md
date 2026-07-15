@@ -32,7 +32,7 @@ These keys can be created in any [wallet](/getting-started/keys) compatible with
 
 ### Step 2 - Creating A MultiSig
 
-We now create the MultiSig key by calling the `multisig::createMultisig` extrinsic. This can only be called by a Primary Key of an existing Identity.
+We now create the MultiSig key by calling the `multisig::createMultisig` extrinsic. This can be submitted by the identity's primary key, or by a secondary key that is permissioned to call it — but only the **primary key** can attach custom permissions to the resulting MultiSig signer key. A secondary-key caller must omit permissions (passing custom permissions is rejected with `KeyNotAllowed`), so the MultiSig signer key is created with empty permissions.
 
 In this tutorial, `ALICE_STASH` is the Primary Key of our identity (`0x01`), so we use this key to submit the `multisig::createMultisig` transaction.
 

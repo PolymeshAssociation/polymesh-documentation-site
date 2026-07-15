@@ -24,9 +24,9 @@ Unlike the primary key (which has full control over an identity), secondary keys
 
 Secondary keys can be configured with specific permissions limited to:
 
-- **Assets**: Control which assets a key can interact with
 - **Transactions**: Define which specific blockchain functions a key can execute
-- **Portfolios**: Specify which portfolios a key can access and manage
+- **Portfolios**: Control which portfolios a key can access — this governs the key's ability to move and transfer assets
+- **Assets**: Restrict which assets a key can administer as an external agent (asset-agent actions only — not ordinary transfers)
 
 ### Enhanced Security
 
@@ -117,28 +117,51 @@ This method enables bulk addition of secondary keys without requiring each key t
 
 ### Secondary Key Permissions
 
-Permissions for secondary keys are divided into three categories that work together to define the key's capabilities:
+Permissions for secondary keys are divided into three categories:
 
-- **Assets**: Control which assets the key can interact with
-  - Full access to all assets
-  - No access to any assets
-  - Access to specific assets only
-
-- **Extrinsics** (transactions): Define which blockchain functions the key can execute
+- **Extrinsics** (transactions): Define which blockchain functions (pallet and method) the key can call at all. This is the first gate every call passes through.
   - Full access to all functions
   - No access to any functions
   - Access to specific modules and/or methods
 
-- **Portfolios**: Specify which portfolios the key can access and manage
+- **Portfolios**: Control which of the identity's portfolios the key can access and manage. **This is what governs a key's ability to move and transfer assets** not directly held by their key — restricting a key's portfolios restricts which portfolio holdings it can move, send in a settlement, or otherwise transfer.
   - Full access to all portfolios
   - No access to any portfolios
   - Access to specific portfolios only
 
-The effective permissions of a secondary key are determined by the intersection of these categories. For example, a key with access to Asset A and Portfolio B can only perform authorized transactions involving Asset A within Portfolio B.
+- **Assets**: Control which assets the key can administer **as an external agent** — asset-agent actions such as issuance, redemption, compliance configuration, and controller (forced) transfers on assets the identity is an agent for.
+  - Full access to all assets
+  - No access to any assets
+  - Access to specific assets only
+
+:::warning Asset permissions do not restrict transfers
+Asset permissions apply **only** to external-agent actions on an asset. They do **not** restrict a key's ability to transfer that asset out of the identity's portfolios — ordinary transfers are governed entirely by **portfolio** permissions. If you need to stop a secondary key from moving or sending a particular holding, restrict its **portfolio** permissions; restricting its asset permissions will not prevent the transfer.
+:::
+
+How the three combine: a call must first be permitted by the key's **extrinsic** permissions. Beyond that, a call that moves assets in or out of a portfolio additionally checks the key's **portfolio** permissions, and a call performed as an asset's external agent additionally checks the key's **asset** permissions. Each dimension is enforced independently by the calls that use it — they are not intersected into a single "asset-within-portfolio" scope.
 
 :::note
 Some blockchain functions (like POLYX transfers and staking operations) don't involve assets, portfolios or an identity. These actions are always permitted.
 :::
+
+### Extrinsic Permissions Delegate the Authority of the Calls They Allow
+
+Extrinsic (transaction) permissions control **which** calls a secondary key may submit. They do **not** sandbox the **effects** of those calls. This distinction is important: granting a secondary key permission to call an extrinsic grants it the full authority that extrinsic carries when it executes.
+
+Some extrinsics create, assign, or modify key permissions, or otherwise link keys and authorizations to the identity. **Granting a secondary key permission to call such an extrinsic is equivalent to delegating that permission-management authority to the key.** A key permitted to call these calls can therefore acquire — or confer on another key — authority beyond the `Assets`/`Portfolios` scope it was originally assigned, because those scopes constrain only portfolio access and external-agent actions, not the identity-management authority carried by the call itself.
+
+This is by design. Polymesh's permission model treats a key's extrinsic-permission set as a delegation of authority: if a key may call a permission- or key-management extrinsic, it may exercise that extrinsic's authority in full. Deciding which extrinsics to permission is therefore the identity owner's responsibility.
+
+:::warning Granting call permissions can enable privilege escalation
+Because extrinsic permissions delegate the authority of the calls they allow, granting a secondary key permission to call an identity, key, or authorization-management extrinsic (for example `add_authorization`, or any call that assigns or changes key permissions) can allow that key to obtain, or grant to another key, permissions broader than its own. This is intended behaviour of the delegation model, **not** a containment boundary.
+
+When permissioning secondary keys:
+
+- Apply least privilege: grant only the specific extrinsics a key needs for its role, and prefer a minimal, explicit extrinsic set over broad "all functions" (`Whole`) access.
+- Treat permission to call any permission-, key-, or authorization-management extrinsic as granting that management authority itself.
+- Do not rely on `Assets` or `Portfolios` scoping to contain a key that also holds such an extrinsic permission — those scopes bound only portfolio access and external-agent actions, not the authority a management call carries.
+- Note that the most critical identity functions are reserved to the primary key and cannot be delegated to a secondary key at all — see **Primary Key Exclusive Functions** below.
+  :::
 
 ### Updating Permissions
 
