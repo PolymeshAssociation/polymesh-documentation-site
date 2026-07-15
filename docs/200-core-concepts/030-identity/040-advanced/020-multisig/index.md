@@ -50,7 +50,7 @@ The basic flow for multisig operations:
 
 When a multisig is created by calling `multisig::create_multisig`:
 
-1. It's automatically added as a secondary key to the creator's identity. Optionally the creator can assign [secondary key permissions](/identity/advanced/secondary-keys/#secondary-key-permissions) to the multisig when creating.
+1. It's automatically added as a secondary key to the creator's identity. Optionally the creator can assign [secondary key permissions](/identity/advanced/secondary-keys/#secondary-key-permissions) to the multisig when creating — but only if the caller is the **primary key** of the creator's identity. A secondary key can also call `create_multisig`, but only without specifying custom permissions (the new multisig signer key is then created with empty permissions); passing custom permissions from a secondary key is rejected with `KeyNotAllowed`.
 2. The creator's identity becomes the paying identity
 3. Authorization requests are sent to all designated signers
 4. Signers must accept their authorizations before participating
@@ -58,7 +58,6 @@ When a multisig is created by calling `multisig::create_multisig`:
 When selecting signing keys for a multisig consider the following requirements:
 
 - Signing keys cannot be linked to other identities or multisigs
-- Signers cannot directly receive or send POLYX
 
 ### Administration
 
@@ -145,7 +144,7 @@ This process can be optimized by using Polymesh's batching functionality to comb
 
 ### Proposal Creation
 
-To create a multisig proposal, a signer must call the `multisig::create_proposal_as_key` extrinsic. This allows the proposer to wrap a standard blockchain call into a proposal that other multisig signers can vote on. The creator must be one of the authorized signers of the multisig, and by creating the proposal they automatically cast an approval vote.
+To create a multisig proposal, a signer must call the `multisig::create_proposal` extrinsic. This allows the proposer to wrap a standard blockchain call into a proposal that other multisig signers can vote on. The creator must be one of the authorized signers of the multisig, and by creating the proposal they automatically cast an approval vote.
 
 When creating a proposal, you can specify:
 
@@ -156,7 +155,7 @@ When creating a proposal, you can specify:
 Once created, proposals cannot be modified - they can only be approved or rejected by other signers. If enough signer threshold is reached during creation, the proposal will execute right away without requiring additional approvals.
 
 :::tip
-When using the Polymesh SDK, regular transactions from a multisig signer must use `.runAsProposal()` instead of `.run()`. The SDK will automatically wrap the transaction with `multisig::create_proposal_as_key`. Proposal approvals/rejections by signers should still use `.run()` directly.
+When using the Polymesh SDK, regular transactions from a multisig signer must use `.runAsProposal()` instead of `.run()`. The SDK will automatically wrap the transaction with `multisig::create_proposal`. Proposal approvals/rejections by signers should still use `.run()` directly.
 :::
 
 ### Proposal Voting

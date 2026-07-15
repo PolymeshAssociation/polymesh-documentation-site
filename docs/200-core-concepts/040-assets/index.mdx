@@ -119,8 +119,8 @@ This functionality provides a tamper-evident, on-chain record of all documents a
 
 Controller transfers allow the asset owner or an authorized agent to forcibly transfer tokens or NFTs from one portfolio to another, typically for regulatory or legal enforcement scenarios. This feature is available for both fungible and non-fungible assets, but the method and parameters differ slightly:
 
-- **Fungible Assets:** Use the `asset::controller_transfer` method. Parameters include `asset_id`, `value` (amount to transfer), and `from_portfolio` (the portfolio to debit). The tokens are transferred to the caller's default portfolio.
-- **Non-Fungible Assets (NFTs):** Use the `nft::controller_transfer` method. Parameters include `asset_id`, `nft_id` (the unique identifier of the NFT to transfer), `source_portfolio` (the portfolio to debit), and `callers_portfolio_kind` (the ID of a portfolio owned by the caller to receive the NFT). This allows specifying the exact NFT and the destination portfolio.
+- **Fungible Assets:** Use the `asset::controller_transfer` method. Parameters are `asset_id`, `value` (amount to transfer), `source` (the [`AssetHolder`](/asset-holdings) — account or portfolio — to debit), and `destination_kind` (an `AssetHolderKind` selecting where on the caller's identity the tokens land: `Account`, `DefaultPortfolio`, or `UserPortfolio`).
+- **Non-Fungible Assets (NFTs):** Use the `nft::controller_transfer` method. Parameters are `nfts` (the collection and specific NFT IDs to transfer), `source` (the `AssetHolder` — account or portfolio — to debit), and `destination_kind` (an `AssetHolderKind` selecting where on the caller's identity the NFTs land).
 
 :::info
 **Note:** Assets that are locked in a settlement instruction cannot be transferred using controller transfer. While controller transfers bypass many compliance and restriction checks, they cannot bypass basic balance checks. If tokens or NFTs are locked (e.g., as part of a pending settlement), controller transfer will fail due to insufficient available balance.

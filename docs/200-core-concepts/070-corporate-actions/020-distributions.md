@@ -52,7 +52,7 @@ Once the underlying Corporate Action exists, the distributor attaches the distri
 
 - `ca_id`: Corporate Action Identifier **obtained from initiating the Corporate Action**. It contains:
   - `asset_id`: The `AssetId` of the target asset.
-  - `local_id`: A user-defined ID for this specific distribution event.
+  - `local_id`: The sequential, chain-assigned local ID of the Corporate Action for this asset (auto-incremented when the CA was initiated).
 - `portfolio`: The portfolio from which the distribution asset will be sourced.
 - `currency`: The `AssetId` of the asset being distributed (the dividend currency).
 - `per_share`: The amount of `currency` paid per unit of the target asset.

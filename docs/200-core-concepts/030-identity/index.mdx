@@ -39,7 +39,7 @@ An identity is not required for:
 
 ### Identity Creation & Verification
 
-Identities are created through DID registration. Users can self-register using `identity::register_did`, or a permissioned DID registrar can register a DID for a target key.
+Identities are created through DID registration. Users can self-register using `identity::self_register_did`, or a permissioned DID registrar can register a DID for a target key using `identity::register_did`.
 
 ### Asset Management
 
@@ -76,7 +76,7 @@ This diagram shows DID onboarding through self-registration or a permissioned DI
 flowchart TD
     User["User"]
     UserKey["Primary Signing Key"]
-    SelfReg["Self-register DID<br/>identity::register_did"]
+    SelfReg["Self-register DID<br/>identity::self_register_did"]
     Registrar["Permissioned DID Registrar<br/>registers DID for user"]
     MainDID["On-chain Identity (DID)"]
     User --> UserKey

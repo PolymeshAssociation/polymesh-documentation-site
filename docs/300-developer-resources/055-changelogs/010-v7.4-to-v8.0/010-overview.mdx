@@ -42,7 +42,7 @@ Chain v8 adds `pallet-revive` to the mainnet runtime as its only smart contract 
 
 ### CDD service providers renamed to DID registrars; child identities removed
 
-`CddServiceProviders` is renamed `DidRegistrars`, `Identity` gains permissionless (`self_register_did`) and registrar-gated (`register_did`) ways to obtain a DID without a CDD claim, and child-identity calls/events/storage are removed entirely. The CDD-attesting registration flow (`cdd_register_did`) is not removed — it remains for identities that need a CDD claim attached. See [Identity & Onboarding](./060-identity-and-onboarding.mdx) for the pallet-level detail, and the core-concepts [Identity Onboarding](/identity/onboarding) doc for the conceptual model.
+`CddServiceProviders` is renamed `DidRegistrars`, `Identity` gains permissionless (`self_register_did`) and registrar-gated (`register_did`) ways to obtain a DID without a CDD claim, and child-identity calls/events/storage are removed entirely. The legacy `cdd_register_did`/`cdd_register_did_with_cdd` calls are not removed, but are deprecated and no longer attach a `CustomerDueDiligence` claim — they now behave the same as `register_did`, just with `secondary_keys` support. See [Identity & Onboarding](./060-identity-and-onboarding.mdx) for the pallet-level detail, and the core-concepts [Identity Onboarding](/identity/onboarding) doc for the conceptual model.
 
 ### Subsidies get a dedicated approve/accept/revoke flow
 

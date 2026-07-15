@@ -53,7 +53,7 @@ There are two methods for creating checkpoints:
 
 ### 1. Manual Checkpoints
 
-Individual checkpoints can be created immediately using `asset::create_checkpoint`. These are useful for:
+Individual checkpoints can be created immediately using `checkpoint::create_checkpoint`. These are useful for:
 
 - One-off corporate actions
 - Ad-hoc reporting requirements
@@ -62,7 +62,7 @@ Individual checkpoints can be created immediately using `asset::create_checkpoin
 
 ### 2. Scheduled Checkpoints
 
-Scheduled checkpoints are created by providing an array of future timestamps using `asset::create_schedule`. The schedule consists of:
+Scheduled checkpoints are created by providing an array of future timestamps using `checkpoint::create_schedule`. The schedule consists of:
 
 - A sorted array of timestamps defining when checkpoints should be created
 - Each timestamp specified in milliseconds since Unix epoch
@@ -81,7 +81,7 @@ If multiple scheduled checkpoints have passed their timestamp when a balance-mod
 :::note
 Once created, schedule timestamps cannot be modified, the schedule can only be removed. A new schedule must be created if changes are needed.
 
-`asset::remove_schedule` removes an existing checkpoint schedule.
+`checkpoint::remove_schedule` removes an existing checkpoint schedule.
 :::
 
 ## Accessing Checkpoint Data

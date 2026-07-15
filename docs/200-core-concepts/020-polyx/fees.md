@@ -42,7 +42,7 @@ In addition to transaction fees, certain on-chain transactions carry additional 
 
 The transactions that carry these additional protocol fees are configurable and can be updated via the governance process - modifying both the transactions that carry these fees, as well as the fee amounts for each transaction.
 
-Currently only one types of transaction carries additional fees - this is:
+Currently only one type of transaction carries additional fees - this is:
 
 - registering a new ticker: this has a 25 POLYX fee. Ticker registration is optional and only required if you wish to have a unique ticker linked to your asset.
 

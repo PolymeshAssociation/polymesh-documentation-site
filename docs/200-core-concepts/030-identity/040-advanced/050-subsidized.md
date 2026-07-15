@@ -82,8 +82,9 @@ Both the subsidizer and subsidized party have control over the subsidy relations
 
 **Subsidizer Controls**:
 
-- `relayer::decrease_allowance`: Reduce the subsidy allowance
-- `relayer::increase_allowance`: Increase the subsidy allowance
+- `relayer::decrease_polyx_limit`: Reduce the subsidy allowance
+- `relayer::increase_polyx_limit`: Increase the subsidy allowance
+- `relayer::update_polyx_limit`: Set the subsidy allowance to a specific value
 - `relayer::revoke_subsidy`: Cancel a pending, not-yet-accepted subsidy offer
 - `relayer::remove_subsidy`: Remove an established subsidy relationship
 

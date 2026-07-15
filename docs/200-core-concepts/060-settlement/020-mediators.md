@@ -63,6 +63,7 @@ Mediators have several control mechanisms during the settlement process:
 
 - `settlement::reject_instruction_as_mediator` - cancels the instruction entirely if called before executing
 - `settlement::lock_instruction` - Lock instruction for execution (SettleAfterLock only)
+- `settlement::unlock_instruction` - Explicitly unlock a locked instruction, starting the relock cooldown (SettleAfterLock only)
 
 **Affirmation Rules:**
 
@@ -106,26 +107,33 @@ Settlement locking is particularly valuable for:
 
 5. **Final Settlement**: The instruction can be settled using standard settlement methods during the lock period
 
-### Lock Period and Expiry
+### Lock Period, Unlocking, and Relocking
 
 - **Maximum Lock Period**:
   - **Mainnet and Testnet**: 24 hours (86,400,000 milliseconds)
   - **Development chains**: 24 minutes (1,440,000 milliseconds)
-- **Lock Expiry Behavior**: When the lock period expires:
+- **Explicit Unlock**: A mediator can call `settlement::unlock_instruction` to unlock a `LockedForExecution` instruction before its lock period expires. This starts a **relock cooldown** during which the instruction cannot be relocked:
+  - **Mainnet and Testnet**: 4 hours (14,400,000 milliseconds)
+  - **Development chains**: 10 minutes (600,000 milliseconds)
+- **Lock Expiry Behavior**: When the maximum lock period elapses without an explicit unlock:
   - The instruction status remains `LockedForExecution`
-  - **Execution is blocked** unless a mediator calls `lock_instruction` again to reset the timestamp
+  - **Execution is blocked** unless a mediator successfully relocks the instruction (see below)
   - **Assets remain locked** and are NOT automatically released
   - **Withdrawal of affirmations remains blocked** (status is still `LockedForExecution`)
-  - Only rejection by any valid party is allowed after expiry
-  - Assets are only released by execution, rejection, or successful re-locking followed by execution
-- **Lock Extension**: Mediators can extend the lock period by calling `lock_instruction` again, which updates the timestamp and resets the lock period
-- **Timestamp Tracking**: The system tracks when each instruction was locked for period validation
+  - Rejection by any valid party is allowed after expiry
+  - Assets are only released by execution, rejection, or successful relocking followed by execution
+- **Relocking**: A mediator can call `lock_instruction` again on an already-locked or previously-unlocked instruction, subject to two independent conditions, either of which permits the relock:
+  - If the instruction is still `LockedForExecution` and its maximum lock period **plus** the relock cooldown has elapsed since it was originally locked, or
+  - If the instruction was explicitly unlocked via `unlock_instruction` and the relock cooldown has elapsed since that unlock
+  - Calling `lock_instruction` on a still-locked instruction before this window opens fails with `InstructionAlreadyLocked`; calling it during an active cooldown after an explicit unlock fails with `RelockCooldownNotExpired`
+  - Each successful relock increments a per-instruction relock counter. Relocking is capped at **3 relocks** per instruction (`MaxRelockCount`); a further attempt fails with `MaxRelockCountExceeded`
+- **Timestamp Tracking**: The system tracks both when an instruction was locked and, separately, when it was last explicitly unlocked, to enforce the windows above.
 
 ### Requirements and Restrictions
 
-**Who Can Lock Instructions:**
+**Who Can Lock, Unlock, or Relock Instructions:**
 
-Only designated mediators can call `settlement::lock_instruction`. Mediators can be designated:
+Only designated mediators can call `settlement::lock_instruction` or `settlement::unlock_instruction`. Mediators can be designated:
 
 - At the instruction level (specified during creation)
 - At the asset level (mandatory mediators for involved assets)
@@ -133,12 +141,14 @@ Only designated mediators can call `settlement::lock_instruction`. Mediators can
 **Technical Requirements:**
 
 - Instruction must use `SettlementType::SettleAfterLock`
-- All standard settlement conditions must be met (affirmations, compliance, etc.)
+- All standard settlement conditions must be met (affirmations, compliance, etc.) when locking or relocking
 - Caller must be an authorized mediator
-- Already locked instructions can be re-locked to extend the period
-- **Required Parameters**:
+- Relocking is subject to the cooldown and relock-count limits described above
+- **Required Parameters** (`lock_instruction`):
   - `instruction_id`: The ID of the instruction to lock
   - `weightLimit`: Weight allocation with `refTime` (computational time) and `proofSize` (storage proof size) values. Use the `settlement::lock_instruction_weight` runtime api call to determine the correct weight
+- **Required Parameters** (`unlock_instruction`):
+  - `instruction_id`: The ID of the instruction to unlock
 
 **Compliance and Validation:**
 
@@ -154,14 +164,15 @@ This design ensures that cross-chain coordinators can rely on Polymesh settlemen
 - **Rejection**: Only mediators can reject the instruction during the lock period (unless lock period has expired)
 - **Withdrawal of affirmations**: Prevented for all parties during lock period
 - **Affirmation**: Standard affirmation rules apply
-- **Multiple mediators**: All mediators have equal powers to execute, reject, or extend locks
+- **Unlocking**: Any mediator can unlock the instruction early via `unlock_instruction`, which starts the relock cooldown
+- **Multiple mediators**: All mediators have equal powers to execute, reject, unlock, or relock
 
 **After Lock Expiry:**
 
-- **Execution**: Blocked unless a mediator calls `lock_instruction` again to reset timestamp
+- **Execution**: Blocked unless a mediator successfully relocks the instruction (subject to the cooldown and relock-count limits described above)
 - **Rejection**: Any valid party can reject the instruction
 - **Withdrawal of affirmations**: Still blocked (instruction status remains `LockedForExecution`)
-- **Re-locking**: Mediators can reset the lock period by calling `lock_instruction` again
+- **Re-locking**: Mediators can relock the instruction once the maximum lock period plus the relock cooldown has elapsed, up to `MaxRelockCount` (3) times total
 
 ### Cross-Chain Settlement Use Cases
 

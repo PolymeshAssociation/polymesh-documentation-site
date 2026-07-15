@@ -48,8 +48,8 @@ Polymesh offers several built-in agent groups for common use cases:
 | :-------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Full`          | Grants all permissions for the asset.                                                                                                                              |
 | `ExceptMeta`    | Grants all permissions _except_ those related to managing agent identities and permissions (`externalAgents` pallet).                                              |
-| `PolymeshV1PIA` | Grants permission to all extrinsics in the CorporateAction, CorporateBallot and CapitalDistribution pallets                                                        |
-| `PolymeshV1CAA` | Grants permission to the `issue`, `redeem` and `controller_transfer` extrinsics from the `Asset` pallet and all extrinsics in the STO pallet, except `sto::invest` |
+| `PolymeshV1CAA` | Grants permission to all extrinsics in the CorporateAction, CorporateBallot and CapitalDistribution pallets                                                        |
+| `PolymeshV1PIA` | Grants permission to the `issue`, `redeem` and `controller_transfer` extrinsics from the `Asset` pallet and all extrinsics in the STO pallet, except `sto::invest` |
 
 ### Custom Groups
 

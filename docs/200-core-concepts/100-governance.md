@@ -23,7 +23,7 @@ There are three main groups of actors in Polymesh governance:
 
 - Governing Council
 
-The governance process begins either via a community submitted proposal, which is then curated by other POLYX token holders, or a committee submitted proposal. In both cases the governing council is responsible for accessing the change and determining whether it should be ratified, rejected or temporarily skipped.
+The governance process begins either via a community submitted proposal, which is then curated by other POLYX token holders, or a committee submitted proposal. In both cases the governing council is responsible for assessing the change and determining whether it should be ratified, rejected or temporarily skipped.
 
 The governance system consists of POLYX token holders populating and curating a list of PIPs ordered by their importance to the community. The governing council will then consider this list of PIPs, in their curated order, on a periodic basis (e.g. once per month), ratifying, rejecting or skipping each PIP in order as appropriate.
 

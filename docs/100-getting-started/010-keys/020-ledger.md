@@ -13,7 +13,7 @@ tags:
 
 ## Overview
 
-As an alternative to storing your password-encrypted private key in a browser wallet extension, to use a Ledger hardware wallet can be used to manage your private key offline.
+As an alternative to storing your password-encrypted private key in a browser wallet extension, a Ledger hardware wallet can be used to manage your private key offline.
 
 The Polymesh Ledger application is compatible with both the Ledger Nano S, Nano S+, Nano X, Flex and Stax devices. Ledger devices are hardware wallets that keep your secret secured on a physical device that does not expose it to your computer or the internet.
 
@@ -52,7 +52,7 @@ Other Substrate based wallets may support importing of Polymesh keys from Ledger
 
 ## Using via the Polymesh Wallet
 
-The [Polymesh Wallet extension](/getting-started/keys/polymesh-wallet) supports signing with Ledger Hardware Wallets. This allows you to use you to use your Ledger to sign transactions in any application compatible with the Polymesh wallet.
+The [Polymesh Wallet extension](/getting-started/keys/polymesh-wallet) supports signing with Ledger Hardware Wallets. This allows you to use your Ledger to sign transactions in any application compatible with the Polymesh wallet.
 
 Once installed, open the Polymesh app on your Ledger device.
 
@@ -62,7 +62,7 @@ If you don't enter the Polymesh Ledger app first, you'll see a screen saying "Yo
 
 :::
 
-IN the Polymesh wallet instead of selecting `Create new account`, you can select `Connect your Ledger` when setting up your first wallet or click `+ Add a key` and then `Connect Ledger device` if you've previously set up a key.
+In the Polymesh wallet, instead of selecting `Create new account`, you can select `Connect your Ledger` when setting up your first wallet or click `+ Add a key` and then `Connect Ledger device` if you've previously set up a key.
 
 ![Connect Ledger Device](images/ledger/connect-ledger-device.png)
 

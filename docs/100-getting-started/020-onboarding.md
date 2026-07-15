@@ -15,8 +15,8 @@ Polymesh users who participate in **asset** and **identity** related transaction
 
 From Polymesh v8, onboarding is to receive a DID and supports two paths:
 
-- **Self-registration**: The user calls `identity::register_did` for their own key and pays the transaction fee.
-- **Registrar-assisted registration**: A permissioned DID registrar registers a DID for a user key and pays the transaction fee.
+- **Self-registration**: The user calls `identity::self_register_did` for their own key and pays the transaction fee.
+- **Registrar-assisted registration**: A permissioned DID registrar registers a DID for a user key using `identity::register_did`, and pays the transaction fee.
 
 If you are new to Polymesh, a practical flow is:
 
@@ -58,7 +58,7 @@ Self-assigning a DID submits an on-chain transaction, where the user pays the tr
 
 When the user clicks this action:
 
-1. Portal prepares an `identity::register_did` transaction for the selected key.
+1. Portal prepares an `identity::self_register_did` transaction for the selected key.
 2. The wallet signing interface opens and prompts the user to sign.
 3. After the user signs, the transaction is submitted.
 4. After successful execution, the key is linked to a new DID.
@@ -91,11 +91,12 @@ On the [Testnet instance of the Polymesh Portal](https://portal.polymesh.live/),
 
 ## Extrinsic reference
 
+- `identity::self_register_did()`
+  - Permissionless: registers a DID for the caller's own key.
 - `identity::register_did(target_account)`
-  - Registers a DID for the target account.
-  - Supports assigning a DID to a single key.
+  - Registrar-gated: registers a DID for the target account. Callable only by an active DID registrar.
 - `identity::cdd_register_did` and `identity::cdd_register_did_with_cdd`
-  - Deprecated in v8, legacy onboarding extrinsics retained temporarily for transition.
+  - Deprecated in v8. No longer attach a `CustomerDueDiligence` claim; registrar-gated legacy paths retained temporarily for transition.
 
 ## Links
 

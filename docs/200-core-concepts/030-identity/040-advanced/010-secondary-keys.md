@@ -51,7 +51,7 @@ Secondary keys enable a variety of operational structures and security models in
 - **Compliance operations** with dedicated keys for compliance-related activities
 - **Asset management** with specific keys for asset servicing and administration
 - **Portfolio management** with different keys for different portfolio strategies
-- **Staking management** by using one secondary key as a stash key (holding funds) and another as a controller key (managing staking operations)
+- **Staking management** by using a secondary key as a stash key, which directly manages its own staking operations for new bonds — see [Staking](/polyx/staking)
 - **POLYX segregation** for financial controls and improved security by keeping balances separated
 
 ## Technical Overview

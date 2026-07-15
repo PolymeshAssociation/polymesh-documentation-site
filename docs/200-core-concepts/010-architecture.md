@@ -21,7 +21,7 @@ Polymesh has a native token, used for security and payments, [POLYX](/polyx/).
 
 Polymesh provides core business logic and financial abstractions at its base layer, called primitives. These provide a rich set of embedded on-chain actions (called extrinsics) that a user can initiate, such as creating an asset, settling securities instructions or participating in on-chain governance.
 
-Polymesh also supports Layer 2 [Smart Contract](../development/smart-contracts/) logic via `pallet-revive`, allowing network users to extend and leverage the base layer primitives to build on-chain financial and identity based protocols. Polymesh smart contracts execute on [PolkaVM](https://github.com/paritytech/polkavm), a RISC-V based execution engine, with EVM compatibility (Solidity contracts, standard Ethereum JSON-RPC tooling) supported as one interface into the same pallet rather than a separate system.
+Polymesh also supports Layer 2 [Smart Contract](../development/smart-contracts/) logic via `pallet-revive`, allowing network users to extend and leverage the base layer primitives to build on-chain financial and identity based protocols. `pallet-revive` is a dual-VM contract engine: Solidity compiled with `resolc` runs as native [PolkaVM](https://github.com/paritytech/polkavm) (a RISC-V based execution engine) bytecode with partial EVM compatibility, while Solidity compiled with the standard `solc` compiler produces EVM bytecode that runs in a separate Rust EVM implementation (`revm`) with full EVM compatibility, reachable via standard Ethereum JSON-RPC tooling through a dedicated proxy. See [Smart Contracts](../development/smart-contracts/) for detail.
 
 ## Architecture
 

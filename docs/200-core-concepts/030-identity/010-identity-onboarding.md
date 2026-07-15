@@ -20,9 +20,9 @@ Accounts used only for POLYX transfers and staking (excluding validator activiti
 Polymesh supports two onboarding paths:
 
 1. **Self-registration**
-   - A user registers a DID for their own key by submitting `identity::register_did` and paying the transaction fee.
+   - A user registers a DID for their own key by submitting `identity::self_register_did` and paying the transaction fee.
 2. **Registrar-assisted registration**
-   - A permissioned DID registrar registers a DID for a target user key and pays the transaction fee.
+   - A permissioned DID registrar registers a DID for a target user key using `identity::register_did` and pays the transaction fee.
 
 This two-path model lets users onboard directly while also supporting platforms that prefer managed onboarding for user experience reasons.
 
@@ -32,15 +32,17 @@ DID registrars are permissioned identities that can register new DIDs for other 
 
 Registrars are managed through on-chain governance (via PIP/governance process) and are intended for entities that want to offer simplified onboarding to users who may not yet hold POLYX for fees.
 
-## register_did
+## register_did and self_register_did
 
-`identity::register_did(target_account)` registers a new DID for the target key.
+`identity::self_register_did()` is fully permissionless: any account not already linked to an identity can call it to register a DID for its own key.
+
+`identity::register_did(target_account)` is registrar-gated: only an active DID registrar can call it, to register a DID for a target key.
 
 Important behavior in v8:
 
 - DID existence is the onboarding requirement for identity and native asset related usage.
-- This extrinsic does not support secondary key onboarding.
-- Legacy `cdd_register_did` and `cdd_register_did_with_cdd` remain available as deprecated transition paths for registrars.
+- Neither extrinsic supports secondary key onboarding.
+- Legacy `cdd_register_did` and `cdd_register_did_with_cdd` remain available as deprecated, registrar-gated transition paths, but no longer attach a `CustomerDueDiligence` claim.
 
 ## CDD claim legacy context
 

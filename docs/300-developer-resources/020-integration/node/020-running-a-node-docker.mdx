@@ -34,23 +34,23 @@ Images are available for mainnet, testnet, staging, and develop chains. There ar
 
 For mainnet, testnet, and staging the images are tagged `<version>-<chain>-<flavour>` or `latest-<chain>-<flavour>`. At the time of writing, the current published release families include:
 
-- `8.0.0-mainnet-{debian|distroless}` and `latest-mainnet-{debian|distroless}`
-- `8.0.0-testnet-{debian|distroless}` and `latest-testnet-{debian|distroless}`
-- `8.0.0-staging-{debian|distroless}` and `latest-staging-{debian|distroless}`
+- `8.0.1-mainnet-{debian|distroless}` and `latest-mainnet-{debian|distroless}`
+- `8.0.1-testnet-{debian|distroless}` and `latest-testnet-{debian|distroless}`
+- `8.0.1-staging-{debian|distroless}` and `latest-staging-{debian|distroless}`
 
 Develop chain images are also published from the [`develop` branch](https://github.com/PolymeshAssociation/Polymesh/tree/develop) of the Polymesh repository and are tagged `<commit-hash>-develop-<flavour>` or `latest-develop-<flavour>`. These are intended for development and testing purposes only and are **not recommended for general use or production deployments**.
 
-The version, chain, and flavour are required for all chains. Use an explicit version tag such as `8.0.0-<chain>-<flavour>` for deterministic deployments, or use rolling tags in the form `latest-<chain>-<flavour>`.
+The version, chain, and flavour are required for all chains. Use an explicit version tag such as `8.0.1-<chain>-<flavour>` for deterministic deployments, or use rolling tags in the form `latest-<chain>-<flavour>`.
 
 It is recommended to use a specific `version` number for deterministic versioning. If using rolling `latest-<chain>-<flavour>` tags, you may wish to set your image pull policy to `--pull=always` to ensure the latest image is always pulled from the repository when starting the container.
 
 Refer to the [Polymesh Docker Hub repository](https://hub.docker.com/r/polymeshassociation/polymesh/tags) for the available release tags. Your desired release tag can be pulled with the command:
 
 ```bash
-sudo docker pull polymeshassociation/polymesh:8.0.0-testnet-distroless
+sudo docker pull polymeshassociation/polymesh:8.0.1-testnet-distroless
 ```
 
-The tag `:8.0.0-testnet-distroless` should be replaced with the desired release tag.
+The tag `:8.0.1-testnet-distroless` should be replaced with the desired release tag.
 
 If you prefer the rolling channel tags, pull for example:
 
@@ -63,13 +63,13 @@ Polymesh does not publish a plain `:latest` tag. If a release tag is omitted the
 By default, if the Polymesh container image has not previously been pulled from the repository, it will be pulled when first attempting to run it. You can verify the version installed by running the following command:
 
 ```bash
-sudo docker run --rm polymeshassociation/polymesh:8.0.0-testnet-distroless --version
+sudo docker run --rm polymeshassociation/polymesh:8.0.1-testnet-distroless --version
 ```
 
 **All available Polymesh [FLAGS], [OPTIONS] and \<COMMAND\> commands can be viewed by calling:**
 
 ```bash
-sudo docker run --rm polymeshassociation/polymesh:8.0.0-testnet-distroless --help
+sudo docker run --rm polymeshassociation/polymesh:8.0.1-testnet-distroless --help
 ```
 
 ## Running a node
@@ -77,7 +77,7 @@ sudo docker run --rm polymeshassociation/polymesh:8.0.0-testnet-distroless --hel
 With the image downloaded you can now run your first testnet node:
 
 ```bash
-sudo docker run -u root --rm -it polymeshassociation/polymesh:8.0.0-testnet-distroless --chain testnet
+sudo docker run -u root --rm -it polymeshassociation/polymesh:8.0.1-testnet-distroless --chain testnet
 ```
 
 Note: the above command is required to be run as the root user with the flag `-u` or `--user root` in order for the user to have suitable permissions to successfully run the node.
@@ -109,7 +109,7 @@ sudo docker run \
 -u root \
 --rm -it \
 --volume=/var/lib/polymesh/:/var/lib/polymesh/ \
-polymeshassociation/polymesh:8.0.0-testnet-distroless \
+polymeshassociation/polymesh:8.0.1-testnet-distroless \
 --chain testnet \
 --base-path /var/lib/polymesh/
 ```
@@ -140,7 +140,7 @@ sudo docker run \
 --user root \
 --rm -it \
 --volume=/var/lib/polymesh/:/var/lib/polymesh/ \
-polymeshassociation/polymesh:8.0.0-testnet-distroless \
+polymeshassociation/polymesh:8.0.1-testnet-distroless \
 key generate-node-key --base-path /var/lib/polymesh/ --chain testnet
 ```
 
@@ -151,7 +151,7 @@ sudo docker run \
 --user root \
 --rm -it \
 --volume=/var/lib/polymesh/:/var/lib/polymesh/ \
-polymeshassociation/polymesh:8.0.0-testnet-distroless \
+polymeshassociation/polymesh:8.0.1-testnet-distroless \
 key inspect-node-key --file /var/lib/polymesh/chains/testnet/network/secret_ed25519
 ```
 
@@ -170,7 +170,7 @@ sudo docker run \
 --user root \
 --rm -it \
 --volume=/var/lib/polymesh/:/var/lib/polymesh/ \
-polymeshassociation/polymesh:8.0.0-testnet-distroless \
+polymeshassociation/polymesh:8.0.1-testnet-distroless \
 --chain testnet \
 --base-path /var/lib/polymesh/ \
 --unsafe-force-node-key-generation
@@ -199,7 +199,7 @@ sudo docker run \
 --user $(id -u polymesh):$(id -g polymesh) \
 --rm -it \
 --volume=/var/lib/polymesh/:/var/lib/polymesh/ \
-polymeshassociation/polymesh:8.0.0-testnet-distroless \
+polymeshassociation/polymesh:8.0.1-testnet-distroless \
 --chain testnet \
 --base-path /var/lib/polymesh/
 ```
@@ -214,7 +214,7 @@ sudo docker run \
 --user $(id -u polymesh):$(id -g polymesh) \
 --rm -it \
 --volume=/var/lib/polymesh/:/var/lib/polymesh/ \
-polymeshassociation/polymesh:8.0.0-testnet-distroless \
+polymeshassociation/polymesh:8.0.1-testnet-distroless \
 --chain testnet \
 --name my-node-name \
 --base-path /var/lib/polymesh/
@@ -241,7 +241,7 @@ sudo docker run \
 --restart always \
 -it \
 --volume=/var/lib/polymesh/:/var/lib/polymesh/ \
-polymeshassociation/polymesh:8.0.0-testnet-distroless \
+polymeshassociation/polymesh:8.0.1-testnet-distroless \
 --chain testnet \
 --name my-node-name \
 --base-path /var/lib/polymesh/
@@ -315,7 +315,7 @@ sudo docker run \
 -p 30333:30333 \
 -p 9944:9944 \
 -p 9615:9615 \
-polymeshassociation/polymesh:8.0.0-testnet-distroless \
+polymeshassociation/polymesh:8.0.1-testnet-distroless \
 --chain testnet \
 --name my-node-name \
 --base-path /var/lib/polymesh/ \
@@ -340,7 +340,7 @@ sudo docker run \
 -it \
 --volume=/var/lib/polymesh/:/var/lib/polymesh/ \
 --network=host \
-polymeshassociation/polymesh:8.0.0-testnet-distroless \
+polymeshassociation/polymesh:8.0.1-testnet-distroless \
 --chain testnet \
 --name my-node-name \
 --base-path /var/lib/polymesh/
@@ -384,7 +384,7 @@ sudo docker run \
 -u $(id -u polymesh):$(id -g polymesh) \
 --rm -it \
 -v /var/lib/polymesh/:/var/lib/polymesh/ \
-polymeshassociation/polymesh:8.0.0-testnet-distroless \
+polymeshassociation/polymesh:8.0.1-testnet-distroless \
 purge-chain \
 --chain testnet  \
 --base-path /var/lib/polymesh/
@@ -419,7 +419,7 @@ sudo docker run \
 -p 30333:30333 \
 -p 9615:9615 \
 --ulimit nofile=1024:10240 \
-polymeshassociation/polymesh:8.0.0-testnet-distroless \
+polymeshassociation/polymesh:8.0.1-testnet-distroless \
 --chain testnet \
 --validator \
 --name my-node-name \

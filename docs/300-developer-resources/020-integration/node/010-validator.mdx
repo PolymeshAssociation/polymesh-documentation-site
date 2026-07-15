@@ -24,7 +24,7 @@ Polymesh is a permissioned network, meaning potential operators must undergo a g
 
 The node operator role on Polymesh requires a permission to be assigned. All operators must satisfy selection criteria determined by Polymesh and be approved by the Polymesh Governing Council.
 
-To become an operator on Polymesh, you also need to bond (lock) POLYX in the system. This facilitates the economic incentives on which Polymesh's security relies. The account that stores your bonded POLYX is called the Stash account, while the account that manages the bonded POLYX is called the Controller account. Rewards generated for running an operator node can be sent to the Stash account or another specified account.
+To become an operator on Polymesh, you also need to bond (lock) POLYX in the system. This facilitates the economic incentives on which Polymesh's security relies. The account that stores your bonded POLYX is called the Stash account. New bonds no longer support pointing a separate Controller account at the stash — the Stash key itself always manages the bonded funds (see [Stash Key](#stash-key) below). Rewards generated for running an operator node can be sent to the Stash account or another specified account.
 
 You do not need to bond all the POLYX in your Stash account and can bond more later. However, withdrawing any bonded POLYX requires waiting for the unbonding period, currently set at 28 days.
 
@@ -34,13 +34,14 @@ You do not need to bond all the POLYX in your Stash account and can bond more la
 
 The Nano S does not support setting session keys and is therefore unsuitable for operators.
 
-There are three main types of keys that an operator must manage:
+There are two main types of keys that an operator must manage:
 
 - Session keys
-- Controller key
 - Stash key
 
-The session keys are the only type of key that the operator node needs access to. The other two keys should be securely stored in a supported hardware wallet.
+For new bonds, the Stash key itself performs all controller-type actions (see [Stash Key](#stash-key) below) — there is no separate Controller key to manage. Some stashes bonded before this change still use a legacy separate Controller key (see [Legacy Controller Key](#legacy-controller-key)).
+
+The session keys are the only type of key that the operator node needs access to. The stash key (and any legacy controller key) should be securely stored in a supported hardware wallet.
 
 ### Session Keys
 
@@ -64,32 +65,32 @@ Secondary keys are authorized by a primary key to join an identity. For the purp
 
 ### Stash Key
 
-The stash key is the account that holds the POLYX bonded by the operator and, optionally, receives operator rewards. This should be a cold wallet and must never be attached to the operator node.
+The stash key is the account that holds the POLYX bonded by the operator and, optionally, receives operator rewards. This should be a cold or semi-cold wallet and must never be attached to the operator node. It is recommended to use a multisig account or a supported hardware wallet for the stash key.
 
 Stash keys can be either a primary or a secondary key but **MUST** be linked to the permissioned DID of the operator.
 
-Stash keys can:
+For new bonds, the stash key itself always manages the bonded funds — there is no separate controller to designate. The stash key can:
 
 - Bond POLYX
 - Bond extra POLYX
-- Set the Controller key of the stash. If a controller key is not provided the Stash key is automatically made the Controller.
-
-### Controller Key
-
-The controller key is used to manage bonded funds, vote with bonded funds, and perform similar on-chain actions. This key is not directly required by the operator node and should never be shared with it. It is recommended to use a multisig account or a supported hardware wallet for the controller key. These keys can hold funds and directly control bonded funds, so they must be stored securely. Consider the controller key a semi-cold wallet.
-
-Controller keys can be a Primary or Secondary key and can be associated with any identity. They do not need to be associated with the permissioned identity of the Stash.
-
-Controller keys can:
-
 - Set/update session keys
 - Set commission and validate
-- Set a destination for reward payments - i.e. stash with automatically stake, stash unstaked, controller or other account.
+- Set a destination for reward payments - i.e. stash with automatically stake, stash unstaked, or other account.
 - Commence unbonding of stash tokens
-- Withdraw unbonded tokens after the 28 day waiting period to the stash account. i.e. the controller cannot transfer unbonded tokens from the stash.
+- Withdraw unbonded tokens after the 28 day waiting period to the stash account.
 - Rebond tokens which are in the process of unbonding
 - "Chill" the node i.e. gracefully stop validating after the last era the node was elected to ends.
 - Purge Session keys
+
+Because the stash key now directly performs these actions in addition to holding the bonded funds, securing it appropriately (hardware wallet or multisig) is especially important — treat it as at minimum a semi-cold wallet, not purely cold storage, since it needs to sign these operational transactions.
+
+### Legacy Controller Key
+
+Stashes bonded **before** this change (Polymesh v8) may still have a separate Controller key on file, which manages the bonded funds instead of the stash key performing these actions directly. This is a legacy pattern only — it cannot be set up for new bonds, and calling `set_controller` on such a stash resets its controller back to the stash key permanently (it can no longer be pointed at a different key afterwards).
+
+Where a legacy separate controller is still in use, it should be treated the same way the stash key is treated above: use a multisig account or a supported hardware wallet, since it can hold funds and directly control bonded funds. This key is not directly required by the operator node and should never be shared with it.
+
+Legacy controller keys can be a Primary or Secondary key and can be associated with any identity. They do not need to be associated with the permissioned identity of the Stash. Where a legacy controller exists, it (not the stash key) is the one that performs the actions listed above for the Stash Key.
 
 ## Network Architecture
 
@@ -125,9 +126,9 @@ The network tolerates simultaneous outages of multiple operator nodes, provided 
 Two failover methods are available:
 
 - **Shared Session Key**: The session keys are shared with the warm spare, which is activated if the primary node fails. The primary node **must not** come back online. **_The penalty for equivocation is much higher than for being offline._**
-- **Unique Session Key**: Each operator node instance has a unique session key. If the primary node fails, the controller must update the session keys on-chain for the secondary node. As key changes take effect in the next session, there may still be a period where the node is offline for one session. This method eliminates the risk of equivocation penalties.
+- **Unique Session Key**: Each operator node instance has a unique session key. If the primary node fails, the stash key (or legacy controller key, if one is in use) must update the session keys on-chain for the secondary node. As key changes take effect in the next session, there may still be a period where the node is offline for one session. This method eliminates the risk of equivocation penalties.
 
-Storing controller keys on a server for automated key change transactions is **not** recommended. However, you may pre-sign an immortal transaction (without a timeout) and store it on a server to broadcast if the primary node fails. See [Upgrading or Replacing a Node](#upgrading-or-replacing-a-node) for details.
+Storing the stash or controller key on a server for automated key change transactions is **not** recommended. However, you may pre-sign an immortal transaction (without a timeout) and store it on a server to broadcast if the primary node fails. See [Upgrading or Replacing a Node](#upgrading-or-replacing-a-node) for details.
 
 ## Getting the Polymesh Node Software
 
@@ -179,7 +180,7 @@ The recommended process for upgrading operator nodes is to perform a failover to
 
 Begin by upgrading the warm spare operator node. Since this node is not actively validating, you can stop the Polymesh client, perform the necessary upgrade, and then resume operation.
 
-Once the warm spare node is upgraded and fully synchronized, make it the active node by submitting a change of session keys associated with your stash to those stored in the warm spare's keystore, using your controller account.
+Once the warm spare node is upgraded and fully synchronized, make it the active node by submitting a change of session keys associated with your stash to those stored in the warm spare's keystore, using your stash key (or legacy controller key, if one is in use).
 
 To do so:
 
@@ -488,9 +489,9 @@ In addition to Polymesh-specific metrics, you should monitor basic node health m
 
 **Ensure your Polymesh nodes are fully synced and healthy before proceeding. Failure to do so may result in operator penalties.**
 
-To become an operator on Polymesh, you must bond (lock) some POLYX. The account holding the bonded funds is called the **stash account**, while the account managing these funds is the **controller account**.
+To become an operator on Polymesh, you must bond (lock) some POLYX. The account holding the bonded funds is called the **stash account**. For new bonds, the stash account also manages these funds directly — there is no separate controller account to set up (see [Stash Key](#stash-key)).
 
-> **Recommendation:** Use separate accounts for your controller and stash accounts. Ensure both accounts have enough POLYX to cover transaction fees, while keeping the majority of your funds in the stash account, as it serves as the custodian of your staking funds.
+> **Recommendation:** Ensure your stash account has enough POLYX to cover both the bonded amount and ongoing transaction fees for controller-type actions (setting session keys, unbonding, chilling, etc.), since it now performs both roles.
 
 **Note:** The steps in the following sections can also be completed in a single batched transaction by selecting the **[+ Validator]** button. The instructions below focus on each individual step.
 
@@ -511,7 +512,7 @@ To become an operator on Polymesh, you must bond (lock) some POLYX. The account 
 
 ### Setting Session Keys
 
-Session keys link your operator node to your controller account. If you switch operator nodes, you can update these keys to reflect the new setup, which will take effect in the next session.
+Session keys link your operator node to your stash account (or legacy controller account, if one is in use). If you switch operator nodes, you can update these keys to reflect the new setup, which will take effect in the next session.
 
 Use the session keys generated during your operator node setup.
 
