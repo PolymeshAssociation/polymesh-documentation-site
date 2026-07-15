@@ -57,6 +57,12 @@ At the top of the window, you can see which network you're connected to by defau
 
 :::
 
+:::note Hardware wallet signing
+
+The Polymesh Wallet can also sign with a Ledger hardware wallet instead of a locally stored key. See the [Ledger Hardware Wallet](/getting-started/keys/ledger) guide, including [Choosing a Ledger App](/getting-started/keys/ledger#choosing-a-ledger-app) for the available Ledger applications.
+
+:::
+
 ## Links
 
 - [Polymesh Wallet](https://chrome.google.com/webstore/detail/polymesh-wallet/jojhfeoedkpkglbfimdfabpdfjaoolaf)

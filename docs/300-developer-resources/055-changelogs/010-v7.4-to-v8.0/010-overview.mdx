@@ -21,6 +21,7 @@ This is the entry point for the Polymesh **v7.4 → v8.0** runtime changelog. v8
 - **Anyone subsidizing transaction fees or relaying signed calls** — see [Relayer & Subsidies](./070-relayer-and-subsidies.mdx)
 - **Smart contract developers** — see [Smart Contracts](./080-smart-contracts-evm.mdx)
 - **Anyone evaluating Confidential Assets** — see [Confidential Assets](./090-confidential-assets.mdx) — not available on Mainnet
+- **Wallet developers and anyone integrating hardware wallets or offline signers** — see [Other Runtime Changes](./100-other-runtime-changes.mdx#transaction-extension-checkmetadatahash-merkleized-metadata) and the [Ledger Hardware Wallet](/getting-started/keys/ledger) guide
 
 ## Key themes
 
@@ -48,6 +49,10 @@ Chain v8 adds `pallet-revive` to the mainnet runtime as its only smart contract 
 
 The `Relayer` pallet's subsidy grant/accept handshake no longer goes through the generic `Identity` authorization system. `approve_subsidy` (renamed from `set_paying_key`) now writes directly to a `PendingSubsidies` storage, and the user calls the new `accept_subsidy` to accept it — no authorization ID involved. `relay_tx` also moves from `Utility` to `Relayer`, keeping its nonce-based replay protection but gaining a new `expires_at` check on top, and moving the nonce from a caller-supplied argument to server-tracked state. See [Relayer & Subsidies](./070-relayer-and-subsidies.mdx) for detail.
 
+### Merkleized metadata enables generic hardware-wallet signing
+
+Chain v8 adds the `CheckMetadataHash` transaction extension (the "Merkleized metadata" scheme, RFC-0078) to the signed-extension tuple. A signer can now include a hash of the runtime's own metadata in the signed payload, letting a device verify the metadata it uses to render a transaction against what it's actually signing. This is what allows **generic, non-Polymesh-specific signers — including the generic Polkadot Ledger app — to decode and display full Polymesh transaction details**, not just Polymesh-specific applications. Polymesh's own dedicated Ledger app (developed by Zondax) is updated to support this scheme as well. See [Other Runtime Changes](./100-other-runtime-changes.mdx#transaction-extension-checkmetadatahash-merkleized-metadata) for the chain-level detail and transaction-construction impact, and the [Ledger Hardware Wallet](/getting-started/keys/ledger) guide for the wallet-side view (choosing between the Polymesh app and the generic Polkadot app, and the derivation-path implications of each).
+
 ### Confidential Assets pallet added (not on Mainnet)
 
 A new `ConfidentialAssets` pallet (Polymesh Confidential Assets / "PCA") lands in v8, implementing privacy-preserving, ZK-proof-based transfers with auditor/mediator compliance controls. It is pre-release, pending a comprehensive code audit, and is **not included in the Mainnet runtime** — it's available on Testnet and Develop only. See [Confidential Assets](./090-confidential-assets.mdx) for the chain-level reference, and the [Confidential Assets](/confidential-assets) docs for the concepts and workflows.
@@ -73,6 +78,7 @@ A new `ConfidentialAssets` pallet (Polymesh Confidential Assets / "PCA") lands i
 9. If you're evaluating Confidential Assets, connect to Testnet — it is not on Mainnet, and the Devnet it previously ran on is being retired — and review [Confidential Assets](./090-confidential-assets.mdx) before writing any code against it.
 10. Review [Other Runtime Changes](./100-other-runtime-changes.mdx) if you interact with transaction fee queries, `Sudo`, runtime upgrades, or the `Scheduler` directly.
 11. If you call Runtime APIs directly via `state_call` (not just extrinsics/storage), review [Runtime APIs & RPC](./120-runtime-apis-and-rpc.mdx) — `IdentityApi`, `StakingApi`, `AssetApi`, and `SettlementApi` all changed. Also check that page if you call `identity_isIdentityHasValidCdd`, `identity_validCDDClaims`, `asset_transferReport`, `nft_transferReport`, `staking_getCurve`, or `settlement_getAffirmationCount` directly by JSON-RPC name — five of those are removed and one changes its parameters.
+12. If you construct and sign extrinsics manually, or build/integrate a hardware wallet or offline signer, account for the new `CheckMetadataHash` transaction extension — see [Other Runtime Changes](./100-other-runtime-changes.mdx#transaction-extension-checkmetadatahash-merkleized-metadata).
 
 ## Full pallet API reference
 
