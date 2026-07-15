@@ -10,7 +10,7 @@ tags:
   - runtime
 ---
 
-This is the entry point for the Polymesh **v7.4 → v8.0** runtime changelog. v8.0 is a major release: `spec_version` moves from `7_004_001` to `8_000_000` and `transaction_version` moves from `7` to `8`. A transaction-version bump means clients must not assume any pre-v8 extrinsic encoding, call index, or event shape still holds — every integration that talks to the chain directly (not through the SDK) needs to re-verify its assumptions against this changelog before upgrading.
+This is the entry point for the Polymesh **v7.4 → v8.0** runtime changelog. v8.0 is a major release: `spec_version` moves from `7_004_001` to `8_000_010` and `transaction_version` moves from `7` to `8`. A transaction-version bump means clients must not assume any pre-v8 extrinsic encoding, call index, or event shape still holds — every integration that talks to the chain directly (not through the SDK) needs to re-verify its assumptions against this changelog before upgrading.
 
 ## Who this is for
 
@@ -36,9 +36,9 @@ Polymesh's custom `Staking` pallet (`pallets/staking`) is also removed. Chain v8
 
 From v7.4, accounts could already hold assets directly. This was done as a non breaking change by extending the `PortfolioKind` type. A `PortfolioKind::AccountId` variant bolted onto the existing portfolio-kind type. That still went through `PortfolioId`, which always carries a `did: IdentityId` field — so a linked identity was still required alongside the account key, not a DID-free wallet-only model. Chain v8 replaces this with a proper, first-class `AssetHolder`/`AssetHolderKind` abstraction, used consistently across the `Asset`, `Nft`, and `Settlement` pallets — issuance, redemption, controller transfers, and settlement legs/affirmations can now all target an account directly, not only a portfolio. Accounts still need be linked to a DID on chain to hold assets — see [Native Asset Holdings](./040-native-asset-holdings.mdx) (Asset/Nft/Portfolio) and [Settlement & Instructions](./050-settlement-and-instructions.mdx) (legs, affirmations, receipts).
 
-### `pallet-revive` added (PolkaVM contracts, with EVM compatibility)
+### `pallet-revive` added (a dual-VM PolkaVM + EVM contract engine)
 
-Chain v8 adds `pallet-revive` to the mainnet runtime as its only smart contract pallet. Contracts run on PolkaVM; EVM compatibility (Solidity, standard Ethereum JSON-RPC tooling via a new `eth-rpc` proxy) is one supported interface into it, not its entire purpose. The legacy Wasm/ink! contracts pallet (`pallet-contracts`) has been completely removed — it is not part of the v8 runtime, and this isn't a breaking removal in practice since no contracts were deployed on Mainnet in the first place. See [Smart Contracts](./080-smart-contracts-evm.mdx) for detail.
+Chain v8 adds `pallet-revive` to the mainnet runtime as its only smart contract pallet. It is a dual-VM engine: `resolc`-compiled Solidity runs as native PolkaVM bytecode (partial EVM compatibility), while `solc`-compiled EVM bytecode runs in a separate Rust EVM (`revm`) for full EVM compatibility — with standard Ethereum JSON-RPC tooling reaching it via a new `eth-rpc` proxy. The legacy Wasm/ink! contracts pallet (`pallet-contracts`) has been completely removed — it is not part of the v8 runtime, and this isn't a breaking removal in practice since no contracts were deployed on Mainnet in the first place. See [Smart Contracts](./080-smart-contracts-evm.mdx) for detail.
 
 ### CDD service providers renamed to DID registrars; child identities removed
 
@@ -65,7 +65,7 @@ A new `ConfidentialAssets` pallet (Polymesh Confidential Assets / "PCA") lands i
 1. Regenerate any hand-maintained call-index/event-index tables — do not assume v7 indices carry over, given the transaction-version bump.
 2. If you parse `balances.Transfer` for deposits, update to the new 3-field shape (`from`, `to`, `amount`) and confirm your `system.account` balance parsing handles the `frozen`/`flags` layout. See [Balances & Transfers](./020-balances-and-transfers.mdx).
 3. If you operate a validator node, review [Staking & Validators](./030-staking-and-validators.mdx) for API changes and the [Validator Node Guide](/developer-resources/validator-node-guide/) for the v8 operational updates (BEEFY session key, node key generation, pruning defaults) before upgrading.
-4. If your integration calls `add_permissioned_validator`, `remove_permissioned_validator`, `payout_stakers_by_system`, `change_slashing_allowed_for`, or `set_commission_cap`, note these now live on the `Validators` pallet, not `Staking`.
+4. If your integration calls `add_permissioned_validator`, `remove_permissioned_validator`, `change_slashing_allowed_for`, or `set_commission_cap`, note these now live on the `Validators` pallet, not `Staking`; and the v7.4 `payout_stakers_by_system` call is removed entirely — see [Staking & Validators](./030-staking-and-validators.mdx).
 5. If you hold or transfer Polymesh assets outside of portfolios, or build tooling against `PortfolioId`, review [Native Asset Holdings](./040-native-asset-holdings.mdx) and [Settlement & Instructions](./050-settlement-and-instructions.mdx).
 6. Re-check any code that special-cases `RandomnessCollectiveFlip` by name, and rename `CddServiceProviders` references to `DidRegistrars` (see [Identity & Onboarding](./060-identity-and-onboarding.mdx)).
 7. If you subsidize accounts or relay signed transactions, review [Relayer & Subsidies](./070-relayer-and-subsidies.mdx) — the accept flow, event shapes, and `relay_tx` all changed.

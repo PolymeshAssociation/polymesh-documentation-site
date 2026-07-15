@@ -29,8 +29,8 @@ Chain v8 replaces Polymesh's custom `Balances` pallet with the standard Polkadot
 | v7.4 call (index)                          | v8.0 call (index)                 | Notes                                                                                                                                                                                                          |
 | ------------------------------------------ | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `transfer` (0)                             | _(removed)_                       | Use `transfer_allow_death` or `transfer_keep_alive`                                                                                                                                                            |
-| —                                          | `transfer_allow_death` (0)        | New. Allows the sender account to be reaped if its balance drops to zero. With Mainnet/Testnet `ExistentialDeposit = 0` and no account reaping at zero balance, this behaves like a plain transfer in practice |
-| —                                          | `transfer_keep_alive` (3)         | New. Fails if the transfer would drop the sender below the existential deposit. Functionally equivalent to `transfer_allow_death` under Polymesh's `ED = 0` configuration                                      |
+| —                                          | `transfer_allow_death` (0)        | New. Upstream call that would reap the sender account if it dropped below the existential deposit — but Polymesh keeps account reaping disabled, so in practice this behaves like a plain transfer             |
+| —                                          | `transfer_keep_alive` (3)         | New. Upstream call that would fail if the transfer dropped the sender below the existential deposit. With reaping disabled on Polymesh, it behaves equivalently to `transfer_allow_death`                      |
 | —                                          | `transfer_all` (4)                | New. Transfers the sender's full transferable balance                                                                                                                                                          |
 | `transfer_with_memo` (1)                   | `transfer_with_memo` (40)         | Same call, new index. Signature unchanged: `(dest, value, memo: Option<Memo>)`                                                                                                                                 |
 | `deposit_block_reward_reserve_balance` (2) | _(removed)_                       | No direct replacement — this was specific to Polymesh's old reward-reserve model                                                                                                                               |
@@ -63,11 +63,8 @@ At the runtime upgrade, `misc_frozen` and `feefrozen` are combined into a single
 // v7.4
 transferable = free - max(misc_frozen, fee_frozen)
 
-// v8.0, general form
+// v8.0, general form (ED = 1 in v8, was 0 in v7.4; reaping stays disabled)
 transferable = free - max(ED, frozen - reserved)
-
-// v8.0, with Polymesh Mainnet/Testnet ED = 0
-transferable = free - max(0, frozen - reserved)
 ```
 
 ### 3. `Transfer` event no longer carries identity or memo fields
@@ -105,9 +102,17 @@ The v7.4 `ReceiverCddMissing` error (returned when a transfer's recipient lacked
 
 Match errors and events by name, not by numeric index — index assignments are not stable across this upgrade and several v7 and v8 variants happen to share a slot without being related.
 
+### 7. Existential deposit raised from `0` to `1`
+
+In v7.4 the `ExistentialDeposit` was `0`. In v8 it is `1` — one base unit (`0.000001` POLYX), the lowest non-zero value — on all runtimes. It was raised because a zero existential deposit interfered with smart-contract (`pallet-revive`) account creation and termination; a non-zero minimum keeps contract accounts well-defined.
+
+**Account reaping remains disabled on Polymesh.** Despite the non-zero existential deposit, the runtime does not reap accounts whose balance falls to zero, so an emptied account — its `system.account` entry and its nonce — persists as before. In practice `transfer_keep_alive` and `transfer_allow_death` behave equivalently for integrations, exactly as they did under `ED = 0`.
+
+This is worth knowing if you read the `ExistentialDeposit` constant from metadata (it is now `1`, not `0`) or use it in transferable-balance math, but it does not change transfer semantics or the account lifecycle.
+
 ## What did _not_ change
 
-- Mainnet and Testnet `ExistentialDeposit` remains `0`. Accounts are not reaped at a zero balance, so `transfer_keep_alive` and `transfer_allow_death` behave equivalently for exchange integrations.
+- Account reaping stays disabled: accounts are not reaped at a zero balance, so `transfer_keep_alive` and `transfer_allow_death` behave equivalently for exchange integrations — even though the existential deposit moved from `0` to `1` (see [section 7](#7-existential-deposit-raised-from-0-to-1)).
 - Memo-tagged transfers remain fully supported via `transfer_with_memo` / `TransferWithMemo`, unchanged from the v7.4 shape.
 - Since v7.3, receiving POLYX or staking has not required a DID — this was already true before v8 and is unaffected by this pallet swap.
 
@@ -119,3 +124,4 @@ Match errors and events by name, not by numeric index — index assignments are 
 4. Update `system.account` decoding for `frozen`/`flags` instead of `misc_frozen`/`fee_frozen`, and switch any transferable-balance calculation to `free - max(0, frozen - reserved)`.
 5. Do not rely on `ReceiverCddMissing` as a transfer-failure signal — it no longer exists.
 6. If you match errors/events by numeric index rather than name, stop — indices are not stable identifiers across this upgrade.
+7. If you read `ExistentialDeposit` from metadata or use it in balance math, note it is now `1` (was `0` in v7.4). Account reaping stays disabled, so transfer and account-lifecycle behaviour is unchanged — see [section 7](#7-existential-deposit-raised-from-0-to-1).

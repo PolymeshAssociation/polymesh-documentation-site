@@ -11,7 +11,7 @@ tags:
   - metadata
 ---
 
-This page is a mechanically generated reference of every structural API change between Polymesh chain **v7.4** and **v8.0**, extracted directly from each release's runtime metadata (metadata v14, the only version available for both releases). It complements the narrative pages in the [v7.4 → v8.0 changelog](./010-overview.mdx) with a literal, pallet-by-pallet diff: every call, event, error, storage item, and constant that was added, removed, or had its argument/field shape change.
+This page is a mechanically generated reference of every structural API change between Polymesh chain **v7.4** and **v8.0**, extracted directly from each release's runtime metadata (metadata v14, the only version available for both releases). The v8 side reflects runtime version **8.0.1**. It complements the narrative pages in the [v7.4 → v8.0 changelog](./010-overview.mdx) with a literal, pallet-by-pallet diff: every call, event, error, storage item, and constant that was added, removed, or had its argument/field shape change.
 
 **Scope and method:**
 
@@ -27,7 +27,9 @@ This page is a mechanically generated reference of every structural API change b
 
 ## Pallets removed
 
-`CddServiceProviders`, `RandomnessCollectiveFlip`
+`CddServiceProviders`, `Contracts`, `PolymeshContracts`, `RandomnessCollectiveFlip`
+
+The legacy Wasm/ink! contracts pallets `Contracts` (`pallet-contracts`) and `PolymeshContracts` (`polymesh_contracts`) are removed entirely; `pallet-revive` (listed under **Pallets added**) is the sole smart-contract pallet. See [Smart Contracts](./080-smart-contracts-evm.mdx).
 
 Renamed pallets (for example `CddServiceProviders` → `DidRegistrars`) are not detected as renames by this name-based diff — they show up as one pallet removed and a different one added. See the [Identity & Onboarding](./060-identity-and-onboarding.mdx) page for the narrative mapping.
 
@@ -35,13 +37,12 @@ Renamed pallets (for example `CddServiceProviders` → `DidRegistrars`) are not 
 
 | Pallet                                                        | Calls +/-/~ | Events +/-/~ | Errors +/-/~ | Storage +/-/~ | Constants +/-/~ |
 | ------------------------------------------------------------- | ----------- | ------------ | ------------ | ------------- | --------------- |
-| [Asset](#asset)                                               | 1/0/3       | 2/0/2        | 6/2/0        | 1/0/0         | —               |
+| [Asset](#asset)                                               | 1/0/3       | 2/0/2        | 7/2/0        | 1/0/0         | —               |
 | [AuthorityDiscovery](#authoritydiscovery)                     | —           | —            | —            | 2/0/0         | —               |
 | [Babe](#babe)                                                 | 0/0/2       | —            | —            | —             | 1/0/0           |
 | [Balances](#balances)                                         | 8/4/0       | 24/1/6       | 11/1/0       | 5/0/1         | 3/0/0           |
 | [Base](#base)                                                 | —           | 0/1/0        | —            | —             | —               |
 | [CommitteeMembership](#committeemembership)                   | —           | 0/1/0        | —            | —             | —               |
-| [Contracts](#contracts)                                       | 1/0/3       | 2/0/3        | 11/2/0       | 3/2/1         | 6/2/0           |
 | [ElectionProviderMultiPhase](#electionprovidermultiphase)     | 0/0/1       | —            | 1/0/0        | 0/0/1         | 2/6/0           |
 | [Grandpa](#grandpa)                                           | —           | —            | —            | 1/0/0         | 1/0/0           |
 | [Historical](#historical)                                     | —           | 2/0/0        | —            | 2/0/0         | —               |
@@ -53,7 +54,6 @@ Renamed pallets (for example `CddServiceProviders` → `DidRegistrars`) are not 
 | [Offences](#offences)                                         | —           | —            | —            | 0/1/0         | —               |
 | [Permissions](#permissions)                                   | —           | —            | —            | 2/0/0         | —               |
 | [Pips](#pips)                                                 | 0/0/1       | —            | 1/0/0        | —             | —               |
-| [PolymeshContracts](#polymeshcontracts)                       | 0/2/0       | —            | 0/3/0        | —             | —               |
 | [Portfolio](#portfolio)                                       | 0/0/2       | —            | 0/2/0        | 0/1/1         | —               |
 | [Preimage](#preimage)                                         | 1/0/0       | —            | 2/0/0        | 1/0/1         | —               |
 | [Relayer](#relayer)                                           | 5/3/0       | 6/3/1        | 4/6/0        | 2/0/0         | —               |
@@ -100,6 +100,7 @@ Renamed pallets (for example `CddServiceProviders` → `DidRegistrars`) are not 
 | Added   | `KeyNotFoundForDid`                 |
 | Added   | `SelfOwnershipTransferNotAllowed`   |
 | Added   | `UnauthorizedHolderKey`             |
+| Added   | `WeightLimitExceeded`               |
 | Removed | `InvalidTransferInvalidReceiverCDD` |
 | Removed | `InvalidTransferInvalidSenderCDD`   |
 
@@ -239,69 +240,6 @@ Renamed pallets (for example `CddServiceProviders` → `DidRegistrars`) are not 
 | Status  | Name    | v7.4     | v8.0     |
 | ------- | ------- | -------- | -------- |
 | Removed | `Dummy` | _(none)_ | _(none)_ |
-
-### Contracts
-
-#### Calls
-
-| Status   | Name                               | v7.4                                                                                                                                                                        | v8.0                                                                                                                                                                        |
-| -------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Added    | `migrate`                          | _(none)_                                                                                                                                                                    | `weight_limit: Weight`                                                                                                                                                      |
-| Modified | `call_old_weight`                  | `dest: AccountIdLookupOf<T>, value: BalanceOf<T>, gas_limit: OldWeight, storage_deposit_limit: Option<<BalanceOf<T> as codec::HasCompact>::Type>, data: Vec<u8>`            | `dest: AccountIdLookupOf<T>, value: BalanceOf<T>, gas_limit: OldWeight, storage_deposit_limit: Option<<BalanceOf<T> as codec::HasCompact>::Type>, data: Vec<u8>`            |
-| Modified | `instantiate_old_weight`           | `value: BalanceOf<T>, gas_limit: OldWeight, storage_deposit_limit: Option<<BalanceOf<T> as codec::HasCompact>::Type>, code_hash: CodeHash<T>, data: Vec<u8>, salt: Vec<u8>` | `value: BalanceOf<T>, gas_limit: OldWeight, storage_deposit_limit: Option<<BalanceOf<T> as codec::HasCompact>::Type>, code_hash: CodeHash<T>, data: Vec<u8>, salt: Vec<u8>` |
-| Modified | `instantiate_with_code_old_weight` | `value: BalanceOf<T>, gas_limit: OldWeight, storage_deposit_limit: Option<<BalanceOf<T> as codec::HasCompact>::Type>, code: Vec<u8>, data: Vec<u8>, salt: Vec<u8>`          | `value: BalanceOf<T>, gas_limit: OldWeight, storage_deposit_limit: Option<<BalanceOf<T> as codec::HasCompact>::Type>, code: Vec<u8>, data: Vec<u8>, salt: Vec<u8>`          |
-
-#### Events
-
-| Status   | Name                                   | v7.4                                           | v8.0                                                                        |
-| -------- | -------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------- |
-| Added    | `StorageDepositTransferredAndHeld`     | _(none)_                                       | `from: T::AccountId, to: T::AccountId, amount: BalanceOf<T>`                |
-| Added    | `StorageDepositTransferredAndReleased` | _(none)_                                       | `from: T::AccountId, to: T::AccountId, amount: BalanceOf<T>`                |
-| Modified | `Called`                               | `caller: T::AccountId, contract: T::AccountId` | `caller: Origin<T>, contract: T::AccountId`                                 |
-| Modified | `CodeRemoved`                          | `code_hash: T::Hash`                           | `code_hash: T::Hash, deposit_released: BalanceOf<T>, remover: T::AccountId` |
-| Modified | `CodeStored`                           | `code_hash: T::Hash`                           | `code_hash: T::Hash, deposit_held: BalanceOf<T>, uploader: T::AccountId`    |
-
-#### Errors
-
-| Status  | Name                                |
-| ------- | ----------------------------------- |
-| Added   | `CannotAddSelfAsDelegateDependency` |
-| Added   | `CodeInfoNotFound`                  |
-| Added   | `DelegateDependencyAlreadyExists`   |
-| Added   | `DelegateDependencyNotFound`        |
-| Added   | `InvalidSchedule`                   |
-| Added   | `MaxDelegateDependenciesReached`    |
-| Added   | `MigrationInProgress`               |
-| Added   | `NoMigrationPerformed`              |
-| Added   | `OutOfTransientStorage`             |
-| Added   | `StateChangeDenied`                 |
-| Added   | `XCMDecodeFailed`                   |
-| Removed | `DeletionQueueFull`                 |
-| Removed | `InvalidScheduleVersion`            |
-
-#### Storage
-
-| Status   | Name                   | v7.4                                                                     | v8.0                                                                      |
-| -------- | ---------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
-| Added    | `CodeInfoOf`           | _(none)_                                                                 | `Map (Optional) — hashers: Identity, key: H256, value: CodeInfo`          |
-| Added    | `DeletionQueueCounter` | _(none)_                                                                 | `Plain (Default) — DeletionQueueManager`                                  |
-| Added    | `MigrationInProgress`  | _(none)_                                                                 | `Plain (Optional) — BoundedVec<U8>`                                       |
-| Removed  | `CodeStorage`          | `Map (Optional) — hashers: Identity, key: H256, value: PrefabWasmModule` | _(none)_                                                                  |
-| Removed  | `OwnerInfoOf`          | `Map (Optional) — hashers: Identity, key: H256, value: OwnerInfo`        | _(none)_                                                                  |
-| Modified | `DeletionQueue`        | `Plain (Default) — BoundedVec<DeletedContract>`                          | `Map (Optional) — hashers: Twox64Concat, key: U32, value: BoundedVec<U8>` |
-
-#### Constants
-
-| Status  | Name                           | v7.4                        | v8.0                  |
-| ------- | ------------------------------ | --------------------------- | --------------------- |
-| Added   | `ApiVersion`                   | _(none)_                    | `ApiVersion = 0x0400` |
-| Added   | `CodeHashLockupDepositPercent` | _(none)_                    | `Perbill = 30%`       |
-| Added   | `DefaultDepositLimit`          | _(none)_                    | `U128 = 63068160000`  |
-| Added   | `Environment`                  | _(none)_                    | `Environment = 0x`    |
-| Added   | `MaxDelegateDependencies`      | _(none)_                    | `U32 = 32`            |
-| Added   | `MaxTransientStorageSize`      | _(none)_                    | `U32 = 1048576`       |
-| Removed | `DeletionQueueDepth`           | `U32 = 1024`                | _(none)_              |
-| Removed | `DeletionWeightLimit`          | `Weight = 0x070088526a7400` | _(none)_              |
 
 ### ElectionProviderMultiPhase
 
@@ -518,23 +456,6 @@ Renamed pallets (for example `CddServiceProviders` → `DidRegistrars`) are not 
 | Status | Name                    |
 | ------ | ----------------------- |
 | Added  | `SnapshotLimitTooSmall` |
-
-### PolymeshContracts
-
-#### Calls
-
-| Status  | Name                                   | v7.4                                                                                                                                  | v8.0     |
-| ------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| Removed | `instantiate_with_code_as_primary_key` | `endowment: Balance, gas_limit: Weight, storage_deposit_limit: Option<Balance>, code: Vec<u8>, data: Vec<u8>, salt: Vec<u8>`          | _(none)_ |
-| Removed | `instantiate_with_hash_as_primary_key` | `endowment: Balance, gas_limit: Weight, storage_deposit_limit: Option<Balance>, code_hash: CodeHash<T>, data: Vec<u8>, salt: Vec<u8>` | _(none)_ |
-
-#### Errors
-
-| Status  | Name                         |
-| ------- | ---------------------------- |
-| Removed | `CallerNotAPrimaryKey`       |
-| Removed | `InstantiatorWithNoIdentity` |
-| Removed | `MissingKeyPermissions`      |
 
 ### Portfolio
 

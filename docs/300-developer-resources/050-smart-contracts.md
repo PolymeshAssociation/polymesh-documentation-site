@@ -21,11 +21,14 @@ This allows teams to keep core regulated operations on the native layer while im
 - permissioned operations with custom approval paths
 - upgradeable application-level policy logic
 
-## `pallet-revive`: PolkaVM contracts with EVM compatibility
+## `pallet-revive`: a dual-VM contract engine (PolkaVM + EVM)
 
-The smart contract pallet on Polymesh is `pallet-revive`.
+The smart contract pallet on Polymesh is `pallet-revive`. It is a **dual-VM contract execution engine**: it runs two different virtual machines, and which one executes a given contract is determined by how that contract was compiled — not by which way you call it.
 
-Contracts execute on **PolkaVM**, a RISC-V-based execution engine. EVM compatibility — Solidity contracts, standard Ethereum JSON-RPC tooling — is one supported way to interact with `pallet-revive`, not the whole of what it does. Native PolkaVM contracts and EVM-bytecode contracts both run on the same pallet.
+- **PolkaVM** (a RISC-V-based VM) executes **PolkaVM bytecode**. Solidity compiled with the [`resolc`](https://github.com/paritytech/revive) compiler (instead of `solc`) targets PolkaVM. This path does **not** provide full EVM compatibility — some EVM semantics and opcodes are unsupported or behave differently, so a contract that depends on exact EVM behaviour should not assume it carries over.
+- **revm** (a Rust implementation of the Ethereum Virtual Machine) executes standard **EVM bytecode**. Solidity compiled with the ordinary `solc` compiler produces EVM bytecode that deploys and runs in `revm` with **full EVM compatibility**. This is the path to use when a contract must behave exactly as it would on Ethereum.
+
+In short: **`resolc` → PolkaVM** (native execution, partial EVM compatibility) and **`solc` → EVM bytecode → `revm`** (full EVM compatibility). EVM-bytecode execution is a distinct execution path enabled by the `AllowEVMBytecode` runtime flag (see [Runtime configuration](#runtime-configuration)) — not merely an interface layered on top of PolkaVM. Both VMs live behind the same `pallet-revive` calls, storage, and account model.
 
 ## Address mapping
 
@@ -61,7 +64,7 @@ Values set in `impl pallet_revive::Config for Runtime`:
 | ------------------ | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | `ChainId`          | `1_641_820` (Mainnet), `1_641_819` (Testnet), `1_641_818` (Develop) | The EVM chain ID wallets and tooling (MetaMask, ethers.js) need to target the right network |
 | `NativeToEthRatio` | `10^12`                                                             | Bridges Polymesh's 6-decimal POLYX to Ethereum's 18-decimal wei convention                  |
-| `AllowEVMBytecode` | `true`                                                              | EVM bytecode execution is enabled, in addition to native PolkaVM contracts                  |
+| `AllowEVMBytecode` | `true`                                                              | Enables the `revm` EVM-bytecode path (`solc` output) alongside PolkaVM contracts            |
 | `GasScale`         | `100`                                                               | Scales EVM gas to Polymesh's weight-based fee model                                         |
 | `Precompiles`      | `()`                                                                | No custom precompiles configured yet — see [Precompiles](#precompiles) below                |
 | `AddressMapper`    | `AccountId32Mapper`                                                 | See [Address mapping](#address-mapping) above                                               |

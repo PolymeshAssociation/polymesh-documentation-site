@@ -39,11 +39,12 @@ These calls move from `Staking` to `Validators` (index 16) unchanged in signatur
 
 - `add_permissioned_validator`
 - `remove_permissioned_validator`
-- `payout_stakers_by_system`
 - `change_slashing_allowed_for`
 - `update_permissioned_validator_intended_count`
 - `chill_from_governance`
 - `set_commission_cap`
+
+The v7.4 `payout_stakers_by_system` call is **not** among them — it is removed entirely in v8, along with the scheduler-driven automatic reward payout it backed. See [section 14](#14-automatic-reward-payout-mechanism).
 
 Along with the events `PermissionedIdentityAdded`, `PermissionedIdentityRemoved`, `InvalidatedNominators`, `SlashingAllowedForChanged`, `RewardPaymentSchedulingInterrupted`, `CommissionCapUpdated`, and errors `StashIdentityDoesNotExist`, `StashIdentityNotPermissioned`, `IdentityIsAlreadyPermissioned`, `IntendedCountIsExceedingConsensusLimit`, `IdentityNotFound`, `ValidatorNotFound`, `CommissionTooHigh`, `CommissionUnchanged`.
 
@@ -154,6 +155,23 @@ Removed storage: `OffendingValidators`, `PermissionedIdentity`, `PolymeshStorage
 
 Alongside the `SessionKeys` change (BEEFY key, see [Node operators](#node-operators) below), `Session` gains three new events: `NewQueued` (new session keys queued for the next session), `ValidatorDisabled { validator }`, and `ValidatorReenabled { validator }`. The `DisabledValidators` storage changes from a plain list of validator indices to `Vec<(u32, OffenceSeverity)>`, tracking how severely a validator was disabled — which is what makes `ValidatorReenabled` (partial reinstatement after a lesser offence) possible. New constant `KeyDeposit`.
 
+### 14. Automatic reward payout mechanism
+
+Polymesh pays validator/nominator era rewards automatically — operators do not have to call `payout_stakers` themselves. In v7.4 this was driven by a scheduler-based mechanism inside the pallet, exposed through the `payout_stakers_by_system` call. In v8 that scheduler is gone: automatic payouts run in each block's `on_initialized` hook instead, and `payout_stakers_by_system` no longer exists.
+
+The externally observable consequences:
+
+- **`payout_stakers_by_system` is removed** with no direct replacement (the automatic mechanism is now internal). The manual `payout_stakers` / `payout_stakers_by_page` calls are unaffected and still available.
+- **Two new `Validators` events** report the outcome of the automatic payout (see table below).
+- `RewardPaymentSchedulingInterrupted { account_id, era, error }` remains declared on `Validators`, but no longer reflects an active scheduler.
+
+| New `Validators` event                                  | Meaning                                                                                  |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ValidatorPayoutFailed { validator, era, page, error }` | A validator's automatic payout for a given era page failed (carries the `DispatchError`) |
+| `AutomaticPayoutFinished { era }`                       | The automatic payout for an era has finished                                             |
+
+If you index reward payouts, keep grouping the underlying `PayoutStarted` / `Rewarded` / `balances.Deposit` events as described in [section 6](#6-rewarded-event-drops-identity-adds-dest) and [section 7](#7-payoutstarted-event-gains-paging-fields-and-payouts-can-span-multiple-pages) — those are unchanged. What changed is *when* and *how* the automatic payout is triggered, plus the new success/failure events above.
+
 ## Node operators
 
 Node-level setup, session keys, and CLI flags are covered in the [Validator Node Guide](/developer-resources/validator-node-guide/) and [Running a Node with Docker](/node/docker), both already updated for v8. Highlights relevant if you're upgrading:
@@ -171,7 +189,7 @@ See those guides for full steps — this page only covers pallet-level (call/eve
 1. Update `bond` calls to drop the `controller` argument.
 2. Update `set_controller` calls to drop the `controller` argument — it now only ever resets the controller to the stash. Legacy stashes with a separate controller keep working unmigrated; there's no self-service call to force it, and no planned forced migration.
 3. Update `chill_other` calls to pass a stash instead of a controller.
-4. Move any calls to `add_permissioned_validator`, `remove_permissioned_validator`, `payout_stakers_by_system`, `change_slashing_allowed_for`, `update_permissioned_validator_intended_count`, `chill_from_governance`, or `set_commission_cap` from `Staking` to `Validators`. Don't wait on the `Nominated` event — it's declared but never emitted.
+4. Move any calls to `add_permissioned_validator`, `remove_permissioned_validator`, `change_slashing_allowed_for`, `update_permissioned_validator_intended_count`, `chill_from_governance`, or `set_commission_cap` from `Staking` to `Validators`. Don't wait on the `Nominated` event — it's declared but never emitted. Also stop calling `payout_stakers_by_system` — it's removed with no replacement (see [section 14](#14-automatic-reward-payout-mechanism)).
 5. If you page through or index validator payouts, switch to `payout_stakers_by_page` and group by `(validator_stash, era_index, page)` rather than assuming one payout per validator per era — handle the new `page`/`next` fields on `PayoutStarted`.
 6. Update `Rewarded` event decoding for the `dest` field replacing `identity`; for a reliable record of which account was actually credited and how much, consume `balances.Deposit` alongside it.
 7. If you hardcode a nomination limit from `Staking::MaxNominations`, note it's no longer queryable — the value (16) is unchanged, just no longer exposed as a runtime constant.
