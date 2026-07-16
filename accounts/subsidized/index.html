@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Subsidized Accounts - Fee Relayer | Polymesh Documentation Portal</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://polymeshassociation.github.io/polymesh-documentation-site/accounts/subsidized/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Subsidized Accounts - Fee Relayer | Polymesh Documentation Portal"><meta data-rh="true" name="description" content="Enable fee payments on behalf of other accounts"><meta data-rh="true" property="og:description" content="Enable fee payments on behalf of other accounts"><link data-rh="true" rel="icon" href="/polymesh-documentation-site/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://polymeshassociation.github.io/polymesh-documentation-site/accounts/subsidized/"><link data-rh="true" rel="alternate" href="https://polymeshassociation.github.io/polymesh-documentation-site/accounts/subsidized/" hreflang="en"><link data-rh="true" rel="alternate" href="https://polymeshassociation.github.io/polymesh-documentation-site/accounts/subsidized/" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://K25SRS7O1D-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Core Concepts","item":"https://polymeshassociation.github.io/polymesh-documentation-site/core-concepts"},{"@type":"ListItem","position":2,"name":"Identity","item":"https://polymeshassociation.github.io/polymesh-documentation-site/identity"},{"@type":"ListItem","position":3,"name":"Advanced Identity","item":"https://polymeshassociation.github.io/polymesh-documentation-site/identity/advanced"},{"@type":"ListItem","position":4,"name":"Subsidized Accounts","item":"https://polymeshassociation.github.io/polymesh-documentation-site/accounts/subsidized"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="Polymesh Documentation Portal" href="/polymesh-documentation-site/opensearch.xml"><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.d2ce381a.css">
-<script src="/polymesh-documentation-site/assets/js/runtime~main.7055d96e.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/runtime~main.602d87ea.js" defer="defer"></script>
 <script src="/polymesh-documentation-site/assets/js/main.3f2a316a.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -82,8 +82,9 @@
 <p>Both the subsidizer and subsidized party have control over the subsidy relationship:</p>
 <p><strong>Subsidizer Controls</strong>:</p>
 <ul>
-<li class=""><code>relayer::decrease_allowance</code>: Reduce the subsidy allowance</li>
-<li class=""><code>relayer::increase_allowance</code>: Increase the subsidy allowance</li>
+<li class=""><code>relayer::decrease_polyx_limit</code>: Reduce the subsidy allowance</li>
+<li class=""><code>relayer::increase_polyx_limit</code>: Increase the subsidy allowance</li>
+<li class=""><code>relayer::update_polyx_limit</code>: Set the subsidy allowance to a specific value</li>
 <li class=""><code>relayer::revoke_subsidy</code>: Cancel a pending, not-yet-accepted subsidy offer</li>
 <li class=""><code>relayer::remove_subsidy</code>: Remove an established subsidy relationship</li>
 </ul>

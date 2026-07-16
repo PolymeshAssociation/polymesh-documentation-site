@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Onboarding | Polymesh Documentation Portal</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://polymeshassociation.github.io/polymesh-documentation-site/getting-started/onboarding/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Onboarding | Polymesh Documentation Portal"><meta data-rh="true" name="description" content="Identity onboarding and DID registration"><meta data-rh="true" property="og:description" content="Identity onboarding and DID registration"><link data-rh="true" rel="icon" href="/polymesh-documentation-site/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://polymeshassociation.github.io/polymesh-documentation-site/getting-started/onboarding/"><link data-rh="true" rel="alternate" href="https://polymeshassociation.github.io/polymesh-documentation-site/getting-started/onboarding/" hreflang="en"><link data-rh="true" rel="alternate" href="https://polymeshassociation.github.io/polymesh-documentation-site/getting-started/onboarding/" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://K25SRS7O1D-dsn.algolia.net" crossorigin="anonymous"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Getting Started","item":"https://polymeshassociation.github.io/polymesh-documentation-site/getting-started"},{"@type":"ListItem","position":2,"name":"Onboarding","item":"https://polymeshassociation.github.io/polymesh-documentation-site/getting-started/onboarding"}]}</script><link rel="search" type="application/opensearchdescription+xml" title="Polymesh Documentation Portal" href="/polymesh-documentation-site/opensearch.xml"><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.d2ce381a.css">
-<script src="/polymesh-documentation-site/assets/js/runtime~main.7055d96e.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/runtime~main.602d87ea.js" defer="defer"></script>
 <script src="/polymesh-documentation-site/assets/js/main.3f2a316a.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -15,8 +15,8 @@
 <p>Polymesh users who participate in <strong>asset</strong> and <strong>identity</strong> related transactions must have an on-chain identity (DID). Accounts used solely for POLYX transfers and staking (excluding validator activities) are not subject to this requirement.</p>
 <p>From Polymesh v8, onboarding is to receive a DID and supports two paths:</p>
 <ul>
-<li class=""><strong>Self-registration</strong>: The user calls <code>identity::register_did</code> for their own key and pays the transaction fee.</li>
-<li class=""><strong>Registrar-assisted registration</strong>: A permissioned DID registrar registers a DID for a user key and pays the transaction fee.</li>
+<li class=""><strong>Self-registration</strong>: The user calls <code>identity::self_register_did</code> for their own key and pays the transaction fee.</li>
+<li class=""><strong>Registrar-assisted registration</strong>: A permissioned DID registrar registers a DID for a user key using <code>identity::register_did</code>, and pays the transaction fee.</li>
 </ul>
 <p>If you are new to Polymesh, a practical flow is:</p>
 <ol>
@@ -39,7 +39,7 @@
 <p>Self-assigning a DID submits an on-chain transaction, where the user pays the transaction fee. Therefore the user must have some POLYX in the signing key before proceeding.</p>
 <p>When the user clicks this action:</p>
 <ol>
-<li class="">Portal prepares an <code>identity::register_did</code> transaction for the selected key.</li>
+<li class="">Portal prepares an <code>identity::self_register_did</code> transaction for the selected key.</li>
 <li class="">The wallet signing interface opens and prompts the user to sign.</li>
 <li class="">After the user signs, the transaction is submitted.</li>
 <li class="">After successful execution, the key is linked to a new DID.</li>
@@ -65,15 +65,19 @@
 <p>On the <a href="https://portal.polymesh.live/" target="_blank" rel="noopener noreferrer" class="">Testnet instance of the Polymesh Portal</a>, onboarding is done by a DID registrar and seeds accounts with test POLYX for experimentation.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="extrinsic-reference">Extrinsic reference<a href="#extrinsic-reference" class="hash-link" aria-label="Direct link to Extrinsic reference" title="Direct link to Extrinsic reference" translate="no">​</a></h2>
 <ul>
+<li class=""><code>identity::self_register_did()</code>
+<ul>
+<li class="">Permissionless: registers a DID for the caller&#x27;s own key.</li>
+</ul>
+</li>
 <li class=""><code>identity::register_did(target_account)</code>
 <ul>
-<li class="">Registers a DID for the target account.</li>
-<li class="">Supports assigning a DID to a single key.</li>
+<li class="">Registrar-gated: registers a DID for the target account. Callable only by an active DID registrar.</li>
 </ul>
 </li>
 <li class=""><code>identity::cdd_register_did</code> and <code>identity::cdd_register_did_with_cdd</code>
 <ul>
-<li class="">Deprecated in v8, legacy onboarding extrinsics retained temporarily for transition.</li>
+<li class="">Deprecated in v8. No longer attach a <code>CustomerDueDiligence</code> claim; registrar-gated legacy paths retained temporarily for transition.</li>
 </ul>
 </li>
 </ul>
