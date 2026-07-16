@@ -21,7 +21,7 @@ Polymesh has a native token, used for security and payments, [POLYX](/polyx/).
 
 Polymesh provides core business logic and financial abstractions at its base layer, called primitives. These provide a rich set of embedded on-chain actions (called extrinsics) that a user can initiate, such as creating an asset, settling securities instructions or participating in on-chain governance.
 
-Polymesh also supports Layer 2 [Smart Contract](../development/smart-contracts/) logic via `pallet-revive`, allowing network users to extend and leverage the base layer primitives to build on-chain financial and identity based protocols. `pallet-revive` is a dual-VM contract engine: Solidity compiled with `resolc` runs as native [PolkaVM](https://github.com/paritytech/polkavm) (a RISC-V based execution engine) bytecode with partial EVM compatibility, while Solidity compiled with the standard `solc` compiler produces EVM bytecode that runs in a separate Rust EVM implementation (`revm`) with full EVM compatibility, reachable via standard Ethereum JSON-RPC tooling through a dedicated proxy. See [Smart Contracts](../development/smart-contracts/) for detail.
+Polymesh also supports Layer 2 [Smart Contract](../development/smart-contracts/) logic via `pallet-revive`, allowing network users to extend and leverage the base layer primitives to build on-chain financial and identity based protocols. `pallet-revive` is a dual-VM contract engine: Solidity compiled with `resolc` runs as native [PolkaVM](https://github.com/paritytech/polkavm) (a RISC-V based execution engine) bytecode with partial EVM compatibility, while Solidity compiled with the standard `solc` compiler produces EVM bytecode that runs in a separate Rust EVM implementation (`revm`) with full EVM compatibility. The executing VM is chosen from the uploaded bytecode, not from how the transaction is submitted — so EVM contracts can be deployed and called through ordinary Substrate transactions, as well as via standard Ethereum tooling routed through a dedicated JSON-RPC proxy. See [Smart Contracts](../development/smart-contracts/) for detail.
 
 ## Architecture
 
@@ -74,7 +74,6 @@ Polymesh provides financial primitives and business logic, built on top of a dis
 Updates to the ledger are processed across a decentralised network of Polymesh operator nodes. The consensus mechanism consists of three main components:
 
 1. Operator Selection: Nominated Proof-of-Stake (NPoS) determines which permissioned operators will actively participate in block production and finalization. In this system:
-
    - Node Operators (validators) indicate their intention to submit blocks and make their candidacy public
    - Token holders participate as nominators by staking POLYX tokens behind operators they trust
    - The network through the election algorithm distributes staked tokens to maximize economic security

@@ -30,6 +30,10 @@ The smart contract pallet on Polymesh is `pallet-revive`. It is a **dual-VM cont
 
 In short: **`resolc` → PolkaVM** (native execution, partial EVM compatibility) and **`solc` → EVM bytecode → `revm`** (full EVM compatibility). EVM-bytecode execution is a distinct execution path enabled by the `AllowEVMBytecode` runtime flag (see [Runtime configuration](#runtime-configuration)) — not merely an interface layered on top of PolkaVM. Both VMs live behind the same `pallet-revive` calls, storage, and account model.
 
+:::info The VM is chosen from the uploaded code, not the submission path
+When you deploy a contract you upload its compiled code, and the runtime selects the VM from the code itself — PolkaVM if it's RISC-V/PolkaVM bytecode, `revm` if it's EVM bytecode. This is **independent of how you submit the transaction**. A Solidity/EVM-bytecode contract can be deployed and called from an ordinary **Substrate transaction** (e.g. polkadot.js or subxt, via `instantiate_with_code` / `call`) just as well as from standard Ethereum tooling through the [`eth-rpc` proxy](#running-evm-json-rpc). The Ethereum JSON-RPC path is a convenience for standard ETH tooling and workflows — it is not a requirement for deploying or using EVM contracts.
+:::
+
 ## Address mapping
 
 Polymesh accounts are 32-byte (`AccountId32`), not 20-byte Ethereum addresses. `AddressMapper = pallet_revive::AccountId32Mapper<Self>` bridges the two, and the two directions work differently:
@@ -49,10 +53,9 @@ Tools such as [Subscan's account-conversion utility](https://polymesh.subscan.io
 
 `pallet-revive` exposes the standard upstream call set — Polymesh has not added or removed any calls at the pallet level; customization is entirely in runtime configuration (below):
 
-- `eth_transact` — submit a raw signed Ethereum transaction
-- `call`, `instantiate`, `instantiate_with_code` — native calls to invoke or deploy a contract
-- `eth_instantiate_with_code`, `eth_call`, `eth_substrate_call` — EVM-flavored equivalents
-- `upload_code`, `remove_code`, `set_code` — manage contract code independently of instances
+- `call`, `instantiate`, `instantiate_with_code` — native (Substrate) calls to invoke or deploy a contract. `instantiate_with_code` accepts **either** PolkaVM or EVM bytecode; the runtime selects the VM from the uploaded code, so these deploy Solidity/EVM contracts to `revm` too — not only PolkaVM contracts.
+- `eth_transact`, `eth_instantiate_with_code`, `eth_call`, `eth_substrate_call` — Ethereum-transaction-shaped entry points (RLP-encoded, ETH-signed) that the `eth-rpc` proxy uses so standard Ethereum tooling can reach the same contracts. They are an alternative submission path, not a different VM.
+- `upload_code`, `remove_code`, `set_code` — manage contract code independently of instances (again, either bytecode kind)
 - `map_account`, `unmap_account` — manage the reversible `AccountId32` ↔ Ethereum address mapping
 - `dispatch_as_fallback_account` — dispatch a call as a contract's fallback account
 
@@ -88,6 +91,8 @@ The `Asset` and `Settlement` pallets provide an ERC-20-style `approve`/`transfer
 ## Running EVM JSON-RPC
 
 `pallet-revive` is a Substrate pallet, not a full Ethereum node — it doesn't speak Ethereum's JSON-RPC (`eth_call`, `eth_sendRawTransaction`, `eth_getBalance`, etc.) directly. A separate proxy process, `pallet-revive-eth-rpc` (binary name `eth-rpc`), translates standard Ethereum JSON-RPC into calls against the node. Run it alongside your node to point MetaMask, ethers.js, or other standard Ethereum tooling at Polymesh, using the `ChainId` for your target network from the table above.
+
+The `eth-rpc` proxy exists purely to support standard Ethereum tooling and workflows. It is **not** required to use EVM contracts: the same `revm`-executed Solidity contracts can be deployed and called directly through ordinary Substrate transactions (`instantiate_with_code` / `call`) using e.g. polkadot.js or subxt. Which VM runs a contract depends on the uploaded bytecode, not on whether you go through `eth-rpc` — see [the note above](#pallet-revive-a-dual-vm-contract-engine-polkavm--evm).
 
 :::info Polkadot's smart contracts documentation
 Polymesh's `pallet-revive` is built on the same upstream pallet used across the Polkadot ecosystem, so [Polkadot's smart contracts documentation](https://docs.polkadot.com/smart-contracts/) is a useful reference for standard EVM/Solidity tooling and workflows — dev environments (Remix, Hardhat, Foundry), libraries (ethers.js, viem, web3.js), an ERC-20/NFT/Uniswap cookbook, and general EVM-vs-PVM concepts. Treat it as a guide to the surrounding tooling ecosystem, not to Polymesh's own configuration: runtime settings like `ChainId`, `Precompiles`, and address mapping are specific to Polymesh's deployment and are documented above.

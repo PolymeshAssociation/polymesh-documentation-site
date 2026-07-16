@@ -29,7 +29,9 @@ The legacy Wasm/ink! contracts pallets — `pallet-contracts` and Polymesh's `po
 - **PolkaVM** (RISC-V) executes PolkaVM bytecode. Solidity compiled with the `resolc` compiler (instead of `solc`) targets PolkaVM, but does **not** get full EVM compatibility.
 - **revm** (a Rust EVM) executes standard EVM bytecode. Solidity compiled with `solc` deploys and runs in `revm` with **full EVM compatibility**.
 
-So EVM support is not merely an "interface" onto PolkaVM — EVM bytecode runs in a separate VM (`revm`) from PolkaVM contracts. The `AllowEVMBytecode` config flag (below) toggles the `revm` execution path; it is `true` on all Polymesh networks. See the [Smart Contracts](/development/smart-contracts) conceptual guide for the compiler/tooling detail.
+So EVM support is not merely an "interface" onto PolkaVM — EVM bytecode runs in a separate VM (`revm`) from PolkaVM contracts. The `AllowEVMBytecode` config flag (below) toggles the `revm` execution path; it is `true` on all Polymesh networks.
+
+Which VM runs a contract is decided by the **uploaded code** (RISC-V/PolkaVM bytecode vs EVM bytecode), not by the submission path. EVM-bytecode (Solidity/`solc`) contracts can therefore be deployed and called via ordinary **Substrate transactions** (`instantiate_with_code` / `call` from e.g. polkadot.js or subxt), not only through the `eth-rpc` proxy — the Ethereum JSON-RPC path is a convenience for standard ETH tooling, not a requirement. See the [Smart Contracts](/development/smart-contracts) conceptual guide for the compiler/tooling detail.
 
 ### Address mapping
 
@@ -47,7 +49,7 @@ Values set in `impl pallet_revive::Config for Runtime`:
 | ------------------ | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | `ChainId`          | `1_641_820` (Mainnet), `1_641_819` (Testnet), `1_641_818` (Develop) | The EVM chain ID wallets and tooling (MetaMask, ethers.js) need to target the right network |
 | `NativeToEthRatio` | `10^12`                                                             | Bridges Polymesh's 6-decimal POLYX to Ethereum's 18-decimal wei convention                  |
-| `AllowEVMBytecode` | `true`                                                              | Toggles the `revm` EVM-bytecode execution path, separate from native PolkaVM contracts       |
+| `AllowEVMBytecode` | `true`                                                              | Toggles the `revm` EVM-bytecode execution path, separate from native PolkaVM contracts      |
 | `GasScale`         | `100`                                                               | Scales EVM gas to Polymesh's weight-based fee model                                         |
 | `Precompiles`      | `()`                                                                | No custom precompiles configured beyond the pallet's defaults                               |
 | `AddressMapper`    | `AccountId32Mapper`                                                 | See above                                                                                   |
@@ -152,7 +154,7 @@ Values set in `impl pallet_revive::Config for Runtime`:
 
 ### Running EVM JSON-RPC
 
-`pallet-revive` is a Substrate pallet, not a full Ethereum node — it doesn't speak Ethereum's JSON-RPC (`eth_call`, `eth_sendRawTransaction`, `eth_getBalance`, etc.) directly. A separate proxy process, `pallet-revive-eth-rpc` (binary name `eth-rpc`), new in v8, translates standard Ethereum JSON-RPC into calls against the node. Run it alongside your node to point MetaMask, ethers.js, or other standard Ethereum tooling at Polymesh.
+`pallet-revive` is a Substrate pallet, not a full Ethereum node — it doesn't speak Ethereum's JSON-RPC (`eth_call`, `eth_sendRawTransaction`, `eth_getBalance`, etc.) directly. A separate proxy process, `pallet-revive-eth-rpc` (binary name `eth-rpc`), new in v8, translates standard Ethereum JSON-RPC into calls against the node. Run it alongside your node to point MetaMask, ethers.js, or other standard Ethereum tooling at Polymesh. It is only needed for that Ethereum-tooling path — EVM contracts can also be deployed and called directly via Substrate transactions (see the note under [`pallet-revive`](#pallet-revive-new) above).
 
 ## Migration checklist
 
