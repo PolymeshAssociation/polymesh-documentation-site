@@ -1,0 +1,111 @@
+# Enumeration: ReviveTx
+
+> Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:868
+
+# Enumeration: ReviveTx
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:868
+
+## Enumeration Members
+
+### Call
+
+> **Call**: `"revive.call"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:870
+
+***
+
+### DispatchAsFallbackAccount
+
+> **DispatchAsFallbackAccount**: `"revive.dispatchAsFallbackAccount"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:881
+
+***
+
+### EthCall
+
+> **EthCall**: `"revive.ethCall"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:874
+
+***
+
+### EthInstantiateWithCode
+
+> **EthInstantiateWithCode**: `"revive.ethInstantiateWithCode"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:873
+
+***
+
+### EthSubstrateCall
+
+> **EthSubstrateCall**: `"revive.ethSubstrateCall"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:875
+
+***
+
+### EthTransact
+
+> **EthTransact**: `"revive.ethTransact"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:869
+
+***
+
+### Instantiate
+
+> **Instantiate**: `"revive.instantiate"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:871
+
+***
+
+### InstantiateWithCode
+
+> **InstantiateWithCode**: `"revive.instantiateWithCode"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:872
+
+***
+
+### MapAccount
+
+> **MapAccount**: `"revive.mapAccount"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:879
+
+***
+
+### RemoveCode
+
+> **RemoveCode**: `"revive.removeCode"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:877
+
+***
+
+### SetCode
+
+> **SetCode**: `"revive.setCode"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:878
+
+***
+
+### UnmapAccount
+
+> **UnmapAccount**: `"revive.unmapAccount"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:880
+
+***
+
+### UploadCode
+
+> **UploadCode**: `"revive.uploadCode"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:876

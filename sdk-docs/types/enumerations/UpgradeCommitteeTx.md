@@ -1,0 +1,47 @@
+# Enumeration: UpgradeCommitteeTx
+
+> Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:380
+
+# Enumeration: UpgradeCommitteeTx
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:380
+
+## Enumeration Members
+
+### SetExpiresAfter
+
+> **SetExpiresAfter**: `"upgradeCommittee.setExpiresAfter"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:383
+
+***
+
+### SetReleaseCoordinator
+
+> **SetReleaseCoordinator**: `"upgradeCommittee.setReleaseCoordinator"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:382
+
+***
+
+### SetVoteThreshold
+
+> **SetVoteThreshold**: `"upgradeCommittee.setVoteThreshold"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:381
+
+***
+
+### Vote
+
+> **Vote**: `"upgradeCommittee.vote"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:385
+
+***
+
+### VoteOrPropose
+
+> **VoteOrPropose**: `"upgradeCommittee.voteOrPropose"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:384

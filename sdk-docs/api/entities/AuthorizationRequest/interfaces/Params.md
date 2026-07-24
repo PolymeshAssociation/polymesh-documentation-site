@@ -1,0 +1,39 @@
+# Interface: Params
+
+> Defined in: [src/api/entities/AuthorizationRequest.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L39)
+
+# Interface: Params
+
+Defined in: [src/api/entities/AuthorizationRequest.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L39)
+
+## Properties
+
+### data
+
+> **data**: [`Authorization`](../../types/type-aliases/Authorization.mdx)
+
+Defined in: [src/api/entities/AuthorizationRequest.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L43)
+
+***
+
+### expiry
+
+> **expiry**: `Date` \| `null`
+
+Defined in: [src/api/entities/AuthorizationRequest.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L42)
+
+***
+
+### issuer
+
+> **issuer**: [`Identity`](../../Identity/classes/Identity.mdx)
+
+Defined in: [src/api/entities/AuthorizationRequest.ts:41](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L41)
+
+***
+
+### target
+
+> **target**: [`Signer`](../../types/type-aliases/Signer.mdx)
+
+Defined in: [src/api/entities/AuthorizationRequest.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L40)

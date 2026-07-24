@@ -1,0 +1,15 @@
+# Variable: CORPORATE\_VOTING\_TX\_TAGS
+
+> > `const` **CORPORATE\_VOTING\_TX\_TAGS**: \[[`Vote`](../../enumerations/CorporateBallotTx.mdx#vote)\]
+
+# Variable: CORPORATE\_VOTING\_TX\_TAGS
+
+> `const` **CORPORATE\_VOTING\_TX\_TAGS**: \[[`Vote`](../../enumerations/CorporateBallotTx.mdx#vote)\]
+
+Defined in: [src/types/txGroupConstants.ts:271](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/types/txGroupConstants.ts#L271)
+
+Transaction tags for Corporate Voting operations
+Contains operations for voting in corporate ballots.
+
+Values:
+- TxTags.corporateBallot.Vote

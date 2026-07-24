@@ -1,0 +1,87 @@
+# Enumeration: ClaimType
+
+> Defined in: [src/api/entities/types.ts:168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L168)
+
+# Enumeration: ClaimType
+
+Defined in: [src/api/entities/types.ts:168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L168)
+
+## Enumeration Members
+
+### Accredited
+
+> **Accredited**: `"Accredited"`
+
+Defined in: [src/api/entities/types.ts:169](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L169)
+
+***
+
+### Affiliate
+
+> **Affiliate**: `"Affiliate"`
+
+Defined in: [src/api/entities/types.ts:170](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L170)
+
+***
+
+### Blocked
+
+> **Blocked**: `"Blocked"`
+
+Defined in: [src/api/entities/types.ts:177](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L177)
+
+***
+
+### BuyLockup
+
+> **BuyLockup**: `"BuyLockup"`
+
+Defined in: [src/api/entities/types.ts:171](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L171)
+
+***
+
+### Custom
+
+> **Custom**: `"Custom"`
+
+Defined in: [src/api/entities/types.ts:178](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L178)
+
+***
+
+### CustomerDueDiligence
+
+> **CustomerDueDiligence**: `"CustomerDueDiligence"`
+
+Defined in: [src/api/entities/types.ts:173](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L173)
+
+***
+
+### Exempted
+
+> **Exempted**: `"Exempted"`
+
+Defined in: [src/api/entities/types.ts:176](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L176)
+
+***
+
+### Jurisdiction
+
+> **Jurisdiction**: `"Jurisdiction"`
+
+Defined in: [src/api/entities/types.ts:175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L175)
+
+***
+
+### KnowYourCustomer
+
+> **KnowYourCustomer**: `"KnowYourCustomer"`
+
+Defined in: [src/api/entities/types.ts:174](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L174)
+
+***
+
+### SellLockup
+
+> **SellLockup**: `"SellLockup"`
+
+Defined in: [src/api/entities/types.ts:172](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L172)

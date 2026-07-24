@@ -1,0 +1,311 @@
+# Enumeration: MultiSigTx
+
+> Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:396
+
+# Enumeration: MultiSigTx
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:396
+
+## Enumeration Members
+
+### AcceptMultisigSigner
+
+> **AcceptMultisigSigner**: `"multiSig.acceptMultisigSigner"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:422
+
+***
+
+### AcceptMultisigSignerAsIdentity
+
+> **AcceptMultisigSignerAsIdentity**: `"multiSig.acceptMultisigSignerAsIdentity"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:406
+
+***
+
+### AcceptMultisigSignerAsKey
+
+> **AcceptMultisigSignerAsKey**: `"multiSig.acceptMultisigSignerAsKey"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:407
+
+***
+
+### AddAdmin
+
+> **AddAdmin**: `"multiSig.addAdmin"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:428
+
+***
+
+### AddMultisigSigner
+
+> **AddMultisigSigner**: `"multiSig.addMultisigSigner"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:408
+
+***
+
+### AddMultisigSigners
+
+> **AddMultisigSigners**: `"multiSig.addMultisigSigners"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:423
+
+***
+
+### AddMultisigSignersViaAdmin
+
+> **AddMultisigSignersViaAdmin**: `"multiSig.addMultisigSignersViaAdmin"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:425
+
+***
+
+### AddMultisigSignersViaCreator
+
+> **AddMultisigSignersViaCreator**: `"multiSig.addMultisigSignersViaCreator"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:410
+
+***
+
+### Approve
+
+> **Approve**: `"multiSig.approve"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:420
+
+***
+
+### ApproveAsIdentity
+
+> **ApproveAsIdentity**: `"multiSig.approveAsIdentity"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:402
+
+***
+
+### ApproveAsKey
+
+> **ApproveAsKey**: `"multiSig.approveAsKey"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:403
+
+***
+
+### ApproveJoinIdentity
+
+> **ApproveJoinIdentity**: `"multiSig.approveJoinIdentity"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:432
+
+***
+
+### ChangeSigsRequired
+
+> **ChangeSigsRequired**: `"multiSig.changeSigsRequired"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:412
+
+***
+
+### ChangeSigsRequiredViaAdmin
+
+> **ChangeSigsRequiredViaAdmin**: `"multiSig.changeSigsRequiredViaAdmin"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:427
+
+***
+
+### ChangeSigsRequiredViaCreator
+
+> **ChangeSigsRequiredViaCreator**: `"multiSig.changeSigsRequiredViaCreator"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:417
+
+***
+
+### CreateMultisig
+
+> **CreateMultisig**: `"multiSig.createMultisig"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:397
+
+***
+
+### CreateOrApproveProposalAsIdentity
+
+> **CreateOrApproveProposalAsIdentity**: `"multiSig.createOrApproveProposalAsIdentity"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:398
+
+***
+
+### CreateOrApproveProposalAsKey
+
+> **CreateOrApproveProposalAsKey**: `"multiSig.createOrApproveProposalAsKey"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:399
+
+***
+
+### CreateProposal
+
+> **CreateProposal**: `"multiSig.createProposal"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:419
+
+***
+
+### CreateProposalAsIdentity
+
+> **CreateProposalAsIdentity**: `"multiSig.createProposalAsIdentity"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:400
+
+***
+
+### CreateProposalAsKey
+
+> **CreateProposalAsKey**: `"multiSig.createProposalAsKey"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:401
+
+***
+
+### ExecuteScheduledProposal
+
+> **ExecuteScheduledProposal**: `"multiSig.executeScheduledProposal"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:415
+
+***
+
+### JoinIdentity
+
+> **JoinIdentity**: `"multiSig.joinIdentity"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:433
+
+***
+
+### MakeMultisigPrimary
+
+> **MakeMultisigPrimary**: `"multiSig.makeMultisigPrimary"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:414
+
+***
+
+### MakeMultisigSecondary
+
+> **MakeMultisigSecondary**: `"multiSig.makeMultisigSecondary"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:416
+
+***
+
+### MakeMultisigSigner
+
+> **MakeMultisigSigner**: `"multiSig.makeMultisigSigner"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:413
+
+***
+
+### Reject
+
+> **Reject**: `"multiSig.reject"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:421
+
+***
+
+### RejectAsIdentity
+
+> **RejectAsIdentity**: `"multiSig.rejectAsIdentity"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:404
+
+***
+
+### RejectAsKey
+
+> **RejectAsKey**: `"multiSig.rejectAsKey"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:405
+
+***
+
+### RemoveAdmin
+
+> **RemoveAdmin**: `"multiSig.removeAdmin"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:434
+
+***
+
+### RemoveAdminViaAdmin
+
+> **RemoveAdminViaAdmin**: `"multiSig.removeAdminViaAdmin"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:429
+
+***
+
+### RemoveCreatorControls
+
+> **RemoveCreatorControls**: `"multiSig.removeCreatorControls"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:418
+
+***
+
+### RemoveMultisigSigner
+
+> **RemoveMultisigSigner**: `"multiSig.removeMultisigSigner"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:409
+
+***
+
+### RemoveMultisigSigners
+
+> **RemoveMultisigSigners**: `"multiSig.removeMultisigSigners"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:424
+
+***
+
+### RemoveMultisigSignersViaAdmin
+
+> **RemoveMultisigSignersViaAdmin**: `"multiSig.removeMultisigSignersViaAdmin"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:426
+
+***
+
+### RemoveMultisigSignersViaCreator
+
+> **RemoveMultisigSignersViaCreator**: `"multiSig.removeMultisigSignersViaCreator"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:411
+
+***
+
+### RemovePayer
+
+> **RemovePayer**: `"multiSig.removePayer"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:430
+
+***
+
+### RemovePayerViaPayer
+
+> **RemovePayerViaPayer**: `"multiSig.removePayerViaPayer"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:431

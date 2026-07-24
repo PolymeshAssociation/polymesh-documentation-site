@@ -1,0 +1,41 @@
+# Interface: IssueTokensParams
+
+> Defined in: [src/api/procedures/types.ts:837](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L837)
+
+# Interface: IssueTokensParams
+
+Defined in: [src/api/procedures/types.ts:837](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L837)
+
+## Properties
+
+### account?
+
+> `optional` **account?**: `string`
+
+Defined in: [src/api/procedures/types.ts:852](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L852)
+
+(optional) Account to which the Asset tokens will be issued
+
+#### Note
+
+only one of `portfolioId` or `account` can be provided. If both are not provided, assets are issued in default portfolio
+
+***
+
+### amount
+
+> **amount**: `BigNumber`
+
+Defined in: [src/api/procedures/types.ts:841](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L841)
+
+amount of Asset tokens to be issued
+
+***
+
+### portfolioId?
+
+> `optional` **portfolioId?**: `BigNumber`
+
+Defined in: [src/api/procedures/types.ts:845](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L845)
+
+portfolio to which the Asset tokens will be issued (optional, default is the default portfolio)

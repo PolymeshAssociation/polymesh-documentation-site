@@ -1,0 +1,15 @@
+# Entity: CorporateActionBase
+
+> - [CorporateActionBase](classes/CorporateActionBase.mdx)
+
+# Entity: CorporateActionBase
+
+## Classes
+
+- [CorporateActionBase](classes/CorporateActionBase.mdx)
+
+## Interfaces
+
+- [HumanReadable](interfaces/HumanReadable.mdx)
+- [Params](interfaces/Params.mdx)
+- [UniqueIdentifiers](interfaces/UniqueIdentifiers.mdx)

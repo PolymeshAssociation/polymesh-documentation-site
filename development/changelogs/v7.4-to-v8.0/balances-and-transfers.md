@@ -1,0 +1,117 @@
+# Balances & Transfers Changelog - v7.4 to v8.0
+
+> Breaking changes to the POLYX Balances pallet in Polymesh chain v8 - transfer calls, events, account storage layout, and migration guidance for exchanges, custodians, and wallets.
+
+This page covers changes to the `Balances` pallet — the one most exchanges, custodians, and wallet providers interact with directly for POLYX deposits and withdrawals. It is part of the [v7.4 → v8.0 changelog](./010-overview.mdx).
+
+**Audience:** anyone parsing on-chain POLYX transfers, balances, or account storage without going through the SDK.
+
+---
+
+## Overview
+
+Chain v8 replaces Polymesh's custom `Balances` pallet with the standard Polkadot SDK `pallet-balances`, extended with a `Memo` type to keep `transfer_with_memo` working. As a result, the transfer call surface, event shapes, error variants, and the account storage layout all changed. If your integration hardcodes call indices, decodes events positionally, or assumes the v7 `AccountData` fields, update it before connecting to v8.
+
+## Breaking changes
+
+### 1. Transfer calls replaced
+
+| v7.4 call (index)                          | v8.0 call (index)                 | Notes                                                                                                                                                                                                          |
+| ------------------------------------------ | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `transfer` (0)                             | _(removed)_                       | Use `transfer_allow_death` or `transfer_keep_alive`                                                                                                                                                            |
+| —                                          | `transfer_allow_death` (0)        | New. Upstream call that would reap the sender account if it dropped below the existential deposit — but Polymesh keeps account reaping disabled, so in practice this behaves like a plain transfer             |
+| —                                          | `transfer_keep_alive` (3)         | New. Upstream call that would fail if the transfer dropped the sender below the existential deposit. With reaping disabled on Polymesh, it behaves equivalently to `transfer_allow_death`                      |
+| —                                          | `transfer_all` (4)                | New. Transfers the sender's full transferable balance                                                                                                                                                          |
+| `transfer_with_memo` (1)                   | `transfer_with_memo` (40)         | Same call, new index. Signature unchanged: `(dest, value, memo: Option<Memo>)`                                                                                                                                 |
+| `deposit_block_reward_reserve_balance` (2) | _(removed)_                       | No direct replacement — this was specific to Polymesh's old reward-reserve model                                                                                                                               |
+| `set_balance` (3)                          | _(removed)_                       | Replaced by `force_set_balance` (8), a root-only call with a different signature (single `new_free` value, no `new_reserved`)                                                                                  |
+| `force_transfer` (4)                       | `force_transfer` (2)              | Same name, new index                                                                                                                                                                                           |
+| `burn_account_balance` (5)                 | _(removed)_                       | Replaced by `burn` (10), a self-service call: `(value, keep_alive: bool)` — the caller burns their own balance, rather than governance burning an arbitrary account's balance                                  |
+| —                                          | `upgrade_accounts` (6)            | New. Migrates listed accounts to the current `AccountData` storage format on demand                                                                                                                            |
+| —                                          | `force_unreserve` (5)             | New, root-only. Force-unreserves an amount for an account, bypassing normal unreserve rules                                                                                                                    |
+| —                                          | `force_adjust_total_issuance` (9) | New, root-only                                                                                                                                                                                                 |
+
+**Migration:** for withdrawals/outgoing transfers, support at least one of `transfer_allow_death`, `transfer_keep_alive`, `transfer_all`, or `transfer_with_memo`. If your counterparties require memo-tagged deposits, use `transfer_with_memo`.
+
+### 2. `system.account` storage layout change
+
+`frame_system::Account<AccountId>.data` (the `AccountData` struct) changes shape:
+
+```
+// v7.4
+AccountData { free, reserved, misc_frozen, fee_frozen }
+
+// v8.0
+AccountData { free, reserved, frozen, flags }
+```
+
+At the runtime upgrade, `misc_frozen` and `feefrozen` are combined into a single `frozen` value, and `flags` is initialized accordingly; `free` and `reserved` are untouched at that point. Full normalization to the upstream `flags` format (including the version bit that marks an account as "upgraded") happens lazily, the next time that specific account is written to (for example, via a transfer or staking action) — either via a runtime `upgrade_accounts` call or organically. Code reading raw storage should handle both the immediately-post-upgrade and fully-migrated states; the transferable-balance formula below is correct in either case.
+
+**Transferable balance:**
+
+```
+// v7.4
+transferable = free - max(misc_frozen, fee_frozen)
+
+// v8.0, general form (ED = 1 in v8, was 0 in v7.4; reaping stays disabled)
+transferable = free - max(ED, frozen - reserved)
+```
+
+### 3. `Transfer` event no longer carries identity or memo fields
+
+```
+// v7.4
+balances.Transfer(from_did: Option<IdentityId>, from: AccountId, to_did: Option<IdentityId>, to: AccountId, amount: Balance, memo: Option<Memo>)
+
+// v8.0
+balances.Transfer(from: AccountId, to: AccountId, amount: Balance)
+```
+
+`balances.TransferWithMemo(from, to, amount, memo: Option<Memo>)` is unchanged in shape and is still emitted alongside `Transfer` specifically when `transfer_with_memo` is used. This event was introduced back in **v7.4** for forward compatibility with this exact v8 change, so integrations that adopted it early do not need to change their event-parsing logic now.
+
+| Deposit model                        | Event to parse              | Notes                                       |
+| ------------------------------------ | --------------------------- | ------------------------------------------- |
+| Memo-based deposits (shared address) | `balances.TransferWithMemo` | Available since v7.4; unchanged shape in v8 |
+| Unique deposit address per user      | `balances.Transfer`         | New 3-field shape in v8                     |
+
+Parse only one event per transfer flow — `transfer_with_memo` emits both `Transfer` and `TransferWithMemo` for the same transfer, and double-counting will overstate deposits.
+
+### 4. Full event set expanded
+
+Chain v8's `Balances` pallet emits the standard upstream event set, including several events that had no v7 equivalent: `DustLost`, `Deposit`, `Withdraw`, `Slashed`, `Minted`, `MintedCredit`, `Burned`, `BurnedDebt`, `Suspended`, `Restored`, `Upgraded`, `Issued`, `Rescinded`, `Locked`, `Unlocked`, `Frozen`, `Thawed`, `TotalIssuanceForced`, `Held`, `BurnedHeld`, `TransferOnHold`, `TransferAndHold`, `Released`, and a defensive `Unexpected` event. Most of these fire for internal chain accounting (fees, staking rewards/slashing, reserve/hold management) rather than user-initiated transfers — if you only care about deposit/withdrawal accounting, `Transfer` and `TransferWithMemo` remain the events to track. One exception worth knowing: staking reward payouts now mint funds through this same deposit path, so every `staking.Rewarded` is accompanied by a `Deposit { who, amount }` telling you exactly which account was credited — see the `Rewarded` event section in [Staking & Validators](./030-staking-and-validators.mdx).
+
+`Endowed`, `BalanceSet`, `Reserved`, `Unreserved`, and `ReserveRepatriated` all carry the same field names as v7 but as named struct fields rather than positional tuples, and no longer carry the `IdentityId` fields v7 attached to some of them (for example, `Endowed` drops the `Option<IdentityId>` and `BalanceSet` drops the `IdentityId` actor field). The v7.4 `AccountBalanceBurned` event is removed — `burn_account_balance` is gone (see above), and the new `burn`/`force_adjust_total_issuance` calls emit `Burned`/`BurnedDebt`/`TotalIssuanceForced` instead.
+
+### 5. New storage and constants
+
+`Freezes`, `Holds`, `Reserves`, and `InactiveIssuance` are all new storage items — none of the four existed at v7.4. `Locks` changes from an unbounded `Vec<BalanceLock<Balance>>` to a bounded `WeakBoundedVec<BalanceLock<Balance>, MaxLocks>`. New queryable constants `MaxFreezes`, `MaxLocks`, and `MaxReserves` cap the new (and newly-bounded) storage — at v7.4, `ExistentialDeposit` was the only constant `Balances` exposed via metadata.
+
+### 6. Errors changed
+
+The v7.4 `ReceiverCddMissing` error (returned when a transfer's recipient lacked a valid CDD claim) is removed, with no v8 equivalent — the standard `pallet-balances` has no concept of CDD. In its place, v8 adds the standard upstream error set: `VestingBalance`, `Expendability`, `ExistingVestingSchedule`, `DeadAccount`, `TooManyReserves`, `TooManyHolds`, `TooManyFreezes`, `IssuanceDeactivated`, `DeltaZero`, `LockIdentifierNotFound`, `MaxLocksExceeded`, alongside the carried-over `LiquidityRestrictions`, `InsufficientBalance`, `ExistentialDeposit`, and `Overflow`.
+
+Match errors and events by name, not by numeric index — index assignments are not stable across this upgrade and several v7 and v8 variants happen to share a slot without being related.
+
+### 7. Existential deposit raised from `0` to `1`
+
+In v7.4 the `ExistentialDeposit` was `0`. In v8 it is `1` — one base unit (`0.000001` POLYX), the lowest non-zero value — on all runtimes. It was raised because a zero existential deposit interfered with smart-contract (`pallet-revive`) account creation and termination; a non-zero minimum keeps contract accounts well-defined.
+
+**Account reaping remains disabled on Polymesh.** Despite the non-zero existential deposit, the runtime does not reap accounts whose balance falls to zero, so an emptied account — its `system.account` entry and its nonce — persists as before. In practice `transfer_keep_alive` and `transfer_allow_death` behave equivalently for integrations, exactly as they did under `ED = 0`.
+
+This is worth knowing if you read the `ExistentialDeposit` constant from metadata (it is now `1`, not `0`) or use it in transferable-balance math, but it does not change transfer semantics or the account lifecycle.
+
+## What did _not_ change
+
+- Account reaping stays disabled: accounts are not reaped at a zero balance, so `transfer_keep_alive` and `transfer_allow_death` behave equivalently for exchange integrations — even though the existential deposit moved from `0` to `1` (see [section 7](#7-existential-deposit-raised-from-0-to-1)).
+- Memo-tagged transfers remain fully supported via `transfer_with_memo` / `TransferWithMemo`, unchanged from the v7.4 shape.
+- Since v7.3, receiving POLYX or staking has not required a DID — this was already true before v8 and is unaffected by this pallet swap.
+
+## Integration checklist
+
+1. Stop using `transfer` and `set_balance` — they no longer exist. Use `transfer_allow_death`/`transfer_keep_alive`/`transfer_all` and `force_set_balance` respectively.
+2. Update call-index tables for `Balances` — indices shifted for every retained call.
+3. Update `balances.Transfer` decoding to the 3-field shape; keep `TransferWithMemo` decoding as-is if you already adopted it in v7.4.
+4. Update `system.account` decoding for `frozen`/`flags` instead of `misc_frozen`/`fee_frozen`, and switch any transferable-balance calculation to `free - max(0, frozen - reserved)`.
+5. Do not rely on `ReceiverCddMissing` as a transfer-failure signal — it no longer exists.
+6. If you match errors/events by numeric index rather than name, stop — indices are not stable identifiers across this upgrade.
+7. If you read `ExistentialDeposit` from metadata or use it in balance math, note it is now `1` (was `0` in v7.4). Account reaping stays disabled, so transfer and account-lifecycle behaviour is unchanged — see [section 7](#7-existential-deposit-raised-from-0-to-1).

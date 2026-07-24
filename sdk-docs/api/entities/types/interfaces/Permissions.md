@@ -1,0 +1,53 @@
+# Interface: Permissions
+
+> Defined in: [src/api/entities/types.ts:687](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L687)
+
+# Interface: Permissions
+
+Defined in: [src/api/entities/types.ts:687](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L687)
+
+Permissions a Secondary Key has over the Identity. A null value means the key has
+  all permissions of that type (e.g. if `assets` is null, the key has permissions over all
+  of the Identity's Assets)
+
+## Properties
+
+### assets
+
+> **assets**: [`SectionPermissions`](SectionPermissions.mdx)\<[`FungibleAsset`](../../Asset/Fungible/classes/FungibleAsset.mdx)\> \| `null`
+
+Defined in: [src/api/entities/types.ts:691](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L691)
+
+Assets over which this key has permissions
+
+***
+
+### portfolios
+
+> **portfolios**: [`SectionPermissions`](SectionPermissions.mdx)\<[`DefaultPortfolio`](../../DefaultPortfolio/classes/DefaultPortfolio.mdx) \| [`NumberedPortfolio`](../../NumberedPortfolio/classes/NumberedPortfolio.mdx)\> \| `null`
+
+Defined in: [src/api/entities/types.ts:705](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L705)
+
+***
+
+### transactionGroups
+
+> **transactionGroups**: [`TxGroup`](../../../procedures/types/enumerations/TxGroup.mdx)[]
+
+Defined in: [src/api/entities/types.ts:703](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L703)
+
+list of Transaction Groups this key can execute. Having permissions over a TxGroup
+  means having permissions over every TxTag in said group. Partial group permissions are not
+  covered by this value. For a full picture of transaction permissions, see the `transactions` property
+
+NOTE: If transactions is null, ignore this value
+
+***
+
+### transactions
+
+> **transactions**: [`TransactionPermissions`](TransactionPermissions.mdx) \| `null`
+
+Defined in: [src/api/entities/types.ts:695](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L695)
+
+Transactions this key can execute

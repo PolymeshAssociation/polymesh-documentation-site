@@ -1,0 +1,57 @@
+# Interface: OffChainAffirmationReceipt
+
+> Defined in: [src/api/procedures/types.ts:1195](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1195)
+
+# Interface: OffChainAffirmationReceipt
+
+Defined in: [src/api/procedures/types.ts:1195](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1195)
+
+## Properties
+
+### legId
+
+> **legId**: `BigNumber`
+
+Defined in: [src/api/procedures/types.ts:1203](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1203)
+
+Index of the off chain leg within the instruction to be affirmed
+
+***
+
+### metadata
+
+> **metadata**: `string` \| `undefined`
+
+Defined in: [src/api/procedures/types.ts:1215](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1215)
+
+(optional) Metadata value that can be used to attach messages to the receipt
+
+***
+
+### signature
+
+> **signature**: [`OffChainSignature`](OffChainSignature.mdx)
+
+Defined in: [src/api/procedures/types.ts:1211](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1211)
+
+Signature confirming the receipt details
+
+***
+
+### signer
+
+> **signer**: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
+
+Defined in: [src/api/procedures/types.ts:1207](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1207)
+
+Signer of this receipt
+
+***
+
+### uid
+
+> **uid**: `BigNumber`
+
+Defined in: [src/api/procedures/types.ts:1199](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1199)
+
+Unique receipt number set by the signer for their receipts

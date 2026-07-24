@@ -1,0 +1,23 @@
+# Interface: OffChainAffirmation
+
+> Defined in: [src/api/entities/Instruction/types.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L113)
+
+# Interface: OffChainAffirmation
+
+Defined in: [src/api/entities/Instruction/types.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L113)
+
+## Properties
+
+### legId
+
+> **legId**: `BigNumber`
+
+Defined in: [src/api/entities/Instruction/types.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L114)
+
+***
+
+### status
+
+> **status**: [`AffirmationStatus`](../enumerations/AffirmationStatus.mdx)
+
+Defined in: [src/api/entities/Instruction/types.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L115)

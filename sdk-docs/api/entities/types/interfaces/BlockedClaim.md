@@ -1,0 +1,23 @@
+# Interface: BlockedClaim
+
+> Defined in: [src/api/entities/types.ts:230](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L230)
+
+# Interface: BlockedClaim
+
+Defined in: [src/api/entities/types.ts:230](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L230)
+
+## Properties
+
+### scope
+
+> **scope**: [`Scope`](Scope.mdx)
+
+Defined in: [src/api/entities/types.ts:232](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L232)
+
+***
+
+### type
+
+> **type**: [`Blocked`](../enumerations/ClaimType.mdx#blocked)
+
+Defined in: [src/api/entities/types.ts:231](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L231)

@@ -1,0 +1,23 @@
+# Interface: CddClaim
+
+> Defined in: [src/api/entities/types.ts:201](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L201)
+
+# Interface: CddClaim
+
+Defined in: [src/api/entities/types.ts:201](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L201)
+
+## Properties
+
+### id
+
+> **id**: `string`
+
+Defined in: [src/api/entities/types.ts:203](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L203)
+
+***
+
+### type
+
+> **type**: [`CustomerDueDiligence`](../enumerations/ClaimType.mdx#customerduediligence)
+
+Defined in: [src/api/entities/types.ts:202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L202)

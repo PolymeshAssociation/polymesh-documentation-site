@@ -1,0 +1,87 @@
+# Enumeration: KnownAssetType
+
+> Defined in: [src/api/entities/Asset/types.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L35)
+
+# Enumeration: KnownAssetType
+
+Defined in: [src/api/entities/Asset/types.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L35)
+
+## Enumeration Members
+
+### Commodity
+
+> **Commodity**: `"Commodity"`
+
+Defined in: [src/api/entities/Asset/types.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L38)
+
+***
+
+### Derivative
+
+> **Derivative**: `"Derivative"`
+
+Defined in: [src/api/entities/Asset/types.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L44)
+
+***
+
+### EquityCommon
+
+> **EquityCommon**: `"EquityCommon"`
+
+Defined in: [src/api/entities/Asset/types.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L36)
+
+***
+
+### EquityPreferred
+
+> **EquityPreferred**: `"EquityPreferred"`
+
+Defined in: [src/api/entities/Asset/types.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L37)
+
+***
+
+### FixedIncome
+
+> **FixedIncome**: `"FixedIncome"`
+
+Defined in: [src/api/entities/Asset/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L39)
+
+***
+
+### Fund
+
+> **Fund**: `"Fund"`
+
+Defined in: [src/api/entities/Asset/types.ts:41](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L41)
+
+***
+
+### Reit
+
+> **Reit**: `"Reit"`
+
+Defined in: [src/api/entities/Asset/types.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L40)
+
+***
+
+### RevenueShareAgreement
+
+> **RevenueShareAgreement**: `"RevenueShareAgreement"`
+
+Defined in: [src/api/entities/Asset/types.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L42)
+
+***
+
+### StableCoin
+
+> **StableCoin**: `"StableCoin"`
+
+Defined in: [src/api/entities/Asset/types.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L45)
+
+***
+
+### StructuredProduct
+
+> **StructuredProduct**: `"StructuredProduct"`
+
+Defined in: [src/api/entities/Asset/types.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L43)

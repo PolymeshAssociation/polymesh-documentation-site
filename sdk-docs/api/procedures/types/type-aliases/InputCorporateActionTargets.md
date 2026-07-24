@@ -1,0 +1,11 @@
+# Type Alias: InputCorporateActionTargets
+
+> > **InputCorporateActionTargets** = [`Modify`](../../../../types/utils/type-aliases/Modify.mdx)\<[`CorporateActionTargets`](../../../entities/CorporateActionBase/types/interfaces/CorporateActionTargets.mdx), \{ `identities`: (`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx))[]; \}\>
+
+# Type Alias: InputCorporateActionTargets
+
+> **InputCorporateActionTargets** = [`Modify`](../../../../types/utils/type-aliases/Modify.mdx)\<[`CorporateActionTargets`](../../../entities/CorporateActionBase/types/interfaces/CorporateActionTargets.mdx), \{ `identities`: (`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx))[]; \}\>
+
+Defined in: [src/api/procedures/types.ts:230](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L230)
+
+Targets of a corporate action in a flexible structure for input purposes

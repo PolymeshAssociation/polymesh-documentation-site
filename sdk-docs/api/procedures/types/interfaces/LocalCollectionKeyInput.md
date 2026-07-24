@@ -1,0 +1,31 @@
+# Interface: LocalCollectionKeyInput
+
+> Defined in: [src/api/procedures/types.ts:869](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L869)
+
+# Interface: LocalCollectionKeyInput
+
+Defined in: [src/api/procedures/types.ts:869](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L869)
+
+## Properties
+
+### name
+
+> **name**: `string`
+
+Defined in: [src/api/procedures/types.ts:871](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L871)
+
+***
+
+### spec
+
+> **spec**: [`MetadataSpec`](../../../entities/MetadataEntry/types/interfaces/MetadataSpec.mdx)
+
+Defined in: [src/api/procedures/types.ts:872](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L872)
+
+***
+
+### type
+
+> **type**: [`Local`](../../../entities/MetadataEntry/types/enumerations/MetadataType.mdx#local)
+
+Defined in: [src/api/procedures/types.ts:870](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L870)

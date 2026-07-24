@@ -1,0 +1,9 @@
+# Type Alias: SetMetadataParams
+
+> > **SetMetadataParams** = \{ `details?`: [`MetadataValueDetails`](../../../entities/MetadataEntry/types/type-aliases/MetadataValueDetails.mdx); `value`: `string`; \} \| \{ `details`: [`MetadataValueDetails`](../../../entities/MetadataEntry/types/type-aliases/MetadataValueDetails.mdx); \}
+
+# Type Alias: SetMetadataParams
+
+> **SetMetadataParams** = \{ `details?`: [`MetadataValueDetails`](../../../entities/MetadataEntry/types/type-aliases/MetadataValueDetails.mdx); `value`: `string`; \} \| \{ `details`: [`MetadataValueDetails`](../../../entities/MetadataEntry/types/type-aliases/MetadataValueDetails.mdx); \}
+
+Defined in: [src/api/procedures/types.ts:1907](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1907)

@@ -1,0 +1,20 @@
+# Core Concepts
+
+> Key concepts and features of the Polymesh blockchain
+
+# Core Concepts
+
+This section introduces the foundational ideas and features that make Polymesh unique. Explore the topics below to understand how Polymesh is purpose-built for regulated markets:
+
+- [**Architecture**](/architecture): Technical stack, consensus, and network design.
+- [**POLYX**](/polyx): The native token for transaction fees, staking, and network operation.
+- [**Identity**](/identity): On-chain identity is required for all identity and asset related participants, enabling compliance and secure access control. Basic POLYX transfers and staking (excluding validator activities) do not require a DID.
+- [**Assets**](/core/assets): Issue and manage fungible and non-fungible assets, with protocol-level standardization and lifecycle management.
+- [**Asset Holdings**](/asset-holdings): How identities hold assets — via portfolios or directly on an account.
+- [**Compliance**](/compliance): Enforce rules for asset transfers and ownership at the protocol level, supporting regulatory requirements.
+- [**Settlement (Transfers)**](/settlement): Transfer assets on-chain with atomic, multi-asset, and multi-party support.
+- [**Confidential Assets**](/confidential-assets): Privacy-preserving asset transfers with zero-knowledge cryptography while maintaining regulatory compliance.
+- [**Corporate Actions**](/corporate-actions): Automate distributions, voting, and other on-chain events related to assets.
+- [**Portfolios**](/portfolios): Organize and segregate assets, assign custody, and manage permissions.
+- [**Governance**](/governance): On-chain governance for managing network upgrades and permissions.
+- [**Polymesh Private**](/polymesh-private): Private, permissioned deployments of the Polymesh blockchain.

@@ -1,0 +1,63 @@
+# Interface: HistoricalMultiSigProposal
+
+> Defined in: [src/api/entities/Account/MultiSig/types.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/types.ts#L18)
+
+# Interface: HistoricalMultiSigProposal
+
+Defined in: [src/api/entities/Account/MultiSig/types.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/types.ts#L18)
+
+## Properties
+
+### approvalAmount
+
+> **approvalAmount**: `BigNumber`
+
+Defined in: [src/api/entities/Account/MultiSig/types.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/types.ts#L21)
+
+***
+
+### args
+
+> **args**: [`AnyJson`](../../../../MultiSigProposal/types/type-aliases/AnyJson.mdx)
+
+Defined in: [src/api/entities/Account/MultiSig/types.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/types.ts#L25)
+
+***
+
+### expiry
+
+> **expiry**: `Date` \| `null`
+
+Defined in: [src/api/entities/Account/MultiSig/types.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/types.ts#L23)
+
+***
+
+### proposal
+
+> **proposal**: [`MultiSigProposal`](../../../../MultiSigProposal/classes/MultiSigProposal.mdx)
+
+Defined in: [src/api/entities/Account/MultiSig/types.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/types.ts#L19)
+
+***
+
+### rejectionAmount
+
+> **rejectionAmount**: `BigNumber`
+
+Defined in: [src/api/entities/Account/MultiSig/types.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/types.ts#L22)
+
+***
+
+### status
+
+> **status**: [`ProposalStatus`](../../../../MultiSigProposal/types/enumerations/ProposalStatus.mdx)
+
+Defined in: [src/api/entities/Account/MultiSig/types.ts:20](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/types.ts#L20)
+
+***
+
+### txTag
+
+> **txTag**: [`TxTag`](../../../../../../types/type-aliases/TxTag.mdx)
+
+Defined in: [src/api/entities/Account/MultiSig/types.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/types.ts#L24)

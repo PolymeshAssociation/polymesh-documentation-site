@@ -1,0 +1,23 @@
+# Interface: Compliance
+
+> Defined in: [src/api/entities/types.ts:440](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L440)
+
+# Interface: Compliance
+
+Defined in: [src/api/entities/types.ts:440](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L440)
+
+## Properties
+
+### complies
+
+> **complies**: `boolean`
+
+Defined in: [src/api/entities/types.ts:442](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L442)
+
+***
+
+### requirements
+
+> **requirements**: [`RequirementCompliance`](RequirementCompliance.mdx)[]
+
+Defined in: [src/api/entities/types.ts:441](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L441)

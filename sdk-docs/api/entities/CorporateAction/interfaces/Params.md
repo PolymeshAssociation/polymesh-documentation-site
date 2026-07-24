@@ -1,0 +1,55 @@
+# Interface: Params
+
+> Defined in: [src/api/entities/CorporateAction.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateAction.ts#L29)
+
+# Interface: Params
+
+Defined in: [src/api/entities/CorporateAction.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateAction.ts#L29)
+
+## Properties
+
+### declarationDate
+
+> **declarationDate**: `Date`
+
+Defined in: [src/api/entities/CorporateAction.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateAction.ts#L31)
+
+***
+
+### defaultTaxWithholding
+
+> **defaultTaxWithholding**: `BigNumber`
+
+Defined in: [src/api/entities/CorporateAction.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateAction.ts#L34)
+
+***
+
+### description
+
+> **description**: `string`
+
+Defined in: [src/api/entities/CorporateAction.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateAction.ts#L32)
+
+***
+
+### kind
+
+> **kind**: [`CorporateActionKind`](../../CorporateActionBase/types/enumerations/CorporateActionKind.mdx)
+
+Defined in: [src/api/entities/CorporateAction.ts:30](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateAction.ts#L30)
+
+***
+
+### targets
+
+> **targets**: [`CorporateActionTargets`](../../CorporateActionBase/types/interfaces/CorporateActionTargets.mdx)
+
+Defined in: [src/api/entities/CorporateAction.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateAction.ts#L33)
+
+***
+
+### taxWithholdings
+
+> **taxWithholdings**: [`TaxWithholding`](../../CorporateActionBase/types/interfaces/TaxWithholding.mdx)[]
+
+Defined in: [src/api/entities/CorporateAction.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateAction.ts#L35)

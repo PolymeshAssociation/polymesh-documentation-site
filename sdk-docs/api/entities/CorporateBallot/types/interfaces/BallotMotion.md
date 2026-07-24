@@ -1,0 +1,41 @@
+# Interface: BallotMotion
+
+> Defined in: [src/api/entities/CorporateBallot/types.ts:3](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L3)
+
+# Interface: BallotMotion
+
+Defined in: [src/api/entities/CorporateBallot/types.ts:3](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L3)
+
+## Properties
+
+### choices
+
+> **choices**: `string`[]
+
+Defined in: [src/api/entities/CorporateBallot/types.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L18)
+
+Choices for the motion excluding abstain.
+
+#### Note
+
+Voting power not used is considered abstained.
+
+***
+
+### infoLink
+
+> **infoLink**: `string`
+
+Defined in: [src/api/entities/CorporateBallot/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L12)
+
+Link to more information about the motion.
+
+***
+
+### title
+
+> **title**: `string`
+
+Defined in: [src/api/entities/CorporateBallot/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L7)
+
+Title of the motion.

@@ -1,0 +1,41 @@
+# Interface: SubmissionDetails
+
+> Defined in: [src/api/client/types.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L50)
+
+# Interface: SubmissionDetails
+
+Defined in: [src/api/client/types.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L50)
+
+## Properties
+
+### blockHash
+
+> **blockHash**: `string`
+
+Defined in: [src/api/client/types.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L51)
+
+***
+
+### result
+
+> **result**: `ISubmittableResult`
+
+Defined in: [src/api/client/types.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L57)
+
+The raw result of the transaction. Contains event data for the transaction
+
+***
+
+### transactionHash
+
+> **transactionHash**: `string`
+
+Defined in: [src/api/client/types.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L53)
+
+***
+
+### transactionIndex
+
+> **transactionIndex**: `BigNumber`
+
+Defined in: [src/api/client/types.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L52)

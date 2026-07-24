@@ -1,0 +1,55 @@
+# Enumeration: ProposalStatus
+
+> Defined in: [src/api/entities/MultiSigProposal/types.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/types.ts#L6)
+
+# Enumeration: ProposalStatus
+
+Defined in: [src/api/entities/MultiSigProposal/types.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/types.ts#L6)
+
+## Enumeration Members
+
+### Active
+
+> **Active**: `"Active"`
+
+Defined in: [src/api/entities/MultiSigProposal/types.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/types.ts#L8)
+
+***
+
+### Expired
+
+> **Expired**: `"Expired"`
+
+Defined in: [src/api/entities/MultiSigProposal/types.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/types.ts#L9)
+
+***
+
+### Failed
+
+> **Failed**: `"ExecutionFailed"`
+
+Defined in: [src/api/entities/MultiSigProposal/types.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/types.ts#L11)
+
+***
+
+### Invalid
+
+> **Invalid**: `"Invalid"`
+
+Defined in: [src/api/entities/MultiSigProposal/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/types.ts#L7)
+
+***
+
+### Rejected
+
+> **Rejected**: `"Rejected"`
+
+Defined in: [src/api/entities/MultiSigProposal/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/types.ts#L12)
+
+***
+
+### Successful
+
+> **Successful**: `"ExecutionSuccessful"`
+
+Defined in: [src/api/entities/MultiSigProposal/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/types.ts#L10)

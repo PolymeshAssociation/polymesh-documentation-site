@@ -1,0 +1,39 @@
+# Interface: SimplePermissions
+
+> Defined in: [src/api/entities/types.ts:726](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L726)
+
+# Interface: SimplePermissions
+
+Defined in: [src/api/entities/types.ts:726](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L726)
+
+This represents positive permissions (i.e. only "includes"). It is used
+  for specifying procedure requirements and querying if an Account has certain
+  permissions. Null values represent full permissions in that category
+
+## Properties
+
+### assets?
+
+> `optional` **assets?**: [`BaseAsset`](../../Asset/Base/BaseAsset/classes/BaseAsset.mdx)[] \| `null`
+
+Defined in: [src/api/entities/types.ts:730](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L730)
+
+list of required Asset permissions
+
+***
+
+### portfolios?
+
+> `optional` **portfolios?**: ([`DefaultPortfolio`](../../DefaultPortfolio/classes/DefaultPortfolio.mdx) \| [`NumberedPortfolio`](../../NumberedPortfolio/classes/NumberedPortfolio.mdx))[] \| `null`
+
+Defined in: [src/api/entities/types.ts:736](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L736)
+
+***
+
+### transactions?
+
+> `optional` **transactions?**: [`TxTag`](../../../../types/type-aliases/TxTag.mdx)[] \| `null`
+
+Defined in: [src/api/entities/types.ts:734](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L734)
+
+list of required Transaction permissions

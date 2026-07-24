@@ -1,0 +1,166 @@
+# Runtime APIs & JSON-RPC Changelog - v7.4 to v8.0
+
+> Changes to Polymesh's state_call runtime APIs (AssetApi, StakingApi, SettlementApi, IdentityApi, and others) and the node's JSON-RPC method surface between chain v7.4 and v8.0.
+
+This page covers the two integrator-facing layers that sit outside extrinsics/events/storage: **Runtime APIs** (versioned traits called via `state_call`, e.g. `api.call.stakingApi.nominationsQuota()`) and the node's **JSON-RPC methods** (e.g. `identity_getDidRecords`). It is part of the [v7.4 → v8.0 changelog](./010-overview.mdx).
+
+**Audience:** anyone calling Runtime APIs directly (via `state_call`/`polkadot.js`/`subxt`) or depending on a specific JSON-RPC method being present — most commonly integrators using the `IdentityApi`, `AssetApi`, `SettlementApi`, or `StakingApi` traits.
+
+---
+
+## Overview
+
+**Five custom JSON-RPC methods are removed, one changes its parameters:**
+
+| Method                           | What changed                                                    |
+| -------------------------------- | --------------------------------------------------------------- |
+| `identity_isIdentityHasValidCdd` | Removed                                                         |
+| `identity_validCDDClaims`        | Removed                                                         |
+| `asset_transferReport`           | Removed                                                         |
+| `nft_transferReport`             | Removed                                                         |
+| `staking_getCurve`               | Removed                                                         |
+| `settlement_getAffirmationCount` | `portfolios: Vec<PortfolioId>` → `holder_set: Vec<AssetHolder>` |
+
+Every other custom JSON-RPC method (`identity_getDidRecords`, `identity_getDidStatus`, `identity_getFilteredAuthorizations`, `identity_getKeyIdentityData`, `group_getCDDValidMembers`, `group_getGCValidMembers`, `pips_getVotes`, `pips_proposedBy`, `pips_votedOn`, `protocolFee_computeFee`, `settlement_getExecuteInstructionInfo`, `settlement_getTransferReport`, `settlement_getExecuteInstructionReport`, `payment_queryInfo`, `payment_queryFeeDetails`, `compliance_complianceReport`) is unchanged, as is the standard Substrate RPC surface (`chain_*`, `state_*`, `author_*`, etc.).
+
+**Five of the ten Polymesh-specific Runtime APIs (the `state_call` layer) also changed:**
+
+| Trait           | What changed                                                                                        |
+| --------------- | --------------------------------------------------------------------------------------------------- |
+| `AssetApi`      | `transfer_report` retyped to `AssetHolder`; new `allowance` method                                  |
+| `NFTApi`        | `transfer_report` retyped to `AssetHolder`                                                          |
+| `SettlementApi` | `get_affirmation_count` retyped to `AssetHolder`; new `get_receiver_affirmation_requirement` method |
+| `IdentityApi`   | two CDD-related methods removed                                                                     |
+| `StakingApi`    | entire method set replaced                                                                          |
+
+`ComplianceApi`, `GroupApi`, `PipsApi`, `ProtocolFeeApi`, and `StatisticsApi` are unchanged. Full detail on each is below.
+
+As of v8, you can also fetch the complete Runtime API surface — every trait, version, and method — directly from the chain via `Metadata::metadata_at_version(15)` or `(16)`. On v7.4 this list wasn't queryable on-chain at all; a client had to already know the definitions ahead of time.
+
+**Why custom JSON-RPC methods are shrinking:** v8 favors Runtime APIs over custom JSON-RPC methods. A Runtime API is self-describing (discoverable via metadata v15/v16, versioned) and needs no per-method node registration; a custom RPC needs both. Equivalent `state_call` runtime APIs are available for each of the above removed JSON-RPC methods, instead of a dedicated RPC method.
+
+## JSON-RPC method changes
+
+Every removed JSON-RPC method above was a thin wrapper that forwarded to the correspondingly-named Runtime API method (see `rpc/src/lib.rs`), and each is removed together with its underlying Runtime API method — see [Runtime API changes](#runtime-api-changes) below for what replaces the data, if anything:
+
+- **`identity_isIdentityHasValidCdd(did, buffer_time)`** and **`identity_validCDDClaims(target_identity, cdd_checker_leeway)`** — removed along with `IdentityApi`'s corresponding methods (see [Identity & Onboarding](./060-identity-and-onboarding.mdx)). Query `identity.claims` storage directly if you still need CDD-claim data.
+- **`asset_transferReport(sender_portfolio, receiver_portfolio, asset_id, transfer_value, skip_locked_check)`** and **`nft_transferReport(sender_portfolio, receiver_portfolio, nfts, skip_locked_check)`** — removed. `AssetApi::transfer_report` and `NFTApi::transfer_report` still exist and are still callable, but only via `state_call` — there is no longer a dedicated JSON-RPC method for either. If your integration called these by name, switch to a `state_call`-capable client.
+- **`staking_getCurve()`** — removed along with the entire `pallets/staking/rpc` crate. The new `StakingApi` methods (`nominations_quota`, `eras_stakers_page_count`, `pending_rewards`) have no JSON-RPC wrapper either — they're `state_call`-only.
+- **`settlement_getAffirmationCount(instruction_id, portfolios: Vec<PortfolioId>)`** → **`settlement_getAffirmationCount(instruction_id, holder_set: Vec<AssetHolder>)`** — same method name, but the second parameter is renamed and retyped. Update the argument, don't just keep calling it with a `PortfolioId` list.
+
+## Runtime API changes
+
+Of the ten Polymesh-specific Runtime API traits, five are unchanged between v7.4 and v8 (`ComplianceApi`, `GroupApi`, `PipsApi`, `ProtocolFeeApi`, `StatisticsApi`). Five changed — three of them (`AssetApi`, `NFTApi`, `SettlementApi`) as part of the same `PortfolioId` → `AssetHolder` migration that runs through the `Asset`, `Nft`, and `Settlement` pallets themselves (see [Native Asset Holdings](./040-native-asset-holdings.mdx) and [Settlement & Instructions](./050-settlement-and-instructions.mdx)):
+
+### `AssetApi` — version bump, `transfer_report` retyped, new `allowance` method
+
+```
+// v7.4 — AssetApi v4
+transfer_report(sender_portfolio: PortfolioId, receiver_portfolio: PortfolioId, asset_id, transfer_value, skip_locked_check) -> Vec<DispatchError>
+
+// v8.0 — AssetApi v5
+transfer_report(sender: AssetHolder, receiver: AssetHolder, asset_id, transfer_value, skip_locked_check) -> Vec<DispatchError>
+allowance(owner: AccountId, spender: AccountId, asset_id: AssetId) -> Balance
+```
+
+The trait version bumps from 4 to 5. `transfer_report`'s `sender_portfolio`/`receiver_portfolio: PortfolioId` parameters are renamed and retyped to `sender`/`receiver: AssetHolder`, matching the same change already made to `Asset::controller_transfer` and the other pallet-level calls (see [Native Asset Holdings](./040-native-asset-holdings.mdx#1-issue--redeem-take-assetholderkind-not-portfoliokind)). `allowance` is entirely new — it reads the `Allowances` storage directly, the on-chain counterpart to the new `Asset::approve` call (see [Native Asset Holdings](./040-native-asset-holdings.mdx#3-approve--new-allowances)). Use it to query a spender's remaining allowance without decoding `Allowances` storage yourself.
+
+### `NFTApi` — version bump, `transfer_report` retyped
+
+```
+// v7.4 — NFTApi v2
+transfer_report(sender_portfolio: PortfolioId, receiver_portfolio: PortfolioId, nfts, skip_locked_check) -> Vec<DispatchError>
+
+// v8.0 — NFTApi v3
+transfer_report(sender: AssetHolder, receiver: AssetHolder, nfts, skip_locked_check) -> Vec<DispatchError>
+```
+
+Same `PortfolioId` → `AssetHolder` rename/retype as `AssetApi::transfer_report` above, and the trait version bumps from 2 to 3 accordingly.
+
+### `SettlementApi` — version bump, `get_affirmation_count` retyped, new `get_receiver_affirmation_requirement` method
+
+```
+// v7.4 — SettlementApi v2
+get_affirmation_count(instruction_id: InstructionId, portfolios: Vec<PortfolioId>) -> AffirmationCount
+
+// v8.0 — SettlementApi v3
+get_affirmation_count(instruction_id: InstructionId, holder_set: Vec<AssetHolder>) -> AffirmationCount
+get_receiver_affirmation_requirement(receiver: AssetHolder, asset_id: AssetId) -> AffirmationRequirement
+```
+
+The trait version bumps from 2 to 3. `get_affirmation_count`'s `portfolios: Vec<PortfolioId>` parameter is renamed and retyped to `holder_set: Vec<AssetHolder>`, matching the same rename already made to `affirm_instruction` and related calls (see [Settlement & Instructions](./050-settlement-and-instructions.mdx#2-portfolios--portfolio-parameters-renamed-to-holder_set--asset_holder)). `get_receiver_affirmation_requirement` is entirely new, returning `AffirmationRequirement::Automatic` or `::Required` for a given receiver/asset pair — see the new [`set_mandatory_receiver_affirmation`](./050-settlement-and-instructions.mdx#set_mandatory_receiver_affirmation) call. The other five `SettlementApi` methods (`get_execute_instruction_info`, `get_transfer_report`, `get_execute_instruction_report`, `lock_instruction_weight`, `instruction_asset_count`) are unchanged.
+
+### `IdentityApi` — two methods removed
+
+`is_identity_has_valid_cdd(did, buffer_time)` and `valid_cdd_claims(target_identity, cdd_checker_leeway)` existed at v7.4 and are gone at v8 — the trait stays at version 4, but with a smaller method set (`get_did_records`, `get_did_status`, `get_filtered_authorizations`, `get_key_identity_data` remain). This tracks the same DID-only-onboarding shift as the rest of the `Identity` pallet — see [Identity & Onboarding](./060-identity-and-onboarding.mdx). If your integration checked CDD validity via this API directly (rather than through an extrinsic or the removed `gc_add_cdd_claim`/claims-query calls), there is no direct replacement; CDD claims can still be read via the standard `identity.claims` storage query.
+
+### `StakingApi` — method set fully replaced
+
+```
+// v7.4 — pallet_staking_rpc_runtime_api::StakingApi<Block>
+get_curve() -> Vec<(Perbill, Perbill)>
+
+// v8.0 — pallet_staking_runtime_api::StakingApi<Block, Balance, AccountId>
+nominations_quota(balance: Balance) -> u32
+eras_stakers_page_count(era: EraIndex, account: AccountId) -> Page
+pending_rewards(era: EraIndex, account: AccountId) -> bool
+```
+
+`get_curve()` (the old Polymesh-custom reward-curve lookup) is gone along with the custom `Staking` pallet it belonged to — see [Staking & Validators](./030-staking-and-validators.mdx). The v8 trait is the standard upstream `pallet-staking` Runtime API: `nominations_quota` reflects the new `NominationsQuota` config (replacing the `MaxNominations` constant), and `eras_stakers_page_count`/`pending_rewards` are exactly the query surface you need for the new [paged reward payouts](./030-staking-and-validators.mdx#7-payoutstarted-event-gains-paging-fields-and-payouts-can-span-multiple-pages) — call `eras_stakers_page_count(era, validator_stash)` to know how many `payout_stakers_by_page` calls a validator's era requires, and `pending_rewards(era, account)` to check whether a specific nominator/validator still has an unpaid page.
+
+## New Runtime API traits (framework-level, not Polymesh-specific)
+
+These are standard Polkadot SDK traits that didn't exist on v7.4 because the underlying pallets/features didn't exist there — each is already covered by its pallet's changelog page:
+
+| Trait            | Backing pallet                 | See                                                      |
+| ---------------- | ------------------------------ | -------------------------------------------------------- |
+| `BeefyApi`       | `Beefy`                        | [Other Runtime Changes](./100-other-runtime-changes.mdx) |
+| `MmrApi`         | `Mmr` / `MmrLeaf`              | [Other Runtime Changes](./100-other-runtime-changes.mdx) |
+| `ReviveApi`      | `pallet-revive`                | [Smart Contracts](./080-smart-contracts-evm.mdx)         |
+| `GenesisBuilder` | — (chain-spec/genesis tooling) | n/a — not asset/settlement/staking relevant              |
+
+## Full v8 Runtime API surface
+
+For reference, every Runtime API trait exposed by the v8 runtime (version 8.0.1), as reported by its own metadata v16 (`Metadata::metadata_at_version(16)`):
+
+| Trait                       | Version | Methods                                                                                                                                                                                                                                                                                                                                                                     |
+| --------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Core`                      | 5       | `version`, `execute_block`, `initialize_block`                                                                                                                                                                                                                                                                                                                              |
+| `Metadata`                  | 2       | `metadata`, `metadata_at_version`, `metadata_versions`                                                                                                                                                                                                                                                                                                                      |
+| `BlockBuilder`              | 6       | `apply_extrinsic`, `finalize_block`, `inherent_extrinsics`, `check_inherents`                                                                                                                                                                                                                                                                                               |
+| `TaggedTransactionQueue`    | 3       | `validate_transaction`                                                                                                                                                                                                                                                                                                                                                      |
+| `OffchainWorkerApi`         | 2       | `offchain_worker`                                                                                                                                                                                                                                                                                                                                                           |
+| `GrandpaApi`                | 3       | `grandpa_authorities`, `submit_report_equivocation_unsigned_extrinsic`, `generate_key_ownership_proof`, `current_set_id`                                                                                                                                                                                                                                                    |
+| `BabeApi`                   | 2       | `configuration`, `current_epoch_start`, `current_epoch`, `next_epoch`, `generate_key_ownership_proof`, `submit_report_equivocation_unsigned_extrinsic`                                                                                                                                                                                                                      |
+| `AuthorityDiscoveryApi`     | 1       | `authorities`                                                                                                                                                                                                                                                                                                                                                               |
+| `AccountNonceApi`           | 1       | `account_nonce`                                                                                                                                                                                                                                                                                                                                                             |
+| `TransactionPaymentApi`     | 2       | `query_info`, `query_fee_details`                                                                                                                                                                                                                                                                                                                                           |
+| `TransactionPaymentCallApi` | 2       | `query_call_info`, `query_call_fee_details`                                                                                                                                                                                                                                                                                                                                 |
+| `SessionKeys`               | 2       | `generate_session_keys`, `decode_session_keys`                                                                                                                                                                                                                                                                                                                              |
+| `StakingApi`                | 1       | `nominations_quota`, `eras_stakers_page_count`, `pending_rewards`                                                                                                                                                                                                                                                                                                           |
+| `PipsApi`                   | 1       | `get_votes`, `proposed_by`, `voted_on`                                                                                                                                                                                                                                                                                                                                      |
+| `ProtocolFeeApi`            | 1       | `compute_fee`                                                                                                                                                                                                                                                                                                                                                               |
+| `IdentityApi`               | 4       | `get_did_records`, `get_filtered_authorizations`, `get_did_status`, `get_key_identity_data`                                                                                                                                                                                                                                                                                 |
+| `AssetApi`                  | 5       | `transfer_report`, `allowance`                                                                                                                                                                                                                                                                                                                                              |
+| `GroupApi`                  | 1       | `get_cdd_valid_members`, `get_gc_valid_members`                                                                                                                                                                                                                                                                                                                             |
+| `NFTApi`                    | 3       | `transfer_report`                                                                                                                                                                                                                                                                                                                                                           |
+| `SettlementApi`             | 3       | `get_execute_instruction_info`, `get_affirmation_count`, `get_transfer_report`, `get_execute_instruction_report`, `lock_instruction_weight`, `instruction_asset_count`, `get_receiver_affirmation_requirement`                                                                                                                                                              |
+| `ComplianceApi`             | 2       | `compliance_report`                                                                                                                                                                                                                                                                                                                                                         |
+| `StatisticsApi`             | 0       | `transfer_restrictions_report`                                                                                                                                                                                                                                                                                                                                              |
+| `GenesisBuilder`            | 1       | `build_state`, `get_preset`, `preset_names`                                                                                                                                                                                                                                                                                                                                 |
+| `BeefyApi`                  | 6       | `beefy_genesis`, `validator_set`, `submit_report_double_voting_unsigned_extrinsic`, `submit_report_fork_voting_unsigned_extrinsic`, `submit_report_future_block_voting_unsigned_extrinsic`, `generate_key_ownership_proof`                                                                                                                                                  |
+| `MmrApi`                    | 3       | `mmr_root`, `mmr_leaf_count`, `generate_proof`, `generate_ancestry_proof`, `verify_proof`, `verify_proof_stateless`                                                                                                                                                                                                                                                         |
+| `ReviveApi`                 | 1       | `eth_block`, `eth_block_hash`, `eth_receipt_data`, `block_gas_limit`, `balance`, `gas_price`, `nonce`, `call`, `instantiate`, `eth_transact`, `eth_transact_with_config`, `upload_code`, `get_storage`, `get_storage_var_key`, `trace_block`, `trace_tx`, `trace_call`, `block_author`, `address`, `account_id`, `runtime_pallets_address`, `code`, `new_balance_with_dust` |
+
+The framework-standard traits (`Core` through `SessionKeys`) track the underlying Polkadot SDK version bump and aren't individually itemized against v7.4 here — their version numbers moved as part of that upgrade, not as a Polymesh-specific design change.
+
+## Migration checklist
+
+1. If you call `identity_isIdentityHasValidCdd` or `identity_validCDDClaims` (JSON-RPC) or `IdentityApi::is_identity_has_valid_cdd`/`valid_cdd_claims` (Runtime API), note neither exists on v8 in either form — query `identity.claims` storage directly if you still need CDD-claim data.
+2. If you call `asset_transferReport` or `nft_transferReport` (JSON-RPC), switch to a `state_call`-capable client and use `AssetApi::transfer_report`/`NFTApi::transfer_report` — the JSON-RPC wrapper is gone, but the underlying Runtime API method still exists (with `sender`/`receiver` now `AssetHolder` instead of `PortfolioId`).
+3. If you need a spender's remaining `Asset::approve` allowance, use the new `AssetApi::allowance` Runtime API instead of decoding `Allowances` storage directly.
+4. If you call `settlement_getAffirmationCount` (JSON-RPC or Runtime API), update the second argument from `portfolios: Vec<PortfolioId>` to `holder_set: Vec<AssetHolder>`.
+5. If you need to know whether an instruction leg will require explicit receiver affirmation, use the new `SettlementApi::get_receiver_affirmation_requirement` Runtime API instead of assuming automatic affirmation.
+6. If you call `staking_getCurve` (JSON-RPC) or `StakingApi::get_curve` (Runtime API), note both are gone — for paged-reward tooling, switch to `StakingApi::eras_stakers_page_count` and `StakingApi::pending_rewards`; for the nomination limit, use `StakingApi::nominations_quota`. None of these three have a JSON-RPC wrapper — call them via `state_call`.
+7. Don't assume you need to hardcode Runtime API definitions client-side going forward — fetch them from the chain itself via `Metadata::metadata_at_version(15)` or `(16)`.
+8. If your own node runs with a restricted RPC method set, don't rely solely on its `rpc_methods` output to judge what changed here — cross-check against this page.

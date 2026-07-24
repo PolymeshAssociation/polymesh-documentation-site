@@ -1,0 +1,23 @@
+# Interface: ConditionCompliance
+
+> Defined in: [src/api/entities/types.ts:429](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L429)
+
+# Interface: ConditionCompliance
+
+Defined in: [src/api/entities/types.ts:429](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L429)
+
+## Properties
+
+### complies
+
+> **complies**: `boolean`
+
+Defined in: [src/api/entities/types.ts:431](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L431)
+
+***
+
+### condition
+
+> **condition**: [`Condition`](../type-aliases/Condition.mdx)
+
+Defined in: [src/api/entities/types.ts:430](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L430)

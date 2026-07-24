@@ -1,0 +1,297 @@
+# Class: AuthorizationRequest
+
+> Defined in: [src/api/entities/AuthorizationRequest.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L51)
+
+# Class: AuthorizationRequest
+
+Defined in: [src/api/entities/AuthorizationRequest.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L51)
+
+Represents a request made by an Identity to another Identity (or Account) for some sort of authorization. This has multiple uses. For example, if Alice
+  wants to transfer ownership of one of her Assets to Bob, this method emits an authorization request for Bob,
+  who then has to accept it in order to complete the ownership transfer
+
+## Extends
+
+- [`Entity`](../../Entity/classes/Entity.mdx)\<[`UniqueIdentifiers`](../interfaces/UniqueIdentifiers.mdx), [`HumanReadable`](../interfaces/HumanReadable.mdx)\>
+
+## Properties
+
+### authId
+
+> **authId**: `BigNumber`
+
+Defined in: [src/api/entities/AuthorizationRequest.ts:99](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L99)
+
+internal identifier for the Request (used to accept/reject/cancel)
+
+***
+
+### data
+
+> **data**: [`Authorization`](../../types/type-aliases/Authorization.mdx)
+
+Defined in: [src/api/entities/AuthorizationRequest.ts:88](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L88)
+
+Authorization Request data corresponding to type of Authorization
+
+| Type                            | Data                            |
+|---------------------------------|---------------------------------|
+| Add Relayer Paying Key          | Beneficiary, Relayer, Allowance |
+| Become Agent                    | Permission Group                |
+| Attest Primary Key Rotation     | DID                             |
+| Rotate Primary Key              | N/A                             |
+| Rotate Primary Key to Secondary | Permissions                     |
+| Transfer Ticker                 | Ticker                          |
+| Add MultiSig Signer             | Account                         |
+| Transfer Asset Ownership        | Ticker                          |
+| Join Identity                   | Permissions                     |
+| Portfolio Custody               | Portfolio                       |
+
+***
+
+### expiry
+
+> **expiry**: `Date` \| `null`
+
+Defined in: [src/api/entities/AuthorizationRequest.ts:94](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L94)
+
+date at which the Authorization Request expires and can no longer be accepted.
+  At this point, a new Authorization Request must be emitted. Null if the Request never expires
+
+***
+
+### issuer
+
+> **issuer**: [`Identity`](../../Identity/classes/Identity.mdx)
+
+Defined in: [src/api/entities/AuthorizationRequest.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L70)
+
+Identity that emitted the request
+
+***
+
+### target
+
+> **target**: [`Signer`](../../types/type-aliases/Signer.mdx)
+
+Defined in: [src/api/entities/AuthorizationRequest.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L65)
+
+Identity or Account to which the request was emitted
+
+***
+
+### uuid
+
+> **uuid**: `string`
+
+Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L46)
+
+#### Inherited from
+
+[`Entity`](../../Entity/classes/Entity.mdx).[`uuid`](../../Entity/classes/Entity.mdx#uuid)
+
+## Methods
+
+### accept()
+
+> **accept**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/AuthorizationRequest.ts:189](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L189)
+
+Accept the Authorization Request. You must be the target of the Request to be able to accept it
+
+#### Parameters
+
+Parameter
+Type
+
+`opts?`
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx), which means you can call [accept.checkAuthorization](../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### exists()
+
+> **exists**(): `Promise`\<`boolean`\>
+
+Defined in: [src/api/entities/AuthorizationRequest.ts:211](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L211)
+
+Determine whether this Authorization Request exists on chain
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+#### Overrides
+
+[`Entity`](../../Entity/classes/Entity.mdx).[`exists`](../../Entity/classes/Entity.mdx#exists)
+
+***
+
+### isEqual()
+
+> **isEqual**(`entity`: [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>): `boolean`
+
+Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L61)
+
+Determine whether this Entity is the same as another one
+
+#### Parameters
+
+Parameter
+Type
+
+`entity`
+
+[`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+[`Entity`](../../Entity/classes/Entity.mdx).[`isEqual`](../../Entity/classes/Entity.mdx#isequal)
+
+***
+
+### isExpired()
+
+> **isExpired**(): `boolean`
+
+Defined in: [src/api/entities/AuthorizationRequest.ts:202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L202)
+
+Returns whether the Authorization Request has expired
+
+#### Returns
+
+`boolean`
+
+***
+
+### remove()
+
+> **remove**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/AuthorizationRequest.ts:197](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L197)
+
+Remove the Authorization Request
+
+- If you are the Request issuer, this will cancel the Authorization
+- If you are the Request target, this will reject the Authorization
+
+#### Parameters
+
+Parameter
+Type
+
+`opts?`
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx), which means you can call [remove.checkAuthorization](../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### toHuman()
+
+> **toHuman**(): [`HumanReadable`](../interfaces/HumanReadable.mdx)
+
+Defined in: [src/api/entities/AuthorizationRequest.ts:225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L225)
+
+Return the Authorization's static data
+
+#### Returns
+
+[`HumanReadable`](../interfaces/HumanReadable.mdx)
+
+#### Overrides
+
+[`Entity`](../../Entity/classes/Entity.mdx).[`toHuman`](../../Entity/classes/Entity.mdx#tohuman)
+
+***
+
+### generateUuid()
+
+> `static` **generateUuid**\<`Identifiers`\>(`identifiers`: `Identifiers`): `string`
+
+Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L14)
+
+Generate the Entity's UUID from its identifying properties
+
+#### Type Parameters
+
+Type Parameter
+
+`Identifiers`
+
+#### Parameters
+
+Parameter
+Type
+Description
+
+`identifiers`
+
+`Identifiers`
+
+&hyphen;
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+[`Entity`](../../Entity/classes/Entity.mdx).[`generateUuid`](../../Entity/classes/Entity.mdx#generateuuid)
+
+***
+
+### unserialize()
+
+> `static` **unserialize**\<`Identifiers`\>(`serialized`: `string`): `Identifiers`
+
+Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L23)
+
+Unserialize a UUID into its Unique Identifiers
+
+#### Type Parameters
+
+Type Parameter
+
+`Identifiers`
+
+#### Parameters
+
+Parameter
+Type
+Description
+
+`serialized`
+
+`string`
+
+UUID to unserialize
+
+#### Returns
+
+`Identifiers`
+
+#### Inherited from
+
+[`Entity`](../../Entity/classes/Entity.mdx).[`unserialize`](../../Entity/classes/Entity.mdx#unserialize)

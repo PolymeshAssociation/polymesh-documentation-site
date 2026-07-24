@@ -1,0 +1,23 @@
+# Interface: AccreditedClaim
+
+> Defined in: [src/api/entities/types.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L181)
+
+# Interface: AccreditedClaim
+
+Defined in: [src/api/entities/types.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L181)
+
+## Properties
+
+### scope
+
+> **scope**: [`Scope`](Scope.mdx)
+
+Defined in: [src/api/entities/types.ts:183](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L183)
+
+***
+
+### type
+
+> **type**: [`Accredited`](../enumerations/ClaimType.mdx#accredited)
+
+Defined in: [src/api/entities/types.ts:182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L182)

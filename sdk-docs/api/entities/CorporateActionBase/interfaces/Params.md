@@ -1,0 +1,55 @@
+# Interface: Params
+
+> Defined in: [src/api/entities/CorporateActionBase/index.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateActionBase/index.ts#L50)
+
+# Interface: Params
+
+Defined in: [src/api/entities/CorporateActionBase/index.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateActionBase/index.ts#L50)
+
+## Properties
+
+### declarationDate
+
+> **declarationDate**: `Date`
+
+Defined in: [src/api/entities/CorporateActionBase/index.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateActionBase/index.ts#L52)
+
+***
+
+### defaultTaxWithholding
+
+> **defaultTaxWithholding**: `BigNumber`
+
+Defined in: [src/api/entities/CorporateActionBase/index.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateActionBase/index.ts#L55)
+
+***
+
+### description
+
+> **description**: `string`
+
+Defined in: [src/api/entities/CorporateActionBase/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateActionBase/index.ts#L53)
+
+***
+
+### kind
+
+> **kind**: [`CorporateActionKind`](../types/enumerations/CorporateActionKind.mdx)
+
+Defined in: [src/api/entities/CorporateActionBase/index.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateActionBase/index.ts#L51)
+
+***
+
+### targets
+
+> **targets**: [`CorporateActionTargets`](../types/interfaces/CorporateActionTargets.mdx)
+
+Defined in: [src/api/entities/CorporateActionBase/index.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateActionBase/index.ts#L54)
+
+***
+
+### taxWithholdings
+
+> **taxWithholdings**: [`TaxWithholding`](../types/interfaces/TaxWithholding.mdx)[]
+
+Defined in: [src/api/entities/CorporateActionBase/index.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateActionBase/index.ts#L56)

@@ -1,0 +1,35 @@
+# Interface: MortalProcedureOptValue
+
+> Defined in: [src/api/procedures/types.ts:163](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L163)
+
+# Interface: MortalProcedureOptValue
+
+Defined in: [src/api/procedures/types.ts:163](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L163)
+
+This transaction will be rejected if not included in a block after a while (default: ~5 minutes)
+
+## Properties
+
+### immortal
+
+> `readonly` **immortal**: `false`
+
+Defined in: [src/api/procedures/types.ts:164](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L164)
+
+***
+
+### lifetime?
+
+> `readonly` `optional` **lifetime?**: `BigNumber`
+
+Defined in: [src/api/procedures/types.ts:171](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L171)
+
+The number of blocks the for which the transaction remains valid. Target block time is 6 seconds. The default should suffice for most use cases
+
+#### Note
+
+this value will get rounded up to the closest power of 2, e.g. `65` rounds up to `128`
+
+#### Note
+
+this value should not exceed 4096, which is the chain's `BlockHashCount` as the lesser of the two will be used.

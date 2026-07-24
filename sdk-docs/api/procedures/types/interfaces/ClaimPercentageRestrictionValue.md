@@ -1,0 +1,39 @@
+# Interface: ClaimPercentageRestrictionValue
+
+> Defined in: [src/api/procedures/types.ts:585](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L585)
+
+# Interface: ClaimPercentageRestrictionValue
+
+Defined in: [src/api/procedures/types.ts:585](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L585)
+
+## Properties
+
+### claim
+
+> **claim**: [`InputStatClaim`](../../../entities/types/type-aliases/InputStatClaim.mdx)
+
+Defined in: [src/api/procedures/types.ts:589](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L589)
+
+***
+
+### issuer
+
+> **issuer**: [`Identity`](../../../entities/Identity/classes/Identity.mdx)
+
+Defined in: [src/api/procedures/types.ts:588](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L588)
+
+***
+
+### max
+
+> **max**: `BigNumber`
+
+Defined in: [src/api/procedures/types.ts:587](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L587)
+
+***
+
+### min
+
+> **min**: `BigNumber`
+
+Defined in: [src/api/procedures/types.ts:586](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L586)

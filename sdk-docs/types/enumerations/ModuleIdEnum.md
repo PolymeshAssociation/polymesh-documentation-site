@@ -1,0 +1,511 @@
+# Enumeration: ModuleIdEnum
+
+> Defined in: [src/middleware/types.ts:5606](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5606)
+
+# Enumeration: ModuleIdEnum
+
+Defined in: [src/middleware/types.ts:5606](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5606)
+
+## Enumeration Members
+
+### Asset
+
+> **Asset**: `"asset"`
+
+Defined in: [src/middleware/types.ts:5607](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5607)
+
+***
+
+### Authoritydiscovery
+
+> **Authoritydiscovery**: `"authoritydiscovery"`
+
+Defined in: [src/middleware/types.ts:5608](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5608)
+
+***
+
+### Authorship
+
+> **Authorship**: `"authorship"`
+
+Defined in: [src/middleware/types.ts:5609](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5609)
+
+***
+
+### Babe
+
+> **Babe**: `"babe"`
+
+Defined in: [src/middleware/types.ts:5610](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5610)
+
+***
+
+### Balances
+
+> **Balances**: `"balances"`
+
+Defined in: [src/middleware/types.ts:5611](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5611)
+
+***
+
+### Base
+
+> **Base**: `"base"`
+
+Defined in: [src/middleware/types.ts:5612](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5612)
+
+***
+
+### Beefy
+
+> **Beefy**: `"beefy"`
+
+Defined in: [src/middleware/types.ts:5613](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5613)
+
+***
+
+### Bridge
+
+> **Bridge**: `"bridge"`
+
+Defined in: [src/middleware/types.ts:5614](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5614)
+
+***
+
+### Capitaldistribution
+
+> **Capitaldistribution**: `"capitaldistribution"`
+
+Defined in: [src/middleware/types.ts:5615](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5615)
+
+***
+
+### Cddserviceproviders
+
+> **Cddserviceproviders**: `"cddserviceproviders"`
+
+Defined in: [src/middleware/types.ts:5616](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5616)
+
+***
+
+### Checkpoint
+
+> **Checkpoint**: `"checkpoint"`
+
+Defined in: [src/middleware/types.ts:5617](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5617)
+
+***
+
+### Committeemembership
+
+> **Committeemembership**: `"committeemembership"`
+
+Defined in: [src/middleware/types.ts:5618](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5618)
+
+***
+
+### Compliancemanager
+
+> **Compliancemanager**: `"compliancemanager"`
+
+Defined in: [src/middleware/types.ts:5619](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5619)
+
+***
+
+### Confidential
+
+> **Confidential**: `"confidential"`
+
+Defined in: [src/middleware/types.ts:5620](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5620)
+
+***
+
+### Confidentialasset
+
+> **Confidentialasset**: `"confidentialasset"`
+
+Defined in: [src/middleware/types.ts:5621](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5621)
+
+***
+
+### Contracts
+
+> **Contracts**: `"contracts"`
+
+Defined in: [src/middleware/types.ts:5622](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5622)
+
+***
+
+### Corporateaction
+
+> **Corporateaction**: `"corporateaction"`
+
+Defined in: [src/middleware/types.ts:5623](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5623)
+
+***
+
+### Corporateballot
+
+> **Corporateballot**: `"corporateballot"`
+
+Defined in: [src/middleware/types.ts:5624](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5624)
+
+***
+
+### Dividend
+
+> **Dividend**: `"dividend"`
+
+Defined in: [src/middleware/types.ts:5625](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5625)
+
+***
+
+### Electionprovidermultiphase
+
+> **Electionprovidermultiphase**: `"electionprovidermultiphase"`
+
+Defined in: [src/middleware/types.ts:5626](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5626)
+
+***
+
+### Exemption
+
+> **Exemption**: `"exemption"`
+
+Defined in: [src/middleware/types.ts:5627](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5627)
+
+***
+
+### Externalagents
+
+> **Externalagents**: `"externalagents"`
+
+Defined in: [src/middleware/types.ts:5628](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5628)
+
+***
+
+### Finalitytracker
+
+> **Finalitytracker**: `"finalitytracker"`
+
+Defined in: [src/middleware/types.ts:5629](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5629)
+
+***
+
+### Grandpa
+
+> **Grandpa**: `"grandpa"`
+
+Defined in: [src/middleware/types.ts:5630](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5630)
+
+***
+
+### Historical
+
+> **Historical**: `"historical"`
+
+Defined in: [src/middleware/types.ts:5631](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5631)
+
+***
+
+### Identity
+
+> **Identity**: `"identity"`
+
+Defined in: [src/middleware/types.ts:5632](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5632)
+
+***
+
+### Imonline
+
+> **Imonline**: `"imonline"`
+
+Defined in: [src/middleware/types.ts:5633](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5633)
+
+***
+
+### Indices
+
+> **Indices**: `"indices"`
+
+Defined in: [src/middleware/types.ts:5634](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5634)
+
+***
+
+### Multisig
+
+> **Multisig**: `"multisig"`
+
+Defined in: [src/middleware/types.ts:5635](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5635)
+
+***
+
+### Nft
+
+> **Nft**: `"nft"`
+
+Defined in: [src/middleware/types.ts:5636](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5636)
+
+***
+
+### Offences
+
+> **Offences**: `"offences"`
+
+Defined in: [src/middleware/types.ts:5637](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5637)
+
+***
+
+### Permissions
+
+> **Permissions**: `"permissions"`
+
+Defined in: [src/middleware/types.ts:5638](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5638)
+
+***
+
+### Pips
+
+> **Pips**: `"pips"`
+
+Defined in: [src/middleware/types.ts:5639](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5639)
+
+***
+
+### Polymeshcommittee
+
+> **Polymeshcommittee**: `"polymeshcommittee"`
+
+Defined in: [src/middleware/types.ts:5640](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5640)
+
+***
+
+### Polymeshcontracts
+
+> **Polymeshcontracts**: `"polymeshcontracts"`
+
+Defined in: [src/middleware/types.ts:5641](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5641)
+
+***
+
+### Portfolio
+
+> **Portfolio**: `"portfolio"`
+
+Defined in: [src/middleware/types.ts:5642](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5642)
+
+***
+
+### Preimage
+
+> **Preimage**: `"preimage"`
+
+Defined in: [src/middleware/types.ts:5643](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5643)
+
+***
+
+### Protocolfee
+
+> **Protocolfee**: `"protocolfee"`
+
+Defined in: [src/middleware/types.ts:5644](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5644)
+
+***
+
+### Randomnesscollectiveflip
+
+> **Randomnesscollectiveflip**: `"randomnesscollectiveflip"`
+
+Defined in: [src/middleware/types.ts:5645](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5645)
+
+***
+
+### Relayer
+
+> **Relayer**: `"relayer"`
+
+Defined in: [src/middleware/types.ts:5646](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5646)
+
+***
+
+### Revive
+
+> **Revive**: `"revive"`
+
+Defined in: [src/middleware/types.ts:5647](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5647)
+
+***
+
+### Rewards
+
+> **Rewards**: `"rewards"`
+
+Defined in: [src/middleware/types.ts:5648](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5648)
+
+***
+
+### Scheduler
+
+> **Scheduler**: `"scheduler"`
+
+Defined in: [src/middleware/types.ts:5649](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5649)
+
+***
+
+### Session
+
+> **Session**: `"session"`
+
+Defined in: [src/middleware/types.ts:5650](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5650)
+
+***
+
+### Settlement
+
+> **Settlement**: `"settlement"`
+
+Defined in: [src/middleware/types.ts:5651](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5651)
+
+***
+
+### Staking
+
+> **Staking**: `"staking"`
+
+Defined in: [src/middleware/types.ts:5652](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5652)
+
+***
+
+### Statetriemigration
+
+> **Statetriemigration**: `"statetriemigration"`
+
+Defined in: [src/middleware/types.ts:5653](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5653)
+
+***
+
+### Statistics
+
+> **Statistics**: `"statistics"`
+
+Defined in: [src/middleware/types.ts:5654](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5654)
+
+***
+
+### Sto
+
+> **Sto**: `"sto"`
+
+Defined in: [src/middleware/types.ts:5655](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5655)
+
+***
+
+### Stocapped
+
+> **Stocapped**: `"stocapped"`
+
+Defined in: [src/middleware/types.ts:5656](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5656)
+
+***
+
+### Sudo
+
+> **Sudo**: `"sudo"`
+
+Defined in: [src/middleware/types.ts:5657](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5657)
+
+***
+
+### System
+
+> **System**: `"system"`
+
+Defined in: [src/middleware/types.ts:5658](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5658)
+
+***
+
+### Technicalcommittee
+
+> **Technicalcommittee**: `"technicalcommittee"`
+
+Defined in: [src/middleware/types.ts:5659](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5659)
+
+***
+
+### Technicalcommitteemembership
+
+> **Technicalcommitteemembership**: `"technicalcommitteemembership"`
+
+Defined in: [src/middleware/types.ts:5660](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5660)
+
+***
+
+### Testutils
+
+> **Testutils**: `"testutils"`
+
+Defined in: [src/middleware/types.ts:5661](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5661)
+
+***
+
+### Timestamp
+
+> **Timestamp**: `"timestamp"`
+
+Defined in: [src/middleware/types.ts:5662](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5662)
+
+***
+
+### Transactionpayment
+
+> **Transactionpayment**: `"transactionpayment"`
+
+Defined in: [src/middleware/types.ts:5663](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5663)
+
+***
+
+### Treasury
+
+> **Treasury**: `"treasury"`
+
+Defined in: [src/middleware/types.ts:5664](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5664)
+
+***
+
+### Unknown
+
+> **Unknown**: `"unknown"`
+
+Defined in: [src/middleware/types.ts:5665](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5665)
+
+***
+
+### Upgradecommittee
+
+> **Upgradecommittee**: `"upgradecommittee"`
+
+Defined in: [src/middleware/types.ts:5666](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5666)
+
+***
+
+### Upgradecommitteemembership
+
+> **Upgradecommitteemembership**: `"upgradecommitteemembership"`
+
+Defined in: [src/middleware/types.ts:5667](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5667)
+
+***
+
+### Utility
+
+> **Utility**: `"utility"`
+
+Defined in: [src/middleware/types.ts:5668](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5668)
+
+***
+
+### Validators
+
+> **Validators**: `"validators"`
+
+Defined in: [src/middleware/types.ts:5669](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5669)

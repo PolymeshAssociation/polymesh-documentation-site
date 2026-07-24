@@ -1,0 +1,35 @@
+# Interface: TransactionsParams
+
+> Defined in: [src/api/procedures/types.ts:1825](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1825)
+
+# Interface: TransactionsParams
+
+Defined in: [src/api/procedures/types.ts:1825](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1825)
+
+## Extends
+
+- [`AssetBase`](AssetBase.mdx)
+
+## Properties
+
+### asset
+
+> **asset**: `string` \| [`FungibleAsset`](../../../entities/Asset/Fungible/classes/FungibleAsset.mdx)
+
+Defined in: [src/api/procedures/types.ts:1822](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1822)
+
+Asset over which the Identity will be granted permissions
+
+#### Inherited from
+
+[`AssetBase`](AssetBase.mdx).[`asset`](AssetBase.mdx#asset)
+
+***
+
+### transactions
+
+> **transactions**: [`TransactionPermissions`](../../../entities/types/interfaces/TransactionPermissions.mdx) \| `null`
+
+Defined in: [src/api/procedures/types.ts:1829](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1829)
+
+a null value means full permissions

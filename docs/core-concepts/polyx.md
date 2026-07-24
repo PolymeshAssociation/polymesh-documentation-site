@@ -1,0 +1,24 @@
+# POLYX
+
+> Token Economics and Utility
+
+## Overview
+
+POLYX is the native utility token of the Polymesh network.
+
+It serves several key functions:
+
+- **Transaction Fees:** POLYX is required to pay for transaction fees on the network.
+- **Staking:** Both operators (validators) and non-operators (nominators) can stake POLYX to help secure the network and earn rewards.
+- **Governance:** POLYX holders can signal on governance issues and participate in network proposals.
+- **Block Rewards:** New POLYX is minted only as block rewards, distributed to operators and stakers for supporting network security and consensus.
+
+POLYX can be [staked](/polyx/tokenomics/) to receive a proportional share of block rewards. Operators may be required to stake a minimum bond to run an authoring node.
+
+## Security
+
+Nodes participating in the [consensus](/architecture#consensus) mechanism of Polymesh must stake POLYX. This stake is at risk if the operator misbehaves (e.g., goes offline or produces invalid consensus messages), incentivizing operators to maintain network reliability and rapid block finalization.
+
+## Accessibility
+
+POLYX is freely transferable between keys. Unlike asset and identity related transactions, POLYX transfers and staking (except validator activities) do not require identity onboarding or a DID.

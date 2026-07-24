@@ -1,0 +1,44 @@
+# Interface: EventIdentifier
+
+> Defined in: [src/api/client/types.ts:180](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L180)
+
+# Interface: EventIdentifier
+
+Defined in: [src/api/client/types.ts:180](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L180)
+
+## Extended by
+
+- [`HistoricPolyxTransaction`](../../../entities/Account/types/interfaces/HistoricPolyxTransaction.mdx)
+- [`BaseHistoricAssetTransaction`](../../../entities/Asset/types/interfaces/BaseHistoricAssetTransaction.mdx)
+
+## Properties
+
+### blockDate
+
+> **blockDate**: `Date`
+
+Defined in: [src/api/client/types.ts:183](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L183)
+
+***
+
+### blockHash
+
+> **blockHash**: `string`
+
+Defined in: [src/api/client/types.ts:182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L182)
+
+***
+
+### blockNumber
+
+> **blockNumber**: `BigNumber`
+
+Defined in: [src/api/client/types.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L181)
+
+***
+
+### eventIndex
+
+> **eventIndex**: `BigNumber`
+
+Defined in: [src/api/client/types.ts:184](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L184)

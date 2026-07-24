@@ -1,0 +1,25 @@
+# Interface: IdentityHeldNfts
+
+> Defined in: [src/api/entities/Asset/types.ts:129](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L129)
+
+# Interface: IdentityHeldNfts
+
+Defined in: [src/api/entities/Asset/types.ts:129](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L129)
+
+Represents the holdings of an NFT holder
+
+## Properties
+
+### identity
+
+> **identity**: [`Identity`](../../../Identity/classes/Identity.mdx)
+
+Defined in: [src/api/entities/Asset/types.ts:130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L130)
+
+***
+
+### nfts
+
+> **nfts**: [`Nft`](../../NonFungible/Nft/classes/Nft.mdx)[]
+
+Defined in: [src/api/entities/Asset/types.ts:131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L131)

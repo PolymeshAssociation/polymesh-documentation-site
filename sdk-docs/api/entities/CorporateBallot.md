@@ -1,0 +1,15 @@
+# Entity: CorporateBallot
+
+> - [CorporateBallot](classes/CorporateBallot.mdx)
+
+# Entity: CorporateBallot
+
+## Classes
+
+- [CorporateBallot](classes/CorporateBallot.mdx)
+
+## Interfaces
+
+- [HumanReadable](interfaces/HumanReadable.mdx)
+- [Params](interfaces/Params.mdx)
+- [UniqueIdentifiers](interfaces/UniqueIdentifiers.mdx)

@@ -1,0 +1,16 @@
+# Variable: REDEMPTION\_TX\_TAGS
+
+> > `const` **REDEMPTION\_TX\_TAGS**: \[[`Redeem`](../../enumerations/AssetTx.mdx#redeem), [`RedeemNft`](../../enumerations/NftTx.mdx#redeemnft)\]
+
+# Variable: REDEMPTION\_TX\_TAGS
+
+> `const` **REDEMPTION\_TX\_TAGS**: \[[`Redeem`](../../enumerations/AssetTx.mdx#redeem), [`RedeemNft`](../../enumerations/NftTx.mdx#redeemnft)\]
+
+Defined in: [src/types/txGroupConstants.ts:427](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/types/txGroupConstants.ts#L427)
+
+Transaction tags for Redemption operations
+Contains fungible asset and NFT redemption operations.
+
+Values:
+- TxTags.asset.Redeem
+- TxTags.nft.RedeemNft

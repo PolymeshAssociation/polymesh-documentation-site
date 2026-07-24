@@ -1,0 +1,271 @@
+# Enumeration: IdentityTx
+
+> Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:304
+
+# Enumeration: IdentityTx
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:304
+
+## Enumeration Members
+
+### AcceptPrimaryKey
+
+> **AcceptPrimaryKey**: `"identity.acceptPrimaryKey"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:308
+
+***
+
+### AddAuthorization
+
+> **AddAuthorization**: `"identity.addAuthorization"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:318
+
+***
+
+### AddClaim
+
+> **AddClaim**: `"identity.addClaim"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:312
+
+***
+
+### AddInvestorUniquenessClaim
+
+> **AddInvestorUniquenessClaim**: `"identity.addInvestorUniquenessClaim"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:321
+
+***
+
+### AddInvestorUniquenessClaimV2
+
+> **AddInvestorUniquenessClaimV2**: `"identity.addInvestorUniquenessClaimV2"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:324
+
+***
+
+### AddSecondaryKeysWithAuthorization
+
+> **AddSecondaryKeysWithAuthorization**: `"identity.addSecondaryKeysWithAuthorization"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:320
+
+***
+
+### AddSecondaryKeysWithAuthorizationOld
+
+> **AddSecondaryKeysWithAuthorizationOld**: `"identity.addSecondaryKeysWithAuthorizationOld"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:329
+
+***
+
+### CddRegisterDid
+
+> **CddRegisterDid**: `"identity.cddRegisterDid"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:305
+
+***
+
+### CddRegisterDidWithCdd
+
+> **CddRegisterDidWithCdd**: `"identity.cddRegisterDidWithCdd"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:332
+
+***
+
+### ChangeCddRequirementForMkRotation
+
+> **ChangeCddRequirementForMkRotation**: `"identity.changeCddRequirementForMkRotation"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:309
+
+***
+
+### CreateChildIdentities
+
+> **CreateChildIdentities**: `"identity.createChildIdentities"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:334
+
+***
+
+### CreateChildIdentity
+
+> **CreateChildIdentity**: `"identity.createChildIdentity"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:333
+
+***
+
+### FreezeSecondaryKeys
+
+> **FreezeSecondaryKeys**: `"identity.freezeSecondaryKeys"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:316
+
+***
+
+### GcAddCddClaim
+
+> **GcAddCddClaim**: `"identity.gcAddCddClaim"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:322
+
+***
+
+### GcRevokeCddClaim
+
+> **GcRevokeCddClaim**: `"identity.gcRevokeCddClaim"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:323
+
+***
+
+### InvalidateCddClaims
+
+> **InvalidateCddClaims**: `"identity.invalidateCddClaims"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:306
+
+***
+
+### JoinIdentityAsKey
+
+> **JoinIdentityAsKey**: `"identity.joinIdentityAsKey"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:310
+
+***
+
+### LeaveIdentityAsKey
+
+> **LeaveIdentityAsKey**: `"identity.leaveIdentityAsKey"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:311
+
+***
+
+### LegacySetPermissionToSigner
+
+> **LegacySetPermissionToSigner**: `"identity.legacySetPermissionToSigner"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:315
+
+***
+
+### PlaceholderLegacySetPermissionToSigner
+
+> **PlaceholderLegacySetPermissionToSigner**: `"identity.placeholderLegacySetPermissionToSigner"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:328
+
+***
+
+### RegisterCustomClaimType
+
+> **RegisterCustomClaimType**: `"identity.registerCustomClaimType"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:331
+
+***
+
+### RegisterDid
+
+> **RegisterDid**: `"identity.registerDid"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:336
+
+***
+
+### RemoveAuthorization
+
+> **RemoveAuthorization**: `"identity.removeAuthorization"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:319
+
+***
+
+### RemoveSecondaryKeys
+
+> **RemoveSecondaryKeys**: `"identity.removeSecondaryKeys"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:307
+
+***
+
+### RemoveSecondaryKeysOld
+
+> **RemoveSecondaryKeysOld**: `"identity.removeSecondaryKeysOld"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:327
+
+***
+
+### RevokeClaim
+
+> **RevokeClaim**: `"identity.revokeClaim"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:313
+
+***
+
+### RevokeClaimByIndex
+
+> **RevokeClaimByIndex**: `"identity.revokeClaimByIndex"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:325
+
+***
+
+### RotatePrimaryKeyToSecondary
+
+> **RotatePrimaryKeyToSecondary**: `"identity.rotatePrimaryKeyToSecondary"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:326
+
+***
+
+### SelfRegisterDid
+
+> **SelfRegisterDid**: `"identity.selfRegisterDid"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:337
+
+***
+
+### SetPermissionToSigner
+
+> **SetPermissionToSigner**: `"identity.setPermissionToSigner"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:314
+
+***
+
+### SetSecondaryKeyPermissions
+
+> **SetSecondaryKeyPermissions**: `"identity.setSecondaryKeyPermissions"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:330
+
+***
+
+### UnfreezeSecondaryKeys
+
+> **UnfreezeSecondaryKeys**: `"identity.unfreezeSecondaryKeys"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:317
+
+***
+
+### UnlinkChildIdentity
+
+> **UnlinkChildIdentity**: `"identity.unlinkChildIdentity"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:335

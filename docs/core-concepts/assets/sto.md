@@ -1,0 +1,273 @@
+# Security Token Offerings
+
+> Create and manage Security Token Offerings (STOs) on Polymesh
+
+## Overview
+
+A Security Token Offering (STO) is a fundraising method that involves making tokens representing ownership of a real-world asset or security available for purchase. Polymesh provides native on-chain capabilities for conducting token offerings through its STO functionality.
+
+STOs allow asset issuers to raise capital by selling tokens to investors in exchange for another asset, typically a stablecoin. The process is managed on-chain with automated settlement, ensuring transparency and efficiency throughout the offering lifecycle.
+
+Common use cases include initial token offerings (primary issuance), secondary offerings (additional funding rounds), capital raises for specific projects, private placements to qualified investors, and rights issues to existing token holders.
+
+:::note Regulatory Considerations
+The specific steps and requirements for launching an STO on Polymesh may vary depending on your specific needs and the legal and regulatory requirements in your jurisdiction. Selling security tokens results in the application of an extensive set of laws, regulations, and potential liabilities. It's always advisable to consult with legal and financial experts to ensure that you comply with all applicable laws and regulations before you proceed with your STO.
+
+Polymesh does not provide any advice or assurance your security tokens comply with applicable laws and regulations.
+:::
+
+## Core Concepts
+
+- **Offering Asset**: The security token being offered for sale (identified by its `AssetId`). Note that Polymesh's native STO functionality only supports [Fungible assets](/core/assets/fungible).
+- **Raising Asset**: The asset (typically a stablecoin) accepted as payment for the offering asset.
+- **Price Tiers**: Configurable pricing levels that can offer different volumes of tokens at different price points.
+- **Time Window**: The period during which the STO is active, defined by start and end times.
+- **Venue**: The [settlement venue](/settlement/venues) where the exchange of assets takes place.
+- **Minimum Investment**: The minimum amount of the raising asset required to participate.
+
+## STO Lifecycle
+
+The STO process involves several key stages, each managed through specific transactions in the Polymesh ecosystem.
+
+### 1. Creating an STO
+
+Asset issuers or their appointed [agents](/asset-agents) can create an STO by calling the `sto::create_fundraiser` transaction.
+
+**Parameters**:
+
+- `offering_portfolio`: Portfolio containing the `offering_asset`.
+- `offering_asset`: Asset being offered for sale.
+- `raising_portfolio`: Portfolio where the `raising_asset` will be deposited.
+- `raising_asset`: Asset being accepted as payment.
+- `tiers`: Price tiers to charge investors, each with a `total` amount available and a `price` per unit.
+- `venue_id`: ID of the settlement venue (must be of type `STO`).
+- `start`: Fundraiser start time (optional, defaults to immediate start).
+- `end`: Fundraiser end time (optional, defaults to no expiration).
+- `minimum_investment`: Minimum amount of `raising_asset` required to invest.
+- `fundraiser_name`: Descriptive name for the fundraiser (informational only).
+
+**Effects**:
+
+- Creates an STO record on-chain with a unique `FundraiserId` specific to the offering asset.
+- Locks the offering asset in the offering portfolio (the locked amount equals the sum of all totals from the defined price tiers).
+- Sets up the price tier structure and time window for the STO.
+- Creates a permanent record of the fundraiser in the chain state.
+
+**Constraints**:
+
+- Can only be executed by identities with agent permissions for the offering asset.
+- The calling identity must have [custodial control](/portfolios/custody) of both the offering [portfolio](/portfolios) and raising portfolio, but does not need to directly own them.
+- Requires a valid venue of type `STO`.
+- Price tiers must be valid (i.e each with non-zero totals).
+- If both start and end times are specified, start must be before end.
+
+### 2. Investing in an STO
+
+During the active period of an STO, eligible investors can participate by calling the `sto::invest` transaction.
+
+**Parameters**:
+
+- `investment_portfolio`: Portfolio where purchased tokens will be deposited.
+- `funding_portfolio`: Portfolio that will fund the investment.
+- `offering_asset`: Asset to invest in.
+- `id`: ID of the fundraiser to invest in.
+- `funding`: Can be set to `OnChain` or `OffChain`. On-chain funding requires the funding portfolio to be provided. Off-chain funding requires a payment [receipt](#off-chain-receipt-structure) from an authorized [venue receipt signer](/settlement/off-chain/#receipt-signers) to be provided.
+- `purchase_amount`: Number of offering tokens to purchase (not the investment amount in raising asset).
+- `max_price`: Maximum blended price per token willing to pay (optional, no constraint if omitted). This protects against unexpected pricing when investments span multiple tiers.
+
+**Effects**:
+
+- Calculates the total investment cost based on the tiered pricing structure and purchase amount.
+- Validates that the blended price doesn't exceed the investor's maximum price (if specified).
+- Creates and executes a settlement instruction exchanging the calculated cost in raising asset for the requested tokens.
+- Updates the remaining available amounts in each affected price tier.
+- Records the investment transaction on-chain.
+
+**Constraints**:
+
+- Can only be executed during the active STO period (after start and before end).
+- The investor must meet all compliance requirements for both the offering and raising assets.
+- The requested purchase amount must be available across the active tiers.
+- The calculated investment cost must meet or exceed the minimum investment threshold.
+- If a maximum price is specified, the blended price must not exceed this limit.
+
+### 3. Managing an Active STO
+
+Several management functions are available to the STO creator during its lifecycle:
+
+#### Modifying the Time Window
+
+The STO time window can be adjusted using `sto::modify_fundraiser_window`.
+
+**Parameters**:
+
+- `offering_asset`: Asset the offering being modified relates to.
+- `id`: ID of the fundraiser to modify.
+- `start`: New start time.
+- `end`: New end time (optional).
+
+**Effects**:
+
+- Updates the start and/or end times of the STO.
+- Records the modification on-chain.
+
+**Constraints**:
+
+- Can only be executed by identities with agent permissions for the offering asset.
+- Cannot modify a closed STO.
+- If both start and end are specified, start must be before end.
+
+#### Freezing and Unfreezing
+
+STOs can be temporarily paused using `sto::freeze_fundraiser` and resumed using `sto::unfreeze_fundraiser`.
+
+**Parameters**:
+
+- `offering_asset`: Target asset of the fundraiser.
+- `id`: ID of the fundraiser to freeze/unfreeze.
+
+**Effects**:
+
+- Changes the STO status to `Frozen` (preventing investments) or `Live` (allowing investments).
+- Records the status change on-chain.
+
+**Constraints**:
+
+- Can only be executed by identities with agent permissions for the offering asset.
+- Cannot freeze or unfreeze a closed STO.
+
+### 4. Stopping an STO
+
+An STO must be explicitly stopped to finalize it and release any unsold tokens. This applies both to STOs that are being ended early and those that have reached their natural end date. Stopping an STO is performed by calling the `sto::stop` transaction.
+
+**Parameters**:
+
+- `offering_asset`: Asset to stop.
+- `id`: ID of the fundraiser to stop.
+
+**Effects**:
+
+- Changes the STO status to `Closed` or `ClosedEarly` (depending on timing).
+- Unlocks any remaining unsold offering tokens in the offering portfolio, making them available for other uses.
+- Prevents any further investments in the STO.
+- Records the closure on-chain.
+
+**Constraints**:
+
+- Can only be executed by identities with agent permissions for the offering asset.
+- Cannot stop an already closed STO.
+
+## Querying STO Information
+
+Investors and other interested parties can access information about active STOs through several query methods:
+
+- `sto::fundraisers`: Retrieve details about specific fundraisers.
+- `sto::fundraiser_names`: View fundraiser names for a given asset.
+- `sto::fundraiser_count`: Check the total number of fundraisers for an asset.
+
+## Technical Considerations
+
+### Tiered Pricing Mechanism
+
+The STO functionality supports tiered pricing, allowing issuers to offer different volumes of tokens at different price points. Key aspects of this mechanism:
+
+- Each tier has a total amount available and a fixed price per unit.
+- Tiers are consumed in sequence, from the lowest index to the highest.
+- A single investment can span multiple tiers if purchasing a large amount.
+- The price is calculated as a weighted average (blended price) when spanning multiple tiers.
+
+#### Investment Amount vs. Purchase Amount
+
+It's important to understand the distinction between investment amount and purchase amount:
+
+- **Purchase Amount**: The number of offering tokens the investor wants to acquire (specified in the `sto::invest` transaction)
+- **Investment Amount**: The total cost in the raising asset required to purchase those tokens (calculated by the system based on tier pricing)
+
+#### Blended Pricing and Max Price Protection
+
+When an investment spans multiple tiers, the system:
+
+1. **Calculates the total cost** by applying tier pricing sequentially
+2. **Determines the blended price** as: `total_cost / purchase_amount`
+3. **Applies max price protection** (if specified): The blended price cannot exceed the investor's `max_price` parameter
+
+**Example Scenario:**
+
+- Tier 1: 1,000 tokens at $1.00 each (500 tokens remaining)
+- Tier 2: 1,000 tokens at $1.50 each (1,000 tokens remaining)
+- Investor wants to purchase 800 tokens with max_price of $1.20
+
+**Calculation:**
+
+- 500 tokens from Tier 1: 500 × $1.00 = $500
+- 300 tokens from Tier 2: 300 × $1.50 = $450
+- Total cost: $950 for 800 tokens
+- Blended price: $950 ÷ 800 = $1.1875 per token
+- Since $1.1875 < $1.20 (max_price), the investment succeeds
+
+If the blended price exceeded $1.20, the transaction would fail with `MaxPriceExceeded` error, protecting the investor from unexpected pricing.
+
+### Compliance Integration
+
+All investments in an STO are subject to the compliance rules of both the offering and raising assets:
+
+- Investors must be eligible to receive the offering asset (passing its compliance and transfer restrictions).
+- Investors must be eligible to transfer the raising asset (passing its compliance and transfer restrictions).
+- The STO mechanism integrates with Polymesh's compliance framework to enforce these rules.
+
+### Settlement Process
+
+The investment process uses Polymesh's settlement system:
+
+- Each investment creates a settlement instruction with two legs:
+  1. Transfer of offering tokens from the offering portfolio to the investor's portfolio.
+  2. Transfer of raising assets from the investor's funding portfolio to the raising portfolio.
+- The instruction is automatically affirmed by both parties.
+- Settlement occurs immediately upon successful affirmation.
+
+### Portfolio Implications
+
+Both the STO creator and investors must consider portfolio management:
+
+- **For Creators**: The offering portfolio must contain sufficient tokens, which become locked during the STO exclusively for distribution by the offering.
+- **For Investors**: The funding portfolio must contain sufficient raising assets, and the offering tokens will be deposited into the investment portfolio.
+
+### Off-Chain Receipt Structure
+
+For STOs that support off-chain funding, investors must provide a signed receipt. The receipt structure includes:
+
+**Required Receipt Data:**
+
+- The unique receipt ID (UID)
+- The fundraiser ID
+- The sender's identity (DID)
+- The receiver's identity (DID)
+- The raising asset ticker symbol/identifier
+- The equivalent investment amount in the raising asset (calculated based on STO tier pricing)
+
+:::important Amount Calculation
+The amount in the off-chain receipt must represent the equivalent value in the raising asset, not the off-chain asset amount. For example, if an investor transfers 1 BTC off-chain but the STO uses a USD stablecoin as the raising asset, the receipt amount should reflect the USD equivalent value based on the STO's tier pricing structure.
+:::
+
+:::warning Exact Amount Requirement
+The receipt amount must be **exactly** the investment cost calculated by the STO's [blended pricing mechanism](#blended-pricing-and-max-price-protection). Any deviation from this calculated amount will cause the settlement to fail during signature verification. The investment amount is determined by applying tier pricing sequentially to the requested purchase amount, and the receipt must reflect this precise calculation.
+:::
+
+**Signature Generation:**
+
+- The data elements are SCALE encoded
+- The encoded data is wrapped with `<Bytes>` and `</Bytes>` tags to form the final payload
+- An authorized venue signer creates a cryptographic signature of this wrapped payload
+- The signature must be generated using supported key types (SR25519, ED25519, ECDSA)
+
+**Receipt Assembly:**
+
+- The final receipt combines:
+  - The receipt UID
+  - The signer's account information
+  - The generated signature
+  - Optional metadata about the investment
+
+:::note
+The payload data must be wrapped with `<Bytes>` and `</Bytes>` tags before signing. The Polymesh SDK provides helper functions to generate valid STO receipts with the correct format.
+:::

@@ -1,0 +1,143 @@
+# Enumeration: BridgeTx
+
+> Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:436
+
+# Enumeration: BridgeTx
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:436
+
+## Enumeration Members
+
+### AddFreezeAdmin
+
+> **AddFreezeAdmin**: `"bridge.addFreezeAdmin"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:451
+
+***
+
+### BatchProposeBridgeTx
+
+> **BatchProposeBridgeTx**: `"bridge.batchProposeBridgeTx"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:445
+
+***
+
+### ChangeAdmin
+
+> **ChangeAdmin**: `"bridge.changeAdmin"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:438
+
+***
+
+### ChangeBridgeExempted
+
+> **ChangeBridgeExempted**: `"bridge.changeBridgeExempted"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:443
+
+***
+
+### ChangeBridgeLimit
+
+> **ChangeBridgeLimit**: `"bridge.changeBridgeLimit"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:442
+
+***
+
+### ChangeController
+
+> **ChangeController**: `"bridge.changeController"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:437
+
+***
+
+### ChangeTimelock
+
+> **ChangeTimelock**: `"bridge.changeTimelock"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:439
+
+***
+
+### ForceHandleBridgeTx
+
+> **ForceHandleBridgeTx**: `"bridge.forceHandleBridgeTx"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:444
+
+***
+
+### Freeze
+
+> **Freeze**: `"bridge.freeze"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:440
+
+***
+
+### FreezeTxs
+
+> **FreezeTxs**: `"bridge.freezeTxs"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:448
+
+***
+
+### HandleBridgeTx
+
+> **HandleBridgeTx**: `"bridge.handleBridgeTx"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:447
+
+***
+
+### HandleScheduledBridgeTx
+
+> **HandleScheduledBridgeTx**: `"bridge.handleScheduledBridgeTx"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:450
+
+***
+
+### ProposeBridgeTx
+
+> **ProposeBridgeTx**: `"bridge.proposeBridgeTx"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:446
+
+***
+
+### RemoveFreezeAdmin
+
+> **RemoveFreezeAdmin**: `"bridge.removeFreezeAdmin"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:452
+
+***
+
+### RemoveTxs
+
+> **RemoveTxs**: `"bridge.removeTxs"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:453
+
+***
+
+### Unfreeze
+
+> **Unfreeze**: `"bridge.unfreeze"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:441
+
+***
+
+### UnfreezeTxs
+
+> **UnfreezeTxs**: `"bridge.unfreezeTxs"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:449

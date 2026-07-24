@@ -1,0 +1,39 @@
+# Enumeration: CheckpointTx
+
+> Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:575
+
+# Enumeration: CheckpointTx
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:575
+
+## Enumeration Members
+
+### CreateCheckpoint
+
+> **CreateCheckpoint**: `"checkpoint.createCheckpoint"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:576
+
+***
+
+### CreateSchedule
+
+> **CreateSchedule**: `"checkpoint.createSchedule"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:578
+
+***
+
+### RemoveSchedule
+
+> **RemoveSchedule**: `"checkpoint.removeSchedule"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:579
+
+***
+
+### SetSchedulesMaxComplexity
+
+> **SetSchedulesMaxComplexity**: `"checkpoint.setSchedulesMaxComplexity"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:577

@@ -1,0 +1,38 @@
+# Interface: TrustedClaimIssuer\<IsDefault\>
+
+> Defined in: [src/api/entities/types.ts:332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L332)
+
+# Interface: TrustedClaimIssuer\
+
+Defined in: [src/api/entities/types.ts:332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L332)
+
+## Type Parameters
+
+Type Parameter
+Default type
+Description
+
+`IsDefault` *extends* `boolean`
+
+`false`
+
+whether the Identity is a default trusted claim issuer for an asset or just
+  for a specific compliance condition. Defaults to false
+
+## Properties
+
+### identity
+
+> **identity**: `IsDefault` *extends* `true` ? [`DefaultTrustedClaimIssuer`](../../DefaultTrustedClaimIssuer/classes/DefaultTrustedClaimIssuer.mdx) : [`Identity`](../../Identity/classes/Identity.mdx)
+
+Defined in: [src/api/entities/types.ts:333](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L333)
+
+***
+
+### trustedFor
+
+> **trustedFor**: [`TrustedFor`](../type-aliases/TrustedFor.mdx)[] \| `null`
+
+Defined in: [src/api/entities/types.ts:337](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L337)
+
+a null value means that the issuer is trusted for all claim types

@@ -1,0 +1,23 @@
+# Interface: CorporateBallotWithDetails
+
+> Defined in: [src/api/entities/types.ts:631](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L631)
+
+# Interface: CorporateBallotWithDetails
+
+Defined in: [src/api/entities/types.ts:631](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L631)
+
+## Properties
+
+### ballot
+
+> **ballot**: [`CorporateBallot`](../../CorporateBallot/classes/CorporateBallot.mdx)
+
+Defined in: [src/api/entities/types.ts:632](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L632)
+
+***
+
+### details
+
+> **details**: [`CorporateBallotDetails`](../../CorporateBallot/types/interfaces/CorporateBallotDetails.mdx)
+
+Defined in: [src/api/entities/types.ts:633](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L633)

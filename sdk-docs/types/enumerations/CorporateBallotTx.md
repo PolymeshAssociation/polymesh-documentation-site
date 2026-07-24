@@ -1,0 +1,55 @@
+# Enumeration: CorporateBallotTx
+
+> Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:604
+
+# Enumeration: CorporateBallotTx
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:604
+
+## Enumeration Members
+
+### AttachBallot
+
+> **AttachBallot**: `"corporateBallot.attachBallot"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:605
+
+***
+
+### ChangeEnd
+
+> **ChangeEnd**: `"corporateBallot.changeEnd"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:607
+
+***
+
+### ChangeMeta
+
+> **ChangeMeta**: `"corporateBallot.changeMeta"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:608
+
+***
+
+### ChangeRcv
+
+> **ChangeRcv**: `"corporateBallot.changeRcv"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:609
+
+***
+
+### RemoveBallot
+
+> **RemoveBallot**: `"corporateBallot.removeBallot"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:610
+
+***
+
+### Vote
+
+> **Vote**: `"corporateBallot.vote"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:606

@@ -1,0 +1,27 @@
+# Interface: MoveFundsParams
+
+> Defined in: [src/api/procedures/types.ts:1858](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1858)
+
+# Interface: MoveFundsParams
+
+Defined in: [src/api/procedures/types.ts:1858](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1858)
+
+## Properties
+
+### items
+
+> **items**: [`PortfolioMovement`](../../../entities/types/type-aliases/PortfolioMovement.mdx)[]
+
+Defined in: [src/api/procedures/types.ts:1866](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1866)
+
+list of Assets (and the corresponding token amounts) that will be moved
+
+***
+
+### to?
+
+> `optional` **to?**: `BigNumber` \| [`DefaultPortfolio`](../../../entities/DefaultPortfolio/classes/DefaultPortfolio.mdx) \| [`NumberedPortfolio`](../../../entities/NumberedPortfolio/classes/NumberedPortfolio.mdx)
+
+Defined in: [src/api/procedures/types.ts:1862](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1862)
+
+portfolio (or portfolio ID) that will receive the funds. Optional, if no value is passed, the funds will be moved to the default Portfolio of this Portfolio's owner

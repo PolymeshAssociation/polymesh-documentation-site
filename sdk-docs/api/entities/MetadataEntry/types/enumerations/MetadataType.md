@@ -1,0 +1,23 @@
+# Enumeration: MetadataType
+
+> Defined in: [src/api/entities/MetadataEntry/types.ts:5](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MetadataEntry/types.ts#L5)
+
+# Enumeration: MetadataType
+
+Defined in: [src/api/entities/MetadataEntry/types.ts:5](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MetadataEntry/types.ts#L5)
+
+## Enumeration Members
+
+### Global
+
+> **Global**: `"Global"`
+
+Defined in: [src/api/entities/MetadataEntry/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MetadataEntry/types.ts#L7)
+
+***
+
+### Local
+
+> **Local**: `"Local"`
+
+Defined in: [src/api/entities/MetadataEntry/types.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MetadataEntry/types.ts#L6)

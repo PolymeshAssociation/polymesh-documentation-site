@@ -1,0 +1,156 @@
+# Smart Contracts Changelog - v7.4 to v8.0
+
+> Polymesh chain v8 adds pallet-revive, a dual-VM (PolkaVM + EVM) smart contract engine, as the only smart contract pallet on Polymesh.
+
+This page covers `pallet-revive`, the smart contract pallet on Polymesh for v8. It is part of the [v7.4 → v8.0 changelog](./010-overview.mdx). See [Smart Contracts](/development/smart-contracts) for the conceptual guide to Polymesh smart contracts, including PolkaVM vs EVM, the `eth-rpc` proxy, and how to build tooling against it.
+
+**Audience:** smart contract developers and anyone building tooling that deploys or calls contracts on Polymesh.
+
+---
+
+## Wasm/ink! contracts (`pallet-contracts`, `polymesh_contracts`) removed
+
+The legacy Wasm/ink! contracts pallets — `pallet-contracts` and Polymesh's `polymesh_contracts` wrapper — are completely removed in v8. Neither pallet is part of the v8 runtime. `pallet-revive` is now the only smart contract pallet on Polymesh. This isn't a breaking removal in practice, since no contracts were ever deployed on Mainnet through `pallet-contracts` in the first place.
+
+## `pallet-revive` (new)
+
+`pallet-revive` has no v7.4 equivalent — it is a new pallet in the mainnet runtime, from Polymesh's `polkadot-sdk` fork. It is a **dual-VM contract execution engine**: it runs two virtual machines, and which one executes a contract depends on how that contract was compiled.
+
+- **PolkaVM** (RISC-V) executes PolkaVM bytecode. Solidity compiled with the `resolc` compiler (instead of `solc`) targets PolkaVM, but does **not** get full EVM compatibility.
+- **revm** (a Rust EVM) executes standard EVM bytecode. Solidity compiled with `solc` deploys and runs in `revm` with **full EVM compatibility**.
+
+So EVM support is not merely an "interface" onto PolkaVM — EVM bytecode runs in a separate VM (`revm`) from PolkaVM contracts. The `AllowEVMBytecode` config flag (below) toggles the `revm` execution path; it is `true` on all Polymesh networks.
+
+Which VM runs a contract is decided by the **uploaded code** (RISC-V/PolkaVM bytecode vs EVM bytecode), not by the submission path. EVM-bytecode (Solidity/`solc`) contracts can therefore be deployed and called via ordinary **Substrate transactions** (`instantiate_with_code` / `call` from e.g. polkadot.js or subxt), not only through the `eth-rpc` proxy — the Ethereum JSON-RPC path is a convenience for standard ETH tooling, not a requirement. See the [Smart Contracts](/development/smart-contracts) conceptual guide for the compiler/tooling detail.
+
+### Address mapping
+
+Polymesh accounts are 32-byte (`AccountId32`), not 20-byte Ethereum addresses, so the runtime uses `AddressMapper = pallet_revive::AccountId32Mapper<Self>`. Every existing Polymesh account already has an implicit, deterministic Ethereum address derived from it. Because deriving a 20-byte address from a 32-byte account is lossy, the pallet stores the original account (`OriginalAccount`) once an account opts in via the `map_account` call, making the mapping reversible. `unmap_account` reverses this.
+
+### Calls
+
+`pallet-revive` exposes: `eth_transact` (submit a raw signed Ethereum transaction), `call`, `instantiate`, `instantiate_with_code`, `eth_instantiate_with_code`, `eth_call`, `eth_substrate_call`, `upload_code`, `remove_code`, `set_code`, `map_account`, `unmap_account`, and `dispatch_as_fallback_account`. These are the standard upstream `pallet-revive` calls — Polymesh has not added or removed any at the pallet level; the customization is entirely in runtime configuration (below).
+
+### Runtime configuration
+
+Values set in `impl pallet_revive::Config for Runtime`:
+
+| Setting            | Value                                                               | Notes                                                                                       |
+| ------------------ | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `ChainId`          | `1_641_820` (Mainnet), `1_641_819` (Testnet), `1_641_818` (Develop) | The EVM chain ID wallets and tooling (MetaMask, ethers.js) need to target the right network |
+| `NativeToEthRatio` | `10^12`                                                             | Bridges Polymesh's 6-decimal POLYX to Ethereum's 18-decimal wei convention                  |
+| `AllowEVMBytecode` | `true`                                                              | Toggles the `revm` EVM-bytecode execution path, separate from native PolkaVM contracts      |
+| `GasScale`         | `100`                                                               | Scales EVM gas to Polymesh's weight-based fee model                                         |
+| `Precompiles`      | `()`                                                                | No custom precompiles configured beyond the pallet's defaults                               |
+| `AddressMapper`    | `AccountId32Mapper`                                                 | See above                                                                                   |
+
+### Errors
+
+`pallet-revive` has no v7.4 equivalent to diff against, so this is its full error surface in v8, grouped by theme:
+
+**Contract/code lookup**
+
+| Error                     | Meaning                                                            |
+| ------------------------- | ------------------------------------------------------------------ |
+| `ContractNotFound`        | No contract at the specified address                               |
+| `CodeNotFound`            | No code at the supplied code hash                                  |
+| `CodeInfoNotFound`        | No code info at the supplied code hash                             |
+| `CodeRejected`            | The contract failed to compile or is missing required entry points |
+| `CodeInUse`               | Code removal denied — still in use by at least one contract        |
+| `DuplicateContract`       | A contract with the same account ID already exists                 |
+| `RefcountOverOrUnderflow` | A code hash's reference count over- or under-flowed                |
+
+**Execution & gas**
+
+| Error                              | Meaning                                                                                                                                        |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `OutOfGas`                         | The contract exhausted its gas limit                                                                                                           |
+| `MaxCallDepthReached`              | Call depth exceeded the schedule's limit                                                                                                       |
+| `ContractTrapped`                  | The contract trapped during execution                                                                                                          |
+| `ExecutionFailed`                  | PolkaVM failed during execution, likely a malformed program                                                                                    |
+| `InvalidInstruction`               | The program contains an invalid instruction                                                                                                    |
+| `InvalidJump`                      | Dynamic jump targeted an invalid destination                                                                                                   |
+| `StackUnderflow` / `StackOverflow` | Popped from an empty stack / pushed onto a full one                                                                                            |
+| `BasicBlockTooLarge`               | A basic block exceeds the allowed size                                                                                                         |
+| `TransferFailed`                   | The requested transfer failed, likely insufficient free balance                                                                                |
+| `ContractReverted`                 | The contract completed but reverted its storage changes (extrinsic calls only — direct/RPC calls return `Ok` and require inspecting the flags) |
+
+**Calls & reentrancy**
+
+| Error                      | Meaning                                                                |
+| -------------------------- | ---------------------------------------------------------------------- |
+| `InvalidCallFlags`         | Invalid flag combination passed to a call/delegate-call                |
+| `TerminatedWhileReentrant` | Termination denied while the contract is already on the call stack     |
+| `TerminatedInConstructor`  | A contract self-destructed in its constructor                          |
+| `InputForwarded`           | Input was already forwarded by a prior call and is no longer available |
+| `ReentranceDenied`         | Called a contract flagged as non-reentrant                             |
+| `ReenteredPallet`          | A contract called back into `pallet-revive` from the runtime           |
+| `PrecompileDelegateDenied` | Delegate-called a precompile that disallows it                         |
+
+**Storage & deposits**
+
+| Error                                     | Meaning                                                                                                  |
+| ----------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `OutOfBounds`                             | A buffer outside sandbox memory was passed to a contract API                                             |
+| `DecodingFailed`                          | Input failed to decode as the expected type                                                              |
+| `ValueTooLarge`                           | An event body or storage item exceeds the size limit                                                     |
+| `StateChangeDenied`                       | A state-modifying API was invoked in read-only mode                                                      |
+| `StorageDepositNotEnoughFunds`            | Insufficient balance to pay the required storage deposit                                                 |
+| `StorageDepositLimitExhausted`            | More storage was created than the deposit limit allows                                                   |
+| `StorageRefundNotEnoughFunds`             | The contract lacks balance to refund a storage deposit (should never happen — an accounting bug if seen) |
+| `StorageRefundLocked`                     | A lock on the contract's storage deposit prevents refunding it                                           |
+| `OutOfTransientStorage`                   | No room left in transient storage                                                                        |
+| `InvalidStorageFlags`                     | Invalid flags passed to a storage syscall                                                                |
+| `CallDataTooLarge` / `ReturnDataTooLarge` | Call data or return data exceeds the size limit                                                          |
+| `TooManyTopics`                           | Too many topics passed to the event-deposit API                                                          |
+
+**Code/blob validation**
+
+| Error                  | Meaning                                                                |
+| ---------------------- | ---------------------------------------------------------------------- |
+| `InvalidSchedule`      | Invalid schedule, e.g. zero weight for a basic operation               |
+| `BlobTooLarge`         | The code blob exceeds the size limit                                   |
+| `StaticMemoryTooLarge` | The contract declares too much memory (read-only + read-write + stack) |
+
+**Delegate dependencies**
+
+| Error                               | Meaning                                                         |
+| ----------------------------------- | --------------------------------------------------------------- |
+| `MaxDelegateDependenciesReached`    | The contract hit its maximum number of delegate dependencies    |
+| `DelegateDependencyNotFound`        | The dependency isn't in the contract's delegate-dependency list |
+| `DelegateDependencyAlreadyExists`   | Already depends on the given delegate dependency                |
+| `CannotAddSelfAsDelegateDependency` | Can't add a contract's own code hash as its delegate dependency |
+
+**Account mapping & syscalls**
+
+| Error                    | Meaning                                                                                 |
+| ------------------------ | --------------------------------------------------------------------------------------- |
+| `AccountUnmapped`        | An `AccountId32` account tried to interact without a mapping — call `map_account` first |
+| `AccountAlreadyMapped`   | Tried to map an account that's already mapped                                           |
+| `InvalidSyscall`         | Called a syscall that doesn't exist at the current API level                            |
+| `InvalidImmutableAccess` | Immutable data can only be set on deploy and read on calls — set once, non-empty        |
+
+**EVM / Ethereum compatibility**
+
+| Error                          | Meaning                                                                                                                 |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| `InvalidGenericTransaction`    | The transaction used to dry-run a contract is invalid                                                                   |
+| `BalanceConversionFailed`      | Failed to convert a `U256` to a `Balance`                                                                               |
+| `EvmConstructorNonEmptyData`   | EVM constructors don't accept separate `data` — input is part of the code blob                                          |
+| `EvmConstructedFromHash`       | EVM contracts can only be instantiated via code upload, not by code hash — there's no on-chain initcode                 |
+| `UnsupportedPrecompileAddress` | The precompile address isn't supported                                                                                  |
+| `EcdsaRecoveryFailed`          | ECDSA public key recovery failed — likely a wrong recovery ID or signature                                              |
+| `TxFeeOverdraw`                | Too much deposit drawn from the shared tx-fee/deposit credit — the `gas` passed in the Ethereum transaction was too low |
+
+### Running EVM JSON-RPC
+
+`pallet-revive` is a Substrate pallet, not a full Ethereum node — it doesn't speak Ethereum's JSON-RPC (`eth_call`, `eth_sendRawTransaction`, `eth_getBalance`, etc.) directly. A separate proxy process, `pallet-revive-eth-rpc` (binary name `eth-rpc`), new in v8, translates standard Ethereum JSON-RPC into calls against the node. Run it alongside your node to point MetaMask, ethers.js, or other standard Ethereum tooling at Polymesh. It is only needed for that Ethereum-tooling path — EVM contracts can also be deployed and called directly via Substrate transactions (see the note under [`pallet-revive`](#pallet-revive-new) above).
+
+## Migration checklist
+
+1. Target `pallet-revive` for all contract work on Polymesh.
+2. To interact with Polymesh contracts using standard Ethereum tooling, run the `eth-rpc` proxy alongside your node and use the correct `ChainId` for your network.
+3. Have users call `map_account` if you need a reversible EVM-address mapping for their Polymesh account (for example, to look up their address in a block explorer).
+4. Handle `pallet-revive`'s error set (above) if you're building a wallet, indexer, or dApp framework against it — most are execution/storage-limit conditions specific to the PolkaVM environment.
+
+`pallet-revive` is a wholesale-new pallet, so it isn't itemized in the [Full Pallet API Reference](./110-pallet-api-reference.mdx) (a name-based diff against v7.4) — this page and its Errors section above are the reference for it.

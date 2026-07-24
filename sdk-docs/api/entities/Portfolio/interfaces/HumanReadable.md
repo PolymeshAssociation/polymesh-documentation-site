@@ -1,0 +1,23 @@
+# Interface: HumanReadable
+
+> Defined in: [src/api/entities/Portfolio/index.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Portfolio/index.ts#L52)
+
+# Interface: HumanReadable
+
+Defined in: [src/api/entities/Portfolio/index.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Portfolio/index.ts#L52)
+
+## Properties
+
+### did
+
+> **did**: `string`
+
+Defined in: [src/api/entities/Portfolio/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Portfolio/index.ts#L53)
+
+***
+
+### id?
+
+> `optional` **id?**: `string`
+
+Defined in: [src/api/entities/Portfolio/index.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Portfolio/index.ts#L54)

@@ -1,0 +1,15 @@
+# Enumeration: TimestampTx
+
+> Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:274
+
+# Enumeration: TimestampTx
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:274
+
+## Enumeration Members
+
+### Set
+
+> **Set**: `"timestamp.set"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:275

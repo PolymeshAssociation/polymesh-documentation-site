@@ -1,0 +1,23 @@
+# Enumeration: SessionTx
+
+> Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:501
+
+# Enumeration: SessionTx
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:501
+
+## Enumeration Members
+
+### PurgeKeys
+
+> **PurgeKeys**: `"session.purgeKeys"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:503
+
+***
+
+### SetKeys
+
+> **SetKeys**: `"session.setKeys"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:502

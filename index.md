@@ -1,0 +1,43 @@
+# Welcome to Polymesh
+
+> Introduction to Polymesh: regulated blockchain for digital assets
+
+# Welcome to Polymesh
+
+Polymesh is a public permissioned blockchain purpose-built for regulated assets and capital markets. It streamlines antiquated processes and opens the door to new financial instruments by solving challenges around governance, identity, compliance, confidentiality, and settlement.
+
+---
+
+## What Makes Polymesh Different?
+
+Built from the ground up for regulated securities, Polymesh addresses the key challenges faced by financial institutions looking to issue, manage, and trade security tokens:
+
+- **On-Chain Identity**: Every participant that participates in identity and asset related transactions must have a verified on-chain identity. Learn more in the [Identity](/identity) section and the [Onboarding process](/getting-started/onboarding).
+- **Native Assets (Fungible & Non-Fungible)**: Assets are first-class citizens on Polymesh, standardized at the protocol level to ensure interoperability throughout the network. Both [fungible](/core/assets/fungible) and [non-fungible](/core/assets/nft) assets are supported natively and benefit from built-in compliance, settlement, and lifecycle management features.
+- **Compliance by Design**: Asset transfers and ownership are enforced by protocol-level rules. See [Compliance](/compliance) for details.
+- **Purpose-Built Settlement**: Polymesh provides a robust framework for compliant, multi-party [Settlement](/settlement).
+- **Native Token**: [POLYX](/polyx) is used for transaction fees, staking, and network operation.
+
+---
+
+## Core Features
+
+- **Asset Management**: Issue and manage [fungible](/core/assets/fungible) and [non-fungible](/core/assets/nft) assets, with support for [confidential assets](/confidential-assets) (pre-release, live on Testnet).
+- **Settlement**: Settle asset transactions on-chain with support for atomic settlement of multiple assets and parties. Polymesh's settlement engine enables compliant, multi-asset, multi-party transfers in a single instruction. See [Settlement](/settlement).
+- **Identity & Access Control**: Every participant has a verified on-chain identity. Use [secondary keys](/identity/advanced/secondary-keys), [multisigs](/identity/advanced/multisig), and [authorizations](/authorizations) for flexible, secure access.
+- **Asset Holdings, Portfolios & Custody**: Hold assets via [Portfolios](/portfolios) or directly on an account — see [Asset Holdings](/asset-holdings) — and manage custody with [Custody Management](/portfolios/custody).
+- **Compliance**: Enforce rules for asset transfers and ownership at the protocol level. See [Compliance](/compliance).
+- **Corporate Actions**: Automate distributions, voting, and more with [Corporate Actions](/corporate-actions).
+
+---
+
+## Community and Support
+
+- [Discord Community](https://discord.gg/9TdzKbKgSU)
+- [Bug Bounty Program](/development/bug-bounty)
+- [Glossary](/glossary) of key terms
+- [GitHub](https://github.com/PolymeshAssociation)
+
+---
+
+## Getting Started

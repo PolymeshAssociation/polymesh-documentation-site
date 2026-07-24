@@ -1,0 +1,23 @@
+# Enumeration: NewStatType
+
+> Defined in: [src/api/entities/types.ts:308](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L308)
+
+# Enumeration: NewStatType
+
+Defined in: [src/api/entities/types.ts:308](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L308)
+
+## Enumeration Members
+
+### Balance
+
+> **Balance**: `"Balance"`
+
+Defined in: [src/api/entities/types.ts:310](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L310)
+
+***
+
+### Count
+
+> **Count**: `"Count"`
+
+Defined in: [src/api/entities/types.ts:309](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L309)

@@ -1,0 +1,42 @@
+# Interface: SectionPermissions\<T\>
+
+> Defined in: [src/api/entities/types.ts:658](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L658)
+
+# Interface: SectionPermissions\
+
+Defined in: [src/api/entities/types.ts:658](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L658)
+
+Signer/agent permissions for a specific type
+
+## Extended by
+
+- [`TransactionPermissions`](TransactionPermissions.mdx)
+
+## Type Parameters
+
+Type Parameter
+Description
+
+`T`
+
+type of Permissions (Asset, Transaction, Portfolio, etc)
+
+## Properties
+
+### type
+
+> **type**: [`PermissionType`](../enumerations/PermissionType.mdx)
+
+Defined in: [src/api/entities/types.ts:666](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L666)
+
+Whether the permissions are inclusive or exclusive
+
+***
+
+### values
+
+> **values**: `T`[]
+
+Defined in: [src/api/entities/types.ts:662](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L662)
+
+Values to be included/excluded

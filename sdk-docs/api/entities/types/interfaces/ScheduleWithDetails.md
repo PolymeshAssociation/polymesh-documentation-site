@@ -1,0 +1,23 @@
+# Interface: ScheduleWithDetails
+
+> Defined in: [src/api/entities/types.ts:621](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L621)
+
+# Interface: ScheduleWithDetails
+
+Defined in: [src/api/entities/types.ts:621](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L621)
+
+## Properties
+
+### details
+
+> **details**: [`ScheduleDetails`](../../CheckpointSchedule/types/interfaces/ScheduleDetails.mdx)
+
+Defined in: [src/api/entities/types.ts:623](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L623)
+
+***
+
+### schedule
+
+> **schedule**: [`CheckpointSchedule`](../../CheckpointSchedule/classes/CheckpointSchedule.mdx)
+
+Defined in: [src/api/entities/types.ts:622](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L622)

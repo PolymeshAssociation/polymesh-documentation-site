@@ -1,0 +1,25 @@
+# Interface: TransferTickerOwnershipParams
+
+> Defined in: [src/api/procedures/types.ts:1720](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1720)
+
+# Interface: TransferTickerOwnershipParams
+
+Defined in: [src/api/procedures/types.ts:1720](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1720)
+
+## Properties
+
+### expiry?
+
+> `optional` **expiry?**: `Date`
+
+Defined in: [src/api/procedures/types.ts:1725](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1725)
+
+date at which the authorization request for transfer expires (optional)
+
+***
+
+### target
+
+> **target**: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
+
+Defined in: [src/api/procedures/types.ts:1721](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1721)

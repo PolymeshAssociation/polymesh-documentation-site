@@ -1,0 +1,39 @@
+# Enumeration: AccountKeyType
+
+> Defined in: [src/api/entities/Account/types.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L27)
+
+# Enumeration: AccountKeyType
+
+Defined in: [src/api/entities/Account/types.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L27)
+
+Distinguishes MultiSig and Smart Contract accounts
+
+## Enumeration Members
+
+### MultiSig
+
+> **MultiSig**: `"MultiSig"`
+
+Defined in: [src/api/entities/Account/types.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L35)
+
+Account is a MultiSig. (i.e. multiple signatures are required to authorize transactions)
+
+***
+
+### Normal
+
+> **Normal**: `""`
+
+Defined in: [src/api/entities/Account/types.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L31)
+
+Account is a standard type (e.g. corresponds to the public key of a sr25519 pair)
+
+***
+
+### SmartContract
+
+> **SmartContract**: `"SmartContract"`
+
+Defined in: [src/api/entities/Account/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L39)
+
+Account represents a smart contract

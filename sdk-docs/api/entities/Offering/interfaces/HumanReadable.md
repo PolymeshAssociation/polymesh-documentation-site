@@ -1,0 +1,23 @@
+# Interface: HumanReadable
+
+> Defined in: [src/api/entities/Offering/index.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L57)
+
+# Interface: HumanReadable
+
+Defined in: [src/api/entities/Offering/index.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L57)
+
+## Properties
+
+### assetId
+
+> **assetId**: `string`
+
+Defined in: [src/api/entities/Offering/index.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L59)
+
+***
+
+### id
+
+> **id**: `string`
+
+Defined in: [src/api/entities/Offering/index.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L58)

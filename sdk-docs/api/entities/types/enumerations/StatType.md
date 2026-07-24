@@ -1,0 +1,49 @@
+# Enumeration: StatType
+
+> Defined in: [src/api/entities/types.ts:295](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L295)
+
+# Enumeration: StatType
+
+Defined in: [src/api/entities/types.ts:295](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L295)
+
+Represents the StatType from the `statistics` module.
+
+## Note
+
+the chain doesn't use "Scoped" types, but they are needed here to discriminate the input instead of having an optional input
+
+## Enumeration Members
+
+### Balance
+
+> **Balance**: `"Balance"`
+
+Defined in: [src/api/entities/types.ts:297](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L297)
+
+***
+
+### Count
+
+> **Count**: `"Count"`
+
+Defined in: [src/api/entities/types.ts:296](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L296)
+
+***
+
+### ScopedBalance
+
+> **ScopedBalance**: `"ScopedBalance"`
+
+Defined in: [src/api/entities/types.ts:305](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L305)
+
+ScopedPercentage is an SDK only type, on chain it is `Balance` with a claimType option present
+
+***
+
+### ScopedCount
+
+> **ScopedCount**: `"ScopedCount"`
+
+Defined in: [src/api/entities/types.ts:301](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L301)
+
+ScopedCount is an SDK only type, on chain it is `Count` with a claimType option present

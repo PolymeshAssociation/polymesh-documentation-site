@@ -1,0 +1,19 @@
+# Type Alias: Modify\<T, R\>
+
+> > **Modify**\<`T`, `R`\> = `Omit`\<`T`, keyof `R`\> & `R`
+
+# Type Alias: Modify\
+
+> **Modify**\<`T`, `R`\> = `Omit`\<`T`, keyof `R`\> & `R`
+
+Defined in: [src/types/utils/index.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/types/utils/index.ts#L76)
+
+Override T with the properties of R
+
+## Type Parameters
+
+Type Parameter
+
+`T`
+
+`R`

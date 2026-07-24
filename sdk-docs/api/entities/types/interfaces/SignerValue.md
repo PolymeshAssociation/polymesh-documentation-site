@@ -1,0 +1,27 @@
+# Interface: SignerValue
+
+> Defined in: [src/api/entities/types.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L119)
+
+# Interface: SignerValue
+
+Defined in: [src/api/entities/types.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L119)
+
+## Properties
+
+### type
+
+> **type**: [`SignerType`](../enumerations/SignerType.mdx)
+
+Defined in: [src/api/entities/types.ts:123](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L123)
+
+whether the signer is an Account or Identity
+
+***
+
+### value
+
+> **value**: `string`
+
+Defined in: [src/api/entities/types.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L127)
+
+address or DID (depending on whether the signer is an Account or Identity)

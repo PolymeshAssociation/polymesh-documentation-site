@@ -1,0 +1,23 @@
+# Interface: IdentityRole
+
+> Defined in: [src/api/procedures/types.ts:317](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L317)
+
+# Interface: IdentityRole
+
+Defined in: [src/api/procedures/types.ts:317](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L317)
+
+## Properties
+
+### did
+
+> **did**: `string`
+
+Defined in: [src/api/procedures/types.ts:319](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L319)
+
+***
+
+### type
+
+> **type**: [`Identity`](../enumerations/RoleType.mdx#identity)
+
+Defined in: [src/api/procedures/types.ts:318](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L318)

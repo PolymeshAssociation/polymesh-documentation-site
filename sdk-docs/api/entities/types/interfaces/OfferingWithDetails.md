@@ -1,0 +1,23 @@
+# Interface: OfferingWithDetails
+
+> Defined in: [src/api/entities/types.ts:806](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L806)
+
+# Interface: OfferingWithDetails
+
+Defined in: [src/api/entities/types.ts:806](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L806)
+
+## Properties
+
+### details
+
+> **details**: [`OfferingDetails`](../../Offering/types/interfaces/OfferingDetails.mdx)
+
+Defined in: [src/api/entities/types.ts:808](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L808)
+
+***
+
+### offering
+
+> **offering**: [`Offering`](../../Offering/classes/Offering.mdx)
+
+Defined in: [src/api/entities/types.ts:807](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L807)

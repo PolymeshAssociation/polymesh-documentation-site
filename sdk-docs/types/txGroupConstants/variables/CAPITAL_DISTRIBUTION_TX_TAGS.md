@@ -1,0 +1,18 @@
+# Variable: CAPITAL\_DISTRIBUTION\_TX\_TAGS
+
+> > `const` **CAPITAL\_DISTRIBUTION\_TX\_TAGS**: \[[`Distribute`](../../enumerations/CapitalDistributionTx.mdx#distribute), [`PushBenefit`](../../enumerations/CapitalDistributionTx.mdx#pushbenefit), [`Reclaim`](../../enumerations/CapitalDistributionTx.mdx#reclaim), [`RemoveDistribution`](../../enumerations/CapitalDistributionTx.mdx#removedistribution)\]
+
+# Variable: CAPITAL\_DISTRIBUTION\_TX\_TAGS
+
+> `const` **CAPITAL\_DISTRIBUTION\_TX\_TAGS**: \[[`Distribute`](../../enumerations/CapitalDistributionTx.mdx#distribute), [`PushBenefit`](../../enumerations/CapitalDistributionTx.mdx#pushbenefit), [`Reclaim`](../../enumerations/CapitalDistributionTx.mdx#reclaim), [`RemoveDistribution`](../../enumerations/CapitalDistributionTx.mdx#removedistribution)\]
+
+Defined in: [src/types/txGroupConstants.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/types/txGroupConstants.ts#L127)
+
+Transaction tags for Capital Distribution operations
+Contains operations for managing capital distributions.
+
+Values:
+- TxTags.capitalDistribution.Distribute
+- TxTags.capitalDistribution.PushBenefit
+- TxTags.capitalDistribution.Reclaim
+- TxTags.capitalDistribution.RemoveDistribution

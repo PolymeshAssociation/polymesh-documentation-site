@@ -1,0 +1,124 @@
+# Authorizations
+
+> A secure request-approval framework for managing permissions and delegations between identities and keys
+
+## Overview
+
+Authorizations in Polymesh provide a secure framework for managing permissions and access between identities and keys. They enable controlled delegation of permissions while maintaining security through explicit consent from all parties involved.
+
+## How It Works
+
+The authorization process follows a simple request-approval flow:
+
+1. An identity (the authorizer) creates an authorization request for a specific action
+2. The target identity or key (the authorized) receives the pending authorization
+3. The authorized party can view, accept, or reject the authorization
+4. Upon acceptance, the authorized action is executed with proper permissions
+
+:::note
+Authorization requests can optionally include an expiry time. If specified and not accepted within that timeframe, they become invalid and must be reissued.
+:::
+
+## Common Use Cases
+
+The authorizations framework on Polymesh facilitates various identity management and permission scenarios including:
+
+- **Identity Key Management**: Adding secondary keys or rotating primary keys
+- **Asset Control**: Transferring ownership of assets or tickers between identities
+- **Custody Management**: Granting portfolio custody/control rights to other identities
+- **Agent Permissions**: Authorizing entities to act as agents for specific assets
+- **Fee Management**: Setting up subsidized account relationships
+- **MultiSig Operations**: Adding signers to multisig arrangements
+
+## Authorization Types
+
+Polymesh supports several types of authorizations, each serving different permission management needs:
+
+### Identity Management
+
+- **Join Identity**: Authorize a key to become a [secondary key](/identity/advanced/secondary-keys) with specified permissions
+- **Rotate Primary Key**: Allow changing of an identity's primary key
+- **Rotate Primary to Secondary**: Convert the current primary key into a secondary key during rotation
+
+### Asset Control
+
+- **Transfer Asset**: Authorize transfer of asset ownership between identities
+- **Transfer Ticker**: Allow transfer of ticker ownership or reservation rights
+- **Become Agent**: Grant permission to act as an [agent](/asset-agents) for specific asset operations while defining specific actions the agent can perform
+
+### Operational Control
+
+- **Portfolio Custody**: Enable third part [portfolio custody](/portfolios/custody) management or control of specific portfolios while maintaining beneficial ownership under the original onchain identity
+- **Add MultiSig Signer**: Authorize addition of new signers to a [multisig](/identity/advanced/multisig) arrangement.
+
+## Managing Authorizations
+
+### Creating Requests
+
+Authorization requests can be created using `identity::add_authorization`. Each request must specify:
+
+- The target identity or key
+- The type of authorization
+- Any required authorization data (e.g., permissions for secondary keys)
+- Optional expiry time
+
+:::warning Authorization Security Considerations
+The `add_authorization` function can be called by **secondary keys** with appropriate permissions, not just primary keys. This means a secondary key with permission to call `add_authorization` can create sensitive authorization requests including:
+
+- **Primary key rotation requests** - Potentially allowing identity recovery if the primary key is lost
+- **Asset ownership transfers** - Initiating transfer of asset control
+- **Portfolio custody changes** - Requesting changes to portfolio management rights
+
+**Security Recommendation**: Only grant `add_authorization` permissions to highly trusted secondary keys. While targets must still accept these authorizations, the ability to initiate such requests should be carefully controlled as it can serve as a powerful backup mechanism for identity management.
+
+`add_authorization` is one instance of a broader principle: extrinsic permissions delegate the full authority of the calls they allow, so permission to call any permission-, key-, or authorization-management extrinsic effectively delegates that management authority. See [Extrinsic Permissions Delegate the Authority of the Calls They Allow](/identity/advanced/secondary-keys#extrinsic-permissions-delegate-the-authority-of-the-calls-they-allow).
+:::
+
+In some special cases, a dedicated method may be provided to create an authorization request. For example, `multisig::add_multisig_signers_via_admin` allows a permissioned admin identity to act on behalf of the multisig to add a new signer.
+
+Some operations also support off-chain authorization signatures as an alternative to the request-approval flow. This includes adding [secondary keys](/identity/advanced/secondary-keys/#2-off-chain-authorization). These methods typically require the target key to sign specific authorization data off-chain, with the payload data wrapped in `<Bytes>` and `</Bytes>` tags before signing, enabling operations to complete in a single transaction.
+
+Each new authorization request is assigned a unique authorization ID which is used to query details of the authorization request and accept or reject it.
+
+### Processing Requests
+
+Targets can manage authorization requests through:
+
+- **Accepting**: Approve and execute the authorized action through an authorization-specific method by providing the authorization ID
+- **Rejecting**: Cancel pending authorization requests (can be done by either the authorizer or target) by calling `identity::remove_authorization`
+- **Review Pending Incoming Requests**: View pending authorizations targeting the identity or key using `identity::Authorizations`
+- **Review Pending Issued Requests**: Query past authorizations using `identity::AuthorizationsGiven`
+
+:::warning
+Authorization management is critical for identity security. Always verify authorization types and permissions before acceptance.
+:::
+
+### Fee Management
+
+For some authorization types, the accepting identity may not be able to hold POLYX and hence cannot pay the transaction fee to accept the authorization request. In these cases, the primary key of the identity that initiated the authorization request (the authorizer) pays the transaction fee when the authorization is accepted by the target.
+
+The following acceptance methods have their transaction fees paid by the authorizer's primary key:
+
+- `identity::join_identity_as_key`
+- `identity::rotate_primary_key_to_secondary`
+- `identity::accept_primary_key`
+- `multisig::accept_multisig_signer`
+
+For all other authorization acceptance methods, the transaction fee is paid by the accepting party's key.
+
+:::note
+Subsidy setup no longer goes through the authorization system: `relayer::approve_subsidy` and `relayer::accept_subsidy` manage the relationship directly, without an authorization ID. See [Subsidized Accounts](/accounts/subsidized).
+:::
+
+When removing/rejecting an authorization request, the caller can optionally specify that the primary key of the requestor's identity pays the transaction fee by setting the `auth_issuer_pays` parameter to `true`.
+
+### Monitoring Authorizations
+
+Identities can monitor their authorizations through several methods:
+
+- **Pending Incoming Requests**: View pending authorizations targeting the identity or key using `identity::Authorizations`
+- **Pending Issued Requests**: Query past authorizations using `identity::AuthorizationsGiven`
+
+:::info
+Authorization requests that have been consumed, rejected, expired, or revoked cannot be reused. A new authorization request must be created if needed.
+:::

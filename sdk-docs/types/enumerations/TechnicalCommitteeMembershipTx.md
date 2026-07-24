@@ -1,0 +1,63 @@
+# Enumeration: TechnicalCommitteeMembershipTx
+
+> Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:371
+
+# Enumeration: TechnicalCommitteeMembershipTx
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:371
+
+## Enumeration Members
+
+### AbdicateMembership
+
+> **AbdicateMembership**: `"technicalCommitteeMembership.abdicateMembership"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:378
+
+***
+
+### AddMember
+
+> **AddMember**: `"technicalCommitteeMembership.addMember"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:374
+
+***
+
+### DisableMember
+
+> **DisableMember**: `"technicalCommitteeMembership.disableMember"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:373
+
+***
+
+### RemoveMember
+
+> **RemoveMember**: `"technicalCommitteeMembership.removeMember"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:375
+
+***
+
+### ResetMembers
+
+> **ResetMembers**: `"technicalCommitteeMembership.resetMembers"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:377
+
+***
+
+### SetActiveMembersLimit
+
+> **SetActiveMembersLimit**: `"technicalCommitteeMembership.setActiveMembersLimit"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:372
+
+***
+
+### SwapMember
+
+> **SwapMember**: `"technicalCommitteeMembership.swapMember"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:376

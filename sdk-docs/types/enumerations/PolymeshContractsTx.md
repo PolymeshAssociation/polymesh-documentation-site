@@ -1,0 +1,95 @@
+# Enumeration: PolymeshContractsTx
+
+> Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:781
+
+# Enumeration: PolymeshContractsTx
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:781
+
+## Enumeration Members
+
+### Call
+
+> **Call**: `"polymeshContracts.call"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:782
+
+***
+
+### Instantiate
+
+> **Instantiate**: `"polymeshContracts.instantiate"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:784
+
+***
+
+### InstantiateWithCode
+
+> **InstantiateWithCode**: `"polymeshContracts.instantiateWithCode"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:783
+
+***
+
+### InstantiateWithCodeAsPrimaryKey
+
+> **InstantiateWithCodeAsPrimaryKey**: `"polymeshContracts.instantiateWithCodeAsPrimaryKey"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:790
+
+***
+
+### InstantiateWithCodePerms
+
+> **InstantiateWithCodePerms**: `"polymeshContracts.instantiateWithCodePerms"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:787
+
+***
+
+### InstantiateWithHashAsPrimaryKey
+
+> **InstantiateWithHashAsPrimaryKey**: `"polymeshContracts.instantiateWithHashAsPrimaryKey"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:791
+
+***
+
+### InstantiateWithHashPerms
+
+> **InstantiateWithHashPerms**: `"polymeshContracts.instantiateWithHashPerms"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:788
+
+***
+
+### RemoveCode
+
+> **RemoveCode**: `"polymeshContracts.removeCode"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:786
+
+***
+
+### UpdateCallRuntimeWhitelist
+
+> **UpdateCallRuntimeWhitelist**: `"polymeshContracts.updateCallRuntimeWhitelist"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:789
+
+***
+
+### UpgradeApi
+
+> **UpgradeApi**: `"polymeshContracts.upgradeApi"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:792
+
+***
+
+### UploadCode
+
+> **UploadCode**: `"polymeshContracts.uploadCode"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:785

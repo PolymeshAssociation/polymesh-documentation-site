@@ -1,0 +1,119 @@
+# Enumeration: SystemTx
+
+> Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:253
+
+# Enumeration: SystemTx
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:253
+
+## Enumeration Members
+
+### ApplyAuthorizedUpgrade
+
+> **ApplyAuthorizedUpgrade**: `"system.applyAuthorizedUpgrade"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:267
+
+***
+
+### AuthorizeUpgrade
+
+> **AuthorizeUpgrade**: `"system.authorizeUpgrade"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:265
+
+***
+
+### AuthorizeUpgradeWithoutChecks
+
+> **AuthorizeUpgradeWithoutChecks**: `"system.authorizeUpgradeWithoutChecks"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:266
+
+***
+
+### FillBlock
+
+> **FillBlock**: `"system.fillBlock"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:254
+
+***
+
+### KillPrefix
+
+> **KillPrefix**: `"system.killPrefix"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:262
+
+***
+
+### KillStorage
+
+> **KillStorage**: `"system.killStorage"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:261
+
+***
+
+### PlaceholderFillBlock
+
+> **PlaceholderFillBlock**: `"system.placeholderFillBlock"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:264
+
+***
+
+### Remark
+
+> **Remark**: `"system.remark"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:255
+
+***
+
+### RemarkWithEvent
+
+> **RemarkWithEvent**: `"system.remarkWithEvent"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:263
+
+***
+
+### SetChangesTrieConfig
+
+> **SetChangesTrieConfig**: `"system.setChangesTrieConfig"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:259
+
+***
+
+### SetCode
+
+> **SetCode**: `"system.setCode"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:257
+
+***
+
+### SetCodeWithoutChecks
+
+> **SetCodeWithoutChecks**: `"system.setCodeWithoutChecks"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:258
+
+***
+
+### SetHeapPages
+
+> **SetHeapPages**: `"system.setHeapPages"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:256
+
+***
+
+### SetStorage
+
+> **SetStorage**: `"system.setStorage"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:260

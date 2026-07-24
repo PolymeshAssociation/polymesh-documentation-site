@@ -1,0 +1,14 @@
+# Entity: Offering
+
+> - [Offering](classes/Offering.mdx)
+
+# Entity: Offering
+
+## Classes
+
+- [Offering](classes/Offering.mdx)
+
+## Interfaces
+
+- [HumanReadable](interfaces/HumanReadable.mdx)
+- [UniqueIdentifiers](interfaces/UniqueIdentifiers.mdx)

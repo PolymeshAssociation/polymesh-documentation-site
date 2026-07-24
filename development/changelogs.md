@@ -1,0 +1,15 @@
+# Chain Changelogs
+
+> Runtime-level changelogs for Polymesh chain releases, covering breaking changes, new features, and migration guidance for node operators and integrators.
+
+# Chain Changelogs
+
+These changelogs document runtime-level changes between Polymesh chain releases: new and modified extrinsics, events, errors, and storage, plus the integration impact and migration guidance for each. They are aimed at anyone building or operating against the chain API directly (node operators, exchanges, custodians, indexers) rather than only through the [Polymesh SDK](/development/tooling/sdk).
+
+Each release covered here has its own section with a topic breakdown, since the audiences that care about a given change (an exchange parsing balance events, a validator operator, a smart contract developer) usually only need one or two of the pages.
+
+For SDK-level changes, see the [Polymesh SDK docs](/sdk-docs/) (each SDK version has its own Changelogs section) — this section covers the chain runtime itself, which the SDK builds on top of.
+
+## Releases
+
+- **[v7.4 → v8.0](./v7.4-to-v8.0/)** — major release: standard-library-aligned Balances pallet, staking/validator pallet split, accounts holding native asset balances directly, `pallet-revive` smart contracts, DID-only onboarding, and a new (Testnet-only) Confidential Assets pallet.

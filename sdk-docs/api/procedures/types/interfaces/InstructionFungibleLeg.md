@@ -1,0 +1,39 @@
+# Interface: InstructionFungibleLeg
+
+> Defined in: [src/api/procedures/types.ts:1061](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1061)
+
+# Interface: InstructionFungibleLeg
+
+Defined in: [src/api/procedures/types.ts:1061](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1061)
+
+## Properties
+
+### amount
+
+> **amount**: `BigNumber`
+
+Defined in: [src/api/procedures/types.ts:1062](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1062)
+
+***
+
+### asset
+
+> **asset**: `string` \| [`FungibleAsset`](../../../entities/Asset/Fungible/classes/FungibleAsset.mdx)
+
+Defined in: [src/api/procedures/types.ts:1065](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1065)
+
+***
+
+### from
+
+> **from**: [`AssetHolderLike`](../../../entities/types/type-aliases/AssetHolderLike.mdx)
+
+Defined in: [src/api/procedures/types.ts:1063](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1063)
+
+***
+
+### to
+
+> **to**: [`AssetHolderLike`](../../../entities/types/type-aliases/AssetHolderLike.mdx)
+
+Defined in: [src/api/procedures/types.ts:1064](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1064)

@@ -1,0 +1,128 @@
+# Settlement & Instructions Changelog - v7.4 to v8.0
+
+> Breaking changes to the Settlement pallet in Polymesh chain v8 - instruction legs, affirmations, and receipts moving from portfolios to the AssetHolder model.
+
+This page covers changes to the `Settlement` pallet — instructions, legs, affirmations, and receipts. It is part of the [v7.4 → v8.0 changelog](./010-overview.mdx). For the underlying `AssetHolder` model and `Asset`/`Nft`/`Portfolio` pallet changes, see [Native Asset Holdings](./040-native-asset-holdings.mdx).
+
+**Audience:** anyone building or operating settlement/instruction flows directly against the chain.
+
+---
+
+## Overview
+
+An instruction `Leg` in v7.4 could only move assets between portfolios (`sender`/`receiver: PortfolioId`). In v8, `Leg::Fungible` and `Leg::NonFungible` use `AssetHolder` for `sender`/`receiver`, so a leg can move assets directly to or from an account. Every call that lets a party affirm, reject, or withdraw against a set of portfolios is updated to work against a set of `AssetHolder`s instead.
+
+## Breaking changes
+
+### 1. `withdraw_affirmation` and its variants removed
+
+`withdraw_affirmation`, `withdraw_affirmation_with_count`, and `withdraw_affirmation_as_mediator` are removed with no replacement call. Use `reject_instruction` (or its `_with_count`/`_as_mediator` variants) instead.
+
+The `AffirmationWithdrawn` event still exists in the `Event` enum for type-compatibility reasons but is no longer emitted by anything in v8.
+
+### 2. `portfolios` / `portfolio` parameters renamed to `holder_set` / `asset_holder`
+
+| Call                            | v7.4 parameter                                                    | v8.0 parameter                                                      |
+| ------------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `affirm_instruction`            | `portfolios: BoundedBTreeSet<PortfolioId, MaxNumberOfPortfolios>` | `holder_set: BoundedBTreeSet<AssetHolder, MaxNumberOfAssetHolders>` |
+| `affirm_instruction_with_count` | same                                                              | same                                                                |
+| `add_and_affirm_instruction`    | same                                                              | same                                                                |
+| `add_and_affirm_with_mediators` | same                                                              | same                                                                |
+| `reject_instruction`            | `portfolio: PortfolioId`                                          | `asset_holder: AssetHolder`                                         |
+| `reject_instruction_with_count` | same                                                              | same                                                                |
+| `execute_manual_instruction`    | `portfolio: Option<PortfolioId>`                                  | `asset_holder: Option<AssetHolder>`                                 |
+
+`add_instruction` and `add_and_affirm_instruction` themselves are unchanged apart from this — legs already carry their own sender/receiver, so only the affirming party's holder set moves.
+
+The `MaxNumberOfPortfolios` runtime constant is replaced by `MaxNumberOfAssetHolders`. Both the `SettlementApi::get_affirmation_count` Runtime API and the `settlement_getAffirmationCount` JSON-RPC method go through the same rename/retype (`portfolios: Vec<PortfolioId>` → `holder_set: Vec<AssetHolder>`) — see [Runtime APIs & RPC](./120-runtime-apis-and-rpc.mdx#settlementapi--version-bump-get_affirmation_count-retyped-new-get_receiver_affirmation_requirement-method).
+
+### 3. `Leg` sender/receiver: `PortfolioId` → `AssetHolder`
+
+```
+// v7.4
+Leg::Fungible { sender: PortfolioId, receiver: PortfolioId, asset_id, amount }
+Leg::NonFungible { sender: PortfolioId, receiver: PortfolioId, nfts }
+
+// v8.0
+Leg::Fungible { sender: AssetHolder, receiver: AssetHolder, asset_id, amount }
+Leg::NonFungible { sender: AssetHolder, receiver: AssetHolder, nfts }
+```
+
+`Leg::OffChain` is unchanged.
+
+### 4. `ReceiptDetails` gains a required expiry
+
+```
+// v7.4
+ReceiptDetails<AccountId, OffChainSignature> { uid, instruction_id, leg_id, signer, signature, metadata }
+
+// v8.0
+ReceiptDetails<AccountId, OffChainSignature, Moment> { uid, instruction_id, leg_id, signer, signature, expires_at: Moment, metadata }
+```
+
+Off-chain affirmation receipts must carry an expiry on v8. `affirm_with_receipts` and `affirm_with_receipts_with_count` take the updated `ReceiptDetails` type.
+
+### 5. Events retyped from `PortfolioId` to `AssetHolder`
+
+`InstructionAffirmed`, `AffirmationWithdrawn` (see #1), and `InstructionAutomaticallyAffirmed` all change their second field from `PortfolioId` to `AssetHolder`. The same swap happens in storage: `AffirmsReceived` re-keys from `(InstructionId, PortfolioId)` to `(InstructionId, AssetHolder)`, and `UserAffirmations` from `(PortfolioId, InstructionId)` to `(AssetHolder, InstructionId)`.
+
+### 6. New errors
+
+`ReceiptExpired`, `SenderSameAsReceiver`, `AllowancesNotSupportedForNFTs`, `InstructionAlreadyLocked`, `InstructionNotLocked`, `RelockCooldownNotExpired`, `MaxRelockCountExceeded`, `MissingInstructionMediators`.
+
+### 7. `create_venue` and `update_venue_signers`: `signers` type change
+
+```
+// v7.4
+create_venue(details, signers: Vec<AccountId>, typ)
+update_venue_signers(id, signers: Vec<AccountId>, add_signers: bool)
+
+// v8.0
+create_venue(details, signers: BTreeSet<AccountId>, typ)
+update_venue_signers(id, signers: BTreeSet<AccountId>, add_signers: bool)
+```
+
+`BTreeSet` deduplicates and sorts; if you passed unsorted or duplicate signers before, behavior changes. The `VenueSignersUpdated` event's `signers` field changes from `Vec<AccountId>` to `BTreeSet<AccountId>` to match.
+
+### 8. Removed events: `SchedulingFailed`, `InstructionRescheduled`
+
+Both are removed with no replacement event. They were tied to the old ad hoc rescheduling behavior for failed instruction execution, which v8 replaces with the explicit lock/unlock/relock model (`unlock_instruction`, described under [New features](#new-features) below) rather than automatic rescheduling.
+
+## New features
+
+### `set_mandatory_receiver_affirmation`
+
+```
+set_mandatory_receiver_affirmation(requirement: AffirmationRequirement)
+```
+
+By default on v8, receiver affirmation is automatic. An identity can call this to require explicit affirmation from receivers instead, recorded in the new `MandatoryReceiverAffirmation` storage and announced via the new `MandatoryReceiverAffirmationSet` event.
+
+Check whether a given receiver/asset pair currently requires explicit affirmation with the new `SettlementApi::get_receiver_affirmation_requirement(receiver, asset_id)` Runtime API before submitting an instruction — see [Runtime APIs & RPC](./120-runtime-apis-and-rpc.mdx#settlementapi--version-bump-get_affirmation_count-retyped-new-get_receiver_affirmation_requirement-method).
+
+### `unlock_instruction`
+
+Pairs with `lock_instruction`, which already existed in v7.4. New storage `UnlockedTimestamp` and `InstructionRelockCount` support a lock/unlock/relock cycle: an instruction can be relocked up to `MaxRelockCount` times (3 on Mainnet/Testnet), with a `RelockCooldown` of 4 hours between relocks. New event `InstructionUnlocked`.
+
+### `transfer_funds`
+
+```
+transfer_funds(from: Option<AssetHolder>, to: AssetHolder, fund: Fund)
+```
+
+Moves a `Fund` (fungible amount or a set of NFTs) directly between two `AssetHolder`s — account or portfolio, on either side — without creating a settlement instruction. Emits `FundsTransferred(IdentityId, AssetHolder, AssetHolder, Fund)`. This is the `Settlement` pallet's equivalent of `Asset::transfer_asset` and `Nft::transfer_nft`, but generalized to cover portfolio-to-portfolio and mixed moves as well.
+
+If the caller isn't the owner of an account-based `from`, `transfer_funds` draws down the allowance set by `Asset::approve` instead of requiring the owner's signature (fails with `AllowancesNotSupportedForNFTs` for NFT funds, which have no allowance concept). This is what lets `approve` + `transfer_funds` emulate ERC-20-style `approve`/`transferFrom` — see [Native Asset Holdings](./040-native-asset-holdings.mdx) for the `approve` side.
+
+## Migration checklist
+
+1. Stop calling `withdraw_affirmation` / `withdraw_affirmation_with_count` / `withdraw_affirmation_as_mediator` — use the corresponding `reject_instruction*` call instead.
+2. Rename `portfolios`/`portfolio` arguments to `holder_set`/`asset_holder` and change their type from `PortfolioId`/`BoundedBTreeSet<PortfolioId, _>` to `AssetHolder`/`BoundedBTreeSet<AssetHolder, _>` wherever you build these calls.
+3. Update any code constructing or decoding `Leg::Fungible`/`Leg::NonFungible` for `AssetHolder` sender/receiver.
+4. Add an `expires_at` value when building off-chain affirmation receipts.
+5. Update `InstructionAffirmed`/`InstructionAutomaticallyAffirmed` event decoding for the `AssetHolder` field; stop listening for `AffirmationWithdrawn`.
+6. If you require explicit receiver affirmation rather than the new default automatic behavior, call `set_mandatory_receiver_affirmation`.
+7. Update `create_venue` and `update_venue_signers` calls (and `VenueSignersUpdated` event decoding) that build/read `signers` as a `Vec` to use a `BTreeSet` instead.
+8. Stop listening for `SchedulingFailed`/`InstructionRescheduled` — neither is emitted on v8.
+
+For the complete literal list of every added/removed/modified call, event, error, storage item, and constant on `Settlement`, see the [Full Pallet API Reference](./110-pallet-api-reference.mdx). For the new `SettlementApi::get_receiver_affirmation_requirement` Runtime API, see [Runtime APIs & RPC](./120-runtime-apis-and-rpc.mdx).

@@ -1,0 +1,79 @@
+# Enumeration: ComplianceManagerTx
+
+> Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:581
+
+# Enumeration: ComplianceManagerTx
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:581
+
+## Enumeration Members
+
+### AddComplianceRequirement
+
+> **AddComplianceRequirement**: `"complianceManager.addComplianceRequirement"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:582
+
+***
+
+### AddDefaultTrustedClaimIssuer
+
+> **AddDefaultTrustedClaimIssuer**: `"complianceManager.addDefaultTrustedClaimIssuer"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:588
+
+***
+
+### ChangeComplianceRequirement
+
+> **ChangeComplianceRequirement**: `"complianceManager.changeComplianceRequirement"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:590
+
+***
+
+### PauseAssetCompliance
+
+> **PauseAssetCompliance**: `"complianceManager.pauseAssetCompliance"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:586
+
+***
+
+### RemoveComplianceRequirement
+
+> **RemoveComplianceRequirement**: `"complianceManager.removeComplianceRequirement"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:583
+
+***
+
+### RemoveDefaultTrustedClaimIssuer
+
+> **RemoveDefaultTrustedClaimIssuer**: `"complianceManager.removeDefaultTrustedClaimIssuer"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:589
+
+***
+
+### ReplaceAssetCompliance
+
+> **ReplaceAssetCompliance**: `"complianceManager.replaceAssetCompliance"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:584
+
+***
+
+### ResetAssetCompliance
+
+> **ResetAssetCompliance**: `"complianceManager.resetAssetCompliance"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:585
+
+***
+
+### ResumeAssetCompliance
+
+> **ResumeAssetCompliance**: `"complianceManager.resumeAssetCompliance"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:587

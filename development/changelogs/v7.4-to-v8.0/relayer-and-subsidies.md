@@ -1,0 +1,87 @@
+# Relayer & Subsidies Changelog - v7.4 to v8.0
+
+> Breaking changes to the Relayer pallet in Polymesh chain v8 - the new approve/accept/revoke subsidy flow, and relay_tx moving from Utility to Relayer.
+
+This page covers changes to the `Relayer` pallet (subsidies, fee-paying keys) and the `relay_tx` call, which moves from `Utility` to `Relayer`. It is part of the [v7.4 → v8.0 changelog](./010-overview.mdx).
+
+**Audience:** anyone subsidizing accounts' transaction fees, or relaying signed calls on behalf of another account.
+
+---
+
+## Overview
+
+In v7.4, granting a subsidy went through the generic `Identity` authorization system: `set_paying_key` created an `AddRelayerPayingKey` authorization, which the user key then accepted via `accept_paying_key(auth_id)` — the same generic accept/reject/consume mechanism used for key rotation, ownership transfers, and other authorization types.
+
+In v8, subsidies get a dedicated state machine, native to the `Relayer` pallet: `approve_subsidy` writes directly into a new `PendingSubsidies` storage, and the user accepts with `accept_subsidy(paying_key)` — no authorization ID involved.
+
+`relay_tx` also moves from `Utility` to `Relayer` in v8, gaining an `expires_at` field alongside the nonce mechanism it already had.
+
+## Breaking changes
+
+### 1. Subsidy grant/accept flow replaced
+
+| v7.4                                      | v8.0                                     | Notes                                                                                          |
+| ----------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `set_paying_key(user_key, polyx_limit)`   | `approve_subsidy(user_key, polyx_limit)` | Renamed. No longer creates an `Identity` authorization — writes directly to `PendingSubsidies` |
+| `accept_paying_key(auth_id: u64)`         | _(removed)_                              | Replaced by `accept_subsidy` below                                                             |
+| —                                         | `accept_subsidy(paying_key)`             | New. User accepts by naming the paying key directly, no `auth_id`                              |
+| —                                         | `revoke_subsidy(user_key)`               | New. Subsidizer cancels a pending (not yet accepted) subsidy                                   |
+| `remove_paying_key(user_key, paying_key)` | `remove_subsidy(user_key, paying_key)`   | Renamed, signature unchanged. Callable by either party, same as v7.4                           |
+
+`update_polyx_limit`, `increase_polyx_limit`, and `decrease_polyx_limit` are unchanged in name and signature — only their call indices shift, because of the two new calls inserted before them.
+
+### 2. `relay_tx` moves from `Utility` to `Relayer`, and gains an expiry
+
+```
+// v7.4 - Utility::relay_tx
+relay_tx(target: AccountId, signature: OffChainSignature, call: UniqueCall<RuntimeCall>)
+// UniqueCall wraps the call with a nonce the caller must supply, checked against Utility's Nonces storage
+
+// v8.0 - Relayer::relay_tx
+relay_tx(target: AccountId, signature: OffChainSignature, call: Box<RuntimeCall>, expires_at: Moment)
+// The nonce is no longer a caller-supplied argument -- it's tracked server-side in the new
+// Relayer::RelayTxNonces storage (auto-incremented per target) and mixed into the signed
+// message alongside expires_at
+```
+
+`Utility::relay_tx` and its `Nonces` storage are removed entirely, replaced by `Relayer::relay_tx` and the new `RelayTxNonces` storage. Replay protection is still nonce-based underneath, but the nonce is no longer an explicit call argument you supply and check yourself — it's resolved from chain state when building the signed payload, and `expires_at` is a new, separate expiry check on top. Either way, signed relay payloads built for v7.4 will not work on v8 — the call moved pallets and the payload shape changed.
+
+### 3. Events renamed and retyped
+
+| v7.4                                                                  | v8.0                                                                   |
+| --------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `AuthorizedPayingKey(EventDid, AccountId, AccountId, Balance, u64)`   | `ApprovedSubsidy { user_key, paying_key, initial_polyx_limit }`        |
+| `AcceptedPayingKey(EventDid, AccountId, AccountId)`                   | `AcceptedSubsidy { user_key, paying_key, initial_polyx_limit }`        |
+| `RemovedPayingKey(EventDid, AccountId, AccountId)`                    | `RemovedSubsidy { user_key, paying_key, remaining }`                   |
+| `UpdatedPolyxLimit(EventDid, AccountId, AccountId, Balance, Balance)` | `UpdatedPolyxLimit { user_key, paying_key, remaining, old_remaining }` |
+
+All v8 events drop the identity field that every v7.4 event carried, and use named struct fields instead of positional tuples.
+
+### 4. New events
+
+`RemovedPendingSubsidy { user_key, paying_key, initial_polyx_limit }` (fired by `revoke_subsidy`), `SubsidyDebited { user_key, paying_key, amount }` (fired when a subsidized transaction consumes POLYX from the subsidy), `RelayedTx { caller, target, result }` (fired by `relay_tx`).
+
+### 5. Errors changed
+
+Removed: `UserKeyCddMissing`, `PayingKeyCddMissing` (no CDD requirement in the new flow), `NotAuthorizedForPayingKey`, `NotAuthorizedForUserKey`, `BadAuthorizationType`, `IdentityNotFound` (all specific to the old authorization-based flow).
+
+New: `NoPendingSubsidy` (returned by `accept_subsidy`/`revoke_subsidy` when there is nothing pending), `InvalidSignature` and `ExpiredRelayTx` (both for `relay_tx`).
+
+Unchanged: `NoPayingKey`, `NotPayingKey`, `Overflow`.
+
+On `Utility`: `InvalidSignature`, `TargetCddMissing`, and `InvalidNonce` are removed along with `relay_tx` itself. `UnableToDeriveAccountId` remains, used elsewhere in `Utility`.
+
+### 6. `AuthorizationType::AddRelayerPayingKey` renamed to `OldAddRelayerPayingKey`
+
+The `Identity` pallet's `AuthorizationData` variant used by the old flow is renamed, not removed — this preserves the ability to decode pre-upgrade authorizations still sitting in storage. New code should not create this authorization type; use `approve_subsidy` instead.
+
+## Migration checklist
+
+1. Replace `set_paying_key` with `approve_subsidy` and `remove_paying_key` with `remove_subsidy` (same arguments).
+2. Replace `accept_paying_key(auth_id)` with `accept_subsidy(paying_key)` — stop tracking or waiting on an authorization ID for subsidy acceptance.
+3. If you cancel subsidies before acceptance, use the new `revoke_subsidy`.
+4. Move any `relay_tx` usage from `Utility` to `Relayer`, add an `expires_at` value when building the signed payload, and stop supplying a nonce yourself — it's now resolved from `Relayer::RelayTxNonces` rather than being a call argument.
+5. Update event decoding for the new named-field shapes and the identity field removal; handle the new `RemovedPendingSubsidy` and `SubsidyDebited` events if you track subsidy lifecycle or spend.
+6. Remove handling for CDD-related and authorization-related Relayer errors that no longer exist; add handling for `NoPendingSubsidy`, `InvalidSignature`, `ExpiredRelayTx`.
+
+For the complete literal list of every added/removed/modified call, event, error, storage item, and constant on `Relayer` and `Utility`, see the [Full Pallet API Reference](./110-pallet-api-reference.mdx).

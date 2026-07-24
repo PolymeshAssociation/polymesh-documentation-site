@@ -1,0 +1,25 @@
+# Interface: SetCountTransferRestrictionsParams
+
+> Defined in: [src/api/procedures/types.ts:682](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L682)
+
+# Interface: SetCountTransferRestrictionsParams
+
+Defined in: [src/api/procedures/types.ts:682](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L682)
+
+## Properties
+
+### restrictions
+
+> **restrictions**: [`CountTransferRestrictionInput`](CountTransferRestrictionInput.mdx)[]
+
+Defined in: [src/api/procedures/types.ts:686](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L686)
+
+array of Count Transfer Restrictions with their corresponding exemptions (if applicable)
+
+***
+
+### type
+
+> **type**: [`Count`](../enumerations/TransferRestrictionType.mdx#count)
+
+Defined in: [src/api/procedures/types.ts:687](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L687)

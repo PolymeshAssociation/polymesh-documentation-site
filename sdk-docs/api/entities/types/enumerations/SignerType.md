@@ -1,0 +1,23 @@
+# Enumeration: SignerType
+
+> Defined in: [src/api/entities/types.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L112)
+
+# Enumeration: SignerType
+
+Defined in: [src/api/entities/types.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L112)
+
+## Enumeration Members
+
+### Account
+
+> **Account**: `"Account"`
+
+Defined in: [src/api/entities/types.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L115)
+
+***
+
+### Identity
+
+> **Identity**: `"Identity"`
+
+Defined in: [src/api/entities/types.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L114)

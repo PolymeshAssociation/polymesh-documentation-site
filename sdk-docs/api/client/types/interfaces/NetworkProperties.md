@@ -1,0 +1,31 @@
+# Interface: NetworkProperties
+
+> Defined in: [src/api/client/types.ts:187](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L187)
+
+# Interface: NetworkProperties
+
+Defined in: [src/api/client/types.ts:187](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L187)
+
+## Properties
+
+### genesisHash
+
+> **genesisHash**: `string`
+
+Defined in: [src/api/client/types.ts:190](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L190)
+
+***
+
+### name
+
+> **name**: `string`
+
+Defined in: [src/api/client/types.ts:188](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L188)
+
+***
+
+### version
+
+> **version**: `BigNumber`
+
+Defined in: [src/api/client/types.ts:189](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L189)

@@ -1,0 +1,87 @@
+# Onboarding & Confidential Accounts
+
+> Off-chain key generation and on-chain registration for confidential accounts
+
+# Onboarding & Confidential Accounts
+
+This page explains the protocol-level steps to create and use confidential accounts on Polymesh. It focuses on what you do off-chain (generate keys, initialize your prover) and what you do on-chain (register, update state), so readers can apply the concepts in any application or wallet.
+
+## Prerequisites
+
+Before you register a confidential account, you need:
+
+- A Polymesh signing key and DID (to submit transactions)
+- Access to a proof service (e.g., a WASM library or remote prover)
+
+## Keys and Deterministic Randomness
+
+Every confidential account relies on two key pairs and deterministically derived randomness. The keys establish identity and encrypt payloads; the randomness binds state transitions and enables recovery.
+
+- **Account key:** Proves ownership inside zero-knowledge proofs and deterministically derives nullifiers for spent states.
+- **Encryption key:** Encrypts settlement leg details so only authorized parties (sender, receiver, auditors, mediators) can read them.
+- **PRF-derived randomness values:** Derived from the account secret key plus public asset context (identity, asset id, and registration counter) to seed the initial per-asset randomness. After seeding, randomness advances deterministically on each state transition. It blinds commitments and produces nullifiers in a way that can be reconstructed later if local state is lost.
+
+:::info
+Pseudorandom Function (PRF): a deterministic function keyed by the confidential account secret key that outputs values indistinguishable from random; used to derive the initial per-asset randomness. Subsequent randomness values are derived deterministically from the previous one.
+:::
+
+## Lifecycle: Off-chain → On-chain
+
+At a high level, you first set up keys off-chain, then establish your confidential account on-chain, then register asset-specific state, and finally perform private state transitions as you transact.
+
+### 1) Off-chain: Generate keys and initialize prover
+
+Generate your account and encryption keys, then load them into your proof service.
+
+- Generate the account public/secret key and the encryption public/secret key.
+- Initialize the proof service with keys; you may also pre-derive the initial per-asset randomness if you already know which asset you'll register.
+- Store keys securely (hardware wallet, secure enclave, or encrypted vault).
+
+### 2) On-chain: Register confidential account (identity link)
+
+Prove ownership of your account key and link it to your DID. This establishes your confidential identity on the chain.
+
+- Produce a **registration proof** showing ownership of your account public key.
+- Submit `registerAccounts` with the proof to link the account and encryption key to your DID.
+
+### 3) On-chain: Register for a specific asset (asset-specific state)
+
+Create the asset-specific on-chain state for your account. One key can register many assets; each asset has its own independent state commitment. The initial state has balance = 0 and in-flight transaction counter = 0, with randomness seeded via the PRF.
+
+- Produce a **register-account-asset proof**.
+- Submit `registerAccountAssets`; the chain records an initial zero-balance commitment for that asset under your account key.
+
+:::note
+
+One key can register multiple assets; each asset has an independent on-chain state commitment
+
+:::
+
+### 4) On-chain: State transitions (ongoing use)
+
+When you transact, the old state is consumed and a new commitment is published. Validators verify the proofs without learning private values.
+
+- Reveal a deterministic **nullifier** for the old state (prevents double-spend).
+- Publish a new **state commitment** (updated balance and transaction counter) to the curve-tree accumulator.
+- Most updates occur via the settlement flows; see [Settlement Workflow](/confidential-assets/settlement-workflow).
+
+## Recovery and Ledger Scanning
+
+If you lose local state, deterministic randomness lets you rebuild it from the ledger.
+
+1. Recompute the initial per-asset randomness from your secret key and asset context (identity, asset id, and registration counter), then step it forward deterministically for each transition.
+2. Scan the chain for involved transactions, matching nullifiers/commitments and rebuild your local state timeline.
+3. Decrypt relevant leg payloads with your encryption secret key when visibility is needed.
+
+## Best Practices
+
+Practical tips to keep operations smooth and private:
+
+- Keep your account and encryption secret keys separate from the Polymesh signing key used to submit transactions.
+- Maintain secure backups of keys and the minimal context needed to recompute randomness (secret key and asset identifiers); avoid storing decrypted seeds on disk.
+- Cache latest state commitments locally, updating after successful on-chain transactions; periodically verify against curve-tree roots.
+
+For asset creation/mint and settlement details, see:
+
+- [Asset Operations](/confidential-assets/asset-operations)
+- [Settlement Workflow](/confidential-assets/settlement-workflow)

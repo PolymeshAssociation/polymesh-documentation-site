@@ -1,0 +1,260 @@
+# Settlement Sequence Diagrams
+
+> These sequence diagrams provide a detailed overview of the steps involved in the settlement process for Assets. They outline each step comprehensively, from account setup to instruction creation, affirmation, rejection, and execution.
+
+## Purpose of Sequence Diagrams
+
+These sequence diagrams provide a detailed overview of the steps involved in the settlement process for Assets. They outline each step comprehensively, from account setup to instruction creation, affirmation, rejection, and execution.
+
+It's important to note that these diagrams offer a low-level representation, including all steps of the listed process. This level of detail ensures clarity and precision in understanding the settlement process.
+
+When using tools such as the Polymesh REST API or the Polymesh TypeScript SDK, some of the steps depicted in these diagrams are combined into a single user action. These tools can simplify the process for integrators, streamlining the integration of Assets.
+
+:::note
+These diagrams cover settlement flows for both traditional portfolio-based transfers and Account ID-based transfers. The mechanics are the same regardless of whether senders and receivers hold assets in portfolios or at Account IDs.
+:::
+
+## Asset Creation
+
+In this sequence diagram, the asset issuer creates, configures, and issues an asset. In this flow, the issuer performs these actions directly, but it is also possible to delegate the configuration and issuance steps to an agent once the asset has been created.
+
+```mermaid
+sequenceDiagram
+participant I as Issuer
+participant P as Polymesh
+
+Note over I: Issuers can directly issue, or specify an agent to issue on their behalf
+opt
+  I ->> P: Register Asset Ticker
+end
+I ->> P: Create Asset
+opt
+  I ->> P: Specify Asset Metadata
+end
+opt
+  I ->> P: Specify Asset Compliance Rules
+end
+I ->> P: Issue (mint) Tokens For This Asset
+```
+
+## Asset Agent Management
+
+In this optional sequence diagram, the asset issuer grants an external agent permission to operate their asset on their behalf.
+
+Agents can be granted granular permissions so that they can only operate specific features (e.g., documentation updates) as needed.
+
+```mermaid
+sequenceDiagram
+participant I as Issuer
+participant A as Agent
+participant P as Polymesh
+
+opt
+  I ->> P: Create a custom Permission Group for the asset
+  P -->> I: Returns Permission Group ID
+end
+I ->> P: Issue `BecomeAgent` Authorization
+Note over I,P: Specifies Ticker, Agent DID, and Agent Permission Group
+P -->> A: Pending Authorization Approval/Rejection
+A ->> P: Accept `BecomeAgent` Authorization
+Note over I, P: Once an Agent has been permissioned, they can act on behalf of the Issuer<br/> for the specified transactions with respect to this asset
+```
+
+## Asset Venue Creation
+
+In this step, the asset issuer (or their agent) creates a new distribution venue to distribute their asset. Settlement instructions in Polymesh can optionally be associated with a particular settlement venue. Only the creator of that venue can create settlement instructions under that venue and optionally specify who is allowed to sign receipts for off-chain asset transfers.  
+In addition, the issuer of an asset can optionally manage which venues they allow their asset to trade within.
+
+```mermaid
+sequenceDiagram
+participant I as Issuer / Agent
+participant P as Polymesh
+
+I ->> P: Create a Venue
+Note over I,P: Venue Details, Type, and Receipt Signers provided
+P -->> I: New Venue ID
+Note over I,P: Venue ID is emitted in an event
+opt
+  I ->> P: Restrict Asset Settlement Instructions to Specified Venues
+end
+opt
+  I ->> P: Update Venue Details for Issuer Venue
+end
+opt
+  I ->> P: Update Permitted Settlement Venues for the Asset
+end
+opt
+  I ->> P: Update Allowed Receipt Signers on Issuer Venue
+end
+opt
+  I ->> P: Update Venue Details for Issuer/Agent's Venue
+end
+```
+
+## Portfolio Movement (Segregated Omnibus)
+
+In this step, assets are moved between portfolios under the same entity. Portfolios can be used to segregate client funds under a single omnibus account or to organize assets into other logical partitions (e.g., asset type, investment purpose).
+
+Since the asset is not being transferred between different entities, compliance rules and the usual affirmation settlement flow do not apply. Additionally, as movements are within the same entity, only a single transaction is required to perform the movement. A single portfolio movement transaction can contain multiple different assets.
+
+The sequence diagram includes the steps needed to create portfolios, although this is a one-time operation.
+
+```mermaid
+sequenceDiagram
+participant C as Custodian
+participant P as Polymesh
+
+par
+  C ->> P: Create New Portfolio Named "ClientA"
+and
+  C ->> P: Create New Portfolio Named "ClientB"
+end
+
+C ->> P: Move Assets from Default Portfolio to ClientA
+
+C ->> P: Move Assets from Default Portfolio to ClientB
+
+C ->> P: Move Assets from ClientA to ClientB
+```
+
+## Asset Settlement / Distribution
+
+In this step, a settlement instruction is settled between two counterparties, a sender and a receiver. In this example, both the sender and receiver configure a custodian who performs the affirmation step on their behalf, this approach is optional. The next example shows the sender and receiver affirming directly rather than via a custodian.
+
+For clarity, roles have been clearly separated; however, some entities may perform multiple roles (e.g., the asset issuer may also be the sender in the case of primary distribution).
+
+:::note
+If the settlement instruction creator is also a sender or receiver in the instruction, then creating the instruction will also affirm the legs of the instruction that apply to them.  
+:::
+
+```mermaid
+sequenceDiagram
+participant I as Venue Owner<br>(e.g. Issuer / Exchange)
+participant S as Asset Sender
+participant R as Asset Receiver
+participant SC as Sender Custodian
+participant RC as Receiver Custodian
+participant M as Mediator
+participant P as Polymesh
+
+par
+  S ->> P: Issue Custody Authorization for Sender Custodian
+  Note over P: Pending Custody Authorization<br>Approval/Rejection from Sender Custodian
+  SC ->> P: Approve Custody Authorization
+and
+  R ->> P: Issue Custody Authorization for Receiver Custodian
+  Note over P: Pending Custody Authorization<br>Approval/Rejection from Receiver Custodian
+  RC ->> P: Approve Custody Authorization
+end
+
+I ->> P: Create Settlement Instruction between Sender and Receiver
+
+par
+  SC ->> P: Affirm Settlement Instruction as Sender
+  Note over P: Sender Assets Locked
+and
+  RC ->> P: Affirm Settlement Instruction as Receiver
+  Note over P: Receiver Assets Locked
+and
+  opt
+    M ->> P: Affirm Settlement<br>Instruction as<br>Mediator
+  end
+end
+
+I ->> P: Execute Settlement Instruction (can alternatively be executed by any party to the instruction)
+Note over P: Sender and Receiver Balances<br>Updated and Locks Removed
+```
+
+## Asset Settlement / Distribution with Off-Chain Leg
+
+In this step, we show the sequence when a settlement instruction involves both an on-chain leg (to move an asset issued directly on Polymesh) as well as an off-chain leg representing an asset or payment moving on a chain or payment system outside of Polymesh.
+
+In this case, we have synchronized settlement between the off-chain and on-chain legs (rather than atomic settlement) with signed data provided via an "Off-Chain Signer API" to verify that the off-chain leg was completed before the settlement instruction is finalized on Polymesh.
+
+:::note
+The role of the "Off-Chain Signer API" entity in the below sequence diagram is:
+
+- monitor Polymesh for settlement instructions related to specified venues which involve off-chain legs
+- observe whether or not the off-chain leg has been completed on the external payment / chain
+- once the above steps have been completed successfully, sign a receipt (referencing the Polymesh settlement instruction and off-chain leg) using a private key that has been permissioned as an allowed signer on the venue associated with the settlement instruction
+
+This signed data can then be used on Polymesh to affirm the off-chain leg, meaning that the Polymesh settlement instruction cannot be finalized until the "Off-Chain Signer API" has confirmed the payment (off-chain) leg.
+:::
+
+```mermaid
+sequenceDiagram
+participant I as Venue Owner
+participant S as Asset Sender
+participant R as Asset Receiver
+participant M as Mediator
+participant O as Off-Chain Signer API
+participant P as Polymesh
+
+I ->> P: Create Settlement Instruction between Sender and Receiver
+note over I,P: Settlement Instruction includes an on-chain asset (sender to receiver)<br/>and an off-chain asset (receiver to sender)
+
+par
+  S ->> P: Affirm Settlement Instruction
+  P ->> P: Sender Assets Locked
+and
+  note over R: Transfer the off-chain asset
+  R ->> O: Request Signed Receipt the Off-Chain Asset Has Been Transferred
+  O ->> R: Signed Receipt Provided
+  R ->> P: Affirm Settlement Instruction via Signed Receipt
+and
+  opt
+    M ->> P: Affirm Settlement Instruction
+  end
+end
+I ->> P: Execute Settlement Instruction
+Note over I,P: Fully affirmed instructions can optionally be executed by any party to the instruction
+P ->> P: Sender and Receiver Balances<br>Updated and Lock Removed
+```
+
+## Simplified Account ID Transfer (`transfer_asset`)
+
+Polymesh provides a simplified API (`asset::transfer_asset`) for single-leg fungible asset transfers between Account IDs. This flow is much simpler than the multi-leg settlement instruction process because it auto-affirms the sender and automatically executes when the receiver affirms or if the receiver has pre-approved the asset.
+
+For transfers that skip the affirmation cycle whenever nothing requires it — including third-party, allowance-drawn transfers — see [Direct Transfers (`transfer_funds`)](/settlement#direct-transfers-transfer_funds).
+
+:::note
+The `transfer_asset` function is designed for Account ID to Account ID transfers only. For transfers involving portfolios, first move the balance to an Account ID using `portfolio::move_portfolio_funds` or alternatively use the full settlement instruction flow shown above.
+:::
+
+```mermaid
+sequenceDiagram
+participant S as Asset Sender<br>(Account ID)
+participant R as Asset Receiver<br>(Account ID)
+participant P as Polymesh
+
+S ->> P: Call transfer_asset with:
+Note over S,P: Receiver Account ID, Asset ID, Amount, optional memo
+
+par
+  P ->> P: Resolve sender and receiver DIDs<br>from Account IDs
+  P ->> P: Create settlement instruction<br>with single leg
+and
+  P ->> P: Auto-affirm sender<br>Lock sender assets
+end
+
+alt Receiver has pre-approved the asset
+  P ->> P: Auto-execute instruction<br>Transfer assets immediately
+  P -->> S: Transfer complete
+  P -->> R: Assets received
+else Receiver has NOT pre-approved
+  P -->> R: Pending affirmation required
+  Note over S,P: Instruction awaits receiver affirmation
+
+  alt Receiver affirms
+    R ->> P: Call receiver_affirm_asset_transfer
+    P ->> P: Affirm receiver and<br>attempt execution
+    P ->> P: Transfer assets
+    P -->> S: Transfer complete
+    P -->> R: Assets received
+  else Receiver rejects
+    R ->> P: Call reject_asset_transfer
+    P ->> P: Release sender lock
+    P -->> S: Transfer rejected
+  end
+end
+```

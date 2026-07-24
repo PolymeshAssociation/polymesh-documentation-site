@@ -1,0 +1,25 @@
+# Interface: AssetStat
+
+> Defined in: [src/api/entities/Asset/types.ts:499](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L499)
+
+# Interface: AssetStat
+
+Defined in: [src/api/entities/Asset/types.ts:499](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L499)
+
+An enabled statistic on an Asset
+
+## Properties
+
+### claimIssuer?
+
+> `optional` **claimIssuer?**: [`StatClaimIssuer`](../../../types/interfaces/StatClaimIssuer.mdx)
+
+Defined in: [src/api/entities/Asset/types.ts:501](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L501)
+
+***
+
+### type
+
+> **type**: [`StatType`](../../../types/enumerations/StatType.mdx)
+
+Defined in: [src/api/entities/Asset/types.ts:500](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L500)

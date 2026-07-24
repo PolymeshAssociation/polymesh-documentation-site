@@ -1,0 +1,17 @@
+# Type Alias: GenericPolymeshTransaction\<ProcedureReturnValue, ReturnValue\>
+
+> > **GenericPolymeshTransaction**\<`ProcedureReturnValue`, `ReturnValue`\> = [`PolymeshTransaction`](../../../../base/PolymeshTransaction/classes/PolymeshTransaction.mdx)\<`ProcedureReturnValue`, `ReturnValue`\> \| [`PolymeshTransactionBatch`](../../../../base/PolymeshTransactionBatch/classes/PolymeshTransactionBatch.mdx)\<`ProcedureReturnValue`, `ReturnValue`\>
+
+# Type Alias: GenericPolymeshTransaction\
+
+> **GenericPolymeshTransaction**\<`ProcedureReturnValue`, `ReturnValue`\> = [`PolymeshTransaction`](../../../../base/PolymeshTransaction/classes/PolymeshTransaction.mdx)\<`ProcedureReturnValue`, `ReturnValue`\> \| [`PolymeshTransactionBatch`](../../../../base/PolymeshTransactionBatch/classes/PolymeshTransactionBatch.mdx)\<`ProcedureReturnValue`, `ReturnValue`\>
+
+Defined in: [src/api/procedures/types.ts:247](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L247)
+
+## Type Parameters
+
+Type Parameter
+
+`ProcedureReturnValue`
+
+`ReturnValue`

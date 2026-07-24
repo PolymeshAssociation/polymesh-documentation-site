@@ -1,0 +1,25 @@
+# Interface: CountTransferRestrictionInput
+
+> Defined in: [src/api/procedures/types.ts:612](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L612)
+
+# Interface: CountTransferRestrictionInput
+
+Defined in: [src/api/procedures/types.ts:612](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L612)
+
+## Properties
+
+### count
+
+> **count**: `BigNumber`
+
+Defined in: [src/api/procedures/types.ts:616](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L616)
+
+limit on the amount of different (unique) investors that can hold the Asset at once
+
+***
+
+### type
+
+> **type**: [`Count`](../enumerations/TransferRestrictionType.mdx#count)
+
+Defined in: [src/api/procedures/types.ts:617](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L617)

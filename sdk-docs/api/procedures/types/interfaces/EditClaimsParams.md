@@ -1,0 +1,25 @@
+# Interface: EditClaimsParams
+
+> Defined in: [src/api/procedures/types.ts:950](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L950)
+
+# Interface: EditClaimsParams
+
+Defined in: [src/api/procedures/types.ts:950](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L950)
+
+## Properties
+
+### claims
+
+> **claims**: [`ClaimTarget`](../../../entities/types/interfaces/ClaimTarget.mdx)[]
+
+Defined in: [src/api/procedures/types.ts:954](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L954)
+
+array of claims to be edited
+
+***
+
+### operation
+
+> **operation**: [`Edit`](../enumerations/ClaimOperation.mdx#edit)
+
+Defined in: [src/api/procedures/types.ts:955](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L955)

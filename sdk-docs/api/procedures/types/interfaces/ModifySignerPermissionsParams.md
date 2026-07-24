@@ -1,0 +1,17 @@
+# Interface: ModifySignerPermissionsParams
+
+> Defined in: [src/api/procedures/types.ts:718](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L718)
+
+# Interface: ModifySignerPermissionsParams
+
+Defined in: [src/api/procedures/types.ts:718](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L718)
+
+## Properties
+
+### secondaryAccounts
+
+> **secondaryAccounts**: [`Modify`](../../../../types/utils/type-aliases/Modify.mdx)\<[`PermissionedAccount`](../../../entities/types/interfaces/PermissionedAccount.mdx), \{ `account`: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx); `permissions`: [`PermissionsLike`](../../../entities/types/type-aliases/PermissionsLike.mdx); \}\>[]
+
+Defined in: [src/api/procedures/types.ts:722](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L722)
+
+list of secondary Accounts

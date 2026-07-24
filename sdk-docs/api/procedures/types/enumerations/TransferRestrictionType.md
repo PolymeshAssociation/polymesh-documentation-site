@@ -1,0 +1,39 @@
+# Enumeration: TransferRestrictionType
+
+> Defined in: [src/api/procedures/types.ts:571](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L571)
+
+# Enumeration: TransferRestrictionType
+
+Defined in: [src/api/procedures/types.ts:571](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L571)
+
+## Enumeration Members
+
+### ClaimCount
+
+> **ClaimCount**: `"ClaimCount"`
+
+Defined in: [src/api/procedures/types.ts:574](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L574)
+
+***
+
+### ClaimPercentage
+
+> **ClaimPercentage**: `"ClaimPercentage"`
+
+Defined in: [src/api/procedures/types.ts:575](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L575)
+
+***
+
+### Count
+
+> **Count**: `"Count"`
+
+Defined in: [src/api/procedures/types.ts:572](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L572)
+
+***
+
+### Percentage
+
+> **Percentage**: `"Percentage"`
+
+Defined in: [src/api/procedures/types.ts:573](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L573)

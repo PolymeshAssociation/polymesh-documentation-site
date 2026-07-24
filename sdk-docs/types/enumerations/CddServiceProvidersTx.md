@@ -1,0 +1,63 @@
+# Enumeration: CddServiceProvidersTx
+
+> Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:339
+
+# Enumeration: CddServiceProvidersTx
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:339
+
+## Enumeration Members
+
+### AbdicateMembership
+
+> **AbdicateMembership**: `"cddServiceProviders.abdicateMembership"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:346
+
+***
+
+### AddMember
+
+> **AddMember**: `"cddServiceProviders.addMember"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:342
+
+***
+
+### DisableMember
+
+> **DisableMember**: `"cddServiceProviders.disableMember"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:341
+
+***
+
+### RemoveMember
+
+> **RemoveMember**: `"cddServiceProviders.removeMember"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:343
+
+***
+
+### ResetMembers
+
+> **ResetMembers**: `"cddServiceProviders.resetMembers"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:345
+
+***
+
+### SetActiveMembersLimit
+
+> **SetActiveMembersLimit**: `"cddServiceProviders.setActiveMembersLimit"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:340
+
+***
+
+### SwapMember
+
+> **SwapMember**: `"cddServiceProviders.swapMember"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:344

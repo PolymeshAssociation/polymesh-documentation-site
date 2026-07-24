@@ -1,0 +1,15 @@
+# Interface: UniqueIdentifiers
+
+> Defined in: [src/api/entities/DefaultPortfolio.ts:3](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/DefaultPortfolio.ts#L3)
+
+# Interface: UniqueIdentifiers
+
+Defined in: [src/api/entities/DefaultPortfolio.ts:3](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/DefaultPortfolio.ts#L3)
+
+## Properties
+
+### did
+
+> **did**: `string`
+
+Defined in: [src/api/entities/DefaultPortfolio.ts:4](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/DefaultPortfolio.ts#L4)

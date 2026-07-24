@@ -1,0 +1,25 @@
+# Entity: CorporateBallot/types
+
+> - [CorporateBallotStatus](enumerations/CorporateBallotStatus.mdx)
+
+# Entity: CorporateBallot/types
+
+## Enumerations
+
+- [CorporateBallotStatus](enumerations/CorporateBallotStatus.mdx)
+
+## Interfaces
+
+- [BallotMeta](interfaces/BallotMeta.mdx)
+- [BallotMotion](interfaces/BallotMotion.mdx)
+- [CorporateBallotDetails](interfaces/CorporateBallotDetails.mdx)
+
+## Type Aliases
+
+- [BallotVote](type-aliases/BallotVote.mdx)
+- [ChoiceWithParticipation](type-aliases/ChoiceWithParticipation.mdx)
+- [ChoiceWithVotes](type-aliases/ChoiceWithVotes.mdx)
+- [CorporateBallotMetaWithResults](type-aliases/CorporateBallotMetaWithResults.mdx)
+- [CorporateBallotMotionWithParticipation](type-aliases/CorporateBallotMotionWithParticipation.mdx)
+- [CorporateBallotMotionWithResults](type-aliases/CorporateBallotMotionWithResults.mdx)
+- [CorporateBallotWithParticipation](type-aliases/CorporateBallotWithParticipation.mdx)

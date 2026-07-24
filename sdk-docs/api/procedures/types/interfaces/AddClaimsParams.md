@@ -1,0 +1,25 @@
+# Interface: AddClaimsParams
+
+> Defined in: [src/api/procedures/types.ts:942](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L942)
+
+# Interface: AddClaimsParams
+
+Defined in: [src/api/procedures/types.ts:942](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L942)
+
+## Properties
+
+### claims
+
+> **claims**: [`ClaimTarget`](../../../entities/types/interfaces/ClaimTarget.mdx)[]
+
+Defined in: [src/api/procedures/types.ts:946](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L946)
+
+array of claims to be added
+
+***
+
+### operation
+
+> **operation**: [`Add`](../enumerations/ClaimOperation.mdx#add)
+
+Defined in: [src/api/procedures/types.ts:947](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L947)

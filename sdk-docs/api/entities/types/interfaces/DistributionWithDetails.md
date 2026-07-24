@@ -1,0 +1,23 @@
+# Interface: DistributionWithDetails
+
+> Defined in: [src/api/entities/types.ts:626](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L626)
+
+# Interface: DistributionWithDetails
+
+Defined in: [src/api/entities/types.ts:626](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L626)
+
+## Properties
+
+### details
+
+> **details**: [`DividendDistributionDetails`](../../DividendDistribution/types/interfaces/DividendDistributionDetails.mdx)
+
+Defined in: [src/api/entities/types.ts:628](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L628)
+
+***
+
+### distribution
+
+> **distribution**: [`DividendDistribution`](../../DividendDistribution/classes/DividendDistribution.mdx)
+
+Defined in: [src/api/entities/types.ts:627](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L627)

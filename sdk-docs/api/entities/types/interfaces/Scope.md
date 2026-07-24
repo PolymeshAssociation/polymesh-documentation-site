@@ -1,0 +1,23 @@
+# Interface: Scope
+
+> Defined in: [src/api/entities/types.ts:163](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L163)
+
+# Interface: Scope
+
+Defined in: [src/api/entities/types.ts:163](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L163)
+
+## Properties
+
+### type
+
+> **type**: [`ScopeType`](../enumerations/ScopeType.mdx)
+
+Defined in: [src/api/entities/types.ts:164](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L164)
+
+***
+
+### value
+
+> **value**: `string`
+
+Defined in: [src/api/entities/types.ts:165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L165)

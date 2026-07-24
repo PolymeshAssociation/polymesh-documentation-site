@@ -1,0 +1,31 @@
+# Interface: AcceptPrimaryKeyRotationParams
+
+> Defined in: [src/api/procedures/types.ts:706](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L706)
+
+# Interface: AcceptPrimaryKeyRotationParams
+
+Defined in: [src/api/procedures/types.ts:706](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L706)
+
+## Properties
+
+### ~~cddAuth?~~
+
+> `optional` **cddAuth?**: `BigNumber` \| [`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx)
+
+Defined in: [src/api/procedures/types.ts:715](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L715)
+
+(optional) Authorization from a CDD service provider attesting the rotation of primary key
+
+#### Deprecated
+
+this value will be ignored from chain v8
+
+***
+
+### ownerAuth
+
+> **ownerAuth**: `BigNumber` \| [`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx)
+
+Defined in: [src/api/procedures/types.ts:710](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L710)
+
+Authorization from the owner who initiated the change

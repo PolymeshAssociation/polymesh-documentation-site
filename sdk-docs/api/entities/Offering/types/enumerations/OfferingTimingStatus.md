@@ -1,0 +1,37 @@
+# Enumeration: OfferingTimingStatus
+
+> Defined in: [src/api/entities/Offering/types.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/types.ts#L6)
+
+# Enumeration: OfferingTimingStatus
+
+Defined in: [src/api/entities/Offering/types.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/types.ts#L6)
+
+## Enumeration Members
+
+### Expired
+
+> **Expired**: `"Expired"`
+
+Defined in: [src/api/entities/Offering/types.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/types.ts#L18)
+
+End date reached
+
+***
+
+### NotStarted
+
+> **NotStarted**: `"NotStarted"`
+
+Defined in: [src/api/entities/Offering/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/types.ts#L10)
+
+Start date not reached yet
+
+***
+
+### Started
+
+> **Started**: `"Started"`
+
+Defined in: [src/api/entities/Offering/types.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/types.ts#L14)
+
+Between start and end date

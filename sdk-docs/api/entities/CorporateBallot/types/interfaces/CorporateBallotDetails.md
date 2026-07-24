@@ -1,0 +1,50 @@
+# Interface: CorporateBallotDetails
+
+> Defined in: [src/api/entities/CorporateBallot/types.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L48)
+
+# Interface: CorporateBallotDetails
+
+Defined in: [src/api/entities/CorporateBallot/types.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L48)
+
+## Properties
+
+### endDate
+
+> **endDate**: `Date`
+
+Defined in: [src/api/entities/CorporateBallot/types.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L57)
+
+End date of the ballot.
+
+***
+
+### meta
+
+> **meta**: [`BallotMeta`](BallotMeta.mdx)
+
+Defined in: [src/api/entities/CorporateBallot/types.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L62)
+
+Metadata for the ballot.
+
+***
+
+### rcv
+
+> **rcv**: `boolean`
+
+Defined in: [src/api/entities/CorporateBallot/types.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L70)
+
+Whether Ranked-Choice Voting (RCV) has been enabled.
+
+Ranked-Choice Voting allows voters to select a fallback choice should their first
+preference fail to reach a certain threshold or, for example, be eliminated in the top-2 run-off.
+
+***
+
+### startDate
+
+> **startDate**: `Date`
+
+Defined in: [src/api/entities/CorporateBallot/types.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L52)
+
+Start date of the ballot.

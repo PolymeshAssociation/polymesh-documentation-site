@@ -1,0 +1,158 @@
+# Interface: CreateAssetWithTickerParams
+
+> Defined in: [src/api/procedures/types.ts:855](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L855)
+
+# Interface: CreateAssetWithTickerParams
+
+Defined in: [src/api/procedures/types.ts:855](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L855)
+
+## Extends
+
+- [`CreateAssetParams`](CreateAssetParams.mdx)
+
+## Properties
+
+### assetType
+
+> **assetType**: `string` \| `BigNumber`
+
+Defined in: [src/api/procedures/types.ts:812](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L812)
+
+Type of security that the Asset represents (e.g., Equity, Debt, Commodity). Common values are included in the
+  [KnownAssetType](../../../entities/Asset/types/enumerations/KnownAssetType.mdx) enum, but custom values can be used as well. Custom values must be registered on-chain the first time
+  they're used, requiring an additional transaction. They aren't tied to a specific Asset.
+  If using a custom type, it can be provided as a string (representing name) or a BigNumber (representing the custom type ID).
+
+#### Inherited from
+
+[`CreateAssetParams`](CreateAssetParams.mdx).[`assetType`](CreateAssetParams.mdx#assettype)
+
+***
+
+### documents?
+
+> `optional` **documents?**: [`AssetDocument`](../../../entities/Asset/types/interfaces/AssetDocument.mdx)[]
+
+Defined in: [src/api/procedures/types.ts:821](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L821)
+
+#### Inherited from
+
+[`CreateAssetParams`](CreateAssetParams.mdx).[`documents`](CreateAssetParams.mdx#documents)
+
+***
+
+### fundingRound?
+
+> `optional` **fundingRound?**: `string`
+
+Defined in: [src/api/procedures/types.ts:820](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L820)
+
+(Optional) funding round in which the Asset currently is (e.g., Series A, Series B).
+
+#### Inherited from
+
+[`CreateAssetParams`](CreateAssetParams.mdx).[`fundingRound`](CreateAssetParams.mdx#fundinground)
+
+***
+
+### initialStatistics?
+
+> `optional` **initialStatistics?**: [`InputStatType`](../../../entities/types/type-aliases/InputStatType.mdx)[]
+
+Defined in: [src/api/procedures/types.ts:834](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L834)
+
+(Optional) type of statistics that should be enabled for the Asset.
+
+Enabling statistics allows for TransferRestrictions to be made. For example, the SEC requires registration for a company that
+has either more than 2000 investors or more than 500 non-accredited investors. To prevent crossing this limit, two restrictions are
+needed: a `Count` of 2000, and a `ScopedCount` of non-accredited with a maximum of 500. [source](https://www.sec.gov/info/smallbus/secg/jobs-act-section-12g-small-business-compliance-guide.htm)
+
+These restrictions require a `Count` and `ScopedCount` statistic to be created. Although they can be created after the Asset is made, it is recommended to create statistics
+before the Asset is circulated. Count statistics made after Asset creation need their initial value set, so it is simpler to create them before investors hold the Asset.
+If you need to create a stat for an Asset after creation, you can use the [TransferRestrictions.setStats](../../../entities/Asset/Fungible/TransferRestrictions/classes/TransferRestrictions.mdx#setstats) method in the [TransferRestrictions](../../../entities/Asset/Fungible/TransferRestrictions/classes/TransferRestrictions.mdx) namespace.
+
+#### Inherited from
+
+[`CreateAssetParams`](CreateAssetParams.mdx).[`initialStatistics`](CreateAssetParams.mdx#initialstatistics)
+
+***
+
+### initialSupply?
+
+> `optional` **initialSupply?**: `BigNumber`
+
+Defined in: [src/api/procedures/types.ts:797](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L797)
+
+Amount of Asset tokens to be minted on creation (optional; by default, no tokens are minted).
+
+#### Inherited from
+
+[`CreateAssetParams`](CreateAssetParams.mdx).[`initialSupply`](CreateAssetParams.mdx#initialsupply)
+
+***
+
+### isDivisible
+
+> **isDivisible**: `boolean`
+
+Defined in: [src/api/procedures/types.ts:805](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L805)
+
+Whether a single Asset token can be divided into decimal parts.
+
+#### Inherited from
+
+[`CreateAssetParams`](CreateAssetParams.mdx).[`isDivisible`](CreateAssetParams.mdx#isdivisible)
+
+***
+
+### name
+
+> **name**: `string`
+
+Defined in: [src/api/procedures/types.ts:793](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L793)
+
+#### Inherited from
+
+[`CreateAssetParams`](CreateAssetParams.mdx).[`name`](CreateAssetParams.mdx#name)
+
+***
+
+### portfolioId?
+
+> `optional` **portfolioId?**: `BigNumber`
+
+Defined in: [src/api/procedures/types.ts:801](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L801)
+
+Portfolio to which the Asset tokens will be issued on creation (optional; defaults to the default portfolio).
+
+#### Inherited from
+
+[`CreateAssetParams`](CreateAssetParams.mdx).[`portfolioId`](CreateAssetParams.mdx#portfolioid)
+
+***
+
+### securityIdentifiers?
+
+> `optional` **securityIdentifiers?**: [`SecurityIdentifier`](../../../entities/Asset/types/interfaces/SecurityIdentifier.mdx)[]
+
+Defined in: [src/api/procedures/types.ts:816](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L816)
+
+Array of domestic or international alphanumeric security identifiers for the Asset (e.g., ISIN, CUSIP, FIGI).
+
+#### Inherited from
+
+[`CreateAssetParams`](CreateAssetParams.mdx).[`securityIdentifiers`](CreateAssetParams.mdx#securityidentifiers)
+
+***
+
+### ticker?
+
+> `optional` **ticker?**: `string`
+
+Defined in: [src/api/procedures/types.ts:861](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L861)
+
+(optional) ticker to be linked with the Asset
+
+#### Note
+
+from 7.x chain, ticker has been made optional. For 6.x chain, it is still mandatory.

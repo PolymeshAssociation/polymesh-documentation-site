@@ -1,0 +1,47 @@
+# Enumeration: SudoTx
+
+> Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:513
+
+# Enumeration: SudoTx
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:513
+
+## Enumeration Members
+
+### RemoveKey
+
+> **RemoveKey**: `"sudo.removeKey"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:518
+
+***
+
+### SetKey
+
+> **SetKey**: `"sudo.setKey"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:516
+
+***
+
+### Sudo
+
+> **Sudo**: `"sudo.sudo"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:514
+
+***
+
+### SudoAs
+
+> **SudoAs**: `"sudo.sudoAs"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:517
+
+***
+
+### SudoUncheckedWeight
+
+> **SudoUncheckedWeight**: `"sudo.sudoUncheckedWeight"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:515

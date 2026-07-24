@@ -1,0 +1,23 @@
+# Interface: IdentityWithClaims
+
+> Defined in: [src/api/entities/types.ts:312](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L312)
+
+# Interface: IdentityWithClaims
+
+Defined in: [src/api/entities/types.ts:312](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L312)
+
+## Properties
+
+### claims
+
+> **claims**: [`ClaimData`](ClaimData.mdx)\<[`Claim`](../type-aliases/Claim.mdx)\>[]
+
+Defined in: [src/api/entities/types.ts:314](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L314)
+
+***
+
+### identity
+
+> **identity**: [`Identity`](../../Identity/classes/Identity.mdx)
+
+Defined in: [src/api/entities/types.ts:313](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L313)

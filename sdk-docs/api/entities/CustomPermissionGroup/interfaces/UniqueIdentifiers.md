@@ -1,0 +1,23 @@
+# Interface: UniqueIdentifiers
+
+> Defined in: [src/api/entities/CustomPermissionGroup.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CustomPermissionGroup.ts#L25)
+
+# Interface: UniqueIdentifiers
+
+Defined in: [src/api/entities/CustomPermissionGroup.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CustomPermissionGroup.ts#L25)
+
+## Properties
+
+### assetId
+
+> **assetId**: `string`
+
+Defined in: [src/api/entities/CustomPermissionGroup.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CustomPermissionGroup.ts#L27)
+
+***
+
+### id
+
+> **id**: `BigNumber`
+
+Defined in: [src/api/entities/CustomPermissionGroup.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CustomPermissionGroup.ts#L26)

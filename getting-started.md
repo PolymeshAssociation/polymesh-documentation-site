@@ -1,0 +1,42 @@
+# Getting Started Guide
+
+> Quick start guide for new users
+
+# Getting Started with Polymesh
+
+Welcome to Polymesh! This guide will walk you through the essential steps to begin using the Polymesh blockchain network. You can start with basic POLYX usage first, then complete DID onboarding when you want to use identity and asset related features.
+
+## What You'll Need
+
+1. [**A Compatible Wallet**](/getting-started/keys) - This is your gateway to interacting with the Polymesh network. The wallet stores your private keys and allows you to sign transactions securely. The [Polymesh wallet](/getting-started/keys/polymesh-wallet) browser extension is a good starting point for those starting out with Polymesh.
+
+2. [**POLYX Tokens**](/polyx) - POLYX is the native utility token of the Polymesh blockchain. You'll need POLYX to:
+   - Pay for transaction fees
+   - Participate in network governance
+   - Stake tokens to help secure the network and earn rewards
+   - Signal on governance issues
+
+3. [**Identity Onboarding (DID Registration)**](/getting-started/onboarding) - DID onboarding is required for **identity** and **asset** related transactions, but not for basic POLYX transfers or staking (except validator activities). A DID can be registered by the user directly or by a permissioned DID registrar. If self-registering, you will need POLYX to pay the transaction fee. Once your DID is registered, you can:
+   - Create, issue, and manage regulated assets on Polymesh
+   - Receive and manage claims to prove attributes about your identity
+   - Participate in asset transfers and settlements
+   - Access advanced network features such as compliance, confidential assets, and governance proposals
+   - Interact with identity-based protocols and services
+   - Be assigned permissioned roles
+
+## Next Steps
+
+Follow these steps in order to get started:
+
+1. [Install a Polymesh Wallet](/getting-started/keys) - Set up your secure access to the network
+2. Acquire POLYX - Get tokens to start participating in the network.
+   - Purchase from exchanges that list POLYX and transfer to your wallet. See [CoinGecko](https://www.coingecko.com/en/coins/polymesh#markets) or [CoinMarketCap](https://coinmarketcap.com/currencies/polymesh/#Markets) for a range of market options.
+3. [Complete DID Onboarding](/getting-started/onboarding) - Register a DID for your signing key when you want to use identity and asset related features (self-registration or registrar-assisted).
+
+:::tip Getting Started on Testnet
+If you want to try Polymesh without using real assets, you can use the Testnet. After setting up your wallet, you can start with basic POLYX activity and complete DID onboarding when you want to test identity and asset features.
+:::
+
+:::note
+Identity and asset related transactions on Polymesh require a signing key that is linked to a DID. POLYX transfers and staking (except validator activities) can be performed without a DID.
+:::

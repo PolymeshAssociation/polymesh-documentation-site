@@ -1,0 +1,87 @@
+# Enumeration: SchedulerTx
+
+> Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:649
+
+# Enumeration: SchedulerTx
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:649
+
+## Enumeration Members
+
+### Cancel
+
+> **Cancel**: `"scheduler.cancel"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:651
+
+***
+
+### CancelNamed
+
+> **CancelNamed**: `"scheduler.cancelNamed"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:653
+
+***
+
+### CancelRetry
+
+> **CancelRetry**: `"scheduler.cancelRetry"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:658
+
+***
+
+### CancelRetryNamed
+
+> **CancelRetryNamed**: `"scheduler.cancelRetryNamed"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:659
+
+***
+
+### Schedule
+
+> **Schedule**: `"scheduler.schedule"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:650
+
+***
+
+### ScheduleAfter
+
+> **ScheduleAfter**: `"scheduler.scheduleAfter"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:654
+
+***
+
+### ScheduleNamed
+
+> **ScheduleNamed**: `"scheduler.scheduleNamed"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:652
+
+***
+
+### ScheduleNamedAfter
+
+> **ScheduleNamedAfter**: `"scheduler.scheduleNamedAfter"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:655
+
+***
+
+### SetRetry
+
+> **SetRetry**: `"scheduler.setRetry"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:656
+
+***
+
+### SetRetryNamed
+
+> **SetRetryNamed**: `"scheduler.setRetryNamed"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:657

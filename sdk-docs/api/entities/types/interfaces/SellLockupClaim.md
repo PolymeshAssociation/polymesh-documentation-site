@@ -1,0 +1,23 @@
+# Interface: SellLockupClaim
+
+> Defined in: [src/api/entities/types.ts:196](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L196)
+
+# Interface: SellLockupClaim
+
+Defined in: [src/api/entities/types.ts:196](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L196)
+
+## Properties
+
+### scope
+
+> **scope**: [`Scope`](Scope.mdx)
+
+Defined in: [src/api/entities/types.ts:198](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L198)
+
+***
+
+### type
+
+> **type**: [`SellLockup`](../enumerations/ClaimType.mdx#selllockup)
+
+Defined in: [src/api/entities/types.ts:197](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L197)

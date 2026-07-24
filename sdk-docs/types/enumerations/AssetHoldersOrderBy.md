@@ -1,0 +1,143 @@
+# Enumeration: AssetHoldersOrderBy
+
+> Defined in: [src/middleware/types.ts:579](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L579)
+
+# Enumeration: AssetHoldersOrderBy
+
+Defined in: [src/middleware/types.ts:579](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L579)
+
+## Enumeration Members
+
+### AmountAsc
+
+> **AmountAsc**: `"AMOUNT_ASC"`
+
+Defined in: [src/middleware/types.ts:580](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L580)
+
+***
+
+### AmountDesc
+
+> **AmountDesc**: `"AMOUNT_DESC"`
+
+Defined in: [src/middleware/types.ts:581](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L581)
+
+***
+
+### AssetIdAsc
+
+> **AssetIdAsc**: `"ASSET_ID_ASC"`
+
+Defined in: [src/middleware/types.ts:582](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L582)
+
+***
+
+### AssetIdDesc
+
+> **AssetIdDesc**: `"ASSET_ID_DESC"`
+
+Defined in: [src/middleware/types.ts:583](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L583)
+
+***
+
+### CreatedAtAsc
+
+> **CreatedAtAsc**: `"CREATED_AT_ASC"`
+
+Defined in: [src/middleware/types.ts:595](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L595)
+
+***
+
+### CreatedAtDesc
+
+> **CreatedAtDesc**: `"CREATED_AT_DESC"`
+
+Defined in: [src/middleware/types.ts:596](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L596)
+
+***
+
+### CreatedBlockIdAsc
+
+> **CreatedBlockIdAsc**: `"CREATED_BLOCK_ID_ASC"`
+
+Defined in: [src/middleware/types.ts:584](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L584)
+
+***
+
+### CreatedBlockIdDesc
+
+> **CreatedBlockIdDesc**: `"CREATED_BLOCK_ID_DESC"`
+
+Defined in: [src/middleware/types.ts:585](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L585)
+
+***
+
+### IdAsc
+
+> **IdAsc**: `"ID_ASC"`
+
+Defined in: [src/middleware/types.ts:588](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L588)
+
+***
+
+### IdDesc
+
+> **IdDesc**: `"ID_DESC"`
+
+Defined in: [src/middleware/types.ts:589](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L589)
+
+***
+
+### IdentityIdAsc
+
+> **IdentityIdAsc**: `"IDENTITY_ID_ASC"`
+
+Defined in: [src/middleware/types.ts:586](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L586)
+
+***
+
+### IdentityIdDesc
+
+> **IdentityIdDesc**: `"IDENTITY_ID_DESC"`
+
+Defined in: [src/middleware/types.ts:587](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L587)
+
+***
+
+### Natural
+
+> **Natural**: `"NATURAL"`
+
+Defined in: [src/middleware/types.ts:590](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L590)
+
+***
+
+### PrimaryKeyAsc
+
+> **PrimaryKeyAsc**: `"PRIMARY_KEY_ASC"`
+
+Defined in: [src/middleware/types.ts:591](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L591)
+
+***
+
+### PrimaryKeyDesc
+
+> **PrimaryKeyDesc**: `"PRIMARY_KEY_DESC"`
+
+Defined in: [src/middleware/types.ts:592](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L592)
+
+***
+
+### UpdatedBlockIdAsc
+
+> **UpdatedBlockIdAsc**: `"UPDATED_BLOCK_ID_ASC"`
+
+Defined in: [src/middleware/types.ts:593](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L593)
+
+***
+
+### UpdatedBlockIdDesc
+
+> **UpdatedBlockIdDesc**: `"UPDATED_BLOCK_ID_DESC"`
+
+Defined in: [src/middleware/types.ts:594](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L594)

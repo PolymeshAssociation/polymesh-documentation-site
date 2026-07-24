@@ -1,0 +1,47 @@
+# Enumeration: PolymeshCommitteeTx
+
+> Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:348
+
+# Enumeration: PolymeshCommitteeTx
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:348
+
+## Enumeration Members
+
+### SetExpiresAfter
+
+> **SetExpiresAfter**: `"polymeshCommittee.setExpiresAfter"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:351
+
+***
+
+### SetReleaseCoordinator
+
+> **SetReleaseCoordinator**: `"polymeshCommittee.setReleaseCoordinator"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:350
+
+***
+
+### SetVoteThreshold
+
+> **SetVoteThreshold**: `"polymeshCommittee.setVoteThreshold"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:349
+
+***
+
+### Vote
+
+> **Vote**: `"polymeshCommittee.vote"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:353
+
+***
+
+### VoteOrPropose
+
+> **VoteOrPropose**: `"polymeshCommittee.voteOrPropose"`
+
+Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:352

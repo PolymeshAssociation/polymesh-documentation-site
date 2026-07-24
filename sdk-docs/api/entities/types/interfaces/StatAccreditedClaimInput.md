@@ -1,0 +1,23 @@
+# Interface: StatAccreditedClaimInput
+
+> Defined in: [src/api/entities/types.ts:266](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L266)
+
+# Interface: StatAccreditedClaimInput
+
+Defined in: [src/api/entities/types.ts:266](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L266)
+
+## Properties
+
+### accredited
+
+> **accredited**: `boolean`
+
+Defined in: [src/api/entities/types.ts:268](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L268)
+
+***
+
+### type
+
+> **type**: [`Accredited`](../enumerations/ClaimType.mdx#accredited)
+
+Defined in: [src/api/entities/types.ts:267](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L267)

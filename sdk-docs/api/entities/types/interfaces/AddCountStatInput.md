@@ -1,0 +1,22 @@
+# Interface: AddCountStatInput
+
+> Defined in: [src/api/entities/types.ts:571](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L571)
+
+# Interface: AddCountStatInput
+
+Defined in: [src/api/entities/types.ts:571](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L571)
+
+## Properties
+
+### count?
+
+> `optional` **count?**: `BigNumber`
+
+Defined in: [src/api/entities/types.ts:578](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L578)
+
+The token holder count value for the stat
+
+#### Note
+
+If not provided when enabling a stat, it will default to zero.
+  If not provided when updating stats, the current value will remain unchanged

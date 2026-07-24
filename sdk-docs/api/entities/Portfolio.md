@@ -1,0 +1,14 @@
+# Entity: Portfolio
+
+> - [Portfolio](classes/Portfolio.mdx)
+
+# Entity: Portfolio
+
+## Classes
+
+- [Portfolio](classes/Portfolio.mdx)
+
+## Interfaces
+
+- [HumanReadable](interfaces/HumanReadable.mdx)
+- [UniqueIdentifiers](interfaces/UniqueIdentifiers.mdx)

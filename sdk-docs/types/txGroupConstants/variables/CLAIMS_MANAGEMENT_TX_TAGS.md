@@ -1,0 +1,18 @@
+# Variable: CLAIMS\_MANAGEMENT\_TX\_TAGS
+
+> > `const` **CLAIMS\_MANAGEMENT\_TX\_TAGS**: \[[`AddClaim`](../../enumerations/IdentityTx.mdx#addclaim), [`RegisterCustomClaimType`](../../enumerations/IdentityTx.mdx#registercustomclaimtype), [`RevokeClaim`](../../enumerations/IdentityTx.mdx#revokeclaim), [`RevokeClaimByIndex`](../../enumerations/IdentityTx.mdx#revokeclaimbyindex)\]
+
+# Variable: CLAIMS\_MANAGEMENT\_TX\_TAGS
+
+> `const` **CLAIMS\_MANAGEMENT\_TX\_TAGS**: \[[`AddClaim`](../../enumerations/IdentityTx.mdx#addclaim), [`RegisterCustomClaimType`](../../enumerations/IdentityTx.mdx#registercustomclaimtype), [`RevokeClaim`](../../enumerations/IdentityTx.mdx#revokeclaim), [`RevokeClaimByIndex`](../../enumerations/IdentityTx.mdx#revokeclaimbyindex)\]
+
+Defined in: [src/types/txGroupConstants.ts:172](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/types/txGroupConstants.ts#L172)
+
+Transaction tags for Claims Management operations
+Contains operations for adding, revoking, and managing identity claims.
+
+Values:
+- TxTags.identity.AddClaim
+- TxTags.identity.RegisterCustomClaimType
+- TxTags.identity.RevokeClaim
+- TxTags.identity.RevokeClaimByIndex

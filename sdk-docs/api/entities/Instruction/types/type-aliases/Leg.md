@@ -1,0 +1,9 @@
+# Type Alias: Leg
+
+> > **Leg** = [`FungibleLeg`](../interfaces/FungibleLeg.mdx) \| [`NftLeg`](../interfaces/NftLeg.mdx) \| [`OffChainLeg`](../interfaces/OffChainLeg.mdx)
+
+# Type Alias: Leg
+
+> **Leg** = [`FungibleLeg`](../interfaces/FungibleLeg.mdx) \| [`NftLeg`](../interfaces/NftLeg.mdx) \| [`OffChainLeg`](../interfaces/OffChainLeg.mdx)
+
+Defined in: [src/api/entities/Instruction/types.ts:94](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L94)

@@ -1,0 +1,23 @@
+# Interface: AssetWithGroup
+
+> Defined in: [src/api/entities/Asset/types.ts:393](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L393)
+
+# Interface: AssetWithGroup
+
+Defined in: [src/api/entities/Asset/types.ts:393](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L393)
+
+## Properties
+
+### asset
+
+> **asset**: [`Asset`](../type-aliases/Asset.mdx)
+
+Defined in: [src/api/entities/Asset/types.ts:394](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L394)
+
+***
+
+### group
+
+> **group**: [`CustomPermissionGroup`](../../../CustomPermissionGroup/classes/CustomPermissionGroup.mdx) \| [`KnownPermissionGroup`](../../../KnownPermissionGroup/classes/KnownPermissionGroup.mdx)
+
+Defined in: [src/api/entities/Asset/types.ts:395](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L395)

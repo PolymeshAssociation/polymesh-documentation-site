@@ -1,0 +1,58 @@
+# Interface: ProcedureAuthorizationStatus
+
+> Defined in: [src/api/procedures/types.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L69)
+
+# Interface: ProcedureAuthorizationStatus
+
+Defined in: [src/api/procedures/types.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L69)
+
+## Properties
+
+### accountFrozen
+
+> **accountFrozen**: `boolean`
+
+Defined in: [src/api/procedures/types.ts:85](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L85)
+
+whether the Account is frozen (i.e. can't perform any transactions)
+
+***
+
+### agentPermissions
+
+> **agentPermissions**: [`CheckPermissionsResult`](../../../entities/types/interfaces/CheckPermissionsResult.mdx)\<[`Identity`](../../../entities/types/enumerations/SignerType.mdx#identity)\>
+
+Defined in: [src/api/procedures/types.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L73)
+
+whether the Identity complies with all required Agent permissions
+
+***
+
+### noIdentity
+
+> **noIdentity**: `boolean`
+
+Defined in: [src/api/procedures/types.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L90)
+
+true only if the Procedure requires an Identity but the signing Account
+  doesn't have one associated
+
+***
+
+### roles
+
+> **roles**: [`CheckRolesResult`](../../../entities/types/interfaces/CheckRolesResult.mdx)
+
+Defined in: [src/api/procedures/types.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L81)
+
+whether the Identity complies with all required Roles
+
+***
+
+### signerPermissions
+
+> **signerPermissions**: [`CheckPermissionsResult`](../../../entities/types/interfaces/CheckPermissionsResult.mdx)\<[`Account`](../../../entities/types/enumerations/SignerType.mdx#account)\>
+
+Defined in: [src/api/procedures/types.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L77)
+
+whether the Account complies with all required Signer permissions
