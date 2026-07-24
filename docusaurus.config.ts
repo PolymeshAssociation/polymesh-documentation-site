@@ -72,13 +72,13 @@ const config: Config = {
         id: 'sdk-docs',
         path: 'sdk-docs',
         routeBasePath: '/sdk-docs',
-        includeCurrentVersion: false,
-        // versions: {
-        //   current: {
-        //     label: '26.0.0-beta.2',
-        //     path: '26.0.0-beta.2',
-        //   },
-        // },
+        includeCurrentVersion: true,
+        versions: {
+          current: {
+            label: '30.0.x',
+          },
+        },
+        lastVersion: 'current',
       },
     ],
     [
@@ -253,6 +253,83 @@ const config: Config = {
             to: '/development/smart-contracts/',
           },
         ],
+      },
+    ],
+    [
+      // Generates AI/LLM-facing files during `yarn build` (postBuild hook):
+      //   /llms.txt        - index of all pages (incl. latest SDK) with .md links
+      //   /llms-full.txt   - full concatenated markdown of the conceptual docs
+      //                      ONLY (SDK excluded to keep it a usable size)
+      //   /<page>.md       - clean per-page markdown for every doc + latest SDK
+      // Docs: https://github.com/rachfop/docusaurus-plugin-llms
+      'docusaurus-plugin-llms',
+      {
+        title: 'Polymesh Developer Documentation',
+        description:
+          'Developer and network documentation for Polymesh, the purpose-built blockchain for regulated assets.',
+        // Sources read from the filesystem. The main docs are included in full;
+        // the SDK reference (its current version, served at /sdk-docs/) is included
+        // as links + per-page .md, but NOT concatenated into llms-full.txt (that
+        // whole TypeDoc tree would dwarf the conceptual docs) - see customLLMFiles.
+        docsDir: [
+          {
+            path: 'docs',
+            routeBasePath: '/',
+            label: 'Developer Documentation',
+          },
+          {
+            path: 'sdk-docs',
+            routeBasePath: '/sdk-docs',
+            label: 'SDK API Reference',
+          },
+        ],
+        generateLLMsTxt: true, // /llms.txt index (main docs + latest SDK links)
+        generateLLMsFullTxt: false, // replaced by the customLLMFiles entry below
+        generateMarkdownFiles: true, // per-page .md for every processed page
+        excludeImports: true,
+        removeDuplicateHeadings: true,
+        // llms-full.txt = the main docs tree only. Scoping the include to `docs/**`
+        // keeps the (very large) TypeDoc SDK reference out of the concatenated file
+        // and is robust to how the SDK is versioned or pathed: anything outside
+        // `docs/` (i.e. the whole `sdk-docs` section) is simply never included, so
+        // there are no SDK-path ignore globs to keep in sync. The SDK still gets
+        // per-page .md and llms.txt links via the docsDir entry above.
+        customLLMFiles: [
+          {
+            filename: 'llms-full.txt',
+            fullContent: true,
+            includePatterns: ['docs/**'],
+            title: 'Polymesh Developer Documentation (full text)',
+            description:
+              'Full concatenated markdown of the Polymesh conceptual/developer docs. For the SDK API, see /llms.txt or https://github.com/PolymeshAssociation/polymesh-sdk',
+          },
+        ],
+      },
+    ],
+    [
+      // Adds a "Copy page" / "Open in ChatGPT|Claude|…" button to each doc page
+      // that exports the page as clean Markdown for pasting into an LLM.
+      // Docs: https://github.com/portdeveloper/docusaurus-plugin-copy-page-button
+      'docusaurus-plugin-copy-page-button',
+      {
+        placement: 'auto', // sidebar on desktop, falls back to the article column
+        enabledActions: [
+          'copy', // copy page as Markdown
+          'view', // open the raw Markdown
+          'chatgpt',
+          'claude',
+          'perplexity',
+          'gemini',
+        ],
+        // generateMarkdownRoutes: this plugin's own .md generator is DISABLED.
+        // Its postBuild treats any final URL segment containing a dot as a file
+        // extension (path.extname("v7.4-to-v8.0") === ".0"), so for the changelog
+        // overview route it readFileSync's the v7.4-to-v8.0/ directory and crashes
+        // with EISDIR. docusaurus-plugin-llms (generateMarkdownFiles: true above)
+        // handles per-page .md instead. (Upstream bug: copy-page-button@0.8.4
+        // getHtmlOutputPath.)
+        generateMarkdownRoutes: false,
+        markdownUrl: true,
       },
     ],
     ...(siteId ? ['docusaurus-plugin-matomo'] : []), // Add Matomo plugin only if siteId exists

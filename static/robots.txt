@@ -1,0 +1,10 @@
+# https://developers.polymesh.network/robots.txt
+# Public developer documentation — crawling and AI indexing are welcome.
+
+User-agent: *
+Allow: /
+
+# AI/LLM index for agents (llmstxt.org standard)
+# See: https://developers.polymesh.network/llms.txt
+
+Sitemap: https://developers.polymesh.network/sitemap.xml

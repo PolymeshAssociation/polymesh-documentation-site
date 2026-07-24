@@ -29,6 +29,7 @@
     "chart.js": "^4.4.7",
     "chartjs-plugin-annotation": "^3.1.0",
     "clsx": "^2.1.1",
+    "docusaurus-plugin-copy-page-button": "^0.8.4",
     "docusaurus-plugin-matomo": "^0.0.8",
     "prism-react-renderer": "^2.4.1",
     "react": "^18.3.1",
@@ -42,6 +43,7 @@
     "@docusaurus/types": "^3.7.0",
     "@types/react": "^18.3.18",
     "bufferutil": "^4.0.9",
+    "docusaurus-plugin-llms": "^0.5.1",
     "dotenv": "^16.4.7",
     "typescript": "~5.2.2",
     "utf-8-validate": "^6.0.5"
