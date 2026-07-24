@@ -18,6 +18,14 @@ This page covers changes to the `Staking` pallet and the new `Validators` pallet
 
 For CLI and node-operation changes (session keys, node keys, pruning), see [Node operators](#node-operators) below, which points to the already-updated operational guides.
 
+**Reading staking state (indexers, dashboards, exchanges)? Start here.** Most of this page is organised by chain internals (extrinsics → events → storage → runtime API), but several v8 changes alter what read-only queries **return** without ever throwing an error — deprecated-but-still-present storage, relocated events, and `Option`-ified maps. Because these don't fail loudly, they surface as missing or stale data in your app rather than a failed call. Review these before upgrading:
+
+- **Exposure reads:** `ErasStakers` / `ErasStakersClipped` are no longer written for post-upgrade eras. Reading them for a current era succeeds but returns empty exposure — migrate to `ErasStakersOverview` + `ErasStakersPaged` (paged). See [section 12](#12-exposure-storage-is-now-paged--old-exposure-maps-are-no-longer-populated).
+- **Event subscriptions:** the permissioning events (including `InvalidatedNominators`) are now emitted by the `Validators` pallet, not `Staking` — a subscription filtered by `section === 'staking'` will miss them. See [section 1](#1-permissioning-calls-events-and-errors-moved-to-validators).
+- **`Payee` reads:** now `OptionQuery` — handle the `None` case (a bond with no payee configured). See [section 12](#12-exposure-storage-is-now-paged--old-exposure-maps-are-no-longer-populated).
+- **Nomination limits:** the `MaxNominations` runtime _constant_ is gone — query the limit via the `StakingApi::nominations_quota(balance)` Runtime API instead (effectively 16). Separately, `MaxNominatorRewardedPerValidator` is replaced by `MaxExposurePageSize` (64) with paging. See [section 11](#11-maxnominations-constant-removed--query-the-limit-via-a-runtime-api) and [section 12](#12-exposure-storage-is-now-paged--old-exposure-maps-are-no-longer-populated).
+- **RPC:** `staking_getCurve` JSON-RPC is removed; the new `StakingApi` methods (`nominations_quota`, `eras_stakers_page_count`, `pending_rewards`) are `state_call`-only, with no JSON-RPC wrapper. See [Runtime APIs & RPC](./120-runtime-apis-and-rpc.mdx#stakingapi--method-set-fully-replaced).
+
 ---
 
 ## Overview
@@ -47,6 +55,8 @@ These calls move from `Staking` to `Validators` (index 16) unchanged in signatur
 The v7.4 `payout_stakers_by_system` call is **not** among them — it is removed entirely in v8, along with the scheduler-driven automatic reward payout it backed. See [section 14](#14-automatic-reward-payout-mechanism).
 
 Along with the events `PermissionedIdentityAdded`, `PermissionedIdentityRemoved`, `InvalidatedNominators`, `SlashingAllowedForChanged`, `RewardPaymentSchedulingInterrupted`, `CommissionCapUpdated`, and errors `StashIdentityDoesNotExist`, `StashIdentityNotPermissioned`, `IdentityIsAlreadyPermissioned`, `IntendedCountIsExceedingConsensusLimit`, `IdentityNotFound`, `ValidatorNotFound`, `CommissionTooHigh`, `CommissionUnchanged`.
+
+These events are now emitted by the `Validators` pallet (index 16), not `Staking`. **Any event subscription filtered by pallet/section name — e.g. `section === 'staking'` — will silently stop seeing them.** Re-point those filters at `Validators`. Note the asymmetry: the extrinsics that a nominator or validator actually signs (`nominate`, `bond`, `validate`, and so on) stay on `Staking`, while these permissioning/administration events moved to `Validators` — so the pallet that emits an event is no longer necessarily the pallet the triggering call lives on.
 
 `Validators` also declares a `Nominated` event, but nothing in v8 actually emits it. The upstream `pallet-staking` doesn't have a nomination event at all, and this Polymesh-specific one (which used to include the nominator's identity) wasn't reintroduced when the pallet split happened. Don't build tooling that waits for it.
 
@@ -141,15 +151,38 @@ Governance-only call; the new parameter caps what share of total issuance can be
 
 `update_permissioned_validator_intended_count` and `chill_from_governance` exist on `Staking` in v7.4; in v8.0 the same-named calls exist only on `Validators` (see #1) — calling them on `Staking` no longer works.
 
-### 11. `MaxNominations` constant removed — limit unchanged, just not queryable
+### 11. `MaxNominations` constant removed — query the limit via a Runtime API
 
-v7.4 exposed `Staking::MaxNominations` as a queryable runtime constant (`= 16`). v8 replaces it with `type NominationsQuota = pallet_staking::FixedNominationsQuota<16>` — the effective limit is still 16 nominations per nominator, but it's no longer exposed as a simple `Get<u32>` constant you can query via the metadata/API. If your tooling reads `api.consts.staking.maxNominations`, hardcode `16` instead (or derive it from documentation, since it's compiled into the runtime rather than queryable) — or call the new `StakingApi::nominations_quota(balance)` Runtime API, which is queryable (see [Runtime APIs & RPC](./120-runtime-apis-and-rpc.mdx#stakingapi--method-set-fully-replaced)).
+v7.4 exposed `Staking::MaxNominations` as a queryable runtime constant (`= 16`). v8 replaces it with `type NominationsQuota = pallet_staking::FixedNominationsQuota<16>` — the effective limit is still 16 nominations per nominator, but it's no longer exposed as a simple `Get<u32>` constant. The limit is still queryable, just through a different mechanism: call the new `StakingApi::nominations_quota(balance)` Runtime API, which is the correct way to read it now (see [Runtime APIs & RPC](./120-runtime-apis-and-rpc.mdx#stakingapi--method-set-fully-replaced)). If your tooling reads `api.consts.staking.maxNominations`, switch to that Runtime API call; the returned value is currently `16` for any balance.
 
-### 12. Other storage and constants
+### 12. Exposure storage is now paged — old exposure maps are no longer populated
 
-New storage backing the paged-exposure model: `ErasStakersOverview`, `ErasStakersPaged`, `ClaimedRewards` (which pages of a validator's era reward have been claimed), `VirtualStakers` and `CounterForVirtualStakers` (accounts that stake without a real bonded balance, e.g. via a pooled-staking design — see the `VirtualStakerNotAllowed` error above), and `MaxStakedRewards` (backing `set_staking_configs` above). `Payee` changes from a `ValueQuery` map (missing entries decode to a default) to an `OptionQuery` map (missing entries decode to `None`) — if you query it directly rather than through a helper, handle the `None` case explicitly now.
+**This is the change most likely to silently break a read-only integration.** v8 adopts the upstream _paged-exposure_ model. The old exposure maps are still present in metadata — so any client that reads them keeps compiling and running — but they are **no longer written for eras after the upgrade**:
 
-Removed storage: `OffendingValidators`, `PermissionedIdentity`, `PolymeshStorageVersion`, `SlashingAllowedFor`, `ValidatorCommissionCap` — all governance/permissioning state that moved to `Validators` (see #1). Removed constants: `FixedYearlyReward`, `MaxNominatorRewardedPerValidator`, `MaxValidatorPerIdentity`, `MaxVariableInflationTotalIssuance` — reward-curve and permissioning parameters that are now owned by `Validators`' config instead. New constants: `MaxExposurePageSize` (64) caps how many nominators fit on one exposure page; `MaxValidatorSet` (1000) caps the validator set size.
+**Deprecated (no longer populated):** `ErasStakers`, `ErasStakersClipped`
+
+These maps remain in metadata for backwards compatibility and still contain data for historical (pre-upgrade) eras, but nothing writes them for eras after the v8 upgrade — the election result now populates only `ErasStakersOverview` + `ErasStakersPaged`. A query against them for a current/active era **succeeds and returns empty exposure** (`others: []`); it does not error. Any logic that reads them to determine nominator↔validator relationships, active-stake amounts, or "am I staking this era" status will silently see nothing for every post-upgrade era.
+
+Migrate all exposure reads to the paged model:
+
+- `ErasStakersOverview(era, validator) -> Option<PagedExposureMetadata>` → `{ total, own, nominator_count, page_count }`
+- `ErasStakersPaged((era, validator, page)) -> Option<ExposurePage>` → `{ page_total, others }`
+
+A validator's nominator set (`others`) is now split across `page_count` pages of at most `MaxExposurePageSize` (64) entries each. To reconstruct a validator's full exposure you must read the overview for `total`/`own` and concatenate `others` from every page (`0 .. page_count`), e.g. via `api.query.staking.erasStakersPaged.entries(era, validator)`.
+
+**Determining whether an account is actively staking in an era:** iterate the elected validators (`ErasStakersOverview.entries(era)`), read each validator's pages from `ErasStakersPaged`, and check whether the stash appears in any page's `others`. Do **not** rely on `ErasStakersClipped.others`, which previously held this and is now empty for current eras. For unpaid-reward detection specifically, prefer the new `StakingApi::pending_rewards(era, account)` Runtime API. (This mirrors what the runtime itself now does: its own exposure check reads `ErasStakersPaged` for current eras and only falls back to `ErasStakers` for pre-upgrade eras.)
+
+#### Other storage
+
+Remaining new storage backing the paged model: `ClaimedRewards` (which pages of a validator's era reward have been claimed), `VirtualStakers` and `CounterForVirtualStakers` (accounts that stake without a real bonded balance, e.g. via a pooled-staking design — see the `VirtualStakerNotAllowed` error above), and `MaxStakedRewards` (backing `set_staking_configs` above). `Payee` changes from a `ValueQuery` map (missing entries decode to a default) to an `OptionQuery` map (missing entries decode to `None`) — reads must now handle the `None` case (a bond with no payee configured), e.g. `.unwrapOrDefault()` or an explicit `isNone` check, rather than assuming a value is always returned. Entries that used to decode to a default now return `None`.
+
+Removed storage: `OffendingValidators`, `PermissionedIdentity`, `PolymeshStorageVersion`, `SlashingAllowedFor`, `ValidatorCommissionCap` — all governance/permissioning state that moved to `Validators` (see #1).
+
+#### Constants
+
+Removed constants: `FixedYearlyReward`, `MaxNominatorRewardedPerValidator`, `MaxValidatorPerIdentity`, `MaxVariableInflationTotalIssuance` — reward-curve and permissioning parameters that are now owned by `Validators`' config instead. New constants: `MaxExposurePageSize` (64) caps how many nominators fit on one exposure page; `MaxValidatorSet` (1000) caps the validator set size.
+
+`MaxExposurePageSize` is the **replacement concept for the removed `MaxNominatorRewardedPerValidator`**. Rather than clipping a validator's rewarded nominators to a single cap, v8 paginates them: a validator with more than 64 nominators now has its exposure — and therefore its reward payout — split across multiple pages of up to 64 each (see [section 7](#7-payoutstarted-event-gains-paging-fields-and-payouts-can-span-multiple-pages)), instead of the excess being clipped off.
 
 ### 13. `Session` pallet: new events, `DisabledValidators` gains severity
 
@@ -190,10 +223,12 @@ See those guides for full steps — this page only covers pallet-level (call/eve
 2. Update `set_controller` calls to drop the `controller` argument — it now only ever resets the controller to the stash. Legacy stashes with a separate controller keep working unmigrated; there's no self-service call to force it, and no planned forced migration.
 3. Update `chill_other` calls to pass a stash instead of a controller.
 4. Move any calls to `add_permissioned_validator`, `remove_permissioned_validator`, `change_slashing_allowed_for`, `update_permissioned_validator_intended_count`, `chill_from_governance`, or `set_commission_cap` from `Staking` to `Validators`. Don't wait on the `Nominated` event — it's declared but never emitted. Also stop calling `payout_stakers_by_system` — it's removed with no replacement (see [section 14](#14-automatic-reward-payout-mechanism)).
-5. If you page through or index validator payouts, switch to `payout_stakers_by_page` and group by `(validator_stash, era_index, page)` rather than assuming one payout per validator per era — handle the new `page`/`next` fields on `PayoutStarted`.
-6. Update `Rewarded` event decoding for the `dest` field replacing `identity`; for a reliable record of which account was actually credited and how much, consume `balances.Deposit` alongside it.
-7. If you hardcode a nomination limit from `Staking::MaxNominations`, note it's no longer queryable — the value (16) is unchanged, just no longer exposed as a runtime constant.
-8. If you query `Staking::Payee` storage directly, handle `None` — it's no longer a `ValueQuery` map.
-9. If you operate a validator node, generate a BEEFY session key and review the [Validator Node Guide](/developer-resources/validator-node-guide/) before upgrading.
+5. Re-point any event subscription filtered by `section === 'staking'`: the permissioning events (`PermissionedIdentityAdded`, `InvalidatedNominators`, `CommissionCapUpdated`, and the rest listed in [section 1](#1-permissioning-calls-events-and-errors-moved-to-validators)) are now emitted by the `Validators` pallet.
+6. Replace `ErasStakers` / `ErasStakersClipped` exposure reads with `ErasStakersOverview` + `ErasStakersPaged` — they still exist in metadata but return empty exposure for every post-upgrade era (see [section 12](#12-exposure-storage-is-now-paged--old-exposure-maps-are-no-longer-populated)). Reconstruct a validator's nominator set by concatenating `others` across all `page_count` pages, and use `StakingApi::pending_rewards`/`eras_stakers_page_count` for reward status.
+7. If you page through or index validator payouts, switch to `payout_stakers_by_page` and group by `(validator_stash, era_index, page)` rather than assuming one payout per validator per era — handle the new `page`/`next` fields on `PayoutStarted`.
+8. Update `Rewarded` event decoding for the `dest` field replacing `identity`; for a reliable record of which account was actually credited and how much, consume `balances.Deposit` alongside it.
+9. If you read the nomination limit from the `Staking::MaxNominations` constant, that constant is gone — the value (16) is unchanged, but query it via the `StakingApi::nominations_quota(balance)` Runtime API instead of a runtime constant.
+10. If you query `Staking::Payee` storage directly, handle `None` — it's no longer a `ValueQuery` map.
+11. If you operate a validator node, generate a BEEFY session key and review the [Validator Node Guide](/developer-resources/validator-node-guide/) before upgrading.
 
 For the complete literal list of every added/removed/modified call, event, error, storage item, and constant on `Staking`, `Validators`, and `Session`, see the [Full Pallet API Reference](./110-pallet-api-reference.mdx). For the `StakingApi` Runtime API changes (`get_curve` removed, `nominations_quota`/`eras_stakers_page_count`/`pending_rewards` added) and the removal of the `staking_getCurve` JSON-RPC method, see [Runtime APIs & RPC](./120-runtime-apis-and-rpc.mdx).

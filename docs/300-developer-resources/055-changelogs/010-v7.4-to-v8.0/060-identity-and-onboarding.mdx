@@ -44,6 +44,8 @@ accept_primary_key(rotation_auth_id: u64)
 rotate_primary_key_to_secondary(auth_id: u64)
 ```
 
+The `Identity` authorization these calls used to consume, `AuthorizationData::AttestPrimaryKeyRotation` (a DID registrar's attestation of a primary-key rotation, formerly a CDD provider's), is now formally deprecated (`#[deprecated(note = "This authorization variant is no longer used")]`). It is **retained in the enum, not removed** (so the variant index is unchanged and pre-upgrade authorizations of this type still decode), but no v8 call creates one and `accept_primary_key` no longer consumes one. The matching `AuthorizationType::AttestPrimaryKeyRotation` is likewise retained-but-deprecated. This is the authorization-layer counterpart to the removed `change_cdd_requirement_for_mk_rotation` call and `CddAuthForPrimaryKeyRotation` storage below — stop issuing this authorization type; new code should not create it.
+
 ### 3. `cdd_register_did` and `cdd_register_did_with_cdd` no longer attach a CDD claim
 
 Both calls are deprecated (`#[deprecated(since = "8.0.0", ...)]`) but still exist and are still registrar-gated. However their behavior changed: in v7.4 they added a `Claim::CustomerDueDiligence` claim as part of registration; in v8 they forward to the same claim-free registration path as `register_did`, so **no claim is added**. `cdd_register_did_with_cdd`'s `_expiry` argument is accepted but ignored. The only remaining reason to call these over `register_did` is that they accept a `secondary_keys` argument. To attach a `CustomerDueDiligence` claim in v8, use `add_claim` (registrar-gated for that claim type) or `gc_add_cdd_claim`.
