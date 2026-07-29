@@ -26,6 +26,7 @@
 - [Mainnet SubQuery GraphQL API](https://mainnet-graphql.polymesh.network/)
 - [Mainnet REST API Swagger Docs](https://mainnet-restapi.polymesh.network/)
 - [Polymesh Explorer (Subscan)](https://polymesh.subscan.io/)
+- Mainnet EVM RPC: [https://mainnet-evm-rpc.polymesh.network](https://mainnet-evm-rpc.polymesh.network)
 
 ## Testnet
 
@@ -36,6 +37,7 @@
 - [Testnet SubQuery GraphQL API](https://testnet-graphql.polymesh.live/)
 - [Testnet REST API Swagger Docs](https://testnet-restapi.polymesh.live/)
 - [Polymesh Testnet Explorer (Subscan)](https://polymesh-testnet.subscan.io/)
+- Testnet EVM RPC: [https://testnet-evm-rpc.polymesh.live](https://testnet-evm-rpc.polymesh.live)
 
 ## Network Apps & Explorers
 

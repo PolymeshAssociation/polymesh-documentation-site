@@ -11,9 +11,9 @@ This file contains links to documentation sections following the llmstxt.org sta
 - [Key Generation](https://polymeshassociation.github.io/polymesh-documentation-site/getting-started/keys.md): Creating and Managing Keys
 - [Onboarding](https://polymeshassociation.github.io/polymesh-documentation-site/getting-started/onboarding.md): Identity onboarding and DID registration
 - [Getting Started Guide](https://polymeshassociation.github.io/polymesh-documentation-site/getting-started.md): Quick start guide for new users
-- [Architecture](https://polymeshassociation.github.io/polymesh-documentation-site/docs/core-concepts/architecture.md): Technical Stack and Consensus Mechanism
+- [Architecture](https://polymeshassociation.github.io/polymesh-documentation-site/architecture.md): Technical Stack and Consensus Mechanism
 - [Network Fees](https://polymeshassociation.github.io/polymesh-documentation-site/polyx/fees.md): Transaction and Protocol Fees
-- [POLYX](https://polymeshassociation.github.io/polymesh-documentation-site/docs/core-concepts/polyx.md): Token Economics and Utility
+- [POLYX](https://polymeshassociation.github.io/polymesh-documentation-site/polyx.md): Token Economics and Utility
 - [Staking](https://polymeshassociation.github.io/polymesh-documentation-site/polyx/staking.md): POLYX Staking Mechanism
 - [Tokenomics](https://polymeshassociation.github.io/polymesh-documentation-site/polyx/tokenomics.md): An in-depth look at how POLYX is issued, utilized, and rewarded on Polymesh
 - [Identity Onboarding](https://polymeshassociation.github.io/polymesh-documentation-site/identity/onboarding.md): DID onboarding and registrar model on Polymesh
@@ -22,32 +22,32 @@ This file contains links to documentation sections following the llmstxt.org sta
 - [Secondary Keys](https://polymeshassociation.github.io/polymesh-documentation-site/identity/advanced/secondary-keys.md): Manage identity access by delegating specific permissions to additional keys while maintaining security and compliance through granular access control
 - [Multisig Walkthrough](https://polymeshassociation.github.io/polymesh-documentation-site/identity/advanced/multisig/walkthrough.md): Step-by-step guide to creating and managing multisigs
 - [Multisigs](https://polymeshassociation.github.io/polymesh-documentation-site/identity/advanced/multisig.md): Create multi-signature structures requiring approval from multiple parties
-- [Authorizations](https://polymeshassociation.github.io/polymesh-documentation-site/docs/core-concepts/identity/advanced/authorizations.md): A secure request-approval framework for managing permissions and delegations between identities and keys
+- [Authorizations](https://polymeshassociation.github.io/polymesh-documentation-site/authorizations.md): A secure request-approval framework for managing permissions and delegations between identities and keys
 - [Subsidized Accounts - Fee Relayer](https://polymeshassociation.github.io/polymesh-documentation-site/accounts/subsidized.md): Enable fee payments on behalf of other accounts
 - [Advanced Identity](https://polymeshassociation.github.io/polymesh-documentation-site/identity/advanced.md): Features for enhanced identity security, delegation, and management
-- [Identity](https://polymeshassociation.github.io/polymesh-documentation-site/docs/core-concepts/identity.md): Identity Management on Polymesh
+- [Identity](https://polymeshassociation.github.io/polymesh-documentation-site/identity.md): Identity Management on Polymesh
 - [Fungible Assets](https://polymeshassociation.github.io/polymesh-documentation-site/core/assets/fungible.md): Fungible Asset Management
 - [Non-Fungible Assets](https://polymeshassociation.github.io/polymesh-documentation-site/core/assets/nft.md): NFT Implementation
 - [Confidential Assets](https://polymeshassociation.github.io/polymesh-documentation-site/core/assets/confidential.md): Private Asset Features
 - [Asset Metadata](https://polymeshassociation.github.io/polymesh-documentation-site/core/assets/metadata.md): Asset Metadata Management
 - [Ownership Transfers](https://polymeshassociation.github.io/polymesh-documentation-site/core/assets/ownership-transfer.md): How to transfer asset and ticker ownership on Polymesh
-- [Asset Agents & Permissions](https://polymeshassociation.github.io/polymesh-documentation-site/docs/core-concepts/assets/asset-agents.md): Managing permissions for asset agents on Polymesh
-- [Security Token Offerings](https://polymeshassociation.github.io/polymesh-documentation-site/docs/core-concepts/assets/sto.md): Create and manage Security Token Offerings (STOs) on Polymesh
+- [Asset Agents & Permissions](https://polymeshassociation.github.io/polymesh-documentation-site/asset-agents.md): Managing permissions for asset agents on Polymesh
+- [Security Token Offerings](https://polymeshassociation.github.io/polymesh-documentation-site/sto.md): Create and manage Security Token Offerings (STOs) on Polymesh
 - [Assets on Polymesh](https://polymeshassociation.github.io/polymesh-documentation-site/core/assets.md): Introduction to Assets on Polymesh
-- [Asset Holdings](https://polymeshassociation.github.io/polymesh-documentation-site/docs/core-concepts/asset-holdings.md): How identities hold assets on Polymesh, via portfolios or directly on an account.
-- [Compliance](https://polymeshassociation.github.io/polymesh-documentation-site/docs/core-concepts/compliance.md): Rules and Restrictions
+- [Asset Holdings](https://polymeshassociation.github.io/polymesh-documentation-site/asset-holdings.md): How identities hold assets on Polymesh, via portfolios or directly on an account.
+- [Compliance](https://polymeshassociation.github.io/polymesh-documentation-site/compliance.md): Rules and Restrictions
 - [Transfer Restrictions](https://polymeshassociation.github.io/polymesh-documentation-site/compliance/transfer-restrictions.md): Rules for limiting asset transfers and ownership on Polymesh.
 - [Trading Venues](https://polymeshassociation.github.io/polymesh-documentation-site/settlement/venues.md): Organizing and controlling settlement instructions through logical groupings
 - [Settlement Mediators](https://polymeshassociation.github.io/polymesh-documentation-site/settlement/mediators.md): Third-party validation and approval in the settlement process
 - [Off-Chain Settlement](https://polymeshassociation.github.io/polymesh-documentation-site/settlement/off-chain.md): Managing and verifying off-chain asset transfers through receipts
-- [Settlement](https://polymeshassociation.github.io/polymesh-documentation-site/docs/core-concepts/settlement.md): Settlement Mechanisms
+- [Settlement](https://polymeshassociation.github.io/polymesh-documentation-site/settlement.md): Settlement Mechanisms
 - [Settlement Sequence Diagrams](https://polymeshassociation.github.io/polymesh-documentation-site/core-concepts/settlement/settlement-diagrams.md): These sequence diagrams provide a detailed overview of the steps involved in the settlement process for Assets. They outline each step comprehensiv...
 - [Checkpoint Management](https://polymeshassociation.github.io/polymesh-documentation-site/corporate-actions/checkpoints.md): Create and manage snapshots of asset holder balances at specific points in time
 - [Capital Distribution](https://polymeshassociation.github.io/polymesh-documentation-site/corporate-actions/distributions.md): Distribute payments to asset holders based on their holdings at a specific point in time
 - [On-Chain Voting](https://polymeshassociation.github.io/polymesh-documentation-site/corporate-actions/on-chain-voting.md): Manage on-chain voting processes for asset holders
-- [Corporate Actions](https://polymeshassociation.github.io/polymesh-documentation-site/docs/core-concepts/corporate-actions.md): Manage on-chain events like distributions and voting related to assets
+- [Corporate Actions](https://polymeshassociation.github.io/polymesh-documentation-site/corporate-actions.md): Manage on-chain events like distributions and voting related to assets
 - [Custody Management](https://polymeshassociation.github.io/polymesh-documentation-site/portfolios/custody.md): Custody Management
-- [Portfolios](https://polymeshassociation.github.io/polymesh-documentation-site/docs/core-concepts/portfolios.md): Polymesh portfolios let users organize, segregate, and control digital assets with flexible permissions.
+- [Portfolios](https://polymeshassociation.github.io/polymesh-documentation-site/portfolios.md): Polymesh portfolios let users organize, segregate, and control digital assets with flexible permissions.
 - [Confidential Assets Architecture](https://polymeshassociation.github.io/polymesh-documentation-site/confidential-assets/architecture.md): Architectural design and components of Polymesh Confidential Assets
 - [Onboarding & Confidential Accounts](https://polymeshassociation.github.io/polymesh-documentation-site/confidential-assets/onboarding-accounts.md): Off-chain key generation and on-chain registration for confidential accounts
 - [Asset Operations](https://polymeshassociation.github.io/polymesh-documentation-site/confidential-assets/asset-operations.md): Create confidential assets, register accounts, and mint balances with a proof service
@@ -56,13 +56,13 @@ This file contains links to documentation sections following the llmstxt.org sta
 - [Anonymous Fee Management](https://polymeshassociation.github.io/polymesh-documentation-site/confidential-assets/anonymous-fees.md): Ensuring unlinkability through the Relayer Flow and Pooled System Account
 - [Comparisons](https://polymeshassociation.github.io/polymesh-documentation-site/confidential-assets/comparisons.md): How Polymesh Confidential Assets compare to other privacy/ZK approaches
 - [Glossary](https://polymeshassociation.github.io/polymesh-documentation-site/confidential-assets/glossary.md): Core cryptographic and protocol terms used in Polymesh Confidential Assets
-- [Confidential Assets](https://polymeshassociation.github.io/polymesh-documentation-site/docs/core-concepts/confidential-assets.md): Privacy-preserving asset transfers with regulatory compliance on Polymesh
-- [Governance](https://polymeshassociation.github.io/polymesh-documentation-site/docs/core-concepts/governance.md): Platform Governance
-- [Polymesh Private](https://polymeshassociation.github.io/polymesh-documentation-site/docs/core-concepts/polymesh-private.md): Overview of Polymesh Private environment and features
+- [Confidential Assets](https://polymeshassociation.github.io/polymesh-documentation-site/confidential-assets.md): Privacy-preserving asset transfers with regulatory compliance on Polymesh
+- [Governance](https://polymeshassociation.github.io/polymesh-documentation-site/governance.md): Platform Governance
+- [Polymesh Private](https://polymeshassociation.github.io/polymesh-documentation-site/polymesh-private.md): Overview of Polymesh Private environment and features
 - [Developer Tooling](https://polymeshassociation.github.io/polymesh-documentation-site/polymesh-private/developer-tooling.md): Developer tooling for Polymesh Private
-- [Glossary](https://polymeshassociation.github.io/polymesh-documentation-site/docs/core-concepts/glossary.md): Term Definitions
+- [Glossary](https://polymeshassociation.github.io/polymesh-documentation-site/glossary.md): Term Definitions
 - [Core Concepts](https://polymeshassociation.github.io/polymesh-documentation-site/core-concepts.md): Key concepts and features of the Polymesh blockchain
-- [Local Development Environment](https://polymeshassociation.github.io/polymesh-documentation-site/development/tooling/local-setup.md): Setting up local development
+- [Local Development Environment](https://polymeshassociation.github.io/polymesh-documentation-site/development/tooling/local-setup.md): Run a complete Polymesh stack locally with Docker Compose, including the node, indexer, REST APIs, Vault, and optional Ethereum JSON-RPC and Blocks...
 - [REST API](https://polymeshassociation.github.io/polymesh-documentation-site/development/tooling/rest-api.md): Interact with the Polymesh blockchain via a standard RESTful API
 - [SubQuery Indexer](https://polymeshassociation.github.io/polymesh-documentation-site/development/tooling/subquery.md): Efficiently query Polymesh blockchain data using the SubQuery indexer and GraphQL API
 - [Polymesh Types](https://polymeshassociation.github.io/polymesh-documentation-site/development/tooling/sdk/types.md): TypeScript type definitions for direct interaction with the Polymesh blockchain
