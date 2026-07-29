@@ -1,0 +1,23 @@
+diff --git a/node_modules/docusaurus-plugin-llms/lib/processor.js b/node_modules/docusaurus-plugin-llms/lib/processor.js
+index 5245f9e..920663b 100644
+--- a/node_modules/docusaurus-plugin-llms/lib/processor.js
++++ b/node_modules/docusaurus-plugin-llms/lib/processor.js
+@@ -333,6 +333,18 @@ async function resolveDocumentUrl(filePath, baseDir, context) {
+                 });
+                 return rootMatch ?? sectionBase;
+             }
++            // An absolute slug (leading "/") declares a route relative to the
++            // docs instance's routeBasePath, so it must be matched directly
++            // against the resolved routes rather than being prefixed with the
++            // file's parent directory. Without this, a page flattened out of
++            // its folder (e.g. `slug: /architecture` inside core-concepts/)
++            // never matches a route and falls back to its raw file path.
++            if (rawSlug.startsWith('/')) {
++                const absMatch = findMatchingRoute(scopedRoutes, rawSlug.replace(/^\/+|\/+$/g, ''));
++                if (absMatch)
++                    return absMatch;
++                continue;
++            }
+             const slug = rawSlug.replace(/^\/+|\/+$/g, '');
+             if (!(0, utils_1.isNonEmptyString)(slug))
+                 continue;

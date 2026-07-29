@@ -13,7 +13,8 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "add-sdk-docs-version": "docusaurus docs:version:sdk-docs",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@docusaurus/core": "^3.10.2",
@@ -45,6 +46,8 @@
     "bufferutil": "^4.0.9",
     "docusaurus-plugin-llms": "^0.5.1",
     "dotenv": "^16.4.7",
+    "patch-package": "^8.0.1",
+    "postinstall-postinstall": "^2.1.0",
     "typescript": "~5.2.2",
     "utf-8-validate": "^6.0.5"
   },
