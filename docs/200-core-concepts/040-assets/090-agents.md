@@ -51,6 +51,10 @@ Polymesh offers several built-in agent groups for common use cases:
 | `PolymeshV1CAA` | Grants permission to all extrinsics in the CorporateAction, CorporateBallot and CapitalDistribution pallets                                                        |
 | `PolymeshV1PIA` | Grants permission to the `issue`, `redeem` and `controller_transfer` extrinsics from the `Asset` pallet and all extrinsics in the STO pallet, except `sto::invest` |
 
+:::warning
+`ExceptMeta` withholds agent management, but it does **not** withhold ownership transfer. Because it excludes only the `ExternalAgents` pallet, an `ExceptMeta` agent is still permitted to call `asset::accept_asset_ownership_transfer`. Such an agent cannot add or remove agents directly, but can transfer ownership of the asset to another identity, which indirectly hands every agent right to the new owner.
+:::
+
 ### Custom Groups
 
 Custom agent groups allow issuers to define highly specific permissions for agents on a per-asset basis.
@@ -103,6 +107,14 @@ When using `Except` at either the pallet or extrinsic level, be aware that futur
 Carefully consider whether to grant access to the `ExternalAgents` pallet when defining custom group permissions. Granting permission to this pallet allows agents to modify agent groups and permissions including their own. To prevent agents from escalating their privileges or altering group membership, it is recommended to **not include** the `ExternalAgents` pallet unless such administrative control is intended.
 :::
 
+:::warning
+Carefully consider whether to grant the `Asset` pallet's `accept_asset_ownership_transfer` extrinsic. An agent permitted to call it can create a `TransferAssetOwnership` authorization that hands the entire asset to another identity.
+
+This permission is easy to grant unintentionally. A group granted the whole `Asset` pallet — a natural shape for an "asset manager" group — includes it, as does any `Except` form at either the pallet or extrinsic level that does not explicitly exclude it. This is distinct from the forward-compatibility concern above: the extrinsic exists today, and is included the moment the group's permissions are broad enough to cover it.
+
+To withhold it, enumerate the permitted extrinsics with `These`, or add `accept_asset_ownership_transfer` to an `Except` list. See [Ownership Transfers](/core/assets/ownership-transfer) for how the permission is evaluated.
+:::
+
 #### Modifying Custom Groups
 
 - Use `externalAgents::set_group_permissions(asset_id, id, perms)` to update the permissions for an existing custom group. This method is identical to the `create_group` method described above but takes an additional `id` parameter for the agent group too be modified.
@@ -143,6 +155,8 @@ When an Identity creates an asset, that Identity is automatically assigned to th
 :::warning Critical Note
 Agent permissions are tied to the asset, not the asset owner's Identity. When asset ownership (control) is transferred to a new Identity, the previous owner is removed as an agent and the new owner is added as a `Full` agent automatically. Other agents and their permissions remain unchanged, so managing agent permissions is still a key step during ownership changes.
 :::
+
+Agents are not only affected by an ownership transfer. A sufficiently permissioned agent can also initiate one. Any agent whose group grants `asset::accept_asset_ownership_transfer`, including all `Full` and `ExceptMeta` agents, can create the authorization that transfers the asset. See [Ownership Transfers](/core/assets/ownership-transfer) for the full details of which identities qualify and when the check is applied.
 
 ## SDK Integration
 

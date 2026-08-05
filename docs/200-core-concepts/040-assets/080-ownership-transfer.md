@@ -15,10 +15,32 @@ Transferring ownership of an asset or a ticker on Polymesh is a critical operati
 
 Asset ownership transfer is a two-step process that uses the Polymesh [Authorizations](/authorizations) framework:
 
-1. **Initiation (Authorization):** The current owner (issuer) initiates a transfer by calling `identity::add_authorization` to create an authorization request of type `TransferAssetOwnership` for the target identity.
+1. **Initiation (Authorization):** The current owner (issuer), or a sufficiently permissioned asset agent, initiates a transfer by calling `identity::add_authorization` to create an authorization request of type `TransferAssetOwnership` for the target identity.
 2. **Acceptance:** The target identity must accept the authorization by calling `asset::accept_asset_ownership_transfer` and providing the associated authorization request ID for the transfer to complete. Until accepted, the transfer can be canceled by the original owner or rejected by the target identity using `identity::remove_authorization`.
 
-Only the current asset owner can initiate a transfer of ownership.
+### Who Can Initiate a Transfer
+
+Asset ownership transfer is not restricted to the current owner. For the transfer to complete, the authorization must have been created by an identity that is a permissioned agent for the asset and whose agent group grants permission for **`asset::accept_asset_ownership_transfer`**:
+
+| Agent group     | Can initiate an asset ownership transfer?                                                            |
+| :-------------- | :--------------------------------------------------------------------------------------------------- |
+| `Full`          | Yes. The current owner always qualifies, as the owner is automatically assigned to the `Full` group. |
+| `ExceptMeta`    | Yes. This group only excludes the `ExternalAgents` pallet, so the `Asset` pallet remains permitted.  |
+| `PolymeshV1PIA` | No. `Asset` pallet access is limited to `issue`, `redeem` and `controller_transfer`.                 |
+| `PolymeshV1CAA` | No. Only the corporate action pallets are permitted.                                                 |
+| Custom group    | Yes, if the group's permissions cover `asset::accept_asset_ownership_transfer`.                      |
+
+Creating the authorization is itself unrestricted: `identity::add_authorization` performs no asset-related validation, so any identity can create a `TransferAssetOwnership` request for any asset. The permission check runs when the recipient accepts, and a request created by an identity without the necessary permission simply fails at that point. A pending `TransferAssetOwnership` request in an identity's inbox is therefore not proof that the sender was entitled to send it.
+
+Because the check uses chain state at acceptance time rather than at creation time, removing the authorizing agent, or moving them to a group that does not grant `asset::accept_asset_ownership_transfer`, before the recipient accepts will invalidate the pending request.
+
+See [Asset Agents & Permissions](/asset-agents) for how agent groups and their permissions are defined.
+
+This applies to asset ownership only. Ticker ownership transfer is checked differently: `asset::accept_ticker_transfer` requires the authorization to have been created by the ticker owner, so agents cannot initiate one.
+
+:::warning
+**Delegating agent permissions broadly can hand over the ability to give the asset away.** Any agent holding permission for **`asset::accept_asset_ownership_transfer`** can initiate a transfer of the entire asset to another identity. Issuers should review which agent groups grant this extrinsic, and which identities belong to them, as part of ongoing asset administration.
+:::
 
 :::info
 If there is a **Ticker** linked to an asset, the ownership of that ticker will also transfer to the new asset owner.
