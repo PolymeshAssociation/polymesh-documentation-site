@@ -6,7 +6,7 @@
 
 > **BecomeAgentAuthorizationData** = `object`
 
-Defined in: [src/api/entities/types.ts:475](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L475)
+Defined in: [src/api/entities/types.ts:469](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L469)
 
 ## Properties
 
@@ -18,10 +18,10 @@ Defined in
 
 [`BecomeAgent`](../enumerations/AuthorizationType.mdx#becomeagent)
 
-[src/api/entities/types.ts:476](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L476)
+[src/api/entities/types.ts:470](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L470)
 
  `value`
 
 [`KnownPermissionGroup`](KnownPermissionGroup.mdx) \| [`CustomPermissionGroup`](CustomPermissionGroup.mdx)
 
-[src/api/entities/types.ts:477](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L477)
+[src/api/entities/types.ts:471](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L471)

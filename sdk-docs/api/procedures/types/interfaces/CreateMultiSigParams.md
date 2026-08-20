@@ -1,10 +1,10 @@
 # Interface: CreateMultiSigParams
 
-> Defined in: [src/api/procedures/types.ts:1873](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1873)
+> Defined in: [src/api/procedures/types.ts:1803](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1803)
 
 # Interface: CreateMultiSigParams
 
-Defined in: [src/api/procedures/types.ts:1873](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1873)
+Defined in: [src/api/procedures/types.ts:1803](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1803)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/procedures/types.ts:1873](https://github.com/PolymeshAssoci
 
 > `optional` **permissions?**: [`PermissionsLike`](../../../entities/types/type-aliases/PermissionsLike.mdx)
 
-Defined in: [src/api/procedures/types.ts:1882](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1882)
+Defined in: [src/api/procedures/types.ts:1812](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1812)
 
 Grants permissions to the MultiSig upon creation. The caller must be the primary key of the Identity for these to work
 
@@ -22,7 +22,7 @@ Grants permissions to the MultiSig upon creation. The caller must be the primary
 
 > **requiredSignatures**: `BigNumber`
 
-Defined in: [src/api/procedures/types.ts:1878](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1878)
+Defined in: [src/api/procedures/types.ts:1808](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1808)
 
 ***
 
@@ -30,8 +30,8 @@ Defined in: [src/api/procedures/types.ts:1878](https://github.com/PolymeshAssoci
 
 > **signers**: [`Signer`](../../../entities/types/type-aliases/Signer.mdx)[]
 
-Defined in: [src/api/procedures/types.ts:1877](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1877)
+Defined in: [src/api/procedures/types.ts:1807](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1807)
 
 #### Note
 
-Signer must be an Account as of v7
+Signer must be an Account

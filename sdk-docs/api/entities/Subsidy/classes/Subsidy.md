@@ -1,10 +1,10 @@
 # Class: Subsidy
 
-> Defined in: [src/api/entities/Subsidy/index.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Subsidy/index.ts#L39)
+> Defined in: [src/api/entities/Subsidy/index.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Subsidy/index.ts#L39)
 
 # Class: Subsidy
 
-Defined in: [src/api/entities/Subsidy/index.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Subsidy/index.ts#L39)
+Defined in: [src/api/entities/Subsidy/index.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Subsidy/index.ts#L39)
 
 Represents a Subsidy relationship on chain
 
@@ -18,7 +18,7 @@ Represents a Subsidy relationship on chain
 
 > **beneficiary**: [`Account`](../../Account/classes/Account.mdx)
 
-Defined in: [src/api/entities/Subsidy/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Subsidy/index.ts#L53)
+Defined in: [src/api/entities/Subsidy/index.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Subsidy/index.ts#L53)
 
 Account whose transactions are being paid for
 
@@ -28,7 +28,7 @@ Account whose transactions are being paid for
 
 > **subsidizer**: [`Account`](../../Account/classes/Account.mdx)
 
-Defined in: [src/api/entities/Subsidy/index.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Subsidy/index.ts#L57)
+Defined in: [src/api/entities/Subsidy/index.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Subsidy/index.ts#L57)
 
 Account that is paying for the transactions
 
@@ -38,7 +38,7 @@ Account that is paying for the transactions
 
 > **uuid**: `string`
 
-Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L46)
+Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L46)
 
 #### Inherited from
 
@@ -50,7 +50,7 @@ Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociati
 
 > **decreaseAllowance**(`args`: `Pick`\<[`DecreaseAllowanceParams`](../../../procedures/types/interfaces/DecreaseAllowanceParams.mdx), `"allowance"`\>, `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Subsidy/index.ts:160](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Subsidy/index.ts#L160)
+Defined in: [src/api/entities/Subsidy/index.ts:160](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Subsidy/index.ts#L160)
 
 Decrease allowance for this Subsidy relationship
 
@@ -89,7 +89,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **exists**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Subsidy/index.ts:165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Subsidy/index.ts#L165)
+Defined in: [src/api/entities/Subsidy/index.ts:165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Subsidy/index.ts#L165)
 
 Determine whether this Subsidy relationship exists on chain
 
@@ -107,7 +107,7 @@ Determine whether this Subsidy relationship exists on chain
 
 > **getAllowance**(): `Promise`\<`BigNumber`\>
 
-Defined in: [src/api/entities/Subsidy/index.ts:184](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Subsidy/index.ts#L184)
+Defined in: [src/api/entities/Subsidy/index.ts:184](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Subsidy/index.ts#L184)
 
 Get amount of POLYX subsidized for this Subsidy relationship
 
@@ -125,7 +125,7 @@ if the Subsidy does not exist
 
 > **increaseAllowance**(`args`: `Pick`\<[`IncreaseAllowanceParams`](../../../procedures/types/interfaces/IncreaseAllowanceParams.mdx), `"allowance"`\>, `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Subsidy/index.ts:151](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Subsidy/index.ts#L151)
+Defined in: [src/api/entities/Subsidy/index.ts:151](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Subsidy/index.ts#L151)
 
 Increase allowance for this Subsidy relationship
 
@@ -160,7 +160,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **isEqual**(`entity`: [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>): `boolean`
 
-Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L61)
+Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L61)
 
 Determine whether this Entity is the same as another one
 
@@ -187,7 +187,7 @@ Type
 
 > **quit**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Subsidy/index.ts:135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Subsidy/index.ts#L135)
+Defined in: [src/api/entities/Subsidy/index.ts:135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Subsidy/index.ts#L135)
 
 Terminate this Subsidy relationship. The beneficiary Account will be forced to pay for their own transactions
 
@@ -218,7 +218,7 @@ this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfa
 
 > **setAllowance**(`args`: `Pick`\<[`SetAllowanceParams`](../../../procedures/types/interfaces/SetAllowanceParams.mdx), `"allowance"`\>, `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Subsidy/index.ts:144](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Subsidy/index.ts#L144)
+Defined in: [src/api/entities/Subsidy/index.ts:144](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Subsidy/index.ts#L144)
 
 Set allowance for this Subsidy relationship
 
@@ -257,7 +257,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **toHuman**(): [`UniqueIdentifiers`](../interfaces/UniqueIdentifiers.mdx)
 
-Defined in: [src/api/entities/Subsidy/index.ts:206](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Subsidy/index.ts#L206)
+Defined in: [src/api/entities/Subsidy/index.ts:206](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Subsidy/index.ts#L206)
 
 Return the Subsidy's static data
 
@@ -275,7 +275,7 @@ Return the Subsidy's static data
 
 > `static` **generateUuid**\<`Identifiers`\>(`identifiers`: `Identifiers`): `string`
 
-Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L14)
+Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L14)
 
 Generate the Entity's UUID from its identifying properties
 
@@ -311,7 +311,7 @@ Description
 
 > `static` **unserialize**\<`Identifiers`\>(`serialized`: `string`): `Identifiers`
 
-Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L23)
+Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L23)
 
 Unserialize a UUID into its Unique Identifiers
 

@@ -1,10 +1,10 @@
 # Interface: StakingNomination
 
-> Defined in: [src/api/entities/Account/types.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L113)
+> Defined in: [src/api/entities/Account/types.ts:148](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/types.ts#L148)
 
 # Interface: StakingNomination
 
-Defined in: [src/api/entities/Account/types.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L113)
+Defined in: [src/api/entities/Account/types.ts:148](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/types.ts#L148)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/Account/types.ts:113](https://github.com/PolymeshA
 
 > **submittedInEra**: `BigNumber`
 
-Defined in: [src/api/entities/Account/types.ts:123](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L123)
+Defined in: [src/api/entities/Account/types.ts:158](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/types.ts#L158)
 
 The era in which the nomination was submitted
 
@@ -26,7 +26,7 @@ nominations only effect future eras (1 era is approximately 1 day)
 
 > **suppressed**: `boolean`
 
-Defined in: [src/api/entities/Account/types.ts:130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L130)
+Defined in: [src/api/entities/Account/types.ts:165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/types.ts#L165)
 
 Nominations maybe suppressed if they fail to meet the minimum bond or validators are over subscribed
 
@@ -40,6 +40,6 @@ nominations are rarely suppressed on Polymesh
 
 > **targets**: [`Account`](../../classes/Account.mdx)[]
 
-Defined in: [src/api/entities/Account/types.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L117)
+Defined in: [src/api/entities/Account/types.ts:152](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/types.ts#L152)
 
 The nominated validators

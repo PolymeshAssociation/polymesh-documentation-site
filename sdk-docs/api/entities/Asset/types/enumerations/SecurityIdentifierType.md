@@ -1,10 +1,10 @@
 # Enumeration: SecurityIdentifierType
 
-> Defined in: [src/api/entities/Asset/types.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L54)
+> Defined in: [src/api/entities/Asset/types.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L54)
 
 # Enumeration: SecurityIdentifierType
 
-Defined in: [src/api/entities/Asset/types.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L54)
+Defined in: [src/api/entities/Asset/types.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L54)
 
 ## Enumeration Members
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/Asset/types.ts:54](https://github.com/PolymeshAsso
 
 > **Cins**: `"Cins"`
 
-Defined in: [src/api/entities/Asset/types.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L57)
+Defined in: [src/api/entities/Asset/types.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L57)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/entities/Asset/types.ts:57](https://github.com/PolymeshAsso
 
 > **Cusip**: `"Cusip"`
 
-Defined in: [src/api/entities/Asset/types.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L56)
+Defined in: [src/api/entities/Asset/types.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L56)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/api/entities/Asset/types.ts:56](https://github.com/PolymeshAsso
 
 > **Figi**: `"Figi"`
 
-Defined in: [src/api/entities/Asset/types.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L59)
+Defined in: [src/api/entities/Asset/types.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L59)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [src/api/entities/Asset/types.ts:59](https://github.com/PolymeshAsso
 
 > **Isin**: `"Isin"`
 
-Defined in: [src/api/entities/Asset/types.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L55)
+Defined in: [src/api/entities/Asset/types.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L55)
 
 ***
 
@@ -44,4 +44,4 @@ Defined in: [src/api/entities/Asset/types.ts:55](https://github.com/PolymeshAsso
 
 > **Lei**: `"Lei"`
 
-Defined in: [src/api/entities/Asset/types.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L58)
+Defined in: [src/api/entities/Asset/types.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L58)

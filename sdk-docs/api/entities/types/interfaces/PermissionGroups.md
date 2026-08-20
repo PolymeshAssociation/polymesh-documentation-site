@@ -1,10 +1,10 @@
 # Interface: PermissionGroups
 
-> Defined in: [src/api/entities/types.ts:716](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L716)
+> Defined in: [src/api/entities/types.ts:700](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L700)
 
 # Interface: PermissionGroups
 
-Defined in: [src/api/entities/types.ts:716](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L716)
+Defined in: [src/api/entities/types.ts:700](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L700)
 
 All Permission Groups of a specific Asset, separated by `known` and `custom`
 
@@ -14,7 +14,7 @@ All Permission Groups of a specific Asset, separated by `known` and `custom`
 
 > **custom**: [`CustomPermissionGroup`](../../CustomPermissionGroup/classes/CustomPermissionGroup.mdx)[]
 
-Defined in: [src/api/entities/types.ts:718](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L718)
+Defined in: [src/api/entities/types.ts:702](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L702)
 
 ***
 
@@ -22,4 +22,4 @@ Defined in: [src/api/entities/types.ts:718](https://github.com/PolymeshAssociati
 
 > **known**: [`KnownPermissionGroup`](../../KnownPermissionGroup/classes/KnownPermissionGroup.mdx)[]
 
-Defined in: [src/api/entities/types.ts:717](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L717)
+Defined in: [src/api/entities/types.ts:701](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L701)

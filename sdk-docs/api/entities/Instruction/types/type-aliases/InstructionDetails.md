@@ -6,7 +6,7 @@
 
 > **InstructionDetails** = `object` & [`InstructionEndCondition`](InstructionEndCondition.mdx)
 
-Defined in: [src/api/entities/Instruction/types.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L45)
+Defined in: [src/api/entities/Instruction/types.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L45)
 
 ## Type Declaration
 
@@ -23,9 +23,9 @@ Date at which the instruction was created
 
 **Note**
 
-From 7.x chain, this value becomes null when instruction has been executed.
+this value becomes null once the Instruction has been executed.
 
-[src/api/entities/Instruction/types.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L51)
+[src/api/entities/Instruction/types.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L51)
 
 `memo`
 
@@ -33,7 +33,7 @@ From 7.x chain, this value becomes null when instruction has been executed.
 
 &hyphen;
 
-[src/api/entities/Instruction/types.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L65)
+[src/api/entities/Instruction/types.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L65)
 
 `status`
 
@@ -41,7 +41,7 @@ From 7.x chain, this value becomes null when instruction has been executed.
 
 &hyphen;
 
-[src/api/entities/Instruction/types.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L46)
+[src/api/entities/Instruction/types.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L46)
 
 `tradeDate`
 
@@ -49,7 +49,7 @@ From 7.x chain, this value becomes null when instruction has been executed.
 
 Date at which the trade was agreed upon (optional, for offchain trades)
 
-[src/api/entities/Instruction/types.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L55)
+[src/api/entities/Instruction/types.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L55)
 
 `valueDate`
 
@@ -57,7 +57,7 @@ Date at which the trade was agreed upon (optional, for offchain trades)
 
 Date at which the trade was executed (optional, for offchain trades)
 
-[src/api/entities/Instruction/types.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L59)
+[src/api/entities/Instruction/types.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L59)
 
 `venue`
 
@@ -67,6 +67,6 @@ Venue to which the Instruction belongs to
 
 **Note**
 
-From 7.x chain, Instructions can be created without a Venue. Hence the possible null value.
+Instructions can be created without a Venue, hence the possible null value.
 
-[src/api/entities/Instruction/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L64)
+[src/api/entities/Instruction/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L64)

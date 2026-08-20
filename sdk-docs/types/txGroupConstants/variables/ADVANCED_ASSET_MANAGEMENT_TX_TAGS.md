@@ -6,7 +6,7 @@
 
 > `const` **ADVANCED\_ASSET\_MANAGEMENT\_TX\_TAGS**: \[[`AcceptAssetOwnershipTransfer`](../../enumerations/AssetTx.mdx#acceptassetownershiptransfer), [`ControllerTransfer`](../../enumerations/AssetTx.mdx#controllertransfer), [`Freeze`](../../enumerations/AssetTx.mdx#freeze), [`Unfreeze`](../../enumerations/AssetTx.mdx#unfreeze), [`ControllerTransfer`](../../enumerations/NftTx.mdx#controllertransfer)\]
 
-Defined in: [src/types/txGroupConstants.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/types/txGroupConstants.ts#L18)
+Defined in: [src/types/txGroupConstants.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/types/txGroupConstants.ts#L27)
 
 Transaction tags for Advanced Asset Management operations
 Contains asset freeze/unfreeze, controller transfer, and NFT management operations.

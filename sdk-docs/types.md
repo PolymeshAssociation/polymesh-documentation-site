@@ -174,7 +174,7 @@ Re-exports [Account](../api/entities/types/type-aliases/Account.mdx)
 
 ### AccountBalance
 
-Re-exports [AccountBalance](../api/entities/Account/types/type-aliases/AccountBalance.mdx)
+Re-exports [AccountBalance](../api/entities/Account/types/interfaces/AccountBalance.mdx)
 
 ***
 
@@ -319,18 +319,6 @@ Re-exports [AddInstructionsParams](../api/procedures/types/interfaces/AddInstruc
 ### AddInstructionWithVenueIdParams
 
 Re-exports [AddInstructionWithVenueIdParams](../api/procedures/types/type-aliases/AddInstructionWithVenueIdParams.mdx)
-
-***
-
-### AddInvestorUniquenessClaimParams
-
-Re-exports [AddInvestorUniquenessClaimParams](../api/procedures/types/interfaces/AddInvestorUniquenessClaimParams.mdx)
-
-***
-
-### AddRelayerPayingKeyAuthorizationData
-
-Re-exports [AddRelayerPayingKeyAuthorizationData](../api/entities/types/type-aliases/AddRelayerPayingKeyAuthorizationData.mdx)
 
 ***
 
@@ -622,12 +610,6 @@ Re-exports [CddClaim](../api/entities/types/interfaces/CddClaim.mdx)
 
 ***
 
-### CddProviderRole
-
-Re-exports [CddProviderRole](../api/procedures/types/interfaces/CddProviderRole.mdx)
-
-***
-
 ### CheckPermissionsResult
 
 Re-exports [CheckPermissionsResult](../api/entities/types/interfaces/CheckPermissionsResult.mdx)
@@ -667,18 +649,6 @@ Re-exports [CheckpointWithData](../api/entities/types/interfaces/CheckpointWithD
 ### CheckRolesResult
 
 Re-exports [CheckRolesResult](../api/entities/types/interfaces/CheckRolesResult.mdx)
-
-***
-
-### ChildIdentity
-
-Re-exports [ChildIdentity](../api/entities/types/type-aliases/ChildIdentity.mdx)
-
-***
-
-### ChildKeyWithAuth
-
-Re-exports [ChildKeyWithAuth](../api/procedures/types/interfaces/ChildKeyWithAuth.mdx)
 
 ***
 
@@ -970,18 +940,6 @@ Re-exports [CreateCheckpointScheduleParams](../api/procedures/types/interfaces/C
 
 ***
 
-### CreateChildIdentitiesParams
-
-Re-exports [CreateChildIdentitiesParams](../api/procedures/types/interfaces/CreateChildIdentitiesParams.mdx)
-
-***
-
-### CreateChildIdentityParams
-
-Re-exports [CreateChildIdentityParams](../api/procedures/types/interfaces/CreateChildIdentityParams.mdx)
-
-***
-
 ### CreateGroupParams
 
 Re-exports [CreateGroupParams](../api/procedures/types/interfaces/CreateGroupParams.mdx)
@@ -1069,6 +1027,12 @@ Re-exports [DefaultPortfolio](../api/entities/types/type-aliases/DefaultPortfoli
 ### DefaultTrustedClaimIssuer
 
 Re-exports [DefaultTrustedClaimIssuer](../api/entities/types/type-aliases/DefaultTrustedClaimIssuer.mdx)
+
+***
+
+### DID\_REGISTRATION\_TX\_TAGS
+
+Re-exports [DID_REGISTRATION_TX_TAGS](txGroupConstants/variables/DID_REGISTRATION_TX_TAGS.mdx)
 
 ***
 
@@ -1426,6 +1390,12 @@ Re-exports [Instruction](../api/entities/types/type-aliases/Instruction.mdx)
 
 ***
 
+### INSTRUCTION\_MEDIATION\_TX\_TAGS
+
+Re-exports [INSTRUCTION_MEDIATION_TX_TAGS](txGroupConstants/variables/INSTRUCTION_MEDIATION_TX_TAGS.mdx)
+
+***
+
 ### InstructionAffirmation
 
 Re-exports [InstructionAffirmation](../api/entities/Instruction/types/interfaces/InstructionAffirmation.mdx)
@@ -1483,6 +1453,12 @@ Re-exports [InstructionNftLeg](../api/procedures/types/interfaces/InstructionNft
 ### InstructionOffChainLeg
 
 Re-exports [InstructionOffChainLeg](../api/procedures/types/interfaces/InstructionOffChainLeg.mdx)
+
+***
+
+### InstructionRelockStatus
+
+Re-exports [InstructionRelockStatus](../api/entities/Instruction/types/interfaces/InstructionRelockStatus.mdx)
 
 ***
 
@@ -1609,6 +1585,18 @@ Re-exports [LaunchOfferingParams](../api/procedures/types/interfaces/LaunchOffer
 ### Leg
 
 Re-exports [Leg](../api/entities/Instruction/types/type-aliases/Leg.mdx)
+
+***
+
+### LegStatus
+
+Re-exports [LegStatus](../api/entities/Instruction/types/type-aliases/LegStatus.mdx)
+
+***
+
+### LegStatusType
+
+Re-exports [LegStatusType](../api/entities/Instruction/types/enumerations/LegStatusType.mdx)
 
 ***
 
@@ -1756,12 +1744,6 @@ Re-exports [ModifyComplianceRequirementParams](../api/procedures/types/type-alia
 
 ***
 
-### ModifyCorporateActionsAgentParams
-
-Re-exports [ModifyCorporateActionsAgentParams](../api/procedures/types/interfaces/ModifyCorporateActionsAgentParams.mdx)
-
-***
-
 ### ModifyCorporateBallotParams
 
 Re-exports [ModifyCorporateBallotParams](../api/procedures/types/type-aliases/ModifyCorporateBallotParams.mdx)
@@ -1783,12 +1765,6 @@ Re-exports [ModifyMultiSigParams](../api/procedures/types/interfaces/ModifyMulti
 ### ModifyOfferingTimesParams
 
 Re-exports [ModifyOfferingTimesParams](../api/procedures/types/type-aliases/ModifyOfferingTimesParams.mdx)
-
-***
-
-### ModifyPrimaryIssuanceAgentParams
-
-Re-exports [ModifyPrimaryIssuanceAgentParams](../api/procedures/types/interfaces/ModifyPrimaryIssuanceAgentParams.mdx)
 
 ***
 
@@ -1891,6 +1867,12 @@ Re-exports [NetworkProperties](../api/client/types/interfaces/NetworkProperties.
 ### NewStatType
 
 Re-exports [NewStatType](../api/entities/types/enumerations/NewStatType.mdx)
+
+***
+
+### NextCheckpoints
+
+Re-exports [NextCheckpoints](../api/entities/Asset/Fungible/Checkpoints/types/interfaces/NextCheckpoints.mdx)
 
 ***
 
@@ -2284,6 +2266,12 @@ Re-exports [RegisterCustomClaimTypeParams](../api/procedures/types/interfaces/Re
 
 ***
 
+### RegisterDidParams
+
+Re-exports [RegisterDidParams](../api/procedures/types/interfaces/RegisterDidParams.mdx)
+
+***
+
 ### RegisterIdentityParams
 
 Re-exports [RegisterIdentityParams](../api/procedures/types/interfaces/RegisterIdentityParams.mdx)
@@ -2299,12 +2287,6 @@ Re-exports [RegisterMetadataParams](../api/procedures/types/type-aliases/Registe
 ### RejectInstructionParams
 
 Re-exports [RejectInstructionParams](../api/procedures/types/type-aliases/RejectInstructionParams.mdx)
-
-***
-
-### RELAYER\_MANAGEMENT\_TX\_TAGS
-
-Re-exports [RELAYER_MANAGEMENT_TX_TAGS](txGroupConstants/variables/RELAYER_MANAGEMENT_TX_TAGS.mdx)
 
 ***
 
@@ -2434,6 +2416,12 @@ Re-exports [ScheduleDetails](../api/entities/CheckpointSchedule/types/interfaces
 
 ***
 
+### ScheduleNextCheckpoint
+
+Re-exports [ScheduleNextCheckpoint](../api/entities/Asset/Fungible/Checkpoints/types/interfaces/ScheduleNextCheckpoint.mdx)
+
+***
+
 ### ScheduleWithDetails
 
 Re-exports [ScheduleWithDetails](../api/entities/types/interfaces/ScheduleWithDetails.mdx)
@@ -2443,12 +2431,6 @@ Re-exports [ScheduleWithDetails](../api/entities/types/interfaces/ScheduleWithDe
 ### Scope
 
 Re-exports [Scope](../api/entities/types/interfaces/Scope.mdx)
-
-***
-
-### ScopeClaimProof
-
-Re-exports [ScopeClaimProof](../api/procedures/types/interfaces/ScopeClaimProof.mdx)
 
 ***
 
@@ -2551,12 +2533,6 @@ Re-exports [SetMultiSigAdminParams](../api/procedures/types/interfaces/SetMultiS
 ### SetPermissionGroupParams
 
 Re-exports [SetPermissionGroupParams](../api/procedures/types/interfaces/SetPermissionGroupParams.mdx)
-
-***
-
-### SetStakingControllerParams
-
-Re-exports [SetStakingControllerParams](../api/procedures/types/interfaces/SetStakingControllerParams.mdx)
 
 ***
 
@@ -2782,6 +2758,12 @@ Re-exports [TickerOwnerRole](../api/procedures/types/interfaces/TickerOwnerRole.
 
 ***
 
+### TickerRegistrationConfig
+
+Re-exports [TickerRegistrationConfig](../api/entities/Asset/types/interfaces/TickerRegistrationConfig.mdx)
+
+***
+
 ### TickerReservation
 
 Re-exports [TickerReservation](../api/entities/types/type-aliases/TickerReservation.mdx)
@@ -2956,12 +2938,6 @@ Re-exports [TransferRestrictionType](../api/procedures/types/enumerations/Transf
 
 ***
 
-### TransferStatus
-
-Re-exports [TransferStatus](../api/entities/Asset/types/enumerations/TransferStatus.mdx)
-
-***
-
 ### TransferTickerOwnershipParams
 
 Re-exports [TransferTickerOwnershipParams](../api/procedures/types/interfaces/TransferTickerOwnershipParams.mdx)
@@ -3013,12 +2989,6 @@ Re-exports [TxGroupParams](../api/procedures/types/interfaces/TxGroupParams.mdx)
 ### UniqueIdentifiers
 
 Re-exports [UniqueIdentifiers](../api/entities/Asset/types/interfaces/UniqueIdentifiers.mdx)
-
-***
-
-### UnlinkChildParams
-
-Re-exports [UnlinkChildParams](../api/procedures/types/interfaces/UnlinkChildParams.mdx)
 
 ***
 
@@ -3079,9 +3049,3 @@ Re-exports [VenueType](../api/entities/Venue/types/enumerations/VenueType.mdx)
 ### WaivePermissionsParams
 
 Re-exports [WaivePermissionsParams](../api/procedures/types/interfaces/WaivePermissionsParams.mdx)
-
-***
-
-### WithdrawInstructionParams
-
-Re-exports [WithdrawInstructionParams](../api/procedures/types/type-aliases/WithdrawInstructionParams.mdx)

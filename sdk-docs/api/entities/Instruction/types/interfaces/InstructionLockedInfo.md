@@ -1,10 +1,10 @@
 # Interface: InstructionLockedInfo
 
-> Defined in: [src/api/entities/Instruction/types.ts:171](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L171)
+> Defined in: [src/api/entities/Instruction/types.ts:209](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L209)
 
 # Interface: InstructionLockedInfo
 
-Defined in: [src/api/entities/Instruction/types.ts:171](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L171)
+Defined in: [src/api/entities/Instruction/types.ts:209](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L209)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/Instruction/types.ts:171](https://github.com/Polym
 
 > **expiry**: `BigNumber` \| `null`
 
-Defined in: [src/api/entities/Instruction/types.ts:183](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L183)
+Defined in: [src/api/entities/Instruction/types.ts:221](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L221)
 
 Time in milliseconds after which the instruction will no longer be locked for execution
 
@@ -22,7 +22,7 @@ Time in milliseconds after which the instruction will no longer be locked for ex
 
 > **isLocked**: `boolean`
 
-Defined in: [src/api/entities/Instruction/types.ts:175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L175)
+Defined in: [src/api/entities/Instruction/types.ts:213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L213)
 
 Whether the instruction is locked for execution
 
@@ -32,7 +32,7 @@ Whether the instruction is locked for execution
 
 > **lockedAt**: `Date` \| `null`
 
-Defined in: [src/api/entities/Instruction/types.ts:179](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L179)
+Defined in: [src/api/entities/Instruction/types.ts:217](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L217)
 
 The date and time when the instruction was locked for execution
 
@@ -42,6 +42,6 @@ The date and time when the instruction was locked for execution
 
 > **unlocksAt**: `Date` \| `null`
 
-Defined in: [src/api/entities/Instruction/types.ts:187](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L187)
+Defined in: [src/api/entities/Instruction/types.ts:225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L225)
 
 The date when the instruction will no longer be locked for execution

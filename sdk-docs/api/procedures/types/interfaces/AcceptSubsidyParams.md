@@ -1,10 +1,10 @@
 # Interface: AcceptSubsidyParams
 
-> Defined in: [src/api/procedures/types.ts:767](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L767)
+> Defined in: [src/api/procedures/types.ts:760](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L760)
 
 # Interface: AcceptSubsidyParams
 
-Defined in: [src/api/procedures/types.ts:767](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L767)
+Defined in: [src/api/procedures/types.ts:760](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L760)
 
 ## Properties
 
@@ -12,6 +12,6 @@ Defined in: [src/api/procedures/types.ts:767](https://github.com/PolymeshAssocia
 
 > **subsidizer**: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
 
-Defined in: [src/api/procedures/types.ts:771](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L771)
+Defined in: [src/api/procedures/types.ts:764](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L764)
 
 Account providing the subsidy

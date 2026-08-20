@@ -6,7 +6,7 @@
 
 > **InstructionsByStatus** = [`GroupedInstructions`](../interfaces/GroupedInstructions.mdx) & `object`
 
-Defined in: [src/api/entities/Instruction/types.ts:153](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L153)
+Defined in: [src/api/entities/Instruction/types.ts:172](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L172)
 
 ## Type Declaration
 
@@ -21,4 +21,4 @@ Defined in
 
 Instructions that have one or more legs already affirmed, but still need to be one or more legs to be affirmed/rejected by the Identity
 
-[src/api/entities/Instruction/types.ts:157](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L157)
+[src/api/entities/Instruction/types.ts:176](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L176)

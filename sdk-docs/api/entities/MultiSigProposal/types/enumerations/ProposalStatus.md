@@ -1,10 +1,10 @@
 # Enumeration: ProposalStatus
 
-> Defined in: [src/api/entities/MultiSigProposal/types.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/types.ts#L6)
+> Defined in: [src/api/entities/MultiSigProposal/types.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/types.ts#L6)
 
 # Enumeration: ProposalStatus
 
-Defined in: [src/api/entities/MultiSigProposal/types.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/types.ts#L6)
+Defined in: [src/api/entities/MultiSigProposal/types.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/types.ts#L6)
 
 ## Enumeration Members
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/MultiSigProposal/types.ts:6](https://github.com/Po
 
 > **Active**: `"Active"`
 
-Defined in: [src/api/entities/MultiSigProposal/types.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/types.ts#L8)
+Defined in: [src/api/entities/MultiSigProposal/types.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/types.ts#L8)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/entities/MultiSigProposal/types.ts:8](https://github.com/Po
 
 > **Expired**: `"Expired"`
 
-Defined in: [src/api/entities/MultiSigProposal/types.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/types.ts#L9)
+Defined in: [src/api/entities/MultiSigProposal/types.ts:9](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/types.ts#L9)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/api/entities/MultiSigProposal/types.ts:9](https://github.com/Po
 
 > **Failed**: `"ExecutionFailed"`
 
-Defined in: [src/api/entities/MultiSigProposal/types.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/types.ts#L11)
+Defined in: [src/api/entities/MultiSigProposal/types.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/types.ts#L11)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [src/api/entities/MultiSigProposal/types.ts:11](https://github.com/P
 
 > **Invalid**: `"Invalid"`
 
-Defined in: [src/api/entities/MultiSigProposal/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/types.ts#L7)
+Defined in: [src/api/entities/MultiSigProposal/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/types.ts#L7)
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: [src/api/entities/MultiSigProposal/types.ts:7](https://github.com/Po
 
 > **Rejected**: `"Rejected"`
 
-Defined in: [src/api/entities/MultiSigProposal/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/types.ts#L12)
+Defined in: [src/api/entities/MultiSigProposal/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/types.ts#L12)
 
 ***
 
@@ -52,4 +52,4 @@ Defined in: [src/api/entities/MultiSigProposal/types.ts:12](https://github.com/P
 
 > **Successful**: `"ExecutionSuccessful"`
 
-Defined in: [src/api/entities/MultiSigProposal/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/types.ts#L10)
+Defined in: [src/api/entities/MultiSigProposal/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/types.ts#L10)

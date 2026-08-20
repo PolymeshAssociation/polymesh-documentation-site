@@ -1,10 +1,10 @@
 # Interface: CreateCheckpointScheduleParams
 
-> Defined in: [src/api/procedures/types.ts:1440](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1440)
+> Defined in: [src/api/procedures/types.ts:1381](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1381)
 
 # Interface: CreateCheckpointScheduleParams
 
-Defined in: [src/api/procedures/types.ts:1440](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1440)
+Defined in: [src/api/procedures/types.ts:1381](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1381)
 
 ## Properties
 
@@ -12,6 +12,6 @@ Defined in: [src/api/procedures/types.ts:1440](https://github.com/PolymeshAssoci
 
 > **points**: `Date`[]
 
-Defined in: [src/api/procedures/types.ts:1444](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1444)
+Defined in: [src/api/procedures/types.ts:1385](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1385)
 
 The points in time in the future for which to create checkpoints for

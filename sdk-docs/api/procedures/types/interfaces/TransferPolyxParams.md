@@ -1,10 +1,10 @@
 # Interface: TransferPolyxParams
 
-> Defined in: [src/api/procedures/types.ts:1046](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1046)
+> Defined in: [src/api/procedures/types.ts:1028](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1028)
 
 # Interface: TransferPolyxParams
 
-Defined in: [src/api/procedures/types.ts:1046](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1046)
+Defined in: [src/api/procedures/types.ts:1028](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1028)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/procedures/types.ts:1046](https://github.com/PolymeshAssoci
 
 > **amount**: `BigNumber`
 
-Defined in: [src/api/procedures/types.ts:1054](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1054)
+Defined in: [src/api/procedures/types.ts:1036](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1036)
 
 amount of POLYX to be transferred
 
@@ -22,7 +22,7 @@ amount of POLYX to be transferred
 
 > `optional` **memo?**: `string`
 
-Defined in: [src/api/procedures/types.ts:1058](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1058)
+Defined in: [src/api/procedures/types.ts:1040](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1040)
 
 identifier string to help differentiate transfers
 
@@ -32,6 +32,6 @@ identifier string to help differentiate transfers
 
 > **to**: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
 
-Defined in: [src/api/procedures/types.ts:1050](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1050)
+Defined in: [src/api/procedures/types.ts:1032](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1032)
 
 Account that will receive the POLYX

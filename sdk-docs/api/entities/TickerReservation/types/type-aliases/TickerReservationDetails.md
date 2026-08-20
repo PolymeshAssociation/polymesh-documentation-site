@@ -6,7 +6,7 @@
 
 > **TickerReservationDetails** = `object` & \{ `status`: [`Free`](../enumerations/TickerReservationStatus.mdx#free) \| [`Reserved`](../enumerations/TickerReservationStatus.mdx#reserved); \} \| \{ `assetId`: `string`; `status`: [`AssetCreated`](../enumerations/TickerReservationStatus.mdx#assetcreated); \}
 
-Defined in: [src/api/entities/TickerReservation/types.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/TickerReservation/types.ts#L18)
+Defined in: [src/api/entities/TickerReservation/types.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/TickerReservation/types.ts#L18)
 
 ## Type Declaration
 
@@ -21,7 +21,7 @@ Defined in
 
 date at which the reservation expires, null if it never expires (permanent reservation or Asset already launched)
 
-[src/api/entities/TickerReservation/types.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/TickerReservation/types.ts#L26)
+[src/api/entities/TickerReservation/types.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/TickerReservation/types.ts#L26)
 
 `owner`
 
@@ -29,4 +29,4 @@ date at which the reservation expires, null if it never expires (permanent reser
 
 Identity ID of the owner of the ticker, null if it hasn't been reserved
 
-[src/api/entities/TickerReservation/types.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/TickerReservation/types.ts#L22)
+[src/api/entities/TickerReservation/types.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/TickerReservation/types.ts#L22)

@@ -6,4 +6,4 @@
 
 > **MultiSigProposal** = [`MultiSigProposal`](../../MultiSigProposal/classes/MultiSigProposal.mdx)
 
-Defined in: [src/api/entities/types.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L49)
+Defined in: [src/api/entities/types.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L48)

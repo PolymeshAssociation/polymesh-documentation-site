@@ -1,10 +1,10 @@
 # Interface: AssetWithGroup
 
-> Defined in: [src/api/entities/Asset/types.ts:393](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L393)
+> Defined in: [src/api/entities/Asset/types.ts:340](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L340)
 
 # Interface: AssetWithGroup
 
-Defined in: [src/api/entities/Asset/types.ts:393](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L393)
+Defined in: [src/api/entities/Asset/types.ts:340](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L340)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/Asset/types.ts:393](https://github.com/PolymeshAss
 
 > **asset**: [`Asset`](../type-aliases/Asset.mdx)
 
-Defined in: [src/api/entities/Asset/types.ts:394](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L394)
+Defined in: [src/api/entities/Asset/types.ts:341](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L341)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/entities/Asset/types.ts:394](https://github.com/PolymeshAss
 
 > **group**: [`CustomPermissionGroup`](../../../CustomPermissionGroup/classes/CustomPermissionGroup.mdx) \| [`KnownPermissionGroup`](../../../KnownPermissionGroup/classes/KnownPermissionGroup.mdx)
 
-Defined in: [src/api/entities/Asset/types.ts:395](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L395)
+Defined in: [src/api/entities/Asset/types.ts:342](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L342)

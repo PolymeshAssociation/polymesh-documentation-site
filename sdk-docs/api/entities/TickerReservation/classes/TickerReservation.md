@@ -1,10 +1,10 @@
 # Class: TickerReservation
 
-> Defined in: [src/api/entities/TickerReservation/index.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/TickerReservation/index.ts#L44)
+> Defined in: [src/api/entities/TickerReservation/index.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/TickerReservation/index.ts#L44)
 
 # Class: TickerReservation
 
-Defined in: [src/api/entities/TickerReservation/index.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/TickerReservation/index.ts#L44)
+Defined in: [src/api/entities/TickerReservation/index.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/TickerReservation/index.ts#L44)
 
 Represents a reserved Asset symbol in the Polymesh blockchain. Ticker reservations expire
   after a set length of time, after which they can be reserved by another Identity.
@@ -20,7 +20,7 @@ Represents a reserved Asset symbol in the Polymesh blockchain. Ticker reservatio
 
 > **ticker**: `string`
 
-Defined in: [src/api/entities/TickerReservation/index.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/TickerReservation/index.ts#L58)
+Defined in: [src/api/entities/TickerReservation/index.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/TickerReservation/index.ts#L58)
 
 reserved ticker
 
@@ -30,7 +30,7 @@ reserved ticker
 
 > **uuid**: `string`
 
-Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L46)
+Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L46)
 
 #### Inherited from
 
@@ -42,7 +42,7 @@ Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociati
 
 > **createAsset**(`args`: [`CreateAssetParams`](../../../procedures/types/interfaces/CreateAssetParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`FungibleAsset`](../../Asset/Fungible/classes/FungibleAsset.mdx), [`FungibleAsset`](../../Asset/Fungible/classes/FungibleAsset.mdx)\>\>
 
-Defined in: [src/api/entities/TickerReservation/index.ts:210](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/TickerReservation/index.ts#L210)
+Defined in: [src/api/entities/TickerReservation/index.ts:210](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/TickerReservation/index.ts#L210)
 
 Create an Asset using the reserved ticker
 
@@ -80,7 +80,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **details**(): `Promise`\<[`TickerReservationDetails`](../types/type-aliases/TickerReservationDetails.mdx)\>
 
-Defined in: [src/api/entities/TickerReservation/index.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/TickerReservation/index.ts#L96)
+Defined in: [src/api/entities/TickerReservation/index.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/TickerReservation/index.ts#L96)
 
 Retrieve the Reservation's owner, expiry date and status
 
@@ -92,7 +92,7 @@ Retrieve the Reservation's owner, expiry date and status
 
 > **details**(`callback`: [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<[`TickerReservationDetails`](../types/type-aliases/TickerReservationDetails.mdx)\>): `Promise`\<[`UnsubCallback`](../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/TickerReservation/index.ts:105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/TickerReservation/index.ts#L105)
+Defined in: [src/api/entities/TickerReservation/index.ts:105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/TickerReservation/index.ts#L105)
 
 Retrieve the Reservation's owner, expiry date and status
 
@@ -122,7 +122,7 @@ can be subscribed to, if connected to node using a web socket
 
 > **exists**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/TickerReservation/index.ts:228](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/TickerReservation/index.ts#L228)
+Defined in: [src/api/entities/TickerReservation/index.ts:228](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/TickerReservation/index.ts#L228)
 
 Determine whether this Ticker Reservation exists on chain
 
@@ -140,7 +140,7 @@ Determine whether this Ticker Reservation exists on chain
 
 > **extend**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`TickerReservation`, `TickerReservation`\>\>
 
-Defined in: [src/api/entities/TickerReservation/index.ts:202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/TickerReservation/index.ts#L202)
+Defined in: [src/api/entities/TickerReservation/index.ts:202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/TickerReservation/index.ts#L202)
 
 Extend the Reservation time period of the ticker for 60 days from now
 to later use it in the creation of an Asset.
@@ -173,7 +173,7 @@ this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfa
 
 > **isEqual**(`entity`: [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>): `boolean`
 
-Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L61)
+Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L61)
 
 Determine whether this Entity is the same as another one
 
@@ -200,7 +200,7 @@ Type
 
 > **toHuman**(): `string`
 
-Defined in: [src/api/entities/TickerReservation/index.ts:247](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/TickerReservation/index.ts#L247)
+Defined in: [src/api/entities/TickerReservation/index.ts:247](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/TickerReservation/index.ts#L247)
 
 Return the Reservation's ticker
 
@@ -218,7 +218,7 @@ Return the Reservation's ticker
 
 > **transferOwnership**(`args`: [`TransferTickerOwnershipParams`](../../../procedures/types/interfaces/TransferTickerOwnershipParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`AuthorizationRequest`](../../AuthorizationRequest/classes/AuthorizationRequest.mdx), [`AuthorizationRequest`](../../AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
 
-Defined in: [src/api/entities/TickerReservation/index.ts:223](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/TickerReservation/index.ts#L223)
+Defined in: [src/api/entities/TickerReservation/index.ts:223](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/TickerReservation/index.ts#L223)
 
 Transfer ownership of the Ticker Reservation to another Identity. This generates an authorization request that must be accepted
   by the target
@@ -261,7 +261,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > `static` **generateUuid**\<`Identifiers`\>(`identifiers`: `Identifiers`): `string`
 
-Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L14)
+Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L14)
 
 Generate the Entity's UUID from its identifying properties
 
@@ -297,7 +297,7 @@ Description
 
 > `static` **unserialize**\<`Identifiers`\>(`serialized`: `string`): `Identifiers`
 
-Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L23)
+Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L23)
 
 Unserialize a UUID into its Unique Identifiers
 

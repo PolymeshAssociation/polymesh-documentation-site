@@ -6,7 +6,7 @@
 
 > **CorporateBallotParams** = `Omit`\<[`CreateBallotParams`](../interfaces/CreateBallotParams.mdx), `"declarationDate"` \| `"rcv"`\> & `object`
 
-Defined in: [src/api/procedures/types.ts:2091](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2091)
+Defined in: [src/api/procedures/types.ts:1962](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1962)
 
 ## Type Declaration
 
@@ -18,10 +18,10 @@ Defined in
 
 `Date`
 
-[src/api/procedures/types.ts:2093](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2093)
+[src/api/procedures/types.ts:1964](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1964)
 
 `rcv`
 
 `boolean`
 
-[src/api/procedures/types.ts:2092](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2092)
+[src/api/procedures/types.ts:1963](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1963)

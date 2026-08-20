@@ -1,10 +1,10 @@
 # Enumeration: MetadataLockStatus
 
-> Defined in: [src/api/entities/MetadataEntry/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MetadataEntry/types.ts#L10)
+> Defined in: [src/api/entities/MetadataEntry/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MetadataEntry/types.ts#L10)
 
 # Enumeration: MetadataLockStatus
 
-Defined in: [src/api/entities/MetadataEntry/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MetadataEntry/types.ts#L10)
+Defined in: [src/api/entities/MetadataEntry/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MetadataEntry/types.ts#L10)
 
 ## Enumeration Members
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/MetadataEntry/types.ts:10](https://github.com/Poly
 
 > **Locked**: `"Locked"`
 
-Defined in: [src/api/entities/MetadataEntry/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MetadataEntry/types.ts#L12)
+Defined in: [src/api/entities/MetadataEntry/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MetadataEntry/types.ts#L12)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/entities/MetadataEntry/types.ts:12](https://github.com/Poly
 
 > **LockedUntil**: `"LockedUntil"`
 
-Defined in: [src/api/entities/MetadataEntry/types.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MetadataEntry/types.ts#L13)
+Defined in: [src/api/entities/MetadataEntry/types.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MetadataEntry/types.ts#L13)
 
 ***
 
@@ -28,4 +28,4 @@ Defined in: [src/api/entities/MetadataEntry/types.ts:13](https://github.com/Poly
 
 > **Unlocked**: `"Unlocked"`
 
-Defined in: [src/api/entities/MetadataEntry/types.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MetadataEntry/types.ts#L11)
+Defined in: [src/api/entities/MetadataEntry/types.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MetadataEntry/types.ts#L11)

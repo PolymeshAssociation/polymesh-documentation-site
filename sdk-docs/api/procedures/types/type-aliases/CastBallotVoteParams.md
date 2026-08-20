@@ -6,7 +6,7 @@
 
 > **CastBallotVoteParams** = `object`
 
-Defined in: [src/api/procedures/types.ts:2102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2102)
+Defined in: [src/api/procedures/types.ts:1973](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1973)
 
 ## Properties
 
@@ -25,4 +25,4 @@ The votes to be cast.
 
 Votes for all motion choices must be provided.
 
-[src/api/procedures/types.ts:2107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2107)
+[src/api/procedures/types.ts:1978](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1978)

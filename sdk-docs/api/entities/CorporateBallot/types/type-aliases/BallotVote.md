@@ -6,7 +6,7 @@
 
 > **BallotVote** = `object`
 
-Defined in: [src/api/entities/CorporateBallot/types.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L21)
+Defined in: [src/api/entities/CorporateBallot/types.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/types.ts#L21)
 
 ## Properties
 
@@ -33,7 +33,7 @@ Must point to a choice in a motion (index of the choice in the motion choices ar
 
 Must not point to the same choice as the `vote` property (index != choiceIndex).
 
-[src/api/entities/CorporateBallot/types.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L33)
+[src/api/entities/CorporateBallot/types.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/types.ts#L33)
 
  `power`
 
@@ -41,4 +41,4 @@ Must not point to the same choice as the `vote` property (index != choiceIndex).
 
 The power of the vote.
 
-[src/api/entities/CorporateBallot/types.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L25)
+[src/api/entities/CorporateBallot/types.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/types.ts#L25)

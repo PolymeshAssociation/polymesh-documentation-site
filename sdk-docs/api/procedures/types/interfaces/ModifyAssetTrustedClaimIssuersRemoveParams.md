@@ -1,10 +1,10 @@
 # Interface: ModifyAssetTrustedClaimIssuersRemoveParams
 
-> Defined in: [src/api/procedures/types.ts:1492](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1492)
+> Defined in: [src/api/procedures/types.ts:1433](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1433)
 
 # Interface: ModifyAssetTrustedClaimIssuersRemoveParams
 
-Defined in: [src/api/procedures/types.ts:1492](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1492)
+Defined in: [src/api/procedures/types.ts:1433](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1433)
 
 ## Properties
 
@@ -12,6 +12,6 @@ Defined in: [src/api/procedures/types.ts:1492](https://github.com/PolymeshAssoci
 
 > **claimIssuers**: (`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx))[]
 
-Defined in: [src/api/procedures/types.ts:1496](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1496)
+Defined in: [src/api/procedures/types.ts:1437](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1437)
 
 array of Identities (or DIDs) of the default claim issuers

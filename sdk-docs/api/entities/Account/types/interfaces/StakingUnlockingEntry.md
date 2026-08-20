@@ -1,10 +1,10 @@
 # Interface: StakingUnlockingEntry
 
-> Defined in: [src/api/entities/Account/types.ts:146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L146)
+> Defined in: [src/api/entities/Account/types.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/types.ts#L181)
 
 # Interface: StakingUnlockingEntry
 
-Defined in: [src/api/entities/Account/types.ts:146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L146)
+Defined in: [src/api/entities/Account/types.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/types.ts#L181)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/Account/types.ts:146](https://github.com/PolymeshA
 
 > **era**: `BigNumber`
 
-Defined in: [src/api/entities/Account/types.ts:148](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L148)
+Defined in: [src/api/entities/Account/types.ts:183](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/types.ts#L183)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/entities/Account/types.ts:148](https://github.com/PolymeshA
 
 > **value**: `BigNumber`
 
-Defined in: [src/api/entities/Account/types.ts:147](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L147)
+Defined in: [src/api/entities/Account/types.ts:182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/types.ts#L182)

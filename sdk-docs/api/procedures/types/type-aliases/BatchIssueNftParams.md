@@ -6,7 +6,7 @@
 
 > **BatchIssueNftParams** = `object`
 
-Defined in: [src/api/procedures/types.ts:1374](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1374)
+Defined in: [src/api/procedures/types.ts:1326](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1326)
 
 ## Properties
 
@@ -21,7 +21,7 @@ Defined in
 
 List of metadata for each NFT to be issued
 
-[src/api/procedures/types.ts:1378](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1378)
+[src/api/procedures/types.ts:1330](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1330)
 
  `portfolioId?`
 
@@ -29,4 +29,4 @@ List of metadata for each NFT to be issued
 
 portfolio to which the NFTCollection will be issued (optional, default is the default portfolio)
 
-[src/api/procedures/types.ts:1382](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1382)
+[src/api/procedures/types.ts:1334](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1334)

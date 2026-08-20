@@ -1,10 +1,10 @@
 # Interface: SingleClaimCondition
 
-> Defined in: [src/api/entities/types.ts:374](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L374)
+> Defined in: [src/api/entities/types.ts:368](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L368)
 
 # Interface: SingleClaimCondition
 
-Defined in: [src/api/entities/types.ts:374](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L374)
+Defined in: [src/api/entities/types.ts:368](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L368)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/types.ts:374](https://github.com/PolymeshAssociati
 
 > **claim**: [`Claim`](../type-aliases/Claim.mdx)
 
-Defined in: [src/api/entities/types.ts:376](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L376)
+Defined in: [src/api/entities/types.ts:370](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L370)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/entities/types.ts:376](https://github.com/PolymeshAssociati
 
 > **type**: [`IsPresent`](../enumerations/ConditionType.mdx#ispresent) \| [`IsAbsent`](../enumerations/ConditionType.mdx#isabsent)
 
-Defined in: [src/api/entities/types.ts:375](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L375)
+Defined in: [src/api/entities/types.ts:369](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L369)

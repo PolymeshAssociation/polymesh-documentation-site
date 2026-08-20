@@ -6,7 +6,7 @@
 
 > **IssueNftParams** = `object`
 
-Defined in: [src/api/procedures/types.ts:1366](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1366)
+Defined in: [src/api/procedures/types.ts:1318](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1318)
 
 ## Properties
 
@@ -21,7 +21,7 @@ Defined in
 
 &hyphen;
 
-[src/api/procedures/types.ts:1367](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1367)
+[src/api/procedures/types.ts:1319](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1319)
 
  `portfolioId?`
 
@@ -29,4 +29,4 @@ Defined in
 
 portfolio to which the NFTCollection will be issued (optional, default is the default portfolio)
 
-[src/api/procedures/types.ts:1371](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1371)
+[src/api/procedures/types.ts:1323](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1323)

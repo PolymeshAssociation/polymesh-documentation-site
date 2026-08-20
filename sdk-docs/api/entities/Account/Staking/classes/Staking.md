@@ -1,10 +1,10 @@
 # Class: Staking
 
-> Defined in: [src/api/entities/Account/Staking/index.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/Staking/index.ts#L26)
+> Defined in: [src/api/entities/Account/Staking/index.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/Staking/index.ts#L26)
 
 # Class: Staking
 
-Defined in: [src/api/entities/Account/Staking/index.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/Staking/index.ts#L26)
+Defined in: [src/api/entities/Account/Staking/index.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/Staking/index.ts#L26)
 
 Handles Account staking related functionality
 
@@ -18,7 +18,7 @@ Handles Account staking related functionality
 
 > **getCommission**(): `Promise`\<[`StakingCommission`](../../types/interfaces/StakingCommission.mdx) \| `null`\>
 
-Defined in: [src/api/entities/Account/Staking/index.ts:252](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/Staking/index.ts#L252)
+Defined in: [src/api/entities/Account/Staking/index.ts:244](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/Staking/index.ts#L244)
 
 Fetch the commission settings for this validator account
 
@@ -36,7 +36,7 @@ The commission details or null if the account is not seeking nominations as a va
 
 > **getController**(): `Promise`\<[`Account`](../../classes/Account.mdx) \| `null`\>
 
-Defined in: [src/api/entities/Account/Staking/index.ts:193](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/Staking/index.ts#L193)
+Defined in: [src/api/entities/Account/Staking/index.ts:185](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/Staking/index.ts#L185)
 
 Fetch the controller associated to this account if there is one
 
@@ -54,7 +54,7 @@ a stash can be its own controller
 
 > **getController**(`callback`: [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<[`Account`](../../classes/Account.mdx) \| `null`\>): `Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/Account/Staking/index.ts:204](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/Staking/index.ts#L204)
+Defined in: [src/api/entities/Account/Staking/index.ts:196](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/Staking/index.ts#L196)
 
 Fetch the controller associated to this account if there is one
 
@@ -90,7 +90,7 @@ a stash can be its own controller
 
 > **getLedger**(): `Promise`\<[`StakingLedger`](../../types/interfaces/StakingLedger.mdx) \| `null`\>
 
-Defined in: [src/api/entities/Account/Staking/index.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/Staking/index.ts#L32)
+Defined in: [src/api/entities/Account/Staking/index.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/Staking/index.ts#L32)
 
 Fetch the ledger information for a stash account
 
@@ -108,7 +108,7 @@ The staking ledger information or null if the account is not a controller
 
 > **getNomination**(): `Promise`\<[`StakingNomination`](../../types/interfaces/StakingNomination.mdx) \| `null`\>
 
-Defined in: [src/api/entities/Account/Staking/index.ts:133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/Staking/index.ts#L133)
+Defined in: [src/api/entities/Account/Staking/index.ts:125](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/Staking/index.ts#L125)
 
 Fetch this account's current nominations
 
@@ -122,7 +122,7 @@ The nomination details or null if the account is not a controller
 
 > **getNomination**(`callback`: [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<[`StakingNomination`](../../types/interfaces/StakingNomination.mdx) \| `null`\>): `Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/Account/Staking/index.ts:143](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/Staking/index.ts#L143)
+Defined in: [src/api/entities/Account/Staking/index.ts:135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/Staking/index.ts#L135)
 
 Fetch this account's current nominations
 
@@ -156,7 +156,7 @@ can be subscribed to, if connected to node using a web socket
 
 > **getPayee**(): `Promise`\<[`StakingPayee`](../../types/interfaces/StakingPayee.mdx) \| `null`\>
 
-Defined in: [src/api/entities/Account/Staking/index.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/Staking/index.ts#L56)
+Defined in: [src/api/entities/Account/Staking/index.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/Staking/index.ts#L56)
 
 Fetch the payee that will receive a stash account's rewards
 
@@ -170,7 +170,7 @@ The payee account or null if the account is not a stash
 
 > **getPayee**(`callback`: [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<[`StakingPayee`](../../types/interfaces/StakingPayee.mdx) \| `null`\>): `Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/Account/Staking/index.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/Staking/index.ts#L66)
+Defined in: [src/api/entities/Account/Staking/index.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/Staking/index.ts#L66)
 
 Fetch the payee that will receive a stash account's rewards
 

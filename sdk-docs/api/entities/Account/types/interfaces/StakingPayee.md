@@ -1,10 +1,10 @@
 # Interface: StakingPayee
 
-> Defined in: [src/api/entities/Account/types.ts:159](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L159)
+> Defined in: [src/api/entities/Account/types.ts:194](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/types.ts#L194)
 
 # Interface: StakingPayee
 
-Defined in: [src/api/entities/Account/types.ts:159](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L159)
+Defined in: [src/api/entities/Account/types.ts:194](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/types.ts#L194)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/Account/types.ts:159](https://github.com/PolymeshA
 
 > **account**: [`Account`](../../classes/Account.mdx)
 
-Defined in: [src/api/entities/Account/types.ts:160](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L160)
+Defined in: [src/api/entities/Account/types.ts:195](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/types.ts#L195)
 
 ***
 
@@ -20,6 +20,6 @@ Defined in: [src/api/entities/Account/types.ts:160](https://github.com/PolymeshA
 
 > **autoStaked**: `boolean`
 
-Defined in: [src/api/entities/Account/types.ts:164](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L164)
+Defined in: [src/api/entities/Account/types.ts:199](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/types.ts#L199)
 
 If true then rewards will be auto staked

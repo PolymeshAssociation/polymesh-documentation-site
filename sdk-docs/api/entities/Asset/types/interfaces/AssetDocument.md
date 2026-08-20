@@ -1,10 +1,10 @@
 # Interface: AssetDocument
 
-> Defined in: [src/api/entities/Asset/types.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L76)
+> Defined in: [src/api/entities/Asset/types.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L76)
 
 # Interface: AssetDocument
 
-Defined in: [src/api/entities/Asset/types.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L76)
+Defined in: [src/api/entities/Asset/types.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L76)
 
 Document attached to a token
 
@@ -18,7 +18,7 @@ Document attached to a token
 
 > `optional` **contentHash?**: `string`
 
-Defined in: [src/api/entities/Asset/types.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L82)
+Defined in: [src/api/entities/Asset/types.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L82)
 
 hex representation of the document (must be prefixed by "0x")
 
@@ -28,7 +28,7 @@ hex representation of the document (must be prefixed by "0x")
 
 > `optional` **filedAt?**: `Date`
 
-Defined in: [src/api/entities/Asset/types.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L84)
+Defined in: [src/api/entities/Asset/types.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L84)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [src/api/entities/Asset/types.ts:84](https://github.com/PolymeshAsso
 
 > **name**: `string`
 
-Defined in: [src/api/entities/Asset/types.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L77)
+Defined in: [src/api/entities/Asset/types.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L77)
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: [src/api/entities/Asset/types.ts:77](https://github.com/PolymeshAsso
 
 > `optional` **type?**: `string`
 
-Defined in: [src/api/entities/Asset/types.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L83)
+Defined in: [src/api/entities/Asset/types.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L83)
 
 ***
 
@@ -52,4 +52,4 @@ Defined in: [src/api/entities/Asset/types.ts:83](https://github.com/PolymeshAsso
 
 > **uri**: `string`
 
-Defined in: [src/api/entities/Asset/types.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L78)
+Defined in: [src/api/entities/Asset/types.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L78)

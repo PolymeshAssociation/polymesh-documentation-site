@@ -1,10 +1,10 @@
 # Interface: TransferRestrictionResult
 
-> Defined in: [src/api/entities/Asset/types.ts:134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L134)
+> Defined in: [src/api/entities/Asset/types.ts:134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L134)
 
 # Interface: TransferRestrictionResult
 
-Defined in: [src/api/entities/Asset/types.ts:134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L134)
+Defined in: [src/api/entities/Asset/types.ts:134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L134)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/Asset/types.ts:134](https://github.com/PolymeshAss
 
 > **restriction**: [`TransferRestriction`](../../../../procedures/types/type-aliases/TransferRestriction.mdx)
 
-Defined in: [src/api/entities/Asset/types.ts:135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L135)
+Defined in: [src/api/entities/Asset/types.ts:135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L135)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/entities/Asset/types.ts:135](https://github.com/PolymeshAss
 
 > **result**: `boolean`
 
-Defined in: [src/api/entities/Asset/types.ts:136](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L136)
+Defined in: [src/api/entities/Asset/types.ts:136](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L136)

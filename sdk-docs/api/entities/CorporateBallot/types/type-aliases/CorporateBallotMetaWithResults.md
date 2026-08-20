@@ -6,7 +6,7 @@
 
 > **CorporateBallotMetaWithResults** = `Omit`\<[`BallotMeta`](../interfaces/BallotMeta.mdx), `"motions"`\> & `object`
 
-Defined in: [src/api/entities/CorporateBallot/types.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L103)
+Defined in: [src/api/entities/CorporateBallot/types.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/types.ts#L103)
 
 ## Type Declaration
 
@@ -21,4 +21,4 @@ Defined in
 
 The motions with their associated choices and votes.
 
-[src/api/entities/CorporateBallot/types.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L107)
+[src/api/entities/CorporateBallot/types.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/types.ts#L107)

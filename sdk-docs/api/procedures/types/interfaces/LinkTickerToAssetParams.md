@@ -1,10 +1,10 @@
 # Interface: LinkTickerToAssetParams
 
-> Defined in: [src/api/procedures/types.ts:1685](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1685)
+> Defined in: [src/api/procedures/types.ts:1615](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1615)
 
 # Interface: LinkTickerToAssetParams
 
-Defined in: [src/api/procedures/types.ts:1685](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1685)
+Defined in: [src/api/procedures/types.ts:1615](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1615)
 
 ## Properties
 
@@ -12,6 +12,6 @@ Defined in: [src/api/procedures/types.ts:1685](https://github.com/PolymeshAssoci
 
 > **ticker**: `string`
 
-Defined in: [src/api/procedures/types.ts:1689](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1689)
+Defined in: [src/api/procedures/types.ts:1619](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1619)
 
 The ticker to attach

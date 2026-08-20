@@ -1,10 +1,10 @@
 # Interface: DistributionPayment
 
-> Defined in: [src/api/entities/types.ts:636](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L636)
+> Defined in: [src/api/entities/types.ts:620](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L620)
 
 # Interface: DistributionPayment
 
-Defined in: [src/api/entities/types.ts:636](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L636)
+Defined in: [src/api/entities/types.ts:620](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L620)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/types.ts:636](https://github.com/PolymeshAssociati
 
 > **amount**: `BigNumber`
 
-Defined in: [src/api/entities/types.ts:641](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L641)
+Defined in: [src/api/entities/types.ts:625](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L625)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/entities/types.ts:641](https://github.com/PolymeshAssociati
 
 > **blockHash**: `string`
 
-Defined in: [src/api/entities/types.ts:638](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L638)
+Defined in: [src/api/entities/types.ts:622](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L622)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/api/entities/types.ts:638](https://github.com/PolymeshAssociati
 
 > **blockNumber**: `BigNumber`
 
-Defined in: [src/api/entities/types.ts:637](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L637)
+Defined in: [src/api/entities/types.ts:621](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L621)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [src/api/entities/types.ts:637](https://github.com/PolymeshAssociati
 
 > **date**: `Date`
 
-Defined in: [src/api/entities/types.ts:639](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L639)
+Defined in: [src/api/entities/types.ts:623](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L623)
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: [src/api/entities/types.ts:639](https://github.com/PolymeshAssociati
 
 > **target**: [`Identity`](../../Identity/classes/Identity.mdx)
 
-Defined in: [src/api/entities/types.ts:640](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L640)
+Defined in: [src/api/entities/types.ts:624](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L624)
 
 ***
 
@@ -52,6 +52,6 @@ Defined in: [src/api/entities/types.ts:640](https://github.com/PolymeshAssociati
 
 > **withheldTax**: `BigNumber`
 
-Defined in: [src/api/entities/types.ts:645](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L645)
+Defined in: [src/api/entities/types.ts:629](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L629)
 
 percentage (0-100) of tax withholding for the `target` identity

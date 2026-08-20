@@ -6,7 +6,7 @@
 
 > **AddBalanceStatParams** = [`AddBalanceStatInput`](AddBalanceStatInput.mdx) & `object`
 
-Defined in: [src/api/procedures/types.ts:508](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L508)
+Defined in: [src/api/procedures/types.ts:506](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L506)
 
 ## Type Declaration
 
@@ -18,4 +18,4 @@ Defined in
 
 [`Balance`](../../../entities/types/enumerations/StatType.mdx#balance)
 
-[src/api/procedures/types.ts:509](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L509)
+[src/api/procedures/types.ts:507](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L507)

@@ -1,9 +1,0 @@
-# Type Alias: AccountBalance
-
-> > **AccountBalance** = [`Balance`](../interfaces/Balance.mdx)
-
-# Type Alias: AccountBalance
-
-> **AccountBalance** = [`Balance`](../interfaces/Balance.mdx)
-
-Defined in: [src/api/entities/Account/types.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/types.ts#L22)

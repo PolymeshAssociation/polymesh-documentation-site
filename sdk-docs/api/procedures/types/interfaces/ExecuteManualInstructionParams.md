@@ -1,10 +1,10 @@
 # Interface: ExecuteManualInstructionParams
 
-> Defined in: [src/api/procedures/types.ts:1259](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1259)
+> Defined in: [src/api/procedures/types.ts:1220](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1220)
 
 # Interface: ExecuteManualInstructionParams
 
-Defined in: [src/api/procedures/types.ts:1259](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1259)
+Defined in: [src/api/procedures/types.ts:1220](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1220)
 
 ## Properties
 
@@ -12,6 +12,6 @@ Defined in: [src/api/procedures/types.ts:1259](https://github.com/PolymeshAssoci
 
 > `optional` **skipAffirmationCheck?**: `boolean`
 
-Defined in: [src/api/procedures/types.ts:1263](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1263)
+Defined in: [src/api/procedures/types.ts:1224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1224)
 
 (optional) Set to `true` to skip affirmation check, useful for batch transactions

@@ -1,10 +1,10 @@
 # Interface: TickerOwnerRole
 
-> Defined in: [src/api/procedures/types.ts:287](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L287)
+> Defined in: [src/api/procedures/types.ts:281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L281)
 
 # Interface: TickerOwnerRole
 
-Defined in: [src/api/procedures/types.ts:287](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L287)
+Defined in: [src/api/procedures/types.ts:281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L281)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/procedures/types.ts:287](https://github.com/PolymeshAssocia
 
 > **ticker**: `string`
 
-Defined in: [src/api/procedures/types.ts:289](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L289)
+Defined in: [src/api/procedures/types.ts:283](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L283)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/procedures/types.ts:289](https://github.com/PolymeshAssocia
 
 > **type**: [`TickerOwner`](../enumerations/RoleType.mdx#tickerowner)
 
-Defined in: [src/api/procedures/types.ts:288](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L288)
+Defined in: [src/api/procedures/types.ts:282](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L282)

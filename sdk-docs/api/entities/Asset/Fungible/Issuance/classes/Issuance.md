@@ -1,10 +1,10 @@
 # Class: Issuance
 
-> Defined in: [src/api/entities/Asset/Fungible/Issuance/index.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/Issuance/index.ts#L8)
+> Defined in: [src/api/entities/Asset/Fungible/Issuance/index.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Issuance/index.ts#L8)
 
 # Class: Issuance
 
-Defined in: [src/api/entities/Asset/Fungible/Issuance/index.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/Issuance/index.ts#L8)
+Defined in: [src/api/entities/Asset/Fungible/Issuance/index.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Issuance/index.ts#L8)
 
 Handles all Asset Issuance related functionality
 
@@ -18,7 +18,7 @@ Handles all Asset Issuance related functionality
 
 > **issue**(`args`: [`IssueTokensParams`](../../../../../procedures/types/interfaces/IssueTokensParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`FungibleAsset`](../../classes/FungibleAsset.mdx), [`FungibleAsset`](../../classes/FungibleAsset.mdx)\>\>
 
-Defined in: [src/api/entities/Asset/Fungible/Issuance/index.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/Issuance/index.ts#L24)
+Defined in: [src/api/entities/Asset/Fungible/Issuance/index.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Issuance/index.ts#L24)
 
 Issue a certain amount of Asset tokens to the caller's default portfolio
 

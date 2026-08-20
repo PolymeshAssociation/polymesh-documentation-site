@@ -1,10 +1,10 @@
 # Interface: Params
 
-> Defined in: [src/api/entities/CorporateBallot/index.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/index.ts#L57)
+> Defined in: [src/api/entities/CorporateBallot/index.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/index.ts#L57)
 
 # Interface: Params
 
-Defined in: [src/api/entities/CorporateBallot/index.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/index.ts#L57)
+Defined in: [src/api/entities/CorporateBallot/index.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/index.ts#L57)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/CorporateBallot/index.ts:57](https://github.com/Po
 
 > **declarationDate**: `Date`
 
-Defined in: [src/api/entities/CorporateBallot/index.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/index.ts#L59)
+Defined in: [src/api/entities/CorporateBallot/index.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/index.ts#L59)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/entities/CorporateBallot/index.ts:59](https://github.com/Po
 
 > **defaultTaxWithholding**: `BigNumber`
 
-Defined in: [src/api/entities/CorporateBallot/index.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/index.ts#L62)
+Defined in: [src/api/entities/CorporateBallot/index.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/index.ts#L62)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/api/entities/CorporateBallot/index.ts:62](https://github.com/Po
 
 > **description**: `string`
 
-Defined in: [src/api/entities/CorporateBallot/index.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/index.ts#L60)
+Defined in: [src/api/entities/CorporateBallot/index.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/index.ts#L60)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [src/api/entities/CorporateBallot/index.ts:60](https://github.com/Po
 
 > **kind**: [`CorporateActionKind`](../../CorporateActionBase/types/enumerations/CorporateActionKind.mdx)
 
-Defined in: [src/api/entities/CorporateBallot/index.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/index.ts#L58)
+Defined in: [src/api/entities/CorporateBallot/index.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/index.ts#L58)
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: [src/api/entities/CorporateBallot/index.ts:58](https://github.com/Po
 
 > **targets**: [`CorporateActionTargets`](../../CorporateActionBase/types/interfaces/CorporateActionTargets.mdx)
 
-Defined in: [src/api/entities/CorporateBallot/index.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/index.ts#L61)
+Defined in: [src/api/entities/CorporateBallot/index.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/index.ts#L61)
 
 ***
 
@@ -52,4 +52,4 @@ Defined in: [src/api/entities/CorporateBallot/index.ts:61](https://github.com/Po
 
 > **taxWithholdings**: [`TaxWithholding`](../../CorporateActionBase/types/interfaces/TaxWithholding.mdx)[]
 
-Defined in: [src/api/entities/CorporateBallot/index.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/index.ts#L63)
+Defined in: [src/api/entities/CorporateBallot/index.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/index.ts#L63)

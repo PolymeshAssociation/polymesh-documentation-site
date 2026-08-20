@@ -8,6 +8,11 @@
 
 - [CaCheckpointType](enumerations/CaCheckpointType.mdx)
 
+## Interfaces
+
+- [NextCheckpoints](interfaces/NextCheckpoints.mdx)
+- [ScheduleNextCheckpoint](interfaces/ScheduleNextCheckpoint.mdx)
+
 ## Type Aliases
 
 - [InputCaCheckpoint](type-aliases/InputCaCheckpoint.mdx)

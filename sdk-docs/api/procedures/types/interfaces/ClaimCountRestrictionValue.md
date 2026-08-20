@@ -1,10 +1,10 @@
 # Interface: ClaimCountRestrictionValue
 
-> Defined in: [src/api/procedures/types.ts:578](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L578)
+> Defined in: [src/api/procedures/types.ts:576](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L576)
 
 # Interface: ClaimCountRestrictionValue
 
-Defined in: [src/api/procedures/types.ts:578](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L578)
+Defined in: [src/api/procedures/types.ts:576](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L576)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/procedures/types.ts:578](https://github.com/PolymeshAssocia
 
 > **claim**: [`InputStatClaim`](../../../entities/types/type-aliases/InputStatClaim.mdx)
 
-Defined in: [src/api/procedures/types.ts:582](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L582)
+Defined in: [src/api/procedures/types.ts:580](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L580)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/procedures/types.ts:582](https://github.com/PolymeshAssocia
 
 > **issuer**: [`Identity`](../../../entities/Identity/classes/Identity.mdx)
 
-Defined in: [src/api/procedures/types.ts:581](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L581)
+Defined in: [src/api/procedures/types.ts:579](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L579)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/api/procedures/types.ts:581](https://github.com/PolymeshAssocia
 
 > `optional` **max?**: `BigNumber`
 
-Defined in: [src/api/procedures/types.ts:580](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L580)
+Defined in: [src/api/procedures/types.ts:578](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L578)
 
 ***
 
@@ -36,4 +36,4 @@ Defined in: [src/api/procedures/types.ts:580](https://github.com/PolymeshAssocia
 
 > **min**: `BigNumber`
 
-Defined in: [src/api/procedures/types.ts:579](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L579)
+Defined in: [src/api/procedures/types.ts:577](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L577)

@@ -1,10 +1,10 @@
 # Enumeration: SignerKeyRingType
 
-> Defined in: [src/api/procedures/types.ts:1180](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1180)
+> Defined in: [src/api/procedures/types.ts:1142](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1142)
 
 # Enumeration: SignerKeyRingType
 
-Defined in: [src/api/procedures/types.ts:1180](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1180)
+Defined in: [src/api/procedures/types.ts:1142](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1142)
 
 ## Enumeration Members
 
@@ -12,7 +12,7 @@ Defined in: [src/api/procedures/types.ts:1180](https://github.com/PolymeshAssoci
 
 > **Ecdsa**: `"Ecdsa"`
 
-Defined in: [src/api/procedures/types.ts:1183](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1183)
+Defined in: [src/api/procedures/types.ts:1145](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1145)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/procedures/types.ts:1183](https://github.com/PolymeshAssoci
 
 > **Ed25519**: `"Ed25519"`
 
-Defined in: [src/api/procedures/types.ts:1181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1181)
+Defined in: [src/api/procedures/types.ts:1143](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1143)
 
 ***
 
@@ -28,4 +28,4 @@ Defined in: [src/api/procedures/types.ts:1181](https://github.com/PolymeshAssoci
 
 > **Sr25519**: `"Sr25519"`
 
-Defined in: [src/api/procedures/types.ts:1182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1182)
+Defined in: [src/api/procedures/types.ts:1144](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1144)

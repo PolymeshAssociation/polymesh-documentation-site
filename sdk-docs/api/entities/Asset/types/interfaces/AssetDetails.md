@@ -1,10 +1,10 @@
 # Interface: AssetDetails
 
-> Defined in: [src/api/entities/Asset/types.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L107)
+> Defined in: [src/api/entities/Asset/types.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L107)
 
 # Interface: AssetDetails
 
-Defined in: [src/api/entities/Asset/types.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L107)
+Defined in: [src/api/entities/Asset/types.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L107)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/Asset/types.ts:107](https://github.com/PolymeshAss
 
 > **assetType**: `string`
 
-Defined in: [src/api/entities/Asset/types.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L108)
+Defined in: [src/api/entities/Asset/types.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L108)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/entities/Asset/types.ts:108](https://github.com/PolymeshAss
 
 > **fullAgents**: [`Identity`](../../../Identity/classes/Identity.mdx)[]
 
-Defined in: [src/api/entities/Asset/types.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L114)
+Defined in: [src/api/entities/Asset/types.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L114)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/api/entities/Asset/types.ts:114](https://github.com/PolymeshAss
 
 > **isDivisible**: `boolean`
 
-Defined in: [src/api/entities/Asset/types.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L110)
+Defined in: [src/api/entities/Asset/types.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L110)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [src/api/entities/Asset/types.ts:110](https://github.com/PolymeshAss
 
 > **name**: `string`
 
-Defined in: [src/api/entities/Asset/types.ts:111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L111)
+Defined in: [src/api/entities/Asset/types.ts:111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L111)
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: [src/api/entities/Asset/types.ts:111](https://github.com/PolymeshAss
 
 > **nonFungible**: `boolean`
 
-Defined in: [src/api/entities/Asset/types.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L109)
+Defined in: [src/api/entities/Asset/types.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L109)
 
 ***
 
@@ -52,7 +52,7 @@ Defined in: [src/api/entities/Asset/types.ts:109](https://github.com/PolymeshAss
 
 > **owner**: [`Identity`](../../../Identity/classes/Identity.mdx)
 
-Defined in: [src/api/entities/Asset/types.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L112)
+Defined in: [src/api/entities/Asset/types.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L112)
 
 ***
 
@@ -60,7 +60,7 @@ Defined in: [src/api/entities/Asset/types.ts:112](https://github.com/PolymeshAss
 
 > `optional` **ticker?**: `string`
 
-Defined in: [src/api/entities/Asset/types.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L115)
+Defined in: [src/api/entities/Asset/types.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L115)
 
 ***
 
@@ -68,4 +68,4 @@ Defined in: [src/api/entities/Asset/types.ts:115](https://github.com/PolymeshAss
 
 > **totalSupply**: `BigNumber`
 
-Defined in: [src/api/entities/Asset/types.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L113)
+Defined in: [src/api/entities/Asset/types.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L113)

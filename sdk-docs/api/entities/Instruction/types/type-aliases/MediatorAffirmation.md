@@ -6,7 +6,7 @@
 
 > **MediatorAffirmation** = `object`
 
-Defined in: [src/api/entities/Instruction/types.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L127)
+Defined in: [src/api/entities/Instruction/types.ts:146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L146)
 
 ## Properties
 
@@ -21,7 +21,7 @@ Defined in
 
 Affirmations may have an expiration time
 
-[src/api/entities/Instruction/types.ts:133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L133)
+[src/api/entities/Instruction/types.ts:152](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L152)
 
  `identity`
 
@@ -29,7 +29,7 @@ Affirmations may have an expiration time
 
 &hyphen;
 
-[src/api/entities/Instruction/types.ts:128](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L128)
+[src/api/entities/Instruction/types.ts:147](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L147)
 
  `status`
 
@@ -37,4 +37,4 @@ Affirmations may have an expiration time
 
 &hyphen;
 
-[src/api/entities/Instruction/types.ts:129](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L129)
+[src/api/entities/Instruction/types.ts:148](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L148)

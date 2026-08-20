@@ -6,7 +6,7 @@
 
 > **ModifyComplianceRequirementParams** = `object`
 
-Defined in: [src/api/procedures/types.ts:1463](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1463)
+Defined in: [src/api/procedures/types.ts:1404](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1404)
 
 ## Properties
 
@@ -23,7 +23,7 @@ array of conditions to replace the existing array of conditions for the requirem
   Conditions within a requirement are *AND* between them. This means that in order
   for a transfer to comply with this requirement, it must fulfill *ALL* conditions
 
-[src/api/procedures/types.ts:1473](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1473)
+[src/api/procedures/types.ts:1414](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1414)
 
  `id`
 
@@ -31,4 +31,4 @@ array of conditions to replace the existing array of conditions for the requirem
 
 ID of the Compliance Requirement
 
-[src/api/procedures/types.ts:1467](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1467)
+[src/api/procedures/types.ts:1408](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1408)

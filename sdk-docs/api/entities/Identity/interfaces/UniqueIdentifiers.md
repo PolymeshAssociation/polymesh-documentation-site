@@ -1,10 +1,10 @@
 # Interface: UniqueIdentifiers
 
-> Defined in: [src/api/entities/Identity/index.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L101)
+> Defined in: [src/api/entities/Identity/index.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L96)
 
 # Interface: UniqueIdentifiers
 
-Defined in: [src/api/entities/Identity/index.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L101)
+Defined in: [src/api/entities/Identity/index.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L96)
 
 Properties that uniquely identify an Identity
 
@@ -14,4 +14,4 @@ Properties that uniquely identify an Identity
 
 > **did**: `string`
 
-Defined in: [src/api/entities/Identity/index.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L102)
+Defined in: [src/api/entities/Identity/index.ts:97](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L97)

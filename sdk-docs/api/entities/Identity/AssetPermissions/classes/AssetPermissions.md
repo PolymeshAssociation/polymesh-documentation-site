@@ -1,10 +1,10 @@
 # Class: AssetPermissions
 
-> Defined in: [src/api/entities/Identity/AssetPermissions.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/AssetPermissions.ts#L82)
+> Defined in: [src/api/entities/Identity/AssetPermissions.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/AssetPermissions.ts#L82)
 
 # Class: AssetPermissions
 
-Defined in: [src/api/entities/Identity/AssetPermissions.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/AssetPermissions.ts#L82)
+Defined in: [src/api/entities/Identity/AssetPermissions.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/AssetPermissions.ts#L82)
 
 Handles all Asset Permissions (External Agents) related functionality on the Identity side
 
@@ -18,7 +18,7 @@ Handles all Asset Permissions (External Agents) related functionality on the Ide
 
 > **checkPermissions**(`args`: `object`): `Promise`\<[`CheckPermissionsResult`](../../../types/interfaces/CheckPermissionsResult.mdx)\<[`Identity`](../../../types/enumerations/SignerType.mdx#identity)\>\>
 
-Defined in: [src/api/entities/Identity/AssetPermissions.ts:135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/AssetPermissions.ts#L135)
+Defined in: [src/api/entities/Identity/AssetPermissions.ts:135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/AssetPermissions.ts#L135)
 
 Check whether this Identity has specific transaction Permissions over an Asset
 
@@ -49,7 +49,7 @@ Type
 
 > **enabledAt**(`__namedParameters`: `object`): `Promise`\<[`EventIdentifier`](../../../../client/types/interfaces/EventIdentifier.mdx) \| `null`\>
 
-Defined in: [src/api/entities/Identity/AssetPermissions.ts:326](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/AssetPermissions.ts#L326)
+Defined in: [src/api/entities/Identity/AssetPermissions.ts:326](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/AssetPermissions.ts#L326)
 
 Retrieve the identifier data (block number, date and event index) of the event that was emitted when this Identity was enabled/added as
   an Agent with permissions over a specific Asset
@@ -85,7 +85,7 @@ there is a possibility that the data is not ready by the time it is requested. I
 
 > **get**(): `Promise`\<[`AssetWithGroup`](../../../Asset/types/interfaces/AssetWithGroup.mdx)[]\>
 
-Defined in: [src/api/entities/Identity/AssetPermissions.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/AssetPermissions.ts#L103)
+Defined in: [src/api/entities/Identity/AssetPermissions.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/AssetPermissions.ts#L103)
 
 Retrieve all the Assets over which this Identity has permissions, with the corresponding Permission Group
 
@@ -99,7 +99,7 @@ Retrieve all the Assets over which this Identity has permissions, with the corre
 
 > **getGroup**(`__namedParameters`: `object`): `Promise`\<[`CustomPermissionGroup`](../../../CustomPermissionGroup/classes/CustomPermissionGroup.mdx) \| [`KnownPermissionGroup`](../../../KnownPermissionGroup/classes/KnownPermissionGroup.mdx)\>
 
-Defined in: [src/api/entities/Identity/AssetPermissions.ts:285](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/AssetPermissions.ts#L285)
+Defined in: [src/api/entities/Identity/AssetPermissions.ts:285](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/AssetPermissions.ts#L285)
 
 Retrieve this Identity's Permission Group for a specific Asset
 
@@ -126,7 +126,7 @@ Type
 
 > **getOperationHistory**(`opts`: `object`): `Promise`\<[`ResultSet`](../../../types/interfaces/ResultSet.mdx)\<[`EventIdentifier`](../../../../client/types/interfaces/EventIdentifier.mdx)\>\>
 
-Defined in: [src/api/entities/Identity/AssetPermissions.ts:370](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/AssetPermissions.ts#L370)
+Defined in: [src/api/entities/Identity/AssetPermissions.ts:370](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/AssetPermissions.ts#L370)
 
 Retrieve all Events triggered by Operations this Identity has performed on a specific Asset
 
@@ -190,7 +190,7 @@ supports pagination
 
 > **setGroup**(`args`: [`SetPermissionGroupParams`](../../../../procedures/types/interfaces/SetPermissionGroupParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`CustomPermissionGroup`](../../../CustomPermissionGroup/classes/CustomPermissionGroup.mdx) \| [`KnownPermissionGroup`](../../../KnownPermissionGroup/classes/KnownPermissionGroup.mdx), [`CustomPermissionGroup`](../../../CustomPermissionGroup/classes/CustomPermissionGroup.mdx) \| [`KnownPermissionGroup`](../../../KnownPermissionGroup/classes/KnownPermissionGroup.mdx)\>\>
 
-Defined in: [src/api/entities/Identity/AssetPermissions.ts:354](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/AssetPermissions.ts#L354)
+Defined in: [src/api/entities/Identity/AssetPermissions.ts:354](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/AssetPermissions.ts#L354)
 
 Assign this Identity to a different Permission Group for a given Asset
 
@@ -221,7 +221,7 @@ this method is of type [ProcedureMethod](../../../../procedures/types/interfaces
 
 > **waive**(`args`: [`WaivePermissionsParams`](../../../../procedures/types/interfaces/WaivePermissionsParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Identity/AssetPermissions.ts:349](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/AssetPermissions.ts#L349)
+Defined in: [src/api/entities/Identity/AssetPermissions.ts:349](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/AssetPermissions.ts#L349)
 
 Abdicate from the current Permissions Group for a given Asset. This means that this Identity will no longer have any permissions over said Asset
 

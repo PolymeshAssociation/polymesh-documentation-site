@@ -6,7 +6,7 @@
 
 > **JoinIdentityAuthorizationData** = `object`
 
-Defined in: [src/api/entities/types.ts:465](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L465)
+Defined in: [src/api/entities/types.ts:459](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L459)
 
 ## Properties
 
@@ -18,10 +18,10 @@ Defined in
 
 [`JoinIdentity`](../enumerations/AuthorizationType.mdx#joinidentity)
 
-[src/api/entities/types.ts:466](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L466)
+[src/api/entities/types.ts:460](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L460)
 
  `value`
 
 [`Permissions`](../interfaces/Permissions.mdx)
 
-[src/api/entities/types.ts:467](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L467)
+[src/api/entities/types.ts:461](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L461)

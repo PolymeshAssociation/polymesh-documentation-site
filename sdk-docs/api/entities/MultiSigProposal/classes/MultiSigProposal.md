@@ -1,10 +1,10 @@
 # Class: MultiSigProposal
 
-> Defined in: [src/api/entities/MultiSigProposal/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/index.ts#L49)
+> Defined in: [src/api/entities/MultiSigProposal/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/index.ts#L49)
 
 # Class: MultiSigProposal
 
-Defined in: [src/api/entities/MultiSigProposal/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/index.ts#L49)
+Defined in: [src/api/entities/MultiSigProposal/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/index.ts#L49)
 
 A proposal for a MultiSig transaction. This is a wrapper around an extrinsic that will be executed when the amount of approvals reaches the signature threshold set on the MultiSig Account
 
@@ -18,7 +18,7 @@ A proposal for a MultiSig transaction. This is a wrapper around an extrinsic tha
 
 > **id**: `BigNumber`
 
-Defined in: [src/api/entities/MultiSigProposal/index.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/index.ts#L51)
+Defined in: [src/api/entities/MultiSigProposal/index.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/index.ts#L51)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [src/api/entities/MultiSigProposal/index.ts:51](https://github.com/P
 
 > **multiSig**: [`MultiSig`](../../Account/MultiSig/classes/MultiSig.mdx)
 
-Defined in: [src/api/entities/MultiSigProposal/index.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/index.ts#L50)
+Defined in: [src/api/entities/MultiSigProposal/index.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/index.ts#L50)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [src/api/entities/MultiSigProposal/index.ts:50](https://github.com/P
 
 > **uuid**: `string`
 
-Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L46)
+Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L46)
 
 #### Inherited from
 
@@ -46,7 +46,7 @@ Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociati
 
 > **approve**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/MultiSigProposal/index.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/index.ts#L92)
+Defined in: [src/api/entities/MultiSigProposal/index.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/index.ts#L92)
 
 Approve this MultiSig proposal
 
@@ -73,7 +73,7 @@ this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfa
 
 > **createdAt**(): `Promise`\<[`EventIdentifier`](../../../client/types/interfaces/EventIdentifier.mdx) \| `null`\>
 
-Defined in: [src/api/entities/MultiSigProposal/index.ts:272](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/index.ts#L272)
+Defined in: [src/api/entities/MultiSigProposal/index.ts:272](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/index.ts#L272)
 
 Retrieve the identifier data (block number, date and event index) of the event that was emitted when this MultiSig Proposal was created
 
@@ -95,7 +95,7 @@ there is a possibility that the data is not ready by the time it is requested. I
 
 > **creator**(): `Promise`\<[`Account`](../../Account/classes/Account.mdx) \| `null`\>
 
-Defined in: [src/api/entities/MultiSigProposal/index.ts:287](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/index.ts#L287)
+Defined in: [src/api/entities/MultiSigProposal/index.ts:287](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/index.ts#L287)
 
 Retrieve the account which created this MultiSig Proposal
 
@@ -117,7 +117,7 @@ there is a possibility that the data is not ready by the time it is requested. I
 
 > **details**(): `Promise`\<[`MultiSigProposalDetails`](../types/interfaces/MultiSigProposalDetails.mdx)\>
 
-Defined in: [src/api/entities/MultiSigProposal/index.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/index.ts#L102)
+Defined in: [src/api/entities/MultiSigProposal/index.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/index.ts#L102)
 
 Fetches the details of the Proposal. This includes the amount of approvals and rejections, the expiry, and details of the wrapped extrinsic
 
@@ -131,7 +131,7 @@ Fetches the details of the Proposal. This includes the amount of approvals and r
 
 > **exists**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/MultiSigProposal/index.ts:168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/index.ts#L168)
+Defined in: [src/api/entities/MultiSigProposal/index.ts:168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/index.ts#L168)
 
 Determines whether this Proposal exists on chain
 
@@ -149,7 +149,7 @@ Determines whether this Proposal exists on chain
 
 > **isEqual**(`entity`: [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>): `boolean`
 
-Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L61)
+Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L61)
 
 Determine whether this Entity is the same as another one
 
@@ -176,7 +176,7 @@ Type
 
 > **reject**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/MultiSigProposal/index.ts:97](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/index.ts#L97)
+Defined in: [src/api/entities/MultiSigProposal/index.ts:97](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/index.ts#L97)
 
 Reject this MultiSig proposal
 
@@ -203,7 +203,7 @@ this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfa
 
 > **toHuman**(): [`HumanReadable`](../interfaces/HumanReadable.mdx)
 
-Defined in: [src/api/entities/MultiSigProposal/index.ts:190](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/index.ts#L190)
+Defined in: [src/api/entities/MultiSigProposal/index.ts:190](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/index.ts#L190)
 
 Returns a human readable representation
 
@@ -221,7 +221,7 @@ Returns a human readable representation
 
 > **votes**(): `Promise`\<[`MultiSigProposalVote`](../types/type-aliases/MultiSigProposalVote.mdx)[]\>
 
-Defined in: [src/api/entities/MultiSigProposal/index.ts:207](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/MultiSigProposal/index.ts#L207)
+Defined in: [src/api/entities/MultiSigProposal/index.ts:207](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/index.ts#L207)
 
 Fetches the individual votes for this MultiSig proposal and their identifier data (block number, date and event index) of the event that was emitted when this MultiSig Proposal Vote was casted
 
@@ -239,7 +239,7 @@ uses the middlewareV2
 
 > `static` **generateUuid**\<`Identifiers`\>(`identifiers`: `Identifiers`): `string`
 
-Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L14)
+Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L14)
 
 Generate the Entity's UUID from its identifying properties
 
@@ -275,7 +275,7 @@ Description
 
 > `static` **isUniqueIdentifiers**(`identifiers`: `unknown`): `boolean`
 
-Defined in: [src/api/entities/Entity.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L42)
+Defined in: [src/api/entities/Entity.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L42)
 
 Typeguard that checks whether the object passed corresponds to the unique identifiers of the class. Must be overridden
 
@@ -305,7 +305,7 @@ object to type check
 
 > `static` **unserialize**\<`Identifiers`\>(`serialized`: `string`): `Identifiers`
 
-Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L23)
+Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L23)
 
 Unserialize a UUID into its Unique Identifiers
 

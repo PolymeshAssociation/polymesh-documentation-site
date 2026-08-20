@@ -1,9 +1,9 @@
 # Type Alias: Role
 
-> > **Role** = [`TickerOwnerRole`](../interfaces/TickerOwnerRole.mdx) \| [`CddProviderRole`](../interfaces/CddProviderRole.mdx) \| [`VenueOwnerRole`](../interfaces/VenueOwnerRole.mdx) \| [`PortfolioCustodianRole`](../interfaces/PortfolioCustodianRole.mdx) \| [`IdentityRole`](../interfaces/IdentityRole.mdx) \| [`DidRegistrarRole`](../interfaces/DidRegistrarRole.mdx)
+> > **Role** = [`TickerOwnerRole`](../interfaces/TickerOwnerRole.mdx) \| [`VenueOwnerRole`](../interfaces/VenueOwnerRole.mdx) \| [`PortfolioCustodianRole`](../interfaces/PortfolioCustodianRole.mdx) \| [`IdentityRole`](../interfaces/IdentityRole.mdx) \| [`DidRegistrarRole`](../interfaces/DidRegistrarRole.mdx)
 
 # Type Alias: Role
 
-> **Role** = [`TickerOwnerRole`](../interfaces/TickerOwnerRole.mdx) \| [`CddProviderRole`](../interfaces/CddProviderRole.mdx) \| [`VenueOwnerRole`](../interfaces/VenueOwnerRole.mdx) \| [`PortfolioCustodianRole`](../interfaces/PortfolioCustodianRole.mdx) \| [`IdentityRole`](../interfaces/IdentityRole.mdx) \| [`DidRegistrarRole`](../interfaces/DidRegistrarRole.mdx)
+> **Role** = [`TickerOwnerRole`](../interfaces/TickerOwnerRole.mdx) \| [`VenueOwnerRole`](../interfaces/VenueOwnerRole.mdx) \| [`PortfolioCustodianRole`](../interfaces/PortfolioCustodianRole.mdx) \| [`IdentityRole`](../interfaces/IdentityRole.mdx) \| [`DidRegistrarRole`](../interfaces/DidRegistrarRole.mdx)
 
-Defined in: [src/api/procedures/types.ts:322](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L322)
+Defined in: [src/api/procedures/types.ts:312](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L312)

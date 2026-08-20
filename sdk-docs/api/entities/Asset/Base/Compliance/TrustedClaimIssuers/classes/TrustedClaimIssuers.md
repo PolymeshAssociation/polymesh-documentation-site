@@ -1,10 +1,10 @@
 # Class: TrustedClaimIssuers
 
-> Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L26)
+> Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L26)
 
 # Class: TrustedClaimIssuers
 
-Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L26)
+Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L26)
 
 Handles all Asset Default Trusted Claim Issuers related functionality
 
@@ -18,7 +18,7 @@ Handles all Asset Default Trusted Claim Issuers related functionality
 
 > **add**(`args`: [`ModifyAssetTrustedClaimIssuersAddSetParams`](../../../../../../procedures/types/interfaces/ModifyAssetTrustedClaimIssuersAddSetParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L84)
+Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L84)
 
 Add the supplied Identities to the Asset's list of trusted claim issuers
 
@@ -51,7 +51,7 @@ this method is of type [ProcedureMethod](../../../../../../procedures/types/inte
 
 > **get**(): `Promise`\<[`TrustedClaimIssuer`](../../../../../types/interfaces/TrustedClaimIssuer.mdx)\<`true`\>[]\>
 
-Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L96)
+Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L96)
 
 Retrieve the current Default Trusted Claim Issuers of the Asset
 
@@ -65,7 +65,7 @@ Promise that resolves to the list of default trusted claim issuers
 
 > **get**(`callback`: [`SubCallback`](../../../../../types/type-aliases/SubCallback.mdx)\<[`TrustedClaimIssuer`](../../../../../types/interfaces/TrustedClaimIssuer.mdx)\<`true`\>[]\>): `Promise`\<[`UnsubCallback`](../../../../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L106)
+Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L106)
 
 Retrieve the current Default Trusted Claim Issuers of the Asset
 
@@ -97,7 +97,7 @@ can be subscribed to, if connected to node using a web socket
 
 > **remove**(`args`: [`ModifyAssetTrustedClaimIssuersRemoveParams`](../../../../../../procedures/types/interfaces/ModifyAssetTrustedClaimIssuersRemoveParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L89)
+Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L89)
 
 Remove the supplied Identities from the Asset's list of trusted claim issuers   *
 
@@ -128,7 +128,7 @@ this method is of type [ProcedureMethod](../../../../../../procedures/types/inte
 
 > **set**(`args`: [`ModifyAssetTrustedClaimIssuersAddSetParams`](../../../../../../procedures/types/interfaces/ModifyAssetTrustedClaimIssuersAddSetParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:79](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L79)
+Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:79](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L79)
 
 Assign a new default list of trusted claim issuers to the Asset by replacing the existing ones with the list passed as a parameter
 

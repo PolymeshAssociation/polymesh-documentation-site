@@ -1,10 +1,10 @@
 # Interface: RenamePortfolioParams
 
-> Defined in: [src/api/procedures/types.ts:1810](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1810)
+> Defined in: [src/api/procedures/types.ts:1740](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1740)
 
 # Interface: RenamePortfolioParams
 
-Defined in: [src/api/procedures/types.ts:1810](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1810)
+Defined in: [src/api/procedures/types.ts:1740](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1740)
 
 ## Properties
 
@@ -12,4 +12,4 @@ Defined in: [src/api/procedures/types.ts:1810](https://github.com/PolymeshAssoci
 
 > **name**: `string`
 
-Defined in: [src/api/procedures/types.ts:1811](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1811)
+Defined in: [src/api/procedures/types.ts:1741](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1741)

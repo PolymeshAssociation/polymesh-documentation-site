@@ -1,10 +1,10 @@
 # Interface: PolkadotConfig
 
-> Defined in: [src/api/client/types.ts:146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L146)
+> Defined in: [src/api/client/types.ts:145](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L145)
 
 # Interface: PolkadotConfig
 
-Defined in: [src/api/client/types.ts:146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L146)
+Defined in: [src/api/client/types.ts:145](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L145)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/client/types.ts:146](https://github.com/PolymeshAssociation
 
 > `optional` **metadata?**: `Record`\<`string`, `` `0x${string}` ``\>
 
-Defined in: [src/api/client/types.ts:165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L165)
+Defined in: [src/api/client/types.ts:164](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L164)
 
 provide a locally saved metadata file for a modestly fast startup time (e.g. 1 second when provided, 1.5 seconds without).
 
@@ -25,6 +25,8 @@ if not provided the SDK will read the needed data from chain during startup
 format is key as genesis hash and spec version and the value hex encoded chain metadata
 
 #### Example
+
+**creating valid metadata**
 
 ```ts
 const meta = _polkadotApi.runtimeMetadata.toHex();
@@ -42,7 +44,7 @@ const metadata = {
 
 > `optional` **noInitWarn?**: `boolean`
 
-Defined in: [src/api/client/types.ts:170](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L170)
+Defined in: [src/api/client/types.ts:169](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L169)
 
 set to `true` to disable polkadot start up warnings
 
@@ -52,7 +54,7 @@ set to `true` to disable polkadot start up warnings
 
 > `optional` **typesBundle?**: `OverrideBundleType`
 
-Defined in: [src/api/client/types.ts:177](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L177)
+Defined in: [src/api/client/types.ts:176](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L176)
 
 allows for types to be provided for multiple chain specs at once
 

@@ -1,10 +1,10 @@
 # Class: AccountManagement
 
-> Defined in: [src/api/client/AccountManagement.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L52)
+> Defined in: [src/api/client/AccountManagement.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L52)
 
 # Class: AccountManagement
 
-Defined in: [src/api/client/AccountManagement.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L52)
+Defined in: [src/api/client/AccountManagement.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L52)
 
 Handles functionality related to Account Management
 
@@ -14,7 +14,7 @@ Handles functionality related to Account Management
 
 > **acceptPrimaryKey**(`args`: [`AcceptPrimaryKeyRotationParams`](../../../procedures/types/interfaces/AcceptPrimaryKeyRotationParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/AccountManagement.ts:383](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L383)
+Defined in: [src/api/client/AccountManagement.ts:364](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L364)
 
 Accepts the authorization to become the new primary key of the issuing identity.
 
@@ -52,7 +52,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **acceptSubsidy**(`args`: [`AcceptSubsidyParams`](../../../procedures/types/interfaces/AcceptSubsidyParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/AccountManagement.ts:230](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L230)
+Defined in: [src/api/client/AccountManagement.ts:212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L212)
 
 Accepts a pending subsidy request from subsidizer
 
@@ -75,11 +75,7 @@ Type
 
 #### Note
 
-Only the beneficiary can accept an already approved subsidy request. Pending subsidies for a beneficiary can be fetched by calling [subsides.getPendingSubsidies](../../../entities/Subsidies/classes/Subsidies.mdx#getpendingsubsidies).
-
-#### Note
-
-this is only available from chain v8
+Only the beneficiary can accept an already approved subsidy request. Pending subsidies for a beneficiary can be fetched by calling [subsidies.getPendingSubsidies](../../../entities/Subsidies/classes/Subsidies.mdx#getpendingsubsidies).
 
 #### Note
 
@@ -91,7 +87,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **addSecondaryAccounts**(`args`: [`AddSecondaryAccountsParams`](../../../procedures/types/interfaces/AddSecondaryAccountsParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Identity`](../../../entities/Identity/classes/Identity.mdx), [`Identity`](../../../entities/Identity/classes/Identity.mdx)\>\>
 
-Defined in: [src/api/client/AccountManagement.ts:165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L165)
+Defined in: [src/api/client/AccountManagement.ts:161](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L161)
 
 Adds a list of secondary Accounts to the signing Identity
 
@@ -126,7 +122,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **approveSubsidy**(`args`: [`SubsidizeAccountParams`](../../../procedures/types/interfaces/SubsidizeAccountParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/AccountManagement.ts:222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L222)
+Defined in: [src/api/client/AccountManagement.ts:205](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L205)
 
 Approves a subsidy request
 
@@ -151,12 +147,11 @@ Type
 
 #### Note
 
-this will create a pending subsidies entry, which has to be accepted by the `beneficiary` Account. Pending subsidies for a beneficiary can be fetched by calling [subsides.getPendingSubsidies](../../../entities/Subsidies/classes/Subsidies.mdx#getpendingsubsidies).
+this will create a pending subsidies entry, which has to be accepted by the `beneficiary` Account. Pending subsidies for a beneficiary can be fetched by calling [subsidies.getPendingSubsidies](../../../entities/Subsidies/classes/Subsidies.mdx#getpendingsubsidies).
 
 #### Throws
 
-- if called for a v7 chain
- - if same allowance amount is pending for acceptance with respect to same beneficiary
+if same allowance amount is pending for acceptance with respect to same beneficiary
 
 #### Note
 
@@ -168,7 +163,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **createMultiSigAccount**(`args`: [`CreateMultiSigParams`](../../../procedures/types/interfaces/CreateMultiSigParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`MultiSig`](../../../entities/Account/MultiSig/classes/MultiSig.mdx), [`MultiSig`](../../../entities/Account/MultiSig/classes/MultiSig.mdx)\>\>
 
-Defined in: [src/api/client/AccountManagement.ts:247](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L247)
+Defined in: [src/api/client/AccountManagement.ts:228](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L228)
 
 Create a MultiSig Account
 
@@ -205,7 +200,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **freezeSecondaryAccounts**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/AccountManagement.ts:193](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L193)
+Defined in: [src/api/client/AccountManagement.ts:189](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L189)
 
 Freeze all of the secondary Accounts in the signing Identity. This means revoking their permission to perform any operation on the blockchain and freezing their funds until the Accounts are unfrozen via [unfreezeSecondaryAccounts](#unfreezesecondaryaccounts)
 
@@ -232,7 +227,7 @@ this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfa
 
 > **generateOffChainAuthSignature**(`args`: `object`): `Promise`\<`` `0x${string}` ``\>
 
-Defined in: [src/api/client/AccountManagement.ts:392](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L392)
+Defined in: [src/api/client/AccountManagement.ts:373](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L373)
 
 Generate an offchain authorization signature with a specified signer
 
@@ -276,7 +271,7 @@ DID of the identity to which signer is targeting the authorization
 
 > **getAccount**(`args`: `object`): `Promise`\<[`Account`](../../../entities/Account/classes/Account.mdx) \| [`MultiSig`](../../../entities/Account/MultiSig/classes/MultiSig.mdx)\>
 
-Defined in: [src/api/client/AccountManagement.ts:321](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L321)
+Defined in: [src/api/client/AccountManagement.ts:302](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L302)
 
 Return an Account instance from an address. If the Account has multiSig signers, the returned value will be a [MultiSig](../../../entities/Account/MultiSig/classes/MultiSig.mdx) instance
 
@@ -303,9 +298,9 @@ Type
 
 #### Call Signature
 
-> **getAccountBalance**(`args?`: `object`): `Promise`\<[`Balance`](../../../entities/Account/types/interfaces/Balance.mdx)\>
+> **getAccountBalance**(`args?`: `object`): `Promise`\<[`AccountBalance`](../../../entities/Account/types/interfaces/AccountBalance.mdx)\>
 
-Defined in: [src/api/client/AccountManagement.ts:256](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L256)
+Defined in: [src/api/client/AccountManagement.ts:237](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L237)
 
 Get the free/locked POLYX balance of an Account
 
@@ -329,7 +324,7 @@ The account to get balance for (defaults to the signing Account)
 
 ##### Returns
 
-`Promise`\<[`Balance`](../../../entities/Account/types/interfaces/Balance.mdx)\>
+`Promise`\<[`AccountBalance`](../../../entities/Account/types/interfaces/AccountBalance.mdx)\>
 
 The account's POLYX balance information
 
@@ -339,9 +334,9 @@ can be subscribed to, if connected to node using a web socket
 
 #### Call Signature
 
-> **getAccountBalance**(`callback`: [`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<[`Balance`](../../../entities/Account/types/interfaces/Balance.mdx)\>): `Promise`\<[`UnsubCallback`](../../../entities/types/type-aliases/UnsubCallback.mdx)\>
+> **getAccountBalance**(`callback`: [`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<[`AccountBalance`](../../../entities/Account/types/interfaces/AccountBalance.mdx)\>): `Promise`\<[`UnsubCallback`](../../../entities/types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/client/AccountManagement.ts:265](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L265)
+Defined in: [src/api/client/AccountManagement.ts:246](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L246)
 
 Get the free/locked POLYX balance of the signing Account (with subscription)
 
@@ -353,7 +348,7 @@ Description
 
 `callback`
 
-[`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<[`Balance`](../../../entities/Account/types/interfaces/Balance.mdx)\>
+[`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<[`AccountBalance`](../../../entities/Account/types/interfaces/AccountBalance.mdx)\>
 
 Callback function to receive balance updates
 
@@ -369,9 +364,9 @@ can be subscribed to, if connected to node using a web socket
 
 #### Call Signature
 
-> **getAccountBalance**(`args`: `object`, `callback`: [`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<[`Balance`](../../../entities/Account/types/interfaces/Balance.mdx)\>): `Promise`\<[`UnsubCallback`](../../../entities/types/type-aliases/UnsubCallback.mdx)\>
+> **getAccountBalance**(`args`: `object`, `callback`: [`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<[`AccountBalance`](../../../entities/Account/types/interfaces/AccountBalance.mdx)\>): `Promise`\<[`UnsubCallback`](../../../entities/types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/client/AccountManagement.ts:275](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L275)
+Defined in: [src/api/client/AccountManagement.ts:256](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L256)
 
 Get the free/locked POLYX balance of an Account (with subscription)
 
@@ -395,7 +390,7 @@ The account to get balance for
 
 `callback`
 
-[`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<[`Balance`](../../../entities/Account/types/interfaces/Balance.mdx)\>
+[`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<[`AccountBalance`](../../../entities/Account/types/interfaces/AccountBalance.mdx)\>
 
 Callback function to receive balance updates
 
@@ -415,7 +410,7 @@ can be subscribed to, if connected to node using a web socket
 
 > **getSigningAccount**(): [`Account`](../../../entities/Account/classes/Account.mdx) \| `null`
 
-Defined in: [src/api/client/AccountManagement.ts:328](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L328)
+Defined in: [src/api/client/AccountManagement.ts:309](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L309)
 
 Return the signing Account, or null if no signing Account has been set
 
@@ -429,7 +424,7 @@ Return the signing Account, or null if no signing Account has been set
 
 > **getSigningAccounts**(): `Promise`\<[`Account`](../../../entities/Account/classes/Account.mdx)[]\>
 
-Defined in: [src/api/client/AccountManagement.ts:341](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L341)
+Defined in: [src/api/client/AccountManagement.ts:322](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L322)
 
 Return a list that contains all the signing Accounts associated to the SDK instance's Signing Manager
 
@@ -447,7 +442,7 @@ Return a list that contains all the signing Accounts associated to the SDK insta
 
 > **getSubsidy**(`args`: `object`): [`Subsidy`](../../../entities/Subsidy/classes/Subsidy.mdx)
 
-Defined in: [src/api/client/AccountManagement.ts:348](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L348)
+Defined in: [src/api/client/AccountManagement.ts:329](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L329)
 
 Return an Subsidy instance for a pair of beneficiary and subsidizer Account
 
@@ -478,7 +473,7 @@ Type
 
 > **inviteAccount**(`args`: [`InviteAccountParams`](../../../procedures/types/interfaces/InviteAccountParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx), [`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
 
-Defined in: [src/api/client/AccountManagement.ts:188](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L188)
+Defined in: [src/api/client/AccountManagement.ts:184](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L184)
 
 Send an invitation to an Account to join the signing Identity as a secondary Account
 
@@ -515,7 +510,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **isValidAddress**(`args`: `object`): `boolean`
 
-Defined in: [src/api/client/AccountManagement.ts:365](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L365)
+Defined in: [src/api/client/AccountManagement.ts:346](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L346)
 
 Returns `true`
 
@@ -547,7 +542,7 @@ is a valid ss58 address for the connected network
 
 > **leaveIdentity**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/AccountManagement.ts:153](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L153)
+Defined in: [src/api/client/AccountManagement.ts:149](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L149)
 
 Disassociate the signing Account from its Identity. This operation can only be done if the signing Account is a secondary Account
 
@@ -574,7 +569,7 @@ this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfa
 
 > **modifyPermissions**(`args`: [`ModifySignerPermissionsParams`](../../../procedures/types/interfaces/ModifySignerPermissionsParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/AccountManagement.ts:179](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L179)
+Defined in: [src/api/client/AccountManagement.ts:175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L175)
 
 Modify all permissions of a list of secondary Accounts associated with the signing Identity
 
@@ -609,7 +604,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **removeSecondaryAccounts**(`args`: [`RemoveSecondaryAccountsParams`](../../../procedures/types/interfaces/RemoveSecondaryAccountsParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/AccountManagement.ts:158](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L158)
+Defined in: [src/api/client/AccountManagement.ts:154](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L154)
 
 Remove a list of secondary Accounts associated with the signing Identity
 
@@ -640,7 +635,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **revokePermissions**(`args`: `object`, `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/AccountManagement.ts:172](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L172)
+Defined in: [src/api/client/AccountManagement.ts:168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L168)
 
 Revoke all permissions of a list of secondary Accounts associated with the signing Identity
 
@@ -679,7 +674,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **revokeSubsidy**(`args`: [`RevokeSubsidyParams`](../../../procedures/types/interfaces/RevokeSubsidyParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/AccountManagement.ts:238](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L238)
+Defined in: [src/api/client/AccountManagement.ts:219](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L219)
 
 Revokes an already approved subsidy request
 
@@ -702,11 +697,7 @@ Type
 
 #### Note
 
-Only the subsidizer can revoke an already approved subsidy request. Pending subsidies for a beneficiary can be fetched by calling [subsides.getPendingSubsidies](../../../entities/Subsidies/classes/Subsidies.mdx#getpendingsubsidies).
-
-#### Note
-
-this is only available from chain v8
+Only the subsidizer can revoke an already approved subsidy request. Pending subsidies for a beneficiary can be fetched by calling [subsidies.getPendingSubsidies](../../../entities/Subsidies/classes/Subsidies.mdx#getpendingsubsidies).
 
 #### Note
 
@@ -714,52 +705,11 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 ***
 
-### ~~subsidizeAccount()~~
-
-> **subsidizeAccount**(`args`: [`SubsidizeAccountParams`](../../../procedures/types/interfaces/SubsidizeAccountParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx), [`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
-
-Defined in: [src/api/client/AccountManagement.ts:209](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L209)
-
-Send an Authorization Request to an Account to subsidize its transaction fees
-
-#### Parameters
-
-Parameter
-Type
-
-`args`
-
-[`SubsidizeAccountParams`](../../../procedures/types/interfaces/SubsidizeAccountParams.mdx)
-
-`opts?`
-
-[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
-
-#### Returns
-
-`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx), [`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
-
-#### Note
-
-this will create an [Authorization Request](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx) which has to be accepted by the `beneficiary` Account.
-  An [Account](../../../entities/Account/classes/Account.mdx) or [Identity](../../../entities/types/type-aliases/Identity.mdx) can fetch its pending Authorization Requests by calling [authorizations.getReceived](../../../entities/common/namespaces/Authorizations/classes/Authorizations.mdx#getreceived).
-  Also, an Account or Identity can directly fetch the details of an Authorization Request by calling [authorizations.getOne](../../../entities/common/namespaces/Authorizations/classes/Authorizations.mdx#getone)
-
-#### Deprecated
-
-use [approveSubsidy](#approvesubsidy) instead from chain v8
-
-#### Note
-
-this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [subsidizeAccount.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
-***
-
 ### unfreezeSecondaryAccounts()
 
 > **unfreezeSecondaryAccounts**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/AccountManagement.ts:198](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/AccountManagement.ts#L198)
+Defined in: [src/api/client/AccountManagement.ts:194](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/AccountManagement.ts#L194)
 
 Unfreeze all of the secondary Accounts in the signing Identity. This will restore their permissions as they were before being frozen
 

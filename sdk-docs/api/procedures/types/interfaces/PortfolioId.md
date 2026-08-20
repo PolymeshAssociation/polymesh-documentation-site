@@ -1,10 +1,10 @@
 # Interface: PortfolioId
 
-> Defined in: [src/api/procedures/types.ts:305](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L305)
+> Defined in: [src/api/procedures/types.ts:295](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L295)
 
 # Interface: PortfolioId
 
-Defined in: [src/api/procedures/types.ts:305](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L305)
+Defined in: [src/api/procedures/types.ts:295](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L295)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/procedures/types.ts:305](https://github.com/PolymeshAssocia
 
 > **did**: `string`
 
-Defined in: [src/api/procedures/types.ts:306](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L306)
+Defined in: [src/api/procedures/types.ts:296](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L296)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/procedures/types.ts:306](https://github.com/PolymeshAssocia
 
 > `optional` **number?**: `BigNumber`
 
-Defined in: [src/api/procedures/types.ts:307](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L307)
+Defined in: [src/api/procedures/types.ts:297](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L297)

@@ -1,10 +1,10 @@
 # Class: Offering
 
-> Defined in: [src/api/entities/Offering/index.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L65)
+> Defined in: [src/api/entities/Offering/index.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/index.ts#L67)
 
 # Class: Offering
 
-Defined in: [src/api/entities/Offering/index.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L65)
+Defined in: [src/api/entities/Offering/index.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/index.ts#L67)
 
 Represents an Asset Offering in the Polymesh blockchain
 
@@ -18,7 +18,7 @@ Represents an Asset Offering in the Polymesh blockchain
 
 > **asset**: [`FungibleAsset`](../../Asset/Fungible/classes/FungibleAsset.mdx)
 
-Defined in: [src/api/entities/Offering/index.ts:84](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L84)
+Defined in: [src/api/entities/Offering/index.ts:86](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/index.ts#L86)
 
 Asset being offered
 
@@ -28,7 +28,7 @@ Asset being offered
 
 > **id**: `BigNumber`
 
-Defined in: [src/api/entities/Offering/index.ts:79](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L79)
+Defined in: [src/api/entities/Offering/index.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/index.ts#L81)
 
 identifier number of the Offering
 
@@ -38,7 +38,7 @@ identifier number of the Offering
 
 > **uuid**: `string`
 
-Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L46)
+Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L46)
 
 #### Inherited from
 
@@ -50,7 +50,7 @@ Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociati
 
 > **close**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Offering/index.ts:200](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L200)
+Defined in: [src/api/entities/Offering/index.ts:202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/index.ts#L202)
 
 Close the Offering
 
@@ -79,7 +79,7 @@ this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfa
 
 > **details**(): `Promise`\<[`OfferingDetails`](../types/interfaces/OfferingDetails.mdx)\>
 
-Defined in: [src/api/entities/Offering/index.ts:139](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L139)
+Defined in: [src/api/entities/Offering/index.ts:141](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/index.ts#L141)
 
 Retrieve the Offering's details
 
@@ -93,7 +93,7 @@ Promise that resolves to the Offering details
 
 > **details**(`callback`: [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<[`OfferingDetails`](../types/interfaces/OfferingDetails.mdx)\>): `Promise`\<[`UnsubCallback`](../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/Offering/index.ts:150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L150)
+Defined in: [src/api/entities/Offering/index.ts:152](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/index.ts#L152)
 
 Retrieve the Offering's details (with subscription support)
 
@@ -125,7 +125,7 @@ can be subscribed to, if connected to node using a web socket
 
 > **enableOffChainFunding**(`args`: [`EnableOffChainFundingParams`](../../../procedures/types/interfaces/EnableOffChainFundingParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Offering/index.ts:220](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L220)
+Defined in: [src/api/entities/Offering/index.ts:222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/index.ts#L222)
 
 Enable off-chain funding for the Offering
 
@@ -163,7 +163,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **exists**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Offering/index.ts:329](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L329)
+Defined in: [src/api/entities/Offering/index.ts:330](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/index.ts#L330)
 
 Determine whether this Offering exists on chain
 
@@ -181,7 +181,7 @@ Determine whether this Offering exists on chain
 
 > **freeze**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`Offering`, `Offering`\>\>
 
-Defined in: [src/api/entities/Offering/index.ts:205](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L205)
+Defined in: [src/api/entities/Offering/index.ts:207](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/index.ts#L207)
 
 Freeze the Offering
 
@@ -208,7 +208,7 @@ this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfa
 
 > **generateOffChainFundingReceipt**(`args`: `object`): `Promise`\<[`OffChainFundingReceipt`](../types/interfaces/OffChainFundingReceipt.mdx)\>
 
-Defined in: [src/api/entities/Offering/index.ts:375](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L375)
+Defined in: [src/api/entities/Offering/index.ts:380](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/index.ts#L380)
 
 Generate an off-chain funding receipt for this offering
 
@@ -220,7 +220,7 @@ Description
 
 `args`
 
-\{ `amount`: `BigNumber`; `metadata?`: `string`; `offChainTicker`: `string`; `sender`: `string` \| [`Identity`](../../Identity/classes/Identity.mdx); `signer?`: `string` \| [`Account`](../../Account/classes/Account.mdx); `signerKeyRingType?`: [`SignerKeyRingType`](../../../procedures/types/enumerations/SignerKeyRingType.mdx); `uid`: `BigNumber`; \}
+\{ `amount`: `BigNumber`; `expiresAt`: `Date`; `metadata?`: `string`; `offChainTicker`: `string`; `sender`: `string` \| [`Identity`](../../Identity/classes/Identity.mdx); `signer?`: `string` \| [`Account`](../../Account/classes/Account.mdx); `signerKeyRingType?`: [`SignerKeyRingType`](../../../procedures/types/enumerations/SignerKeyRingType.mdx); `uid`: `BigNumber`; \}
 
 &hyphen;
 
@@ -229,6 +229,12 @@ Description
 `BigNumber`
 
 equivalent investment amount in the raising asset (calculated from the off-chain asset value based on STO tier pricing)
+
+`args.expiresAt`
+
+`Date`
+
+timestamp at which the receipt expires and can no longer be used to invest
 
 `args.metadata?`
 
@@ -273,7 +279,10 @@ unique receipt ID (UID) for this off-chain funding transaction
 #### Note
 
 The generated receipt contains SCALE-encoded data wrapped with `<Bytes>` tags, including:
+- Chain genesis hash
 - Receipt UID
+- Receipt label
+- Receipt expiry
 - Fundraiser ID
 - Sender's DID (investor)
 - Receiver's DID (raising portfolio owner)
@@ -290,7 +299,7 @@ The amount must represent the exact investment cost as calculated by the STO's b
 
 > **getInvestments**(`opts?`: `object`): `Promise`\<[`ResultSet`](../../types/interfaces/ResultSet.mdx)\<[`Investment`](../types/interfaces/Investment.mdx)\>\>
 
-Defined in: [src/api/entities/Offering/index.ts:250](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L250)
+Defined in: [src/api/entities/Offering/index.ts:252](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/index.ts#L252)
 
 Retrieve all investments made on this Offering
 
@@ -336,7 +345,7 @@ uses the middleware V2
 
 > **invest**(`args`: `object` & \{ `fundingPortfolio`: [`PortfolioLike`](../../types/type-aliases/PortfolioLike.mdx); \} \| \{ `offChainFundingReceipt`: [`OffChainFundingReceipt`](../types/interfaces/OffChainFundingReceipt.mdx); `offChainTicker`: `string`; \}, `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Offering/index.ts:239](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L239)
+Defined in: [src/api/entities/Offering/index.ts:241](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/index.ts#L241)
 
 Invest in the Offering
 
@@ -373,7 +382,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **isEqual**(`entity`: [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>): `boolean`
 
-Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L61)
+Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L61)
 
 Determine whether this Entity is the same as another one
 
@@ -400,7 +409,7 @@ Type
 
 > **modifyTimes**(`args`: [`ModifyOfferingTimesParams`](../../../procedures/types/type-aliases/ModifyOfferingTimesParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Offering/index.ts:230](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L230)
+Defined in: [src/api/entities/Offering/index.ts:232](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/index.ts#L232)
 
 Modify the start/end time of the Offering
 
@@ -438,7 +447,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **offChainFundingDetails**(): `Promise`\<[`OffChainFundingDetails`](../types/type-aliases/OffChainFundingDetails.mdx)\>
 
-Defined in: [src/api/entities/Offering/index.ts:302](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L302)
+Defined in: [src/api/entities/Offering/index.ts:303](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/index.ts#L303)
 
 Retrieve off chain funding details
 
@@ -452,7 +461,7 @@ Retrieve off chain funding details
 
 > **toHuman**(): [`HumanReadable`](../interfaces/HumanReadable.mdx)
 
-Defined in: [src/api/entities/Offering/index.ts:345](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L345)
+Defined in: [src/api/entities/Offering/index.ts:346](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/index.ts#L346)
 
 Return the Offering's ID and Asset ticker
 
@@ -470,7 +479,7 @@ Return the Offering's ID and Asset ticker
 
 > **unfreeze**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`Offering`, `Offering`\>\>
 
-Defined in: [src/api/entities/Offering/index.ts:210](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/index.ts#L210)
+Defined in: [src/api/entities/Offering/index.ts:212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/index.ts#L212)
 
 Unfreeze the Offering
 
@@ -497,7 +506,7 @@ this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfa
 
 > `static` **generateUuid**\<`Identifiers`\>(`identifiers`: `Identifiers`): `string`
 
-Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L14)
+Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L14)
 
 Generate the Entity's UUID from its identifying properties
 
@@ -533,7 +542,7 @@ Description
 
 > `static` **unserialize**\<`Identifiers`\>(`serialized`: `string`): `Identifiers`
 
-Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L23)
+Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L23)
 
 Unserialize a UUID into its Unique Identifiers
 

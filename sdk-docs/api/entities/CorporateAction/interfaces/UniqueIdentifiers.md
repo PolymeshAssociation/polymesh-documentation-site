@@ -1,10 +1,10 @@
 # Interface: UniqueIdentifiers
 
-> Defined in: [src/api/entities/CorporateAction.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateAction.ts#L14)
+> Defined in: [src/api/entities/CorporateAction.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateAction.ts#L14)
 
 # Interface: UniqueIdentifiers
 
-Defined in: [src/api/entities/CorporateAction.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateAction.ts#L14)
+Defined in: [src/api/entities/CorporateAction.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateAction.ts#L14)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/CorporateAction.ts:14](https://github.com/Polymesh
 
 > **assetId**: `string`
 
-Defined in: [src/api/entities/CorporateAction.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateAction.ts#L16)
+Defined in: [src/api/entities/CorporateAction.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateAction.ts#L16)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/entities/CorporateAction.ts:16](https://github.com/Polymesh
 
 > **id**: `BigNumber`
 
-Defined in: [src/api/entities/CorporateAction.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateAction.ts#L15)
+Defined in: [src/api/entities/CorporateAction.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateAction.ts#L15)

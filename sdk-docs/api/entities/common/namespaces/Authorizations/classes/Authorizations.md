@@ -1,10 +1,10 @@
 # Class: Authorizations\<Parent\>
 
-> Defined in: [src/api/entities/common/namespaces/Authorizations.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/common/namespaces/Authorizations.ts#L35)
+> Defined in: [src/api/entities/common/namespaces/Authorizations.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/common/namespaces/Authorizations.ts#L35)
 
 # Class: Authorizations\
 
-Defined in: [src/api/entities/common/namespaces/Authorizations.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/common/namespaces/Authorizations.ts#L35)
+Defined in: [src/api/entities/common/namespaces/Authorizations.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/common/namespaces/Authorizations.ts#L35)
 
 Handles all Authorization related functionality
 
@@ -28,7 +28,7 @@ Type Parameter
 
 > **getHistoricalAuthorizations**(`opts?`: `object`): `Promise`\<[`ResultSet`](../../../../types/interfaces/ResultSet.mdx)\<[`AuthorizationRequest`](../../../../AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
 
-Defined in: [src/api/entities/common/namespaces/Authorizations.ts:159](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/common/namespaces/Authorizations.ts#L159)
+Defined in: [src/api/entities/common/namespaces/Authorizations.ts:150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/common/namespaces/Authorizations.ts#L150)
 
 Fetch all historical Authorization Requests for which this Signer is the target
 
@@ -86,7 +86,7 @@ uses the middlewareV2
 
 > **getOne**(`args`: `object`): `Promise`\<[`AuthorizationRequest`](../../../../AuthorizationRequest/classes/AuthorizationRequest.mdx)\>
 
-Defined in: [src/api/entities/common/namespaces/Authorizations.ts:89](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/common/namespaces/Authorizations.ts#L89)
+Defined in: [src/api/entities/common/namespaces/Authorizations.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/common/namespaces/Authorizations.ts#L80)
 
 Retrieve a single Authorization Request targeting this Signer by its ID
 
@@ -117,7 +117,7 @@ if there is no Authorization Request with the passed ID targeting this Signer
 
 > **getReceived**(`opts?`: `object`): `Promise`\<[`AuthorizationRequest`](../../../../AuthorizationRequest/classes/AuthorizationRequest.mdx)[]\>
 
-Defined in: [src/api/entities/common/namespaces/Authorizations.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/common/namespaces/Authorizations.ts#L42)
+Defined in: [src/api/entities/common/namespaces/Authorizations.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/common/namespaces/Authorizations.ts#L42)
 
 Fetch all pending Authorization Requests for which this Signer is the target
 

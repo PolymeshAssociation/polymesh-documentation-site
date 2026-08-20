@@ -1,10 +1,10 @@
 # Interface: CreateVenueParams
 
-> Defined in: [src/api/procedures/types.ts:1266](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1266)
+> Defined in: [src/api/procedures/types.ts:1227](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1227)
 
 # Interface: CreateVenueParams
 
-Defined in: [src/api/procedures/types.ts:1266](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1266)
+Defined in: [src/api/procedures/types.ts:1227](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1227)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/procedures/types.ts:1266](https://github.com/PolymeshAssoci
 
 > **description**: `string`
 
-Defined in: [src/api/procedures/types.ts:1267](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1267)
+Defined in: [src/api/procedures/types.ts:1228](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1228)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/procedures/types.ts:1267](https://github.com/PolymeshAssoci
 
 > `optional` **signers?**: (`string` \| [`Account`](../../../entities/Account/classes/Account.mdx))[]
 
-Defined in: [src/api/procedures/types.ts:1272](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1272)
+Defined in: [src/api/procedures/types.ts:1233](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1233)
 
 (optional) list of signers that are allowed to sign receipts for this venue
 
@@ -30,4 +30,4 @@ Defined in: [src/api/procedures/types.ts:1272](https://github.com/PolymeshAssoci
 
 > **type**: [`VenueType`](../../../entities/Venue/types/enumerations/VenueType.mdx)
 
-Defined in: [src/api/procedures/types.ts:1268](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1268)
+Defined in: [src/api/procedures/types.ts:1229](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1229)

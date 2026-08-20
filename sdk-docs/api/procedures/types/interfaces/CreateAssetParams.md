@@ -1,10 +1,10 @@
 # Interface: CreateAssetParams
 
-> Defined in: [src/api/procedures/types.ts:792](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L792)
+> Defined in: [src/api/procedures/types.ts:785](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L785)
 
 # Interface: CreateAssetParams
 
-Defined in: [src/api/procedures/types.ts:792](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L792)
+Defined in: [src/api/procedures/types.ts:785](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L785)
 
 ## Extended by
 
@@ -16,7 +16,7 @@ Defined in: [src/api/procedures/types.ts:792](https://github.com/PolymeshAssocia
 
 > **assetType**: `string` \| `BigNumber`
 
-Defined in: [src/api/procedures/types.ts:812](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L812)
+Defined in: [src/api/procedures/types.ts:805](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L805)
 
 Type of security that the Asset represents (e.g., Equity, Debt, Commodity). Common values are included in the
   [KnownAssetType](../../../entities/Asset/types/enumerations/KnownAssetType.mdx) enum, but custom values can be used as well. Custom values must be registered on-chain the first time
@@ -29,7 +29,7 @@ Type of security that the Asset represents (e.g., Equity, Debt, Commodity). Comm
 
 > `optional` **documents?**: [`AssetDocument`](../../../entities/Asset/types/interfaces/AssetDocument.mdx)[]
 
-Defined in: [src/api/procedures/types.ts:821](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L821)
+Defined in: [src/api/procedures/types.ts:814](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L814)
 
 ***
 
@@ -37,7 +37,7 @@ Defined in: [src/api/procedures/types.ts:821](https://github.com/PolymeshAssocia
 
 > `optional` **fundingRound?**: `string`
 
-Defined in: [src/api/procedures/types.ts:820](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L820)
+Defined in: [src/api/procedures/types.ts:813](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L813)
 
 (Optional) funding round in which the Asset currently is (e.g., Series A, Series B).
 
@@ -47,7 +47,7 @@ Defined in: [src/api/procedures/types.ts:820](https://github.com/PolymeshAssocia
 
 > `optional` **initialStatistics?**: [`InputStatType`](../../../entities/types/type-aliases/InputStatType.mdx)[]
 
-Defined in: [src/api/procedures/types.ts:834](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L834)
+Defined in: [src/api/procedures/types.ts:827](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L827)
 
 (Optional) type of statistics that should be enabled for the Asset.
 
@@ -65,7 +65,7 @@ If you need to create a stat for an Asset after creation, you can use the [Trans
 
 > `optional` **initialSupply?**: `BigNumber`
 
-Defined in: [src/api/procedures/types.ts:797](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L797)
+Defined in: [src/api/procedures/types.ts:790](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L790)
 
 Amount of Asset tokens to be minted on creation (optional; by default, no tokens are minted).
 
@@ -75,7 +75,7 @@ Amount of Asset tokens to be minted on creation (optional; by default, no tokens
 
 > **isDivisible**: `boolean`
 
-Defined in: [src/api/procedures/types.ts:805](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L805)
+Defined in: [src/api/procedures/types.ts:798](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L798)
 
 Whether a single Asset token can be divided into decimal parts.
 
@@ -85,7 +85,7 @@ Whether a single Asset token can be divided into decimal parts.
 
 > **name**: `string`
 
-Defined in: [src/api/procedures/types.ts:793](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L793)
+Defined in: [src/api/procedures/types.ts:786](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L786)
 
 ***
 
@@ -93,7 +93,7 @@ Defined in: [src/api/procedures/types.ts:793](https://github.com/PolymeshAssocia
 
 > `optional` **portfolioId?**: `BigNumber`
 
-Defined in: [src/api/procedures/types.ts:801](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L801)
+Defined in: [src/api/procedures/types.ts:794](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L794)
 
 Portfolio to which the Asset tokens will be issued on creation (optional; defaults to the default portfolio).
 
@@ -103,6 +103,6 @@ Portfolio to which the Asset tokens will be issued on creation (optional; defaul
 
 > `optional` **securityIdentifiers?**: [`SecurityIdentifier`](../../../entities/Asset/types/interfaces/SecurityIdentifier.mdx)[]
 
-Defined in: [src/api/procedures/types.ts:816](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L816)
+Defined in: [src/api/procedures/types.ts:809](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L809)
 
 Array of domestic or international alphanumeric security identifiers for the Asset (e.g., ISIN, CUSIP, FIGI).

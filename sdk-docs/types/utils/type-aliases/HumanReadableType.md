@@ -6,7 +6,7 @@
 
 > **HumanReadableType**\<`T`\> = `T` *extends* [`Entity`](../../../api/entities/Entity/classes/Entity.mdx)\<`unknown`, infer H\> ? `HumanReadableType`\<`H`\> : `T` *extends* `BigNumber` ? `string` : `T` *extends* `Date` ? `string` : `T` *extends* `object` ? `{ [K in keyof T]: T[K] extends Entity<unknown, infer E> ? HumanReadableType<E> : HumanReadableType<T[K]> }` : `T`
 
-Defined in: [src/types/utils/index.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/types/utils/index.ts#L35)
+Defined in: [src/types/utils/index.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/types/utils/index.ts#L35)
 
 Recursively traverse a type and transform its Entity properties into their
   human readable version (as if `.toHuman` had been called on all of them)

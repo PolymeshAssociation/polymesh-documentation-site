@@ -1,10 +1,10 @@
 # Interface: CustomClaim
 
-> Defined in: [src/api/entities/types.ts:222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L222)
+> Defined in: [src/api/entities/types.ts:216](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L216)
 
 # Interface: CustomClaim
 
-Defined in: [src/api/entities/types.ts:222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L222)
+Defined in: [src/api/entities/types.ts:216](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L216)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/types.ts:222](https://github.com/PolymeshAssociati
 
 > **customClaimTypeId**: `BigNumber`
 
-Defined in: [src/api/entities/types.ts:225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L225)
+Defined in: [src/api/entities/types.ts:219](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L219)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/entities/types.ts:225](https://github.com/PolymeshAssociati
 
 > **scope**: [`Scope`](Scope.mdx)
 
-Defined in: [src/api/entities/types.ts:224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L224)
+Defined in: [src/api/entities/types.ts:218](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L218)
 
 ***
 
@@ -28,4 +28,4 @@ Defined in: [src/api/entities/types.ts:224](https://github.com/PolymeshAssociati
 
 > **type**: [`Custom`](../enumerations/ClaimType.mdx#custom)
 
-Defined in: [src/api/entities/types.ts:223](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L223)
+Defined in: [src/api/entities/types.ts:217](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L217)

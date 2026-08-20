@@ -1,10 +1,10 @@
 # Interface: EnableOffChainFundingParams
 
-> Defined in: [src/api/procedures/types.ts:2147](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2147)
+> Defined in: [src/api/procedures/types.ts:2018](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L2018)
 
 # Interface: EnableOffChainFundingParams
 
-Defined in: [src/api/procedures/types.ts:2147](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2147)
+Defined in: [src/api/procedures/types.ts:2018](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L2018)
 
 ## Properties
 
@@ -12,6 +12,6 @@ Defined in: [src/api/procedures/types.ts:2147](https://github.com/PolymeshAssoci
 
 > **offChainTicker**: `string`
 
-Defined in: [src/api/procedures/types.ts:2151](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2151)
+Defined in: [src/api/procedures/types.ts:2022](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L2022)
 
 The ticker of the off-chain asset

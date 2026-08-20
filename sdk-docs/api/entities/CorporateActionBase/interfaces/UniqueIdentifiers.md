@@ -1,10 +1,10 @@
 # Interface: UniqueIdentifiers
 
-> Defined in: [src/api/entities/CorporateActionBase/index.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateActionBase/index.ts#L35)
+> Defined in: [src/api/entities/CorporateActionBase/index.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateActionBase/index.ts#L38)
 
 # Interface: UniqueIdentifiers
 
-Defined in: [src/api/entities/CorporateActionBase/index.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateActionBase/index.ts#L35)
+Defined in: [src/api/entities/CorporateActionBase/index.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateActionBase/index.ts#L38)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/CorporateActionBase/index.ts:35](https://github.co
 
 > **assetId**: `string`
 
-Defined in: [src/api/entities/CorporateActionBase/index.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateActionBase/index.ts#L37)
+Defined in: [src/api/entities/CorporateActionBase/index.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateActionBase/index.ts#L40)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/entities/CorporateActionBase/index.ts:37](https://github.co
 
 > **id**: `BigNumber`
 
-Defined in: [src/api/entities/CorporateActionBase/index.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateActionBase/index.ts#L36)
+Defined in: [src/api/entities/CorporateActionBase/index.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateActionBase/index.ts#L39)

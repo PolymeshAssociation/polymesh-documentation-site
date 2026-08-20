@@ -6,7 +6,7 @@
 
 > **CustomClaimWithTypeId** = `object`
 
-Defined in: [src/api/entities/types.ts:322](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L322)
+Defined in: [src/api/entities/types.ts:316](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L316)
 
 ## Properties
 
@@ -18,10 +18,10 @@ Defined in
 
 `BigNumber`
 
-[src/api/entities/types.ts:322](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L322)
+[src/api/entities/types.ts:316](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L316)
 
  `type`
 
 [`Custom`](../enumerations/ClaimType.mdx#custom)
 
-[src/api/entities/types.ts:322](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L322)
+[src/api/entities/types.ts:316](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L316)

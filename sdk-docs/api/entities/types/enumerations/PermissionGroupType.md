@@ -1,10 +1,10 @@
 # Enumeration: PermissionGroupType
 
-> Defined in: [src/api/entities/types.ts:777](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L777)
+> Defined in: [src/api/entities/types.ts:761](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L761)
 
 # Enumeration: PermissionGroupType
 
-Defined in: [src/api/entities/types.ts:777](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L777)
+Defined in: [src/api/entities/types.ts:761](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L761)
 
 ## Enumeration Members
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/types.ts:777](https://github.com/PolymeshAssociati
 
 > **ExceptMeta**: `"ExceptMeta"`
 
-Defined in: [src/api/entities/types.ts:786](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L786)
+Defined in: [src/api/entities/types.ts:770](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L770)
 
 not authorized:
   - externalAgents
@@ -23,7 +23,7 @@ not authorized:
 
 > **Full**: `"Full"`
 
-Defined in: [src/api/entities/types.ts:781](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L781)
+Defined in: [src/api/entities/types.ts:765](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L765)
 
 all transactions authorized
 
@@ -33,7 +33,7 @@ all transactions authorized
 
 > **PolymeshV1Caa**: `"PolymeshV1Caa"`
 
-Defined in: [src/api/entities/types.ts:793](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L793)
+Defined in: [src/api/entities/types.ts:777](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L777)
 
 authorized:
   - corporateAction
@@ -46,7 +46,7 @@ authorized:
 
 > **PolymeshV1Pia**: `"PolymeshV1Pia"`
 
-Defined in: [src/api/entities/types.ts:801](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L801)
+Defined in: [src/api/entities/types.ts:785](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L785)
 
 authorized:
   - asset.issue

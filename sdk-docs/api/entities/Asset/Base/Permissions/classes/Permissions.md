@@ -1,10 +1,10 @@
 # Class: Permissions
 
-> Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Permissions/index.ts#L37)
+> Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Permissions/index.ts#L37)
 
 # Class: Permissions
 
-Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Permissions/index.ts#L37)
+Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Permissions/index.ts#L37)
 
 Handles all Asset Permissions related functionality
 
@@ -18,7 +18,7 @@ Handles all Asset Permissions related functionality
 
 > **createGroup**(`args`: [`CreateGroupParams`](../../../../../procedures/types/interfaces/CreateGroupParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`CustomPermissionGroup`](../../../../CustomPermissionGroup/classes/CustomPermissionGroup.mdx), [`CustomPermissionGroup`](../../../../CustomPermissionGroup/classes/CustomPermissionGroup.mdx)\>\>
 
-Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Permissions/index.ts#L63)
+Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:63](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Permissions/index.ts#L63)
 
 Create a Permission Group for this Asset. Identities can be assigned to Permission Groups as agents. Agents assigned to a Permission Group have said group's permissions over the Asset
 
@@ -49,7 +49,7 @@ this method is of type [ProcedureMethod](../../../../../procedures/types/interfa
 
 > **getAgents**(): `Promise`\<[`AgentWithGroup`](../../../types/interfaces/AgentWithGroup.mdx)[]\>
 
-Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:163](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Permissions/index.ts#L163)
+Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:169](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Permissions/index.ts#L169)
 
 Retrieve a list of agents (Identities which have permissions over the Asset) and
   their respective Permission Groups
@@ -66,7 +66,7 @@ Retrieve a list of agents (Identities which have permissions over the Asset) and
 
 > **getGroup**(`args`: `object`): `Promise`\<[`CustomPermissionGroup`](../../../../CustomPermissionGroup/classes/CustomPermissionGroup.mdx)\>
 
-Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:88](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Permissions/index.ts#L88)
+Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:94](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Permissions/index.ts#L94)
 
 Retrieve a Custom Permission Group by its ID
 
@@ -102,7 +102,7 @@ if there is no Permission Group with the passed ID
 
 > **getGroup**(`args`: `object`): `Promise`\<[`KnownPermissionGroup`](../../../../KnownPermissionGroup/classes/KnownPermissionGroup.mdx)\>
 
-Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:97](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Permissions/index.ts#L97)
+Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Permissions/index.ts#L103)
 
 Retrieve a Known Permission Group by its type
 
@@ -136,7 +136,7 @@ Promise that resolves to the Known Permission Group
 
 > **getGroups**(): `Promise`\<[`PermissionGroups`](../../../../types/interfaces/PermissionGroups.mdx)\>
 
-Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Permissions/index.ts#L126)
+Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:132](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Permissions/index.ts#L132)
 
 Retrieve all Permission Groups of this Asset
 
@@ -150,7 +150,7 @@ Retrieve all Permission Groups of this Asset
 
 > **inviteAgent**(`args`: [`InviteExternalAgentParams`](../../../../../procedures/types/interfaces/InviteExternalAgentParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`AuthorizationRequest`](../../../../AuthorizationRequest/classes/AuthorizationRequest.mdx), [`AuthorizationRequest`](../../../../AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
 
-Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Permissions/index.ts#L72)
+Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Permissions/index.ts#L78)
 
 Invite an Identity to be an agent with permissions over this Asset
 
@@ -173,6 +173,14 @@ Type
 
 #### Note
 
+the signing Identity must be an agent of this Asset holding `externalAgents.acceptBecomeAgent`
+  permission — granted by `TxGroup.ExternalAgentManagement` or `PermissionGroupType.Full`. The chain
+  checks this when the `target` accepts, against the Identity that created the Authorization Request,
+  so an invitation sent without it can never be accepted. If no existing Permission Group matches the
+  requested permissions, `externalAgents.createGroupAndAddAuth` permission is also required
+
+#### Note
+
 this will create an [Authorization Request](../../../../AuthorizationRequest/classes/AuthorizationRequest.mdx) which has to be accepted by the `target` Identity.
   An [Account](../../../../Account/classes/Account.mdx) or [Identity](../../../../Identity/classes/Identity.mdx) can fetch its pending Authorization Requests by calling [authorizations.getReceived](../../../../common/namespaces/Authorizations/classes/Authorizations.mdx#getreceived).
   Also, an Account or Identity can directly fetch the details of an Authorization Request by calling [authorizations.getOne](../../../../common/namespaces/Authorizations/classes/Authorizations.mdx#getone)
@@ -187,7 +195,7 @@ this method is of type [ProcedureMethod](../../../../../procedures/types/interfa
 
 > **removeAgent**(`args`: [`RemoveExternalAgentParams`](../../../../../procedures/types/interfaces/RemoveExternalAgentParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Permissions/index.ts#L77)
+Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Permissions/index.ts#L83)
 
 Revoke an agent's permissions over this Asset
 

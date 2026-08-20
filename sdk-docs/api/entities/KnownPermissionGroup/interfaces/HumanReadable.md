@@ -1,10 +1,10 @@
 # Interface: HumanReadable
 
-> Defined in: [src/api/entities/KnownPermissionGroup.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/KnownPermissionGroup.ts#L14)
+> Defined in: [src/api/entities/KnownPermissionGroup.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/KnownPermissionGroup.ts#L14)
 
 # Interface: HumanReadable
 
-Defined in: [src/api/entities/KnownPermissionGroup.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/KnownPermissionGroup.ts#L14)
+Defined in: [src/api/entities/KnownPermissionGroup.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/KnownPermissionGroup.ts#L14)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/KnownPermissionGroup.ts:14](https://github.com/Pol
 
 > **assetId**: `string`
 
-Defined in: [src/api/entities/KnownPermissionGroup.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/KnownPermissionGroup.ts#L16)
+Defined in: [src/api/entities/KnownPermissionGroup.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/KnownPermissionGroup.ts#L16)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/entities/KnownPermissionGroup.ts:16](https://github.com/Pol
 
 > **type**: [`PermissionGroupType`](../../types/enumerations/PermissionGroupType.mdx)
 
-Defined in: [src/api/entities/KnownPermissionGroup.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/KnownPermissionGroup.ts#L15)
+Defined in: [src/api/entities/KnownPermissionGroup.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/KnownPermissionGroup.ts#L15)

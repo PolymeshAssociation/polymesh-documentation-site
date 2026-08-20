@@ -6,7 +6,7 @@
 
 > **InitiateCorporateActionParams** = `object`
 
-Defined in: [src/api/procedures/types.ts:2110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2110)
+Defined in: [src/api/procedures/types.ts:1981](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1981)
 
 ## Properties
 
@@ -21,7 +21,7 @@ Defined in
 
 The checkpoint of the Corporate Action (the record date on which the Corporate Action is applied)
 
-[src/api/procedures/types.ts:2129](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2129)
+[src/api/procedures/types.ts:2000](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L2000)
 
  `declarationDate`
 
@@ -29,7 +29,7 @@ The checkpoint of the Corporate Action (the record date on which the Corporate A
 
 The date on which the Corporate Action is declared
 
-[src/api/procedures/types.ts:2119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2119)
+[src/api/procedures/types.ts:1990](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1990)
 
  `defaultTaxWithholding`
 
@@ -37,7 +37,7 @@ The date on which the Corporate Action is declared
 
 The default tax withholding to be applied to the Corporate Action
 
-[src/api/procedures/types.ts:2144](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2144)
+[src/api/procedures/types.ts:2015](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L2015)
 
  `description`
 
@@ -45,7 +45,7 @@ The default tax withholding to be applied to the Corporate Action
 
 The description of the Corporate Action
 
-[src/api/procedures/types.ts:2124](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2124)
+[src/api/procedures/types.ts:1995](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1995)
 
  `kind`
 
@@ -53,7 +53,7 @@ The description of the Corporate Action
 
 The kind of Corporate Action to initiate
 
-[src/api/procedures/types.ts:2114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2114)
+[src/api/procedures/types.ts:1985](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1985)
 
  `targets`
 
@@ -61,7 +61,7 @@ The kind of Corporate Action to initiate
 
 The targets of the Corporate Action
 
-[src/api/procedures/types.ts:2139](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2139)
+[src/api/procedures/types.ts:2010](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L2010)
 
  `taxWithholdings`
 
@@ -69,4 +69,4 @@ The targets of the Corporate Action
 
 The tax withholdings to be applied to the Corporate Action
 
-[src/api/procedures/types.ts:2134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2134)
+[src/api/procedures/types.ts:2005](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L2005)

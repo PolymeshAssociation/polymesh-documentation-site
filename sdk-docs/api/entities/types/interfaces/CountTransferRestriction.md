@@ -1,10 +1,10 @@
 # Interface: CountTransferRestriction
 
-> Defined in: [src/api/entities/types.ts:528](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L528)
+> Defined in: [src/api/entities/types.ts:512](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L512)
 
 # Interface: CountTransferRestriction
 
-Defined in: [src/api/entities/types.ts:528](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L528)
+Defined in: [src/api/entities/types.ts:512](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L512)
 
 ## Extends
 
@@ -16,7 +16,7 @@ Defined in: [src/api/entities/types.ts:528](https://github.com/PolymeshAssociati
 
 > **count**: `BigNumber`
 
-Defined in: [src/api/entities/types.ts:529](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L529)
+Defined in: [src/api/entities/types.ts:513](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L513)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/api/entities/types.ts:529](https://github.com/PolymeshAssociati
 
 > `optional` **exemptedIds?**: `string`[]
 
-Defined in: [src/api/entities/types.ts:525](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L525)
+Defined in: [src/api/entities/types.ts:509](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L509)
 
 array of Identity IDs that are exempted from the Restriction
 

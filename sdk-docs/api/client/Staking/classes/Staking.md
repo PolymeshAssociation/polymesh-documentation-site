@@ -1,10 +1,10 @@
 # Class: Staking
 
-> Defined in: [src/api/client/Staking.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Staking.ts#L43)
+> Defined in: [src/api/client/Staking.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Staking.ts#L42)
 
 # Class: Staking
 
-Defined in: [src/api/client/Staking.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Staking.ts#L43)
+Defined in: [src/api/client/Staking.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Staking.ts#L42)
 
 Handles Staking related functionality
 
@@ -14,7 +14,7 @@ Handles Staking related functionality
 
 > **bond**(`args`: [`BondPolyxParams`](../../../procedures/types/interfaces/BondPolyxParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/Staking.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Staking.ts#L108)
+Defined in: [src/api/client/Staking.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Staking.ts#L108)
 
 Bond POLYX for staking
 
@@ -49,7 +49,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **bondExtra**(`args`: [`UpdatePolyxBondParams`](../../../procedures/types/interfaces/UpdatePolyxBondParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/Staking.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Staking.ts#L115)
+Defined in: [src/api/client/Staking.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Staking.ts#L115)
 
 Bond extra POLYX for staking
 
@@ -86,7 +86,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **eraInfo**(): `Promise`\<[`StakingEraInfo`](../../types/interfaces/StakingEraInfo.mdx)\>
 
-Defined in: [src/api/client/Staking.ts:204](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Staking.ts#L204)
+Defined in: [src/api/client/Staking.ts:203](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Staking.ts#L203)
 
 Retrieve the current staking era information
 
@@ -100,7 +100,7 @@ Promise that resolves to the current era information
 
 > **eraInfo**(`callback`: [`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<[`StakingEraInfo`](../../types/interfaces/StakingEraInfo.mdx)\>): `Promise`\<[`UnsubCallback`](../../../entities/types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/client/Staking.ts:215](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Staking.ts#L215)
+Defined in: [src/api/client/Staking.ts:214](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Staking.ts#L214)
 
 Retrieve the current staking era information (with subscription support)
 
@@ -132,7 +132,7 @@ can be subscribed to, if connected to node using a web socket
 
 > **getValidators**(`paginationOpts?`: [`PaginationOptions`](../../../entities/types/interfaces/PaginationOptions.mdx)): `Promise`\<[`ResultSet`](../../../entities/types/interfaces/ResultSet.mdx)\<[`StakingCommission`](../../../entities/Account/types/interfaces/StakingCommission.mdx)\>\>
 
-Defined in: [src/api/client/Staking.ts:156](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Staking.ts#L156)
+Defined in: [src/api/client/Staking.ts:155](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Staking.ts#L155)
 
 Return information about nomination targets
 
@@ -159,7 +159,7 @@ supports pagination
 
 > **nominate**(`args`: [`NominateValidatorsParams`](../../../procedures/types/interfaces/NominateValidatorsParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/Staking.ts:134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Staking.ts#L134)
+Defined in: [src/api/client/Staking.ts:134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Staking.ts#L134)
 
 Nominate validators for the bonded POLYX
 
@@ -192,20 +192,16 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 ### setController()
 
-> **setController**(`args`: [`SetStakingControllerParams`](../../../procedures/types/interfaces/SetStakingControllerParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+> **setController**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/Staking.ts:142](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Staking.ts#L142)
+Defined in: [src/api/client/Staking.ts:141](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Staking.ts#L141)
 
-Allow for a stash account to update its controller
+Allow for a stash account to update its controller so the stash becomes its own controller
 
 #### Parameters
 
 Parameter
 Type
-
-`args`
-
-[`SetStakingControllerParams`](../../../procedures/types/interfaces/SetStakingControllerParams.mdx)
 
 `opts?`
 
@@ -221,11 +217,7 @@ the transaction must be signed by a stash account
 
 #### Note
 
-Polymesh v8 makes it so the stash will become its own controller account
-
-#### Note
-
-this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [setController.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx), which means you can call [setController.checkAuthorization](../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
 
 ***
 
@@ -233,7 +225,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **setPayee**(`args`: [`SetStakingPayeeParams`](../../../procedures/types/interfaces/SetStakingPayeeParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/Staking.ts:149](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Staking.ts#L149)
+Defined in: [src/api/client/Staking.ts:148](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Staking.ts#L148)
 
 Allow for a stash account to update where it's staking rewards are deposited
 
@@ -268,7 +260,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **unbond**(`args`: [`UpdatePolyxBondParams`](../../../procedures/types/interfaces/UpdatePolyxBondParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/Staking.ts:120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Staking.ts#L120)
+Defined in: [src/api/client/Staking.ts:120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Staking.ts#L120)
 
 Unbond POLYX for staking. The unbonded amount can be withdrawn after the lockup period
 
@@ -299,7 +291,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **withdraw**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/Staking.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Staking.ts#L127)
+Defined in: [src/api/client/Staking.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Staking.ts#L127)
 
 Withdraw unbonded POLYX to free it for the stash account
 

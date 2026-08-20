@@ -6,7 +6,7 @@
 
 > **RotatePrimaryKeyToSecondaryData** = `object`
 
-Defined in: [src/api/entities/types.ts:460](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L460)
+Defined in: [src/api/entities/types.ts:454](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L454)
 
 ## Properties
 
@@ -18,10 +18,10 @@ Defined in
 
 [`RotatePrimaryKeyToSecondary`](../enumerations/AuthorizationType.mdx#rotateprimarykeytosecondary)
 
-[src/api/entities/types.ts:461](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L461)
+[src/api/entities/types.ts:455](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L455)
 
  `value`
 
 [`Permissions`](../interfaces/Permissions.mdx)
 
-[src/api/entities/types.ts:462](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L462)
+[src/api/entities/types.ts:456](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L456)

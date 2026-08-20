@@ -1,10 +1,10 @@
 # Class: Assets
 
-> Defined in: [src/api/client/Assets.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L56)
+> Defined in: [src/api/client/Assets.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L59)
 
 # Class: Assets
 
-Defined in: [src/api/client/Assets.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L56)
+Defined in: [src/api/client/Assets.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L59)
 
 Handles all Asset related functionality
 
@@ -14,7 +14,7 @@ Handles all Asset related functionality
 
 > **createAsset**(`args`: [`CreateAssetWithTickerParams`](../../../procedures/types/interfaces/CreateAssetWithTickerParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`FungibleAsset`](../../../entities/Asset/Fungible/classes/FungibleAsset.mdx), [`FungibleAsset`](../../../entities/Asset/Fungible/classes/FungibleAsset.mdx)\>\>
 
-Defined in: [src/api/client/Assets.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L113)
+Defined in: [src/api/client/Assets.ts:116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L116)
 
 Create an Asset
 
@@ -50,7 +50,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **createNftCollection**(`args`: [`CreateNftCollectionParams`](../../../procedures/types/interfaces/CreateNftCollectionParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`NftCollection`](../../../entities/Asset/NonFungible/NftCollection/classes/NftCollection.mdx), [`NftCollection`](../../../entities/Asset/NonFungible/NftCollection/classes/NftCollection.mdx)\>\>
 
-Defined in: [src/api/client/Assets.ts:121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L121)
+Defined in: [src/api/client/Assets.ts:124](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L124)
 
 Create an NftCollection
 
@@ -86,7 +86,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **get**(`paginationOpts?`: [`PaginationOptions`](../../../entities/types/interfaces/PaginationOptions.mdx)): `Promise`\<[`ResultSet`](../../../entities/types/interfaces/ResultSet.mdx)\<[`Asset`](../../../entities/Asset/types/type-aliases/Asset.mdx)\>\>
 
-Defined in: [src/api/client/Assets.ts:410](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L410)
+Defined in: [src/api/client/Assets.ts:413](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L413)
 
 Retrieve all the Assets on chain
 
@@ -115,7 +115,7 @@ supports pagination
 
 > **getAsset**(`args`: `object`): `Promise`\<[`Asset`](../../../entities/Asset/types/type-aliases/Asset.mdx)\>
 
-Defined in: [src/api/client/Assets.ts:233](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L233)
+Defined in: [src/api/client/Assets.ts:236](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L236)
 
 Retrieve a FungibleAsset or NftCollection by ticker
 
@@ -149,7 +149,7 @@ Unique ticker of the Asset
 
 > **getAsset**(`args`: `object`): `Promise`\<[`Asset`](../../../entities/Asset/types/type-aliases/Asset.mdx)\>
 
-Defined in: [src/api/client/Assets.ts:242](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L242)
+Defined in: [src/api/client/Assets.ts:245](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L245)
 
 Retrieve a FungibleAsset or NftCollection by Asset ID
 
@@ -185,7 +185,7 @@ Unique identifier of the Asset
 
 > **getAssets**(`args?`: `object`): `Promise`\<[`Asset`](../../../entities/Asset/types/type-aliases/Asset.mdx)[]\>
 
-Defined in: [src/api/client/Assets.ts:263](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L263)
+Defined in: [src/api/client/Assets.ts:266](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L266)
 
 Retrieve all of the Assets owned by an Identity
 
@@ -223,7 +223,7 @@ Assets with unreadable characters in their tickers will be left out
 
 > **getFungibleAsset**(`args`: `object`): `Promise`\<[`FungibleAsset`](../../../entities/Asset/Fungible/classes/FungibleAsset.mdx)\>
 
-Defined in: [src/api/client/Assets.ts:311](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L311)
+Defined in: [src/api/client/Assets.ts:314](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L314)
 
 Retrieve a FungibleAsset by Asset ID
 
@@ -259,7 +259,7 @@ When true, method will not check if Asset exists before returning instance. Defa
 
 > **getFungibleAsset**(`args`: `object`): `Promise`\<[`FungibleAsset`](../../../entities/Asset/Fungible/classes/FungibleAsset.mdx)\>
 
-Defined in: [src/api/client/Assets.ts:323](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L323)
+Defined in: [src/api/client/Assets.ts:326](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L326)
 
 Retrieve a FungibleAsset by ticker
 
@@ -295,7 +295,7 @@ The Asset must exist on chain to be retrieved by ticker
 
 > **getGlobalMetadataKeys**(): `Promise`\<[`GlobalMetadataKey`](../../../entities/MetadataEntry/types/type-aliases/GlobalMetadataKey.mdx)[]\>
 
-Defined in: [src/api/client/Assets.ts:451](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L451)
+Defined in: [src/api/client/Assets.ts:454](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L454)
 
 Retrieve all the Asset Global Metadata on chain. This includes metadata id, name and specs
 
@@ -309,7 +309,7 @@ Retrieve all the Asset Global Metadata on chain. This includes metadata id, name
 
 > **getNextCustomAssetTypeId**(): `Promise`\<`BigNumber`\>
 
-Defined in: [src/api/client/Assets.ts:504](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L504)
+Defined in: [src/api/client/Assets.ts:507](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L507)
 
 Gets the next custom Asset type Id
 
@@ -325,7 +325,7 @@ Gets the next custom Asset type Id
 
 > **getNftCollection**(`args`: `object`): `Promise`\<[`NftCollection`](../../../entities/Asset/NonFungible/NftCollection/classes/NftCollection.mdx)\>
 
-Defined in: [src/api/client/Assets.ts:362](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L362)
+Defined in: [src/api/client/Assets.ts:365](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L365)
 
 Retrieve an NftCollection by ticker
 
@@ -359,7 +359,7 @@ The NftCollection must exist on chain to be retrieved by ticker
 
 > **getNftCollection**(`args`: `object`): `Promise`\<[`NftCollection`](../../../entities/Asset/NonFungible/NftCollection/classes/NftCollection.mdx)\>
 
-Defined in: [src/api/client/Assets.ts:370](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L370)
+Defined in: [src/api/client/Assets.ts:373](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L373)
 
 Retrieve an NftCollection by Asset ID
 
@@ -379,7 +379,7 @@ Description
 
 `string`
 
-Unique identifier of the NftCollection (for spec version 6.x, this is same as ticker)
+Unique identifier of the NftCollection
 
 `args.skipExistsCheck?`
 
@@ -393,11 +393,25 @@ When true, method will not check if the NftCollection exists before returning in
 
 ***
 
+### getTickerRegistrationConfig()
+
+> **getTickerRegistrationConfig**(): `Promise`\<[`TickerRegistrationConfig`](../../../entities/Asset/types/interfaces/TickerRegistrationConfig.mdx)\>
+
+Defined in: [src/api/client/Assets.ts:535](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L535)
+
+Gets the chain-wide rules used to validate ticker registrations
+
+#### Returns
+
+`Promise`\<[`TickerRegistrationConfig`](../../../entities/Asset/types/interfaces/TickerRegistrationConfig.mdx)\>
+
+***
+
 ### getTickerReservation()
 
 > **getTickerReservation**(`args`: `object`): [`TickerReservation`](../../../entities/TickerReservation/classes/TickerReservation.mdx)
 
-Defined in: [src/api/client/Assets.ts:219](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L219)
+Defined in: [src/api/client/Assets.ts:222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L222)
 
 Retrieve a Ticker Reservation
 
@@ -429,7 +443,7 @@ Asset ticker
 
 > **getTickerReservations**(`args?`: `object`): `Promise`\<[`TickerReservation`](../../../entities/TickerReservation/classes/TickerReservation.mdx)[]\>
 
-Defined in: [src/api/client/Assets.ts:178](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L178)
+Defined in: [src/api/client/Assets.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L181)
 
 Retrieve all the ticker reservations currently owned by an Identity. This doesn't include tickers already
 associated with an Asset
@@ -470,7 +484,7 @@ Reservations with unreadable ticker characters are excluded.
 
 > **isTickerAvailable**(`args`: `object`): `Promise`\<`boolean`\>
 
-Defined in: [src/api/client/Assets.ts:130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L130)
+Defined in: [src/api/client/Assets.ts:133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L133)
 
 Check if a ticker hasn't been reserved
 
@@ -502,7 +516,7 @@ Promise that resolves to true if ticker is available, false otherwise
 
 > **isTickerAvailable**(`args`: `object`, `callback`: [`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<`boolean`\>): `Promise`\<[`UnsubCallback`](../../../entities/types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/client/Assets.ts:142](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L142)
+Defined in: [src/api/client/Assets.ts:145](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L145)
 
 Check if a ticker hasn't been reserved (with subscription support)
 
@@ -546,7 +560,7 @@ can be subscribed to, if connected to node using a web socket
 
 > **registerCustomAssetType**(`args`: [`RegisterCustomAssetTypeParams`](../../../procedures/types/interfaces/RegisterCustomAssetTypeParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`BigNumber`, `BigNumber`\>\>
 
-Defined in: [src/api/client/Assets.ts:499](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L499)
+Defined in: [src/api/client/Assets.ts:502](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L502)
 
 Register a custom asset type
 
@@ -577,7 +591,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **reserveTicker**(`args`: [`ReserveTickerParams`](../../../procedures/types/interfaces/ReserveTickerParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`TickerReservation`](../../../entities/TickerReservation/classes/TickerReservation.mdx), [`TickerReservation`](../../../entities/TickerReservation/classes/TickerReservation.mdx)\>\>
 
-Defined in: [src/api/client/Assets.ts:105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L105)
+Defined in: [src/api/client/Assets.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L108)
 
 Reserve a ticker symbol under the ownership of the signing Identity to later use in the creation of an Asset.
   The ticker will expire after a set amount of time, after which other users can reserve it
@@ -607,11 +621,11 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 ### transferFunds()
 
-> **transferFunds**(`args`: [`TransferFundsParams`](../../../procedures/types/type-aliases/TransferFundsParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+> **transferFunds**(`args`: [`TransferFundsParams`](../../../procedures/types/type-aliases/TransferFundsParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Instruction`](../../../entities/Instruction/classes/Instruction.mdx) \| `undefined`, [`Instruction`](../../../entities/Instruction/classes/Instruction.mdx) \| `undefined`\>\>
 
-Defined in: [src/api/client/Assets.ts:527](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Assets.ts#L527)
+Defined in: [src/api/client/Assets.ts:530](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L530)
 
-Transfer funds between two asset holders (Account or Portfolio) owned by same identity.
+Transfer funds between two asset holders (Account or Portfolio), which may be owned by the same or different identities.
 
 #### Parameters
 
@@ -628,7 +642,7 @@ Type
 
 #### Returns
 
-`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Instruction`](../../../entities/Instruction/classes/Instruction.mdx) \| `undefined`, [`Instruction`](../../../entities/Instruction/classes/Instruction.mdx) \| `undefined`\>\>
 
 #### Note
 
@@ -636,7 +650,7 @@ When `from` account is of type account and the caller is the subsidizer of `from
 
 #### Note
 
-To transfer between asset holders owned by separate DID use settlement instructions
+When `from` and `to` belong to different identities, this creates a settlement instruction that is immediately affirmed on behalf of `from`. If the caller's identity doesn't also own `to`, the instruction remains pending until the receiver affirms it (a resolved [Instruction](../../../entities/Instruction/classes/Instruction.mdx) is returned in that case). If both sides are affirmed, the transfer settles immediately and `undefined` is returned.
 
 #### Note
 

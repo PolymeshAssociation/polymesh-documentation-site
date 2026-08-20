@@ -12,6 +12,7 @@
 
 ## Interfaces
 
+- [AccountBalance](interfaces/AccountBalance.mdx)
 - [AccountTypeInfo](interfaces/AccountTypeInfo.mdx)
 - [ActiveEraInfo](interfaces/ActiveEraInfo.mdx)
 - [Balance](interfaces/Balance.mdx)
@@ -21,7 +22,3 @@
 - [StakingNomination](interfaces/StakingNomination.mdx)
 - [StakingPayee](interfaces/StakingPayee.mdx)
 - [StakingUnlockingEntry](interfaces/StakingUnlockingEntry.mdx)
-
-## Type Aliases
-
-- [AccountBalance](type-aliases/AccountBalance.mdx)

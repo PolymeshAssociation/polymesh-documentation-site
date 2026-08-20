@@ -1,10 +1,10 @@
 # Enumeration: MultiSigProposalVoteActionEnum
 
-> Defined in: [src/middleware/types.ts:5869](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5869)
+> Defined in: [src/middleware/types.ts:5869](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L5869)
 
 # Enumeration: MultiSigProposalVoteActionEnum
 
-Defined in: [src/middleware/types.ts:5869](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5869)
+Defined in: [src/middleware/types.ts:5869](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L5869)
 
 ## Enumeration Members
 
@@ -12,7 +12,7 @@ Defined in: [src/middleware/types.ts:5869](https://github.com/PolymeshAssociatio
 
 > **Approved**: `"Approved"`
 
-Defined in: [src/middleware/types.ts:5870](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5870)
+Defined in: [src/middleware/types.ts:5870](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L5870)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/middleware/types.ts:5870](https://github.com/PolymeshAssociatio
 
 > **Rejected**: `"Rejected"`
 
-Defined in: [src/middleware/types.ts:5871](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L5871)
+Defined in: [src/middleware/types.ts:5871](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L5871)

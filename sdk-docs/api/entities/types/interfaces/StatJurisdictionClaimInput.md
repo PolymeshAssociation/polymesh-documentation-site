@@ -1,10 +1,10 @@
 # Interface: StatJurisdictionClaimInput
 
-> Defined in: [src/api/entities/types.ts:261](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L261)
+> Defined in: [src/api/entities/types.ts:255](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L255)
 
 # Interface: StatJurisdictionClaimInput
 
-Defined in: [src/api/entities/types.ts:261](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L261)
+Defined in: [src/api/entities/types.ts:255](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L255)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/types.ts:261](https://github.com/PolymeshAssociati
 
 > **countryCode**: [`CountryCode`](../../../../types/enumerations/CountryCode.mdx) \| `undefined`
 
-Defined in: [src/api/entities/types.ts:263](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L263)
+Defined in: [src/api/entities/types.ts:257](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L257)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/entities/types.ts:263](https://github.com/PolymeshAssociati
 
 > **type**: [`Jurisdiction`](../enumerations/ClaimType.mdx#jurisdiction)
 
-Defined in: [src/api/entities/types.ts:262](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L262)
+Defined in: [src/api/entities/types.ts:256](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L256)

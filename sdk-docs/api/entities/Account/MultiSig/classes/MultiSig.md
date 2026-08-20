@@ -1,10 +1,10 @@
 # Class: MultiSig
 
-> Defined in: [src/api/entities/Account/MultiSig/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/index.ts#L49)
+> Defined in: [src/api/entities/Account/MultiSig/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/MultiSig/index.ts#L49)
 
 # Class: MultiSig
 
-Defined in: [src/api/entities/Account/MultiSig/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/index.ts#L49)
+Defined in: [src/api/entities/Account/MultiSig/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/MultiSig/index.ts#L49)
 
 Represents a MultiSig Account. A MultiSig Account is composed of one or more signing Accounts. In order to submit a transaction, a specific amount of those signing Accounts must approve it first
 
@@ -18,7 +18,7 @@ Represents a MultiSig Account. A MultiSig Account is composed of one or more sig
 
 > **address**: `string`
 
-Defined in: [src/api/entities/Account/index.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L110)
+Defined in: [src/api/entities/Account/index.ts:110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L110)
 
 Polymesh-specific address of the Account. Serves as an identifier
 
@@ -32,7 +32,7 @@ Polymesh-specific address of the Account. Serves as an identifier
 
 > **authorizations**: [`Authorizations`](../../../common/namespaces/Authorizations/classes/Authorizations.mdx)\<[`Account`](../../classes/Account.mdx)\>
 
-Defined in: [src/api/entities/Account/index.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L119)
+Defined in: [src/api/entities/Account/index.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L119)
 
 #### Inherited from
 
@@ -44,7 +44,7 @@ Defined in: [src/api/entities/Account/index.ts:119](https://github.com/PolymeshA
 
 > **key**: `string`
 
-Defined in: [src/api/entities/Account/index.ts:116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L116)
+Defined in: [src/api/entities/Account/index.ts:116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L116)
 
 A hex representation of the cryptographic public key of the Account. This is consistent across
 Substrate chains, while the address depends on the chain as well.
@@ -59,7 +59,7 @@ Substrate chains, while the address depends on the chain as well.
 
 > **staking**: [`Staking`](../../Staking/classes/Staking.mdx)
 
-Defined in: [src/api/entities/Account/index.ts:121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L121)
+Defined in: [src/api/entities/Account/index.ts:121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L121)
 
 #### Inherited from
 
@@ -71,7 +71,7 @@ Defined in: [src/api/entities/Account/index.ts:121](https://github.com/PolymeshA
 
 > **subsidies**: [`Subsidies`](../../../Subsidies/classes/Subsidies.mdx)
 
-Defined in: [src/api/entities/Account/index.ts:120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L120)
+Defined in: [src/api/entities/Account/index.ts:120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L120)
 
 #### Inherited from
 
@@ -83,7 +83,7 @@ Defined in: [src/api/entities/Account/index.ts:120](https://github.com/PolymeshA
 
 > **uuid**: `string`
 
-Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L46)
+Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L46)
 
 #### Inherited from
 
@@ -95,7 +95,7 @@ Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociati
 
 > **checkPermissions**(`permissions`: [`SimplePermissions`](../../../types/interfaces/SimplePermissions.mdx)): `Promise`\<[`CheckPermissionsResult`](../../../types/interfaces/CheckPermissionsResult.mdx)\<[`Account`](../../../types/enumerations/SignerType.mdx#account)\>\>
 
-Defined in: [src/api/entities/Account/index.ts:395](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L395)
+Defined in: [src/api/entities/Account/index.ts:394](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L394)
 
 Check if this Account possesses certain Permissions to act on behalf of its corresponding Identity
 
@@ -124,7 +124,7 @@ which permissions the Account is missing (if any) and the final result
 
 > **details**(): `Promise`\<[`MultiSigDetails`](../types/interfaces/MultiSigDetails.mdx)\>
 
-Defined in: [src/api/entities/Account/MultiSig/index.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/index.ts#L80)
+Defined in: [src/api/entities/Account/MultiSig/index.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/MultiSig/index.ts#L80)
 
 Return details about this MultiSig such as the signing Accounts and the required number of signatures to execute a MultiSigProposal
 
@@ -138,7 +138,7 @@ Return details about this MultiSig such as the signing Accounts and the required
 
 > **exists**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Account/index.ts:478](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L478)
+Defined in: [src/api/entities/Account/index.ts:477](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L477)
 
 Determine whether this Account exists on chain
 
@@ -156,7 +156,7 @@ Determine whether this Account exists on chain
 
 > **getAdmin**(): `Promise`\<[`Identity`](../../../Identity/classes/Identity.mdx) \| `null`\>
 
-Defined in: [src/api/entities/Account/MultiSig/index.ts:264](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/index.ts#L264)
+Defined in: [src/api/entities/Account/MultiSig/index.ts:264](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/MultiSig/index.ts#L264)
 
 Returns the Identity of the MultiSig admin. This Identity can add or remove signers directly without creating a MultiSigProposal first.
 
@@ -170,7 +170,7 @@ Returns the Identity of the MultiSig admin. This Identity can add or remove sign
 
 > **getAssetBalances**(`args?`: `object`): `Promise`\<[`PortfolioBalance`](../../../Portfolio/types/interfaces/PortfolioBalance.mdx)[]\>
 
-Defined in: [src/api/entities/Account/index.ts:684](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L684)
+Defined in: [src/api/entities/Account/index.ts:676](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L676)
 
 Retrieve the balances of all fungible assets in this Account
 
@@ -206,15 +206,15 @@ array of FungibleAssets (or tickers) for which to fetch balances (optional, all 
 
 #### Call Signature
 
-> **getBalance**(): `Promise`\<[`Balance`](../../types/interfaces/Balance.mdx)\>
+> **getBalance**(): `Promise`\<[`AccountBalance`](../../types/interfaces/AccountBalance.mdx)\>
 
-Defined in: [src/api/entities/Account/index.ts:145](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L145)
+Defined in: [src/api/entities/Account/index.ts:145](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L145)
 
 Get the free/locked POLYX balance of the Account
 
 ##### Returns
 
-`Promise`\<[`Balance`](../../types/interfaces/Balance.mdx)\>
+`Promise`\<[`AccountBalance`](../../types/interfaces/AccountBalance.mdx)\>
 
 Promise that resolves to the Account's POLYX balance information
 
@@ -224,9 +224,9 @@ Promise that resolves to the Account's POLYX balance information
 
 #### Call Signature
 
-> **getBalance**(`callback`: [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<[`Balance`](../../types/interfaces/Balance.mdx)\>): `Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
+> **getBalance**(`callback`: [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<[`AccountBalance`](../../types/interfaces/AccountBalance.mdx)\>): `Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/Account/index.ts:156](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L156)
+Defined in: [src/api/entities/Account/index.ts:156](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L156)
 
 Get the free/locked POLYX balance of the Account (with subscription support)
 
@@ -238,7 +238,7 @@ Description
 
 `callback`
 
-[`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<[`Balance`](../../types/interfaces/Balance.mdx)\>
+[`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<[`AccountBalance`](../../types/interfaces/AccountBalance.mdx)\>
 
 Callback function that receives balance updates
 
@@ -262,7 +262,7 @@ can be subscribed to, if connected to node using a web socket
 
 > **getCollections**(`args?`: `object`): `Promise`\<[`PortfolioCollection`](../../../Portfolio/types/interfaces/PortfolioCollection.mdx)[]\>
 
-Defined in: [src/api/entities/Account/index.ts:764](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L764)
+Defined in: [src/api/entities/Account/index.ts:756](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L756)
 
 Retrieve the NFTs held in this Account
 
@@ -298,7 +298,7 @@ array of NftCollection (or tickers) for which to fetch holdings (optional, all h
 
 > **getCurrentNonce**(): `Promise`\<`BigNumber`\>
 
-Defined in: [src/api/entities/Account/index.ts:492](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L492)
+Defined in: [src/api/entities/Account/index.ts:491](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L491)
 
 Retrieve the current nonce for this Account
 
@@ -316,7 +316,7 @@ Retrieve the current nonce for this Account
 
 > **getHistoricalProposals**(`opts?`: `object`): `Promise`\<[`ResultSet`](../../../types/interfaces/ResultSet.mdx)\<[`HistoricalMultiSigProposal`](../types/interfaces/HistoricalMultiSigProposal.mdx)\>\>
 
-Defined in: [src/api/entities/Account/MultiSig/index.ts:198](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/index.ts#L198)
+Defined in: [src/api/entities/Account/MultiSig/index.ts:198](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/MultiSig/index.ts#L198)
 
 Return a set of [MultiSigProposal](../../../MultiSigProposal/classes/MultiSigProposal.mdx) for this MultiSig Account
 
@@ -351,7 +351,7 @@ uses the middlewareV2
 
 > **getIdentity**(): `Promise`\<[`Identity`](../../../Identity/classes/Identity.mdx) \| `null`\>
 
-Defined in: [src/api/entities/Account/index.ts:175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L175)
+Defined in: [src/api/entities/Account/index.ts:175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L175)
 
 Retrieve the Identity associated to this Account (null if there is none)
 
@@ -369,7 +369,7 @@ Retrieve the Identity associated to this Account (null if there is none)
 
 > **getMultiSig**(): `Promise`\<`MultiSig` \| `null`\>
 
-Defined in: [src/api/entities/Account/index.ts:450](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L450)
+Defined in: [src/api/entities/Account/index.ts:449](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L449)
 
 Fetch the MultiSig this Account is part of. If this Account is not a signer on any MultiSig, return null
 
@@ -387,7 +387,7 @@ Fetch the MultiSig this Account is part of. If this Account is not a signer on a
 
 > **getNextAssetId**(): `Promise`\<`string`\>
 
-Defined in: [src/api/entities/Account/index.ts:637](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L637)
+Defined in: [src/api/entities/Account/index.ts:629](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L629)
 
 Returns next assetID that will be generated for this Identity
 
@@ -405,7 +405,7 @@ Returns next assetID that will be generated for this Identity
 
 > **getOffChainReceipts**(): `Promise`\<`BigNumber`[]\>
 
-Defined in: [src/api/entities/Account/index.ts:610](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L610)
+Defined in: [src/api/entities/Account/index.ts:602](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L602)
 
 Returns all off chain receipts used by this Account
 
@@ -423,7 +423,7 @@ Returns all off chain receipts used by this Account
 
 > **getPayer**(): `Promise`\<[`Identity`](../../../Identity/classes/Identity.mdx) \| `null`\>
 
-Defined in: [src/api/entities/Account/MultiSig/index.ts:290](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/index.ts#L290)
+Defined in: [src/api/entities/Account/MultiSig/index.ts:290](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/MultiSig/index.ts#L290)
 
 Returns the payer for the MultiSig, if set the primary account of the identity will pay for any fees the MultiSig may incur
 
@@ -437,7 +437,7 @@ Returns the payer for the MultiSig, if set the primary account of the identity w
 
 > **getPendingProposals**(): `Promise`\<[`MultiSigProposal`](../../../MultiSigProposal/classes/MultiSigProposal.mdx)[]\>
 
-Defined in: [src/api/entities/Account/index.ts:594](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L594)
+Defined in: [src/api/entities/Account/index.ts:586](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L586)
 
 Returns pending MultiSig proposals for this Account
 
@@ -463,7 +463,7 @@ if the Account is not a signer on any MultiSig
 
 > **getPermissions**(): `Promise`\<[`Permissions`](../../../types/interfaces/Permissions.mdx)\>
 
-Defined in: [src/api/entities/Account/index.ts:342](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L342)
+Defined in: [src/api/entities/Account/index.ts:341](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L341)
 
 Retrieve the Permissions this Account has as a Permissioned Account for its corresponding Identity
 
@@ -485,7 +485,7 @@ if there is no Identity associated with the Account
 
 > **getPolyxTransactions**(`filters`: `object`): `Promise`\<[`ResultSet`](../../../types/interfaces/ResultSet.mdx)\<[`HistoricPolyxTransaction`](../../types/interfaces/HistoricPolyxTransaction.mdx)\>\>
 
-Defined in: [src/api/entities/Account/index.ts:576](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L576)
+Defined in: [src/api/entities/Account/index.ts:568](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L568)
 
 Returns POLYX transactions associated with this account
 
@@ -531,7 +531,7 @@ uses the middleware
 
 > **getProposal**(`args`: `object`): `Promise`\<[`MultiSigProposal`](../../../MultiSigProposal/classes/MultiSigProposal.mdx)\>
 
-Defined in: [src/api/entities/Account/MultiSig/index.ts:116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/index.ts#L116)
+Defined in: [src/api/entities/Account/MultiSig/index.ts:116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/MultiSig/index.ts#L116)
 
 Given an ID, fetch a [MultiSigProposal](../../../MultiSigProposal/classes/MultiSigProposal.mdx) for this MultiSig
 
@@ -562,7 +562,7 @@ if the MultiSigProposal is not found
 
 > **getProposals**(): `Promise`\<[`MultiSigProposal`](../../../MultiSigProposal/classes/MultiSigProposal.mdx)[]\>
 
-Defined in: [src/api/entities/Account/MultiSig/index.ts:136](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/index.ts#L136)
+Defined in: [src/api/entities/Account/MultiSig/index.ts:136](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/MultiSig/index.ts#L136)
 
 Return all active [MultiSig Proposals](../../../MultiSigProposal/classes/MultiSigProposal.mdx) for this MultiSig Account
 
@@ -576,7 +576,7 @@ Return all active [MultiSig Proposals](../../../MultiSigProposal/classes/MultiSi
 
 > **getTransactionHistory**(`filters?`: `object`): `Promise`\<[`ResultSet`](../../../types/interfaces/ResultSet.mdx)\<[`ExtrinsicData`](../../../../client/types/interfaces/ExtrinsicData.mdx)\>\>
 
-Defined in: [src/api/entities/Account/index.ts:211](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L211)
+Defined in: [src/api/entities/Account/index.ts:211](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L211)
 
 Retrieve a list of transactions signed by this Account. Can be filtered using parameters
 
@@ -658,7 +658,7 @@ uses the middleware v2
 
 > **getTypeInfo**(): `Promise`\<[`AccountTypeInfo`](../../types/interfaces/AccountTypeInfo.mdx)\>
 
-Defined in: [src/api/entities/Account/index.ts:513](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L513)
+Defined in: [src/api/entities/Account/index.ts:512](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L512)
 
 Retrieve the type of Account, and its relation to an Identity, if applicable
 
@@ -676,7 +676,7 @@ Retrieve the type of Account, and its relation to an Identity, if applicable
 
 > **isEqual**(`entity`: [`Entity`](../../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>): `boolean`
 
-Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L61)
+Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L61)
 
 Determine whether this Entity is the same as another one
 
@@ -703,7 +703,7 @@ Type
 
 > **isFrozen**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Account/index.ts:321](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L321)
+Defined in: [src/api/entities/Account/index.ts:320](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L320)
 
 Check whether this Account is frozen. If frozen, it cannot perform any Identity related action until the primary Account of the Identity unfreezes all secondary Accounts
 
@@ -725,7 +725,7 @@ returns false if the Account isn't associated to any Identity
 
 > **modify**(`args`: `Pick`\<[`ModifyMultiSigParams`](../../../../procedures/types/interfaces/ModifyMultiSigParams.mdx), `"signers"` \| `"requiredSignatures"`\>, `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Account/MultiSig/index.ts:315](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/index.ts#L315)
+Defined in: [src/api/entities/Account/MultiSig/index.ts:315](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/MultiSig/index.ts#L315)
 
 Modify the signers for the MultiSig. The signing Account must belong to the Identity of the creator of the MultiSig
 
@@ -756,7 +756,7 @@ this method is of type [ProcedureMethod](../../../../procedures/types/interfaces
 
 > **removePayer**(`opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Account/MultiSig/index.ts:332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/index.ts#L332)
+Defined in: [src/api/entities/Account/MultiSig/index.ts:332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/MultiSig/index.ts#L332)
 
 A MultiSig's creator is initially responsible for any fees the MultiSig may incur. This method allows for the
 MultiSig to pay for it's own fees.
@@ -788,7 +788,7 @@ this method is of type [NoArgsProcedureMethod](../../../../procedures/types/inte
 
 > **setAdmin**(`args`: [`SetMultiSigAdminParams`](../../../../procedures/types/interfaces/SetMultiSigAdminParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Account/MultiSig/index.ts:324](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/MultiSig/index.ts#L324)
+Defined in: [src/api/entities/Account/MultiSig/index.ts:324](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/MultiSig/index.ts#L324)
 
 Set an admin for the MultiSig. When setting an admin it must be signed by one of the MultiSig signers and ran
 as a proposal. When removing an admin it must be called by account belonging to the admin's identity
@@ -820,7 +820,7 @@ this method is of type [ProcedureMethod](../../../../procedures/types/interfaces
 
 > **toHuman**(): `string`
 
-Defined in: [src/api/entities/Account/index.ts:485](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Account/index.ts#L485)
+Defined in: [src/api/entities/Account/index.ts:484](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L484)
 
 Return the Account's address
 
@@ -838,7 +838,7 @@ Return the Account's address
 
 > `static` **generateUuid**\<`Identifiers`\>(`identifiers`: `Identifiers`): `string`
 
-Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L14)
+Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L14)
 
 Generate the Entity's UUID from its identifying properties
 
@@ -874,7 +874,7 @@ Description
 
 > `static` **unserialize**\<`Identifiers`\>(`serialized`: `string`): `Identifiers`
 
-Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L23)
+Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L23)
 
 Unserialize a UUID into its Unique Identifiers
 

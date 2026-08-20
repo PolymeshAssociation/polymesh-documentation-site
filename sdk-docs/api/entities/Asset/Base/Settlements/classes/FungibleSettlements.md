@@ -1,10 +1,10 @@
 # Class: FungibleSettlements
 
-> Defined in: [src/api/entities/Asset/Base/Settlements/index.ts:225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Settlements/index.ts#L225)
+> Defined in: [src/api/entities/Asset/Base/Settlements/index.ts:225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Settlements/index.ts#L225)
 
 # Class: FungibleSettlements
 
-Defined in: [src/api/entities/Asset/Base/Settlements/index.ts:225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Settlements/index.ts#L225)
+Defined in: [src/api/entities/Asset/Base/Settlements/index.ts:225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Settlements/index.ts#L225)
 
 Handles all Asset Settlements related functionality
 
@@ -18,7 +18,7 @@ Handles all Asset Settlements related functionality
 
 > **canTransfer**(`args`: `object`): `Promise`\<[`TransferBreakdown`](../../../types/interfaces/TransferBreakdown.mdx)\>
 
-Defined in: [src/api/entities/Asset/Base/Settlements/index.ts:241](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Settlements/index.ts#L241)
+Defined in: [src/api/entities/Asset/Base/Settlements/index.ts:241](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Settlements/index.ts#L241)
 
 Check whether it is possible to create a settlement instruction to transfer a certain amount of this asset between two Asset Holders. Returns a breakdown of
   the transaction containing general errors (such as insufficient balance or invalid receiver), any broken transfer restrictions, and any compliance
@@ -71,7 +71,7 @@ this takes locked tokens into account. For example, if portfolio A has 1000 toke
 
 > **preApprove**(`opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/Settlements/index.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Settlements/index.ts#L46)
+Defined in: [src/api/entities/Asset/Base/Settlements/index.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Settlements/index.ts#L46)
 
 Pre-approves receiving this asset for the signing identity. Receiving this asset in a settlement will not require manual affirmation
 
@@ -102,7 +102,7 @@ this method is of type [NoArgsProcedureMethod](../../../../../procedures/types/i
 
 > **removePreApproval**(`opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/Settlements/index.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Settlements/index.ts#L51)
+Defined in: [src/api/entities/Asset/Base/Settlements/index.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Settlements/index.ts#L51)
 
 Removes pre-approval for this asset
 

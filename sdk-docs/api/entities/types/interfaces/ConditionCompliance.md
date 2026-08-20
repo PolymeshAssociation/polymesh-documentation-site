@@ -1,10 +1,10 @@
 # Interface: ConditionCompliance
 
-> Defined in: [src/api/entities/types.ts:429](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L429)
+> Defined in: [src/api/entities/types.ts:423](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L423)
 
 # Interface: ConditionCompliance
 
-Defined in: [src/api/entities/types.ts:429](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L429)
+Defined in: [src/api/entities/types.ts:423](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L423)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/types.ts:429](https://github.com/PolymeshAssociati
 
 > **complies**: `boolean`
 
-Defined in: [src/api/entities/types.ts:431](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L431)
+Defined in: [src/api/entities/types.ts:425](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L425)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/entities/types.ts:431](https://github.com/PolymeshAssociati
 
 > **condition**: [`Condition`](../type-aliases/Condition.mdx)
 
-Defined in: [src/api/entities/types.ts:430](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L430)
+Defined in: [src/api/entities/types.ts:424](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L424)

@@ -1,10 +1,10 @@
 # Interface: SkipChecksOpt
 
-> Defined in: [src/api/procedures/types.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L93)
+> Defined in: [src/api/procedures/types.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L91)
 
 # Interface: SkipChecksOpt
 
-Defined in: [src/api/procedures/types.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L93)
+Defined in: [src/api/procedures/types.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L91)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/procedures/types.ts:93](https://github.com/PolymeshAssociat
 
 > `optional` **accountFrozen?**: `boolean`
 
-Defined in: [src/api/procedures/types.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L109)
+Defined in: [src/api/procedures/types.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L107)
 
 whether to skip the account frozen check
 
@@ -22,7 +22,7 @@ whether to skip the account frozen check
 
 > `optional` **agentPermissions?**: `boolean`
 
-Defined in: [src/api/procedures/types.ts:105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L105)
+Defined in: [src/api/procedures/types.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L103)
 
 whether to skip the agent permissions check
 
@@ -32,7 +32,7 @@ whether to skip the agent permissions check
 
 > `optional` **identity?**: `boolean`
 
-Defined in: [src/api/procedures/types.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L113)
+Defined in: [src/api/procedures/types.ts:111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L111)
 
 whether to skip the identity check (i.e. whether the signing Account has an associated Identity)
 
@@ -42,7 +42,7 @@ whether to skip the identity check (i.e. whether the signing Account has an asso
 
 > `optional` **roles?**: `boolean`
 
-Defined in: [src/api/procedures/types.ts:97](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L97)
+Defined in: [src/api/procedures/types.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L95)
 
 whether to skip the roles check
 
@@ -52,6 +52,6 @@ whether to skip the roles check
 
 > `optional` **signerPermissions?**: `boolean`
 
-Defined in: [src/api/procedures/types.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L101)
+Defined in: [src/api/procedures/types.ts:99](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L99)
 
 whether to skip the signer permissions check

@@ -1,10 +1,10 @@
 # Enumeration: ScopeType
 
-> Defined in: [src/api/entities/types.ts:156](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L156)
+> Defined in: [src/api/entities/types.ts:150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L150)
 
 # Enumeration: ScopeType
 
-Defined in: [src/api/entities/types.ts:156](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L156)
+Defined in: [src/api/entities/types.ts:150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L150)
 
 ## Enumeration Members
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/types.ts:156](https://github.com/PolymeshAssociati
 
 > **Asset**: `"Asset"`
 
-Defined in: [src/api/entities/types.ts:159](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L159)
+Defined in: [src/api/entities/types.ts:153](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L153)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/entities/types.ts:159](https://github.com/PolymeshAssociati
 
 > **Custom**: `"Custom"`
 
-Defined in: [src/api/entities/types.ts:160](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L160)
+Defined in: [src/api/entities/types.ts:154](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L154)
 
 ***
 
@@ -28,4 +28,4 @@ Defined in: [src/api/entities/types.ts:160](https://github.com/PolymeshAssociati
 
 > **Identity**: `"Identity"`
 
-Defined in: [src/api/entities/types.ts:158](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L158)
+Defined in: [src/api/entities/types.ts:152](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L152)

@@ -6,7 +6,7 @@
 
 > **SettlementLeg** = [`Leg`](../../../Instruction/types/type-aliases/Leg.mdx) & `object`
 
-Defined in: [src/api/entities/Portfolio/types.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Portfolio/types.ts#L27)
+Defined in: [src/api/entities/Portfolio/types.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/types.ts#L27)
 
 ## Type Declaration
 
@@ -18,4 +18,4 @@ Defined in
 
 [`SettlementDirectionEnum`](../../../../../types/enumerations/SettlementDirectionEnum.mdx)
 
-[src/api/entities/Portfolio/types.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Portfolio/types.ts#L28)
+[src/api/entities/Portfolio/types.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/types.ts#L28)

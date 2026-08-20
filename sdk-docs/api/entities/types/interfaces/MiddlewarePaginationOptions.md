@@ -1,10 +1,10 @@
 # Interface: MiddlewarePaginationOptions
 
-> Defined in: [src/api/entities/types.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L96)
+> Defined in: [src/api/entities/types.ts:94](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L94)
 
 # Interface: MiddlewarePaginationOptions
 
-Defined in: [src/api/entities/types.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L96)
+Defined in: [src/api/entities/types.ts:94](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L94)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/types.ts:96](https://github.com/PolymeshAssociatio
 
 > **size**: `BigNumber`
 
-Defined in: [src/api/entities/types.ts:97](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L97)
+Defined in: [src/api/entities/types.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L95)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/entities/types.ts:97](https://github.com/PolymeshAssociatio
 
 > `optional` **start?**: `BigNumber`
 
-Defined in: [src/api/entities/types.ts:98](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L98)
+Defined in: [src/api/entities/types.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L96)

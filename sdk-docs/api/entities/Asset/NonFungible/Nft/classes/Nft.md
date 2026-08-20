@@ -1,10 +1,10 @@
 # Class: Nft
 
-> Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/NonFungible/Nft.ts#L46)
+> Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/NonFungible/Nft.ts#L45)
 
 # Class: Nft
 
-Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/NonFungible/Nft.ts#L46)
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/NonFungible/Nft.ts#L45)
 
 Class used to manage Nft functionality. Each NFT belongs to an NftCollection, which specifies the expected metadata values for each NFT
 
@@ -18,7 +18,7 @@ Class used to manage Nft functionality. Each NFT belongs to an NftCollection, wh
 
 > **collection**: [`NftCollection`](../../NftCollection/classes/NftCollection.mdx)
 
-Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/NonFungible/Nft.ts#L52)
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/NonFungible/Nft.ts#L51)
 
 The [NftCollection](../../NftCollection/classes/NftCollection.mdx) this NFT belongs to
 
@@ -28,7 +28,7 @@ The [NftCollection](../../NftCollection/classes/NftCollection.mdx) this NFT belo
 
 > **id**: `BigNumber`
 
-Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/NonFungible/Nft.ts#L47)
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/NonFungible/Nft.ts#L46)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:47](https://github.com/Po
 
 > **uuid**: `string`
 
-Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L46)
+Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L46)
 
 #### Inherited from
 
@@ -48,7 +48,7 @@ Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociati
 
 > **exists**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/NonFungible/Nft.ts#L127)
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/NonFungible/Nft.ts#L126)
 
 Determine if the NFT exists on chain
 
@@ -66,7 +66,7 @@ Determine if the NFT exists on chain
 
 > **getImageUri**(): `Promise`\<`string` \| `null`\>
 
-Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:149](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/NonFungible/Nft.ts#L149)
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:148](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/NonFungible/Nft.ts#L148)
 
 Get the conventional image URI for the NFT
 
@@ -93,7 +93,7 @@ The URI values can include `{tokenId}` that will be replaced with the NFTs ID. I
 
 > **getMetadata**(): `Promise`\<[`NftMetadata`](../../../types/interfaces/NftMetadata.mdx)[]\>
 
-Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/NonFungible/Nft.ts#L95)
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:94](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/NonFungible/Nft.ts#L94)
 
 Get metadata associated with this token
 
@@ -107,7 +107,7 @@ Get metadata associated with this token
 
 > **getOwner**(): `Promise`\<[`AssetHolder`](../../../../types/type-aliases/AssetHolder.mdx) \| `null`\>
 
-Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:210](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/NonFungible/Nft.ts#L210)
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:209](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/NonFungible/Nft.ts#L209)
 
 Get owner of the NFT
 
@@ -125,7 +125,7 @@ This method returns `null` if there is no existing holder for the token. This ma
 
 > **getTokenUri**(): `Promise`\<`string` \| `null`\>
 
-Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:185](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/NonFungible/Nft.ts#L185)
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:184](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/NonFungible/Nft.ts#L184)
 
 Get the conventional token URI for the NFT
 
@@ -152,7 +152,7 @@ The URI values can include `{tokenId}` that will be replaced with the NFTs ID. I
 
 > **isEqual**(`entity`: [`Entity`](../../../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>): `boolean`
 
-Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L61)
+Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L61)
 
 Determine whether this Entity is the same as another one
 
@@ -179,7 +179,7 @@ Type
 
 > **isLocked**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:240](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/NonFungible/Nft.ts#L240)
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:239](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/NonFungible/Nft.ts#L239)
 
 Check if the NFT is locked in any settlement instruction
 
@@ -197,7 +197,7 @@ if NFT has no owner (has been redeemed)
 
 > **redeem**(`args?`: [`RedeemNftParams`](../../../../../procedures/types/interfaces/RedeemNftParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/NonFungible/Nft.ts#L57)
+Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/NonFungible/Nft.ts#L56)
 
 Redeem (or "burns") the NFT, removing it from circulation
 
@@ -228,7 +228,7 @@ this method is of type [OptionalArgsProcedureMethod](../../../../../procedures/t
 
 > `static` **generateUuid**\<`Identifiers`\>(`identifiers`: `Identifiers`): `string`
 
-Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L14)
+Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L14)
 
 Generate the Entity's UUID from its identifying properties
 
@@ -264,7 +264,7 @@ Description
 
 > `static` **unserialize**\<`Identifiers`\>(`serialized`: `string`): `Identifiers`
 
-Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L23)
+Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L23)
 
 Unserialize a UUID into its Unique Identifiers
 

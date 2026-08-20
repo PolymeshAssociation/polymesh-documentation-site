@@ -1,10 +1,10 @@
 # Interface: SetClaimCountTransferRestrictionsParams
 
-> Defined in: [src/api/procedures/types.ts:690](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L690)
+> Defined in: [src/api/procedures/types.ts:688](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L688)
 
 # Interface: SetClaimCountTransferRestrictionsParams
 
-Defined in: [src/api/procedures/types.ts:690](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L690)
+Defined in: [src/api/procedures/types.ts:688](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L688)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/procedures/types.ts:690](https://github.com/PolymeshAssocia
 
 > **restrictions**: [`ClaimCountTransferRestrictionInput`](ClaimCountTransferRestrictionInput.mdx)[]
 
-Defined in: [src/api/procedures/types.ts:691](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L691)
+Defined in: [src/api/procedures/types.ts:689](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L689)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/procedures/types.ts:691](https://github.com/PolymeshAssocia
 
 > **type**: [`ClaimCount`](../enumerations/TransferRestrictionType.mdx#claimcount)
 
-Defined in: [src/api/procedures/types.ts:692](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L692)
+Defined in: [src/api/procedures/types.ts:690](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L690)

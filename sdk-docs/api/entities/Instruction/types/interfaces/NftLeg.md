@@ -1,10 +1,10 @@
 # Interface: NftLeg
 
-> Defined in: [src/api/entities/Instruction/types.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L77)
+> Defined in: [src/api/entities/Instruction/types.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L77)
 
 # Interface: NftLeg
 
-Defined in: [src/api/entities/Instruction/types.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L77)
+Defined in: [src/api/entities/Instruction/types.ts:77](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L77)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/Instruction/types.ts:77](https://github.com/Polyme
 
 > **asset**: [`NftCollection`](../../../Asset/NonFungible/NftCollection/classes/NftCollection.mdx)
 
-Defined in: [src/api/entities/Instruction/types.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L81)
+Defined in: [src/api/entities/Instruction/types.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L81)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/entities/Instruction/types.ts:81](https://github.com/Polyme
 
 > **from**: [`AssetHolder`](../type-aliases/AssetHolder.mdx)
 
-Defined in: [src/api/entities/Instruction/types.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L78)
+Defined in: [src/api/entities/Instruction/types.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L78)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/api/entities/Instruction/types.ts:78](https://github.com/Polyme
 
 > **nfts**: [`Nft`](../../../Asset/NonFungible/Nft/classes/Nft.mdx)[]
 
-Defined in: [src/api/entities/Instruction/types.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L80)
+Defined in: [src/api/entities/Instruction/types.ts:80](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L80)
 
 ***
 
@@ -36,4 +36,4 @@ Defined in: [src/api/entities/Instruction/types.ts:80](https://github.com/Polyme
 
 > **to**: [`AssetHolder`](../type-aliases/AssetHolder.mdx)
 
-Defined in: [src/api/entities/Instruction/types.ts:79](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L79)
+Defined in: [src/api/entities/Instruction/types.ts:79](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L79)

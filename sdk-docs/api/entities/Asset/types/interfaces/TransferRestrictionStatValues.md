@@ -1,10 +1,10 @@
 # Interface: TransferRestrictionStatValues
 
-> Defined in: [src/api/entities/Asset/types.ts:464](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L464)
+> Defined in: [src/api/entities/Asset/types.ts:411](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L411)
 
 # Interface: TransferRestrictionStatValues
 
-Defined in: [src/api/entities/Asset/types.ts:464](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L464)
+Defined in: [src/api/entities/Asset/types.ts:411](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L411)
 
 Asset Stat along with its current value
 
@@ -14,7 +14,7 @@ Asset Stat along with its current value
 
 > `optional` **claim?**: `object`
 
-Defined in: [src/api/entities/Asset/types.ts:470](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L470)
+Defined in: [src/api/entities/Asset/types.ts:417](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L417)
 
 The claim of the stat
 
@@ -26,19 +26,19 @@ Defined in
 
 [`TrustedFor`](../../../types/type-aliases/TrustedFor.mdx)
 
-[src/api/entities/Asset/types.ts:472](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L472)
+[src/api/entities/Asset/types.ts:419](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L419)
 
 `issuer`
 
 [`Identity`](../../../Identity/classes/Identity.mdx)
 
-[src/api/entities/Asset/types.ts:471](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L471)
+[src/api/entities/Asset/types.ts:418](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L418)
 
 `value?`
 
 [`ClaimValue`](../type-aliases/ClaimValue.mdx) \| [`JurisdictionValue`](../type-aliases/JurisdictionValue.mdx)[]
 
-[src/api/entities/Asset/types.ts:473](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L473)
+[src/api/entities/Asset/types.ts:420](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L420)
 
 #### Note
 
@@ -54,7 +54,7 @@ for count stats, this is undefined
 
 > **type**: [`StatType`](../../../types/enumerations/StatType.mdx)
 
-Defined in: [src/api/entities/Asset/types.ts:479](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L479)
+Defined in: [src/api/entities/Asset/types.ts:426](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L426)
 
 The type of the stat
 
@@ -64,7 +64,7 @@ The type of the stat
 
 > **value**: `BigNumber`
 
-Defined in: [src/api/entities/Asset/types.ts:485](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L485)
+Defined in: [src/api/entities/Asset/types.ts:432](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L432)
 
 The total value of of the Asset Stat
 

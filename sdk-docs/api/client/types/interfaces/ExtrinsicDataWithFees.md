@@ -1,10 +1,10 @@
 # Interface: ExtrinsicDataWithFees
 
-> Defined in: [src/api/client/types.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L29)
+> Defined in: [src/api/client/types.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L29)
 
 # Interface: ExtrinsicDataWithFees
 
-Defined in: [src/api/client/types.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L29)
+Defined in: [src/api/client/types.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L29)
 
 ## Extends
 
@@ -16,7 +16,7 @@ Defined in: [src/api/client/types.ts:29](https://github.com/PolymeshAssociation/
 
 > **address**: `string` \| `null`
 
-Defined in: [src/api/client/types.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L17)
+Defined in: [src/api/client/types.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L17)
 
 public key of the signer. Unsigned transactions have no signer, in which case this value is null (example: an enacted governance proposal)
 
@@ -30,7 +30,7 @@ public key of the signer. Unsigned transactions have no signer, in which case th
 
 > **blockDate**: `Date`
 
-Defined in: [src/api/client/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L12)
+Defined in: [src/api/client/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L12)
 
 #### Inherited from
 
@@ -42,7 +42,7 @@ Defined in: [src/api/client/types.ts:12](https://github.com/PolymeshAssociation/
 
 > **blockHash**: `string`
 
-Defined in: [src/api/client/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L10)
+Defined in: [src/api/client/types.ts:10](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L10)
 
 #### Inherited from
 
@@ -54,7 +54,7 @@ Defined in: [src/api/client/types.ts:10](https://github.com/PolymeshAssociation/
 
 > **blockNumber**: `BigNumber`
 
-Defined in: [src/api/client/types.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L11)
+Defined in: [src/api/client/types.ts:11](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L11)
 
 #### Inherited from
 
@@ -66,7 +66,7 @@ Defined in: [src/api/client/types.ts:11](https://github.com/PolymeshAssociation/
 
 > **extrinsicHash**: `string`
 
-Defined in: [src/api/client/types.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L26)
+Defined in: [src/api/client/types.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L26)
 
 #### Inherited from
 
@@ -78,7 +78,7 @@ Defined in: [src/api/client/types.ts:26](https://github.com/PolymeshAssociation/
 
 > **extrinsicIdx**: `BigNumber`
 
-Defined in: [src/api/client/types.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L13)
+Defined in: [src/api/client/types.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L13)
 
 #### Inherited from
 
@@ -90,7 +90,7 @@ Defined in: [src/api/client/types.ts:13](https://github.com/PolymeshAssociation/
 
 > **fee**: [`Fees`](Fees.mdx)
 
-Defined in: [src/api/client/types.ts:30](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L30)
+Defined in: [src/api/client/types.ts:30](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L30)
 
 ***
 
@@ -98,7 +98,7 @@ Defined in: [src/api/client/types.ts:30](https://github.com/PolymeshAssociation/
 
 > **nonce**: `BigNumber` \| `null`
 
-Defined in: [src/api/client/types.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L21)
+Defined in: [src/api/client/types.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L21)
 
 nonce of the transaction. Null for unsigned transactions where address is null
 
@@ -112,7 +112,7 @@ nonce of the transaction. Null for unsigned transactions where address is null
 
 > **params**: `Record`\<`string`, `unknown`\>[]
 
-Defined in: [src/api/client/types.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L23)
+Defined in: [src/api/client/types.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L23)
 
 #### Inherited from
 
@@ -124,7 +124,7 @@ Defined in: [src/api/client/types.ts:23](https://github.com/PolymeshAssociation/
 
 > **specVersionId**: `BigNumber`
 
-Defined in: [src/api/client/types.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L25)
+Defined in: [src/api/client/types.ts:25](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L25)
 
 #### Inherited from
 
@@ -136,7 +136,7 @@ Defined in: [src/api/client/types.ts:25](https://github.com/PolymeshAssociation/
 
 > **success**: `boolean`
 
-Defined in: [src/api/client/types.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L24)
+Defined in: [src/api/client/types.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L24)
 
 #### Inherited from
 
@@ -148,7 +148,7 @@ Defined in: [src/api/client/types.ts:24](https://github.com/PolymeshAssociation/
 
 > **txTag**: [`TxTag`](../../../../types/type-aliases/TxTag.mdx)
 
-Defined in: [src/api/client/types.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L22)
+Defined in: [src/api/client/types.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L22)
 
 #### Inherited from
 

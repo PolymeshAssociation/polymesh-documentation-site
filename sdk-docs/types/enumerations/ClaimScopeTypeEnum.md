@@ -1,10 +1,10 @@
 # Enumeration: ClaimScopeTypeEnum
 
-> Defined in: [src/middleware/typesV1.ts:3](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/typesV1.ts#L3)
+> Defined in: [src/middleware/typesV1.ts:3](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/typesV1.ts#L3)
 
 # Enumeration: ClaimScopeTypeEnum
 
-Defined in: [src/middleware/typesV1.ts:3](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/typesV1.ts#L3)
+Defined in: [src/middleware/typesV1.ts:3](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/typesV1.ts#L3)
 
 ## Enumeration Members
 
@@ -12,7 +12,7 @@ Defined in: [src/middleware/typesV1.ts:3](https://github.com/PolymeshAssociation
 
 > **Asset**: `"Asset"`
 
-Defined in: [src/middleware/typesV1.ts:5](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/typesV1.ts#L5)
+Defined in: [src/middleware/typesV1.ts:5](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/typesV1.ts#L5)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/middleware/typesV1.ts:5](https://github.com/PolymeshAssociation
 
 > **Custom**: `"Custom"`
 
-Defined in: [src/middleware/typesV1.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/typesV1.ts#L6)
+Defined in: [src/middleware/typesV1.ts:6](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/typesV1.ts#L6)
 
 ***
 
@@ -28,4 +28,4 @@ Defined in: [src/middleware/typesV1.ts:6](https://github.com/PolymeshAssociation
 
 > **Identity**: `"Identity"`
 
-Defined in: [src/middleware/typesV1.ts:4](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/typesV1.ts#L4)
+Defined in: [src/middleware/typesV1.ts:4](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/typesV1.ts#L4)

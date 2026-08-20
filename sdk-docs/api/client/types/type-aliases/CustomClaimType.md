@@ -6,7 +6,7 @@
 
 > **CustomClaimType** = `object`
 
-Defined in: [src/api/client/types.ts:211](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L211)
+Defined in: [src/api/client/types.ts:210](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L210)
 
 CustomClaimType
 
@@ -20,10 +20,10 @@ Defined in
 
 `BigNumber`
 
-[src/api/client/types.ts:213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L213)
+[src/api/client/types.ts:212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L212)
 
  `name`
 
 `string`
 
-[src/api/client/types.ts:212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L212)
+[src/api/client/types.ts:211](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L211)

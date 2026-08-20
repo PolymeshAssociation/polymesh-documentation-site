@@ -1,10 +1,10 @@
 # Interface: ClaimCountTransferRestrictionInput
 
-> Defined in: [src/api/procedures/types.ts:628](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L628)
+> Defined in: [src/api/procedures/types.ts:626](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L626)
 
 # Interface: ClaimCountTransferRestrictionInput
 
-Defined in: [src/api/procedures/types.ts:628](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L628)
+Defined in: [src/api/procedures/types.ts:626](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L626)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/procedures/types.ts:628](https://github.com/PolymeshAssocia
 
 > **claim**: [`InputStatClaim`](../../../entities/types/type-aliases/InputStatClaim.mdx)
 
-Defined in: [src/api/procedures/types.ts:632](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L632)
+Defined in: [src/api/procedures/types.ts:630](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L630)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/procedures/types.ts:632](https://github.com/PolymeshAssocia
 
 > **issuer**: [`Identity`](../../../entities/Identity/classes/Identity.mdx)
 
-Defined in: [src/api/procedures/types.ts:631](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L631)
+Defined in: [src/api/procedures/types.ts:629](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L629)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/api/procedures/types.ts:631](https://github.com/PolymeshAssocia
 
 > `optional` **max?**: `BigNumber`
 
-Defined in: [src/api/procedures/types.ts:630](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L630)
+Defined in: [src/api/procedures/types.ts:628](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L628)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [src/api/procedures/types.ts:630](https://github.com/PolymeshAssocia
 
 > **min**: `BigNumber`
 
-Defined in: [src/api/procedures/types.ts:629](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L629)
+Defined in: [src/api/procedures/types.ts:627](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L627)
 
 ***
 
@@ -44,4 +44,4 @@ Defined in: [src/api/procedures/types.ts:629](https://github.com/PolymeshAssocia
 
 > **type**: [`ClaimCount`](../enumerations/TransferRestrictionType.mdx#claimcount)
 
-Defined in: [src/api/procedures/types.ts:633](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L633)
+Defined in: [src/api/procedures/types.ts:631](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L631)

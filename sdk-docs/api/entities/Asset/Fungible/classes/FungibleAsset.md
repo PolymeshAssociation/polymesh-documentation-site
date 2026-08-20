@@ -1,10 +1,10 @@
 # Class: FungibleAsset
 
-> Defined in: [src/api/entities/Asset/Fungible/index.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/index.ts#L55)
+> Defined in: [src/api/entities/Asset/Fungible/index.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/index.ts#L55)
 
 # Class: FungibleAsset
 
-Defined in: [src/api/entities/Asset/Fungible/index.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/index.ts#L55)
+Defined in: [src/api/entities/Asset/Fungible/index.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/index.ts#L55)
 
 Class used to manage all Fungible Asset functionality
 
@@ -18,7 +18,7 @@ Class used to manage all Fungible Asset functionality
 
 > **assetHolders**: [`AssetHolders`](../AssetHolders/classes/AssetHolders.mdx)
 
-Defined in: [src/api/entities/Asset/Fungible/index.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/index.ts#L57)
+Defined in: [src/api/entities/Asset/Fungible/index.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/index.ts#L57)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [src/api/entities/Asset/Fungible/index.ts:57](https://github.com/Pol
 
 > **checkpoints**: [`Checkpoints`](../Checkpoints/classes/Checkpoints.mdx)
 
-Defined in: [src/api/entities/Asset/Fungible/index.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/index.ts#L61)
+Defined in: [src/api/entities/Asset/Fungible/index.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/index.ts#L61)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [src/api/entities/Asset/Fungible/index.ts:61](https://github.com/Pol
 
 > **compliance**: [`Compliance`](../../Base/Compliance/classes/Compliance.mdx)
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L70)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L71)
 
 #### Inherited from
 
@@ -46,7 +46,7 @@ Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:70](https://github.com/Pol
 
 > **corporateActions**: [`CorporateActions`](../CorporateActions/classes/CorporateActions.mdx)
 
-Defined in: [src/api/entities/Asset/Fungible/index.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/index.ts#L62)
+Defined in: [src/api/entities/Asset/Fungible/index.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/index.ts#L62)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [src/api/entities/Asset/Fungible/index.ts:62](https://github.com/Pol
 
 > **documents**: [`Documents`](../../Base/Documents/classes/Documents.mdx)
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L71)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L72)
 
 #### Inherited from
 
@@ -66,7 +66,7 @@ Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:71](https://github.com/Pol
 
 > **id**: `string`
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L78)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:79](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L79)
 
 Unique ID of the Asset in UUID format
 
@@ -80,7 +80,7 @@ Unique ID of the Asset in UUID format
 
 > **issuance**: [`Issuance`](../Issuance/classes/Issuance.mdx)
 
-Defined in: [src/api/entities/Asset/Fungible/index.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/index.ts#L58)
+Defined in: [src/api/entities/Asset/Fungible/index.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/index.ts#L58)
 
 ***
 
@@ -88,7 +88,7 @@ Defined in: [src/api/entities/Asset/Fungible/index.ts:58](https://github.com/Pol
 
 > **metadata**: [`Metadata`](../../Base/Metadata/classes/Metadata.mdx)
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L72)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L73)
 
 #### Inherited from
 
@@ -100,7 +100,7 @@ Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:72](https://github.com/Pol
 
 > **offerings**: [`Offerings`](../Offerings/classes/Offerings.mdx)
 
-Defined in: [src/api/entities/Asset/Fungible/index.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/index.ts#L60)
+Defined in: [src/api/entities/Asset/Fungible/index.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/index.ts#L60)
 
 ***
 
@@ -108,7 +108,7 @@ Defined in: [src/api/entities/Asset/Fungible/index.ts:60](https://github.com/Pol
 
 > **permissions**: [`Permissions`](../../Base/Permissions/classes/Permissions.mdx)
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L73)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L74)
 
 #### Inherited from
 
@@ -120,7 +120,7 @@ Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:73](https://github.com/Pol
 
 > **settlements**: [`FungibleSettlements`](../../Base/Settlements/classes/FungibleSettlements.mdx)
 
-Defined in: [src/api/entities/Asset/Fungible/index.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/index.ts#L56)
+Defined in: [src/api/entities/Asset/Fungible/index.ts:56](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/index.ts#L56)
 
 ***
 
@@ -128,7 +128,7 @@ Defined in: [src/api/entities/Asset/Fungible/index.ts:56](https://github.com/Pol
 
 > **transferRestrictions**: [`TransferRestrictions`](../TransferRestrictions/classes/TransferRestrictions.mdx)
 
-Defined in: [src/api/entities/Asset/Fungible/index.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/index.ts#L59)
+Defined in: [src/api/entities/Asset/Fungible/index.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/index.ts#L59)
 
 ***
 
@@ -136,7 +136,7 @@ Defined in: [src/api/entities/Asset/Fungible/index.ts:59](https://github.com/Pol
 
 > **uuid**: `string`
 
-Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L46)
+Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L46)
 
 #### Inherited from
 
@@ -150,7 +150,7 @@ Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociati
 
 > **get** **rawId**(): `string`
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:85](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L85)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:86](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L86)
 
 Unique ID of the Asset in hex format
 
@@ -172,7 +172,7 @@ Although UUID format is the usual representation of asset IDs, generic polkadot/
 
 > **addRequiredMediators**(`args`: [`AssetMediatorParams`](../../../../procedures/types/interfaces/AssetMediatorParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L212)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:218](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L218)
 
 Add required mediators. Mediators must approve any trades involving the asset
 
@@ -207,7 +207,7 @@ this method is of type [ProcedureMethod](../../../../procedures/types/interfaces
 
 > **approveAllowance**(`args`: [`ApproveAllowanceParams`](../../../../procedures/types/interfaces/ApproveAllowanceParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Fungible/index.ts:301](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/index.ts#L301)
+Defined in: [src/api/entities/Asset/Fungible/index.ts:300](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/index.ts#L300)
 
 Approve spender account allowance for transferring this Asset
 
@@ -245,7 +245,7 @@ this method is of type [ProcedureMethod](../../../../procedures/types/interfaces
 
 > **controllerTransfer**(`args`: [`ControllerTransferParams`](../../../../procedures/types/interfaces/ControllerTransferParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Fungible/index.ts:153](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/index.ts#L153)
+Defined in: [src/api/entities/Asset/Fungible/index.ts:153](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/index.ts#L153)
 
 Force a transfer from a given Portfolio to the caller’s default Portfolio
 
@@ -276,7 +276,7 @@ this method is of type [ProcedureMethod](../../../../procedures/types/interfaces
 
 > **createdAt**(): `Promise`\<[`EventIdentifier`](../../../../client/types/interfaces/EventIdentifier.mdx) \| `null`\>
 
-Defined in: [src/api/entities/Asset/Fungible/index.ts:99](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/index.ts#L99)
+Defined in: [src/api/entities/Asset/Fungible/index.ts:99](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/index.ts#L99)
 
 Retrieve the identifier data (block number, date and event index) of the event that was emitted when the token was created
 
@@ -300,7 +300,7 @@ there is a possibility that the data is not ready by the time it is requested. I
 
 > **currentFundingRound**(): `Promise`\<`string` \| `null`\>
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:499](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L499)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:505](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L505)
 
 Retrieve the Asset's funding round
 
@@ -318,7 +318,7 @@ Promise that resolves to the current funding round name or null if not set
 
 > **currentFundingRound**(`callback`: [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<`string` \| `null`\>): `Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:509](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L509)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:515](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L515)
 
 Retrieve the Asset's funding round
 
@@ -356,7 +356,7 @@ can be subscribed to, if connected to node using a web socket
 
 > **details**(): `Promise`\<[`AssetDetails`](../../types/interfaces/AssetDetails.mdx)\>
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L332)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:338](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L338)
 
 Retrieve the Asset's data
 
@@ -374,7 +374,7 @@ Promise that resolves to the Asset details
 
 > **details**(`callback`: [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<[`AssetDetails`](../../types/interfaces/AssetDetails.mdx)\>): `Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:342](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L342)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:348](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L348)
 
 Retrieve the Asset's data
 
@@ -410,7 +410,7 @@ can be subscribed to, if connected to node using a web socket
 
 > **exists**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Asset/Fungible/index.ts:274](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/index.ts#L274)
+Defined in: [src/api/entities/Asset/Fungible/index.ts:273](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/index.ts#L273)
 
 Determine whether this FungibleAsset exists on chain
 
@@ -428,7 +428,7 @@ Determine whether this FungibleAsset exists on chain
 
 > **freeze**(`opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L202)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:208](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L208)
 
 Freeze transfers of the Asset
 
@@ -459,7 +459,7 @@ this method is of type [NoArgsProcedureMethod](../../../../procedures/types/inte
 
 > **getAllowance**(`args`: `object`): `Promise`\<`BigNumber`\>
 
-Defined in: [src/api/entities/Asset/Fungible/index.ts:306](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/index.ts#L306)
+Defined in: [src/api/entities/Asset/Fungible/index.ts:305](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/index.ts#L305)
 
 Retrieve the amount of allowance for a spender account as approved by owner
 
@@ -492,7 +492,7 @@ Type
 
 > **getIdentifiers**(): `Promise`\<[`SecurityIdentifier`](../../types/interfaces/SecurityIdentifier.mdx)[]\>
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:241](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L241)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:247](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L247)
 
 Retrieve the Asset's identifiers list
 
@@ -510,7 +510,7 @@ Promise that resolves to the list of security identifiers
 
 > **getIdentifiers**(`callback?`: [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<[`SecurityIdentifier`](../../types/interfaces/SecurityIdentifier.mdx)[]\>): `Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:251](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L251)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:257](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L257)
 
 Retrieve the Asset's identifiers list
 
@@ -542,11 +542,41 @@ can be subscribed to, if connected to node using a web socket
 
 ***
 
+### getIssuedInFundingRound()
+
+> **getIssuedInFundingRound**(`fundingRound`: `string`): `Promise`\<`BigNumber`\>
+
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:551](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L551)
+
+Retrieve the total amount of the Asset issued in the given funding round
+
+#### Parameters
+
+Parameter
+Type
+Description
+
+`fundingRound`
+
+`string`
+
+name of the funding round to query
+
+#### Returns
+
+`Promise`\<`BigNumber`\>
+
+#### Inherited from
+
+[`BaseAsset`](../../Base/BaseAsset/classes/BaseAsset.mdx).[`getIssuedInFundingRound`](../../Base/BaseAsset/classes/BaseAsset.mdx#getissuedinfundinground)
+
+***
+
 ### getOperationHistory()
 
 > **getOperationHistory**(): `Promise`\<[`HistoricAgentOperation`](../../types/interfaces/HistoricAgentOperation.mdx)[]\>
 
-Defined in: [src/api/entities/Asset/Fungible/index.ts:162](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/index.ts#L162)
+Defined in: [src/api/entities/Asset/Fungible/index.ts:162](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/index.ts#L162)
 
 Retrieve this Asset's Operation History
 
@@ -568,7 +598,7 @@ uses the middlewareV2
 
 > **getRequiredMediators**(): `Promise`\<[`Identity`](../../../Identity/classes/Identity.mdx)[]\>
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:444](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L444)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:450](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L450)
 
 Get required Asset mediators. These Identities must approve any Instruction involving the asset
 
@@ -586,7 +616,7 @@ Get required Asset mediators. These Identities must approve any Instruction invo
 
 > **getTransactionHistory**(`opts`: `object`): `Promise`\<[`ResultSet`](../../../types/interfaces/ResultSet.mdx)\<[`HistoricAssetTransaction`](../../types/interfaces/HistoricAssetTransaction.mdx)\>\>
 
-Defined in: [src/api/entities/Asset/Fungible/index.ts:193](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/index.ts#L193)
+Defined in: [src/api/entities/Asset/Fungible/index.ts:193](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/index.ts#L193)
 
 Retrieve this Asset's transaction History
 
@@ -621,7 +651,7 @@ uses the middlewareV2
 
 > **getVenueFilteringDetails**(): `Promise`\<[`VenueFilteringDetails`](../../types/interfaces/VenueFilteringDetails.mdx)\>
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:464](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L464)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:470](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L470)
 
 Get venue filtering details
 
@@ -639,7 +669,7 @@ Get venue filtering details
 
 > **investorCount**(): `Promise`\<`BigNumber`\>
 
-Defined in: [src/api/entities/Asset/Fungible/index.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/index.ts#L127)
+Defined in: [src/api/entities/Asset/Fungible/index.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/index.ts#L127)
 
 Retrieve the amount of unique investors that hold this Asset
 
@@ -653,7 +683,7 @@ Retrieve the amount of unique investors that hold this Asset
 
 > **isEqual**(`entity`: [`Entity`](../../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>): `boolean`
 
-Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L61)
+Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L61)
 
 Determine whether this Entity is the same as another one
 
@@ -682,7 +712,7 @@ Type
 
 > **isFrozen**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:289](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L289)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:295](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L295)
 
 Check whether transfers are frozen for the Asset
 
@@ -700,7 +730,7 @@ Promise that resolves to true if transfers are frozen, false otherwise
 
 > **isFrozen**(`callback`: [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<`boolean`\>): `Promise`\<[`UnsubCallback`](../../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:299](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L299)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:305](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L305)
 
 Check whether transfers are frozen for the Asset
 
@@ -736,7 +766,7 @@ can be subscribed to, if connected to node using a web socket
 
 > **linkTicker**(`args`: [`LinkTickerToAssetParams`](../../../../procedures/types/interfaces/LinkTickerToAssetParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L225)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:231](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L231)
 
 Link ticker to the asset
 
@@ -776,7 +806,7 @@ this method is of type [ProcedureMethod](../../../../procedures/types/interfaces
 
 > **modify**(`args`: [`ModifyAssetParams`](../../../../procedures/types/type-aliases/ModifyAssetParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Asset`](../../types/type-aliases/Asset.mdx), [`Asset`](../../types/type-aliases/Asset.mdx)\>\>
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L121)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L127)
 
 Modify some properties of the Asset
 
@@ -823,7 +853,7 @@ this method is of type [ProcedureMethod](../../../../procedures/types/interfaces
 
 > **redeem**(`args`: [`RedeemTokensParams`](../../../../procedures/types/interfaces/RedeemTokensParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Fungible/index.ts:122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/index.ts#L122)
+Defined in: [src/api/entities/Asset/Fungible/index.ts:122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/index.ts#L122)
 
 Redeem (burn) an amount of this Asset's tokens
 
@@ -854,7 +884,7 @@ this method is of type [ProcedureMethod](../../../../procedures/types/interfaces
 
 > **removeRequiredMediators**(`args`: [`AssetMediatorParams`](../../../../procedures/types/interfaces/AssetMediatorParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:217](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L217)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:223](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L223)
 
 Remove required mediators
 
@@ -889,7 +919,7 @@ this method is of type [ProcedureMethod](../../../../procedures/types/interfaces
 
 > **setVenueFiltering**(`args`: [`SetVenueFilteringParams`](../../../../procedures/types/type-aliases/SetVenueFilteringParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L102)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L108)
 
 Enable/disable venue filtering for this Asset and/or set allowed/disallowed venues
 
@@ -924,7 +954,7 @@ this method is of type [ProcedureMethod](../../../../procedures/types/interfaces
 
 > **toHuman**(): `string`
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:565](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L565)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:594](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L594)
 
 Return the BaseAsset's ID
 
@@ -942,7 +972,7 @@ Return the BaseAsset's ID
 
 > **transferOwnership**(`args`: [`TransferAssetOwnershipParams`](../../../../procedures/types/interfaces/TransferAssetOwnershipParams.mdx), `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`AuthorizationRequest`](../../../AuthorizationRequest/classes/AuthorizationRequest.mdx), [`AuthorizationRequest`](../../../AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:97](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L97)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L103)
 
 Transfer ownership of the Asset to another Identity. This generates an authorization request that must be accepted
   by the recipient
@@ -966,6 +996,13 @@ Type
 
 #### Note
 
+the signing Identity must be an agent of this Asset holding `asset.acceptAssetOwnershipTransfer`
+  permission — granted by `TxGroup.AdvancedAssetManagement` or `PermissionGroupType.Full`. The chain
+  checks this when the `target` accepts, against the Identity that created the Authorization Request,
+  so an offer sent without it can never be accepted
+
+#### Note
+
 this will create [Authorization Request](../../../types/type-aliases/AuthorizationRequest.mdx) which has to be accepted by the `target` Identity.
   An [Account](../../../Account/classes/Account.mdx) or [Identity](../../../Identity/classes/Identity.mdx) can fetch its pending Authorization Requests by calling [authorizations.getReceived](../../../common/namespaces/Authorizations/classes/Authorizations.mdx#getreceived).
   Also, an Account or Identity can directly fetch the details of an Authorization Request by calling [authorizations.getOne](../../../common/namespaces/Authorizations/classes/Authorizations.mdx#getone)
@@ -984,7 +1021,7 @@ this method is of type [ProcedureMethod](../../../../procedures/types/interfaces
 
 > **unfreeze**(`opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:207](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L207)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L213)
 
 Unfreeze transfers of the Asset
 
@@ -1015,7 +1052,7 @@ this method is of type [NoArgsProcedureMethod](../../../../procedures/types/inte
 
 > **unlinkTicker**(`opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:234](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/BaseAsset.ts#L234)
+Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:240](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L240)
 
 Unlink ticker from the Asset
 
@@ -1054,7 +1091,7 @@ this method is of type [NoArgsProcedureMethod](../../../../procedures/types/inte
 
 > `static` **generateUuid**\<`Identifiers`\>(`identifiers`: `Identifiers`): `string`
 
-Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L14)
+Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L14)
 
 Generate the Entity's UUID from its identifying properties
 
@@ -1090,7 +1127,7 @@ Description
 
 > `static` **unserialize**\<`Identifiers`\>(`serialized`: `string`): `Identifiers`
 
-Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L23)
+Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L23)
 
 Unserialize a UUID into its Unique Identifiers
 

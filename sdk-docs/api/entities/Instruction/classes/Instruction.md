@@ -1,10 +1,10 @@
 # Class: Instruction
 
-> Defined in: [src/api/entities/Instruction/index.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L112)
+> Defined in: [src/api/entities/Instruction/index.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L117)
 
 # Class: Instruction
 
-Defined in: [src/api/entities/Instruction/index.ts:112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L112)
+Defined in: [src/api/entities/Instruction/index.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L117)
 
 Represents a settlement Instruction to be executed on a certain Venue
 
@@ -18,7 +18,7 @@ Represents a settlement Instruction to be executed on a certain Venue
 
 > **id**: `BigNumber`
 
-Defined in: [src/api/entities/Instruction/index.ts:126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L126)
+Defined in: [src/api/entities/Instruction/index.ts:131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L131)
 
 Unique identifier number of the instruction
 
@@ -28,7 +28,7 @@ Unique identifier number of the instruction
 
 > **uuid**: `string`
 
-Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L46)
+Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L46)
 
 #### Inherited from
 
@@ -40,7 +40,7 @@ Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociati
 
 > **affirm**(`args?`: [`AffirmInstructionParams`](../../../procedures/types/type-aliases/AffirmInstructionParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`Instruction`, `Instruction`\>\>
 
-Defined in: [src/api/entities/Instruction/index.ts:910](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L910)
+Defined in: [src/api/entities/Instruction/index.ts:949](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L949)
 
 Affirm this instruction (authorize)
 
@@ -71,7 +71,7 @@ this method is of type [OptionalArgsProcedureMethod](../../../procedures/types/i
 
 > **affirmAsMediator**(`args?`: [`AffirmAsMediatorParams`](../../../procedures/types/type-aliases/AffirmAsMediatorParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`Instruction`, `Instruction`\>\>
 
-Defined in: [src/api/entities/Instruction/index.ts:931](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L931)
+Defined in: [src/api/entities/Instruction/index.ts:963](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L963)
 
 Affirm this instruction as a mediator (authorize)
 
@@ -102,7 +102,7 @@ this method is of type [OptionalArgsProcedureMethod](../../../procedures/types/i
 
 > **details**(): `Promise`\<[`InstructionDetails`](../types/type-aliases/InstructionDetails.mdx)\>
 
-Defined in: [src/api/entities/Instruction/index.ts:549](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L549)
+Defined in: [src/api/entities/Instruction/index.ts:589](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L589)
 
 Retrieve information specific to this Instruction
 
@@ -127,7 +127,7 @@ if
 
 > **executeManually**(`args?`: [`ExecuteManualInstructionParams`](../../../procedures/types/interfaces/ExecuteManualInstructionParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`Instruction`, `Instruction`\>\>
 
-Defined in: [src/api/entities/Instruction/index.ts:943](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L943)
+Defined in: [src/api/entities/Instruction/index.ts:968](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L968)
 
 Executes an Instruction either of type `SettleManual` or a `Failed` instruction
 
@@ -158,7 +158,7 @@ this method is of type [OptionalArgsProcedureMethod](../../../procedures/types/i
 
 > **exists**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Instruction/index.ts:390](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L390)
+Defined in: [src/api/entities/Instruction/index.ts:430](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L430)
 
 Determine whether this Instruction exists on chain (or existed and was pruned)
 
@@ -176,7 +176,7 @@ Determine whether this Instruction exists on chain (or existed and was pruned)
 
 > **generateOffChainAffirmationReceipt**(`args`: `object`): `Promise`\<[`OffChainAffirmationReceipt`](../../../procedures/types/interfaces/OffChainAffirmationReceipt.mdx)\>
 
-Defined in: [src/api/entities/Instruction/index.ts:1289](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L1289)
+Defined in: [src/api/entities/Instruction/index.ts:1348](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L1348)
 
 Generate an offchain affirmation receipt for a specific leg and UID
 
@@ -188,15 +188,15 @@ Description
 
 `args`
 
-\{ `expiresAt?`: `Date`; `legId`: `BigNumber`; `metadata?`: `string`; `signer?`: `string` \| [`Account`](../../Account/classes/Account.mdx); `signerKeyRingType?`: [`SignerKeyRingType`](../../../procedures/types/enumerations/SignerKeyRingType.mdx); `uid`: `BigNumber`; \}
+\{ `expiresAt`: `Date`; `legId`: `BigNumber`; `metadata?`: `string`; `signer?`: `string` \| [`Account`](../../Account/classes/Account.mdx); `signerKeyRingType?`: [`SignerKeyRingType`](../../../procedures/types/enumerations/SignerKeyRingType.mdx); `uid`: `BigNumber`; \}
 
 &hyphen;
 
-`args.expiresAt?`
+`args.expiresAt`
 
 `Date`
 
-&hyphen;
+timestamp at which the receipt expires and can no longer be used to affirm
 
 `args.legId`
 
@@ -238,7 +238,7 @@ UID of the receipt
 
 > **getAffirmations**(`paginationOpts?`: [`PaginationOptions`](../../types/interfaces/PaginationOptions.mdx) \| [`MiddlewarePaginationOptions`](../../types/interfaces/MiddlewarePaginationOptions.mdx)): `Promise`\<[`ResultSet`](../../types/interfaces/ResultSet.mdx)\<[`InstructionAffirmation`](../types/interfaces/InstructionAffirmation.mdx)\>\>
 
-Defined in: [src/api/entities/Instruction/index.ts:585](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L585)
+Defined in: [src/api/entities/Instruction/index.ts:625](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L625)
 
 Retrieve every authorization generated by this Instruction (status and authorizing Identity or Account)
 
@@ -275,7 +275,7 @@ if
 
 > **getInvolvedPortfolios**(`args`: `object`): `Promise`\<([`DefaultPortfolio`](../../DefaultPortfolio/classes/DefaultPortfolio.mdx) \| [`NumberedPortfolio`](../../NumberedPortfolio/classes/NumberedPortfolio.mdx))[]\>
 
-Defined in: [src/api/entities/Instruction/index.ts:1010](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L1010)
+Defined in: [src/api/entities/Instruction/index.ts:1041](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L1041)
 
 Retrieve all the involved portfolios in this Instruction where the given identity is a custodian of
 
@@ -302,7 +302,7 @@ Type
 
 > **getLegs**(`paginationOpts?`: [`PaginationOptions`](../../types/interfaces/PaginationOptions.mdx) \| [`MiddlewarePaginationOptions`](../../types/interfaces/MiddlewarePaginationOptions.mdx)): `Promise`\<[`ResultSet`](../../types/interfaces/ResultSet.mdx)\<[`Leg`](../types/type-aliases/Leg.mdx)\>\>
 
-Defined in: [src/api/entities/Instruction/index.ts:789](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L789)
+Defined in: [src/api/entities/Instruction/index.ts:828](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L828)
 
 Retrieve all legs of this Instruction
 
@@ -336,11 +336,43 @@ if
 
 ***
 
+### getLegStatus()
+
+> **getLegStatus**(`args`: `object`): `Promise`\<[`LegStatus`](../types/type-aliases/LegStatus.mdx)\>
+
+Defined in: [src/api/entities/Instruction/index.ts:1296](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L1296)
+
+Returns the execution status of a specific leg in this Instruction
+
+#### Parameters
+
+Parameter
+Type
+Description
+
+`args`
+
+\{ `legId`: `BigNumber`; \}
+
+&hyphen;
+
+`args.legId`
+
+`BigNumber`
+
+index of the leg whose status is to be fetched
+
+#### Returns
+
+`Promise`\<[`LegStatus`](../types/type-aliases/LegStatus.mdx)\>
+
+***
+
 ### getLockedInfo()
 
 > **getLockedInfo**(): `Promise`\<[`InstructionLockedInfo`](../types/interfaces/InstructionLockedInfo.mdx)\>
 
-Defined in: [src/api/entities/Instruction/index.ts:302](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L302)
+Defined in: [src/api/entities/Instruction/index.ts:289](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L289)
 
 Retrieve whether the Instruction is locked for execution on chain
 
@@ -354,7 +386,7 @@ Retrieve whether the Instruction is locked for execution on chain
 
 > **getMediators**(): `Promise`\<[`MediatorAffirmation`](../types/type-aliases/MediatorAffirmation.mdx)[]\>
 
-Defined in: [src/api/entities/Instruction/index.ts:1062](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L1062)
+Defined in: [src/api/entities/Instruction/index.ts:1093](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L1093)
 
 Returns the mediators for the Instruction, along with their affirmation status
 
@@ -379,7 +411,7 @@ if
 
 > **getOffChainAffirmationForLeg**(`args`: `object`): `Promise`\<[`AffirmationStatus`](../types/enumerations/AffirmationStatus.mdx)\>
 
-Defined in: [src/api/entities/Instruction/index.ts:1207](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L1207)
+Defined in: [src/api/entities/Instruction/index.ts:1238](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L1238)
 
 Returns affirmation status for a specific offchain leg in this Instruction
 
@@ -423,7 +455,7 @@ if
 
 > **getOffChainAffirmations**(): `Promise`\<[`OffChainAffirmation`](../types/interfaces/OffChainAffirmation.mdx)[]\>
 
-Defined in: [src/api/entities/Instruction/index.ts:1142](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L1142)
+Defined in: [src/api/entities/Instruction/index.ts:1173](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L1173)
 
 Returns affirmation statuses for offchain legs in this Instruction
 
@@ -448,7 +480,7 @@ if
 
 > **getPendingAffirmationCount**(): `Promise`\<`BigNumber`\>
 
-Defined in: [src/api/entities/Instruction/index.ts:260](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L260)
+Defined in: [src/api/entities/Instruction/index.ts:247](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L247)
 
 Get the number of affirmations pending before instruction can be executed
 
@@ -462,11 +494,30 @@ The count is returned as 0 for pruned instructions as well
 
 ***
 
+### getRelockStatus()
+
+> **getRelockStatus**(): `Promise`\<[`InstructionRelockStatus`](../types/interfaces/InstructionRelockStatus.mdx)\>
+
+Defined in: [src/api/entities/Instruction/index.ts:342](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L342)
+
+Retrieve the relock cooldown status of the Instruction
+
+#### Returns
+
+`Promise`\<[`InstructionRelockStatus`](../types/interfaces/InstructionRelockStatus.mdx)\>
+
+#### Note
+
+After a mediator unlocks an Instruction, they must wait for the relock cooldown period to
+  end before locking it again. `maxRelockCount` limits the total number of times an Instruction can be relocked.
+
+***
+
 ### getStatus()
 
 > **getStatus**(): `Promise`\<[`InstructionStatusResult`](../types/type-aliases/InstructionStatusResult.mdx)\>
 
-Defined in: [src/api/entities/Instruction/index.ts:834](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L834)
+Defined in: [src/api/entities/Instruction/index.ts:873](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L873)
 
 Retrieve current status of this Instruction
 
@@ -484,7 +535,7 @@ uses the middlewareV2
 
 > **isEqual**(`entity`: [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>): `boolean`
 
-Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L61)
+Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L61)
 
 Determine whether this Entity is the same as another one
 
@@ -511,7 +562,7 @@ Type
 
 > **isExecuted**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Instruction/index.ts:229](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L229)
+Defined in: [src/api/entities/Instruction/index.ts:216](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L216)
 
 Retrieve whether the Instruction has already been executed and pruned from
   the chain.
@@ -526,7 +577,7 @@ Retrieve whether the Instruction has already been executed and pruned from
 
 > **isPending**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Instruction/index.ts:281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L281)
+Defined in: [src/api/entities/Instruction/index.ts:268](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L268)
 
 Retrieve whether the Instruction is still pending on chain
 
@@ -540,7 +591,7 @@ Retrieve whether the Instruction is still pending on chain
 
 > **lockForExecution**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`Instruction`, `Instruction`\>\>
 
-Defined in: [src/api/entities/Instruction/index.ts:960](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L960)
+Defined in: [src/api/entities/Instruction/index.ts:985](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L985)
 
 Locks an Instruction of type `SettleAfterLock` for execution. Only a mediator of the instruction can lock the instruction.
 
@@ -565,7 +616,7 @@ An Instruction can only be locked if
  - all mediator affirmations are valid
  - all assets are in allowed venue list
  - all senders have the right amount of assets being transferred
- - all senders and receivers are compliant and have valid CDD claims
+ - all senders and receivers are compliant
  - all assets' statistics are still valid
  - there are no frozen assets
 
@@ -583,7 +634,7 @@ this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfa
 
 > **onStatusChange**(`callback`: [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<[`InstructionStatus`](../types/enumerations/InstructionStatus.mdx)\>): `Promise`\<[`UnsubCallback`](../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/Instruction/index.ts:356](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L356)
+Defined in: [src/api/entities/Instruction/index.ts:396](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L396)
 
 Retrieve current status of the Instruction. This can be subscribed to know if instruction fails
 
@@ -615,7 +666,7 @@ current status as `Executed` means that the Instruction has been executed/reject
 
 > **reject**(`args?`: [`RejectInstructionParams`](../../../procedures/types/type-aliases/RejectInstructionParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`Instruction`, `Instruction`\>\>
 
-Defined in: [src/api/entities/Instruction/index.ts:905](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L905)
+Defined in: [src/api/entities/Instruction/index.ts:944](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L944)
 
 Reject this instruction
 
@@ -658,7 +709,7 @@ this method is of type [OptionalArgsProcedureMethod](../../../procedures/types/i
 
 > **rejectAsMediator**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`Instruction`, `Instruction`\>\>
 
-Defined in: [src/api/entities/Instruction/index.ts:926](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L926)
+Defined in: [src/api/entities/Instruction/index.ts:958](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L958)
 
 Reject this instruction as a mediator
 
@@ -697,7 +748,7 @@ this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfa
 
 > **toHuman**(): `string`
 
-Defined in: [src/api/entities/Instruction/index.ts:1003](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L1003)
+Defined in: [src/api/entities/Instruction/index.ts:1034](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L1034)
 
 Return the Instruction's ID
 
@@ -711,48 +762,13 @@ Return the Instruction's ID
 
 ***
 
-### ~~withdraw()~~
+### unlockForExecution()
 
-> **withdraw**(`args?`: [`WithdrawInstructionParams`](../../../procedures/types/type-aliases/WithdrawInstructionParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`Instruction`, `Instruction`\>\>
+> **unlockForExecution**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`Instruction`, `Instruction`\>\>
 
-Defined in: [src/api/entities/Instruction/index.ts:917](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L917)
+Defined in: [src/api/entities/Instruction/index.ts:992](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L992)
 
-Withdraw affirmation from this instruction (unauthorize)
-
-#### Parameters
-
-Parameter
-Type
-
-`args?`
-
-[`WithdrawInstructionParams`](../../../procedures/types/type-aliases/WithdrawInstructionParams.mdx)
-
-`opts?`
-
-[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
-
-#### Returns
-
-`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`Instruction`, `Instruction`\>\>
-
-#### Deprecated
-
-Withdrawing affirmation is no longer supported in chain v8. If you need to revoke the affirmation, you can do that by using `reject` method.
-
-#### Note
-
-this method is of type [OptionalArgsProcedureMethod](../../../procedures/types/interfaces/OptionalArgsProcedureMethod.mdx), which means you can call [withdraw.checkAuthorization](../../../procedures/types/interfaces/OptionalArgsProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
-***
-
-### ~~withdrawAsMediator()~~
-
-> **withdrawAsMediator**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`Instruction`, `Instruction`\>\>
-
-Defined in: [src/api/entities/Instruction/index.ts:938](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/index.ts#L938)
-
-Withdraw affirmation from this instruction as a mediator (unauthorize)
+Unlocks an Instruction that is currently `LockedForExecution`, moving it back to `Pending`. Only a mediator of the instruction can unlock it.
 
 #### Parameters
 
@@ -767,13 +783,13 @@ Type
 
 `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`Instruction`, `Instruction`\>\>
 
-#### Deprecated
+#### Note
 
-Withdrawing affirmation is no longer supported in chain v8. If you need to revoke the affirmation, you can do that by using `rejectAsMediator` method.
+After unlocking, the mediator must wait for the relock cooldown period (see [getRelockStatus](#getrelockstatus)) before locking the instruction again. This gives other parties time to reject the instruction if they wish to back out.
 
 #### Note
 
-this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx), which means you can call [withdrawAsMediator.checkAuthorization](../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx), which means you can call [unlockForExecution.checkAuthorization](../../../procedures/types/interfaces/NoArgsProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
 
 ***
 
@@ -781,7 +797,7 @@ this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfa
 
 > `static` **generateUuid**\<`Identifiers`\>(`identifiers`: `Identifiers`): `string`
 
-Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L14)
+Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L14)
 
 Generate the Entity's UUID from its identifying properties
 
@@ -817,7 +833,7 @@ Description
 
 > `static` **unserialize**\<`Identifiers`\>(`serialized`: `string`): `Identifiers`
 
-Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L23)
+Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L23)
 
 Unserialize a UUID into its Unique Identifiers
 

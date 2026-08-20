@@ -1,10 +1,10 @@
 # Interface: RemoveAssetDocumentsParams
 
-> Defined in: [src/api/procedures/types.ts:1597](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1597)
+> Defined in: [src/api/procedures/types.ts:1527](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1527)
 
 # Interface: RemoveAssetDocumentsParams
 
-Defined in: [src/api/procedures/types.ts:1597](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1597)
+Defined in: [src/api/procedures/types.ts:1527](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1527)
 
 ## Properties
 
@@ -12,6 +12,6 @@ Defined in: [src/api/procedures/types.ts:1597](https://github.com/PolymeshAssoci
 
 > **documentIds**: `BigNumber`[]
 
-Defined in: [src/api/procedures/types.ts:1601](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1601)
+Defined in: [src/api/procedures/types.ts:1531](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1531)
 
 IDs of documents to remove from the asset

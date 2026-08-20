@@ -1,10 +1,10 @@
 # Interface: HumanReadable
 
-> Defined in: [src/api/entities/Checkpoint.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Checkpoint.ts#L27)
+> Defined in: [src/api/entities/Checkpoint.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Checkpoint.ts#L27)
 
 # Interface: HumanReadable
 
-Defined in: [src/api/entities/Checkpoint.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Checkpoint.ts#L27)
+Defined in: [src/api/entities/Checkpoint.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Checkpoint.ts#L27)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/Checkpoint.ts:27](https://github.com/PolymeshAssoc
 
 > **assetId**: `string`
 
-Defined in: [src/api/entities/Checkpoint.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Checkpoint.ts#L29)
+Defined in: [src/api/entities/Checkpoint.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Checkpoint.ts#L29)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/entities/Checkpoint.ts:29](https://github.com/PolymeshAssoc
 
 > **id**: `string`
 
-Defined in: [src/api/entities/Checkpoint.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Checkpoint.ts#L28)
+Defined in: [src/api/entities/Checkpoint.ts:28](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Checkpoint.ts#L28)

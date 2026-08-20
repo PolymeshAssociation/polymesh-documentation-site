@@ -1,10 +1,10 @@
 # Interface: SetStakingPayeeParams
 
-> Defined in: [src/api/procedures/types.ts:2028](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2028)
+> Defined in: [src/api/procedures/types.ts:1899](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1899)
 
 # Interface: SetStakingPayeeParams
 
-Defined in: [src/api/procedures/types.ts:2028](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2028)
+Defined in: [src/api/procedures/types.ts:1899](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1899)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/procedures/types.ts:2028](https://github.com/PolymeshAssoci
 
 > **autoStake**: `boolean`
 
-Defined in: [src/api/procedures/types.ts:2038](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2038)
+Defined in: [src/api/procedures/types.ts:1909](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1909)
 
 If set to true then rewards will be auto staked in order to compound
 
@@ -26,6 +26,6 @@ The payee must be the stash account in order to auto stake
 
 > **payee**: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
 
-Defined in: [src/api/procedures/types.ts:2032](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L2032)
+Defined in: [src/api/procedures/types.ts:1903](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1903)
 
 The account who will receive the staking rewards

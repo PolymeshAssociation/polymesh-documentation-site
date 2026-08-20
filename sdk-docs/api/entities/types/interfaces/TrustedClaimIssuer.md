@@ -1,10 +1,10 @@
 # Interface: TrustedClaimIssuer\<IsDefault\>
 
-> Defined in: [src/api/entities/types.ts:332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L332)
+> Defined in: [src/api/entities/types.ts:326](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L326)
 
 # Interface: TrustedClaimIssuer\
 
-Defined in: [src/api/entities/types.ts:332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L332)
+Defined in: [src/api/entities/types.ts:326](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L326)
 
 ## Type Parameters
 
@@ -25,7 +25,7 @@ whether the Identity is a default trusted claim issuer for an asset or just
 
 > **identity**: `IsDefault` *extends* `true` ? [`DefaultTrustedClaimIssuer`](../../DefaultTrustedClaimIssuer/classes/DefaultTrustedClaimIssuer.mdx) : [`Identity`](../../Identity/classes/Identity.mdx)
 
-Defined in: [src/api/entities/types.ts:333](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L333)
+Defined in: [src/api/entities/types.ts:327](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L327)
 
 ***
 
@@ -33,6 +33,6 @@ Defined in: [src/api/entities/types.ts:333](https://github.com/PolymeshAssociati
 
 > **trustedFor**: [`TrustedFor`](../type-aliases/TrustedFor.mdx)[] \| `null`
 
-Defined in: [src/api/entities/types.ts:337](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L337)
+Defined in: [src/api/entities/types.ts:331](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L331)
 
 a null value means that the issuer is trusted for all claim types

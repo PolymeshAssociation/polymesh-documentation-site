@@ -1,10 +1,10 @@
 # Interface: ReserveTickerParams
 
-> Defined in: [src/api/procedures/types.ts:928](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L928)
+> Defined in: [src/api/procedures/types.ts:915](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L915)
 
 # Interface: ReserveTickerParams
 
-Defined in: [src/api/procedures/types.ts:928](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L928)
+Defined in: [src/api/procedures/types.ts:915](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L915)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/procedures/types.ts:928](https://github.com/PolymeshAssocia
 
 > `optional` **extendPeriod?**: `boolean`
 
-Defined in: [src/api/procedures/types.ts:933](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L933)
+Defined in: [src/api/procedures/types.ts:920](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L920)
 
 ***
 
@@ -20,6 +20,6 @@ Defined in: [src/api/procedures/types.ts:933](https://github.com/PolymeshAssocia
 
 > **ticker**: `string`
 
-Defined in: [src/api/procedures/types.ts:932](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L932)
+Defined in: [src/api/procedures/types.ts:919](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L919)
 
 ticker symbol to reserve

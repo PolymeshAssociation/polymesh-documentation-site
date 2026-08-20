@@ -1,10 +1,10 @@
 # Class: AssetHolders
 
-> Defined in: [src/api/entities/Asset/NonFungible/AssetHolders/index.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/NonFungible/AssetHolders/index.ts#L13)
+> Defined in: [src/api/entities/Asset/NonFungible/AssetHolders/index.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/NonFungible/AssetHolders/index.ts#L13)
 
 # Class: AssetHolders
 
-Defined in: [src/api/entities/Asset/NonFungible/AssetHolders/index.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/NonFungible/AssetHolders/index.ts#L13)
+Defined in: [src/api/entities/Asset/NonFungible/AssetHolders/index.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/NonFungible/AssetHolders/index.ts#L13)
 
 Handles all NFT Holders related functionality
 
@@ -18,7 +18,7 @@ Handles all NFT Holders related functionality
 
 > **get**(`opts`: `object`): `Promise`\<[`ResultSet`](../../../../types/interfaces/ResultSet.mdx)\<[`IdentityHeldNfts`](../../../types/interfaces/IdentityHeldNfts.mdx)\>\>
 
-Defined in: [src/api/entities/Asset/NonFungible/AssetHolders/index.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/NonFungible/AssetHolders/index.ts#L19)
+Defined in: [src/api/entities/Asset/NonFungible/AssetHolders/index.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/NonFungible/AssetHolders/index.ts#L19)
 
 Retrieve all the NFT Holders with their holdings
 

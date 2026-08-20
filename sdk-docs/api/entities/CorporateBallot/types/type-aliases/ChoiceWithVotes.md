@@ -6,7 +6,7 @@
 
 > **ChoiceWithVotes** = `object`
 
-Defined in: [src/api/entities/CorporateBallot/types.ts:79](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L79)
+Defined in: [src/api/entities/CorporateBallot/types.ts:79](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/types.ts#L79)
 
 ## Properties
 
@@ -21,7 +21,7 @@ Defined in
 
 The choice of the motion for which the votes are cast.
 
-[src/api/entities/CorporateBallot/types.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L83)
+[src/api/entities/CorporateBallot/types.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/types.ts#L83)
 
  `votes`
 
@@ -29,4 +29,4 @@ The choice of the motion for which the votes are cast.
 
 The number of votes for the choice.
 
-[src/api/entities/CorporateBallot/types.ts:88](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L88)
+[src/api/entities/CorporateBallot/types.ts:88](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/types.ts#L88)

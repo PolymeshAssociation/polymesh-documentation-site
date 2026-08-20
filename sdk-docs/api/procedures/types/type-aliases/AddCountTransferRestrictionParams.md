@@ -6,7 +6,7 @@
 
 > **AddCountTransferRestrictionParams** = [`CountTransferRestrictionInput`](../interfaces/CountTransferRestrictionInput.mdx) & `object`
 
-Defined in: [src/api/procedures/types.ts:672](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L672)
+Defined in: [src/api/procedures/types.ts:670](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L670)
 
 ## Type Declaration
 
@@ -18,4 +18,4 @@ Defined in
 
 [`Count`](../enumerations/TransferRestrictionType.mdx#count)
 
-[src/api/procedures/types.ts:673](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L673)
+[src/api/procedures/types.ts:671](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L671)

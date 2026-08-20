@@ -1,10 +1,10 @@
 # Interface: OfferingWithDetails
 
-> Defined in: [src/api/entities/types.ts:806](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L806)
+> Defined in: [src/api/entities/types.ts:790](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L790)
 
 # Interface: OfferingWithDetails
 
-Defined in: [src/api/entities/types.ts:806](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L806)
+Defined in: [src/api/entities/types.ts:790](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L790)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/types.ts:806](https://github.com/PolymeshAssociati
 
 > **details**: [`OfferingDetails`](../../Offering/types/interfaces/OfferingDetails.mdx)
 
-Defined in: [src/api/entities/types.ts:808](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L808)
+Defined in: [src/api/entities/types.ts:792](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L792)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/entities/types.ts:808](https://github.com/PolymeshAssociati
 
 > **offering**: [`Offering`](../../Offering/classes/Offering.mdx)
 
-Defined in: [src/api/entities/types.ts:807](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L807)
+Defined in: [src/api/entities/types.ts:791](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L791)

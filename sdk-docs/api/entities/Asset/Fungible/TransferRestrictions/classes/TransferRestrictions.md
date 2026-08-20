@@ -1,10 +1,10 @@
 # Class: TransferRestrictions
 
-> Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L64)
+> Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L64)
 
 # Class: TransferRestrictions
 
-Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L64)
+Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L64)
 
 Handles all Transfer Restriction related functionality.
 
@@ -18,7 +18,7 @@ Handles all Transfer Restriction related functionality.
 
 > **addExemptions**(`args`: [`TransferRestrictionExemptionParams`](../../../../../procedures/types/type-aliases/TransferRestrictionExemptionParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:704](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L704)
+Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:704](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L704)
 
 Exempt identities from Transfer Restrictions. These identities will not be subject to Transfer Restriction rules.
 
@@ -49,7 +49,7 @@ this method is of type [ProcedureMethod](../../../../../procedures/types/interfa
 
 > **getExemptions**(): `Promise`\<[`TransferRestrictionExemption`](../../../types/interfaces/TransferRestrictionExemption.mdx)[]\>
 
-Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:641](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L641)
+Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:641](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L641)
 
 Return identities with exemptions.
 
@@ -63,7 +63,7 @@ Return identities with exemptions.
 
 > **getRestrictions**(): `Promise`\<[`ActiveTransferRestrictions`](../../../types/interfaces/ActiveTransferRestrictions.mdx)\>
 
-Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:141](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L141)
+Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:141](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L141)
 
 Get all current restrictions for this asset.
 
@@ -77,7 +77,7 @@ Get all current restrictions for this asset.
 
 > **getStats**(): `Promise`\<[`AssetStat`](../../../types/interfaces/AssetStat.mdx)[]\>
 
-Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:161](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L161)
+Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:161](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L161)
 
 Return active asset stats.
 
@@ -91,7 +91,7 @@ Return active asset stats.
 
 > **getValues**(): `Promise`\<[`TransferRestrictionStatValues`](../../../types/interfaces/TransferRestrictionStatValues.mdx)[]\>
 
-Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:501](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L501)
+Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:501](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L501)
 
 Get the values of all active transfer restrictions for this Asset
 
@@ -107,7 +107,7 @@ an array of objects containing the values of all active transfer restrictions fo
 
 > **removeExemptions**(`args`: [`TransferRestrictionExemptionParams`](../../../../../procedures/types/type-aliases/TransferRestrictionExemptionParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:711](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L711)
+Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:711](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L711)
 
 Remove identities from Transfer Restriction exemptions.
 
@@ -140,7 +140,7 @@ this method is of type [ProcedureMethod](../../../../../procedures/types/interfa
 
 > **setRestrictions**(`args`: [`TransferRestrictionParams`](../../../../../procedures/types/type-aliases/TransferRestrictionParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:684](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L684)
+Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:684](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L684)
 
 Set all Transfer Restrictions on this Asset.
 
@@ -179,7 +179,7 @@ this method is of type [ProcedureMethod](../../../../../procedures/types/interfa
 
 > **setStats**(`args`: [`SetTransferRestrictionStatParams`](../../../../../procedures/types/type-aliases/SetTransferRestrictionStatParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:699](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L699)
+Defined in: [src/api/entities/Asset/Fungible/TransferRestrictions/index.ts:699](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/TransferRestrictions/index.ts#L699)
 
 Set the enabled statistics for an Asset.
 

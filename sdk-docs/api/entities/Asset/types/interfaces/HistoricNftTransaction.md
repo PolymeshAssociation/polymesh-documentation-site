@@ -1,10 +1,10 @@
 # Interface: HistoricNftTransaction
 
-> Defined in: [src/api/entities/Asset/types.ts:220](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L220)
+> Defined in: [src/api/entities/Asset/types.ts:220](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L220)
 
 # Interface: HistoricNftTransaction
 
-Defined in: [src/api/entities/Asset/types.ts:220](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L220)
+Defined in: [src/api/entities/Asset/types.ts:220](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L220)
 
 ## Extends
 
@@ -16,7 +16,7 @@ Defined in: [src/api/entities/Asset/types.ts:220](https://github.com/PolymeshAss
 
 > **asset**: [`NftCollection`](../../NonFungible/NftCollection/classes/NftCollection.mdx)
 
-Defined in: [src/api/entities/Asset/types.ts:221](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L221)
+Defined in: [src/api/entities/Asset/types.ts:221](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L221)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/api/entities/Asset/types.ts:221](https://github.com/PolymeshAss
 
 > **blockDate**: `Date`
 
-Defined in: [src/api/client/types.ts:183](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L183)
+Defined in: [src/api/client/types.ts:182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L182)
 
 #### Inherited from
 
@@ -36,7 +36,7 @@ Defined in: [src/api/client/types.ts:183](https://github.com/PolymeshAssociation
 
 > **blockHash**: `string`
 
-Defined in: [src/api/client/types.ts:182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L182)
+Defined in: [src/api/client/types.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L181)
 
 #### Inherited from
 
@@ -48,7 +48,7 @@ Defined in: [src/api/client/types.ts:182](https://github.com/PolymeshAssociation
 
 > **blockNumber**: `BigNumber`
 
-Defined in: [src/api/client/types.ts:181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L181)
+Defined in: [src/api/client/types.ts:180](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L180)
 
 #### Inherited from
 
@@ -60,7 +60,7 @@ Defined in: [src/api/client/types.ts:181](https://github.com/PolymeshAssociation
 
 > **event**: [`EventIdEnum`](../../../../../types/enumerations/EventIdEnum.mdx)
 
-Defined in: [src/api/entities/Asset/types.ts:190](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L190)
+Defined in: [src/api/entities/Asset/types.ts:190](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L190)
 
 Event identifying the type of transaction
 
@@ -74,7 +74,7 @@ Event identifying the type of transaction
 
 > **eventIndex**: `BigNumber`
 
-Defined in: [src/api/client/types.ts:184](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L184)
+Defined in: [src/api/client/types.ts:183](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L183)
 
 #### Inherited from
 
@@ -86,7 +86,7 @@ Defined in: [src/api/client/types.ts:184](https://github.com/PolymeshAssociation
 
 > **extrinsicIndex**: `BigNumber`
 
-Defined in: [src/api/entities/Asset/types.ts:195](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L195)
+Defined in: [src/api/entities/Asset/types.ts:195](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L195)
 
 Index value of the extrinsic which led to the Asset transaction within the `blockNumber` block
 
@@ -100,7 +100,7 @@ Index value of the extrinsic which led to the Asset transaction within the `bloc
 
 > **from**: [`DefaultPortfolio`](../../../DefaultPortfolio/classes/DefaultPortfolio.mdx) \| [`NumberedPortfolio`](../../../NumberedPortfolio/classes/NumberedPortfolio.mdx) \| `null`
 
-Defined in: [src/api/entities/Asset/types.ts:170](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L170)
+Defined in: [src/api/entities/Asset/types.ts:170](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L170)
 
 Origin portfolio involved in the transaction. This value will be null when the `event` value is `Issued`
 
@@ -114,7 +114,7 @@ Origin portfolio involved in the transaction. This value will be null when the `
 
 > **fromAccount**: [`Account`](../../../Account/classes/Account.mdx) \| `null`
 
-Defined in: [src/api/entities/Asset/types.ts:175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L175)
+Defined in: [src/api/entities/Asset/types.ts:175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L175)
 
 Origin account involved in the transaction. This value will be null when the `event` value is `Issued` or when the origin asset holder is a Portfolio
 
@@ -128,7 +128,7 @@ Origin account involved in the transaction. This value will be null when the `ev
 
 > **fundingRound**: `string` \| `undefined`
 
-Defined in: [src/api/entities/Asset/types.ts:200](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L200)
+Defined in: [src/api/entities/Asset/types.ts:200](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L200)
 
 Name of the funding round (if provided while issuing the Asset). This value is present only when the value of `event` is `Issued`
 
@@ -142,7 +142,7 @@ Name of the funding round (if provided while issuing the Asset). This value is p
 
 > `optional` **instructionId?**: `BigNumber`
 
-Defined in: [src/api/entities/Asset/types.ts:204](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L204)
+Defined in: [src/api/entities/Asset/types.ts:204](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L204)
 
 ID of the instruction being executed. This value is present only when the value of `event` is `Transfer`
 
@@ -156,7 +156,7 @@ ID of the instruction being executed. This value is present only when the value 
 
 > `optional` **instructionMemo?**: `string`
 
-Defined in: [src/api/entities/Asset/types.ts:208](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L208)
+Defined in: [src/api/entities/Asset/types.ts:208](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L208)
 
 Memo provided against the executed instruction. This value is present only when the value of `event` is `Transfer`
 
@@ -170,7 +170,7 @@ Memo provided against the executed instruction. This value is present only when 
 
 > **nfts**: [`Nft`](../../NonFungible/Nft/classes/Nft.mdx)[]
 
-Defined in: [src/api/entities/Asset/types.ts:226](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L226)
+Defined in: [src/api/entities/Asset/types.ts:226](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L226)
 
 The specific NFTs involved in the transaction
 
@@ -180,7 +180,7 @@ The specific NFTs involved in the transaction
 
 > **to**: [`DefaultPortfolio`](../../../DefaultPortfolio/classes/DefaultPortfolio.mdx) \| [`NumberedPortfolio`](../../../NumberedPortfolio/classes/NumberedPortfolio.mdx) \| `null`
 
-Defined in: [src/api/entities/Asset/types.ts:180](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L180)
+Defined in: [src/api/entities/Asset/types.ts:180](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L180)
 
 Destination portfolio involved in the transaction . This value will be null when the `event` value is `Redeemed`
 
@@ -194,7 +194,7 @@ Destination portfolio involved in the transaction . This value will be null when
 
 > **toAccount**: [`Account`](../../../Account/classes/Account.mdx) \| `null`
 
-Defined in: [src/api/entities/Asset/types.ts:185](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L185)
+Defined in: [src/api/entities/Asset/types.ts:185](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L185)
 
 Destination account involved in this transcation. This value will be null when the `event` value is `Redeemed` or when the destination asset holder is a Portfolio
 

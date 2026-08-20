@@ -6,7 +6,7 @@
 
 > **RotatePrimaryKeyToSecondaryParams** = `object`
 
-Defined in: [src/api/procedures/types.ts:1034](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1034)
+Defined in: [src/api/procedures/types.ts:1016](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1016)
 
 ## Properties
 
@@ -21,7 +21,7 @@ Defined in
 
 (optional) when the generated authorization should expire
 
-[src/api/procedures/types.ts:1043](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1043)
+[src/api/procedures/types.ts:1025](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1025)
 
  `permissions`
 
@@ -29,7 +29,7 @@ Defined in
 
 &hyphen;
 
-[src/api/procedures/types.ts:1035](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1035)
+[src/api/procedures/types.ts:1017](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1017)
 
  `targetAccount`
 
@@ -37,4 +37,4 @@ Defined in
 
 The Account that should function as the primary key of the newly created Identity. Can be ss58 encoded address or an instance of Account
 
-[src/api/procedures/types.ts:1039](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1039)
+[src/api/procedures/types.ts:1021](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1021)

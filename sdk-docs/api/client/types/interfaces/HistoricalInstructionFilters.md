@@ -1,10 +1,10 @@
 # Interface: HistoricalInstructionFilters
 
-> Defined in: [src/api/client/types.ts:225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L225)
+> Defined in: [src/api/client/types.ts:224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L224)
 
 # Interface: HistoricalInstructionFilters
 
-Defined in: [src/api/client/types.ts:225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L225)
+Defined in: [src/api/client/types.ts:224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L224)
 
 Filters for instructions
 
@@ -14,7 +14,7 @@ Filters for instructions
 
 > `optional` **asset?**: `string` \| [`Asset`](../../../entities/Asset/types/type-aliases/Asset.mdx)
 
-Defined in: [src/api/client/types.ts:233](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L233)
+Defined in: [src/api/client/types.ts:232](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L232)
 
 The asset ID to filter by
 
@@ -24,7 +24,7 @@ The asset ID to filter by
 
 > `optional` **identity?**: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
 
-Defined in: [src/api/client/types.ts:229](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L229)
+Defined in: [src/api/client/types.ts:228](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L228)
 
 The DID of the identity to filter by
 
@@ -34,7 +34,7 @@ The DID of the identity to filter by
 
 > `optional` **mediator?**: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
 
-Defined in: [src/api/client/types.ts:249](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L249)
+Defined in: [src/api/client/types.ts:248](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L248)
 
 The mediator did to filter by
 
@@ -44,7 +44,7 @@ The mediator did to filter by
 
 > `optional` **party?**: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
 
-Defined in: [src/api/client/types.ts:253](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L253)
+Defined in: [src/api/client/types.ts:252](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L252)
 
 The party did to filter by
 
@@ -54,7 +54,7 @@ The party did to filter by
 
 > `optional` **receiver?**: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
 
-Defined in: [src/api/client/types.ts:245](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L245)
+Defined in: [src/api/client/types.ts:244](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L244)
 
 The receiver did to filter by
 
@@ -64,7 +64,7 @@ The receiver did to filter by
 
 > `optional` **sender?**: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
 
-Defined in: [src/api/client/types.ts:241](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L241)
+Defined in: [src/api/client/types.ts:240](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L240)
 
 The sender did to filter by
 
@@ -74,7 +74,7 @@ The sender did to filter by
 
 > `optional` **size?**: `BigNumber`
 
-Defined in: [src/api/client/types.ts:257](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L257)
+Defined in: [src/api/client/types.ts:256](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L256)
 
 The number of results to return
 
@@ -84,7 +84,7 @@ The number of results to return
 
 > `optional` **start?**: `BigNumber`
 
-Defined in: [src/api/client/types.ts:261](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L261)
+Defined in: [src/api/client/types.ts:260](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L260)
 
 The number of results to skip
 
@@ -94,6 +94,6 @@ The number of results to skip
 
 > `optional` **status?**: [`InstructionStatusEnum`](../enumerations/InstructionStatusEnum.mdx)
 
-Defined in: [src/api/client/types.ts:237](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L237)
+Defined in: [src/api/client/types.ts:236](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L236)
 
 The status to filter by

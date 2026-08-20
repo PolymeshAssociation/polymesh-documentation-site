@@ -6,7 +6,7 @@
 
 > **PayingAccount** = \{ `account`: [`Account`](../../../api/entities/Account/classes/Account.mdx); `allowance`: `BigNumber`; `type`: [`Subsidy`](../enumerations/PayingAccountType.mdx#subsidy); \} \| \{ `account`: [`Account`](../../../api/entities/Account/classes/Account.mdx); `type`: [`Caller`](../enumerations/PayingAccountType.mdx#caller) \| [`Other`](../enumerations/PayingAccountType.mdx#other) \| [`MultiSigCreator`](../enumerations/PayingAccountType.mdx#multisigcreator); \}
 
-Defined in: [src/base/types.ts:144](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/types.ts#L144)
+Defined in: [src/base/types.ts:144](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/types.ts#L144)
 
 Data representing the Account responsible for paying fees for a transaction
 
@@ -27,7 +27,7 @@ Defined in
 
 Account that pays for the transaction
 
-[src/base/types.ts:150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/types.ts#L150)
+[src/base/types.ts:150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/types.ts#L150)
 
 `allowance`
 
@@ -35,7 +35,7 @@ Account that pays for the transaction
 
 total amount that can be paid for
 
-[src/base/types.ts:154](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/types.ts#L154)
+[src/base/types.ts:154](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/types.ts#L154)
 
 `type`
 
@@ -43,7 +43,7 @@ total amount that can be paid for
 
 &hyphen;
 
-[src/base/types.ts:146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/types.ts#L146)
+[src/base/types.ts:146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/types.ts#L146)
 
 ***
 

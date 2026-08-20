@@ -1,10 +1,10 @@
 # Interface: CheckPermissionsResult\<Type\>
 
-> Defined in: [src/api/entities/types.ts:762](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L762)
+> Defined in: [src/api/entities/types.ts:746](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L746)
 
 # Interface: CheckPermissionsResult\
 
-Defined in: [src/api/entities/types.ts:762](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L762)
+Defined in: [src/api/entities/types.ts:746](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L746)
 
 Result of a `checkPermissions` call. If `Type` is `Account`, represents whether the Account
   has all the necessary secondary key Permissions. If `Type` is `Identity`, represents whether the
@@ -22,7 +22,7 @@ Type Parameter
 
 > `optional` **message?**: `string`
 
-Defined in: [src/api/entities/types.ts:774](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L774)
+Defined in: [src/api/entities/types.ts:758](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L758)
 
 optional message explaining the reason for failure in special cases
 
@@ -32,7 +32,7 @@ optional message explaining the reason for failure in special cases
 
 > `optional` **missingPermissions?**: `Type` *extends* [`Account`](../enumerations/SignerType.mdx#account) ? [`SimplePermissions`](SimplePermissions.mdx) : [`TxTag`](../../../../types/type-aliases/TxTag.mdx)[] \| `null`
 
-Defined in: [src/api/entities/types.ts:766](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L766)
+Defined in: [src/api/entities/types.ts:750](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L750)
 
 required permissions which the signer *DOESN'T* have. Only present if `result` is `false`
 
@@ -42,6 +42,6 @@ required permissions which the signer *DOESN'T* have. Only present if `result` i
 
 > **result**: `boolean`
 
-Defined in: [src/api/entities/types.ts:770](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L770)
+Defined in: [src/api/entities/types.ts:754](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L754)
 
 whether the signer complies with the required permissions or not

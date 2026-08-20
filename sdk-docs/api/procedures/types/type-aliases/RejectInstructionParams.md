@@ -6,7 +6,7 @@
 
 > **RejectInstructionParams** = `object`
 
-Defined in: [src/api/procedures/types.ts:1161](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1161)
+Defined in: [src/api/procedures/types.ts:1135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1135)
 
 ## Properties
 
@@ -21,4 +21,4 @@ Defined in
 
 (optional) Asset holder that the signer controls and wants to reject the instruction
 
-[src/api/procedures/types.ts:1165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1165)
+[src/api/procedures/types.ts:1139](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1139)

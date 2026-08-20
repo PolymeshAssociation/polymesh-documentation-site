@@ -6,7 +6,7 @@
 
 > **TransactionArray**\<`ReturnValues`\> = `{ [K in keyof ReturnValues]: GenericPolymeshTransaction<any, ReturnValues[K]> }`
 
-Defined in: [src/api/procedures/types.ts:251](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L251)
+Defined in: [src/api/procedures/types.ts:249](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L249)
 
 ## Type Parameters
 

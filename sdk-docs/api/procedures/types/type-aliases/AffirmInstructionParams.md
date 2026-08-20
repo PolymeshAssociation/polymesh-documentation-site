@@ -6,7 +6,7 @@
 
 > **AffirmInstructionParams** = `object`
 
-Defined in: [src/api/procedures/types.ts:1218](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1218)
+Defined in: [src/api/procedures/types.ts:1184](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1184)
 
 ## Properties
 
@@ -25,7 +25,7 @@ Defined in
 
 if empty, all the legs containing any custodied portfolios or accounts of of the signer will be affirmed
 
-[src/api/procedures/types.ts:1224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1224)
+[src/api/procedures/types.ts:1190](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1190)
 
  `receipts?`
 
@@ -35,4 +35,4 @@ if empty, all the legs containing any custodied portfolios or accounts of of the
 
 Receipt can be generated using [generateOffChainAffirmationReceipt](../../../entities/Instruction/classes/Instruction.mdx#generateoffchainaffirmationreceipt) method
 
-[src/api/procedures/types.ts:1231](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1231)
+[src/api/procedures/types.ts:1197](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1197)

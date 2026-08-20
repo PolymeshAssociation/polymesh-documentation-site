@@ -1,10 +1,10 @@
 # Enumeration: InstructionAffirmationOperation
 
-> Defined in: [src/api/procedures/types.ts:1146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1146)
+> Defined in: [src/api/procedures/types.ts:1128](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1128)
 
 # Enumeration: InstructionAffirmationOperation
 
-Defined in: [src/api/procedures/types.ts:1146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1146)
+Defined in: [src/api/procedures/types.ts:1128](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1128)
 
 ## Enumeration Members
 
@@ -12,7 +12,7 @@ Defined in: [src/api/procedures/types.ts:1146](https://github.com/PolymeshAssoci
 
 > **Affirm**: `"Affirm"`
 
-Defined in: [src/api/procedures/types.ts:1147](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1147)
+Defined in: [src/api/procedures/types.ts:1129](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1129)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/procedures/types.ts:1147](https://github.com/PolymeshAssoci
 
 > **AffirmAsMediator**: `"AffirmAsMediator"`
 
-Defined in: [src/api/procedures/types.ts:1153](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1153)
+Defined in: [src/api/procedures/types.ts:1131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1131)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/api/procedures/types.ts:1153](https://github.com/PolymeshAssoci
 
 > **Reject**: `"Reject"`
 
-Defined in: [src/api/procedures/types.ts:1152](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1152)
+Defined in: [src/api/procedures/types.ts:1130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1130)
 
 ***
 
@@ -36,28 +36,4 @@ Defined in: [src/api/procedures/types.ts:1152](https://github.com/PolymeshAssoci
 
 > **RejectAsMediator**: `"RejectAsMediator"`
 
-Defined in: [src/api/procedures/types.ts:1158](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1158)
-
-***
-
-### ~~Withdraw~~
-
-> **Withdraw**: `"Withdraw"`
-
-Defined in: [src/api/procedures/types.ts:1151](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1151)
-
-#### Deprecated
-
-withdrawing an affirmation is no longer supported in chain v8
-
-***
-
-### ~~WithdrawAsMediator~~
-
-> **WithdrawAsMediator**: `"WithdrawAsMediator"`
-
-Defined in: [src/api/procedures/types.ts:1157](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1157)
-
-#### Deprecated
-
-withdrawing an affirmation as a mediator is no longer supported in chain v8
+Defined in: [src/api/procedures/types.ts:1132](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1132)

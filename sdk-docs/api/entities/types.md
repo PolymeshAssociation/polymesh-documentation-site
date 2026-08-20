@@ -89,7 +89,6 @@
 - [AccountCollection](type-aliases/AccountCollection.mdx)
 - [AccountLike](type-aliases/AccountLike.mdx)
 - [ActiveStats](type-aliases/ActiveStats.mdx)
-- [~~AddRelayerPayingKeyAuthorizationData~~](type-aliases/AddRelayerPayingKeyAuthorizationData.mdx)
 - [AssetHolder](type-aliases/AssetHolder.mdx)
 - [AssetHolderBalance](type-aliases/AssetHolderBalance.mdx)
 - [AssetHolderLike](type-aliases/AssetHolderLike.mdx)
@@ -99,7 +98,6 @@
 - [BecomeAgentAuthorizationData](type-aliases/BecomeAgentAuthorizationData.mdx)
 - [Checkpoint](type-aliases/Checkpoint.mdx)
 - [CheckpointSchedule](type-aliases/CheckpointSchedule.mdx)
-- [ChildIdentity](type-aliases/ChildIdentity.mdx)
 - [Claim](type-aliases/Claim.mdx)
 - [ClaimCountStatInput](type-aliases/ClaimCountStatInput.mdx)
 - [ClaimTypeInput](type-aliases/ClaimTypeInput.mdx)
@@ -155,7 +153,7 @@
 
 ### AccountBalance
 
-Re-exports [AccountBalance](../Account/types/type-aliases/AccountBalance.mdx)
+Re-exports [AccountBalance](../Account/types/interfaces/AccountBalance.mdx)
 
 ***
 
@@ -453,6 +451,12 @@ Re-exports [InstructionLockedInfo](../Instruction/types/interfaces/InstructionLo
 
 ***
 
+### InstructionRelockStatus
+
+Re-exports [InstructionRelockStatus](../Instruction/types/interfaces/InstructionRelockStatus.mdx)
+
+***
+
 ### InstructionsByStatus
 
 Re-exports [InstructionsByStatus](../Instruction/types/type-aliases/InstructionsByStatus.mdx)
@@ -504,6 +508,18 @@ Re-exports [KnownNftType](../Asset/types/enumerations/KnownNftType.mdx)
 ### Leg
 
 Re-exports [Leg](../Instruction/types/type-aliases/Leg.mdx)
+
+***
+
+### LegStatus
+
+Re-exports [LegStatus](../Instruction/types/type-aliases/LegStatus.mdx)
+
+***
+
+### LegStatusType
+
+Re-exports [LegStatusType](../Instruction/types/enumerations/LegStatusType.mdx)
 
 ***
 
@@ -588,6 +604,12 @@ Re-exports [MultiSigProposalVote](../MultiSigProposal/types/type-aliases/MultiSi
 ### MultiSigSigners
 
 Re-exports [MultiSigSigners](../Account/MultiSig/types/interfaces/MultiSigSigners.mdx)
+
+***
+
+### NextCheckpoints
+
+Re-exports [NextCheckpoints](../Asset/Fungible/Checkpoints/types/interfaces/NextCheckpoints.mdx)
 
 ***
 
@@ -699,6 +721,12 @@ Re-exports [ScheduleDetails](../CheckpointSchedule/types/interfaces/ScheduleDeta
 
 ***
 
+### ScheduleNextCheckpoint
+
+Re-exports [ScheduleNextCheckpoint](../Asset/Fungible/Checkpoints/types/interfaces/ScheduleNextCheckpoint.mdx)
+
+***
+
 ### SecurityIdentifier
 
 Re-exports [SecurityIdentifier](../Asset/types/interfaces/SecurityIdentifier.mdx)
@@ -771,6 +799,12 @@ Re-exports [TaxWithholding](../CorporateActionBase/types/interfaces/TaxWithholdi
 
 ***
 
+### TickerRegistrationConfig
+
+Re-exports [TickerRegistrationConfig](../Asset/types/interfaces/TickerRegistrationConfig.mdx)
+
+***
+
 ### TickerReservationDetails
 
 Re-exports [TickerReservationDetails](../TickerReservation/types/type-aliases/TickerReservationDetails.mdx)
@@ -822,12 +856,6 @@ Re-exports [TransferRestrictionResult](../Asset/types/interfaces/TransferRestric
 ### TransferRestrictionStatValues
 
 Re-exports [TransferRestrictionStatValues](../Asset/types/interfaces/TransferRestrictionStatValues.mdx)
-
-***
-
-### TransferStatus
-
-Re-exports [TransferStatus](../Asset/types/enumerations/TransferStatus.mdx)
 
 ***
 

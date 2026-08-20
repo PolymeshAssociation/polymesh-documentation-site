@@ -1,10 +1,10 @@
 # Enumeration: NftOwnerStatus
 
-> Defined in: [src/api/entities/Asset/types.ts:527](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L527)
+> Defined in: [src/api/entities/Asset/types.ts:474](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L474)
 
 # Enumeration: NftOwnerStatus
 
-Defined in: [src/api/entities/Asset/types.ts:527](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L527)
+Defined in: [src/api/entities/Asset/types.ts:474](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L474)
 
 ## Enumeration Members
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/Asset/types.ts:527](https://github.com/PolymeshAss
 
 > **NotOwned**: `"NotOwned"`
 
-Defined in: [src/api/entities/Asset/types.ts:528](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L528)
+Defined in: [src/api/entities/Asset/types.ts:475](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L475)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/entities/Asset/types.ts:528](https://github.com/PolymeshAss
 
 > **Owner**: `"Owner"`
 
-Defined in: [src/api/entities/Asset/types.ts:529](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L529)
+Defined in: [src/api/entities/Asset/types.ts:476](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L476)
 
 ***
 
@@ -28,4 +28,4 @@ Defined in: [src/api/entities/Asset/types.ts:529](https://github.com/PolymeshAss
 
 > **OwnerLocked**: `"OwnerLocked"`
 
-Defined in: [src/api/entities/Asset/types.ts:530](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L530)
+Defined in: [src/api/entities/Asset/types.ts:477](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L477)

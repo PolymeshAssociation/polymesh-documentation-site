@@ -1,10 +1,10 @@
 # Interface: UniqueIdentifiers
 
-> Defined in: [src/api/entities/CorporateBallot/index.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/index.ts#L48)
+> Defined in: [src/api/entities/CorporateBallot/index.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/index.ts#L48)
 
 # Interface: UniqueIdentifiers
 
-Defined in: [src/api/entities/CorporateBallot/index.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/index.ts#L48)
+Defined in: [src/api/entities/CorporateBallot/index.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/index.ts#L48)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/CorporateBallot/index.ts:48](https://github.com/Po
 
 > **assetId**: `string`
 
-Defined in: [src/api/entities/CorporateBallot/index.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/index.ts#L50)
+Defined in: [src/api/entities/CorporateBallot/index.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/index.ts#L50)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/entities/CorporateBallot/index.ts:50](https://github.com/Po
 
 > **id**: `BigNumber`
 
-Defined in: [src/api/entities/CorporateBallot/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/index.ts#L49)
+Defined in: [src/api/entities/CorporateBallot/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/index.ts#L49)

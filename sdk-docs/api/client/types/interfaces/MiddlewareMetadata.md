@@ -1,10 +1,10 @@
 # Interface: MiddlewareMetadata
 
-> Defined in: [src/api/client/types.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L38)
+> Defined in: [src/api/client/types.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L38)
 
 # Interface: MiddlewareMetadata
 
-Defined in: [src/api/client/types.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L38)
+Defined in: [src/api/client/types.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L38)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/client/types.ts:38](https://github.com/PolymeshAssociation/
 
 > **chain**: `string`
 
-Defined in: [src/api/client/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L39)
+Defined in: [src/api/client/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L39)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/client/types.ts:39](https://github.com/PolymeshAssociation/
 
 > **genesisHash**: `string`
 
-Defined in: [src/api/client/types.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L40)
+Defined in: [src/api/client/types.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L40)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/api/client/types.ts:40](https://github.com/PolymeshAssociation/
 
 > **indexerHealthy**: `boolean`
 
-Defined in: [src/api/client/types.ts:41](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L41)
+Defined in: [src/api/client/types.ts:41](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L41)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [src/api/client/types.ts:41](https://github.com/PolymeshAssociation/
 
 > **lastProcessedHeight**: `BigNumber`
 
-Defined in: [src/api/client/types.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L42)
+Defined in: [src/api/client/types.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L42)
 
 ***
 
@@ -44,15 +44,7 @@ Defined in: [src/api/client/types.ts:42](https://github.com/PolymeshAssociation/
 
 > **lastProcessedTimestamp**: `Date`
 
-Defined in: [src/api/client/types.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L43)
-
-***
-
-### paddedIds
-
-> **paddedIds**: `boolean`
-
-Defined in: [src/api/client/types.ts:47](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L47)
+Defined in: [src/api/client/types.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L43)
 
 ***
 
@@ -60,7 +52,7 @@ Defined in: [src/api/client/types.ts:47](https://github.com/PolymeshAssociation/
 
 > **specName**: `string`
 
-Defined in: [src/api/client/types.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L44)
+Defined in: [src/api/client/types.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L44)
 
 ***
 
@@ -68,7 +60,7 @@ Defined in: [src/api/client/types.ts:44](https://github.com/PolymeshAssociation/
 
 > **sqVersion**: `string`
 
-Defined in: [src/api/client/types.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L46)
+Defined in: [src/api/client/types.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L46)
 
 ***
 
@@ -76,4 +68,4 @@ Defined in: [src/api/client/types.ts:46](https://github.com/PolymeshAssociation/
 
 > **targetHeight**: `BigNumber`
 
-Defined in: [src/api/client/types.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L45)
+Defined in: [src/api/client/types.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L45)

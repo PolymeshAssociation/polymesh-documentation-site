@@ -1,10 +1,10 @@
 # Interface: RemoveExternalAgentParams
 
-> Defined in: [src/api/procedures/types.ts:1674](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1674)
+> Defined in: [src/api/procedures/types.ts:1604](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1604)
 
 # Interface: RemoveExternalAgentParams
 
-Defined in: [src/api/procedures/types.ts:1674](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1674)
+Defined in: [src/api/procedures/types.ts:1604](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1604)
 
 ## Properties
 
@@ -12,4 +12,4 @@ Defined in: [src/api/procedures/types.ts:1674](https://github.com/PolymeshAssoci
 
 > **target**: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
 
-Defined in: [src/api/procedures/types.ts:1675](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1675)
+Defined in: [src/api/procedures/types.ts:1605](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1605)

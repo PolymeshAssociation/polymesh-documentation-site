@@ -6,4 +6,4 @@
 
 > **TrustedFor** = `Exclude`\<[`ClaimType`](../enumerations/ClaimType.mdx), [`Custom`](../enumerations/ClaimType.mdx#custom)\> \| [`CustomClaimWithTypeId`](CustomClaimWithTypeId.mdx)
 
-Defined in: [src/api/entities/types.ts:324](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L324)
+Defined in: [src/api/entities/types.ts:318](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L318)

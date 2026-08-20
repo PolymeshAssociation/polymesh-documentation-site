@@ -1,10 +1,10 @@
 # Interface: ActiveTransferRestrictions
 
-> Defined in: [src/api/entities/Asset/types.ts:491](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L491)
+> Defined in: [src/api/entities/Asset/types.ts:438](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L438)
 
 # Interface: ActiveTransferRestrictions
 
-Defined in: [src/api/entities/Asset/types.ts:491](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L491)
+Defined in: [src/api/entities/Asset/types.ts:438](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L438)
 
 The active Transfer Restrictions enabled on an Asset
 
@@ -14,7 +14,7 @@ The active Transfer Restrictions enabled on an Asset
 
 > **paused**: `boolean`
 
-Defined in: [src/api/entities/Asset/types.ts:492](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L492)
+Defined in: [src/api/entities/Asset/types.ts:439](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L439)
 
 ***
 
@@ -22,4 +22,4 @@ Defined in: [src/api/entities/Asset/types.ts:492](https://github.com/PolymeshAss
 
 > **restrictions**: [`TransferRestriction`](../../../../procedures/types/type-aliases/TransferRestriction.mdx)[]
 
-Defined in: [src/api/entities/Asset/types.ts:493](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L493)
+Defined in: [src/api/entities/Asset/types.ts:440](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L440)

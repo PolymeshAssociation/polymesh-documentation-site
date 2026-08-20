@@ -1,10 +1,10 @@
 # Class: Documents
 
-> Defined in: [src/api/entities/Asset/Base/Documents/index.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Documents/index.ts#L24)
+> Defined in: [src/api/entities/Asset/Base/Documents/index.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Documents/index.ts#L24)
 
 # Class: Documents
 
-Defined in: [src/api/entities/Asset/Base/Documents/index.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Documents/index.ts#L24)
+Defined in: [src/api/entities/Asset/Base/Documents/index.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Documents/index.ts#L24)
 
 Handles all Asset Document related functionality
 
@@ -18,7 +18,7 @@ Handles all Asset Document related functionality
 
 > **add**(`args`: [`AddAssetDocumentsParams`](../../../../../procedures/types/interfaces/AddAssetDocumentsParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/Documents/index.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Documents/index.ts#L57)
+Defined in: [src/api/entities/Asset/Base/Documents/index.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Documents/index.ts#L57)
 
 Add documents to the Asset's existing list of documents
 
@@ -49,7 +49,7 @@ this method is of type [ProcedureMethod](../../../../../procedures/types/interfa
 
 > **get**(`paginationOpts?`: [`PaginationOptions`](../../../../types/interfaces/PaginationOptions.mdx)): `Promise`\<[`ResultSet`](../../../../types/interfaces/ResultSet.mdx)\<[`AssetDocumentWithId`](../../../types/interfaces/AssetDocumentWithId.mdx)\>\>
 
-Defined in: [src/api/entities/Asset/Base/Documents/index.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Documents/index.ts#L70)
+Defined in: [src/api/entities/Asset/Base/Documents/index.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Documents/index.ts#L70)
 
 Retrieve all documents linked to the Asset
 
@@ -80,7 +80,7 @@ returns documents with their on-chain IDs which can be used with the `remove` me
 
 > **remove**(`args`: [`RemoveAssetDocumentsParams`](../../../../../procedures/types/interfaces/RemoveAssetDocumentsParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/Documents/index.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Documents/index.ts#L62)
+Defined in: [src/api/entities/Asset/Base/Documents/index.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Documents/index.ts#L62)
 
 Remove specific documents from the Asset by their IDs
 
@@ -111,7 +111,7 @@ this method is of type [ProcedureMethod](../../../../../procedures/types/interfa
 
 > **set**(`args`: [`SetAssetDocumentsParams`](../../../../../procedures/types/interfaces/SetAssetDocumentsParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/Documents/index.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Documents/index.ts#L52)
+Defined in: [src/api/entities/Asset/Base/Documents/index.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Documents/index.ts#L52)
 
 Assign a new list of documents to the Asset by replacing the existing list of documents with the ones passed in the parameters
 

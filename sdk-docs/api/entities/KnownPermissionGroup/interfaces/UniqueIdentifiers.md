@@ -1,10 +1,10 @@
 # Interface: UniqueIdentifiers
 
-> Defined in: [src/api/entities/KnownPermissionGroup.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/KnownPermissionGroup.ts#L19)
+> Defined in: [src/api/entities/KnownPermissionGroup.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/KnownPermissionGroup.ts#L19)
 
 # Interface: UniqueIdentifiers
 
-Defined in: [src/api/entities/KnownPermissionGroup.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/KnownPermissionGroup.ts#L19)
+Defined in: [src/api/entities/KnownPermissionGroup.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/KnownPermissionGroup.ts#L19)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/KnownPermissionGroup.ts:19](https://github.com/Pol
 
 > **assetId**: `string`
 
-Defined in: [src/api/entities/KnownPermissionGroup.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/KnownPermissionGroup.ts#L21)
+Defined in: [src/api/entities/KnownPermissionGroup.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/KnownPermissionGroup.ts#L21)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/entities/KnownPermissionGroup.ts:21](https://github.com/Pol
 
 > **type**: [`PermissionGroupType`](../../types/enumerations/PermissionGroupType.mdx)
 
-Defined in: [src/api/entities/KnownPermissionGroup.ts:20](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/KnownPermissionGroup.ts#L20)
+Defined in: [src/api/entities/KnownPermissionGroup.ts:20](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/KnownPermissionGroup.ts#L20)

@@ -5,7 +5,6 @@
 - [NftOwnerStatus](enumerations/NftOwnerStatus.mdx)
 - [SecurityIdentifierType](enumerations/SecurityIdentifierType.mdx)
 - [TransferError](enumerations/TransferError.mdx)
-- [TransferStatus](enumerations/TransferStatus.mdx)
 
 # Entity: Asset/types
 
@@ -16,7 +15,6 @@
 - [NftOwnerStatus](enumerations/NftOwnerStatus.mdx)
 - [SecurityIdentifierType](enumerations/SecurityIdentifierType.mdx)
 - [TransferError](enumerations/TransferError.mdx)
-- [TransferStatus](enumerations/TransferStatus.mdx)
 
 ## Interfaces
 
@@ -36,6 +34,7 @@
 - [IdentityHeldNfts](interfaces/IdentityHeldNfts.mdx)
 - [NftMetadata](interfaces/NftMetadata.mdx)
 - [SecurityIdentifier](interfaces/SecurityIdentifier.mdx)
+- [TickerRegistrationConfig](interfaces/TickerRegistrationConfig.mdx)
 - [TransferBreakdown](interfaces/TransferBreakdown.mdx)
 - [TransferExemptKey](interfaces/TransferExemptKey.mdx)
 - [TransferRestrictionExemption](interfaces/TransferRestrictionExemption.mdx)
@@ -70,3 +69,15 @@ Re-exports [CorporateActionDefaultConfig](../Fungible/CorporateActions/types/int
 ### InputCaCheckpoint
 
 Re-exports [InputCaCheckpoint](../Fungible/Checkpoints/types/type-aliases/InputCaCheckpoint.mdx)
+
+***
+
+### NextCheckpoints
+
+Re-exports [NextCheckpoints](../Fungible/Checkpoints/types/interfaces/NextCheckpoints.mdx)
+
+***
+
+### ScheduleNextCheckpoint
+
+Re-exports [ScheduleNextCheckpoint](../Fungible/Checkpoints/types/interfaces/ScheduleNextCheckpoint.mdx)

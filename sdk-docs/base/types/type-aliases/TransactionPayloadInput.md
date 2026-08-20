@@ -6,7 +6,7 @@
 
 > **TransactionPayloadInput** = [`TransactionPayload`](../interfaces/TransactionPayload.mdx) \| [`TransactionPayload`](../interfaces/TransactionPayload.mdx)\[`"payload"`\] \| [`TransactionPayload`](../interfaces/TransactionPayload.mdx)\[`"rawPayload"`\]
 
-Defined in: [src/base/types.ts:229](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/types.ts#L229)
+Defined in: [src/base/types.ts:229](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/types.ts#L229)
 
 The data needed for submitting an offline transaction.
 

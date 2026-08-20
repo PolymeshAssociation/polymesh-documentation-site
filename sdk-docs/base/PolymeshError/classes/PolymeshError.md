@@ -1,10 +1,10 @@
 # Class: PolymeshError
 
-> Defined in: [src/base/PolymeshError.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/PolymeshError.ts#L15)
+> Defined in: [src/base/PolymeshError.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/PolymeshError.ts#L15)
 
 # Class: PolymeshError
 
-Defined in: [src/base/PolymeshError.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/PolymeshError.ts#L15)
+Defined in: [src/base/PolymeshError.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/PolymeshError.ts#L15)
 
 Wraps an error to give more information about its type
 
@@ -18,7 +18,7 @@ Wraps an error to give more information about its type
 
 > **code**: [`ErrorCode`](../../../api/client/types/enumerations/ErrorCode.mdx)
 
-Defined in: [src/base/PolymeshError.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/PolymeshError.ts#L16)
+Defined in: [src/base/PolymeshError.ts:16](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/PolymeshError.ts#L16)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [src/base/PolymeshError.ts:16](https://github.com/PolymeshAssociatio
 
 > **data**: `Record`\<`string`, `unknown`\> \| `undefined`
 
-Defined in: [src/base/PolymeshError.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/PolymeshError.ts#L18)
+Defined in: [src/base/PolymeshError.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/PolymeshError.ts#L18)
 
 ***
 

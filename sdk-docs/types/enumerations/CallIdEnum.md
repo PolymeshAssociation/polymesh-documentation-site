@@ -1,10 +1,10 @@
 # Enumeration: CallIdEnum
 
-> Defined in: [src/middleware/types.ts:1831](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1831)
+> Defined in: [src/middleware/types.ts:1831](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1831)
 
 # Enumeration: CallIdEnum
 
-Defined in: [src/middleware/types.ts:1831](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1831)
+Defined in: [src/middleware/types.ts:1831](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1831)
 
 ## Enumeration Members
 
@@ -12,7 +12,7 @@ Defined in: [src/middleware/types.ts:1831](https://github.com/PolymeshAssociatio
 
 > **Abdicate**: `"abdicate"`
 
-Defined in: [src/middleware/types.ts:1832](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1832)
+Defined in: [src/middleware/types.ts:1832](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1832)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/middleware/types.ts:1832](https://github.com/PolymeshAssociatio
 
 > **AbdicateMembership**: `"abdicate_membership"`
 
-Defined in: [src/middleware/types.ts:1833](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1833)
+Defined in: [src/middleware/types.ts:1833](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1833)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/middleware/types.ts:1833](https://github.com/PolymeshAssociatio
 
 > **AcceptAssetOwnershipTransfer**: `"accept_asset_ownership_transfer"`
 
-Defined in: [src/middleware/types.ts:1834](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1834)
+Defined in: [src/middleware/types.ts:1834](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1834)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [src/middleware/types.ts:1834](https://github.com/PolymeshAssociatio
 
 > **AcceptAuthorization**: `"accept_authorization"`
 
-Defined in: [src/middleware/types.ts:1835](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1835)
+Defined in: [src/middleware/types.ts:1835](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1835)
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: [src/middleware/types.ts:1835](https://github.com/PolymeshAssociatio
 
 > **AcceptBecomeAgent**: `"accept_become_agent"`
 
-Defined in: [src/middleware/types.ts:1836](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1836)
+Defined in: [src/middleware/types.ts:1836](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1836)
 
 ***
 
@@ -52,7 +52,7 @@ Defined in: [src/middleware/types.ts:1836](https://github.com/PolymeshAssociatio
 
 > **AcceptMasterKey**: `"accept_master_key"`
 
-Defined in: [src/middleware/types.ts:1837](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1837)
+Defined in: [src/middleware/types.ts:1837](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1837)
 
 ***
 
@@ -60,7 +60,7 @@ Defined in: [src/middleware/types.ts:1837](https://github.com/PolymeshAssociatio
 
 > **AcceptMultisigSigner**: `"accept_multisig_signer"`
 
-Defined in: [src/middleware/types.ts:1838](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1838)
+Defined in: [src/middleware/types.ts:1838](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1838)
 
 ***
 
@@ -68,7 +68,7 @@ Defined in: [src/middleware/types.ts:1838](https://github.com/PolymeshAssociatio
 
 > **AcceptMultisigSignerAsIdentity**: `"accept_multisig_signer_as_identity"`
 
-Defined in: [src/middleware/types.ts:1839](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1839)
+Defined in: [src/middleware/types.ts:1839](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1839)
 
 ***
 
@@ -76,7 +76,7 @@ Defined in: [src/middleware/types.ts:1839](https://github.com/PolymeshAssociatio
 
 > **AcceptMultisigSignerAsKey**: `"accept_multisig_signer_as_key"`
 
-Defined in: [src/middleware/types.ts:1840](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1840)
+Defined in: [src/middleware/types.ts:1840](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1840)
 
 ***
 
@@ -84,7 +84,7 @@ Defined in: [src/middleware/types.ts:1840](https://github.com/PolymeshAssociatio
 
 > **AcceptPayingKey**: `"accept_paying_key"`
 
-Defined in: [src/middleware/types.ts:1841](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1841)
+Defined in: [src/middleware/types.ts:1841](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1841)
 
 ***
 
@@ -92,7 +92,7 @@ Defined in: [src/middleware/types.ts:1841](https://github.com/PolymeshAssociatio
 
 > **AcceptPortfolioCustody**: `"accept_portfolio_custody"`
 
-Defined in: [src/middleware/types.ts:1842](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1842)
+Defined in: [src/middleware/types.ts:1842](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1842)
 
 ***
 
@@ -100,7 +100,7 @@ Defined in: [src/middleware/types.ts:1842](https://github.com/PolymeshAssociatio
 
 > **AcceptPrimaryIssuanceAgentTransfer**: `"accept_primary_issuance_agent_transfer"`
 
-Defined in: [src/middleware/types.ts:1843](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1843)
+Defined in: [src/middleware/types.ts:1843](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1843)
 
 ***
 
@@ -108,7 +108,7 @@ Defined in: [src/middleware/types.ts:1843](https://github.com/PolymeshAssociatio
 
 > **AcceptPrimaryKey**: `"accept_primary_key"`
 
-Defined in: [src/middleware/types.ts:1844](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1844)
+Defined in: [src/middleware/types.ts:1844](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1844)
 
 ***
 
@@ -116,7 +116,7 @@ Defined in: [src/middleware/types.ts:1844](https://github.com/PolymeshAssociatio
 
 > **AcceptSubsidy**: `"accept_subsidy"`
 
-Defined in: [src/middleware/types.ts:1845](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1845)
+Defined in: [src/middleware/types.ts:1845](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1845)
 
 ***
 
@@ -124,7 +124,7 @@ Defined in: [src/middleware/types.ts:1845](https://github.com/PolymeshAssociatio
 
 > **AcceptTickerTransfer**: `"accept_ticker_transfer"`
 
-Defined in: [src/middleware/types.ts:1846](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1846)
+Defined in: [src/middleware/types.ts:1846](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1846)
 
 ***
 
@@ -132,7 +132,7 @@ Defined in: [src/middleware/types.ts:1846](https://github.com/PolymeshAssociatio
 
 > **AddActiveRule**: `"add_active_rule"`
 
-Defined in: [src/middleware/types.ts:1847](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1847)
+Defined in: [src/middleware/types.ts:1847](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1847)
 
 ***
 
@@ -140,7 +140,7 @@ Defined in: [src/middleware/types.ts:1847](https://github.com/PolymeshAssociatio
 
 > **AddAdmin**: `"add_admin"`
 
-Defined in: [src/middleware/types.ts:1848](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1848)
+Defined in: [src/middleware/types.ts:1848](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1848)
 
 ***
 
@@ -148,7 +148,7 @@ Defined in: [src/middleware/types.ts:1848](https://github.com/PolymeshAssociatio
 
 > **AddAndAffirmInstruction**: `"add_and_affirm_instruction"`
 
-Defined in: [src/middleware/types.ts:1849](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1849)
+Defined in: [src/middleware/types.ts:1849](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1849)
 
 ***
 
@@ -156,7 +156,7 @@ Defined in: [src/middleware/types.ts:1849](https://github.com/PolymeshAssociatio
 
 > **AddAndAffirmInstructionWithMemo**: `"add_and_affirm_instruction_with_memo"`
 
-Defined in: [src/middleware/types.ts:1850](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1850)
+Defined in: [src/middleware/types.ts:1850](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1850)
 
 ***
 
@@ -164,7 +164,7 @@ Defined in: [src/middleware/types.ts:1850](https://github.com/PolymeshAssociatio
 
 > **AddAndAffirmInstructionWithMemoV2**: `"add_and_affirm_instruction_with_memo_v2"`
 
-Defined in: [src/middleware/types.ts:1851](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1851)
+Defined in: [src/middleware/types.ts:1851](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1851)
 
 ***
 
@@ -172,7 +172,7 @@ Defined in: [src/middleware/types.ts:1851](https://github.com/PolymeshAssociatio
 
 > **AddAndAffirmWithMediators**: `"add_and_affirm_with_mediators"`
 
-Defined in: [src/middleware/types.ts:1852](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1852)
+Defined in: [src/middleware/types.ts:1852](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1852)
 
 ***
 
@@ -180,7 +180,7 @@ Defined in: [src/middleware/types.ts:1852](https://github.com/PolymeshAssociatio
 
 > **AddAndAuthorizeInstruction**: `"add_and_authorize_instruction"`
 
-Defined in: [src/middleware/types.ts:1853](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1853)
+Defined in: [src/middleware/types.ts:1853](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1853)
 
 ***
 
@@ -188,7 +188,7 @@ Defined in: [src/middleware/types.ts:1853](https://github.com/PolymeshAssociatio
 
 > **AddAuthorization**: `"add_authorization"`
 
-Defined in: [src/middleware/types.ts:1854](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1854)
+Defined in: [src/middleware/types.ts:1854](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1854)
 
 ***
 
@@ -196,7 +196,7 @@ Defined in: [src/middleware/types.ts:1854](https://github.com/PolymeshAssociatio
 
 > **AddBallot**: `"add_ballot"`
 
-Defined in: [src/middleware/types.ts:1855](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1855)
+Defined in: [src/middleware/types.ts:1855](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1855)
 
 ***
 
@@ -204,7 +204,7 @@ Defined in: [src/middleware/types.ts:1855](https://github.com/PolymeshAssociatio
 
 > **AddClaim**: `"add_claim"`
 
-Defined in: [src/middleware/types.ts:1856](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1856)
+Defined in: [src/middleware/types.ts:1856](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1856)
 
 ***
 
@@ -212,7 +212,7 @@ Defined in: [src/middleware/types.ts:1856](https://github.com/PolymeshAssociatio
 
 > **AddComplianceRequirement**: `"add_compliance_requirement"`
 
-Defined in: [src/middleware/types.ts:1857](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1857)
+Defined in: [src/middleware/types.ts:1857](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1857)
 
 ***
 
@@ -220,7 +220,7 @@ Defined in: [src/middleware/types.ts:1857](https://github.com/PolymeshAssociatio
 
 > **AddDefaultTrustedClaimIssuer**: `"add_default_trusted_claim_issuer"`
 
-Defined in: [src/middleware/types.ts:1858](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1858)
+Defined in: [src/middleware/types.ts:1858](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1858)
 
 ***
 
@@ -228,7 +228,7 @@ Defined in: [src/middleware/types.ts:1858](https://github.com/PolymeshAssociatio
 
 > **AddDocuments**: `"add_documents"`
 
-Defined in: [src/middleware/types.ts:1859](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1859)
+Defined in: [src/middleware/types.ts:1859](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1859)
 
 ***
 
@@ -236,7 +236,7 @@ Defined in: [src/middleware/types.ts:1859](https://github.com/PolymeshAssociatio
 
 > **AddExemptedEntities**: `"add_exempted_entities"`
 
-Defined in: [src/middleware/types.ts:1860](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1860)
+Defined in: [src/middleware/types.ts:1860](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1860)
 
 ***
 
@@ -244,7 +244,7 @@ Defined in: [src/middleware/types.ts:1860](https://github.com/PolymeshAssociatio
 
 > **AddExtension**: `"add_extension"`
 
-Defined in: [src/middleware/types.ts:1861](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1861)
+Defined in: [src/middleware/types.ts:1861](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1861)
 
 ***
 
@@ -252,7 +252,7 @@ Defined in: [src/middleware/types.ts:1861](https://github.com/PolymeshAssociatio
 
 > **AddFreezeAdmin**: `"add_freeze_admin"`
 
-Defined in: [src/middleware/types.ts:1862](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1862)
+Defined in: [src/middleware/types.ts:1862](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1862)
 
 ***
 
@@ -260,7 +260,7 @@ Defined in: [src/middleware/types.ts:1862](https://github.com/PolymeshAssociatio
 
 > **AddInstruction**: `"add_instruction"`
 
-Defined in: [src/middleware/types.ts:1863](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1863)
+Defined in: [src/middleware/types.ts:1863](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1863)
 
 ***
 
@@ -268,7 +268,7 @@ Defined in: [src/middleware/types.ts:1863](https://github.com/PolymeshAssociatio
 
 > **AddInstructionWithMediators**: `"add_instruction_with_mediators"`
 
-Defined in: [src/middleware/types.ts:1864](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1864)
+Defined in: [src/middleware/types.ts:1864](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1864)
 
 ***
 
@@ -276,7 +276,7 @@ Defined in: [src/middleware/types.ts:1864](https://github.com/PolymeshAssociatio
 
 > **AddInstructionWithMemo**: `"add_instruction_with_memo"`
 
-Defined in: [src/middleware/types.ts:1865](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1865)
+Defined in: [src/middleware/types.ts:1865](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1865)
 
 ***
 
@@ -284,7 +284,7 @@ Defined in: [src/middleware/types.ts:1865](https://github.com/PolymeshAssociatio
 
 > **AddInstructionWithMemoV2**: `"add_instruction_with_memo_v2"`
 
-Defined in: [src/middleware/types.ts:1866](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1866)
+Defined in: [src/middleware/types.ts:1866](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1866)
 
 ***
 
@@ -292,7 +292,7 @@ Defined in: [src/middleware/types.ts:1866](https://github.com/PolymeshAssociatio
 
 > **AddInvestorUniquenessClaim**: `"add_investor_uniqueness_claim"`
 
-Defined in: [src/middleware/types.ts:1867](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1867)
+Defined in: [src/middleware/types.ts:1867](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1867)
 
 ***
 
@@ -300,7 +300,7 @@ Defined in: [src/middleware/types.ts:1867](https://github.com/PolymeshAssociatio
 
 > **AddInvestorUniquenessClaimV2**: `"add_investor_uniqueness_claim_v2"`
 
-Defined in: [src/middleware/types.ts:1868](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1868)
+Defined in: [src/middleware/types.ts:1868](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1868)
 
 ***
 
@@ -308,7 +308,7 @@ Defined in: [src/middleware/types.ts:1868](https://github.com/PolymeshAssociatio
 
 > **AddMandatoryMediators**: `"add_mandatory_mediators"`
 
-Defined in: [src/middleware/types.ts:1869](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1869)
+Defined in: [src/middleware/types.ts:1869](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1869)
 
 ***
 
@@ -316,7 +316,7 @@ Defined in: [src/middleware/types.ts:1869](https://github.com/PolymeshAssociatio
 
 > **AddMediatorAccount**: `"add_mediator_account"`
 
-Defined in: [src/middleware/types.ts:1870](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1870)
+Defined in: [src/middleware/types.ts:1870](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1870)
 
 ***
 
@@ -324,7 +324,7 @@ Defined in: [src/middleware/types.ts:1870](https://github.com/PolymeshAssociatio
 
 > **AddMember**: `"add_member"`
 
-Defined in: [src/middleware/types.ts:1871](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1871)
+Defined in: [src/middleware/types.ts:1871](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1871)
 
 ***
 
@@ -332,7 +332,7 @@ Defined in: [src/middleware/types.ts:1871](https://github.com/PolymeshAssociatio
 
 > **AddMultisigSigner**: `"add_multisig_signer"`
 
-Defined in: [src/middleware/types.ts:1872](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1872)
+Defined in: [src/middleware/types.ts:1872](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1872)
 
 ***
 
@@ -340,7 +340,7 @@ Defined in: [src/middleware/types.ts:1872](https://github.com/PolymeshAssociatio
 
 > **AddMultisigSigners**: `"add_multisig_signers"`
 
-Defined in: [src/middleware/types.ts:1873](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1873)
+Defined in: [src/middleware/types.ts:1873](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1873)
 
 ***
 
@@ -348,7 +348,7 @@ Defined in: [src/middleware/types.ts:1873](https://github.com/PolymeshAssociatio
 
 > **AddMultisigSignersViaAdmin**: `"add_multisig_signers_via_admin"`
 
-Defined in: [src/middleware/types.ts:1874](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1874)
+Defined in: [src/middleware/types.ts:1874](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1874)
 
 ***
 
@@ -356,7 +356,7 @@ Defined in: [src/middleware/types.ts:1874](https://github.com/PolymeshAssociatio
 
 > **AddMultisigSignersViaCreator**: `"add_multisig_signers_via_creator"`
 
-Defined in: [src/middleware/types.ts:1875](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1875)
+Defined in: [src/middleware/types.ts:1875](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1875)
 
 ***
 
@@ -364,7 +364,7 @@ Defined in: [src/middleware/types.ts:1875](https://github.com/PolymeshAssociatio
 
 > **AddPermissionedValidator**: `"add_permissioned_validator"`
 
-Defined in: [src/middleware/types.ts:1876](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1876)
+Defined in: [src/middleware/types.ts:1876](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1876)
 
 ***
 
@@ -372,7 +372,7 @@ Defined in: [src/middleware/types.ts:1876](https://github.com/PolymeshAssociatio
 
 > **AddRangeProof**: `"add_range_proof"`
 
-Defined in: [src/middleware/types.ts:1877](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1877)
+Defined in: [src/middleware/types.ts:1877](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1877)
 
 ***
 
@@ -380,7 +380,7 @@ Defined in: [src/middleware/types.ts:1877](https://github.com/PolymeshAssociatio
 
 > **AddSecondaryKeysWithAuthorization**: `"add_secondary_keys_with_authorization"`
 
-Defined in: [src/middleware/types.ts:1878](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1878)
+Defined in: [src/middleware/types.ts:1878](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1878)
 
 ***
 
@@ -388,7 +388,7 @@ Defined in: [src/middleware/types.ts:1878](https://github.com/PolymeshAssociatio
 
 > **AddSecondaryKeysWithAuthorizationOld**: `"add_secondary_keys_with_authorization_old"`
 
-Defined in: [src/middleware/types.ts:1879](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1879)
+Defined in: [src/middleware/types.ts:1879](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1879)
 
 ***
 
@@ -396,7 +396,7 @@ Defined in: [src/middleware/types.ts:1879](https://github.com/PolymeshAssociatio
 
 > **AddTransaction**: `"add_transaction"`
 
-Defined in: [src/middleware/types.ts:1880](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1880)
+Defined in: [src/middleware/types.ts:1880](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1880)
 
 ***
 
@@ -404,7 +404,7 @@ Defined in: [src/middleware/types.ts:1880](https://github.com/PolymeshAssociatio
 
 > **AddTransferManager**: `"add_transfer_manager"`
 
-Defined in: [src/middleware/types.ts:1881](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1881)
+Defined in: [src/middleware/types.ts:1881](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1881)
 
 ***
 
@@ -412,7 +412,7 @@ Defined in: [src/middleware/types.ts:1881](https://github.com/PolymeshAssociatio
 
 > **AddVerifyRangeProof**: `"add_verify_range_proof"`
 
-Defined in: [src/middleware/types.ts:1882](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1882)
+Defined in: [src/middleware/types.ts:1882](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1882)
 
 ***
 
@@ -420,7 +420,7 @@ Defined in: [src/middleware/types.ts:1882](https://github.com/PolymeshAssociatio
 
 > **AffirmInstruction**: `"affirm_instruction"`
 
-Defined in: [src/middleware/types.ts:1883](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1883)
+Defined in: [src/middleware/types.ts:1883](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1883)
 
 ***
 
@@ -428,7 +428,7 @@ Defined in: [src/middleware/types.ts:1883](https://github.com/PolymeshAssociatio
 
 > **AffirmInstructionAsMediator**: `"affirm_instruction_as_mediator"`
 
-Defined in: [src/middleware/types.ts:1884](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1884)
+Defined in: [src/middleware/types.ts:1884](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1884)
 
 ***
 
@@ -436,7 +436,7 @@ Defined in: [src/middleware/types.ts:1884](https://github.com/PolymeshAssociatio
 
 > **AffirmInstructionV2**: `"affirm_instruction_v2"`
 
-Defined in: [src/middleware/types.ts:1885](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1885)
+Defined in: [src/middleware/types.ts:1885](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1885)
 
 ***
 
@@ -444,7 +444,7 @@ Defined in: [src/middleware/types.ts:1885](https://github.com/PolymeshAssociatio
 
 > **AffirmInstructionWithCount**: `"affirm_instruction_with_count"`
 
-Defined in: [src/middleware/types.ts:1886](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1886)
+Defined in: [src/middleware/types.ts:1886](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1886)
 
 ***
 
@@ -452,7 +452,7 @@ Defined in: [src/middleware/types.ts:1886](https://github.com/PolymeshAssociatio
 
 > **AffirmTransactions**: `"affirm_transactions"`
 
-Defined in: [src/middleware/types.ts:1887](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1887)
+Defined in: [src/middleware/types.ts:1887](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1887)
 
 ***
 
@@ -460,7 +460,7 @@ Defined in: [src/middleware/types.ts:1887](https://github.com/PolymeshAssociatio
 
 > **AffirmWithReceipts**: `"affirm_with_receipts"`
 
-Defined in: [src/middleware/types.ts:1888](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1888)
+Defined in: [src/middleware/types.ts:1888](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1888)
 
 ***
 
@@ -468,7 +468,7 @@ Defined in: [src/middleware/types.ts:1888](https://github.com/PolymeshAssociatio
 
 > **AffirmWithReceiptsWithCount**: `"affirm_with_receipts_with_count"`
 
-Defined in: [src/middleware/types.ts:1889](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1889)
+Defined in: [src/middleware/types.ts:1889](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1889)
 
 ***
 
@@ -476,7 +476,7 @@ Defined in: [src/middleware/types.ts:1889](https://github.com/PolymeshAssociatio
 
 > **AllowIdentityToCreatePortfolios**: `"allow_identity_to_create_portfolios"`
 
-Defined in: [src/middleware/types.ts:1890](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1890)
+Defined in: [src/middleware/types.ts:1890](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1890)
 
 ***
 
@@ -484,7 +484,7 @@ Defined in: [src/middleware/types.ts:1890](https://github.com/PolymeshAssociatio
 
 > **AllowVenues**: `"allow_venues"`
 
-Defined in: [src/middleware/types.ts:1891](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1891)
+Defined in: [src/middleware/types.ts:1891](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1891)
 
 ***
 
@@ -492,7 +492,7 @@ Defined in: [src/middleware/types.ts:1891](https://github.com/PolymeshAssociatio
 
 > **AmendProposal**: `"amend_proposal"`
 
-Defined in: [src/middleware/types.ts:1892](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1892)
+Defined in: [src/middleware/types.ts:1892](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1892)
 
 ***
 
@@ -500,7 +500,7 @@ Defined in: [src/middleware/types.ts:1892](https://github.com/PolymeshAssociatio
 
 > **ApplyAuthorizedUpgrade**: `"apply_authorized_upgrade"`
 
-Defined in: [src/middleware/types.ts:1893](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1893)
+Defined in: [src/middleware/types.ts:1893](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1893)
 
 ***
 
@@ -508,7 +508,7 @@ Defined in: [src/middleware/types.ts:1893](https://github.com/PolymeshAssociatio
 
 > **ApplyIncomingBalance**: `"apply_incoming_balance"`
 
-Defined in: [src/middleware/types.ts:1894](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1894)
+Defined in: [src/middleware/types.ts:1894](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1894)
 
 ***
 
@@ -516,7 +516,7 @@ Defined in: [src/middleware/types.ts:1894](https://github.com/PolymeshAssociatio
 
 > **ApplyIncomingBalances**: `"apply_incoming_balances"`
 
-Defined in: [src/middleware/types.ts:1895](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1895)
+Defined in: [src/middleware/types.ts:1895](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1895)
 
 ***
 
@@ -524,7 +524,7 @@ Defined in: [src/middleware/types.ts:1895](https://github.com/PolymeshAssociatio
 
 > **Approve**: `"approve"`
 
-Defined in: [src/middleware/types.ts:1896](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1896)
+Defined in: [src/middleware/types.ts:1896](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1896)
 
 ***
 
@@ -532,7 +532,7 @@ Defined in: [src/middleware/types.ts:1896](https://github.com/PolymeshAssociatio
 
 > **ApproveAsIdentity**: `"approve_as_identity"`
 
-Defined in: [src/middleware/types.ts:1897](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1897)
+Defined in: [src/middleware/types.ts:1897](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1897)
 
 ***
 
@@ -540,7 +540,7 @@ Defined in: [src/middleware/types.ts:1897](https://github.com/PolymeshAssociatio
 
 > **ApproveAsKey**: `"approve_as_key"`
 
-Defined in: [src/middleware/types.ts:1898](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1898)
+Defined in: [src/middleware/types.ts:1898](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1898)
 
 ***
 
@@ -548,7 +548,7 @@ Defined in: [src/middleware/types.ts:1898](https://github.com/PolymeshAssociatio
 
 > **ApproveCommitteeProposal**: `"approve_committee_proposal"`
 
-Defined in: [src/middleware/types.ts:1899](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1899)
+Defined in: [src/middleware/types.ts:1899](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1899)
 
 ***
 
@@ -556,7 +556,7 @@ Defined in: [src/middleware/types.ts:1899](https://github.com/PolymeshAssociatio
 
 > **ApproveJoinIdentity**: `"approve_join_identity"`
 
-Defined in: [src/middleware/types.ts:1900](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1900)
+Defined in: [src/middleware/types.ts:1900](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1900)
 
 ***
 
@@ -564,7 +564,7 @@ Defined in: [src/middleware/types.ts:1900](https://github.com/PolymeshAssociatio
 
 > **ApproveSubsidy**: `"approve_subsidy"`
 
-Defined in: [src/middleware/types.ts:1901](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1901)
+Defined in: [src/middleware/types.ts:1901](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1901)
 
 ***
 
@@ -572,7 +572,7 @@ Defined in: [src/middleware/types.ts:1901](https://github.com/PolymeshAssociatio
 
 > **ArchiveExtension**: `"archive_extension"`
 
-Defined in: [src/middleware/types.ts:1902](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1902)
+Defined in: [src/middleware/types.ts:1902](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1902)
 
 ***
 
@@ -580,7 +580,7 @@ Defined in: [src/middleware/types.ts:1902](https://github.com/PolymeshAssociatio
 
 > **AsDerivative**: `"as_derivative"`
 
-Defined in: [src/middleware/types.ts:1903](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1903)
+Defined in: [src/middleware/types.ts:1903](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1903)
 
 ***
 
@@ -588,7 +588,7 @@ Defined in: [src/middleware/types.ts:1903](https://github.com/PolymeshAssociatio
 
 > **AttachBallot**: `"attach_ballot"`
 
-Defined in: [src/middleware/types.ts:1904](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1904)
+Defined in: [src/middleware/types.ts:1904](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1904)
 
 ***
 
@@ -596,7 +596,7 @@ Defined in: [src/middleware/types.ts:1904](https://github.com/PolymeshAssociatio
 
 > **AuthorizeInstruction**: `"authorize_instruction"`
 
-Defined in: [src/middleware/types.ts:1905](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1905)
+Defined in: [src/middleware/types.ts:1905](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1905)
 
 ***
 
@@ -604,7 +604,7 @@ Defined in: [src/middleware/types.ts:1905](https://github.com/PolymeshAssociatio
 
 > **AuthorizeUpgrade**: `"authorize_upgrade"`
 
-Defined in: [src/middleware/types.ts:1906](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1906)
+Defined in: [src/middleware/types.ts:1906](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1906)
 
 ***
 
@@ -612,7 +612,7 @@ Defined in: [src/middleware/types.ts:1906](https://github.com/PolymeshAssociatio
 
 > **AuthorizeUpgradeWithoutChecks**: `"authorize_upgrade_without_checks"`
 
-Defined in: [src/middleware/types.ts:1907](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1907)
+Defined in: [src/middleware/types.ts:1907](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1907)
 
 ***
 
@@ -620,7 +620,7 @@ Defined in: [src/middleware/types.ts:1907](https://github.com/PolymeshAssociatio
 
 > **AuthorizeWithReceipts**: `"authorize_with_receipts"`
 
-Defined in: [src/middleware/types.ts:1908](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1908)
+Defined in: [src/middleware/types.ts:1908](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1908)
 
 ***
 
@@ -628,7 +628,7 @@ Defined in: [src/middleware/types.ts:1908](https://github.com/PolymeshAssociatio
 
 > **Batch**: `"batch"`
 
-Defined in: [src/middleware/types.ts:1909](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1909)
+Defined in: [src/middleware/types.ts:1909](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1909)
 
 ***
 
@@ -636,7 +636,7 @@ Defined in: [src/middleware/types.ts:1909](https://github.com/PolymeshAssociatio
 
 > **BatchAcceptAuthorization**: `"batch_accept_authorization"`
 
-Defined in: [src/middleware/types.ts:1910](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1910)
+Defined in: [src/middleware/types.ts:1910](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1910)
 
 ***
 
@@ -644,7 +644,7 @@ Defined in: [src/middleware/types.ts:1910](https://github.com/PolymeshAssociatio
 
 > **BatchAddAuthorization**: `"batch_add_authorization"`
 
-Defined in: [src/middleware/types.ts:1911](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1911)
+Defined in: [src/middleware/types.ts:1911](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1911)
 
 ***
 
@@ -652,7 +652,7 @@ Defined in: [src/middleware/types.ts:1911](https://github.com/PolymeshAssociatio
 
 > **BatchAddClaim**: `"batch_add_claim"`
 
-Defined in: [src/middleware/types.ts:1912](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1912)
+Defined in: [src/middleware/types.ts:1912](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1912)
 
 ***
 
@@ -660,7 +660,7 @@ Defined in: [src/middleware/types.ts:1912](https://github.com/PolymeshAssociatio
 
 > **BatchAddDefaultTrustedClaimIssuer**: `"batch_add_default_trusted_claim_issuer"`
 
-Defined in: [src/middleware/types.ts:1913](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1913)
+Defined in: [src/middleware/types.ts:1913](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1913)
 
 ***
 
@@ -668,7 +668,7 @@ Defined in: [src/middleware/types.ts:1913](https://github.com/PolymeshAssociatio
 
 > **BatchAddDocument**: `"batch_add_document"`
 
-Defined in: [src/middleware/types.ts:1914](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1914)
+Defined in: [src/middleware/types.ts:1914](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1914)
 
 ***
 
@@ -676,7 +676,7 @@ Defined in: [src/middleware/types.ts:1914](https://github.com/PolymeshAssociatio
 
 > **BatchAddSecondaryKeyWithAuthorization**: `"batch_add_secondary_key_with_authorization"`
 
-Defined in: [src/middleware/types.ts:1915](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1915)
+Defined in: [src/middleware/types.ts:1915](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1915)
 
 ***
 
@@ -684,7 +684,7 @@ Defined in: [src/middleware/types.ts:1915](https://github.com/PolymeshAssociatio
 
 > **BatchAddSigningKeyWithAuthorization**: `"batch_add_signing_key_with_authorization"`
 
-Defined in: [src/middleware/types.ts:1916](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1916)
+Defined in: [src/middleware/types.ts:1916](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1916)
 
 ***
 
@@ -692,7 +692,7 @@ Defined in: [src/middleware/types.ts:1916](https://github.com/PolymeshAssociatio
 
 > **BatchAll**: `"batch_all"`
 
-Defined in: [src/middleware/types.ts:1917](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1917)
+Defined in: [src/middleware/types.ts:1917](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1917)
 
 ***
 
@@ -700,7 +700,7 @@ Defined in: [src/middleware/types.ts:1917](https://github.com/PolymeshAssociatio
 
 > **BatchAtomic**: `"batch_atomic"`
 
-Defined in: [src/middleware/types.ts:1918](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1918)
+Defined in: [src/middleware/types.ts:1918](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1918)
 
 ***
 
@@ -708,7 +708,7 @@ Defined in: [src/middleware/types.ts:1918](https://github.com/PolymeshAssociatio
 
 > **BatchChangeAssetRule**: `"batch_change_asset_rule"`
 
-Defined in: [src/middleware/types.ts:1919](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1919)
+Defined in: [src/middleware/types.ts:1919](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1919)
 
 ***
 
@@ -716,7 +716,7 @@ Defined in: [src/middleware/types.ts:1919](https://github.com/PolymeshAssociatio
 
 > **BatchChangeComplianceRequirement**: `"batch_change_compliance_requirement"`
 
-Defined in: [src/middleware/types.ts:1920](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1920)
+Defined in: [src/middleware/types.ts:1920](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1920)
 
 ***
 
@@ -724,7 +724,7 @@ Defined in: [src/middleware/types.ts:1920](https://github.com/PolymeshAssociatio
 
 > **BatchForceHandleBridgeTx**: `"batch_force_handle_bridge_tx"`
 
-Defined in: [src/middleware/types.ts:1921](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1921)
+Defined in: [src/middleware/types.ts:1921](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1921)
 
 ***
 
@@ -732,7 +732,7 @@ Defined in: [src/middleware/types.ts:1921](https://github.com/PolymeshAssociatio
 
 > **BatchFreezeTx**: `"batch_freeze_tx"`
 
-Defined in: [src/middleware/types.ts:1922](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1922)
+Defined in: [src/middleware/types.ts:1922](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1922)
 
 ***
 
@@ -740,7 +740,7 @@ Defined in: [src/middleware/types.ts:1922](https://github.com/PolymeshAssociatio
 
 > **BatchHandleBridgeTx**: `"batch_handle_bridge_tx"`
 
-Defined in: [src/middleware/types.ts:1923](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1923)
+Defined in: [src/middleware/types.ts:1923](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1923)
 
 ***
 
@@ -748,7 +748,7 @@ Defined in: [src/middleware/types.ts:1923](https://github.com/PolymeshAssociatio
 
 > **BatchIssue**: `"batch_issue"`
 
-Defined in: [src/middleware/types.ts:1924](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1924)
+Defined in: [src/middleware/types.ts:1924](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1924)
 
 ***
 
@@ -756,7 +756,7 @@ Defined in: [src/middleware/types.ts:1924](https://github.com/PolymeshAssociatio
 
 > **BatchOld**: `"batch_old"`
 
-Defined in: [src/middleware/types.ts:1925](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1925)
+Defined in: [src/middleware/types.ts:1925](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1925)
 
 ***
 
@@ -764,7 +764,7 @@ Defined in: [src/middleware/types.ts:1925](https://github.com/PolymeshAssociatio
 
 > **BatchOptimistic**: `"batch_optimistic"`
 
-Defined in: [src/middleware/types.ts:1926](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1926)
+Defined in: [src/middleware/types.ts:1926](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1926)
 
 ***
 
@@ -772,7 +772,7 @@ Defined in: [src/middleware/types.ts:1926](https://github.com/PolymeshAssociatio
 
 > **BatchProposeBridgeTx**: `"batch_propose_bridge_tx"`
 
-Defined in: [src/middleware/types.ts:1927](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1927)
+Defined in: [src/middleware/types.ts:1927](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1927)
 
 ***
 
@@ -780,7 +780,7 @@ Defined in: [src/middleware/types.ts:1927](https://github.com/PolymeshAssociatio
 
 > **BatchRemoveAuthorization**: `"batch_remove_authorization"`
 
-Defined in: [src/middleware/types.ts:1928](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1928)
+Defined in: [src/middleware/types.ts:1928](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1928)
 
 ***
 
@@ -788,7 +788,7 @@ Defined in: [src/middleware/types.ts:1928](https://github.com/PolymeshAssociatio
 
 > **BatchRemoveDefaultTrustedClaimIssuer**: `"batch_remove_default_trusted_claim_issuer"`
 
-Defined in: [src/middleware/types.ts:1929](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1929)
+Defined in: [src/middleware/types.ts:1929](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1929)
 
 ***
 
@@ -796,7 +796,7 @@ Defined in: [src/middleware/types.ts:1929](https://github.com/PolymeshAssociatio
 
 > **BatchRemoveDocument**: `"batch_remove_document"`
 
-Defined in: [src/middleware/types.ts:1930](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1930)
+Defined in: [src/middleware/types.ts:1930](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1930)
 
 ***
 
@@ -804,7 +804,7 @@ Defined in: [src/middleware/types.ts:1930](https://github.com/PolymeshAssociatio
 
 > **BatchRevokeClaim**: `"batch_revoke_claim"`
 
-Defined in: [src/middleware/types.ts:1931](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1931)
+Defined in: [src/middleware/types.ts:1931](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1931)
 
 ***
 
@@ -812,7 +812,7 @@ Defined in: [src/middleware/types.ts:1931](https://github.com/PolymeshAssociatio
 
 > **BatchUnfreezeTx**: `"batch_unfreeze_tx"`
 
-Defined in: [src/middleware/types.ts:1932](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1932)
+Defined in: [src/middleware/types.ts:1932](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1932)
 
 ***
 
@@ -820,7 +820,7 @@ Defined in: [src/middleware/types.ts:1932](https://github.com/PolymeshAssociatio
 
 > **BatchUpdateAssetStats**: `"batch_update_asset_stats"`
 
-Defined in: [src/middleware/types.ts:1933](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1933)
+Defined in: [src/middleware/types.ts:1933](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1933)
 
 ***
 
@@ -828,7 +828,7 @@ Defined in: [src/middleware/types.ts:1933](https://github.com/PolymeshAssociatio
 
 > **Bond**: `"bond"`
 
-Defined in: [src/middleware/types.ts:1934](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1934)
+Defined in: [src/middleware/types.ts:1934](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1934)
 
 ***
 
@@ -836,7 +836,7 @@ Defined in: [src/middleware/types.ts:1934](https://github.com/PolymeshAssociatio
 
 > **BondAdditionalDeposit**: `"bond_additional_deposit"`
 
-Defined in: [src/middleware/types.ts:1935](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1935)
+Defined in: [src/middleware/types.ts:1935](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1935)
 
 ***
 
@@ -844,7 +844,7 @@ Defined in: [src/middleware/types.ts:1935](https://github.com/PolymeshAssociatio
 
 > **BondExtra**: `"bond_extra"`
 
-Defined in: [src/middleware/types.ts:1936](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1936)
+Defined in: [src/middleware/types.ts:1936](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1936)
 
 ***
 
@@ -852,7 +852,7 @@ Defined in: [src/middleware/types.ts:1936](https://github.com/PolymeshAssociatio
 
 > **Burn**: `"burn"`
 
-Defined in: [src/middleware/types.ts:1937](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1937)
+Defined in: [src/middleware/types.ts:1937](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1937)
 
 ***
 
@@ -860,7 +860,7 @@ Defined in: [src/middleware/types.ts:1937](https://github.com/PolymeshAssociatio
 
 > **BurnAccountBalance**: `"burn_account_balance"`
 
-Defined in: [src/middleware/types.ts:1938](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1938)
+Defined in: [src/middleware/types.ts:1938](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1938)
 
 ***
 
@@ -868,7 +868,7 @@ Defined in: [src/middleware/types.ts:1938](https://github.com/PolymeshAssociatio
 
 > **BuyTokens**: `"buy_tokens"`
 
-Defined in: [src/middleware/types.ts:1939](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1939)
+Defined in: [src/middleware/types.ts:1939](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1939)
 
 ***
 
@@ -876,7 +876,7 @@ Defined in: [src/middleware/types.ts:1939](https://github.com/PolymeshAssociatio
 
 > **Call**: `"call"`
 
-Defined in: [src/middleware/types.ts:1940](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1940)
+Defined in: [src/middleware/types.ts:1940](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1940)
 
 ***
 
@@ -884,7 +884,7 @@ Defined in: [src/middleware/types.ts:1940](https://github.com/PolymeshAssociatio
 
 > **CallOldWeight**: `"call_old_weight"`
 
-Defined in: [src/middleware/types.ts:1941](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1941)
+Defined in: [src/middleware/types.ts:1941](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1941)
 
 ***
 
@@ -892,7 +892,7 @@ Defined in: [src/middleware/types.ts:1941](https://github.com/PolymeshAssociatio
 
 > **Cancel**: `"cancel"`
 
-Defined in: [src/middleware/types.ts:1942](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1942)
+Defined in: [src/middleware/types.ts:1942](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1942)
 
 ***
 
@@ -900,7 +900,7 @@ Defined in: [src/middleware/types.ts:1942](https://github.com/PolymeshAssociatio
 
 > **CancelBallot**: `"cancel_ballot"`
 
-Defined in: [src/middleware/types.ts:1943](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1943)
+Defined in: [src/middleware/types.ts:1943](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1943)
 
 ***
 
@@ -908,7 +908,7 @@ Defined in: [src/middleware/types.ts:1943](https://github.com/PolymeshAssociatio
 
 > **CancelDeferredSlash**: `"cancel_deferred_slash"`
 
-Defined in: [src/middleware/types.ts:1944](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1944)
+Defined in: [src/middleware/types.ts:1944](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1944)
 
 ***
 
@@ -916,7 +916,7 @@ Defined in: [src/middleware/types.ts:1944](https://github.com/PolymeshAssociatio
 
 > **CancelNamed**: `"cancel_named"`
 
-Defined in: [src/middleware/types.ts:1945](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1945)
+Defined in: [src/middleware/types.ts:1945](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1945)
 
 ***
 
@@ -924,7 +924,7 @@ Defined in: [src/middleware/types.ts:1945](https://github.com/PolymeshAssociatio
 
 > **CancelProposal**: `"cancel_proposal"`
 
-Defined in: [src/middleware/types.ts:1946](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1946)
+Defined in: [src/middleware/types.ts:1946](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1946)
 
 ***
 
@@ -932,7 +932,7 @@ Defined in: [src/middleware/types.ts:1946](https://github.com/PolymeshAssociatio
 
 > **CancelRetry**: `"cancel_retry"`
 
-Defined in: [src/middleware/types.ts:1947](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1947)
+Defined in: [src/middleware/types.ts:1947](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1947)
 
 ***
 
@@ -940,7 +940,7 @@ Defined in: [src/middleware/types.ts:1947](https://github.com/PolymeshAssociatio
 
 > **CancelRetryNamed**: `"cancel_retry_named"`
 
-Defined in: [src/middleware/types.ts:1948](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1948)
+Defined in: [src/middleware/types.ts:1948](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1948)
 
 ***
 
@@ -948,7 +948,7 @@ Defined in: [src/middleware/types.ts:1948](https://github.com/PolymeshAssociatio
 
 > **CddRegisterDid**: `"cdd_register_did"`
 
-Defined in: [src/middleware/types.ts:1949](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1949)
+Defined in: [src/middleware/types.ts:1949](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1949)
 
 ***
 
@@ -956,7 +956,7 @@ Defined in: [src/middleware/types.ts:1949](https://github.com/PolymeshAssociatio
 
 > **CddRegisterDidWithCdd**: `"cdd_register_did_with_cdd"`
 
-Defined in: [src/middleware/types.ts:1950](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1950)
+Defined in: [src/middleware/types.ts:1950](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1950)
 
 ***
 
@@ -964,7 +964,7 @@ Defined in: [src/middleware/types.ts:1950](https://github.com/PolymeshAssociatio
 
 > **ChangeAdmin**: `"change_admin"`
 
-Defined in: [src/middleware/types.ts:1951](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1951)
+Defined in: [src/middleware/types.ts:1951](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1951)
 
 ***
 
@@ -972,7 +972,7 @@ Defined in: [src/middleware/types.ts:1951](https://github.com/PolymeshAssociatio
 
 > **ChangeAllSignersAndSigsRequired**: `"change_all_signers_and_sigs_required"`
 
-Defined in: [src/middleware/types.ts:1952](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1952)
+Defined in: [src/middleware/types.ts:1952](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1952)
 
 ***
 
@@ -980,7 +980,7 @@ Defined in: [src/middleware/types.ts:1952](https://github.com/PolymeshAssociatio
 
 > **ChangeAssetRule**: `"change_asset_rule"`
 
-Defined in: [src/middleware/types.ts:1953](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1953)
+Defined in: [src/middleware/types.ts:1953](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1953)
 
 ***
 
@@ -988,7 +988,7 @@ Defined in: [src/middleware/types.ts:1953](https://github.com/PolymeshAssociatio
 
 > **ChangeBaseFee**: `"change_base_fee"`
 
-Defined in: [src/middleware/types.ts:1954](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1954)
+Defined in: [src/middleware/types.ts:1954](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1954)
 
 ***
 
@@ -996,7 +996,7 @@ Defined in: [src/middleware/types.ts:1954](https://github.com/PolymeshAssociatio
 
 > **ChangeBridgeExempted**: `"change_bridge_exempted"`
 
-Defined in: [src/middleware/types.ts:1955](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1955)
+Defined in: [src/middleware/types.ts:1955](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1955)
 
 ***
 
@@ -1004,7 +1004,7 @@ Defined in: [src/middleware/types.ts:1955](https://github.com/PolymeshAssociatio
 
 > **ChangeBridgeLimit**: `"change_bridge_limit"`
 
-Defined in: [src/middleware/types.ts:1956](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1956)
+Defined in: [src/middleware/types.ts:1956](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1956)
 
 ***
 
@@ -1012,7 +1012,7 @@ Defined in: [src/middleware/types.ts:1956](https://github.com/PolymeshAssociatio
 
 > **ChangeCddRequirementForMkRotation**: `"change_cdd_requirement_for_mk_rotation"`
 
-Defined in: [src/middleware/types.ts:1957](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1957)
+Defined in: [src/middleware/types.ts:1957](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1957)
 
 ***
 
@@ -1020,7 +1020,7 @@ Defined in: [src/middleware/types.ts:1957](https://github.com/PolymeshAssociatio
 
 > **ChangeCoefficient**: `"change_coefficient"`
 
-Defined in: [src/middleware/types.ts:1958](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1958)
+Defined in: [src/middleware/types.ts:1958](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1958)
 
 ***
 
@@ -1028,7 +1028,7 @@ Defined in: [src/middleware/types.ts:1958](https://github.com/PolymeshAssociatio
 
 > **ChangeComplianceRequirement**: `"change_compliance_requirement"`
 
-Defined in: [src/middleware/types.ts:1959](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1959)
+Defined in: [src/middleware/types.ts:1959](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1959)
 
 ***
 
@@ -1036,7 +1036,7 @@ Defined in: [src/middleware/types.ts:1959](https://github.com/PolymeshAssociatio
 
 > **ChangeController**: `"change_controller"`
 
-Defined in: [src/middleware/types.ts:1960](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1960)
+Defined in: [src/middleware/types.ts:1960](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1960)
 
 ***
 
@@ -1044,7 +1044,7 @@ Defined in: [src/middleware/types.ts:1960](https://github.com/PolymeshAssociatio
 
 > **ChangeEnd**: `"change_end"`
 
-Defined in: [src/middleware/types.ts:1961](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1961)
+Defined in: [src/middleware/types.ts:1961](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1961)
 
 ***
 
@@ -1052,7 +1052,7 @@ Defined in: [src/middleware/types.ts:1961](https://github.com/PolymeshAssociatio
 
 > **ChangeGroup**: `"change_group"`
 
-Defined in: [src/middleware/types.ts:1962](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1962)
+Defined in: [src/middleware/types.ts:1962](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1962)
 
 ***
 
@@ -1060,7 +1060,7 @@ Defined in: [src/middleware/types.ts:1962](https://github.com/PolymeshAssociatio
 
 > **ChangeMeta**: `"change_meta"`
 
-Defined in: [src/middleware/types.ts:1963](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1963)
+Defined in: [src/middleware/types.ts:1963](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1963)
 
 ***
 
@@ -1068,7 +1068,7 @@ Defined in: [src/middleware/types.ts:1963](https://github.com/PolymeshAssociatio
 
 > **ChangeRcv**: `"change_rcv"`
 
-Defined in: [src/middleware/types.ts:1964](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1964)
+Defined in: [src/middleware/types.ts:1964](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1964)
 
 ***
 
@@ -1076,7 +1076,7 @@ Defined in: [src/middleware/types.ts:1964](https://github.com/PolymeshAssociatio
 
 > **ChangeReceiptValidity**: `"change_receipt_validity"`
 
-Defined in: [src/middleware/types.ts:1965](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1965)
+Defined in: [src/middleware/types.ts:1965](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1965)
 
 ***
 
@@ -1084,7 +1084,7 @@ Defined in: [src/middleware/types.ts:1965](https://github.com/PolymeshAssociatio
 
 > **ChangeRecordDate**: `"change_record_date"`
 
-Defined in: [src/middleware/types.ts:1966](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1966)
+Defined in: [src/middleware/types.ts:1966](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1966)
 
 ***
 
@@ -1092,7 +1092,7 @@ Defined in: [src/middleware/types.ts:1966](https://github.com/PolymeshAssociatio
 
 > **ChangeSigsRequired**: `"change_sigs_required"`
 
-Defined in: [src/middleware/types.ts:1967](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1967)
+Defined in: [src/middleware/types.ts:1967](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1967)
 
 ***
 
@@ -1100,7 +1100,7 @@ Defined in: [src/middleware/types.ts:1967](https://github.com/PolymeshAssociatio
 
 > **ChangeSigsRequiredViaAdmin**: `"change_sigs_required_via_admin"`
 
-Defined in: [src/middleware/types.ts:1968](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1968)
+Defined in: [src/middleware/types.ts:1968](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1968)
 
 ***
 
@@ -1108,7 +1108,7 @@ Defined in: [src/middleware/types.ts:1968](https://github.com/PolymeshAssociatio
 
 > **ChangeSigsRequiredViaCreator**: `"change_sigs_required_via_creator"`
 
-Defined in: [src/middleware/types.ts:1969](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1969)
+Defined in: [src/middleware/types.ts:1969](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1969)
 
 ***
 
@@ -1116,7 +1116,7 @@ Defined in: [src/middleware/types.ts:1969](https://github.com/PolymeshAssociatio
 
 > **ChangeSlashingAllowedFor**: `"change_slashing_allowed_for"`
 
-Defined in: [src/middleware/types.ts:1970](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1970)
+Defined in: [src/middleware/types.ts:1970](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1970)
 
 ***
 
@@ -1124,7 +1124,7 @@ Defined in: [src/middleware/types.ts:1970](https://github.com/PolymeshAssociatio
 
 > **ChangeTemplateFees**: `"change_template_fees"`
 
-Defined in: [src/middleware/types.ts:1971](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1971)
+Defined in: [src/middleware/types.ts:1971](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1971)
 
 ***
 
@@ -1132,7 +1132,7 @@ Defined in: [src/middleware/types.ts:1971](https://github.com/PolymeshAssociatio
 
 > **ChangeTemplateMetaUrl**: `"change_template_meta_url"`
 
-Defined in: [src/middleware/types.ts:1972](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1972)
+Defined in: [src/middleware/types.ts:1972](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1972)
 
 ***
 
@@ -1140,7 +1140,7 @@ Defined in: [src/middleware/types.ts:1972](https://github.com/PolymeshAssociatio
 
 > **ChangeTimelock**: `"change_timelock"`
 
-Defined in: [src/middleware/types.ts:1973](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1973)
+Defined in: [src/middleware/types.ts:1973](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1973)
 
 ***
 
@@ -1148,7 +1148,7 @@ Defined in: [src/middleware/types.ts:1973](https://github.com/PolymeshAssociatio
 
 > **Chill**: `"chill"`
 
-Defined in: [src/middleware/types.ts:1974](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1974)
+Defined in: [src/middleware/types.ts:1974](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1974)
 
 ***
 
@@ -1156,7 +1156,7 @@ Defined in: [src/middleware/types.ts:1974](https://github.com/PolymeshAssociatio
 
 > **ChillFromGovernance**: `"chill_from_governance"`
 
-Defined in: [src/middleware/types.ts:1975](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1975)
+Defined in: [src/middleware/types.ts:1975](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1975)
 
 ***
 
@@ -1164,7 +1164,7 @@ Defined in: [src/middleware/types.ts:1975](https://github.com/PolymeshAssociatio
 
 > **ChillOther**: `"chill_other"`
 
-Defined in: [src/middleware/types.ts:1976](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1976)
+Defined in: [src/middleware/types.ts:1976](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1976)
 
 ***
 
@@ -1172,7 +1172,7 @@ Defined in: [src/middleware/types.ts:1976](https://github.com/PolymeshAssociatio
 
 > **Claim**: `"claim"`
 
-Defined in: [src/middleware/types.ts:1977](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1977)
+Defined in: [src/middleware/types.ts:1977](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1977)
 
 ***
 
@@ -1180,7 +1180,7 @@ Defined in: [src/middleware/types.ts:1977](https://github.com/PolymeshAssociatio
 
 > **ClaimClassicTicker**: `"claim_classic_ticker"`
 
-Defined in: [src/middleware/types.ts:1978](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1978)
+Defined in: [src/middleware/types.ts:1978](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1978)
 
 ***
 
@@ -1188,7 +1188,7 @@ Defined in: [src/middleware/types.ts:1978](https://github.com/PolymeshAssociatio
 
 > **ClaimItnReward**: `"claim_itn_reward"`
 
-Defined in: [src/middleware/types.ts:1979](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1979)
+Defined in: [src/middleware/types.ts:1979](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1979)
 
 ***
 
@@ -1196,7 +1196,7 @@ Defined in: [src/middleware/types.ts:1979](https://github.com/PolymeshAssociatio
 
 > **ClaimReceipt**: `"claim_receipt"`
 
-Defined in: [src/middleware/types.ts:1980](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1980)
+Defined in: [src/middleware/types.ts:1980](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1980)
 
 ***
 
@@ -1204,7 +1204,7 @@ Defined in: [src/middleware/types.ts:1980](https://github.com/PolymeshAssociatio
 
 > **ClaimSurcharge**: `"claim_surcharge"`
 
-Defined in: [src/middleware/types.ts:1981](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1981)
+Defined in: [src/middleware/types.ts:1981](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1981)
 
 ***
 
@@ -1212,7 +1212,7 @@ Defined in: [src/middleware/types.ts:1981](https://github.com/PolymeshAssociatio
 
 > **ClaimUnclaimed**: `"claim_unclaimed"`
 
-Defined in: [src/middleware/types.ts:1982](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1982)
+Defined in: [src/middleware/types.ts:1982](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1982)
 
 ***
 
@@ -1220,7 +1220,7 @@ Defined in: [src/middleware/types.ts:1982](https://github.com/PolymeshAssociatio
 
 > **ClearSnapshot**: `"clear_snapshot"`
 
-Defined in: [src/middleware/types.ts:1983](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1983)
+Defined in: [src/middleware/types.ts:1983](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1983)
 
 ***
 
@@ -1228,7 +1228,7 @@ Defined in: [src/middleware/types.ts:1983](https://github.com/PolymeshAssociatio
 
 > **Close**: `"close"`
 
-Defined in: [src/middleware/types.ts:1984](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1984)
+Defined in: [src/middleware/types.ts:1984](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1984)
 
 ***
 
@@ -1236,7 +1236,7 @@ Defined in: [src/middleware/types.ts:1984](https://github.com/PolymeshAssociatio
 
 > **ContinueMigrate**: `"continue_migrate"`
 
-Defined in: [src/middleware/types.ts:1985](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1985)
+Defined in: [src/middleware/types.ts:1985](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1985)
 
 ***
 
@@ -1244,7 +1244,7 @@ Defined in: [src/middleware/types.ts:1985](https://github.com/PolymeshAssociatio
 
 > **ControlAutoMigration**: `"control_auto_migration"`
 
-Defined in: [src/middleware/types.ts:1986](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1986)
+Defined in: [src/middleware/types.ts:1986](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1986)
 
 ***
 
@@ -1252,7 +1252,7 @@ Defined in: [src/middleware/types.ts:1986](https://github.com/PolymeshAssociatio
 
 > **ControllerRedeem**: `"controller_redeem"`
 
-Defined in: [src/middleware/types.ts:1987](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1987)
+Defined in: [src/middleware/types.ts:1987](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1987)
 
 ***
 
@@ -1260,7 +1260,7 @@ Defined in: [src/middleware/types.ts:1987](https://github.com/PolymeshAssociatio
 
 > **ControllerTransfer**: `"controller_transfer"`
 
-Defined in: [src/middleware/types.ts:1988](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1988)
+Defined in: [src/middleware/types.ts:1988](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1988)
 
 ***
 
@@ -1268,7 +1268,7 @@ Defined in: [src/middleware/types.ts:1988](https://github.com/PolymeshAssociatio
 
 > **CreateAccount**: `"create_account"`
 
-Defined in: [src/middleware/types.ts:1989](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1989)
+Defined in: [src/middleware/types.ts:1989](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1989)
 
 ***
 
@@ -1276,7 +1276,7 @@ Defined in: [src/middleware/types.ts:1989](https://github.com/PolymeshAssociatio
 
 > **CreateAndChangeCustomGroup**: `"create_and_change_custom_group"`
 
-Defined in: [src/middleware/types.ts:1990](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1990)
+Defined in: [src/middleware/types.ts:1990](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1990)
 
 ***
 
@@ -1284,7 +1284,7 @@ Defined in: [src/middleware/types.ts:1990](https://github.com/PolymeshAssociatio
 
 > **CreateAsset**: `"create_asset"`
 
-Defined in: [src/middleware/types.ts:1991](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1991)
+Defined in: [src/middleware/types.ts:1991](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1991)
 
 ***
 
@@ -1292,7 +1292,7 @@ Defined in: [src/middleware/types.ts:1991](https://github.com/PolymeshAssociatio
 
 > **CreateAssetAndMint**: `"create_asset_and_mint"`
 
-Defined in: [src/middleware/types.ts:1992](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1992)
+Defined in: [src/middleware/types.ts:1992](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1992)
 
 ***
 
@@ -1300,7 +1300,7 @@ Defined in: [src/middleware/types.ts:1992](https://github.com/PolymeshAssociatio
 
 > **CreateAssetWithCustomType**: `"create_asset_with_custom_type"`
 
-Defined in: [src/middleware/types.ts:1993](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1993)
+Defined in: [src/middleware/types.ts:1993](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1993)
 
 ***
 
@@ -1308,7 +1308,7 @@ Defined in: [src/middleware/types.ts:1993](https://github.com/PolymeshAssociatio
 
 > **CreateCheckpoint**: `"create_checkpoint"`
 
-Defined in: [src/middleware/types.ts:1994](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1994)
+Defined in: [src/middleware/types.ts:1994](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1994)
 
 ***
 
@@ -1316,7 +1316,7 @@ Defined in: [src/middleware/types.ts:1994](https://github.com/PolymeshAssociatio
 
 > **CreateChildIdentities**: `"create_child_identities"`
 
-Defined in: [src/middleware/types.ts:1995](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1995)
+Defined in: [src/middleware/types.ts:1995](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1995)
 
 ***
 
@@ -1324,7 +1324,7 @@ Defined in: [src/middleware/types.ts:1995](https://github.com/PolymeshAssociatio
 
 > **CreateChildIdentity**: `"create_child_identity"`
 
-Defined in: [src/middleware/types.ts:1996](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1996)
+Defined in: [src/middleware/types.ts:1996](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1996)
 
 ***
 
@@ -1332,7 +1332,7 @@ Defined in: [src/middleware/types.ts:1996](https://github.com/PolymeshAssociatio
 
 > **CreateCustodyPortfolio**: `"create_custody_portfolio"`
 
-Defined in: [src/middleware/types.ts:1997](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1997)
+Defined in: [src/middleware/types.ts:1997](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1997)
 
 ***
 
@@ -1340,7 +1340,7 @@ Defined in: [src/middleware/types.ts:1997](https://github.com/PolymeshAssociatio
 
 > **CreateFundraiser**: `"create_fundraiser"`
 
-Defined in: [src/middleware/types.ts:1998](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1998)
+Defined in: [src/middleware/types.ts:1998](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1998)
 
 ***
 
@@ -1348,7 +1348,7 @@ Defined in: [src/middleware/types.ts:1998](https://github.com/PolymeshAssociatio
 
 > **CreateGroup**: `"create_group"`
 
-Defined in: [src/middleware/types.ts:1999](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L1999)
+Defined in: [src/middleware/types.ts:1999](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1999)
 
 ***
 
@@ -1356,7 +1356,7 @@ Defined in: [src/middleware/types.ts:1999](https://github.com/PolymeshAssociatio
 
 > **CreateGroupAndAddAuth**: `"create_group_and_add_auth"`
 
-Defined in: [src/middleware/types.ts:2000](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2000)
+Defined in: [src/middleware/types.ts:2000](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2000)
 
 ***
 
@@ -1364,7 +1364,7 @@ Defined in: [src/middleware/types.ts:2000](https://github.com/PolymeshAssociatio
 
 > **CreateMultisig**: `"create_multisig"`
 
-Defined in: [src/middleware/types.ts:2001](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2001)
+Defined in: [src/middleware/types.ts:2001](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2001)
 
 ***
 
@@ -1372,7 +1372,7 @@ Defined in: [src/middleware/types.ts:2001](https://github.com/PolymeshAssociatio
 
 > **CreateNftCollection**: `"create_nft_collection"`
 
-Defined in: [src/middleware/types.ts:2002](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2002)
+Defined in: [src/middleware/types.ts:2002](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2002)
 
 ***
 
@@ -1380,7 +1380,7 @@ Defined in: [src/middleware/types.ts:2002](https://github.com/PolymeshAssociatio
 
 > **CreateOrApproveProposalAsIdentity**: `"create_or_approve_proposal_as_identity"`
 
-Defined in: [src/middleware/types.ts:2003](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2003)
+Defined in: [src/middleware/types.ts:2003](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2003)
 
 ***
 
@@ -1388,7 +1388,7 @@ Defined in: [src/middleware/types.ts:2003](https://github.com/PolymeshAssociatio
 
 > **CreateOrApproveProposalAsKey**: `"create_or_approve_proposal_as_key"`
 
-Defined in: [src/middleware/types.ts:2004](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2004)
+Defined in: [src/middleware/types.ts:2004](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2004)
 
 ***
 
@@ -1396,7 +1396,7 @@ Defined in: [src/middleware/types.ts:2004](https://github.com/PolymeshAssociatio
 
 > **CreatePortfolio**: `"create_portfolio"`
 
-Defined in: [src/middleware/types.ts:2005](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2005)
+Defined in: [src/middleware/types.ts:2005](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2005)
 
 ***
 
@@ -1404,7 +1404,7 @@ Defined in: [src/middleware/types.ts:2005](https://github.com/PolymeshAssociatio
 
 > **CreateProposal**: `"create_proposal"`
 
-Defined in: [src/middleware/types.ts:2006](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2006)
+Defined in: [src/middleware/types.ts:2006](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2006)
 
 ***
 
@@ -1412,7 +1412,7 @@ Defined in: [src/middleware/types.ts:2006](https://github.com/PolymeshAssociatio
 
 > **CreateProposalAsIdentity**: `"create_proposal_as_identity"`
 
-Defined in: [src/middleware/types.ts:2007](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2007)
+Defined in: [src/middleware/types.ts:2007](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2007)
 
 ***
 
@@ -1420,7 +1420,7 @@ Defined in: [src/middleware/types.ts:2007](https://github.com/PolymeshAssociatio
 
 > **CreateProposalAsKey**: `"create_proposal_as_key"`
 
-Defined in: [src/middleware/types.ts:2008](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2008)
+Defined in: [src/middleware/types.ts:2008](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2008)
 
 ***
 
@@ -1428,7 +1428,7 @@ Defined in: [src/middleware/types.ts:2008](https://github.com/PolymeshAssociatio
 
 > **CreateSchedule**: `"create_schedule"`
 
-Defined in: [src/middleware/types.ts:2009](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2009)
+Defined in: [src/middleware/types.ts:2009](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2009)
 
 ***
 
@@ -1436,7 +1436,7 @@ Defined in: [src/middleware/types.ts:2009](https://github.com/PolymeshAssociatio
 
 > **CreateVenue**: `"create_venue"`
 
-Defined in: [src/middleware/types.ts:2010](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2010)
+Defined in: [src/middleware/types.ts:2010](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2010)
 
 ***
 
@@ -1444,7 +1444,7 @@ Defined in: [src/middleware/types.ts:2010](https://github.com/PolymeshAssociatio
 
 > **DecreasePolyxLimit**: `"decrease_polyx_limit"`
 
-Defined in: [src/middleware/types.ts:2011](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2011)
+Defined in: [src/middleware/types.ts:2011](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2011)
 
 ***
 
@@ -1452,7 +1452,7 @@ Defined in: [src/middleware/types.ts:2011](https://github.com/PolymeshAssociatio
 
 > **DeletePortfolio**: `"delete_portfolio"`
 
-Defined in: [src/middleware/types.ts:2012](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2012)
+Defined in: [src/middleware/types.ts:2012](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2012)
 
 ***
 
@@ -1460,7 +1460,7 @@ Defined in: [src/middleware/types.ts:2012](https://github.com/PolymeshAssociatio
 
 > **DepositBlockRewardReserveBalance**: `"deposit_block_reward_reserve_balance"`
 
-Defined in: [src/middleware/types.ts:2013](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2013)
+Defined in: [src/middleware/types.ts:2013](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2013)
 
 ***
 
@@ -1468,7 +1468,7 @@ Defined in: [src/middleware/types.ts:2013](https://github.com/PolymeshAssociatio
 
 > **DeprecateControllerBatch**: `"deprecate_controller_batch"`
 
-Defined in: [src/middleware/types.ts:2014](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2014)
+Defined in: [src/middleware/types.ts:2014](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2014)
 
 ***
 
@@ -1476,7 +1476,7 @@ Defined in: [src/middleware/types.ts:2014](https://github.com/PolymeshAssociatio
 
 > **DisableMember**: `"disable_member"`
 
-Defined in: [src/middleware/types.ts:2015](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2015)
+Defined in: [src/middleware/types.ts:2015](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2015)
 
 ***
 
@@ -1484,7 +1484,7 @@ Defined in: [src/middleware/types.ts:2015](https://github.com/PolymeshAssociatio
 
 > **DisallowVenues**: `"disallow_venues"`
 
-Defined in: [src/middleware/types.ts:2016](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2016)
+Defined in: [src/middleware/types.ts:2016](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2016)
 
 ***
 
@@ -1492,7 +1492,7 @@ Defined in: [src/middleware/types.ts:2016](https://github.com/PolymeshAssociatio
 
 > **Disbursement**: `"disbursement"`
 
-Defined in: [src/middleware/types.ts:2017](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2017)
+Defined in: [src/middleware/types.ts:2017](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2017)
 
 ***
 
@@ -1500,7 +1500,7 @@ Defined in: [src/middleware/types.ts:2017](https://github.com/PolymeshAssociatio
 
 > **DispatchAs**: `"dispatch_as"`
 
-Defined in: [src/middleware/types.ts:2018](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2018)
+Defined in: [src/middleware/types.ts:2018](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2018)
 
 ***
 
@@ -1508,7 +1508,7 @@ Defined in: [src/middleware/types.ts:2018](https://github.com/PolymeshAssociatio
 
 > **DispatchAsFallbackAccount**: `"dispatch_as_fallback_account"`
 
-Defined in: [src/middleware/types.ts:2019](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2019)
+Defined in: [src/middleware/types.ts:2019](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2019)
 
 ***
 
@@ -1516,7 +1516,7 @@ Defined in: [src/middleware/types.ts:2019](https://github.com/PolymeshAssociatio
 
 > **Distribute**: `"distribute"`
 
-Defined in: [src/middleware/types.ts:2020](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2020)
+Defined in: [src/middleware/types.ts:2020](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2020)
 
 ***
 
@@ -1524,7 +1524,7 @@ Defined in: [src/middleware/types.ts:2020](https://github.com/PolymeshAssociatio
 
 > **EmergencyReferendum**: `"emergency_referendum"`
 
-Defined in: [src/middleware/types.ts:2021](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2021)
+Defined in: [src/middleware/types.ts:2021](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2021)
 
 ***
 
@@ -1532,7 +1532,7 @@ Defined in: [src/middleware/types.ts:2021](https://github.com/PolymeshAssociatio
 
 > **EnableIndividualCommissions**: `"enable_individual_commissions"`
 
-Defined in: [src/middleware/types.ts:2022](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2022)
+Defined in: [src/middleware/types.ts:2022](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2022)
 
 ***
 
@@ -1540,7 +1540,7 @@ Defined in: [src/middleware/types.ts:2022](https://github.com/PolymeshAssociatio
 
 > **EnableOffchainFunding**: `"enable_offchain_funding"`
 
-Defined in: [src/middleware/types.ts:2023](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2023)
+Defined in: [src/middleware/types.ts:2023](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2023)
 
 ***
 
@@ -1548,7 +1548,7 @@ Defined in: [src/middleware/types.ts:2023](https://github.com/PolymeshAssociatio
 
 > **EnactReferendum**: `"enact_referendum"`
 
-Defined in: [src/middleware/types.ts:2024](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2024)
+Defined in: [src/middleware/types.ts:2024](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2024)
 
 ***
 
@@ -1556,7 +1556,7 @@ Defined in: [src/middleware/types.ts:2024](https://github.com/PolymeshAssociatio
 
 > **EnactSnapshotResults**: `"enact_snapshot_results"`
 
-Defined in: [src/middleware/types.ts:2025](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2025)
+Defined in: [src/middleware/types.ts:2025](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2025)
 
 ***
 
@@ -1564,7 +1564,7 @@ Defined in: [src/middleware/types.ts:2025](https://github.com/PolymeshAssociatio
 
 > **EnsureUpdated**: `"ensure_updated"`
 
-Defined in: [src/middleware/types.ts:2026](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2026)
+Defined in: [src/middleware/types.ts:2026](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2026)
 
 ***
 
@@ -1572,7 +1572,7 @@ Defined in: [src/middleware/types.ts:2026](https://github.com/PolymeshAssociatio
 
 > **EthCall**: `"eth_call"`
 
-Defined in: [src/middleware/types.ts:2027](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2027)
+Defined in: [src/middleware/types.ts:2027](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2027)
 
 ***
 
@@ -1580,7 +1580,7 @@ Defined in: [src/middleware/types.ts:2027](https://github.com/PolymeshAssociatio
 
 > **EthInstantiateWithCode**: `"eth_instantiate_with_code"`
 
-Defined in: [src/middleware/types.ts:2028](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2028)
+Defined in: [src/middleware/types.ts:2028](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2028)
 
 ***
 
@@ -1588,7 +1588,7 @@ Defined in: [src/middleware/types.ts:2028](https://github.com/PolymeshAssociatio
 
 > **EthSubstrateCall**: `"eth_substrate_call"`
 
-Defined in: [src/middleware/types.ts:2029](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2029)
+Defined in: [src/middleware/types.ts:2029](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2029)
 
 ***
 
@@ -1596,7 +1596,7 @@ Defined in: [src/middleware/types.ts:2029](https://github.com/PolymeshAssociatio
 
 > **EthTransact**: `"eth_transact"`
 
-Defined in: [src/middleware/types.ts:2030](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2030)
+Defined in: [src/middleware/types.ts:2030](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2030)
 
 ***
 
@@ -1604,7 +1604,7 @@ Defined in: [src/middleware/types.ts:2030](https://github.com/PolymeshAssociatio
 
 > **ExecuteManualInstruction**: `"execute_manual_instruction"`
 
-Defined in: [src/middleware/types.ts:2031](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2031)
+Defined in: [src/middleware/types.ts:2031](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2031)
 
 ***
 
@@ -1612,7 +1612,7 @@ Defined in: [src/middleware/types.ts:2031](https://github.com/PolymeshAssociatio
 
 > **ExecuteScheduledInstruction**: `"execute_scheduled_instruction"`
 
-Defined in: [src/middleware/types.ts:2032](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2032)
+Defined in: [src/middleware/types.ts:2032](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2032)
 
 ***
 
@@ -1620,7 +1620,7 @@ Defined in: [src/middleware/types.ts:2032](https://github.com/PolymeshAssociatio
 
 > **ExecuteScheduledInstructionV2**: `"execute_scheduled_instruction_v2"`
 
-Defined in: [src/middleware/types.ts:2033](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2033)
+Defined in: [src/middleware/types.ts:2033](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2033)
 
 ***
 
@@ -1628,7 +1628,7 @@ Defined in: [src/middleware/types.ts:2033](https://github.com/PolymeshAssociatio
 
 > **ExecuteScheduledInstructionV3**: `"execute_scheduled_instruction_v3"`
 
-Defined in: [src/middleware/types.ts:2034](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2034)
+Defined in: [src/middleware/types.ts:2034](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2034)
 
 ***
 
@@ -1636,7 +1636,7 @@ Defined in: [src/middleware/types.ts:2034](https://github.com/PolymeshAssociatio
 
 > **ExecuteScheduledPip**: `"execute_scheduled_pip"`
 
-Defined in: [src/middleware/types.ts:2035](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2035)
+Defined in: [src/middleware/types.ts:2035](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2035)
 
 ***
 
@@ -1644,7 +1644,7 @@ Defined in: [src/middleware/types.ts:2035](https://github.com/PolymeshAssociatio
 
 > **ExecuteScheduledProposal**: `"execute_scheduled_proposal"`
 
-Defined in: [src/middleware/types.ts:2036](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2036)
+Defined in: [src/middleware/types.ts:2036](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2036)
 
 ***
 
@@ -1652,7 +1652,7 @@ Defined in: [src/middleware/types.ts:2036](https://github.com/PolymeshAssociatio
 
 > **ExecuteTransaction**: `"execute_transaction"`
 
-Defined in: [src/middleware/types.ts:2037](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2037)
+Defined in: [src/middleware/types.ts:2037](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2037)
 
 ***
 
@@ -1660,7 +1660,7 @@ Defined in: [src/middleware/types.ts:2037](https://github.com/PolymeshAssociatio
 
 > **ExemptAssetAffirmation**: `"exempt_asset_affirmation"`
 
-Defined in: [src/middleware/types.ts:2038](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2038)
+Defined in: [src/middleware/types.ts:2038](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2038)
 
 ***
 
@@ -1668,7 +1668,7 @@ Defined in: [src/middleware/types.ts:2038](https://github.com/PolymeshAssociatio
 
 > **ExemptTickerAffirmation**: `"exempt_ticker_affirmation"`
 
-Defined in: [src/middleware/types.ts:2039](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2039)
+Defined in: [src/middleware/types.ts:2039](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2039)
 
 ***
 
@@ -1676,7 +1676,7 @@ Defined in: [src/middleware/types.ts:2039](https://github.com/PolymeshAssociatio
 
 > **ExpireScheduledPip**: `"expire_scheduled_pip"`
 
-Defined in: [src/middleware/types.ts:2040](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2040)
+Defined in: [src/middleware/types.ts:2040](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2040)
 
 ***
 
@@ -1684,7 +1684,7 @@ Defined in: [src/middleware/types.ts:2040](https://github.com/PolymeshAssociatio
 
 > **FastTrackProposal**: `"fast_track_proposal"`
 
-Defined in: [src/middleware/types.ts:2041](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2041)
+Defined in: [src/middleware/types.ts:2041](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2041)
 
 ***
 
@@ -1692,7 +1692,7 @@ Defined in: [src/middleware/types.ts:2041](https://github.com/PolymeshAssociatio
 
 > **FillBlock**: `"fill_block"`
 
-Defined in: [src/middleware/types.ts:2042](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2042)
+Defined in: [src/middleware/types.ts:2042](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2042)
 
 ***
 
@@ -1700,7 +1700,7 @@ Defined in: [src/middleware/types.ts:2042](https://github.com/PolymeshAssociatio
 
 > **FinalHint**: `"final_hint"`
 
-Defined in: [src/middleware/types.ts:2043](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2043)
+Defined in: [src/middleware/types.ts:2043](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2043)
 
 ***
 
@@ -1708,7 +1708,7 @@ Defined in: [src/middleware/types.ts:2043](https://github.com/PolymeshAssociatio
 
 > **ForceAdjustTotalIssuance**: `"force_adjust_total_issuance"`
 
-Defined in: [src/middleware/types.ts:2044](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2044)
+Defined in: [src/middleware/types.ts:2044](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2044)
 
 ***
 
@@ -1716,7 +1716,7 @@ Defined in: [src/middleware/types.ts:2044](https://github.com/PolymeshAssociatio
 
 > **ForceApplyMinCommission**: `"force_apply_min_commission"`
 
-Defined in: [src/middleware/types.ts:2045](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2045)
+Defined in: [src/middleware/types.ts:2045](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2045)
 
 ***
 
@@ -1724,7 +1724,7 @@ Defined in: [src/middleware/types.ts:2045](https://github.com/PolymeshAssociatio
 
 > **ForceBatch**: `"force_batch"`
 
-Defined in: [src/middleware/types.ts:2046](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2046)
+Defined in: [src/middleware/types.ts:2046](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2046)
 
 ***
 
@@ -1732,7 +1732,7 @@ Defined in: [src/middleware/types.ts:2046](https://github.com/PolymeshAssociatio
 
 > **ForceHandleBridgeTx**: `"force_handle_bridge_tx"`
 
-Defined in: [src/middleware/types.ts:2047](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2047)
+Defined in: [src/middleware/types.ts:2047](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2047)
 
 ***
 
@@ -1740,7 +1740,7 @@ Defined in: [src/middleware/types.ts:2047](https://github.com/PolymeshAssociatio
 
 > **ForceNewEra**: `"force_new_era"`
 
-Defined in: [src/middleware/types.ts:2048](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2048)
+Defined in: [src/middleware/types.ts:2048](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2048)
 
 ***
 
@@ -1748,7 +1748,7 @@ Defined in: [src/middleware/types.ts:2048](https://github.com/PolymeshAssociatio
 
 > **ForceNewEraAlways**: `"force_new_era_always"`
 
-Defined in: [src/middleware/types.ts:2049](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2049)
+Defined in: [src/middleware/types.ts:2049](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2049)
 
 ***
 
@@ -1756,7 +1756,7 @@ Defined in: [src/middleware/types.ts:2049](https://github.com/PolymeshAssociatio
 
 > **ForceNoEras**: `"force_no_eras"`
 
-Defined in: [src/middleware/types.ts:2050](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2050)
+Defined in: [src/middleware/types.ts:2050](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2050)
 
 ***
 
@@ -1764,7 +1764,7 @@ Defined in: [src/middleware/types.ts:2050](https://github.com/PolymeshAssociatio
 
 > **ForceSetBalance**: `"force_set_balance"`
 
-Defined in: [src/middleware/types.ts:2051](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2051)
+Defined in: [src/middleware/types.ts:2051](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2051)
 
 ***
 
@@ -1772,7 +1772,7 @@ Defined in: [src/middleware/types.ts:2051](https://github.com/PolymeshAssociatio
 
 > **ForceSetProgress**: `"force_set_progress"`
 
-Defined in: [src/middleware/types.ts:2052](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2052)
+Defined in: [src/middleware/types.ts:2052](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2052)
 
 ***
 
@@ -1780,7 +1780,7 @@ Defined in: [src/middleware/types.ts:2052](https://github.com/PolymeshAssociatio
 
 > **ForceTransfer**: `"force_transfer"`
 
-Defined in: [src/middleware/types.ts:2053](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2053)
+Defined in: [src/middleware/types.ts:2053](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2053)
 
 ***
 
@@ -1788,7 +1788,7 @@ Defined in: [src/middleware/types.ts:2053](https://github.com/PolymeshAssociatio
 
 > **ForceUnreserve**: `"force_unreserve"`
 
-Defined in: [src/middleware/types.ts:2054](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2054)
+Defined in: [src/middleware/types.ts:2054](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2054)
 
 ***
 
@@ -1796,7 +1796,7 @@ Defined in: [src/middleware/types.ts:2054](https://github.com/PolymeshAssociatio
 
 > **ForceUnstake**: `"force_unstake"`
 
-Defined in: [src/middleware/types.ts:2055](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2055)
+Defined in: [src/middleware/types.ts:2055](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2055)
 
 ***
 
@@ -1804,7 +1804,7 @@ Defined in: [src/middleware/types.ts:2055](https://github.com/PolymeshAssociatio
 
 > **ForwardedCall**: `"forwarded_call"`
 
-Defined in: [src/middleware/types.ts:2056](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2056)
+Defined in: [src/middleware/types.ts:2056](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2056)
 
 ***
 
@@ -1812,7 +1812,7 @@ Defined in: [src/middleware/types.ts:2056](https://github.com/PolymeshAssociatio
 
 > **Free**: `"free"`
 
-Defined in: [src/middleware/types.ts:2057](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2057)
+Defined in: [src/middleware/types.ts:2057](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2057)
 
 ***
 
@@ -1820,7 +1820,7 @@ Defined in: [src/middleware/types.ts:2057](https://github.com/PolymeshAssociatio
 
 > **Freeze**: `"freeze"`
 
-Defined in: [src/middleware/types.ts:2058](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2058)
+Defined in: [src/middleware/types.ts:2058](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2058)
 
 ***
 
@@ -1828,7 +1828,7 @@ Defined in: [src/middleware/types.ts:2058](https://github.com/PolymeshAssociatio
 
 > **FreezeFundraiser**: `"freeze_fundraiser"`
 
-Defined in: [src/middleware/types.ts:2059](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2059)
+Defined in: [src/middleware/types.ts:2059](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2059)
 
 ***
 
@@ -1836,7 +1836,7 @@ Defined in: [src/middleware/types.ts:2059](https://github.com/PolymeshAssociatio
 
 > **FreezeInstantiation**: `"freeze_instantiation"`
 
-Defined in: [src/middleware/types.ts:2060](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2060)
+Defined in: [src/middleware/types.ts:2060](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2060)
 
 ***
 
@@ -1844,7 +1844,7 @@ Defined in: [src/middleware/types.ts:2060](https://github.com/PolymeshAssociatio
 
 > **FreezeSecondaryKeys**: `"freeze_secondary_keys"`
 
-Defined in: [src/middleware/types.ts:2061](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2061)
+Defined in: [src/middleware/types.ts:2061](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2061)
 
 ***
 
@@ -1852,7 +1852,7 @@ Defined in: [src/middleware/types.ts:2061](https://github.com/PolymeshAssociatio
 
 > **FreezeSigningKeys**: `"freeze_signing_keys"`
 
-Defined in: [src/middleware/types.ts:2062](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2062)
+Defined in: [src/middleware/types.ts:2062](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2062)
 
 ***
 
@@ -1860,7 +1860,7 @@ Defined in: [src/middleware/types.ts:2062](https://github.com/PolymeshAssociatio
 
 > **FreezeTxs**: `"freeze_txs"`
 
-Defined in: [src/middleware/types.ts:2063](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2063)
+Defined in: [src/middleware/types.ts:2063](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2063)
 
 ***
 
@@ -1868,7 +1868,7 @@ Defined in: [src/middleware/types.ts:2063](https://github.com/PolymeshAssociatio
 
 > **GcAddCddClaim**: `"gc_add_cdd_claim"`
 
-Defined in: [src/middleware/types.ts:2064](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2064)
+Defined in: [src/middleware/types.ts:2064](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2064)
 
 ***
 
@@ -1876,7 +1876,7 @@ Defined in: [src/middleware/types.ts:2064](https://github.com/PolymeshAssociatio
 
 > **GcRevokeCddClaim**: `"gc_revoke_cdd_claim"`
 
-Defined in: [src/middleware/types.ts:2065](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2065)
+Defined in: [src/middleware/types.ts:2065](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2065)
 
 ***
 
@@ -1884,7 +1884,7 @@ Defined in: [src/middleware/types.ts:2065](https://github.com/PolymeshAssociatio
 
 > **GetCddOf**: `"get_cdd_of"`
 
-Defined in: [src/middleware/types.ts:2066](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2066)
+Defined in: [src/middleware/types.ts:2066](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2066)
 
 ***
 
@@ -1892,7 +1892,7 @@ Defined in: [src/middleware/types.ts:2066](https://github.com/PolymeshAssociatio
 
 > **GetMyDid**: `"get_my_did"`
 
-Defined in: [src/middleware/types.ts:2067](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2067)
+Defined in: [src/middleware/types.ts:2067](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2067)
 
 ***
 
@@ -1900,7 +1900,7 @@ Defined in: [src/middleware/types.ts:2067](https://github.com/PolymeshAssociatio
 
 > **GovernanceFallback**: `"governance_fallback"`
 
-Defined in: [src/middleware/types.ts:2068](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2068)
+Defined in: [src/middleware/types.ts:2068](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2068)
 
 ***
 
@@ -1908,7 +1908,7 @@ Defined in: [src/middleware/types.ts:2068](https://github.com/PolymeshAssociatio
 
 > **HandleBridgeTx**: `"handle_bridge_tx"`
 
-Defined in: [src/middleware/types.ts:2069](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2069)
+Defined in: [src/middleware/types.ts:2069](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2069)
 
 ***
 
@@ -1916,7 +1916,7 @@ Defined in: [src/middleware/types.ts:2069](https://github.com/PolymeshAssociatio
 
 > **HandleScheduledBridgeTx**: `"handle_scheduled_bridge_tx"`
 
-Defined in: [src/middleware/types.ts:2070](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2070)
+Defined in: [src/middleware/types.ts:2070](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2070)
 
 ***
 
@@ -1924,7 +1924,7 @@ Defined in: [src/middleware/types.ts:2070](https://github.com/PolymeshAssociatio
 
 > **Heartbeat**: `"heartbeat"`
 
-Defined in: [src/middleware/types.ts:2071](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2071)
+Defined in: [src/middleware/types.ts:2071](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2071)
 
 ***
 
@@ -1932,7 +1932,7 @@ Defined in: [src/middleware/types.ts:2071](https://github.com/PolymeshAssociatio
 
 > **IncreaseCustodyAllowance**: `"increase_custody_allowance"`
 
-Defined in: [src/middleware/types.ts:2072](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2072)
+Defined in: [src/middleware/types.ts:2072](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2072)
 
 ***
 
@@ -1940,7 +1940,7 @@ Defined in: [src/middleware/types.ts:2072](https://github.com/PolymeshAssociatio
 
 > **IncreaseCustodyAllowanceOf**: `"increase_custody_allowance_of"`
 
-Defined in: [src/middleware/types.ts:2073](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2073)
+Defined in: [src/middleware/types.ts:2073](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2073)
 
 ***
 
@@ -1948,7 +1948,7 @@ Defined in: [src/middleware/types.ts:2073](https://github.com/PolymeshAssociatio
 
 > **IncreasePolyxLimit**: `"increase_polyx_limit"`
 
-Defined in: [src/middleware/types.ts:2074](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2074)
+Defined in: [src/middleware/types.ts:2074](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2074)
 
 ***
 
@@ -1956,7 +1956,7 @@ Defined in: [src/middleware/types.ts:2074](https://github.com/PolymeshAssociatio
 
 > **IncreaseValidatorCount**: `"increase_validator_count"`
 
-Defined in: [src/middleware/types.ts:2075](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2075)
+Defined in: [src/middleware/types.ts:2075](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2075)
 
 ***
 
@@ -1964,7 +1964,7 @@ Defined in: [src/middleware/types.ts:2075](https://github.com/PolymeshAssociatio
 
 > **InitiateCorporateAction**: `"initiate_corporate_action"`
 
-Defined in: [src/middleware/types.ts:2076](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2076)
+Defined in: [src/middleware/types.ts:2076](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2076)
 
 ***
 
@@ -1972,7 +1972,7 @@ Defined in: [src/middleware/types.ts:2076](https://github.com/PolymeshAssociatio
 
 > **InitiateCorporateActionAndBallot**: `"initiate_corporate_action_and_ballot"`
 
-Defined in: [src/middleware/types.ts:2077](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2077)
+Defined in: [src/middleware/types.ts:2077](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2077)
 
 ***
 
@@ -1980,7 +1980,7 @@ Defined in: [src/middleware/types.ts:2077](https://github.com/PolymeshAssociatio
 
 > **InitiateCorporateActionAndDistribute**: `"initiate_corporate_action_and_distribute"`
 
-Defined in: [src/middleware/types.ts:2078](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2078)
+Defined in: [src/middleware/types.ts:2078](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2078)
 
 ***
 
@@ -1988,7 +1988,7 @@ Defined in: [src/middleware/types.ts:2078](https://github.com/PolymeshAssociatio
 
 > **Instantiate**: `"instantiate"`
 
-Defined in: [src/middleware/types.ts:2079](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2079)
+Defined in: [src/middleware/types.ts:2079](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2079)
 
 ***
 
@@ -1996,7 +1996,7 @@ Defined in: [src/middleware/types.ts:2079](https://github.com/PolymeshAssociatio
 
 > **InstantiateOldWeight**: `"instantiate_old_weight"`
 
-Defined in: [src/middleware/types.ts:2080](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2080)
+Defined in: [src/middleware/types.ts:2080](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2080)
 
 ***
 
@@ -2004,7 +2004,7 @@ Defined in: [src/middleware/types.ts:2080](https://github.com/PolymeshAssociatio
 
 > **InstantiateWithCode**: `"instantiate_with_code"`
 
-Defined in: [src/middleware/types.ts:2081](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2081)
+Defined in: [src/middleware/types.ts:2081](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2081)
 
 ***
 
@@ -2012,7 +2012,7 @@ Defined in: [src/middleware/types.ts:2081](https://github.com/PolymeshAssociatio
 
 > **InstantiateWithCodeAsPrimaryKey**: `"instantiate_with_code_as_primary_key"`
 
-Defined in: [src/middleware/types.ts:2082](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2082)
+Defined in: [src/middleware/types.ts:2082](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2082)
 
 ***
 
@@ -2020,7 +2020,7 @@ Defined in: [src/middleware/types.ts:2082](https://github.com/PolymeshAssociatio
 
 > **InstantiateWithCodeOldWeight**: `"instantiate_with_code_old_weight"`
 
-Defined in: [src/middleware/types.ts:2083](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2083)
+Defined in: [src/middleware/types.ts:2083](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2083)
 
 ***
 
@@ -2028,7 +2028,7 @@ Defined in: [src/middleware/types.ts:2083](https://github.com/PolymeshAssociatio
 
 > **InstantiateWithCodePerms**: `"instantiate_with_code_perms"`
 
-Defined in: [src/middleware/types.ts:2084](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2084)
+Defined in: [src/middleware/types.ts:2084](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2084)
 
 ***
 
@@ -2036,7 +2036,7 @@ Defined in: [src/middleware/types.ts:2084](https://github.com/PolymeshAssociatio
 
 > **InstantiateWithHashAsPrimaryKey**: `"instantiate_with_hash_as_primary_key"`
 
-Defined in: [src/middleware/types.ts:2085](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2085)
+Defined in: [src/middleware/types.ts:2085](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2085)
 
 ***
 
@@ -2044,7 +2044,7 @@ Defined in: [src/middleware/types.ts:2085](https://github.com/PolymeshAssociatio
 
 > **InstantiateWithHashPerms**: `"instantiate_with_hash_perms"`
 
-Defined in: [src/middleware/types.ts:2086](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2086)
+Defined in: [src/middleware/types.ts:2086](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2086)
 
 ***
 
@@ -2052,7 +2052,7 @@ Defined in: [src/middleware/types.ts:2086](https://github.com/PolymeshAssociatio
 
 > **InvalidateCddClaims**: `"invalidate_cdd_claims"`
 
-Defined in: [src/middleware/types.ts:2087](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2087)
+Defined in: [src/middleware/types.ts:2087](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2087)
 
 ***
 
@@ -2060,7 +2060,7 @@ Defined in: [src/middleware/types.ts:2087](https://github.com/PolymeshAssociatio
 
 > **Invest**: `"invest"`
 
-Defined in: [src/middleware/types.ts:2088](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2088)
+Defined in: [src/middleware/types.ts:2088](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2088)
 
 ***
 
@@ -2068,7 +2068,7 @@ Defined in: [src/middleware/types.ts:2088](https://github.com/PolymeshAssociatio
 
 > **IsIssuable**: `"is_issuable"`
 
-Defined in: [src/middleware/types.ts:2089](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2089)
+Defined in: [src/middleware/types.ts:2089](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2089)
 
 ***
 
@@ -2076,7 +2076,7 @@ Defined in: [src/middleware/types.ts:2089](https://github.com/PolymeshAssociatio
 
 > **Issue**: `"issue"`
 
-Defined in: [src/middleware/types.ts:2090](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2090)
+Defined in: [src/middleware/types.ts:2090](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2090)
 
 ***
 
@@ -2084,7 +2084,7 @@ Defined in: [src/middleware/types.ts:2090](https://github.com/PolymeshAssociatio
 
 > **IssueNft**: `"issue_nft"`
 
-Defined in: [src/middleware/types.ts:2091](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2091)
+Defined in: [src/middleware/types.ts:2091](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2091)
 
 ***
 
@@ -2092,7 +2092,7 @@ Defined in: [src/middleware/types.ts:2091](https://github.com/PolymeshAssociatio
 
 > **JoinIdentity**: `"join_identity"`
 
-Defined in: [src/middleware/types.ts:2092](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2092)
+Defined in: [src/middleware/types.ts:2092](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2092)
 
 ***
 
@@ -2100,7 +2100,7 @@ Defined in: [src/middleware/types.ts:2092](https://github.com/PolymeshAssociatio
 
 > **JoinIdentityAsIdentity**: `"join_identity_as_identity"`
 
-Defined in: [src/middleware/types.ts:2093](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2093)
+Defined in: [src/middleware/types.ts:2093](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2093)
 
 ***
 
@@ -2108,7 +2108,7 @@ Defined in: [src/middleware/types.ts:2093](https://github.com/PolymeshAssociatio
 
 > **JoinIdentityAsKey**: `"join_identity_as_key"`
 
-Defined in: [src/middleware/types.ts:2094](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2094)
+Defined in: [src/middleware/types.ts:2094](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2094)
 
 ***
 
@@ -2116,7 +2116,7 @@ Defined in: [src/middleware/types.ts:2094](https://github.com/PolymeshAssociatio
 
 > **Kick**: `"kick"`
 
-Defined in: [src/middleware/types.ts:2095](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2095)
+Defined in: [src/middleware/types.ts:2095](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2095)
 
 ***
 
@@ -2124,7 +2124,7 @@ Defined in: [src/middleware/types.ts:2095](https://github.com/PolymeshAssociatio
 
 > **KillPrefix**: `"kill_prefix"`
 
-Defined in: [src/middleware/types.ts:2096](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2096)
+Defined in: [src/middleware/types.ts:2096](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2096)
 
 ***
 
@@ -2132,7 +2132,7 @@ Defined in: [src/middleware/types.ts:2096](https://github.com/PolymeshAssociatio
 
 > **KillProposal**: `"kill_proposal"`
 
-Defined in: [src/middleware/types.ts:2097](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2097)
+Defined in: [src/middleware/types.ts:2097](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2097)
 
 ***
 
@@ -2140,7 +2140,7 @@ Defined in: [src/middleware/types.ts:2097](https://github.com/PolymeshAssociatio
 
 > **KillStorage**: `"kill_storage"`
 
-Defined in: [src/middleware/types.ts:2098](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2098)
+Defined in: [src/middleware/types.ts:2098](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2098)
 
 ***
 
@@ -2148,7 +2148,7 @@ Defined in: [src/middleware/types.ts:2098](https://github.com/PolymeshAssociatio
 
 > **LaunchSto**: `"launch_sto"`
 
-Defined in: [src/middleware/types.ts:2099](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2099)
+Defined in: [src/middleware/types.ts:2099](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2099)
 
 ***
 
@@ -2156,7 +2156,7 @@ Defined in: [src/middleware/types.ts:2099](https://github.com/PolymeshAssociatio
 
 > **LeaveIdentityAsIdentity**: `"leave_identity_as_identity"`
 
-Defined in: [src/middleware/types.ts:2100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2100)
+Defined in: [src/middleware/types.ts:2100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2100)
 
 ***
 
@@ -2164,7 +2164,7 @@ Defined in: [src/middleware/types.ts:2100](https://github.com/PolymeshAssociatio
 
 > **LeaveIdentityAsKey**: `"leave_identity_as_key"`
 
-Defined in: [src/middleware/types.ts:2101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2101)
+Defined in: [src/middleware/types.ts:2101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2101)
 
 ***
 
@@ -2172,7 +2172,7 @@ Defined in: [src/middleware/types.ts:2101](https://github.com/PolymeshAssociatio
 
 > **LegacySetPermissionToSigner**: `"legacy_set_permission_to_signer"`
 
-Defined in: [src/middleware/types.ts:2102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2102)
+Defined in: [src/middleware/types.ts:2102](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2102)
 
 ***
 
@@ -2180,7 +2180,7 @@ Defined in: [src/middleware/types.ts:2102](https://github.com/PolymeshAssociatio
 
 > **LinkCaDoc**: `"link_ca_doc"`
 
-Defined in: [src/middleware/types.ts:2103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2103)
+Defined in: [src/middleware/types.ts:2103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2103)
 
 ***
 
@@ -2188,7 +2188,7 @@ Defined in: [src/middleware/types.ts:2103](https://github.com/PolymeshAssociatio
 
 > **LinkTickerToAssetId**: `"link_ticker_to_asset_id"`
 
-Defined in: [src/middleware/types.ts:2104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2104)
+Defined in: [src/middleware/types.ts:2104](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2104)
 
 ***
 
@@ -2196,7 +2196,7 @@ Defined in: [src/middleware/types.ts:2104](https://github.com/PolymeshAssociatio
 
 > **LockInstruction**: `"lock_instruction"`
 
-Defined in: [src/middleware/types.ts:2105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2105)
+Defined in: [src/middleware/types.ts:2105](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2105)
 
 ***
 
@@ -2204,7 +2204,7 @@ Defined in: [src/middleware/types.ts:2105](https://github.com/PolymeshAssociatio
 
 > **MakeDivisible**: `"make_divisible"`
 
-Defined in: [src/middleware/types.ts:2106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2106)
+Defined in: [src/middleware/types.ts:2106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2106)
 
 ***
 
@@ -2212,7 +2212,7 @@ Defined in: [src/middleware/types.ts:2106](https://github.com/PolymeshAssociatio
 
 > **MakeMultisigPrimary**: `"make_multisig_primary"`
 
-Defined in: [src/middleware/types.ts:2107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2107)
+Defined in: [src/middleware/types.ts:2107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2107)
 
 ***
 
@@ -2220,7 +2220,7 @@ Defined in: [src/middleware/types.ts:2107](https://github.com/PolymeshAssociatio
 
 > **MakeMultisigSecondary**: `"make_multisig_secondary"`
 
-Defined in: [src/middleware/types.ts:2108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2108)
+Defined in: [src/middleware/types.ts:2108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2108)
 
 ***
 
@@ -2228,7 +2228,7 @@ Defined in: [src/middleware/types.ts:2108](https://github.com/PolymeshAssociatio
 
 > **MakeMultisigSigner**: `"make_multisig_signer"`
 
-Defined in: [src/middleware/types.ts:2109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2109)
+Defined in: [src/middleware/types.ts:2109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2109)
 
 ***
 
@@ -2236,7 +2236,7 @@ Defined in: [src/middleware/types.ts:2109](https://github.com/PolymeshAssociatio
 
 > **ManualSlash**: `"manual_slash"`
 
-Defined in: [src/middleware/types.ts:2110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2110)
+Defined in: [src/middleware/types.ts:2110](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2110)
 
 ***
 
@@ -2244,7 +2244,7 @@ Defined in: [src/middleware/types.ts:2110](https://github.com/PolymeshAssociatio
 
 > **MapAccount**: `"map_account"`
 
-Defined in: [src/middleware/types.ts:2111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2111)
+Defined in: [src/middleware/types.ts:2111](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2111)
 
 ***
 
@@ -2252,7 +2252,7 @@ Defined in: [src/middleware/types.ts:2111](https://github.com/PolymeshAssociatio
 
 > **MediatorAffirmTransaction**: `"mediator_affirm_transaction"`
 
-Defined in: [src/middleware/types.ts:2112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2112)
+Defined in: [src/middleware/types.ts:2112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2112)
 
 ***
 
@@ -2260,7 +2260,7 @@ Defined in: [src/middleware/types.ts:2112](https://github.com/PolymeshAssociatio
 
 > **MediatorUnaffirmTransaction**: `"mediator_unaffirm_transaction"`
 
-Defined in: [src/middleware/types.ts:2113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2113)
+Defined in: [src/middleware/types.ts:2113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2113)
 
 ***
 
@@ -2268,7 +2268,7 @@ Defined in: [src/middleware/types.ts:2113](https://github.com/PolymeshAssociatio
 
 > **Migrate**: `"migrate"`
 
-Defined in: [src/middleware/types.ts:2114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2114)
+Defined in: [src/middleware/types.ts:2114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2114)
 
 ***
 
@@ -2276,7 +2276,7 @@ Defined in: [src/middleware/types.ts:2114](https://github.com/PolymeshAssociatio
 
 > **MigrateCurrency**: `"migrate_currency"`
 
-Defined in: [src/middleware/types.ts:2115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2115)
+Defined in: [src/middleware/types.ts:2115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2115)
 
 ***
 
@@ -2284,7 +2284,7 @@ Defined in: [src/middleware/types.ts:2115](https://github.com/PolymeshAssociatio
 
 > **MigrateCustomChild**: `"migrate_custom_child"`
 
-Defined in: [src/middleware/types.ts:2116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2116)
+Defined in: [src/middleware/types.ts:2116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2116)
 
 ***
 
@@ -2292,7 +2292,7 @@ Defined in: [src/middleware/types.ts:2116](https://github.com/PolymeshAssociatio
 
 > **MigrateCustomTop**: `"migrate_custom_top"`
 
-Defined in: [src/middleware/types.ts:2117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2117)
+Defined in: [src/middleware/types.ts:2117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2117)
 
 ***
 
@@ -2300,7 +2300,7 @@ Defined in: [src/middleware/types.ts:2117](https://github.com/PolymeshAssociatio
 
 > **Mint**: `"mint"`
 
-Defined in: [src/middleware/types.ts:2118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2118)
+Defined in: [src/middleware/types.ts:2118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2118)
 
 ***
 
@@ -2308,7 +2308,7 @@ Defined in: [src/middleware/types.ts:2118](https://github.com/PolymeshAssociatio
 
 > **MockCddRegisterDid**: `"mock_cdd_register_did"`
 
-Defined in: [src/middleware/types.ts:2119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2119)
+Defined in: [src/middleware/types.ts:2119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2119)
 
 ***
 
@@ -2316,7 +2316,7 @@ Defined in: [src/middleware/types.ts:2119](https://github.com/PolymeshAssociatio
 
 > **ModifyExemptionList**: `"modify_exemption_list"`
 
-Defined in: [src/middleware/types.ts:2120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2120)
+Defined in: [src/middleware/types.ts:2120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2120)
 
 ***
 
@@ -2324,7 +2324,7 @@ Defined in: [src/middleware/types.ts:2120](https://github.com/PolymeshAssociatio
 
 > **ModifyFundraiserWindow**: `"modify_fundraiser_window"`
 
-Defined in: [src/middleware/types.ts:2121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2121)
+Defined in: [src/middleware/types.ts:2121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2121)
 
 ***
 
@@ -2332,7 +2332,7 @@ Defined in: [src/middleware/types.ts:2121](https://github.com/PolymeshAssociatio
 
 > **MoveAssets**: `"move_assets"`
 
-Defined in: [src/middleware/types.ts:2122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2122)
+Defined in: [src/middleware/types.ts:2122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2122)
 
 ***
 
@@ -2340,7 +2340,7 @@ Defined in: [src/middleware/types.ts:2122](https://github.com/PolymeshAssociatio
 
 > **MovePortfolioFunds**: `"move_portfolio_funds"`
 
-Defined in: [src/middleware/types.ts:2123](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2123)
+Defined in: [src/middleware/types.ts:2123](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2123)
 
 ***
 
@@ -2348,7 +2348,7 @@ Defined in: [src/middleware/types.ts:2123](https://github.com/PolymeshAssociatio
 
 > **MovePortfolioFundsV2**: `"move_portfolio_funds_v2"`
 
-Defined in: [src/middleware/types.ts:2124](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2124)
+Defined in: [src/middleware/types.ts:2124](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2124)
 
 ***
 
@@ -2356,7 +2356,7 @@ Defined in: [src/middleware/types.ts:2124](https://github.com/PolymeshAssociatio
 
 > **New**: `"new"`
 
-Defined in: [src/middleware/types.ts:2125](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2125)
+Defined in: [src/middleware/types.ts:2125](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2125)
 
 ***
 
@@ -2364,7 +2364,7 @@ Defined in: [src/middleware/types.ts:2125](https://github.com/PolymeshAssociatio
 
 > **Nominate**: `"nominate"`
 
-Defined in: [src/middleware/types.ts:2126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2126)
+Defined in: [src/middleware/types.ts:2126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2126)
 
 ***
 
@@ -2372,7 +2372,7 @@ Defined in: [src/middleware/types.ts:2126](https://github.com/PolymeshAssociatio
 
 > **NotePreimage**: `"note_preimage"`
 
-Defined in: [src/middleware/types.ts:2127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2127)
+Defined in: [src/middleware/types.ts:2127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2127)
 
 ***
 
@@ -2380,7 +2380,7 @@ Defined in: [src/middleware/types.ts:2127](https://github.com/PolymeshAssociatio
 
 > **NoteStalled**: `"note_stalled"`
 
-Defined in: [src/middleware/types.ts:2128](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2128)
+Defined in: [src/middleware/types.ts:2128](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2128)
 
 ***
 
@@ -2388,7 +2388,7 @@ Defined in: [src/middleware/types.ts:2128](https://github.com/PolymeshAssociatio
 
 > **OverrideReferendumEnactmentPeriod**: `"override_referendum_enactment_period"`
 
-Defined in: [src/middleware/types.ts:2129](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2129)
+Defined in: [src/middleware/types.ts:2129](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2129)
 
 ***
 
@@ -2396,7 +2396,7 @@ Defined in: [src/middleware/types.ts:2129](https://github.com/PolymeshAssociatio
 
 > **PauseAssetCompliance**: `"pause_asset_compliance"`
 
-Defined in: [src/middleware/types.ts:2130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2130)
+Defined in: [src/middleware/types.ts:2130](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2130)
 
 ***
 
@@ -2404,7 +2404,7 @@ Defined in: [src/middleware/types.ts:2130](https://github.com/PolymeshAssociatio
 
 > **PauseAssetRules**: `"pause_asset_rules"`
 
-Defined in: [src/middleware/types.ts:2131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2131)
+Defined in: [src/middleware/types.ts:2131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2131)
 
 ***
 
@@ -2412,7 +2412,7 @@ Defined in: [src/middleware/types.ts:2131](https://github.com/PolymeshAssociatio
 
 > **PauseSto**: `"pause_sto"`
 
-Defined in: [src/middleware/types.ts:2132](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2132)
+Defined in: [src/middleware/types.ts:2132](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2132)
 
 ***
 
@@ -2420,7 +2420,7 @@ Defined in: [src/middleware/types.ts:2132](https://github.com/PolymeshAssociatio
 
 > **PayoutStakers**: `"payout_stakers"`
 
-Defined in: [src/middleware/types.ts:2133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2133)
+Defined in: [src/middleware/types.ts:2133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2133)
 
 ***
 
@@ -2428,7 +2428,7 @@ Defined in: [src/middleware/types.ts:2133](https://github.com/PolymeshAssociatio
 
 > **PayoutStakersByPage**: `"payout_stakers_by_page"`
 
-Defined in: [src/middleware/types.ts:2134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2134)
+Defined in: [src/middleware/types.ts:2134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2134)
 
 ***
 
@@ -2436,7 +2436,7 @@ Defined in: [src/middleware/types.ts:2134](https://github.com/PolymeshAssociatio
 
 > **PayoutStakersBySystem**: `"payout_stakers_by_system"`
 
-Defined in: [src/middleware/types.ts:2135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2135)
+Defined in: [src/middleware/types.ts:2135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2135)
 
 ***
 
@@ -2444,7 +2444,7 @@ Defined in: [src/middleware/types.ts:2135](https://github.com/PolymeshAssociatio
 
 > **PlaceholderAddAndAffirmInstruction**: `"placeholder_add_and_affirm_instruction"`
 
-Defined in: [src/middleware/types.ts:2136](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2136)
+Defined in: [src/middleware/types.ts:2136](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2136)
 
 ***
 
@@ -2452,7 +2452,7 @@ Defined in: [src/middleware/types.ts:2136](https://github.com/PolymeshAssociatio
 
 > **PlaceholderAddAndAffirmInstructionWithMemo**: `"placeholder_add_and_affirm_instruction_with_memo"`
 
-Defined in: [src/middleware/types.ts:2137](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2137)
+Defined in: [src/middleware/types.ts:2137](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2137)
 
 ***
 
@@ -2460,7 +2460,7 @@ Defined in: [src/middleware/types.ts:2137](https://github.com/PolymeshAssociatio
 
 > **PlaceholderAddInstruction**: `"placeholder_add_instruction"`
 
-Defined in: [src/middleware/types.ts:2138](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2138)
+Defined in: [src/middleware/types.ts:2138](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2138)
 
 ***
 
@@ -2468,7 +2468,7 @@ Defined in: [src/middleware/types.ts:2138](https://github.com/PolymeshAssociatio
 
 > **PlaceholderAddInstructionWithMemo**: `"placeholder_add_instruction_with_memo"`
 
-Defined in: [src/middleware/types.ts:2139](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2139)
+Defined in: [src/middleware/types.ts:2139](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2139)
 
 ***
 
@@ -2476,7 +2476,7 @@ Defined in: [src/middleware/types.ts:2139](https://github.com/PolymeshAssociatio
 
 > **PlaceholderAffirmInstruction**: `"placeholder_affirm_instruction"`
 
-Defined in: [src/middleware/types.ts:2140](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2140)
+Defined in: [src/middleware/types.ts:2140](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2140)
 
 ***
 
@@ -2484,7 +2484,7 @@ Defined in: [src/middleware/types.ts:2140](https://github.com/PolymeshAssociatio
 
 > **PlaceholderClaimReceipt**: `"placeholder_claim_receipt"`
 
-Defined in: [src/middleware/types.ts:2141](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2141)
+Defined in: [src/middleware/types.ts:2141](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2141)
 
 ***
 
@@ -2492,7 +2492,7 @@ Defined in: [src/middleware/types.ts:2141](https://github.com/PolymeshAssociatio
 
 > **PlaceholderFillBlock**: `"placeholder_fill_block"`
 
-Defined in: [src/middleware/types.ts:2142](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2142)
+Defined in: [src/middleware/types.ts:2142](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2142)
 
 ***
 
@@ -2500,7 +2500,7 @@ Defined in: [src/middleware/types.ts:2142](https://github.com/PolymeshAssociatio
 
 > **PlaceholderLegacySetPermissionToSigner**: `"placeholder_legacy_set_permission_to_signer"`
 
-Defined in: [src/middleware/types.ts:2143](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2143)
+Defined in: [src/middleware/types.ts:2143](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2143)
 
 ***
 
@@ -2508,7 +2508,7 @@ Defined in: [src/middleware/types.ts:2143](https://github.com/PolymeshAssociatio
 
 > **PlaceholderRejectInstruction**: `"placeholder_reject_instruction"`
 
-Defined in: [src/middleware/types.ts:2144](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2144)
+Defined in: [src/middleware/types.ts:2144](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2144)
 
 ***
 
@@ -2516,7 +2516,7 @@ Defined in: [src/middleware/types.ts:2144](https://github.com/PolymeshAssociatio
 
 > **PlaceholderUnclaimReceipt**: `"placeholder_unclaim_receipt"`
 
-Defined in: [src/middleware/types.ts:2145](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2145)
+Defined in: [src/middleware/types.ts:2145](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2145)
 
 ***
 
@@ -2524,7 +2524,7 @@ Defined in: [src/middleware/types.ts:2145](https://github.com/PolymeshAssociatio
 
 > **PlaceholderWithdrawAffirmation**: `"placeholder_withdraw_affirmation"`
 
-Defined in: [src/middleware/types.ts:2146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2146)
+Defined in: [src/middleware/types.ts:2146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2146)
 
 ***
 
@@ -2532,7 +2532,7 @@ Defined in: [src/middleware/types.ts:2146](https://github.com/PolymeshAssociatio
 
 > **PlanConfigChange**: `"plan_config_change"`
 
-Defined in: [src/middleware/types.ts:2147](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2147)
+Defined in: [src/middleware/types.ts:2147](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2147)
 
 ***
 
@@ -2540,7 +2540,7 @@ Defined in: [src/middleware/types.ts:2147](https://github.com/PolymeshAssociatio
 
 > **PokeDeposit**: `"poke_deposit"`
 
-Defined in: [src/middleware/types.ts:2148](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2148)
+Defined in: [src/middleware/types.ts:2148](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2148)
 
 ***
 
@@ -2548,7 +2548,7 @@ Defined in: [src/middleware/types.ts:2148](https://github.com/PolymeshAssociatio
 
 > **PreApproveAsset**: `"pre_approve_asset"`
 
-Defined in: [src/middleware/types.ts:2149](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2149)
+Defined in: [src/middleware/types.ts:2149](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2149)
 
 ***
 
@@ -2556,7 +2556,7 @@ Defined in: [src/middleware/types.ts:2149](https://github.com/PolymeshAssociatio
 
 > **PreApprovePortfolio**: `"pre_approve_portfolio"`
 
-Defined in: [src/middleware/types.ts:2150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2150)
+Defined in: [src/middleware/types.ts:2150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2150)
 
 ***
 
@@ -2564,7 +2564,7 @@ Defined in: [src/middleware/types.ts:2150](https://github.com/PolymeshAssociatio
 
 > **PreApproveTicker**: `"pre_approve_ticker"`
 
-Defined in: [src/middleware/types.ts:2151](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2151)
+Defined in: [src/middleware/types.ts:2151](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2151)
 
 ***
 
@@ -2572,7 +2572,7 @@ Defined in: [src/middleware/types.ts:2151](https://github.com/PolymeshAssociatio
 
 > **Propose**: `"propose"`
 
-Defined in: [src/middleware/types.ts:2152](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2152)
+Defined in: [src/middleware/types.ts:2152](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2152)
 
 ***
 
@@ -2580,7 +2580,7 @@ Defined in: [src/middleware/types.ts:2152](https://github.com/PolymeshAssociatio
 
 > **ProposeBridgeTx**: `"propose_bridge_tx"`
 
-Defined in: [src/middleware/types.ts:2153](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2153)
+Defined in: [src/middleware/types.ts:2153](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2153)
 
 ***
 
@@ -2588,7 +2588,7 @@ Defined in: [src/middleware/types.ts:2153](https://github.com/PolymeshAssociatio
 
 > **PruneProposal**: `"prune_proposal"`
 
-Defined in: [src/middleware/types.ts:2154](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2154)
+Defined in: [src/middleware/types.ts:2154](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2154)
 
 ***
 
@@ -2596,7 +2596,7 @@ Defined in: [src/middleware/types.ts:2154](https://github.com/PolymeshAssociatio
 
 > **PurgeKeys**: `"purge_keys"`
 
-Defined in: [src/middleware/types.ts:2155](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2155)
+Defined in: [src/middleware/types.ts:2155](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2155)
 
 ***
 
@@ -2604,7 +2604,7 @@ Defined in: [src/middleware/types.ts:2155](https://github.com/PolymeshAssociatio
 
 > **PushBenefit**: `"push_benefit"`
 
-Defined in: [src/middleware/types.ts:2156](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2156)
+Defined in: [src/middleware/types.ts:2156](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2156)
 
 ***
 
@@ -2612,7 +2612,7 @@ Defined in: [src/middleware/types.ts:2156](https://github.com/PolymeshAssociatio
 
 > **PutCode**: `"put_code"`
 
-Defined in: [src/middleware/types.ts:2157](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2157)
+Defined in: [src/middleware/types.ts:2157](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2157)
 
 ***
 
@@ -2620,7 +2620,7 @@ Defined in: [src/middleware/types.ts:2157](https://github.com/PolymeshAssociatio
 
 > **QuitPortfolioCustody**: `"quit_portfolio_custody"`
 
-Defined in: [src/middleware/types.ts:2158](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2158)
+Defined in: [src/middleware/types.ts:2158](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2158)
 
 ***
 
@@ -2628,7 +2628,7 @@ Defined in: [src/middleware/types.ts:2158](https://github.com/PolymeshAssociatio
 
 > **ReapStash**: `"reap_stash"`
 
-Defined in: [src/middleware/types.ts:2159](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2159)
+Defined in: [src/middleware/types.ts:2159](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2159)
 
 ***
 
@@ -2636,7 +2636,7 @@ Defined in: [src/middleware/types.ts:2159](https://github.com/PolymeshAssociatio
 
 > **Rebond**: `"rebond"`
 
-Defined in: [src/middleware/types.ts:2160](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2160)
+Defined in: [src/middleware/types.ts:2160](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2160)
 
 ***
 
@@ -2644,7 +2644,7 @@ Defined in: [src/middleware/types.ts:2160](https://github.com/PolymeshAssociatio
 
 > **ReceiverAffirmAssetTransfer**: `"receiver_affirm_asset_transfer"`
 
-Defined in: [src/middleware/types.ts:2161](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2161)
+Defined in: [src/middleware/types.ts:2161](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2161)
 
 ***
 
@@ -2652,7 +2652,7 @@ Defined in: [src/middleware/types.ts:2161](https://github.com/PolymeshAssociatio
 
 > **ReceiverAffirmTransaction**: `"receiver_affirm_transaction"`
 
-Defined in: [src/middleware/types.ts:2162](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2162)
+Defined in: [src/middleware/types.ts:2162](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2162)
 
 ***
 
@@ -2660,7 +2660,7 @@ Defined in: [src/middleware/types.ts:2162](https://github.com/PolymeshAssociatio
 
 > **ReceiverUnaffirmTransaction**: `"receiver_unaffirm_transaction"`
 
-Defined in: [src/middleware/types.ts:2163](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2163)
+Defined in: [src/middleware/types.ts:2163](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2163)
 
 ***
 
@@ -2668,7 +2668,7 @@ Defined in: [src/middleware/types.ts:2163](https://github.com/PolymeshAssociatio
 
 > **Reclaim**: `"reclaim"`
 
-Defined in: [src/middleware/types.ts:2164](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2164)
+Defined in: [src/middleware/types.ts:2164](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2164)
 
 ***
 
@@ -2676,7 +2676,7 @@ Defined in: [src/middleware/types.ts:2164](https://github.com/PolymeshAssociatio
 
 > **Redeem**: `"redeem"`
 
-Defined in: [src/middleware/types.ts:2165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2165)
+Defined in: [src/middleware/types.ts:2165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2165)
 
 ***
 
@@ -2684,7 +2684,7 @@ Defined in: [src/middleware/types.ts:2165](https://github.com/PolymeshAssociatio
 
 > **RedeemFrom**: `"redeem_from"`
 
-Defined in: [src/middleware/types.ts:2166](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2166)
+Defined in: [src/middleware/types.ts:2166](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2166)
 
 ***
 
@@ -2692,7 +2692,7 @@ Defined in: [src/middleware/types.ts:2166](https://github.com/PolymeshAssociatio
 
 > **RedeemFromPortfolio**: `"redeem_from_portfolio"`
 
-Defined in: [src/middleware/types.ts:2167](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2167)
+Defined in: [src/middleware/types.ts:2167](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2167)
 
 ***
 
@@ -2700,7 +2700,7 @@ Defined in: [src/middleware/types.ts:2167](https://github.com/PolymeshAssociatio
 
 > **RedeemNft**: `"redeem_nft"`
 
-Defined in: [src/middleware/types.ts:2168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2168)
+Defined in: [src/middleware/types.ts:2168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2168)
 
 ***
 
@@ -2708,7 +2708,7 @@ Defined in: [src/middleware/types.ts:2168](https://github.com/PolymeshAssociatio
 
 > **RegisterAndSetLocalAssetMetadata**: `"register_and_set_local_asset_metadata"`
 
-Defined in: [src/middleware/types.ts:2169](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2169)
+Defined in: [src/middleware/types.ts:2169](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2169)
 
 ***
 
@@ -2716,7 +2716,7 @@ Defined in: [src/middleware/types.ts:2169](https://github.com/PolymeshAssociatio
 
 > **RegisterAssetMetadataGlobalType**: `"register_asset_metadata_global_type"`
 
-Defined in: [src/middleware/types.ts:2170](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2170)
+Defined in: [src/middleware/types.ts:2170](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2170)
 
 ***
 
@@ -2724,7 +2724,7 @@ Defined in: [src/middleware/types.ts:2170](https://github.com/PolymeshAssociatio
 
 > **RegisterAssetMetadataLocalType**: `"register_asset_metadata_local_type"`
 
-Defined in: [src/middleware/types.ts:2171](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2171)
+Defined in: [src/middleware/types.ts:2171](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2171)
 
 ***
 
@@ -2732,7 +2732,7 @@ Defined in: [src/middleware/types.ts:2171](https://github.com/PolymeshAssociatio
 
 > **RegisterCustomAssetType**: `"register_custom_asset_type"`
 
-Defined in: [src/middleware/types.ts:2172](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2172)
+Defined in: [src/middleware/types.ts:2172](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2172)
 
 ***
 
@@ -2740,7 +2740,7 @@ Defined in: [src/middleware/types.ts:2172](https://github.com/PolymeshAssociatio
 
 > **RegisterCustomClaimType**: `"register_custom_claim_type"`
 
-Defined in: [src/middleware/types.ts:2173](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2173)
+Defined in: [src/middleware/types.ts:2173](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2173)
 
 ***
 
@@ -2748,7 +2748,7 @@ Defined in: [src/middleware/types.ts:2173](https://github.com/PolymeshAssociatio
 
 > **RegisterDid**: `"register_did"`
 
-Defined in: [src/middleware/types.ts:2174](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2174)
+Defined in: [src/middleware/types.ts:2174](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2174)
 
 ***
 
@@ -2756,7 +2756,7 @@ Defined in: [src/middleware/types.ts:2174](https://github.com/PolymeshAssociatio
 
 > **RegisterTicker**: `"register_ticker"`
 
-Defined in: [src/middleware/types.ts:2175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2175)
+Defined in: [src/middleware/types.ts:2175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2175)
 
 ***
 
@@ -2764,7 +2764,7 @@ Defined in: [src/middleware/types.ts:2175](https://github.com/PolymeshAssociatio
 
 > **RegisterUniqueTicker**: `"register_unique_ticker"`
 
-Defined in: [src/middleware/types.ts:2176](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2176)
+Defined in: [src/middleware/types.ts:2176](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2176)
 
 ***
 
@@ -2772,7 +2772,7 @@ Defined in: [src/middleware/types.ts:2176](https://github.com/PolymeshAssociatio
 
 > **Reimbursement**: `"reimbursement"`
 
-Defined in: [src/middleware/types.ts:2177](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2177)
+Defined in: [src/middleware/types.ts:2177](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2177)
 
 ***
 
@@ -2780,7 +2780,7 @@ Defined in: [src/middleware/types.ts:2177](https://github.com/PolymeshAssociatio
 
 > **Reject**: `"reject"`
 
-Defined in: [src/middleware/types.ts:2178](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2178)
+Defined in: [src/middleware/types.ts:2178](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2178)
 
 ***
 
@@ -2788,7 +2788,7 @@ Defined in: [src/middleware/types.ts:2178](https://github.com/PolymeshAssociatio
 
 > **RejectAsIdentity**: `"reject_as_identity"`
 
-Defined in: [src/middleware/types.ts:2179](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2179)
+Defined in: [src/middleware/types.ts:2179](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2179)
 
 ***
 
@@ -2796,7 +2796,7 @@ Defined in: [src/middleware/types.ts:2179](https://github.com/PolymeshAssociatio
 
 > **RejectAsKey**: `"reject_as_key"`
 
-Defined in: [src/middleware/types.ts:2180](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2180)
+Defined in: [src/middleware/types.ts:2180](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2180)
 
 ***
 
@@ -2804,7 +2804,7 @@ Defined in: [src/middleware/types.ts:2180](https://github.com/PolymeshAssociatio
 
 > **RejectAssetTransfer**: `"reject_asset_transfer"`
 
-Defined in: [src/middleware/types.ts:2181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2181)
+Defined in: [src/middleware/types.ts:2181](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2181)
 
 ***
 
@@ -2812,7 +2812,7 @@ Defined in: [src/middleware/types.ts:2181](https://github.com/PolymeshAssociatio
 
 > **RejectInstruction**: `"reject_instruction"`
 
-Defined in: [src/middleware/types.ts:2182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2182)
+Defined in: [src/middleware/types.ts:2182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2182)
 
 ***
 
@@ -2820,7 +2820,7 @@ Defined in: [src/middleware/types.ts:2182](https://github.com/PolymeshAssociatio
 
 > **RejectInstructionAsMediator**: `"reject_instruction_as_mediator"`
 
-Defined in: [src/middleware/types.ts:2183](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2183)
+Defined in: [src/middleware/types.ts:2183](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2183)
 
 ***
 
@@ -2828,7 +2828,7 @@ Defined in: [src/middleware/types.ts:2183](https://github.com/PolymeshAssociatio
 
 > **RejectInstructionV2**: `"reject_instruction_v2"`
 
-Defined in: [src/middleware/types.ts:2184](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2184)
+Defined in: [src/middleware/types.ts:2184](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2184)
 
 ***
 
@@ -2836,7 +2836,7 @@ Defined in: [src/middleware/types.ts:2184](https://github.com/PolymeshAssociatio
 
 > **RejectInstructionWithCount**: `"reject_instruction_with_count"`
 
-Defined in: [src/middleware/types.ts:2185](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2185)
+Defined in: [src/middleware/types.ts:2185](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2185)
 
 ***
 
@@ -2844,7 +2844,7 @@ Defined in: [src/middleware/types.ts:2185](https://github.com/PolymeshAssociatio
 
 > **RejectProposal**: `"reject_proposal"`
 
-Defined in: [src/middleware/types.ts:2186](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2186)
+Defined in: [src/middleware/types.ts:2186](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2186)
 
 ***
 
@@ -2852,7 +2852,7 @@ Defined in: [src/middleware/types.ts:2186](https://github.com/PolymeshAssociatio
 
 > **RejectReferendum**: `"reject_referendum"`
 
-Defined in: [src/middleware/types.ts:2187](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2187)
+Defined in: [src/middleware/types.ts:2187](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2187)
 
 ***
 
@@ -2860,7 +2860,7 @@ Defined in: [src/middleware/types.ts:2187](https://github.com/PolymeshAssociatio
 
 > **RejectTransaction**: `"reject_transaction"`
 
-Defined in: [src/middleware/types.ts:2188](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2188)
+Defined in: [src/middleware/types.ts:2188](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2188)
 
 ***
 
@@ -2868,7 +2868,7 @@ Defined in: [src/middleware/types.ts:2188](https://github.com/PolymeshAssociatio
 
 > **RelayTx**: `"relay_tx"`
 
-Defined in: [src/middleware/types.ts:2189](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2189)
+Defined in: [src/middleware/types.ts:2189](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2189)
 
 ***
 
@@ -2876,7 +2876,7 @@ Defined in: [src/middleware/types.ts:2189](https://github.com/PolymeshAssociatio
 
 > **Remark**: `"remark"`
 
-Defined in: [src/middleware/types.ts:2190](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2190)
+Defined in: [src/middleware/types.ts:2190](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2190)
 
 ***
 
@@ -2884,7 +2884,7 @@ Defined in: [src/middleware/types.ts:2190](https://github.com/PolymeshAssociatio
 
 > **RemarkWithEvent**: `"remark_with_event"`
 
-Defined in: [src/middleware/types.ts:2191](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2191)
+Defined in: [src/middleware/types.ts:2191](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2191)
 
 ***
 
@@ -2892,7 +2892,7 @@ Defined in: [src/middleware/types.ts:2191](https://github.com/PolymeshAssociatio
 
 > **RemoveActiveRule**: `"remove_active_rule"`
 
-Defined in: [src/middleware/types.ts:2192](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2192)
+Defined in: [src/middleware/types.ts:2192](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2192)
 
 ***
 
@@ -2900,7 +2900,7 @@ Defined in: [src/middleware/types.ts:2192](https://github.com/PolymeshAssociatio
 
 > **RemoveAdmin**: `"remove_admin"`
 
-Defined in: [src/middleware/types.ts:2193](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2193)
+Defined in: [src/middleware/types.ts:2193](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2193)
 
 ***
 
@@ -2908,7 +2908,7 @@ Defined in: [src/middleware/types.ts:2193](https://github.com/PolymeshAssociatio
 
 > **RemoveAdminViaAdmin**: `"remove_admin_via_admin"`
 
-Defined in: [src/middleware/types.ts:2194](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2194)
+Defined in: [src/middleware/types.ts:2194](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2194)
 
 ***
 
@@ -2916,7 +2916,7 @@ Defined in: [src/middleware/types.ts:2194](https://github.com/PolymeshAssociatio
 
 > **RemoveAgent**: `"remove_agent"`
 
-Defined in: [src/middleware/types.ts:2195](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2195)
+Defined in: [src/middleware/types.ts:2195](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2195)
 
 ***
 
@@ -2924,7 +2924,7 @@ Defined in: [src/middleware/types.ts:2195](https://github.com/PolymeshAssociatio
 
 > **RemoveAssetAffirmationExemption**: `"remove_asset_affirmation_exemption"`
 
-Defined in: [src/middleware/types.ts:2196](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2196)
+Defined in: [src/middleware/types.ts:2196](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2196)
 
 ***
 
@@ -2932,7 +2932,7 @@ Defined in: [src/middleware/types.ts:2196](https://github.com/PolymeshAssociatio
 
 > **RemoveAssetPreApproval**: `"remove_asset_pre_approval"`
 
-Defined in: [src/middleware/types.ts:2197](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2197)
+Defined in: [src/middleware/types.ts:2197](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2197)
 
 ***
 
@@ -2940,7 +2940,7 @@ Defined in: [src/middleware/types.ts:2197](https://github.com/PolymeshAssociatio
 
 > **RemoveAuthorization**: `"remove_authorization"`
 
-Defined in: [src/middleware/types.ts:2198](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2198)
+Defined in: [src/middleware/types.ts:2198](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2198)
 
 ***
 
@@ -2948,7 +2948,7 @@ Defined in: [src/middleware/types.ts:2198](https://github.com/PolymeshAssociatio
 
 > **RemoveBallot**: `"remove_ballot"`
 
-Defined in: [src/middleware/types.ts:2199](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2199)
+Defined in: [src/middleware/types.ts:2199](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2199)
 
 ***
 
@@ -2956,7 +2956,7 @@ Defined in: [src/middleware/types.ts:2199](https://github.com/PolymeshAssociatio
 
 > **RemoveCa**: `"remove_ca"`
 
-Defined in: [src/middleware/types.ts:2200](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2200)
+Defined in: [src/middleware/types.ts:2200](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2200)
 
 ***
 
@@ -2964,7 +2964,7 @@ Defined in: [src/middleware/types.ts:2200](https://github.com/PolymeshAssociatio
 
 > **RemoveCode**: `"remove_code"`
 
-Defined in: [src/middleware/types.ts:2201](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2201)
+Defined in: [src/middleware/types.ts:2201](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2201)
 
 ***
 
@@ -2972,7 +2972,7 @@ Defined in: [src/middleware/types.ts:2201](https://github.com/PolymeshAssociatio
 
 > **RemoveComplianceRequirement**: `"remove_compliance_requirement"`
 
-Defined in: [src/middleware/types.ts:2202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2202)
+Defined in: [src/middleware/types.ts:2202](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2202)
 
 ***
 
@@ -2980,7 +2980,7 @@ Defined in: [src/middleware/types.ts:2202](https://github.com/PolymeshAssociatio
 
 > **RemoveCreatorControls**: `"remove_creator_controls"`
 
-Defined in: [src/middleware/types.ts:2203](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2203)
+Defined in: [src/middleware/types.ts:2203](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2203)
 
 ***
 
@@ -2988,7 +2988,7 @@ Defined in: [src/middleware/types.ts:2203](https://github.com/PolymeshAssociatio
 
 > **RemoveDefaultTrustedClaimIssuer**: `"remove_default_trusted_claim_issuer"`
 
-Defined in: [src/middleware/types.ts:2204](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2204)
+Defined in: [src/middleware/types.ts:2204](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2204)
 
 ***
 
@@ -2996,7 +2996,7 @@ Defined in: [src/middleware/types.ts:2204](https://github.com/PolymeshAssociatio
 
 > **RemoveDistribution**: `"remove_distribution"`
 
-Defined in: [src/middleware/types.ts:2205](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2205)
+Defined in: [src/middleware/types.ts:2205](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2205)
 
 ***
 
@@ -3004,7 +3004,7 @@ Defined in: [src/middleware/types.ts:2205](https://github.com/PolymeshAssociatio
 
 > **RemoveDocuments**: `"remove_documents"`
 
-Defined in: [src/middleware/types.ts:2206](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2206)
+Defined in: [src/middleware/types.ts:2206](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2206)
 
 ***
 
@@ -3012,7 +3012,7 @@ Defined in: [src/middleware/types.ts:2206](https://github.com/PolymeshAssociatio
 
 > **RemoveExemptedEntities**: `"remove_exempted_entities"`
 
-Defined in: [src/middleware/types.ts:2207](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2207)
+Defined in: [src/middleware/types.ts:2207](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2207)
 
 ***
 
@@ -3020,7 +3020,7 @@ Defined in: [src/middleware/types.ts:2207](https://github.com/PolymeshAssociatio
 
 > **RemoveFreezeAdmin**: `"remove_freeze_admin"`
 
-Defined in: [src/middleware/types.ts:2208](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2208)
+Defined in: [src/middleware/types.ts:2208](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2208)
 
 ***
 
@@ -3028,7 +3028,7 @@ Defined in: [src/middleware/types.ts:2208](https://github.com/PolymeshAssociatio
 
 > **RemoveKey**: `"remove_key"`
 
-Defined in: [src/middleware/types.ts:2209](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2209)
+Defined in: [src/middleware/types.ts:2209](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2209)
 
 ***
 
@@ -3036,7 +3036,7 @@ Defined in: [src/middleware/types.ts:2209](https://github.com/PolymeshAssociatio
 
 > **RemoveLocalMetadataKey**: `"remove_local_metadata_key"`
 
-Defined in: [src/middleware/types.ts:2210](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2210)
+Defined in: [src/middleware/types.ts:2210](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2210)
 
 ***
 
@@ -3044,7 +3044,7 @@ Defined in: [src/middleware/types.ts:2210](https://github.com/PolymeshAssociatio
 
 > **RemoveMandatoryMediators**: `"remove_mandatory_mediators"`
 
-Defined in: [src/middleware/types.ts:2211](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2211)
+Defined in: [src/middleware/types.ts:2211](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2211)
 
 ***
 
@@ -3052,7 +3052,7 @@ Defined in: [src/middleware/types.ts:2211](https://github.com/PolymeshAssociatio
 
 > **RemoveMember**: `"remove_member"`
 
-Defined in: [src/middleware/types.ts:2212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2212)
+Defined in: [src/middleware/types.ts:2212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2212)
 
 ***
 
@@ -3060,7 +3060,7 @@ Defined in: [src/middleware/types.ts:2212](https://github.com/PolymeshAssociatio
 
 > **RemoveMetadataValue**: `"remove_metadata_value"`
 
-Defined in: [src/middleware/types.ts:2213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2213)
+Defined in: [src/middleware/types.ts:2213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2213)
 
 ***
 
@@ -3068,7 +3068,7 @@ Defined in: [src/middleware/types.ts:2213](https://github.com/PolymeshAssociatio
 
 > **RemoveMultisigSigner**: `"remove_multisig_signer"`
 
-Defined in: [src/middleware/types.ts:2214](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2214)
+Defined in: [src/middleware/types.ts:2214](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2214)
 
 ***
 
@@ -3076,7 +3076,7 @@ Defined in: [src/middleware/types.ts:2214](https://github.com/PolymeshAssociatio
 
 > **RemoveMultisigSigners**: `"remove_multisig_signers"`
 
-Defined in: [src/middleware/types.ts:2215](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2215)
+Defined in: [src/middleware/types.ts:2215](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2215)
 
 ***
 
@@ -3084,7 +3084,7 @@ Defined in: [src/middleware/types.ts:2215](https://github.com/PolymeshAssociatio
 
 > **RemoveMultisigSignersViaAdmin**: `"remove_multisig_signers_via_admin"`
 
-Defined in: [src/middleware/types.ts:2216](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2216)
+Defined in: [src/middleware/types.ts:2216](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2216)
 
 ***
 
@@ -3092,7 +3092,7 @@ Defined in: [src/middleware/types.ts:2216](https://github.com/PolymeshAssociatio
 
 > **RemoveMultisigSignersViaCreator**: `"remove_multisig_signers_via_creator"`
 
-Defined in: [src/middleware/types.ts:2217](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2217)
+Defined in: [src/middleware/types.ts:2217](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2217)
 
 ***
 
@@ -3100,7 +3100,7 @@ Defined in: [src/middleware/types.ts:2217](https://github.com/PolymeshAssociatio
 
 > **RemovePayer**: `"remove_payer"`
 
-Defined in: [src/middleware/types.ts:2218](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2218)
+Defined in: [src/middleware/types.ts:2218](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2218)
 
 ***
 
@@ -3108,7 +3108,7 @@ Defined in: [src/middleware/types.ts:2218](https://github.com/PolymeshAssociatio
 
 > **RemovePayerViaPayer**: `"remove_payer_via_payer"`
 
-Defined in: [src/middleware/types.ts:2219](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2219)
+Defined in: [src/middleware/types.ts:2219](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2219)
 
 ***
 
@@ -3116,7 +3116,7 @@ Defined in: [src/middleware/types.ts:2219](https://github.com/PolymeshAssociatio
 
 > **RemovePayingKey**: `"remove_paying_key"`
 
-Defined in: [src/middleware/types.ts:2220](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2220)
+Defined in: [src/middleware/types.ts:2220](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2220)
 
 ***
 
@@ -3124,7 +3124,7 @@ Defined in: [src/middleware/types.ts:2220](https://github.com/PolymeshAssociatio
 
 > **RemovePermissionedValidator**: `"remove_permissioned_validator"`
 
-Defined in: [src/middleware/types.ts:2221](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2221)
+Defined in: [src/middleware/types.ts:2221](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2221)
 
 ***
 
@@ -3132,7 +3132,7 @@ Defined in: [src/middleware/types.ts:2221](https://github.com/PolymeshAssociatio
 
 > **RemovePortfolioPreApproval**: `"remove_portfolio_pre_approval"`
 
-Defined in: [src/middleware/types.ts:2222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2222)
+Defined in: [src/middleware/types.ts:2222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2222)
 
 ***
 
@@ -3140,7 +3140,7 @@ Defined in: [src/middleware/types.ts:2222](https://github.com/PolymeshAssociatio
 
 > **RemovePrimaryIssuanceAgent**: `"remove_primary_issuance_agent"`
 
-Defined in: [src/middleware/types.ts:2223](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2223)
+Defined in: [src/middleware/types.ts:2223](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2223)
 
 ***
 
@@ -3148,7 +3148,7 @@ Defined in: [src/middleware/types.ts:2223](https://github.com/PolymeshAssociatio
 
 > **RemoveSchedule**: `"remove_schedule"`
 
-Defined in: [src/middleware/types.ts:2224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2224)
+Defined in: [src/middleware/types.ts:2224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2224)
 
 ***
 
@@ -3156,7 +3156,7 @@ Defined in: [src/middleware/types.ts:2224](https://github.com/PolymeshAssociatio
 
 > **RemoveSecondaryKeys**: `"remove_secondary_keys"`
 
-Defined in: [src/middleware/types.ts:2225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2225)
+Defined in: [src/middleware/types.ts:2225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2225)
 
 ***
 
@@ -3164,7 +3164,7 @@ Defined in: [src/middleware/types.ts:2225](https://github.com/PolymeshAssociatio
 
 > **RemoveSecondaryKeysOld**: `"remove_secondary_keys_old"`
 
-Defined in: [src/middleware/types.ts:2226](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2226)
+Defined in: [src/middleware/types.ts:2226](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2226)
 
 ***
 
@@ -3172,7 +3172,7 @@ Defined in: [src/middleware/types.ts:2226](https://github.com/PolymeshAssociatio
 
 > **RemoveSigningKeys**: `"remove_signing_keys"`
 
-Defined in: [src/middleware/types.ts:2227](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2227)
+Defined in: [src/middleware/types.ts:2227](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2227)
 
 ***
 
@@ -3180,7 +3180,7 @@ Defined in: [src/middleware/types.ts:2227](https://github.com/PolymeshAssociatio
 
 > **RemoveSmartExtension**: `"remove_smart_extension"`
 
-Defined in: [src/middleware/types.ts:2228](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2228)
+Defined in: [src/middleware/types.ts:2228](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2228)
 
 ***
 
@@ -3188,7 +3188,7 @@ Defined in: [src/middleware/types.ts:2228](https://github.com/PolymeshAssociatio
 
 > **RemoveSubsidy**: `"remove_subsidy"`
 
-Defined in: [src/middleware/types.ts:2229](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2229)
+Defined in: [src/middleware/types.ts:2229](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2229)
 
 ***
 
@@ -3196,7 +3196,7 @@ Defined in: [src/middleware/types.ts:2229](https://github.com/PolymeshAssociatio
 
 > **RemoveTickerAffirmationExemption**: `"remove_ticker_affirmation_exemption"`
 
-Defined in: [src/middleware/types.ts:2230](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2230)
+Defined in: [src/middleware/types.ts:2230](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2230)
 
 ***
 
@@ -3204,7 +3204,7 @@ Defined in: [src/middleware/types.ts:2230](https://github.com/PolymeshAssociatio
 
 > **RemoveTickerPreApproval**: `"remove_ticker_pre_approval"`
 
-Defined in: [src/middleware/types.ts:2231](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2231)
+Defined in: [src/middleware/types.ts:2231](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2231)
 
 ***
 
@@ -3212,7 +3212,7 @@ Defined in: [src/middleware/types.ts:2231](https://github.com/PolymeshAssociatio
 
 > **RemoveTransferManager**: `"remove_transfer_manager"`
 
-Defined in: [src/middleware/types.ts:2232](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2232)
+Defined in: [src/middleware/types.ts:2232](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2232)
 
 ***
 
@@ -3220,7 +3220,7 @@ Defined in: [src/middleware/types.ts:2232](https://github.com/PolymeshAssociatio
 
 > **RemoveTxs**: `"remove_txs"`
 
-Defined in: [src/middleware/types.ts:2233](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2233)
+Defined in: [src/middleware/types.ts:2233](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2233)
 
 ***
 
@@ -3228,7 +3228,7 @@ Defined in: [src/middleware/types.ts:2233](https://github.com/PolymeshAssociatio
 
 > **RenameAsset**: `"rename_asset"`
 
-Defined in: [src/middleware/types.ts:2234](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2234)
+Defined in: [src/middleware/types.ts:2234](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2234)
 
 ***
 
@@ -3236,7 +3236,7 @@ Defined in: [src/middleware/types.ts:2234](https://github.com/PolymeshAssociatio
 
 > **RenamePortfolio**: `"rename_portfolio"`
 
-Defined in: [src/middleware/types.ts:2235](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2235)
+Defined in: [src/middleware/types.ts:2235](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2235)
 
 ***
 
@@ -3244,7 +3244,7 @@ Defined in: [src/middleware/types.ts:2235](https://github.com/PolymeshAssociatio
 
 > **ReplaceAssetCompliance**: `"replace_asset_compliance"`
 
-Defined in: [src/middleware/types.ts:2236](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2236)
+Defined in: [src/middleware/types.ts:2236](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2236)
 
 ***
 
@@ -3252,7 +3252,7 @@ Defined in: [src/middleware/types.ts:2236](https://github.com/PolymeshAssociatio
 
 > **ReplaceAssetRules**: `"replace_asset_rules"`
 
-Defined in: [src/middleware/types.ts:2237](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2237)
+Defined in: [src/middleware/types.ts:2237](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2237)
 
 ***
 
@@ -3260,7 +3260,7 @@ Defined in: [src/middleware/types.ts:2237](https://github.com/PolymeshAssociatio
 
 > **ReportDoubleVoting**: `"report_double_voting"`
 
-Defined in: [src/middleware/types.ts:2238](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2238)
+Defined in: [src/middleware/types.ts:2238](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2238)
 
 ***
 
@@ -3268,7 +3268,7 @@ Defined in: [src/middleware/types.ts:2238](https://github.com/PolymeshAssociatio
 
 > **ReportDoubleVotingUnsigned**: `"report_double_voting_unsigned"`
 
-Defined in: [src/middleware/types.ts:2239](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2239)
+Defined in: [src/middleware/types.ts:2239](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2239)
 
 ***
 
@@ -3276,7 +3276,7 @@ Defined in: [src/middleware/types.ts:2239](https://github.com/PolymeshAssociatio
 
 > **ReportEquivocation**: `"report_equivocation"`
 
-Defined in: [src/middleware/types.ts:2240](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2240)
+Defined in: [src/middleware/types.ts:2240](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2240)
 
 ***
 
@@ -3284,7 +3284,7 @@ Defined in: [src/middleware/types.ts:2240](https://github.com/PolymeshAssociatio
 
 > **ReportEquivocationUnsigned**: `"report_equivocation_unsigned"`
 
-Defined in: [src/middleware/types.ts:2241](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2241)
+Defined in: [src/middleware/types.ts:2241](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2241)
 
 ***
 
@@ -3292,7 +3292,7 @@ Defined in: [src/middleware/types.ts:2241](https://github.com/PolymeshAssociatio
 
 > **ReportForkVoting**: `"report_fork_voting"`
 
-Defined in: [src/middleware/types.ts:2242](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2242)
+Defined in: [src/middleware/types.ts:2242](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2242)
 
 ***
 
@@ -3300,7 +3300,7 @@ Defined in: [src/middleware/types.ts:2242](https://github.com/PolymeshAssociatio
 
 > **ReportForkVotingUnsigned**: `"report_fork_voting_unsigned"`
 
-Defined in: [src/middleware/types.ts:2243](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2243)
+Defined in: [src/middleware/types.ts:2243](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2243)
 
 ***
 
@@ -3308,7 +3308,7 @@ Defined in: [src/middleware/types.ts:2243](https://github.com/PolymeshAssociatio
 
 > **ReportFutureBlockVoting**: `"report_future_block_voting"`
 
-Defined in: [src/middleware/types.ts:2244](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2244)
+Defined in: [src/middleware/types.ts:2244](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2244)
 
 ***
 
@@ -3316,7 +3316,7 @@ Defined in: [src/middleware/types.ts:2244](https://github.com/PolymeshAssociatio
 
 > **ReportFutureBlockVotingUnsigned**: `"report_future_block_voting_unsigned"`
 
-Defined in: [src/middleware/types.ts:2245](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2245)
+Defined in: [src/middleware/types.ts:2245](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2245)
 
 ***
 
@@ -3324,7 +3324,7 @@ Defined in: [src/middleware/types.ts:2245](https://github.com/PolymeshAssociatio
 
 > **RequestPreimage**: `"request_preimage"`
 
-Defined in: [src/middleware/types.ts:2246](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2246)
+Defined in: [src/middleware/types.ts:2246](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2246)
 
 ***
 
@@ -3332,7 +3332,7 @@ Defined in: [src/middleware/types.ts:2246](https://github.com/PolymeshAssociatio
 
 > **RescheduleExecution**: `"reschedule_execution"`
 
-Defined in: [src/middleware/types.ts:2247](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2247)
+Defined in: [src/middleware/types.ts:2247](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2247)
 
 ***
 
@@ -3340,7 +3340,7 @@ Defined in: [src/middleware/types.ts:2247](https://github.com/PolymeshAssociatio
 
 > **RescheduleInstruction**: `"reschedule_instruction"`
 
-Defined in: [src/middleware/types.ts:2248](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2248)
+Defined in: [src/middleware/types.ts:2248](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2248)
 
 ***
 
@@ -3348,7 +3348,7 @@ Defined in: [src/middleware/types.ts:2248](https://github.com/PolymeshAssociatio
 
 > **ReserveClassicTicker**: `"reserve_classic_ticker"`
 
-Defined in: [src/middleware/types.ts:2249](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2249)
+Defined in: [src/middleware/types.ts:2249](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2249)
 
 ***
 
@@ -3356,7 +3356,7 @@ Defined in: [src/middleware/types.ts:2249](https://github.com/PolymeshAssociatio
 
 > **ResetActiveRules**: `"reset_active_rules"`
 
-Defined in: [src/middleware/types.ts:2250](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2250)
+Defined in: [src/middleware/types.ts:2250](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2250)
 
 ***
 
@@ -3364,7 +3364,7 @@ Defined in: [src/middleware/types.ts:2250](https://github.com/PolymeshAssociatio
 
 > **ResetAssetCompliance**: `"reset_asset_compliance"`
 
-Defined in: [src/middleware/types.ts:2251](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2251)
+Defined in: [src/middleware/types.ts:2251](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2251)
 
 ***
 
@@ -3372,7 +3372,7 @@ Defined in: [src/middleware/types.ts:2251](https://github.com/PolymeshAssociatio
 
 > **ResetCaa**: `"reset_caa"`
 
-Defined in: [src/middleware/types.ts:2252](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2252)
+Defined in: [src/middleware/types.ts:2252](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2252)
 
 ***
 
@@ -3380,7 +3380,7 @@ Defined in: [src/middleware/types.ts:2252](https://github.com/PolymeshAssociatio
 
 > **ResetMembers**: `"reset_members"`
 
-Defined in: [src/middleware/types.ts:2253](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2253)
+Defined in: [src/middleware/types.ts:2253](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2253)
 
 ***
 
@@ -3388,7 +3388,7 @@ Defined in: [src/middleware/types.ts:2253](https://github.com/PolymeshAssociatio
 
 > **RestoreLedger**: `"restore_ledger"`
 
-Defined in: [src/middleware/types.ts:2254](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2254)
+Defined in: [src/middleware/types.ts:2254](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2254)
 
 ***
 
@@ -3396,7 +3396,7 @@ Defined in: [src/middleware/types.ts:2254](https://github.com/PolymeshAssociatio
 
 > **ResumeAssetCompliance**: `"resume_asset_compliance"`
 
-Defined in: [src/middleware/types.ts:2255](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2255)
+Defined in: [src/middleware/types.ts:2255](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2255)
 
 ***
 
@@ -3404,7 +3404,7 @@ Defined in: [src/middleware/types.ts:2255](https://github.com/PolymeshAssociatio
 
 > **ResumeAssetRules**: `"resume_asset_rules"`
 
-Defined in: [src/middleware/types.ts:2256](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2256)
+Defined in: [src/middleware/types.ts:2256](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2256)
 
 ***
 
@@ -3412,7 +3412,7 @@ Defined in: [src/middleware/types.ts:2256](https://github.com/PolymeshAssociatio
 
 > **RevokeClaim**: `"revoke_claim"`
 
-Defined in: [src/middleware/types.ts:2257](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2257)
+Defined in: [src/middleware/types.ts:2257](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2257)
 
 ***
 
@@ -3420,7 +3420,7 @@ Defined in: [src/middleware/types.ts:2257](https://github.com/PolymeshAssociatio
 
 > **RevokeClaimByIndex**: `"revoke_claim_by_index"`
 
-Defined in: [src/middleware/types.ts:2258](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2258)
+Defined in: [src/middleware/types.ts:2258](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2258)
 
 ***
 
@@ -3428,7 +3428,7 @@ Defined in: [src/middleware/types.ts:2258](https://github.com/PolymeshAssociatio
 
 > **RevokeCreatePortfoliosPermission**: `"revoke_create_portfolios_permission"`
 
-Defined in: [src/middleware/types.ts:2259](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2259)
+Defined in: [src/middleware/types.ts:2259](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2259)
 
 ***
 
@@ -3436,7 +3436,7 @@ Defined in: [src/middleware/types.ts:2259](https://github.com/PolymeshAssociatio
 
 > **RevokeOffchainAuthorization**: `"revoke_offchain_authorization"`
 
-Defined in: [src/middleware/types.ts:2260](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2260)
+Defined in: [src/middleware/types.ts:2260](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2260)
 
 ***
 
@@ -3444,7 +3444,7 @@ Defined in: [src/middleware/types.ts:2260](https://github.com/PolymeshAssociatio
 
 > **RevokeSubsidy**: `"revoke_subsidy"`
 
-Defined in: [src/middleware/types.ts:2261](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2261)
+Defined in: [src/middleware/types.ts:2261](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2261)
 
 ***
 
@@ -3452,7 +3452,7 @@ Defined in: [src/middleware/types.ts:2261](https://github.com/PolymeshAssociatio
 
 > **RotatePrimaryKeyToSecondary**: `"rotate_primary_key_to_secondary"`
 
-Defined in: [src/middleware/types.ts:2262](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2262)
+Defined in: [src/middleware/types.ts:2262](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2262)
 
 ***
 
@@ -3460,7 +3460,7 @@ Defined in: [src/middleware/types.ts:2262](https://github.com/PolymeshAssociatio
 
 > **ScaleValidatorCount**: `"scale_validator_count"`
 
-Defined in: [src/middleware/types.ts:2263](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2263)
+Defined in: [src/middleware/types.ts:2263](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2263)
 
 ***
 
@@ -3468,7 +3468,7 @@ Defined in: [src/middleware/types.ts:2263](https://github.com/PolymeshAssociatio
 
 > **Schedule**: `"schedule"`
 
-Defined in: [src/middleware/types.ts:2264](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2264)
+Defined in: [src/middleware/types.ts:2264](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2264)
 
 ***
 
@@ -3476,7 +3476,7 @@ Defined in: [src/middleware/types.ts:2264](https://github.com/PolymeshAssociatio
 
 > **ScheduleAfter**: `"schedule_after"`
 
-Defined in: [src/middleware/types.ts:2265](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2265)
+Defined in: [src/middleware/types.ts:2265](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2265)
 
 ***
 
@@ -3484,7 +3484,7 @@ Defined in: [src/middleware/types.ts:2265](https://github.com/PolymeshAssociatio
 
 > **ScheduleNamed**: `"schedule_named"`
 
-Defined in: [src/middleware/types.ts:2266](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2266)
+Defined in: [src/middleware/types.ts:2266](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2266)
 
 ***
 
@@ -3492,7 +3492,7 @@ Defined in: [src/middleware/types.ts:2266](https://github.com/PolymeshAssociatio
 
 > **ScheduleNamedAfter**: `"schedule_named_after"`
 
-Defined in: [src/middleware/types.ts:2267](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2267)
+Defined in: [src/middleware/types.ts:2267](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2267)
 
 ***
 
@@ -3500,7 +3500,7 @@ Defined in: [src/middleware/types.ts:2267](https://github.com/PolymeshAssociatio
 
 > **SelfRegisterDid**: `"self_register_did"`
 
-Defined in: [src/middleware/types.ts:2268](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2268)
+Defined in: [src/middleware/types.ts:2268](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2268)
 
 ***
 
@@ -3508,7 +3508,7 @@ Defined in: [src/middleware/types.ts:2268](https://github.com/PolymeshAssociatio
 
 > **SenderAffirmTransaction**: `"sender_affirm_transaction"`
 
-Defined in: [src/middleware/types.ts:2269](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2269)
+Defined in: [src/middleware/types.ts:2269](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2269)
 
 ***
 
@@ -3516,7 +3516,7 @@ Defined in: [src/middleware/types.ts:2269](https://github.com/PolymeshAssociatio
 
 > **SenderUnaffirmTransaction**: `"sender_unaffirm_transaction"`
 
-Defined in: [src/middleware/types.ts:2270](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2270)
+Defined in: [src/middleware/types.ts:2270](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2270)
 
 ***
 
@@ -3524,7 +3524,7 @@ Defined in: [src/middleware/types.ts:2270](https://github.com/PolymeshAssociatio
 
 > **Set**: `"set"`
 
-Defined in: [src/middleware/types.ts:2271](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2271)
+Defined in: [src/middleware/types.ts:2271](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2271)
 
 ***
 
@@ -3532,7 +3532,7 @@ Defined in: [src/middleware/types.ts:2271](https://github.com/PolymeshAssociatio
 
 > **SetAccountAssetFrozen**: `"set_account_asset_frozen"`
 
-Defined in: [src/middleware/types.ts:2272](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2272)
+Defined in: [src/middleware/types.ts:2272](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2272)
 
 ***
 
@@ -3540,7 +3540,7 @@ Defined in: [src/middleware/types.ts:2272](https://github.com/PolymeshAssociatio
 
 > **SetActiveAssetStats**: `"set_active_asset_stats"`
 
-Defined in: [src/middleware/types.ts:2273](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2273)
+Defined in: [src/middleware/types.ts:2273](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2273)
 
 ***
 
@@ -3548,7 +3548,7 @@ Defined in: [src/middleware/types.ts:2273](https://github.com/PolymeshAssociatio
 
 > **SetActiveMembersLimit**: `"set_active_members_limit"`
 
-Defined in: [src/middleware/types.ts:2274](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2274)
+Defined in: [src/middleware/types.ts:2274](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2274)
 
 ***
 
@@ -3556,7 +3556,7 @@ Defined in: [src/middleware/types.ts:2274](https://github.com/PolymeshAssociatio
 
 > **SetActivePipLimit**: `"set_active_pip_limit"`
 
-Defined in: [src/middleware/types.ts:2275](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2275)
+Defined in: [src/middleware/types.ts:2275](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2275)
 
 ***
 
@@ -3564,7 +3564,7 @@ Defined in: [src/middleware/types.ts:2275](https://github.com/PolymeshAssociatio
 
 > **SetAssetFrozen**: `"set_asset_frozen"`
 
-Defined in: [src/middleware/types.ts:2276](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2276)
+Defined in: [src/middleware/types.ts:2276](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2276)
 
 ***
 
@@ -3572,7 +3572,7 @@ Defined in: [src/middleware/types.ts:2276](https://github.com/PolymeshAssociatio
 
 > **SetAssetMetadata**: `"set_asset_metadata"`
 
-Defined in: [src/middleware/types.ts:2277](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2277)
+Defined in: [src/middleware/types.ts:2277](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2277)
 
 ***
 
@@ -3580,7 +3580,7 @@ Defined in: [src/middleware/types.ts:2277](https://github.com/PolymeshAssociatio
 
 > **SetAssetMetadataDetails**: `"set_asset_metadata_details"`
 
-Defined in: [src/middleware/types.ts:2278](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2278)
+Defined in: [src/middleware/types.ts:2278](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2278)
 
 ***
 
@@ -3588,7 +3588,7 @@ Defined in: [src/middleware/types.ts:2278](https://github.com/PolymeshAssociatio
 
 > **SetAssetTransferCompliance**: `"set_asset_transfer_compliance"`
 
-Defined in: [src/middleware/types.ts:2279](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2279)
+Defined in: [src/middleware/types.ts:2279](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2279)
 
 ***
 
@@ -3596,7 +3596,7 @@ Defined in: [src/middleware/types.ts:2279](https://github.com/PolymeshAssociatio
 
 > **SetBalance**: `"set_balance"`
 
-Defined in: [src/middleware/types.ts:2280](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2280)
+Defined in: [src/middleware/types.ts:2280](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2280)
 
 ***
 
@@ -3604,7 +3604,7 @@ Defined in: [src/middleware/types.ts:2280](https://github.com/PolymeshAssociatio
 
 > **SetChangesTrieConfig**: `"set_changes_trie_config"`
 
-Defined in: [src/middleware/types.ts:2281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2281)
+Defined in: [src/middleware/types.ts:2281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2281)
 
 ***
 
@@ -3612,7 +3612,7 @@ Defined in: [src/middleware/types.ts:2281](https://github.com/PolymeshAssociatio
 
 > **SetCode**: `"set_code"`
 
-Defined in: [src/middleware/types.ts:2282](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2282)
+Defined in: [src/middleware/types.ts:2282](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2282)
 
 ***
 
@@ -3620,7 +3620,7 @@ Defined in: [src/middleware/types.ts:2282](https://github.com/PolymeshAssociatio
 
 > **SetCodeWithoutChecks**: `"set_code_without_checks"`
 
-Defined in: [src/middleware/types.ts:2283](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2283)
+Defined in: [src/middleware/types.ts:2283](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2283)
 
 ***
 
@@ -3628,7 +3628,7 @@ Defined in: [src/middleware/types.ts:2283](https://github.com/PolymeshAssociatio
 
 > **SetCommissionCap**: `"set_commission_cap"`
 
-Defined in: [src/middleware/types.ts:2284](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2284)
+Defined in: [src/middleware/types.ts:2284](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2284)
 
 ***
 
@@ -3636,7 +3636,7 @@ Defined in: [src/middleware/types.ts:2284](https://github.com/PolymeshAssociatio
 
 > **SetController**: `"set_controller"`
 
-Defined in: [src/middleware/types.ts:2285](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2285)
+Defined in: [src/middleware/types.ts:2285](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2285)
 
 ***
 
@@ -3644,7 +3644,7 @@ Defined in: [src/middleware/types.ts:2285](https://github.com/PolymeshAssociatio
 
 > **SetDefaultEnactmentPeriod**: `"set_default_enactment_period"`
 
-Defined in: [src/middleware/types.ts:2286](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2286)
+Defined in: [src/middleware/types.ts:2286](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2286)
 
 ***
 
@@ -3652,7 +3652,7 @@ Defined in: [src/middleware/types.ts:2286](https://github.com/PolymeshAssociatio
 
 > **SetDefaultTargets**: `"set_default_targets"`
 
-Defined in: [src/middleware/types.ts:2287](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2287)
+Defined in: [src/middleware/types.ts:2287](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2287)
 
 ***
 
@@ -3660,7 +3660,7 @@ Defined in: [src/middleware/types.ts:2287](https://github.com/PolymeshAssociatio
 
 > **SetDefaultWithholdingTax**: `"set_default_withholding_tax"`
 
-Defined in: [src/middleware/types.ts:2288](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2288)
+Defined in: [src/middleware/types.ts:2288](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2288)
 
 ***
 
@@ -3668,7 +3668,7 @@ Defined in: [src/middleware/types.ts:2288](https://github.com/PolymeshAssociatio
 
 > **SetDidWithholdingTax**: `"set_did_withholding_tax"`
 
-Defined in: [src/middleware/types.ts:2289](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2289)
+Defined in: [src/middleware/types.ts:2289](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2289)
 
 ***
 
@@ -3676,7 +3676,7 @@ Defined in: [src/middleware/types.ts:2289](https://github.com/PolymeshAssociatio
 
 > **SetDisableFees**: `"set_disable_fees"`
 
-Defined in: [src/middleware/types.ts:2290](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2290)
+Defined in: [src/middleware/types.ts:2290](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2290)
 
 ***
 
@@ -3684,7 +3684,7 @@ Defined in: [src/middleware/types.ts:2290](https://github.com/PolymeshAssociatio
 
 > **SetEmergencyElectionResult**: `"set_emergency_election_result"`
 
-Defined in: [src/middleware/types.ts:2291](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2291)
+Defined in: [src/middleware/types.ts:2291](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2291)
 
 ***
 
@@ -3692,7 +3692,7 @@ Defined in: [src/middleware/types.ts:2291](https://github.com/PolymeshAssociatio
 
 > **SetEntitiesExempt**: `"set_entities_exempt"`
 
-Defined in: [src/middleware/types.ts:2292](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2292)
+Defined in: [src/middleware/types.ts:2292](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2292)
 
 ***
 
@@ -3700,7 +3700,7 @@ Defined in: [src/middleware/types.ts:2292](https://github.com/PolymeshAssociatio
 
 > **SetExpiresAfter**: `"set_expires_after"`
 
-Defined in: [src/middleware/types.ts:2293](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2293)
+Defined in: [src/middleware/types.ts:2293](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2293)
 
 ***
 
@@ -3708,7 +3708,7 @@ Defined in: [src/middleware/types.ts:2293](https://github.com/PolymeshAssociatio
 
 > **SetFundingRound**: `"set_funding_round"`
 
-Defined in: [src/middleware/types.ts:2294](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2294)
+Defined in: [src/middleware/types.ts:2294](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2294)
 
 ***
 
@@ -3716,7 +3716,7 @@ Defined in: [src/middleware/types.ts:2294](https://github.com/PolymeshAssociatio
 
 > **SetGlobalCommission**: `"set_global_commission"`
 
-Defined in: [src/middleware/types.ts:2295](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2295)
+Defined in: [src/middleware/types.ts:2295](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2295)
 
 ***
 
@@ -3724,7 +3724,7 @@ Defined in: [src/middleware/types.ts:2295](https://github.com/PolymeshAssociatio
 
 > **SetGroupPermissions**: `"set_group_permissions"`
 
-Defined in: [src/middleware/types.ts:2296](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2296)
+Defined in: [src/middleware/types.ts:2296](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2296)
 
 ***
 
@@ -3732,7 +3732,7 @@ Defined in: [src/middleware/types.ts:2296](https://github.com/PolymeshAssociatio
 
 > **SetHeapPages**: `"set_heap_pages"`
 
-Defined in: [src/middleware/types.ts:2297](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2297)
+Defined in: [src/middleware/types.ts:2297](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2297)
 
 ***
 
@@ -3740,7 +3740,7 @@ Defined in: [src/middleware/types.ts:2297](https://github.com/PolymeshAssociatio
 
 > **SetHistoryDepth**: `"set_history_depth"`
 
-Defined in: [src/middleware/types.ts:2298](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2298)
+Defined in: [src/middleware/types.ts:2298](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2298)
 
 ***
 
@@ -3748,7 +3748,7 @@ Defined in: [src/middleware/types.ts:2298](https://github.com/PolymeshAssociatio
 
 > **SetInvulnerables**: `"set_invulnerables"`
 
-Defined in: [src/middleware/types.ts:2299](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2299)
+Defined in: [src/middleware/types.ts:2299](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2299)
 
 ***
 
@@ -3756,7 +3756,7 @@ Defined in: [src/middleware/types.ts:2299](https://github.com/PolymeshAssociatio
 
 > **SetItnRewardStatus**: `"set_itn_reward_status"`
 
-Defined in: [src/middleware/types.ts:2300](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2300)
+Defined in: [src/middleware/types.ts:2300](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2300)
 
 ***
 
@@ -3764,7 +3764,7 @@ Defined in: [src/middleware/types.ts:2300](https://github.com/PolymeshAssociatio
 
 > **SetKey**: `"set_key"`
 
-Defined in: [src/middleware/types.ts:2301](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2301)
+Defined in: [src/middleware/types.ts:2301](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2301)
 
 ***
 
@@ -3772,7 +3772,7 @@ Defined in: [src/middleware/types.ts:2301](https://github.com/PolymeshAssociatio
 
 > **SetKeys**: `"set_keys"`
 
-Defined in: [src/middleware/types.ts:2302](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2302)
+Defined in: [src/middleware/types.ts:2302](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2302)
 
 ***
 
@@ -3780,7 +3780,7 @@ Defined in: [src/middleware/types.ts:2302](https://github.com/PolymeshAssociatio
 
 > **SetMandatoryReceiverAffirmation**: `"set_mandatory_receiver_affirmation"`
 
-Defined in: [src/middleware/types.ts:2303](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2303)
+Defined in: [src/middleware/types.ts:2303](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2303)
 
 ***
 
@@ -3788,7 +3788,7 @@ Defined in: [src/middleware/types.ts:2303](https://github.com/PolymeshAssociatio
 
 > **SetMasterKey**: `"set_master_key"`
 
-Defined in: [src/middleware/types.ts:2304](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2304)
+Defined in: [src/middleware/types.ts:2304](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2304)
 
 ***
 
@@ -3796,7 +3796,7 @@ Defined in: [src/middleware/types.ts:2304](https://github.com/PolymeshAssociatio
 
 > **SetMaxDetailsLength**: `"set_max_details_length"`
 
-Defined in: [src/middleware/types.ts:2305](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2305)
+Defined in: [src/middleware/types.ts:2305](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2305)
 
 ***
 
@@ -3804,7 +3804,7 @@ Defined in: [src/middleware/types.ts:2305](https://github.com/PolymeshAssociatio
 
 > **SetMaxPipSkipCount**: `"set_max_pip_skip_count"`
 
-Defined in: [src/middleware/types.ts:2306](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2306)
+Defined in: [src/middleware/types.ts:2306](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2306)
 
 ***
 
@@ -3812,7 +3812,7 @@ Defined in: [src/middleware/types.ts:2306](https://github.com/PolymeshAssociatio
 
 > **SetMinBondThreshold**: `"set_min_bond_threshold"`
 
-Defined in: [src/middleware/types.ts:2307](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2307)
+Defined in: [src/middleware/types.ts:2307](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2307)
 
 ***
 
@@ -3820,7 +3820,7 @@ Defined in: [src/middleware/types.ts:2307](https://github.com/PolymeshAssociatio
 
 > **SetMinCommission**: `"set_min_commission"`
 
-Defined in: [src/middleware/types.ts:2308](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2308)
+Defined in: [src/middleware/types.ts:2308](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2308)
 
 ***
 
@@ -3828,7 +3828,7 @@ Defined in: [src/middleware/types.ts:2308](https://github.com/PolymeshAssociatio
 
 > **SetMinimumUntrustedScore**: `"set_minimum_untrusted_score"`
 
-Defined in: [src/middleware/types.ts:2310](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2310)
+Defined in: [src/middleware/types.ts:2310](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2310)
 
 ***
 
@@ -3836,7 +3836,7 @@ Defined in: [src/middleware/types.ts:2310](https://github.com/PolymeshAssociatio
 
 > **SetMinProposalDeposit**: `"set_min_proposal_deposit"`
 
-Defined in: [src/middleware/types.ts:2309](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2309)
+Defined in: [src/middleware/types.ts:2309](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2309)
 
 ***
 
@@ -3844,7 +3844,7 @@ Defined in: [src/middleware/types.ts:2309](https://github.com/PolymeshAssociatio
 
 > **SetNewGenesis**: `"set_new_genesis"`
 
-Defined in: [src/middleware/types.ts:2311](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2311)
+Defined in: [src/middleware/types.ts:2311](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2311)
 
 ***
 
@@ -3852,7 +3852,7 @@ Defined in: [src/middleware/types.ts:2311](https://github.com/PolymeshAssociatio
 
 > **SetPayee**: `"set_payee"`
 
-Defined in: [src/middleware/types.ts:2312](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2312)
+Defined in: [src/middleware/types.ts:2312](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2312)
 
 ***
 
@@ -3860,7 +3860,7 @@ Defined in: [src/middleware/types.ts:2312](https://github.com/PolymeshAssociatio
 
 > **SetPayingKey**: `"set_paying_key"`
 
-Defined in: [src/middleware/types.ts:2313](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2313)
+Defined in: [src/middleware/types.ts:2313](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2313)
 
 ***
 
@@ -3868,7 +3868,7 @@ Defined in: [src/middleware/types.ts:2313](https://github.com/PolymeshAssociatio
 
 > **SetPendingPipExpiry**: `"set_pending_pip_expiry"`
 
-Defined in: [src/middleware/types.ts:2314](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2314)
+Defined in: [src/middleware/types.ts:2314](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2314)
 
 ***
 
@@ -3876,7 +3876,7 @@ Defined in: [src/middleware/types.ts:2314](https://github.com/PolymeshAssociatio
 
 > **SetPermissionToSigner**: `"set_permission_to_signer"`
 
-Defined in: [src/middleware/types.ts:2315](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2315)
+Defined in: [src/middleware/types.ts:2315](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2315)
 
 ***
 
@@ -3884,7 +3884,7 @@ Defined in: [src/middleware/types.ts:2315](https://github.com/PolymeshAssociatio
 
 > **SetPrimaryKey**: `"set_primary_key"`
 
-Defined in: [src/middleware/types.ts:2316](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2316)
+Defined in: [src/middleware/types.ts:2316](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2316)
 
 ***
 
@@ -3892,7 +3892,7 @@ Defined in: [src/middleware/types.ts:2316](https://github.com/PolymeshAssociatio
 
 > **SetProposalCoolOffPeriod**: `"set_proposal_cool_off_period"`
 
-Defined in: [src/middleware/types.ts:2317](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2317)
+Defined in: [src/middleware/types.ts:2317](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2317)
 
 ***
 
@@ -3900,7 +3900,7 @@ Defined in: [src/middleware/types.ts:2317](https://github.com/PolymeshAssociatio
 
 > **SetProposalDuration**: `"set_proposal_duration"`
 
-Defined in: [src/middleware/types.ts:2318](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2318)
+Defined in: [src/middleware/types.ts:2318](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2318)
 
 ***
 
@@ -3908,7 +3908,7 @@ Defined in: [src/middleware/types.ts:2318](https://github.com/PolymeshAssociatio
 
 > **SetPruneHistoricalPips**: `"set_prune_historical_pips"`
 
-Defined in: [src/middleware/types.ts:2319](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2319)
+Defined in: [src/middleware/types.ts:2319](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2319)
 
 ***
 
@@ -3916,7 +3916,7 @@ Defined in: [src/middleware/types.ts:2319](https://github.com/PolymeshAssociatio
 
 > **SetReleaseCoordinator**: `"set_release_coordinator"`
 
-Defined in: [src/middleware/types.ts:2320](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2320)
+Defined in: [src/middleware/types.ts:2320](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2320)
 
 ***
 
@@ -3924,7 +3924,7 @@ Defined in: [src/middleware/types.ts:2320](https://github.com/PolymeshAssociatio
 
 > **SetRetry**: `"set_retry"`
 
-Defined in: [src/middleware/types.ts:2321](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2321)
+Defined in: [src/middleware/types.ts:2321](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2321)
 
 ***
 
@@ -3932,7 +3932,7 @@ Defined in: [src/middleware/types.ts:2321](https://github.com/PolymeshAssociatio
 
 > **SetRetryNamed**: `"set_retry_named"`
 
-Defined in: [src/middleware/types.ts:2322](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2322)
+Defined in: [src/middleware/types.ts:2322](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2322)
 
 ***
 
@@ -3940,7 +3940,7 @@ Defined in: [src/middleware/types.ts:2322](https://github.com/PolymeshAssociatio
 
 > **SetSchedulesMaxComplexity**: `"set_schedules_max_complexity"`
 
-Defined in: [src/middleware/types.ts:2323](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2323)
+Defined in: [src/middleware/types.ts:2323](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2323)
 
 ***
 
@@ -3948,7 +3948,7 @@ Defined in: [src/middleware/types.ts:2323](https://github.com/PolymeshAssociatio
 
 > **SetSecondaryKeyPermissions**: `"set_secondary_key_permissions"`
 
-Defined in: [src/middleware/types.ts:2324](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2324)
+Defined in: [src/middleware/types.ts:2324](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2324)
 
 ***
 
@@ -3956,7 +3956,7 @@ Defined in: [src/middleware/types.ts:2324](https://github.com/PolymeshAssociatio
 
 > **SetSignedMaxLimits**: `"set_signed_max_limits"`
 
-Defined in: [src/middleware/types.ts:2325](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2325)
+Defined in: [src/middleware/types.ts:2325](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2325)
 
 ***
 
@@ -3964,7 +3964,7 @@ Defined in: [src/middleware/types.ts:2325](https://github.com/PolymeshAssociatio
 
 > **SetStakingConfigs**: `"set_staking_configs"`
 
-Defined in: [src/middleware/types.ts:2326](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2326)
+Defined in: [src/middleware/types.ts:2326](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2326)
 
 ***
 
@@ -3972,7 +3972,7 @@ Defined in: [src/middleware/types.ts:2326](https://github.com/PolymeshAssociatio
 
 > **SetStorage**: `"set_storage"`
 
-Defined in: [src/middleware/types.ts:2327](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2327)
+Defined in: [src/middleware/types.ts:2327](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2327)
 
 ***
 
@@ -3980,7 +3980,7 @@ Defined in: [src/middleware/types.ts:2327](https://github.com/PolymeshAssociatio
 
 > **SetUncles**: `"set_uncles"`
 
-Defined in: [src/middleware/types.ts:2328](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2328)
+Defined in: [src/middleware/types.ts:2328](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2328)
 
 ***
 
@@ -3988,7 +3988,7 @@ Defined in: [src/middleware/types.ts:2328](https://github.com/PolymeshAssociatio
 
 > **SetValidatorCount**: `"set_validator_count"`
 
-Defined in: [src/middleware/types.ts:2329](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2329)
+Defined in: [src/middleware/types.ts:2329](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2329)
 
 ***
 
@@ -3996,7 +3996,7 @@ Defined in: [src/middleware/types.ts:2329](https://github.com/PolymeshAssociatio
 
 > **SetVenueFiltering**: `"set_venue_filtering"`
 
-Defined in: [src/middleware/types.ts:2330](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2330)
+Defined in: [src/middleware/types.ts:2330](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2330)
 
 ***
 
@@ -4004,7 +4004,7 @@ Defined in: [src/middleware/types.ts:2330](https://github.com/PolymeshAssociatio
 
 > **SetVoteThreshold**: `"set_vote_threshold"`
 
-Defined in: [src/middleware/types.ts:2331](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2331)
+Defined in: [src/middleware/types.ts:2331](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2331)
 
 ***
 
@@ -4012,7 +4012,7 @@ Defined in: [src/middleware/types.ts:2331](https://github.com/PolymeshAssociatio
 
 > **Snapshot**: `"snapshot"`
 
-Defined in: [src/middleware/types.ts:2332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2332)
+Defined in: [src/middleware/types.ts:2332](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2332)
 
 ***
 
@@ -4020,7 +4020,7 @@ Defined in: [src/middleware/types.ts:2332](https://github.com/PolymeshAssociatio
 
 > **Stop**: `"stop"`
 
-Defined in: [src/middleware/types.ts:2333](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2333)
+Defined in: [src/middleware/types.ts:2333](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2333)
 
 ***
 
@@ -4028,7 +4028,7 @@ Defined in: [src/middleware/types.ts:2333](https://github.com/PolymeshAssociatio
 
 > **Submit**: `"submit"`
 
-Defined in: [src/middleware/types.ts:2334](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2334)
+Defined in: [src/middleware/types.ts:2334](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2334)
 
 ***
 
@@ -4036,7 +4036,7 @@ Defined in: [src/middleware/types.ts:2334](https://github.com/PolymeshAssociatio
 
 > **SubmitElectionSolution**: `"submit_election_solution"`
 
-Defined in: [src/middleware/types.ts:2335](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2335)
+Defined in: [src/middleware/types.ts:2335](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2335)
 
 ***
 
@@ -4044,7 +4044,7 @@ Defined in: [src/middleware/types.ts:2335](https://github.com/PolymeshAssociatio
 
 > **SubmitElectionSolutionUnsigned**: `"submit_election_solution_unsigned"`
 
-Defined in: [src/middleware/types.ts:2336](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2336)
+Defined in: [src/middleware/types.ts:2336](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2336)
 
 ***
 
@@ -4052,7 +4052,7 @@ Defined in: [src/middleware/types.ts:2336](https://github.com/PolymeshAssociatio
 
 > **Sudo**: `"sudo"`
 
-Defined in: [src/middleware/types.ts:2337](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2337)
+Defined in: [src/middleware/types.ts:2337](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2337)
 
 ***
 
@@ -4060,7 +4060,7 @@ Defined in: [src/middleware/types.ts:2337](https://github.com/PolymeshAssociatio
 
 > **SudoAs**: `"sudo_as"`
 
-Defined in: [src/middleware/types.ts:2338](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2338)
+Defined in: [src/middleware/types.ts:2338](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2338)
 
 ***
 
@@ -4068,7 +4068,7 @@ Defined in: [src/middleware/types.ts:2338](https://github.com/PolymeshAssociatio
 
 > **SudoUncheckedWeight**: `"sudo_unchecked_weight"`
 
-Defined in: [src/middleware/types.ts:2339](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2339)
+Defined in: [src/middleware/types.ts:2339](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2339)
 
 ***
 
@@ -4076,7 +4076,7 @@ Defined in: [src/middleware/types.ts:2339](https://github.com/PolymeshAssociatio
 
 > **SumbitUnsigned**: `"sumbit_unsigned"`
 
-Defined in: [src/middleware/types.ts:2340](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2340)
+Defined in: [src/middleware/types.ts:2340](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2340)
 
 ***
 
@@ -4084,7 +4084,7 @@ Defined in: [src/middleware/types.ts:2340](https://github.com/PolymeshAssociatio
 
 > **SwapMember**: `"swap_member"`
 
-Defined in: [src/middleware/types.ts:2341](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2341)
+Defined in: [src/middleware/types.ts:2341](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2341)
 
 ***
 
@@ -4092,7 +4092,7 @@ Defined in: [src/middleware/types.ts:2341](https://github.com/PolymeshAssociatio
 
 > **Transfer**: `"transfer"`
 
-Defined in: [src/middleware/types.ts:2342](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2342)
+Defined in: [src/middleware/types.ts:2342](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2342)
 
 ***
 
@@ -4100,7 +4100,7 @@ Defined in: [src/middleware/types.ts:2342](https://github.com/PolymeshAssociatio
 
 > **TransferAll**: `"transfer_all"`
 
-Defined in: [src/middleware/types.ts:2343](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2343)
+Defined in: [src/middleware/types.ts:2343](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2343)
 
 ***
 
@@ -4108,7 +4108,7 @@ Defined in: [src/middleware/types.ts:2343](https://github.com/PolymeshAssociatio
 
 > **TransferAllowDeath**: `"transfer_allow_death"`
 
-Defined in: [src/middleware/types.ts:2344](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2344)
+Defined in: [src/middleware/types.ts:2344](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2344)
 
 ***
 
@@ -4116,7 +4116,7 @@ Defined in: [src/middleware/types.ts:2344](https://github.com/PolymeshAssociatio
 
 > **TransferAsset**: `"transfer_asset"`
 
-Defined in: [src/middleware/types.ts:2345](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2345)
+Defined in: [src/middleware/types.ts:2345](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2345)
 
 ***
 
@@ -4124,7 +4124,7 @@ Defined in: [src/middleware/types.ts:2345](https://github.com/PolymeshAssociatio
 
 > **TransferFunds**: `"transfer_funds"`
 
-Defined in: [src/middleware/types.ts:2346](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2346)
+Defined in: [src/middleware/types.ts:2346](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2346)
 
 ***
 
@@ -4132,7 +4132,7 @@ Defined in: [src/middleware/types.ts:2346](https://github.com/PolymeshAssociatio
 
 > **TransferKeepAlive**: `"transfer_keep_alive"`
 
-Defined in: [src/middleware/types.ts:2347](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2347)
+Defined in: [src/middleware/types.ts:2347](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2347)
 
 ***
 
@@ -4140,7 +4140,7 @@ Defined in: [src/middleware/types.ts:2347](https://github.com/PolymeshAssociatio
 
 > **TransferNft**: `"transfer_nft"`
 
-Defined in: [src/middleware/types.ts:2348](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2348)
+Defined in: [src/middleware/types.ts:2348](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2348)
 
 ***
 
@@ -4148,7 +4148,7 @@ Defined in: [src/middleware/types.ts:2348](https://github.com/PolymeshAssociatio
 
 > **TransferWithMemo**: `"transfer_with_memo"`
 
-Defined in: [src/middleware/types.ts:2349](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2349)
+Defined in: [src/middleware/types.ts:2349](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2349)
 
 ***
 
@@ -4156,7 +4156,7 @@ Defined in: [src/middleware/types.ts:2349](https://github.com/PolymeshAssociatio
 
 > **Unbond**: `"unbond"`
 
-Defined in: [src/middleware/types.ts:2350](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2350)
+Defined in: [src/middleware/types.ts:2350](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2350)
 
 ***
 
@@ -4164,7 +4164,7 @@ Defined in: [src/middleware/types.ts:2350](https://github.com/PolymeshAssociatio
 
 > **UnclaimReceipt**: `"unclaim_receipt"`
 
-Defined in: [src/middleware/types.ts:2351](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2351)
+Defined in: [src/middleware/types.ts:2351](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2351)
 
 ***
 
@@ -4172,7 +4172,7 @@ Defined in: [src/middleware/types.ts:2351](https://github.com/PolymeshAssociatio
 
 > **Unfreeze**: `"unfreeze"`
 
-Defined in: [src/middleware/types.ts:2352](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2352)
+Defined in: [src/middleware/types.ts:2352](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2352)
 
 ***
 
@@ -4180,7 +4180,7 @@ Defined in: [src/middleware/types.ts:2352](https://github.com/PolymeshAssociatio
 
 > **UnfreezeFundraiser**: `"unfreeze_fundraiser"`
 
-Defined in: [src/middleware/types.ts:2353](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2353)
+Defined in: [src/middleware/types.ts:2353](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2353)
 
 ***
 
@@ -4188,7 +4188,7 @@ Defined in: [src/middleware/types.ts:2353](https://github.com/PolymeshAssociatio
 
 > **UnfreezeSecondaryKeys**: `"unfreeze_secondary_keys"`
 
-Defined in: [src/middleware/types.ts:2354](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2354)
+Defined in: [src/middleware/types.ts:2354](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2354)
 
 ***
 
@@ -4196,7 +4196,7 @@ Defined in: [src/middleware/types.ts:2354](https://github.com/PolymeshAssociatio
 
 > **UnfreezeTxs**: `"unfreeze_txs"`
 
-Defined in: [src/middleware/types.ts:2355](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2355)
+Defined in: [src/middleware/types.ts:2355](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2355)
 
 ***
 
@@ -4204,7 +4204,7 @@ Defined in: [src/middleware/types.ts:2355](https://github.com/PolymeshAssociatio
 
 > **Unknown**: `"unknown"`
 
-Defined in: [src/middleware/types.ts:2356](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2356)
+Defined in: [src/middleware/types.ts:2356](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2356)
 
 ***
 
@@ -4212,7 +4212,7 @@ Defined in: [src/middleware/types.ts:2356](https://github.com/PolymeshAssociatio
 
 > **UnlinkChildIdentity**: `"unlink_child_identity"`
 
-Defined in: [src/middleware/types.ts:2357](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2357)
+Defined in: [src/middleware/types.ts:2357](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2357)
 
 ***
 
@@ -4220,7 +4220,7 @@ Defined in: [src/middleware/types.ts:2357](https://github.com/PolymeshAssociatio
 
 > **UnlinkTickerFromAssetId**: `"unlink_ticker_from_asset_id"`
 
-Defined in: [src/middleware/types.ts:2358](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2358)
+Defined in: [src/middleware/types.ts:2358](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2358)
 
 ***
 
@@ -4228,7 +4228,7 @@ Defined in: [src/middleware/types.ts:2358](https://github.com/PolymeshAssociatio
 
 > **UnlockInstruction**: `"unlock_instruction"`
 
-Defined in: [src/middleware/types.ts:2359](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2359)
+Defined in: [src/middleware/types.ts:2359](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2359)
 
 ***
 
@@ -4236,7 +4236,7 @@ Defined in: [src/middleware/types.ts:2359](https://github.com/PolymeshAssociatio
 
 > **UnmapAccount**: `"unmap_account"`
 
-Defined in: [src/middleware/types.ts:2360](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2360)
+Defined in: [src/middleware/types.ts:2360](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2360)
 
 ***
 
@@ -4244,7 +4244,7 @@ Defined in: [src/middleware/types.ts:2360](https://github.com/PolymeshAssociatio
 
 > **UnnotePreimage**: `"unnote_preimage"`
 
-Defined in: [src/middleware/types.ts:2361](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2361)
+Defined in: [src/middleware/types.ts:2361](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2361)
 
 ***
 
@@ -4252,7 +4252,7 @@ Defined in: [src/middleware/types.ts:2361](https://github.com/PolymeshAssociatio
 
 > **UnrequestPreimage**: `"unrequest_preimage"`
 
-Defined in: [src/middleware/types.ts:2362](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2362)
+Defined in: [src/middleware/types.ts:2362](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2362)
 
 ***
 
@@ -4260,7 +4260,7 @@ Defined in: [src/middleware/types.ts:2362](https://github.com/PolymeshAssociatio
 
 > **UpdateAssetType**: `"update_asset_type"`
 
-Defined in: [src/middleware/types.ts:2363](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2363)
+Defined in: [src/middleware/types.ts:2363](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2363)
 
 ***
 
@@ -4268,7 +4268,7 @@ Defined in: [src/middleware/types.ts:2363](https://github.com/PolymeshAssociatio
 
 > **UpdateCallRuntimeWhitelist**: `"update_call_runtime_whitelist"`
 
-Defined in: [src/middleware/types.ts:2364](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2364)
+Defined in: [src/middleware/types.ts:2364](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2364)
 
 ***
 
@@ -4276,7 +4276,7 @@ Defined in: [src/middleware/types.ts:2364](https://github.com/PolymeshAssociatio
 
 > **UpdateGlobalMetadataSpec**: `"update_global_metadata_spec"`
 
-Defined in: [src/middleware/types.ts:2365](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2365)
+Defined in: [src/middleware/types.ts:2365](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2365)
 
 ***
 
@@ -4284,7 +4284,7 @@ Defined in: [src/middleware/types.ts:2365](https://github.com/PolymeshAssociatio
 
 > **UpdateIdentifiers**: `"update_identifiers"`
 
-Defined in: [src/middleware/types.ts:2366](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2366)
+Defined in: [src/middleware/types.ts:2366](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2366)
 
 ***
 
@@ -4292,7 +4292,7 @@ Defined in: [src/middleware/types.ts:2366](https://github.com/PolymeshAssociatio
 
 > **UpdatePayee**: `"update_payee"`
 
-Defined in: [src/middleware/types.ts:2367](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2367)
+Defined in: [src/middleware/types.ts:2367](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2367)
 
 ***
 
@@ -4300,7 +4300,7 @@ Defined in: [src/middleware/types.ts:2367](https://github.com/PolymeshAssociatio
 
 > **UpdatePermissionedValidatorIntendedCount**: `"update_permissioned_validator_intended_count"`
 
-Defined in: [src/middleware/types.ts:2368](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2368)
+Defined in: [src/middleware/types.ts:2368](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2368)
 
 ***
 
@@ -4308,7 +4308,7 @@ Defined in: [src/middleware/types.ts:2368](https://github.com/PolymeshAssociatio
 
 > **UpdatePolyxLimit**: `"update_polyx_limit"`
 
-Defined in: [src/middleware/types.ts:2369](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2369)
+Defined in: [src/middleware/types.ts:2369](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2369)
 
 ***
 
@@ -4316,7 +4316,7 @@ Defined in: [src/middleware/types.ts:2369](https://github.com/PolymeshAssociatio
 
 > **UpdateVenueDetails**: `"update_venue_details"`
 
-Defined in: [src/middleware/types.ts:2370](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2370)
+Defined in: [src/middleware/types.ts:2370](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2370)
 
 ***
 
@@ -4324,7 +4324,7 @@ Defined in: [src/middleware/types.ts:2370](https://github.com/PolymeshAssociatio
 
 > **UpdateVenueSigners**: `"update_venue_signers"`
 
-Defined in: [src/middleware/types.ts:2371](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2371)
+Defined in: [src/middleware/types.ts:2371](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2371)
 
 ***
 
@@ -4332,7 +4332,7 @@ Defined in: [src/middleware/types.ts:2371](https://github.com/PolymeshAssociatio
 
 > **UpdateVenueType**: `"update_venue_type"`
 
-Defined in: [src/middleware/types.ts:2372](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2372)
+Defined in: [src/middleware/types.ts:2372](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2372)
 
 ***
 
@@ -4340,7 +4340,7 @@ Defined in: [src/middleware/types.ts:2372](https://github.com/PolymeshAssociatio
 
 > **UpgradeAccounts**: `"upgrade_accounts"`
 
-Defined in: [src/middleware/types.ts:2373](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2373)
+Defined in: [src/middleware/types.ts:2373](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2373)
 
 ***
 
@@ -4348,7 +4348,7 @@ Defined in: [src/middleware/types.ts:2373](https://github.com/PolymeshAssociatio
 
 > **UpgradeApi**: `"upgrade_api"`
 
-Defined in: [src/middleware/types.ts:2374](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2374)
+Defined in: [src/middleware/types.ts:2374](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2374)
 
 ***
 
@@ -4356,7 +4356,7 @@ Defined in: [src/middleware/types.ts:2374](https://github.com/PolymeshAssociatio
 
 > **UploadCode**: `"upload_code"`
 
-Defined in: [src/middleware/types.ts:2375](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2375)
+Defined in: [src/middleware/types.ts:2375](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2375)
 
 ***
 
@@ -4364,7 +4364,7 @@ Defined in: [src/middleware/types.ts:2375](https://github.com/PolymeshAssociatio
 
 > **Validate**: `"validate"`
 
-Defined in: [src/middleware/types.ts:2376](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2376)
+Defined in: [src/middleware/types.ts:2376](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2376)
 
 ***
 
@@ -4372,7 +4372,7 @@ Defined in: [src/middleware/types.ts:2376](https://github.com/PolymeshAssociatio
 
 > **ValidateCddExpiryNominators**: `"validate_cdd_expiry_nominators"`
 
-Defined in: [src/middleware/types.ts:2377](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2377)
+Defined in: [src/middleware/types.ts:2377](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2377)
 
 ***
 
@@ -4380,7 +4380,7 @@ Defined in: [src/middleware/types.ts:2377](https://github.com/PolymeshAssociatio
 
 > **Vote**: `"vote"`
 
-Defined in: [src/middleware/types.ts:2378](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2378)
+Defined in: [src/middleware/types.ts:2378](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2378)
 
 ***
 
@@ -4388,7 +4388,7 @@ Defined in: [src/middleware/types.ts:2378](https://github.com/PolymeshAssociatio
 
 > **VoteOrPropose**: `"vote_or_propose"`
 
-Defined in: [src/middleware/types.ts:2379](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2379)
+Defined in: [src/middleware/types.ts:2379](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2379)
 
 ***
 
@@ -4396,7 +4396,7 @@ Defined in: [src/middleware/types.ts:2379](https://github.com/PolymeshAssociatio
 
 > **WithdrawAffirmation**: `"withdraw_affirmation"`
 
-Defined in: [src/middleware/types.ts:2381](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2381)
+Defined in: [src/middleware/types.ts:2381](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2381)
 
 ***
 
@@ -4404,7 +4404,7 @@ Defined in: [src/middleware/types.ts:2381](https://github.com/PolymeshAssociatio
 
 > **WithdrawAffirmationAsMediator**: `"withdraw_affirmation_as_mediator"`
 
-Defined in: [src/middleware/types.ts:2382](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2382)
+Defined in: [src/middleware/types.ts:2382](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2382)
 
 ***
 
@@ -4412,7 +4412,7 @@ Defined in: [src/middleware/types.ts:2382](https://github.com/PolymeshAssociatio
 
 > **WithdrawAffirmationV2**: `"withdraw_affirmation_v2"`
 
-Defined in: [src/middleware/types.ts:2383](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2383)
+Defined in: [src/middleware/types.ts:2383](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2383)
 
 ***
 
@@ -4420,7 +4420,7 @@ Defined in: [src/middleware/types.ts:2383](https://github.com/PolymeshAssociatio
 
 > **WithdrawAffirmationWithCount**: `"withdraw_affirmation_with_count"`
 
-Defined in: [src/middleware/types.ts:2384](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2384)
+Defined in: [src/middleware/types.ts:2384](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2384)
 
 ***
 
@@ -4428,7 +4428,7 @@ Defined in: [src/middleware/types.ts:2384](https://github.com/PolymeshAssociatio
 
 > **WithdrawUnbonded**: `"withdraw_unbonded"`
 
-Defined in: [src/middleware/types.ts:2385](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2385)
+Defined in: [src/middleware/types.ts:2385](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2385)
 
 ***
 
@@ -4436,4 +4436,4 @@ Defined in: [src/middleware/types.ts:2385](https://github.com/PolymeshAssociatio
 
 > **WithWeight**: `"with_weight"`
 
-Defined in: [src/middleware/types.ts:2380](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/middleware/types.ts#L2380)
+Defined in: [src/middleware/types.ts:2380](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L2380)

@@ -1,10 +1,10 @@
 # Interface: ConditionBase
 
-> Defined in: [src/api/entities/types.ts:356](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L356)
+> Defined in: [src/api/entities/types.ts:350](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L350)
 
 # Interface: ConditionBase
 
-Defined in: [src/api/entities/types.ts:356](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L356)
+Defined in: [src/api/entities/types.ts:350](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L350)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/types.ts:356](https://github.com/PolymeshAssociati
 
 > **target**: [`ConditionTarget`](../enumerations/ConditionTarget.mdx)
 
-Defined in: [src/api/entities/types.ts:357](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L357)
+Defined in: [src/api/entities/types.ts:351](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L351)
 
 ***
 
@@ -20,6 +20,6 @@ Defined in: [src/api/entities/types.ts:357](https://github.com/PolymeshAssociati
 
 > `optional` **trustedClaimIssuers?**: [`TrustedClaimIssuer`](TrustedClaimIssuer.mdx)\<`false`\>[]
 
-Defined in: [src/api/entities/types.ts:361](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L361)
+Defined in: [src/api/entities/types.ts:355](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L355)
 
 if undefined, the default trusted claim issuers for the Asset are used

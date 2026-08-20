@@ -1,10 +1,10 @@
 # Class: NumberedPortfolio
 
-> Defined in: [src/api/entities/NumberedPortfolio.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/NumberedPortfolio.ts#L31)
+> Defined in: [src/api/entities/NumberedPortfolio.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/NumberedPortfolio.ts#L31)
 
 # Class: NumberedPortfolio
 
-Defined in: [src/api/entities/NumberedPortfolio.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/NumberedPortfolio.ts#L31)
+Defined in: [src/api/entities/NumberedPortfolio.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/NumberedPortfolio.ts#L31)
 
 Represents a numbered (non-default) Portfolio for an Identity
 
@@ -18,7 +18,7 @@ Represents a numbered (non-default) Portfolio for an Identity
 
 > **id**: `BigNumber`
 
-Defined in: [src/api/entities/NumberedPortfolio.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/NumberedPortfolio.ts#L45)
+Defined in: [src/api/entities/NumberedPortfolio.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/NumberedPortfolio.ts#L45)
 
 Portfolio identifier number
 
@@ -28,7 +28,7 @@ Portfolio identifier number
 
 > **owner**: [`Identity`](../../Identity/classes/Identity.mdx)
 
-Defined in: [src/api/entities/Portfolio/index.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Portfolio/index.ts#L76)
+Defined in: [src/api/entities/Portfolio/index.ts:90](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/index.ts#L90)
 
 Identity of the Portfolio's owner
 
@@ -42,7 +42,7 @@ Identity of the Portfolio's owner
 
 > **uuid**: `string`
 
-Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L46)
+Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L46)
 
 #### Inherited from
 
@@ -54,7 +54,7 @@ Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociati
 
 > **createdAt**(): `Promise`\<[`EventIdentifier`](../../../client/types/interfaces/EventIdentifier.mdx) \| `null`\>
 
-Defined in: [src/api/entities/NumberedPortfolio.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/NumberedPortfolio.ts#L107)
+Defined in: [src/api/entities/NumberedPortfolio.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/NumberedPortfolio.ts#L107)
 
 Retrieve the identifier data (block number, date and event index) of the event that was emitted when this Portfolio was created
 
@@ -76,7 +76,7 @@ there is a possibility that the data is not ready by the time it is requested. I
 
 > **exists**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/NumberedPortfolio.ts:133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/NumberedPortfolio.ts#L133)
+Defined in: [src/api/entities/NumberedPortfolio.ts:133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/NumberedPortfolio.ts#L133)
 
 Return whether this Portfolio exists
 
@@ -94,7 +94,7 @@ Return whether this Portfolio exists
 
 > **getAssetBalances**(`args?`: `object`): `Promise`\<[`PortfolioBalance`](../../Portfolio/types/interfaces/PortfolioBalance.mdx)[]\>
 
-Defined in: [src/api/entities/Portfolio/index.ts:138](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Portfolio/index.ts#L138)
+Defined in: [src/api/entities/Portfolio/index.ts:231](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/index.ts#L231)
 
 Retrieve the balances of all fungible assets in this Portfolio
 
@@ -130,7 +130,7 @@ array of FungibleAssets (or tickers) for which to fetch balances (optional, all 
 
 > **getCollections**(`args?`: `object`): `Promise`\<[`PortfolioCollection`](../../Portfolio/types/interfaces/PortfolioCollection.mdx)[]\>
 
-Defined in: [src/api/entities/Portfolio/index.ts:217](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Portfolio/index.ts#L217)
+Defined in: [src/api/entities/Portfolio/index.ts:310](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/index.ts#L310)
 
 Retrieve the NFTs held in this portfolio
 
@@ -166,7 +166,7 @@ array of NftCollection (or tickers) for which to fetch holdings (optional, all h
 
 > **getCustodian**(): `Promise`\<[`Identity`](../../Identity/classes/Identity.mdx)\>
 
-Defined in: [src/api/entities/Portfolio/index.ts:328](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Portfolio/index.ts#L328)
+Defined in: [src/api/entities/Portfolio/index.ts:427](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/index.ts#L427)
 
 Retrieve the custodian Identity of this Portfolio
 
@@ -188,7 +188,7 @@ if no custodian is set, the owner Identity is returned
 
 > **getName**(): `Promise`\<`string`\>
 
-Defined in: [src/api/entities/NumberedPortfolio.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/NumberedPortfolio.ts#L78)
+Defined in: [src/api/entities/NumberedPortfolio.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/NumberedPortfolio.ts#L78)
 
 Return the Portfolio name
 
@@ -202,7 +202,7 @@ Return the Portfolio name
 
 > **getTransactionHistory**(`filters?`: `object`): `Promise`\<[`HistoricSettlement`](../../Portfolio/types/interfaces/HistoricSettlement.mdx)[]\>
 
-Defined in: [src/api/entities/Portfolio/index.ts:370](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Portfolio/index.ts#L370)
+Defined in: [src/api/entities/Portfolio/index.ts:469](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/index.ts#L469)
 
 Retrieve a list of transactions where this portfolio was involved. Can be filtered using parameters
 
@@ -250,11 +250,38 @@ uses the middlewareV2
 
 ***
 
+### isAssetPreApproved()
+
+> **isAssetPreApproved**(`asset`: `string` \| [`BaseAsset`](../../Asset/Base/BaseAsset/classes/BaseAsset.mdx)): `Promise`\<`boolean`\>
+
+Defined in: [src/api/entities/Portfolio/index.ts:168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/index.ts#L168)
+
+Returns whether or not this Portfolio has pre-approved a particular asset
+
+#### Parameters
+
+Parameter
+Type
+
+`asset`
+
+`string` \| [`BaseAsset`](../../Asset/Base/BaseAsset/classes/BaseAsset.mdx)
+
+#### Returns
+
+`Promise`\<`boolean`\>
+
+#### Inherited from
+
+[`Portfolio`](../../Portfolio/classes/Portfolio.mdx).[`isAssetPreApproved`](../../Portfolio/classes/Portfolio.mdx#isassetpreapproved)
+
+***
+
 ### isCustodiedBy()
 
 > **isCustodiedBy**(`args?`: `object`): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Portfolio/index.ts:122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Portfolio/index.ts#L122)
+Defined in: [src/api/entities/Portfolio/index.ts:154](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/index.ts#L154)
 
 Return whether an Identity is the Portfolio custodian
 
@@ -290,7 +317,7 @@ optional, defaults to the signing Identity
 
 > **isEqual**(`entity`: [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>): `boolean`
 
-Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L61)
+Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L61)
 
 Determine whether this Entity is the same as another one
 
@@ -317,7 +344,7 @@ Type
 
 > **isOwnedBy**(`args?`: `object`): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Portfolio/index.ts:109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Portfolio/index.ts#L109)
+Defined in: [src/api/entities/Portfolio/index.ts:141](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/index.ts#L141)
 
 Return whether an Identity is the Portfolio owner
 
@@ -353,7 +380,7 @@ defaults to the signing Identity
 
 > **modifyName**(`args`: [`RenamePortfolioParams`](../../../procedures/types/interfaces/RenamePortfolioParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`NumberedPortfolio`, `NumberedPortfolio`\>\>
 
-Defined in: [src/api/entities/NumberedPortfolio.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/NumberedPortfolio.ts#L73)
+Defined in: [src/api/entities/NumberedPortfolio.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/NumberedPortfolio.ts#L73)
 
 Rename portfolio
 
@@ -388,7 +415,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **moveFunds**(`args`: [`MoveFundsParams`](../../../procedures/types/interfaces/MoveFundsParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Portfolio/index.ts:313](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Portfolio/index.ts#L313)
+Defined in: [src/api/entities/Portfolio/index.ts:402](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/index.ts#L402)
 
 Moves funds from this Portfolio to another one owned by the same Identity
 
@@ -424,11 +451,77 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 ***
 
+### preApproveAsset()
+
+> **preApproveAsset**(`args`: `object`, `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Portfolio/index.ts:415](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/index.ts#L415)
+
+Pre-approves receiving an asset for this Portfolio. Receiving this asset in a settlement will not require manual affirmation
+
+#### Parameters
+
+Parameter
+Type
+
+`args`
+
+\{ `asset`: `string` \| [`BaseAsset`](../../Asset/Base/BaseAsset/classes/BaseAsset.mdx); \}
+
+`args.asset`
+
+`string` \| [`BaseAsset`](../../Asset/Base/BaseAsset/classes/BaseAsset.mdx)
+
+`opts?`
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [preApproveAsset.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Inherited from
+
+[`Portfolio`](../../Portfolio/classes/Portfolio.mdx).[`preApproveAsset`](../../Portfolio/classes/Portfolio.mdx#preapproveasset)
+
+***
+
+### preApprovedAssets()
+
+> **preApprovedAssets**(`paginationOpts?`: [`PaginationOptions`](../../types/interfaces/PaginationOptions.mdx)): `Promise`\<[`ResultSet`](../../types/interfaces/ResultSet.mdx)\<[`Asset`](../../Asset/types/type-aliases/Asset.mdx)\>\>
+
+Defined in: [src/api/entities/Portfolio/index.ts:193](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/index.ts#L193)
+
+Returns a list of all assets this Portfolio has pre-approved. These assets will not require affirmation when being received in settlements
+
+#### Parameters
+
+Parameter
+Type
+
+`paginationOpts?`
+
+[`PaginationOptions`](../../types/interfaces/PaginationOptions.mdx)
+
+#### Returns
+
+`Promise`\<[`ResultSet`](../../types/interfaces/ResultSet.mdx)\<[`Asset`](../../Asset/types/type-aliases/Asset.mdx)\>\>
+
+#### Inherited from
+
+[`Portfolio`](../../Portfolio/classes/Portfolio.mdx).[`preApprovedAssets`](../../Portfolio/classes/Portfolio.mdx#preapprovedassets)
+
+***
+
 ### quitCustody()
 
 > **quitCustody**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Portfolio/index.ts:321](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Portfolio/index.ts#L321)
+Defined in: [src/api/entities/Portfolio/index.ts:410](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/index.ts#L410)
 
 Returns the custody of the portfolio to the portfolio owner unilaterally
 
@@ -460,11 +553,50 @@ this method is of type [NoArgsProcedureMethod](../../../procedures/types/interfa
 
 ***
 
+### removeAssetPreApproval()
+
+> **removeAssetPreApproval**(`args`: `object`, `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+Defined in: [src/api/entities/Portfolio/index.ts:420](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/index.ts#L420)
+
+Removes pre-approval of an asset for this Portfolio
+
+#### Parameters
+
+Parameter
+Type
+
+`args`
+
+\{ `asset`: `string` \| [`BaseAsset`](../../Asset/Base/BaseAsset/classes/BaseAsset.mdx); \}
+
+`args.asset`
+
+`string` \| [`BaseAsset`](../../Asset/Base/BaseAsset/classes/BaseAsset.mdx)
+
+`opts?`
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [removeAssetPreApproval.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+#### Inherited from
+
+[`Portfolio`](../../Portfolio/classes/Portfolio.mdx).[`removeAssetPreApproval`](../../Portfolio/classes/Portfolio.mdx#removeassetpreapproval)
+
+***
+
 ### setCustodian()
 
 > **setCustodian**(`args`: [`SetCustodianParams`](../../../procedures/types/interfaces/SetCustodianParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`AuthorizationRequest`](../../AuthorizationRequest/classes/AuthorizationRequest.mdx), [`AuthorizationRequest`](../../AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
 
-Defined in: [src/api/entities/NumberedPortfolio.ts:162](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/NumberedPortfolio.ts#L162)
+Defined in: [src/api/entities/NumberedPortfolio.ts:162](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/NumberedPortfolio.ts#L162)
 
 Send an invitation to an Identity to assign it as custodian for this Numbered Portfolio
 
@@ -506,7 +638,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **toHuman**(): [`HumanReadable`](../../Portfolio/interfaces/HumanReadable.mdx)
 
-Defined in: [src/api/entities/Portfolio/index.ts:445](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Portfolio/index.ts#L445)
+Defined in: [src/api/entities/Portfolio/index.ts:544](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/index.ts#L544)
 
 Return the Portfolio ID and owner DID
 
@@ -524,7 +656,7 @@ Return the Portfolio ID and owner DID
 
 > `static` **generateUuid**\<`Identifiers`\>(`identifiers`: `Identifiers`): `string`
 
-Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L14)
+Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L14)
 
 Generate the Entity's UUID from its identifying properties
 
@@ -560,7 +692,7 @@ Description
 
 > `static` **unserialize**\<`Identifiers`\>(`serialized`: `string`): `Identifiers`
 
-Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L23)
+Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L23)
 
 Unserialize a UUID into its Unique Identifiers
 

@@ -1,10 +1,10 @@
 # Enumeration: ClaimType
 
-> Defined in: [src/api/entities/types.ts:168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L168)
+> Defined in: [src/api/entities/types.ts:162](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L162)
 
 # Enumeration: ClaimType
 
-Defined in: [src/api/entities/types.ts:168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L168)
+Defined in: [src/api/entities/types.ts:162](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L162)
 
 ## Enumeration Members
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/types.ts:168](https://github.com/PolymeshAssociati
 
 > **Accredited**: `"Accredited"`
 
-Defined in: [src/api/entities/types.ts:169](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L169)
+Defined in: [src/api/entities/types.ts:163](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L163)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/entities/types.ts:169](https://github.com/PolymeshAssociati
 
 > **Affiliate**: `"Affiliate"`
 
-Defined in: [src/api/entities/types.ts:170](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L170)
+Defined in: [src/api/entities/types.ts:164](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L164)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/api/entities/types.ts:170](https://github.com/PolymeshAssociati
 
 > **Blocked**: `"Blocked"`
 
-Defined in: [src/api/entities/types.ts:177](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L177)
+Defined in: [src/api/entities/types.ts:171](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L171)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [src/api/entities/types.ts:177](https://github.com/PolymeshAssociati
 
 > **BuyLockup**: `"BuyLockup"`
 
-Defined in: [src/api/entities/types.ts:171](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L171)
+Defined in: [src/api/entities/types.ts:165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L165)
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: [src/api/entities/types.ts:171](https://github.com/PolymeshAssociati
 
 > **Custom**: `"Custom"`
 
-Defined in: [src/api/entities/types.ts:178](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L178)
+Defined in: [src/api/entities/types.ts:172](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L172)
 
 ***
 
@@ -52,7 +52,7 @@ Defined in: [src/api/entities/types.ts:178](https://github.com/PolymeshAssociati
 
 > **CustomerDueDiligence**: `"CustomerDueDiligence"`
 
-Defined in: [src/api/entities/types.ts:173](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L173)
+Defined in: [src/api/entities/types.ts:167](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L167)
 
 ***
 
@@ -60,7 +60,7 @@ Defined in: [src/api/entities/types.ts:173](https://github.com/PolymeshAssociati
 
 > **Exempted**: `"Exempted"`
 
-Defined in: [src/api/entities/types.ts:176](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L176)
+Defined in: [src/api/entities/types.ts:170](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L170)
 
 ***
 
@@ -68,7 +68,7 @@ Defined in: [src/api/entities/types.ts:176](https://github.com/PolymeshAssociati
 
 > **Jurisdiction**: `"Jurisdiction"`
 
-Defined in: [src/api/entities/types.ts:175](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L175)
+Defined in: [src/api/entities/types.ts:169](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L169)
 
 ***
 
@@ -76,7 +76,7 @@ Defined in: [src/api/entities/types.ts:175](https://github.com/PolymeshAssociati
 
 > **KnowYourCustomer**: `"KnowYourCustomer"`
 
-Defined in: [src/api/entities/types.ts:174](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L174)
+Defined in: [src/api/entities/types.ts:168](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L168)
 
 ***
 
@@ -84,4 +84,4 @@ Defined in: [src/api/entities/types.ts:174](https://github.com/PolymeshAssociati
 
 > **SellLockup**: `"SellLockup"`
 
-Defined in: [src/api/entities/types.ts:172](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L172)
+Defined in: [src/api/entities/types.ts:166](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L166)

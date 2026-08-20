@@ -1,10 +1,10 @@
 # Interface: AddAssetRequirementParams
 
-> Defined in: [src/api/procedures/types.ts:1454](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1454)
+> Defined in: [src/api/procedures/types.ts:1395](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1395)
 
 # Interface: AddAssetRequirementParams
 
-Defined in: [src/api/procedures/types.ts:1454](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1454)
+Defined in: [src/api/procedures/types.ts:1395](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1395)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/procedures/types.ts:1454](https://github.com/PolymeshAssoci
 
 > **conditions**: [`InputCondition`](../../../entities/types/type-aliases/InputCondition.mdx)[]
 
-Defined in: [src/api/procedures/types.ts:1460](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1460)
+Defined in: [src/api/procedures/types.ts:1401](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1401)
 
 array of conditions that form the requirement that must be added.
   Conditions within a requirement are *AND* between them. This means that in order

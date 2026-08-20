@@ -1,10 +1,10 @@
 # Interface: TransferRestrictionInputClaimPercentage
 
-> Defined in: [src/api/procedures/types.ts:655](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L655)
+> Defined in: [src/api/procedures/types.ts:653](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L653)
 
 # Interface: TransferRestrictionInputClaimPercentage
 
-Defined in: [src/api/procedures/types.ts:655](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L655)
+Defined in: [src/api/procedures/types.ts:653](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L653)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/procedures/types.ts:655](https://github.com/PolymeshAssocia
 
 > **claim**: [`InputStatClaim`](../../../entities/types/type-aliases/InputStatClaim.mdx)
 
-Defined in: [src/api/procedures/types.ts:659](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L659)
+Defined in: [src/api/procedures/types.ts:657](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L657)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/procedures/types.ts:659](https://github.com/PolymeshAssocia
 
 > **issuer**: [`Identity`](../../../entities/Identity/classes/Identity.mdx)
 
-Defined in: [src/api/procedures/types.ts:658](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L658)
+Defined in: [src/api/procedures/types.ts:656](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L656)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/api/procedures/types.ts:658](https://github.com/PolymeshAssocia
 
 > **max**: `BigNumber`
 
-Defined in: [src/api/procedures/types.ts:657](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L657)
+Defined in: [src/api/procedures/types.ts:655](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L655)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [src/api/procedures/types.ts:657](https://github.com/PolymeshAssocia
 
 > **min**: `BigNumber`
 
-Defined in: [src/api/procedures/types.ts:656](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L656)
+Defined in: [src/api/procedures/types.ts:654](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L654)
 
 ***
 
@@ -44,4 +44,4 @@ Defined in: [src/api/procedures/types.ts:656](https://github.com/PolymeshAssocia
 
 > **type**: [`ClaimPercentage`](../enumerations/TransferRestrictionType.mdx#claimpercentage)
 
-Defined in: [src/api/procedures/types.ts:660](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L660)
+Defined in: [src/api/procedures/types.ts:658](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L658)

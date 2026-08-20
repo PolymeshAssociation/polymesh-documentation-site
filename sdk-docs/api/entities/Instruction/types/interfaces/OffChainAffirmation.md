@@ -1,10 +1,10 @@
 # Interface: OffChainAffirmation
 
-> Defined in: [src/api/entities/Instruction/types.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L113)
+> Defined in: [src/api/entities/Instruction/types.ts:132](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L132)
 
 # Interface: OffChainAffirmation
 
-Defined in: [src/api/entities/Instruction/types.ts:113](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L113)
+Defined in: [src/api/entities/Instruction/types.ts:132](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L132)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/Instruction/types.ts:113](https://github.com/Polym
 
 > **legId**: `BigNumber`
 
-Defined in: [src/api/entities/Instruction/types.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L114)
+Defined in: [src/api/entities/Instruction/types.ts:133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L133)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/entities/Instruction/types.ts:114](https://github.com/Polym
 
 > **status**: [`AffirmationStatus`](../enumerations/AffirmationStatus.mdx)
 
-Defined in: [src/api/entities/Instruction/types.ts:115](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Instruction/types.ts#L115)
+Defined in: [src/api/entities/Instruction/types.ts:134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/types.ts#L134)

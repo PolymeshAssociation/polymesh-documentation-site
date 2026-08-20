@@ -6,7 +6,7 @@
 
 > **CustomClaimTypeWithDid** = [`CustomClaimType`](CustomClaimType.mdx) & `object`
 
-Defined in: [src/api/client/types.ts:219](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L219)
+Defined in: [src/api/client/types.ts:218](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L218)
 
 CustomClaimType with DID that registered the CustomClaimType
 
@@ -20,4 +20,4 @@ Defined in
 
 `string`
 
-[src/api/client/types.ts:219](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/types.ts#L219)
+[src/api/client/types.ts:218](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L218)

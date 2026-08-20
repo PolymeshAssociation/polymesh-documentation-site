@@ -6,7 +6,7 @@
 
 > **TransferRestrictionExemptionParams** = `object`
 
-Defined in: [src/api/procedures/types.ts:676](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L676)
+Defined in: [src/api/procedures/types.ts:674](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L674)
 
 ## Properties
 
@@ -18,16 +18,16 @@ Defined in
 
 [`ClaimType`](../../../entities/types/enumerations/ClaimType.mdx)
 
-[src/api/procedures/types.ts:679](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L679)
+[src/api/procedures/types.ts:677](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L677)
 
  `identities`
 
 ([`Identity`](../../../entities/Identity/classes/Identity.mdx) \| `string`)[]
 
-[src/api/procedures/types.ts:678](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L678)
+[src/api/procedures/types.ts:676](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L676)
 
  `type`
 
 [`StatType`](../../../entities/types/enumerations/StatType.mdx)
 
-[src/api/procedures/types.ts:677](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L677)
+[src/api/procedures/types.ts:675](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L675)

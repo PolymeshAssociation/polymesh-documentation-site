@@ -6,7 +6,7 @@
 
 > **AgentTxGroup** = *typeof* [`AGENT_TX_GROUP_VALUES`](../../../../types/txGroupConstants/variables/AGENT_TX_GROUP_VALUES.mdx)\[`number`\]
 
-Defined in: [src/api/procedures/types.ts:486](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L486)
+Defined in: [src/api/procedures/types.ts:484](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L484)
 
 Type-level union of the `TxGroup` values that External Agents can use.
 

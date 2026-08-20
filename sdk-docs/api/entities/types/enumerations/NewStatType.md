@@ -1,10 +1,10 @@
 # Enumeration: NewStatType
 
-> Defined in: [src/api/entities/types.ts:308](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L308)
+> Defined in: [src/api/entities/types.ts:302](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L302)
 
 # Enumeration: NewStatType
 
-Defined in: [src/api/entities/types.ts:308](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L308)
+Defined in: [src/api/entities/types.ts:302](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L302)
 
 ## Enumeration Members
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/types.ts:308](https://github.com/PolymeshAssociati
 
 > **Balance**: `"Balance"`
 
-Defined in: [src/api/entities/types.ts:310](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L310)
+Defined in: [src/api/entities/types.ts:304](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L304)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/entities/types.ts:310](https://github.com/PolymeshAssociati
 
 > **Count**: `"Count"`
 
-Defined in: [src/api/entities/types.ts:309](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L309)
+Defined in: [src/api/entities/types.ts:303](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L303)

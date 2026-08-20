@@ -1,10 +1,10 @@
 # Interface: VenueOwnerRole
 
-> Defined in: [src/api/procedures/types.ts:300](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L300)
+> Defined in: [src/api/procedures/types.ts:290](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L290)
 
 # Interface: VenueOwnerRole
 
-Defined in: [src/api/procedures/types.ts:300](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L300)
+Defined in: [src/api/procedures/types.ts:290](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L290)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/procedures/types.ts:300](https://github.com/PolymeshAssocia
 
 > **type**: [`VenueOwner`](../enumerations/RoleType.mdx#venueowner)
 
-Defined in: [src/api/procedures/types.ts:301](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L301)
+Defined in: [src/api/procedures/types.ts:291](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L291)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/procedures/types.ts:301](https://github.com/PolymeshAssocia
 
 > **venueId**: `BigNumber`
 
-Defined in: [src/api/procedures/types.ts:302](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L302)
+Defined in: [src/api/procedures/types.ts:292](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L292)

@@ -1,10 +1,10 @@
 # Interface: UniqueIdentifiers
 
-> Defined in: [src/api/entities/Venue/index.ts:41](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Venue/index.ts#L41)
+> Defined in: [src/api/entities/Venue/index.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Venue/index.ts#L42)
 
 # Interface: UniqueIdentifiers
 
-Defined in: [src/api/entities/Venue/index.ts:41](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Venue/index.ts#L41)
+Defined in: [src/api/entities/Venue/index.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Venue/index.ts#L42)
 
 ## Properties
 
@@ -12,4 +12,4 @@ Defined in: [src/api/entities/Venue/index.ts:41](https://github.com/PolymeshAsso
 
 > **id**: `BigNumber`
 
-Defined in: [src/api/entities/Venue/index.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Venue/index.ts#L42)
+Defined in: [src/api/entities/Venue/index.ts:43](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Venue/index.ts#L43)

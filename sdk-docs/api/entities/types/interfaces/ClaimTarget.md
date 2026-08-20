@@ -1,10 +1,10 @@
 # Interface: ClaimTarget
 
-> Defined in: [src/api/entities/types.ts:445](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L445)
+> Defined in: [src/api/entities/types.ts:439](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L439)
 
 # Interface: ClaimTarget
 
-Defined in: [src/api/entities/types.ts:445](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L445)
+Defined in: [src/api/entities/types.ts:439](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L439)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/types.ts:445](https://github.com/PolymeshAssociati
 
 > **claim**: [`Claim`](../type-aliases/Claim.mdx)
 
-Defined in: [src/api/entities/types.ts:447](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L447)
+Defined in: [src/api/entities/types.ts:441](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L441)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/entities/types.ts:447](https://github.com/PolymeshAssociati
 
 > `optional` **expiry?**: `Date`
 
-Defined in: [src/api/entities/types.ts:448](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L448)
+Defined in: [src/api/entities/types.ts:442](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L442)
 
 ***
 
@@ -28,4 +28,4 @@ Defined in: [src/api/entities/types.ts:448](https://github.com/PolymeshAssociati
 
 > **target**: `string` \| [`Identity`](../../Identity/classes/Identity.mdx)
 
-Defined in: [src/api/entities/types.ts:446](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L446)
+Defined in: [src/api/entities/types.ts:440](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L440)

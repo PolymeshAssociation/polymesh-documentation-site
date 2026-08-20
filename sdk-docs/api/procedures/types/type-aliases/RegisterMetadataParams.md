@@ -6,4 +6,4 @@
 
 > **RegisterMetadataParams** = \{ `name`: `string`; `specs`: [`MetadataSpec`](../../../entities/MetadataEntry/types/interfaces/MetadataSpec.mdx); \} \| \{ `details?`: [`MetadataValueDetails`](../../../entities/MetadataEntry/types/type-aliases/MetadataValueDetails.mdx); `name`: `string`; `specs`: [`MetadataSpec`](../../../entities/MetadataEntry/types/interfaces/MetadataSpec.mdx); `value`: `string`; \}
 
-Defined in: [src/api/procedures/types.ts:1911](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1911)
+Defined in: [src/api/procedures/types.ts:1841](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1841)

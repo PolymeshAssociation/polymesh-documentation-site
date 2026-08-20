@@ -1,10 +1,10 @@
 # Interface: Tier
 
-> Defined in: [src/api/entities/Offering/types.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/types.ts#L68)
+> Defined in: [src/api/entities/Offering/types.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/types.ts#L68)
 
 # Interface: Tier
 
-Defined in: [src/api/entities/Offering/types.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/types.ts#L68)
+Defined in: [src/api/entities/Offering/types.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/types.ts#L68)
 
 ## Extends
 
@@ -16,7 +16,7 @@ Defined in: [src/api/entities/Offering/types.ts:68](https://github.com/PolymeshA
 
 > **amount**: `BigNumber`
 
-Defined in: [src/api/entities/Offering/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/types.ts#L64)
+Defined in: [src/api/entities/Offering/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/types.ts#L64)
 
 #### Inherited from
 
@@ -28,7 +28,7 @@ Defined in: [src/api/entities/Offering/types.ts:64](https://github.com/PolymeshA
 
 > **price**: `BigNumber`
 
-Defined in: [src/api/entities/Offering/types.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/types.ts#L65)
+Defined in: [src/api/entities/Offering/types.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/types.ts#L65)
 
 #### Inherited from
 
@@ -40,4 +40,4 @@ Defined in: [src/api/entities/Offering/types.ts:65](https://github.com/PolymeshA
 
 > **remaining**: `BigNumber`
 
-Defined in: [src/api/entities/Offering/types.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Offering/types.ts#L69)
+Defined in: [src/api/entities/Offering/types.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/types.ts#L69)

@@ -1,10 +1,10 @@
 # Interface: HumanReadable
 
-> Defined in: [src/api/entities/CheckpointSchedule/index.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CheckpointSchedule/index.ts#L18)
+> Defined in: [src/api/entities/CheckpointSchedule/index.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CheckpointSchedule/index.ts#L18)
 
 # Interface: HumanReadable
 
-Defined in: [src/api/entities/CheckpointSchedule/index.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CheckpointSchedule/index.ts#L18)
+Defined in: [src/api/entities/CheckpointSchedule/index.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CheckpointSchedule/index.ts#L18)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/CheckpointSchedule/index.ts:18](https://github.com
 
 > **assetId**: `string`
 
-Defined in: [src/api/entities/CheckpointSchedule/index.ts:20](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CheckpointSchedule/index.ts#L20)
+Defined in: [src/api/entities/CheckpointSchedule/index.ts:20](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CheckpointSchedule/index.ts#L20)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/entities/CheckpointSchedule/index.ts:20](https://github.com
 
 > **expiryDate**: `string` \| `null`
 
-Defined in: [src/api/entities/CheckpointSchedule/index.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CheckpointSchedule/index.ts#L22)
+Defined in: [src/api/entities/CheckpointSchedule/index.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CheckpointSchedule/index.ts#L22)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/api/entities/CheckpointSchedule/index.ts:22](https://github.com
 
 > **id**: `string`
 
-Defined in: [src/api/entities/CheckpointSchedule/index.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CheckpointSchedule/index.ts#L19)
+Defined in: [src/api/entities/CheckpointSchedule/index.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CheckpointSchedule/index.ts#L19)
 
 ***
 
@@ -36,4 +36,4 @@ Defined in: [src/api/entities/CheckpointSchedule/index.ts:19](https://github.com
 
 > **pendingPoints**: `string`[]
 
-Defined in: [src/api/entities/CheckpointSchedule/index.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CheckpointSchedule/index.ts#L21)
+Defined in: [src/api/entities/CheckpointSchedule/index.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CheckpointSchedule/index.ts#L21)

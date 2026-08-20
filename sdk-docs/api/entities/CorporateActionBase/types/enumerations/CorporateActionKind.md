@@ -1,10 +1,10 @@
 # Enumeration: CorporateActionKind
 
-> Defined in: [src/api/entities/CorporateActionBase/types.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateActionBase/types.ts#L35)
+> Defined in: [src/api/entities/CorporateActionBase/types.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateActionBase/types.ts#L35)
 
 # Enumeration: CorporateActionKind
 
-Defined in: [src/api/entities/CorporateActionBase/types.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateActionBase/types.ts#L35)
+Defined in: [src/api/entities/CorporateActionBase/types.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateActionBase/types.ts#L35)
 
 ## Enumeration Members
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/CorporateActionBase/types.ts:35](https://github.co
 
 > **IssuerNotice**: `"IssuerNotice"`
 
-Defined in: [src/api/entities/CorporateActionBase/types.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateActionBase/types.ts#L38)
+Defined in: [src/api/entities/CorporateActionBase/types.ts:38](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateActionBase/types.ts#L38)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/entities/CorporateActionBase/types.ts:38](https://github.co
 
 > **Other**: `"Other"`
 
-Defined in: [src/api/entities/CorporateActionBase/types.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateActionBase/types.ts#L40)
+Defined in: [src/api/entities/CorporateActionBase/types.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateActionBase/types.ts#L40)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/api/entities/CorporateActionBase/types.ts:40](https://github.co
 
 > **PredictableBenefit**: `"PredictableBenefit"`
 
-Defined in: [src/api/entities/CorporateActionBase/types.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateActionBase/types.ts#L36)
+Defined in: [src/api/entities/CorporateActionBase/types.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateActionBase/types.ts#L36)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [src/api/entities/CorporateActionBase/types.ts:36](https://github.co
 
 > **Reorganization**: `"Reorganization"`
 
-Defined in: [src/api/entities/CorporateActionBase/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateActionBase/types.ts#L39)
+Defined in: [src/api/entities/CorporateActionBase/types.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateActionBase/types.ts#L39)
 
 ***
 
@@ -44,4 +44,4 @@ Defined in: [src/api/entities/CorporateActionBase/types.ts:39](https://github.co
 
 > **UnpredictableBenefit**: `"UnpredictableBenefit"`
 
-Defined in: [src/api/entities/CorporateActionBase/types.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateActionBase/types.ts#L37)
+Defined in: [src/api/entities/CorporateActionBase/types.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateActionBase/types.ts#L37)

@@ -3,6 +3,7 @@
 > - [AffirmationStatus](enumerations/AffirmationStatus.mdx)
 - [InstructionStatus](enumerations/InstructionStatus.mdx)
 - [InstructionType](enumerations/InstructionType.mdx)
+- [LegStatusType](enumerations/LegStatusType.mdx)
 - [ReceiverAffirmationRequirement](enumerations/ReceiverAffirmationRequirement.mdx)
 
 # Entity: Instruction/types
@@ -12,6 +13,7 @@
 - [AffirmationStatus](enumerations/AffirmationStatus.mdx)
 - [InstructionStatus](enumerations/InstructionStatus.mdx)
 - [InstructionType](enumerations/InstructionType.mdx)
+- [LegStatusType](enumerations/LegStatusType.mdx)
 - [ReceiverAffirmationRequirement](enumerations/ReceiverAffirmationRequirement.mdx)
 
 ## Interfaces
@@ -21,6 +23,7 @@
 - [GroupedInvolvedInstructions](interfaces/GroupedInvolvedInstructions.mdx)
 - [InstructionAffirmation](interfaces/InstructionAffirmation.mdx)
 - [InstructionLockedInfo](interfaces/InstructionLockedInfo.mdx)
+- [InstructionRelockStatus](interfaces/InstructionRelockStatus.mdx)
 - [NftLeg](interfaces/NftLeg.mdx)
 - [OffChainAffirmation](interfaces/OffChainAffirmation.mdx)
 - [OffChainLeg](interfaces/OffChainLeg.mdx)
@@ -33,4 +36,5 @@
 - [InstructionsByStatus](type-aliases/InstructionsByStatus.mdx)
 - [InstructionStatusResult](type-aliases/InstructionStatusResult.mdx)
 - [Leg](type-aliases/Leg.mdx)
+- [LegStatus](type-aliases/LegStatus.mdx)
 - [MediatorAffirmation](type-aliases/MediatorAffirmation.mdx)

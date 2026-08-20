@@ -1,10 +1,10 @@
 # Class: Requirements
 
-> Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Compliance/Requirements.ts#L39)
+> Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/Requirements.ts#L39)
 
 # Class: Requirements
 
-Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Compliance/Requirements.ts#L39)
+Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/Requirements.ts#L39)
 
 Handles all Asset Compliance Requirements related functionality
 
@@ -18,7 +18,7 @@ Handles all Asset Compliance Requirements related functionality
 
 > **add**(`args`: [`AddAssetRequirementParams`](../../../../../../procedures/types/interfaces/AddAssetRequirementParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:88](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Compliance/Requirements.ts#L88)
+Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:88](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/Requirements.ts#L88)
 
 Add a new compliance requirement to the the Asset. This doesn't modify existing requirements
 
@@ -49,7 +49,7 @@ this method is of type [ProcedureMethod](../../../../../../procedures/types/inte
 
 > **arePaused**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:197](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Compliance/Requirements.ts#L197)
+Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:197](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/Requirements.ts#L197)
 
 Check whether Asset compliance requirements are paused or not
 
@@ -65,7 +65,7 @@ Check whether Asset compliance requirements are paused or not
 
 > **get**(): `Promise`\<[`ComplianceRequirements`](../../../../../types/interfaces/ComplianceRequirements.mdx)\>
 
-Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Compliance/Requirements.ts#L108)
+Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/Requirements.ts#L108)
 
 Retrieve all of the Asset's compliance requirements, together with the Default Trusted Claim Issuers
 
@@ -79,7 +79,7 @@ Promise that resolves to the compliance requirements and trusted claim issuers
 
 > **get**(`callback`: [`SubCallback`](../../../../../types/type-aliases/SubCallback.mdx)\<[`ComplianceRequirements`](../../../../../types/interfaces/ComplianceRequirements.mdx)\>): `Promise`\<[`UnsubCallback`](../../../../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Compliance/Requirements.ts#L118)
+Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/Requirements.ts#L118)
 
 Retrieve all of the Asset's compliance requirements, together with the Default Trusted Claim Issuers
 
@@ -111,7 +111,7 @@ can be subscribed to, if connected to node using a web socket
 
 > **modify**(`args`: [`ModifyComplianceRequirementParams`](../../../../../../procedures/types/type-aliases/ModifyComplianceRequirementParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:218](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Compliance/Requirements.ts#L218)
+Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:218](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/Requirements.ts#L218)
 
 Modify a compliance requirement for the Asset
 
@@ -142,7 +142,7 @@ this method is of type [ProcedureMethod](../../../../../../procedures/types/inte
 
 > **pause**(`opts?`: [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:187](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Compliance/Requirements.ts#L187)
+Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:187](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/Requirements.ts#L187)
 
 Pause all the Asset's requirements. This means that all transfers will be allowed until requirements are unpaused
 
@@ -169,7 +169,7 @@ this method is of type [NoArgsProcedureMethod](../../../../../../procedures/type
 
 > **remove**(`args`: [`RemoveAssetRequirementParams`](../../../../../../procedures/types/interfaces/RemoveAssetRequirementParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Compliance/Requirements.ts#L93)
+Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/Requirements.ts#L93)
 
 Remove an existing compliance requirement from the Asset
 
@@ -200,7 +200,7 @@ this method is of type [ProcedureMethod](../../../../../../procedures/types/inte
 
 > **reset**(`opts?`: [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Compliance/Requirements.ts#L182)
+Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/Requirements.ts#L182)
 
 Delete all the current requirements for the Asset.
 
@@ -227,7 +227,7 @@ this method is of type [NoArgsProcedureMethod](../../../../../../procedures/type
 
 > **set**(`args`: [`SetAssetRequirementsParams`](../../../../../../procedures/types/interfaces/SetAssetRequirementsParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Compliance/Requirements.ts#L101)
+Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:101](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/Requirements.ts#L101)
 
 Configure compliance requirements for the Asset. This operation will replace all existing requirements with a new requirement set
 
@@ -265,7 +265,7 @@ this method is of type [ProcedureMethod](../../../../../../procedures/types/inte
 
 > **unpause**(`opts?`: [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:192](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Base/Compliance/Requirements.ts#L192)
+Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:192](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/Requirements.ts#L192)
 
 Un-pause all the Asset's current requirements
 

@@ -6,7 +6,7 @@
 
 > **ClaimCountStatInput** = \{ `claimType`: [`Accredited`](../enumerations/ClaimType.mdx#accredited); `issuer`: [`Identity`](Identity.mdx); `value?`: \{ `accredited`: `BigNumber`; `nonAccredited`: `BigNumber`; \}; \} \| \{ `claimType`: [`Affiliate`](../enumerations/ClaimType.mdx#affiliate); `issuer`: [`Identity`](Identity.mdx); `value?`: \{ `affiliate`: `BigNumber`; `nonAffiliate`: `BigNumber`; \}; \} \| \{ `claimType`: [`Jurisdiction`](../enumerations/ClaimType.mdx#jurisdiction); `issuer`: [`Identity`](Identity.mdx); `value?`: `object`[]; \}
 
-Defined in: [src/api/entities/types.ts:586](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L586)
+Defined in: [src/api/entities/types.ts:570](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L570)
 
 ## Union Members
 
@@ -25,7 +25,7 @@ Defined in
 
 &hyphen;
 
-[src/api/entities/types.ts:589](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L589)
+[src/api/entities/types.ts:573](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L573)
 
 `issuer`
 
@@ -33,7 +33,7 @@ Defined in
 
 &hyphen;
 
-[src/api/entities/types.ts:588](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L588)
+[src/api/entities/types.ts:572](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L572)
 
 `value?`
 
@@ -46,7 +46,7 @@ The count values for token holders with the accredited and non-accredited claim
 If not provided when enabling a stat, values will default to zero.
   If not provided when updating stats, the current values will remain unchanged
 
-[src/api/entities/types.ts:596](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L596)
+[src/api/entities/types.ts:580](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L580)
 
 `value.accredited`
 
@@ -54,7 +54,7 @@ If not provided when enabling a stat, values will default to zero.
 
 &hyphen;
 
-[src/api/entities/types.ts:596](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L596)
+[src/api/entities/types.ts:580](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L580)
 
 `value.nonAccredited`
 
@@ -62,7 +62,7 @@ If not provided when enabling a stat, values will default to zero.
 
 &hyphen;
 
-[src/api/entities/types.ts:596](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L596)
+[src/api/entities/types.ts:580](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L580)
 
 ***
 
@@ -81,7 +81,7 @@ Defined in
 
 &hyphen;
 
-[src/api/entities/types.ts:600](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L600)
+[src/api/entities/types.ts:584](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L584)
 
 `issuer`
 
@@ -89,7 +89,7 @@ Defined in
 
 &hyphen;
 
-[src/api/entities/types.ts:599](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L599)
+[src/api/entities/types.ts:583](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L583)
 
 `value?`
 
@@ -102,7 +102,7 @@ The count values for token holders with the affiliate and non-affiliate claim
 If not provided when enabling a stat, values will default to zero.
   If not provided when updating stats, the current values will remain unchanged
 
-[src/api/entities/types.ts:607](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L607)
+[src/api/entities/types.ts:591](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L591)
 
 `value.affiliate`
 
@@ -110,7 +110,7 @@ If not provided when enabling a stat, values will default to zero.
 
 &hyphen;
 
-[src/api/entities/types.ts:607](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L607)
+[src/api/entities/types.ts:591](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L591)
 
 `value.nonAffiliate`
 
@@ -118,7 +118,7 @@ If not provided when enabling a stat, values will default to zero.
 
 &hyphen;
 
-[src/api/entities/types.ts:607](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L607)
+[src/api/entities/types.ts:591](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L591)
 
 ***
 
@@ -137,7 +137,7 @@ Defined in
 
 &hyphen;
 
-[src/api/entities/types.ts:611](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L611)
+[src/api/entities/types.ts:595](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L595)
 
 `issuer`
 
@@ -145,7 +145,7 @@ Defined in
 
 &hyphen;
 
-[src/api/entities/types.ts:610](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L610)
+[src/api/entities/types.ts:594](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L594)
 
 `value?`
 
@@ -158,4 +158,4 @@ The count values for token holders per jurisdiction claim
 If not provided when enabling a stat, values will default to zero.
   If not provided when updating stats, the current values will remain unchanged
 
-[src/api/entities/types.ts:618](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L618)
+[src/api/entities/types.ts:602](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L602)

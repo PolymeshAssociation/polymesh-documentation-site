@@ -1,10 +1,10 @@
 # Class: CustomPermissionGroup
 
-> Defined in: [src/api/entities/CustomPermissionGroup.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CustomPermissionGroup.ts#L33)
+> Defined in: [src/api/entities/CustomPermissionGroup.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CustomPermissionGroup.ts#L33)
 
 # Class: CustomPermissionGroup
 
-Defined in: [src/api/entities/CustomPermissionGroup.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CustomPermissionGroup.ts#L33)
+Defined in: [src/api/entities/CustomPermissionGroup.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CustomPermissionGroup.ts#L33)
 
 Represents a group of custom permissions for an Asset
 
@@ -18,7 +18,7 @@ Represents a group of custom permissions for an Asset
 
 > **asset**: [`BaseAsset`](../../Asset/Base/BaseAsset/classes/BaseAsset.mdx)
 
-Defined in: [src/api/entities/PermissionGroup.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/PermissionGroup.ts#L19)
+Defined in: [src/api/entities/PermissionGroup.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/PermissionGroup.ts#L19)
 
 Asset for which this group specifies permissions
 
@@ -32,7 +32,7 @@ Asset for which this group specifies permissions
 
 > **id**: `BigNumber`
 
-Defined in: [src/api/entities/CustomPermissionGroup.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CustomPermissionGroup.ts#L44)
+Defined in: [src/api/entities/CustomPermissionGroup.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CustomPermissionGroup.ts#L44)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [src/api/entities/CustomPermissionGroup.ts:44](https://github.com/Po
 
 > **uuid**: `string`
 
-Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L46)
+Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L46)
 
 #### Inherited from
 
@@ -52,7 +52,7 @@ Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociati
 
 > **exists**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/CustomPermissionGroup.ts:106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CustomPermissionGroup.ts#L106)
+Defined in: [src/api/entities/CustomPermissionGroup.ts:106](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CustomPermissionGroup.ts#L106)
 
 Determine whether this Custom Permission Group exists on chain
 
@@ -70,7 +70,7 @@ Determine whether this Custom Permission Group exists on chain
 
 > **getPermissions**(): `Promise`\<[`GroupPermissions`](../../types/type-aliases/GroupPermissions.mdx)\>
 
-Defined in: [src/api/entities/CustomPermissionGroup.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CustomPermissionGroup.ts#L70)
+Defined in: [src/api/entities/CustomPermissionGroup.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CustomPermissionGroup.ts#L70)
 
 Retrieve the list of permissions and transaction groups associated with this Permission Group
 
@@ -88,7 +88,7 @@ Retrieve the list of permissions and transaction groups associated with this Per
 
 > **isEqual**(`entity`: [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>): `boolean`
 
-Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L61)
+Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L61)
 
 Determine whether this Entity is the same as another one
 
@@ -115,7 +115,7 @@ Type
 
 > **setPermissions**(`args`: [`SetGroupPermissionsParams`](../../../procedures/types/interfaces/SetGroupPermissionsParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/CustomPermissionGroup.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CustomPermissionGroup.ts#L65)
+Defined in: [src/api/entities/CustomPermissionGroup.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CustomPermissionGroup.ts#L65)
 
 Modify the group's permissions
 
@@ -146,7 +146,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **toHuman**(): [`HumanReadable`](../interfaces/HumanReadable.mdx)
 
-Defined in: [src/api/entities/CustomPermissionGroup.ts:120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CustomPermissionGroup.ts#L120)
+Defined in: [src/api/entities/CustomPermissionGroup.ts:120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CustomPermissionGroup.ts#L120)
 
 Return the Group's static data
 
@@ -164,7 +164,7 @@ Return the Group's static data
 
 > `static` **generateUuid**\<`Identifiers`\>(`identifiers`: `Identifiers`): `string`
 
-Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L14)
+Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L14)
 
 Generate the Entity's UUID from its identifying properties
 
@@ -200,7 +200,7 @@ Description
 
 > `static` **unserialize**\<`Identifiers`\>(`serialized`: `string`): `Identifiers`
 
-Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L23)
+Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L23)
 
 Unserialize a UUID into its Unique Identifiers
 

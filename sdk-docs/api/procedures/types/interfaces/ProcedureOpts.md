@@ -1,10 +1,10 @@
 # Interface: ProcedureOpts
 
-> Defined in: [src/api/procedures/types.ts:116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L116)
+> Defined in: [src/api/procedures/types.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L114)
 
 # Interface: ProcedureOpts
 
-Defined in: [src/api/procedures/types.ts:116](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L116)
+Defined in: [src/api/procedures/types.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L114)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/procedures/types.ts:116](https://github.com/PolymeshAssocia
 
 > `optional` **mortality?**: [`MortalityProcedureOpt`](../type-aliases/MortalityProcedureOpt.mdx)
 
-Defined in: [src/api/procedures/types.ts:136](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L136)
+Defined in: [src/api/procedures/types.ts:134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L134)
 
 This option allows for transactions that never expire, aka "immortal". By default, a transaction is only valid for approximately 5 minutes (250 blocks) after its construction. Allows for transaction construction to be decoupled from its submission, such as requiring manual approval for the signing or providing "at least once" guarantees.
 
@@ -24,7 +24,7 @@ More information can be found [here](https://wiki.polkadot.network/docs/build-pr
 
 > `optional` **multiSigOpts?**: [`MultiSigProcedureOpt`](MultiSigProcedureOpt.mdx)
 
-Defined in: [src/api/procedures/types.ts:141](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L141)
+Defined in: [src/api/procedures/types.ts:139](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L139)
 
 These options will only apply when the `signingAccount` is a MultiSig signer and the transaction is being wrapped as a proposal
 
@@ -34,7 +34,7 @@ These options will only apply when the `signingAccount` is a MultiSig signer and
 
 > `optional` **nonce?**: `BigNumber` \| `Promise`\<`BigNumber`\> \| (() => `BigNumber` \| `Promise`\<`BigNumber`\>)
 
-Defined in: [src/api/procedures/types.ts:129](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L129)
+Defined in: [src/api/procedures/types.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L127)
 
 nonce value for signing the transaction
 
@@ -50,7 +50,7 @@ the passed value can be either the nonce itself or a function that returns the n
 
 > `optional` **signingAccount?**: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
 
-Defined in: [src/api/procedures/types.ts:120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L120)
+Defined in: [src/api/procedures/types.ts:118](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L118)
 
 Account or address of a signing key to replace the current one (for this procedure only)
 
@@ -60,7 +60,7 @@ Account or address of a signing key to replace the current one (for this procedu
 
 > `optional` **skipChecks?**: [`SkipChecksOpt`](SkipChecksOpt.mdx)
 
-Defined in: [src/api/procedures/types.ts:150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L150)
+Defined in: [src/api/procedures/types.ts:148](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L148)
 
 This option allows for skipping checks for the Procedure. By default, all checks are performed.
 

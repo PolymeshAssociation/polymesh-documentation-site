@@ -6,7 +6,7 @@
 
 > **RotatePrimaryKeyAuthorizationData** = `object`
 
-Defined in: [src/api/entities/types.ts:456](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L456)
+Defined in: [src/api/entities/types.ts:450](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L450)
 
 ## Properties
 
@@ -18,4 +18,4 @@ Defined in
 
 [`RotatePrimaryKey`](../enumerations/AuthorizationType.mdx#rotateprimarykey)
 
-[src/api/entities/types.ts:457](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L457)
+[src/api/entities/types.ts:451](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L451)

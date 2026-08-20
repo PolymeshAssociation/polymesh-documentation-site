@@ -6,7 +6,7 @@
 
 > **AddInstructionParams** = `object` & \{ `endBlock?`: `BigNumber`; \} \| \{ `endAfterBlock?`: `BigNumber`; \} \| \{ `endAfterLock?`: `true`; \}
 
-Defined in: [src/api/procedures/types.ts:1087](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1087)
+Defined in: [src/api/procedures/types.ts:1069](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1069)
 
 ## Type Declaration
 
@@ -21,7 +21,7 @@ Defined in
 
 array of Asset movements
 
-[src/api/procedures/types.ts:1091](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1091)
+[src/api/procedures/types.ts:1073](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1073)
 
 `mediators?`
 
@@ -33,7 +33,7 @@ additional identities that must affirm the instruction
 
 mediators are mandatory if settlement is to be locked for execution (providing `endAfterLock`)
 
-[src/api/procedures/types.ts:1109](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1109)
+[src/api/procedures/types.ts:1091](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1091)
 
 `memo?`
 
@@ -41,7 +41,7 @@ mediators are mandatory if settlement is to be locked for execution (providing `
 
 identifier string to help differentiate instructions
 
-[src/api/procedures/types.ts:1103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1103)
+[src/api/procedures/types.ts:1085](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1085)
 
 `tradeDate?`
 
@@ -49,7 +49,7 @@ identifier string to help differentiate instructions
 
 date at which the trade was agreed upon (optional, for off chain trades)
 
-[src/api/procedures/types.ts:1095](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1095)
+[src/api/procedures/types.ts:1077](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1077)
 
 `valueDate?`
 
@@ -57,4 +57,4 @@ date at which the trade was agreed upon (optional, for off chain trades)
 
 date at which the trade was executed (optional, for off chain trades)
 
-[src/api/procedures/types.ts:1099](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1099)
+[src/api/procedures/types.ts:1081](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1081)

@@ -1,10 +1,10 @@
 # Interface: HumanReadable
 
-> Defined in: [src/api/entities/AuthorizationRequest.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L31)
+> Defined in: [src/api/entities/AuthorizationRequest.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/AuthorizationRequest.ts#L31)
 
 # Interface: HumanReadable
 
-Defined in: [src/api/entities/AuthorizationRequest.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L31)
+Defined in: [src/api/entities/AuthorizationRequest.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/AuthorizationRequest.ts#L31)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/AuthorizationRequest.ts:31](https://github.com/Pol
 
 > **data**: [`HumanReadableType`](../../../../types/utils/type-aliases/HumanReadableType.mdx)\<[`Authorization`](../../types/type-aliases/Authorization.mdx)\>
 
-Defined in: [src/api/entities/AuthorizationRequest.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L35)
+Defined in: [src/api/entities/AuthorizationRequest.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/AuthorizationRequest.ts#L35)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/entities/AuthorizationRequest.ts:35](https://github.com/Pol
 
 > **expiry**: `string` \| `null`
 
-Defined in: [src/api/entities/AuthorizationRequest.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L33)
+Defined in: [src/api/entities/AuthorizationRequest.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/AuthorizationRequest.ts#L33)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/api/entities/AuthorizationRequest.ts:33](https://github.com/Pol
 
 > **id**: `string`
 
-Defined in: [src/api/entities/AuthorizationRequest.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L36)
+Defined in: [src/api/entities/AuthorizationRequest.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/AuthorizationRequest.ts#L36)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [src/api/entities/AuthorizationRequest.ts:36](https://github.com/Pol
 
 > **issuer**: `string`
 
-Defined in: [src/api/entities/AuthorizationRequest.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L32)
+Defined in: [src/api/entities/AuthorizationRequest.ts:32](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/AuthorizationRequest.ts#L32)
 
 ***
 
@@ -44,4 +44,4 @@ Defined in: [src/api/entities/AuthorizationRequest.ts:32](https://github.com/Pol
 
 > **target**: [`SignerValue`](../../types/interfaces/SignerValue.mdx)
 
-Defined in: [src/api/entities/AuthorizationRequest.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/AuthorizationRequest.ts#L34)
+Defined in: [src/api/entities/AuthorizationRequest.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/AuthorizationRequest.ts#L34)

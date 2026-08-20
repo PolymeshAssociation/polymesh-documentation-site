@@ -1,10 +1,10 @@
 # Class: Subsidies
 
-> Defined in: [src/api/entities/Subsidies.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Subsidies.ts#L8)
+> Defined in: [src/api/entities/Subsidies.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Subsidies.ts#L8)
 
 # Class: Subsidies
 
-Defined in: [src/api/entities/Subsidies.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Subsidies.ts#L8)
+Defined in: [src/api/entities/Subsidies.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Subsidies.ts#L8)
 
 Handles all Account Subsidies related functionality
 
@@ -18,7 +18,7 @@ Handles all Account Subsidies related functionality
 
 > **getBeneficiaries**(): `Promise`\<[`SubsidyWithAllowance`](../../Subsidy/types/interfaces/SubsidyWithAllowance.mdx)[]\>
 
-Defined in: [src/api/entities/Subsidies.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Subsidies.ts#L12)
+Defined in: [src/api/entities/Subsidies.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Subsidies.ts#L12)
 
 Get the list of Subsidy relationship along with their subsidized amount for which this Account is the subsidizer
 
@@ -32,17 +32,13 @@ Get the list of Subsidy relationship along with their subsidized amount for whic
 
 > **getPendingSubsidies**(): `Promise`\<[`SubsidyWithAllowance`](../../Subsidy/types/interfaces/SubsidyWithAllowance.mdx)[]\>
 
-Defined in: [src/api/entities/Subsidies.ts:94](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Subsidies.ts#L94)
+Defined in: [src/api/entities/Subsidies.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Subsidies.ts#L92)
 
 Get pending subsidies (for which this Account is the beneficiary) that have been authorised but not yet accepted.
 
 #### Returns
 
 `Promise`\<[`SubsidyWithAllowance`](../../Subsidy/types/interfaces/SubsidyWithAllowance.mdx)[]\>
-
-#### Note
-
-this method is supported only with v8 chains
 
 ***
 
@@ -52,7 +48,7 @@ this method is supported only with v8 chains
 
 > **getSubsidizer**(): `Promise`\<[`SubsidyWithAllowance`](../../Subsidy/types/interfaces/SubsidyWithAllowance.mdx) \| `null`\>
 
-Defined in: [src/api/entities/Subsidies.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Subsidies.ts#L60)
+Defined in: [src/api/entities/Subsidies.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Subsidies.ts#L60)
 
 Get the Subsidy relationship along with the subsidized amount for this Account is the beneficiary.
 
@@ -66,7 +62,7 @@ the Subsidy relationship, or null if this Account isn't being subsidized
 
 > **getSubsidizer**(`callback`: [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<[`SubsidyWithAllowance`](../../Subsidy/types/interfaces/SubsidyWithAllowance.mdx) \| `null`\>): `Promise`\<[`UnsubCallback`](../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/Subsidies.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Subsidies.ts#L70)
+Defined in: [src/api/entities/Subsidies.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Subsidies.ts#L70)
 
 Get the Subsidy relationship along with the subsidized amount for this Account is the beneficiary.
 

@@ -1,10 +1,10 @@
 # Interface: ClaimCountTransferRestriction
 
-> Defined in: [src/api/entities/types.ts:538](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L538)
+> Defined in: [src/api/entities/types.ts:522](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L522)
 
 # Interface: ClaimCountTransferRestriction
 
-Defined in: [src/api/entities/types.ts:538](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L538)
+Defined in: [src/api/entities/types.ts:522](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L522)
 
 ## Extends
 
@@ -16,7 +16,7 @@ Defined in: [src/api/entities/types.ts:538](https://github.com/PolymeshAssociati
 
 > **claim**: [`InputStatClaim`](../type-aliases/InputStatClaim.mdx)
 
-Defined in: [src/api/entities/types.ts:542](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L542)
+Defined in: [src/api/entities/types.ts:526](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L526)
 
 The type of investors this restriction applies to. e.g. non-accredited
 
@@ -26,7 +26,7 @@ The type of investors this restriction applies to. e.g. non-accredited
 
 > `optional` **exemptedIds?**: `string`[]
 
-Defined in: [src/api/entities/types.ts:525](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L525)
+Defined in: [src/api/entities/types.ts:509](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L509)
 
 array of Identity IDs that are exempted from the Restriction
 
@@ -40,7 +40,7 @@ array of Identity IDs that are exempted from the Restriction
 
 > **issuer**: [`Identity`](../../Identity/classes/Identity.mdx)
 
-Defined in: [src/api/entities/types.ts:552](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L552)
+Defined in: [src/api/entities/types.ts:536](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L536)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [src/api/entities/types.ts:552](https://github.com/PolymeshAssociati
 
 > `optional` **max?**: `BigNumber`
 
-Defined in: [src/api/entities/types.ts:550](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L550)
+Defined in: [src/api/entities/types.ts:534](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L534)
 
 The maximum amount of investors that must meet the Claim criteria
 
@@ -58,6 +58,6 @@ The maximum amount of investors that must meet the Claim criteria
 
 > **min**: `BigNumber`
 
-Defined in: [src/api/entities/types.ts:546](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L546)
+Defined in: [src/api/entities/types.ts:530](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L530)
 
 The minimum amount of investors the must meet the Claim criteria

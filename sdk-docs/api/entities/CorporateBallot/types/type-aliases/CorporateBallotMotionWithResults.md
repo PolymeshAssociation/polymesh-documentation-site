@@ -6,7 +6,7 @@
 
 > **CorporateBallotMotionWithResults** = `Pick`\<[`BallotMotion`](../interfaces/BallotMotion.mdx), `"title"` \| `"infoLink"`\> & `object`
 
-Defined in: [src/api/entities/CorporateBallot/types.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L91)
+Defined in: [src/api/entities/CorporateBallot/types.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/types.ts#L91)
 
 ## Type Declaration
 
@@ -21,7 +21,7 @@ Defined in
 
 The motion choices and their associated votes.
 
-[src/api/entities/CorporateBallot/types.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L95)
+[src/api/entities/CorporateBallot/types.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/types.ts#L95)
 
 `total`
 
@@ -29,4 +29,4 @@ The motion choices and their associated votes.
 
 The total number of votes cast for the motion.
 
-[src/api/entities/CorporateBallot/types.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/CorporateBallot/types.ts#L100)
+[src/api/entities/CorporateBallot/types.ts:100](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/types.ts#L100)

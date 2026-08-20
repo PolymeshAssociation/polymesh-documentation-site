@@ -6,7 +6,7 @@
 
 > **AddCountStatParams** = [`AddCountStatInput`](../../../entities/types/interfaces/AddCountStatInput.mdx) & `object`
 
-Defined in: [src/api/procedures/types.ts:494](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L494)
+Defined in: [src/api/procedures/types.ts:492](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L492)
 
 ## Type Declaration
 
@@ -18,4 +18,4 @@ Defined in
 
 [`Count`](../../../entities/types/enumerations/StatType.mdx#count)
 
-[src/api/procedures/types.ts:495](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L495)
+[src/api/procedures/types.ts:493](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L493)

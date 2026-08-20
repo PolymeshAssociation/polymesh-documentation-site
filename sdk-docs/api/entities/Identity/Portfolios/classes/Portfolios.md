@@ -1,10 +1,10 @@
 # Class: Portfolios
 
-> Defined in: [src/api/entities/Identity/Portfolios.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/Portfolios.ts#L35)
+> Defined in: [src/api/entities/Identity/Portfolios.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/Portfolios.ts#L35)
 
 # Class: Portfolios
 
-Defined in: [src/api/entities/Identity/Portfolios.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/Portfolios.ts#L35)
+Defined in: [src/api/entities/Identity/Portfolios.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/Portfolios.ts#L35)
 
 Handles all Portfolio related functionality on the Identity side
 
@@ -18,7 +18,7 @@ Handles all Portfolio related functionality on the Identity side
 
 > **delete**(`args`: `object`, `opts?`: [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Identity/Portfolios.ts:224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/Portfolios.ts#L224)
+Defined in: [src/api/entities/Identity/Portfolios.ts:224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/Portfolios.ts#L224)
 
 Delete a Portfolio by ID
 
@@ -64,7 +64,7 @@ this method is of type [ProcedureMethod](../../../../procedures/types/interfaces
 
 > **getCustodiedPortfolios**(`paginationOpts?`: [`PaginationOptions`](../../../types/interfaces/PaginationOptions.mdx)): `Promise`\<[`ResultSet`](../../../types/interfaces/ResultSet.mdx)\<[`DefaultPortfolio`](../../../DefaultPortfolio/classes/DefaultPortfolio.mdx) \| [`NumberedPortfolio`](../../../NumberedPortfolio/classes/NumberedPortfolio.mdx)\>\>
 
-Defined in: [src/api/entities/Identity/Portfolios.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/Portfolios.ts#L96)
+Defined in: [src/api/entities/Identity/Portfolios.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/Portfolios.ts#L96)
 
 Retrieve all Portfolios custodied by this Identity.
 This only includes portfolios owned by a different Identity but custodied by this one.
@@ -100,7 +100,7 @@ supports pagination
 
 > **getPortfolio**(): `Promise`\<[`DefaultPortfolio`](../../../DefaultPortfolio/classes/DefaultPortfolio.mdx)\>
 
-Defined in: [src/api/entities/Identity/Portfolios.ts:143](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/Portfolios.ts#L143)
+Defined in: [src/api/entities/Identity/Portfolios.ts:143](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/Portfolios.ts#L143)
 
 Retrieve the Default Portfolio for this Identity
 
@@ -114,7 +114,7 @@ Promise that resolves to the Default Portfolio
 
 > **getPortfolio**(`args`: `object`): `Promise`\<[`NumberedPortfolio`](../../../NumberedPortfolio/classes/NumberedPortfolio.mdx)\>
 
-Defined in: [src/api/entities/Identity/Portfolios.ts:151](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/Portfolios.ts#L151)
+Defined in: [src/api/entities/Identity/Portfolios.ts:151](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/Portfolios.ts#L151)
 
 Retrieve a Numbered Portfolio by its ID
 
@@ -148,7 +148,7 @@ Promise that resolves to the requested Numbered Portfolio
 
 > **getPortfolioByName**(`args`: `object`): `Promise`\<[`NumberedPortfolio`](../../../NumberedPortfolio/classes/NumberedPortfolio.mdx)\>
 
-Defined in: [src/api/entities/Identity/Portfolios.ts:188](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/Portfolios.ts#L188)
+Defined in: [src/api/entities/Identity/Portfolios.ts:188](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/Portfolios.ts#L188)
 
 Retrieve a Numbered Portfolio by its name
 
@@ -186,7 +186,7 @@ if no Portfolio exists with the given name
 
 > **getPortfolios**(): `Promise`\<\[[`DefaultPortfolio`](../../../DefaultPortfolio/classes/DefaultPortfolio.mdx), `...NumberedPortfolio[]`\]\>
 
-Defined in: [src/api/entities/Identity/Portfolios.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/Portfolios.ts#L62)
+Defined in: [src/api/entities/Identity/Portfolios.ts:62](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/Portfolios.ts#L62)
 
 Retrieve all the Portfolios owned by this Identity
 
@@ -202,7 +202,7 @@ An array where the first item is always the Default Portfolio, followed by any N
 
 > **getTransactionHistory**(`filters?`: `object`): `Promise`\<[`HistoricSettlement`](../../../Portfolio/types/interfaces/HistoricSettlement.mdx)[]\>
 
-Defined in: [src/api/entities/Identity/Portfolios.ts:236](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/Portfolios.ts#L236)
+Defined in: [src/api/entities/Identity/Portfolios.ts:236](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/Portfolios.ts#L236)
 
 Retrieve a list of transactions where this identity was involved. Can be filtered using parameters
 

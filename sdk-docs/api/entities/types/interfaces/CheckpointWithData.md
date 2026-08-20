@@ -1,10 +1,10 @@
 # Interface: CheckpointWithData
 
-> Defined in: [src/api/entities/types.ts:811](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L811)
+> Defined in: [src/api/entities/types.ts:795](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L795)
 
 # Interface: CheckpointWithData
 
-Defined in: [src/api/entities/types.ts:811](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L811)
+Defined in: [src/api/entities/types.ts:795](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L795)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/types.ts:811](https://github.com/PolymeshAssociati
 
 > **checkpoint**: [`Checkpoint`](../../Checkpoint/classes/Checkpoint.mdx)
 
-Defined in: [src/api/entities/types.ts:812](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L812)
+Defined in: [src/api/entities/types.ts:796](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L796)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/entities/types.ts:812](https://github.com/PolymeshAssociati
 
 > **createdAt**: `Date`
 
-Defined in: [src/api/entities/types.ts:813](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L813)
+Defined in: [src/api/entities/types.ts:797](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L797)
 
 ***
 
@@ -28,4 +28,4 @@ Defined in: [src/api/entities/types.ts:813](https://github.com/PolymeshAssociati
 
 > **totalSupply**: `BigNumber`
 
-Defined in: [src/api/entities/types.ts:814](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L814)
+Defined in: [src/api/entities/types.ts:798](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L798)

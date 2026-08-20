@@ -1,10 +1,10 @@
 # Class: Identity
 
-> Defined in: [src/api/entities/Identity/index.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L108)
+> Defined in: [src/api/entities/Identity/index.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L103)
 
 # Class: Identity
 
-Defined in: [src/api/entities/Identity/index.ts:108](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L108)
+Defined in: [src/api/entities/Identity/index.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L103)
 
 Represents an Identity in the Polymesh blockchain
 
@@ -15,7 +15,6 @@ Represents an Identity in the Polymesh blockchain
 ## Extended by
 
 - [`DefaultTrustedClaimIssuer`](../../DefaultTrustedClaimIssuer/classes/DefaultTrustedClaimIssuer.mdx)
-- [`ChildIdentity`](../ChildIdentity/classes/ChildIdentity.mdx)
 
 ## Properties
 
@@ -23,7 +22,7 @@ Represents an Identity in the Polymesh blockchain
 
 > **assetPermissions**: [`AssetPermissions`](../AssetPermissions/classes/AssetPermissions.mdx)
 
-Defined in: [src/api/entities/Identity/index.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L127)
+Defined in: [src/api/entities/Identity/index.ts:122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L122)
 
 ***
 
@@ -31,7 +30,7 @@ Defined in: [src/api/entities/Identity/index.ts:127](https://github.com/Polymesh
 
 > **authorizations**: [`IdentityAuthorizations`](../IdentityAuthorizations/classes/IdentityAuthorizations.mdx)
 
-Defined in: [src/api/entities/Identity/index.ts:125](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L125)
+Defined in: [src/api/entities/Identity/index.ts:120](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L120)
 
 ***
 
@@ -39,7 +38,7 @@ Defined in: [src/api/entities/Identity/index.ts:125](https://github.com/Polymesh
 
 > **did**: `string`
 
-Defined in: [src/api/entities/Identity/index.ts:122](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L122)
+Defined in: [src/api/entities/Identity/index.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L117)
 
 Identity ID as stored in the blockchain
 
@@ -49,7 +48,7 @@ Identity ID as stored in the blockchain
 
 > **portfolios**: [`Portfolios`](../Portfolios/classes/Portfolios.mdx)
 
-Defined in: [src/api/entities/Identity/index.ts:126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L126)
+Defined in: [src/api/entities/Identity/index.ts:121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L121)
 
 ***
 
@@ -57,7 +56,7 @@ Defined in: [src/api/entities/Identity/index.ts:126](https://github.com/Polymesh
 
 > **uuid**: `string`
 
-Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L46)
+Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L46)
 
 #### Inherited from
 
@@ -71,7 +70,7 @@ Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociati
 
 > **areSecondaryAccountsFrozen**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Identity/index.ts:805](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L805)
+Defined in: [src/api/entities/Identity/index.ts:757](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L757)
 
 Check whether secondary Accounts are frozen
 
@@ -85,7 +84,7 @@ Promise that resolves to true if secondary accounts are frozen, false otherwise
 
 > **areSecondaryAccountsFrozen**(`callback`: [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<`boolean`\>): `Promise`\<[`UnsubCallback`](../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/Identity/index.ts:816](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L816)
+Defined in: [src/api/entities/Identity/index.ts:768](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L768)
 
 Check whether secondary Accounts are frozen (with subscription support)
 
@@ -117,7 +116,7 @@ can be subscribed to, if connected to node using a web socket
 
 > **checkRoles**(`roles`: [`Role`](../../../procedures/types/type-aliases/Role.mdx)[]): `Promise`\<[`CheckRolesResult`](../../types/interfaces/CheckRolesResult.mdx)\>
 
-Defined in: [src/api/entities/Identity/index.ts:545](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L545)
+Defined in: [src/api/entities/Identity/index.ts:497](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L497)
 
 Check whether this Identity possesses all specified roles
 
@@ -140,7 +139,7 @@ Type
 
 > **exists**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Identity/index.ts:1016](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L1016)
+Defined in: [src/api/entities/Identity/index.ts:968](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L968)
 
 Determine whether this Identity exists on chain
 
@@ -164,7 +163,7 @@ asset Identities aren't considered to exist for this check
 
 > **getAssetBalance**(`args`: `object`): `Promise`\<`BigNumber`\>
 
-Defined in: [src/api/entities/Identity/index.ts:215](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L215)
+Defined in: [src/api/entities/Identity/index.ts:199](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L199)
 
 Retrieve the balance of a particular Asset by ticker
 
@@ -196,7 +195,7 @@ Promise that resolves to the Asset balance
 
 > **getAssetBalance**(`args`: `object`): `Promise`\<`BigNumber`\>
 
-Defined in: [src/api/entities/Identity/index.ts:224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L224)
+Defined in: [src/api/entities/Identity/index.ts:208](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L208)
 
 Retrieve the balance of a particular Asset by Asset ID
 
@@ -228,7 +227,7 @@ Promise that resolves to the Asset balance
 
 > **getAssetBalance**(`args`: `object`, `callback`: [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<`BigNumber`\>): `Promise`\<[`UnsubCallback`](../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/Identity/index.ts:236](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L236)
+Defined in: [src/api/entities/Identity/index.ts:220](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L220)
 
 Retrieve the balance of a particular Asset by ticker (with subscription support)
 
@@ -270,7 +269,7 @@ can be subscribed to, if connected to node using a web socket
 
 > **getAssetBalance**(`args`: `object`, `callback`: [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<`BigNumber`\>): `Promise`\<[`UnsubCallback`](../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/Identity/index.ts:251](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L251)
+Defined in: [src/api/entities/Identity/index.ts:235](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L235)
 
 Retrieve the balance of a particular Asset by Asset ID (with subscription support)
 
@@ -310,33 +309,11 @@ can be subscribed to, if connected to node using a web socket
 
 ***
 
-### ~~getChildIdentities()~~
-
-> **getChildIdentities**(): `Promise`\<[`ChildIdentity`](../ChildIdentity/classes/ChildIdentity.mdx)[]\>
-
-Defined in: [src/api/entities/Identity/index.ts:1082](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L1082)
-
-Returns the list of all child identities
-
-#### Returns
-
-`Promise`\<[`ChildIdentity`](../ChildIdentity/classes/ChildIdentity.mdx)[]\>
-
-#### Note
-
-this query can be potentially **SLOW** depending on the number of parent Identities present on the chain
-
-#### Deprecated
-
-Child identites are no longer supported in chain v8
-
-***
-
 ### getHeldAssets()
 
 > **getHeldAssets**(`opts?`: `object`): `Promise`\<[`ResultSet`](../../types/interfaces/ResultSet.mdx)\<[`FungibleAsset`](../../Asset/Fungible/classes/FungibleAsset.mdx)\>\>
 
-Defined in: [src/api/entities/Identity/index.ts:440](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L440)
+Defined in: [src/api/entities/Identity/index.ts:394](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L394)
 
 Retrieve a list of all Assets which were held at one point by this Identity
 
@@ -379,7 +356,7 @@ supports pagination
 
 > **getHeldNfts**(`opts?`: `object`): `Promise`\<[`ResultSet`](../../types/interfaces/ResultSet.mdx)\<[`HeldNfts`](../../Asset/types/interfaces/HeldNfts.mdx)\>\>
 
-Defined in: [src/api/entities/Identity/index.ts:487](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L487)
+Defined in: [src/api/entities/Identity/index.ts:440](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L440)
 
 Retrieve a list of all NftCollections which were held at one point by this Identity
 
@@ -422,7 +399,7 @@ supports pagination
 
 > **getHistoricalInstructions**(`filter?`: `Omit`\<[`HistoricalInstructionFilters`](../../../client/types/interfaces/HistoricalInstructionFilters.mdx), `"identity"`\>): `Promise`\<[`ResultSet`](../../types/interfaces/ResultSet.mdx)\<[`HistoricInstruction`](../../Venue/types/type-aliases/HistoricInstruction.mdx)\>\>
 
-Defined in: [src/api/entities/Identity/index.ts:1050](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L1050)
+Defined in: [src/api/entities/Identity/index.ts:1002](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L1002)
 
 Retrieve all Instructions that have been associated with this Identity's DID
 
@@ -453,7 +430,7 @@ supports pagination
 
 > **getInstructions**(): `Promise`\<[`GroupedInstructions`](../../Instruction/types/interfaces/GroupedInstructions.mdx)\>
 
-Defined in: [src/api/entities/Identity/index.ts:618](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L618)
+Defined in: [src/api/entities/Identity/index.ts:570](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L570)
 
 Retrieve all Instructions where this Identity is either the custodian of one or more portfolios in the legs or owns one or more accounts in the legs,
   grouped by status
@@ -468,7 +445,7 @@ Retrieve all Instructions where this Identity is either the custodian of one or 
 
 > **getInvolvedInstructions**(): `Promise`\<[`GroupedInvolvedInstructions`](../../Instruction/types/interfaces/GroupedInvolvedInstructions.mdx)\>
 
-Defined in: [src/api/entities/Identity/index.ts:731](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L731)
+Defined in: [src/api/entities/Identity/index.ts:683](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L683)
 
 Retrieve all Instructions where this Identity is a participant (owner/custodian),
   grouped by the role of the Identity and Instruction status
@@ -483,7 +460,7 @@ Retrieve all Instructions where this Identity is a participant (owner/custodian)
 
 > **getMultiSigSigners**(): `Promise`\<[`MultiSigSigners`](../../Account/MultiSig/types/interfaces/MultiSigSigners.mdx)[]\>
 
-Defined in: [src/api/entities/Identity/index.ts:1232](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L1232)
+Defined in: [src/api/entities/Identity/index.ts:1125](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L1125)
 
 Returns the list of MultiSig accounts along with their signatories this identity has responsibility for.
 The roles possible are:
@@ -504,7 +481,7 @@ this query can be potentially **SLOW** depending on the number of MultiSigs pres
 
 > **getOffChainAuthorizationNonce**(): `Promise`\<`BigNumber`\>
 
-Defined in: [src/api/entities/Identity/index.ts:1310](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L1310)
+Defined in: [src/api/entities/Identity/index.ts:1203](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L1203)
 
 Returns the off chain authorization nonce for this Identity
 
@@ -518,7 +495,7 @@ Returns the off chain authorization nonce for this Identity
 
 > **getPendingDistributions**(): `Promise`\<[`DistributionWithDetails`](../../types/interfaces/DistributionWithDetails.mdx)[]\>
 
-Defined in: [src/api/entities/Identity/index.ts:854](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L854)
+Defined in: [src/api/entities/Identity/index.ts:806](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L806)
 
 Retrieve every Dividend Distribution for which this Identity is eligible and hasn't been paid
 
@@ -542,7 +519,7 @@ this query can be potentially **SLOW** depending on which Assets this Identity h
 
 > **getPrimaryAccount**(): `Promise`\<[`PermissionedAccount`](../../types/interfaces/PermissionedAccount.mdx)\>
 
-Defined in: [src/api/entities/Identity/index.ts:366](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L366)
+Defined in: [src/api/entities/Identity/index.ts:320](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L320)
 
 Retrieve the primary Account associated with the Identity
 
@@ -556,7 +533,7 @@ Promise that resolves to the primary Account information
 
 > **getPrimaryAccount**(`callback`: [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<[`PermissionedAccount`](../../types/interfaces/PermissionedAccount.mdx)\>): `Promise`\<[`UnsubCallback`](../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/Identity/index.ts:377](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L377)
+Defined in: [src/api/entities/Identity/index.ts:331](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L331)
 
 Retrieve the primary Account associated with the Identity (with subscription support)
 
@@ -590,7 +567,7 @@ can be subscribed to, if connected to node using a web socket
 
 > **getSecondaryAccounts**(`paginationOpts?`: [`PaginationOptions`](../../types/interfaces/PaginationOptions.mdx)): `Promise`\<[`ResultSet`](../../types/interfaces/ResultSet.mdx)\<[`PermissionedAccount`](../../types/interfaces/PermissionedAccount.mdx)\>\>
 
-Defined in: [src/api/entities/Identity/index.ts:913](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L913)
+Defined in: [src/api/entities/Identity/index.ts:865](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L865)
 
 Get the list of secondary Accounts related to the Identity
 
@@ -620,7 +597,7 @@ supports pagination
 
 > **getSecondaryAccounts**(`callback`: [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<[`PermissionedAccount`](../../types/interfaces/PermissionedAccount.mdx)[]\>): `Promise`\<[`UnsubCallback`](../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/Identity/index.ts:926](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L926)
+Defined in: [src/api/entities/Identity/index.ts:878](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L878)
 
 Get the list of secondary Accounts related to the Identity (with subscription support)
 
@@ -650,7 +627,7 @@ can be subscribed to, if connected to node using a web socket
 
 > **getSecondaryAccounts**(`paginationOpts`: [`PaginationOptions`](../../types/interfaces/PaginationOptions.mdx), `callback`: [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<[`PermissionedAccount`](../../types/interfaces/PermissionedAccount.mdx)[]\>): `Promise`\<[`UnsubCallback`](../../types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/entities/Identity/index.ts:941](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L941)
+Defined in: [src/api/entities/Identity/index.ts:893](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L893)
 
 Get the list of secondary Accounts related to the Identity (with pagination and subscription support)
 
@@ -692,7 +669,7 @@ can be subscribed to, if connected to node using a web socket
 
 > **getTrustingAssets**(): `Promise`\<[`FungibleAsset`](../../Asset/Fungible/classes/FungibleAsset.mdx)[]\>
 
-Defined in: [src/api/entities/Identity/index.ts:571](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L571)
+Defined in: [src/api/entities/Identity/index.ts:523](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L523)
 
 Get the list of Assets for which this Identity is a trusted claim issuer
 
@@ -710,7 +687,7 @@ uses the middlewareV2
 
 > **getVenues**(): `Promise`\<[`Venue`](../../Venue/classes/Venue.mdx)[]\>
 
-Defined in: [src/api/entities/Identity/index.ts:590](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L590)
+Defined in: [src/api/entities/Identity/index.ts:542](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L542)
 
 Retrieve all Venues created by this Identity
 
@@ -724,7 +701,7 @@ Retrieve all Venues created by this Identity
 
 > **hasRole**(`role`: [`Role`](../../../procedures/types/type-aliases/Role.mdx)): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Identity/index.ts:162](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L162)
+Defined in: [src/api/entities/Identity/index.ts:150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L150)
 
 Check whether this Identity possesses the specified Role
 
@@ -743,29 +720,11 @@ Type
 
 ***
 
-### ~~hasValidCdd()~~
-
-> **hasValidCdd**(): `Promise`\<`boolean`\>
-
-Defined in: [src/api/entities/Identity/index.ts:304](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L304)
-
-Check whether this Identity has a valid CDD claim
-
-#### Returns
-
-`Promise`\<`boolean`\>
-
-#### Deprecated
-
-CDD claims are discontinued from chain v8. If invoked with a v8 chain, this returns true if DID exists
-
-***
-
 ### isAssetPreApproved()
 
 > **isAssetPreApproved**(`asset`: `string` \| [`BaseAsset`](../../Asset/Base/BaseAsset/classes/BaseAsset.mdx)): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Identity/index.ts:1171](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L1171)
+Defined in: [src/api/entities/Identity/index.ts:1064](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L1064)
 
 Returns whether or not this Identity has pre-approved a particular asset
 
@@ -784,27 +743,13 @@ Type
 
 ***
 
-### isCddProvider()
+### isDidRegistrar()
 
-> **isCddProvider**(): `Promise`\<`boolean`\>
+> **isDidRegistrar**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Identity/index.ts:343](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L343)
+Defined in: [src/api/entities/Identity/index.ts:303](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L303)
 
-Check whether this Identity is a CDD provider
-
-#### Returns
-
-`Promise`\<`boolean`\>
-
-***
-
-### isChild()
-
-> **isChild**(): `Promise`\<`boolean`\>
-
-Defined in: [src/api/entities/Identity/index.ts:1126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L1126)
-
-Check whether this Identity is a child Identity
+Check whether this Identity is a DID Registrar
 
 #### Returns
 
@@ -816,7 +761,7 @@ Check whether this Identity is a child Identity
 
 > **isEqual**(`entity`: [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>): `boolean`
 
-Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L61)
+Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L61)
 
 Determine whether this Entity is the same as another one
 
@@ -843,7 +788,7 @@ Type
 
 > **isGcMember**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Identity/index.ts:326](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L326)
+Defined in: [src/api/entities/Identity/index.ts:286](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L286)
 
 Check whether this Identity is Governance Committee member
 
@@ -857,7 +802,7 @@ Check whether this Identity is Governance Committee member
 
 > **isMandatoryReceiverAffirmationEnabled**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Identity/index.ts:1196](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L1196)
+Defined in: [src/api/entities/Identity/index.ts:1089](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L1089)
 
 Returns whether or not this Identity has opted in to mandatory receiver affirmation.
 When `true`, the identity must explicitly affirm incoming asset transfer in settlements
@@ -873,7 +818,7 @@ unless an asset level or portfolio level exemption applies.
 
 > **preApprovedAssets**(`paginationOpts?`: [`PaginationOptions`](../../types/interfaces/PaginationOptions.mdx)): `Promise`\<[`ResultSet`](../../types/interfaces/ResultSet.mdx)\<[`Asset`](../../Asset/types/type-aliases/Asset.mdx)\>\>
 
-Defined in: [src/api/entities/Identity/index.ts:1137](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L1137)
+Defined in: [src/api/entities/Identity/index.ts:1030](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L1030)
 
 Returns a list of all assets this Identity has pre-approved. These assets will not require affirmation when being received in settlements
 
@@ -896,7 +841,7 @@ Type
 
 > **setMandatoryReceiverAffirmation**(`args`: `object`, `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Identity/index.ts:1219](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L1219)
+Defined in: [src/api/entities/Identity/index.ts:1112](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L1112)
 
 Enable or disable mandatory receiver affirmation for incoming settlement transfers.
 When enabled (`ReceiverAffirmationRequirement.Required`), the signing identity must explicitly affirm
@@ -934,7 +879,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **toHuman**(): `string`
 
-Defined in: [src/api/entities/Identity/index.ts:1039](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L1039)
+Defined in: [src/api/entities/Identity/index.ts:991](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L991)
 
 Return the Identity's DID
 
@@ -948,48 +893,11 @@ Return the Identity's DID
 
 ***
 
-### unlinkChild()
-
-> **unlinkChild**(`args`: [`UnlinkChildParams`](../../../procedures/types/interfaces/UnlinkChildParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
-
-Defined in: [src/api/entities/Identity/index.ts:1121](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Identity/index.ts#L1121)
-
-Unlinks a child identity
-
-#### Parameters
-
-Parameter
-Type
-
-`args`
-
-[`UnlinkChildParams`](../../../procedures/types/interfaces/UnlinkChildParams.mdx)
-
-`opts?`
-
-[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
-
-#### Returns
-
-`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
-
-#### Throws
-
-if
- - the `child` is not a child of this identity
- - the transaction signer is not the primary key of the parent identity
-
-#### Note
-
-this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [unlinkChild.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
-***
-
 ### generateUuid()
 
 > `static` **generateUuid**\<`Identifiers`\>(`identifiers`: `Identifiers`): `string`
 
-Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L14)
+Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L14)
 
 Generate the Entity's UUID from its identifying properties
 
@@ -1025,7 +933,7 @@ Description
 
 > `static` **unserialize**\<`Identifiers`\>(`serialized`: `string`): `Identifiers`
 
-Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L23)
+Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L23)
 
 Unserialize a UUID into its Unique Identifiers
 

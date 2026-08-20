@@ -1,10 +1,10 @@
 # Interface: ClaimScope
 
-> Defined in: [src/api/entities/types.ts:317](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L317)
+> Defined in: [src/api/entities/types.ts:311](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L311)
 
 # Interface: ClaimScope
 
-Defined in: [src/api/entities/types.ts:317](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L317)
+Defined in: [src/api/entities/types.ts:311](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L311)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/types.ts:317](https://github.com/PolymeshAssociati
 
 > `optional` **assetId?**: `string`
 
-Defined in: [src/api/entities/types.ts:319](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L319)
+Defined in: [src/api/entities/types.ts:313](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L313)
 
 ***
 
@@ -20,4 +20,4 @@ Defined in: [src/api/entities/types.ts:319](https://github.com/PolymeshAssociati
 
 > **scope**: [`Scope`](Scope.mdx) \| `null`
 
-Defined in: [src/api/entities/types.ts:318](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L318)
+Defined in: [src/api/entities/types.ts:312](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L312)

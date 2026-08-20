@@ -1,10 +1,10 @@
 # Interface: DividendDistributionParams
 
-> Defined in: [src/api/entities/DividendDistribution/index.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/DividendDistribution/index.ts#L69)
+> Defined in: [src/api/entities/DividendDistribution/index.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/DividendDistribution/index.ts#L69)
 
 # Interface: DividendDistributionParams
 
-Defined in: [src/api/entities/DividendDistribution/index.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/DividendDistribution/index.ts#L69)
+Defined in: [src/api/entities/DividendDistribution/index.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/DividendDistribution/index.ts#L69)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/entities/DividendDistribution/index.ts:69](https://github.c
 
 > **currency**: `string`
 
-Defined in: [src/api/entities/DividendDistribution/index.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/DividendDistribution/index.ts#L71)
+Defined in: [src/api/entities/DividendDistribution/index.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/DividendDistribution/index.ts#L71)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: [src/api/entities/DividendDistribution/index.ts:71](https://github.c
 
 > **expiryDate**: `Date` \| `null`
 
-Defined in: [src/api/entities/DividendDistribution/index.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/DividendDistribution/index.ts#L74)
+Defined in: [src/api/entities/DividendDistribution/index.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/DividendDistribution/index.ts#L74)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/api/entities/DividendDistribution/index.ts:74](https://github.c
 
 > **maxAmount**: `BigNumber`
 
-Defined in: [src/api/entities/DividendDistribution/index.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/DividendDistribution/index.ts#L73)
+Defined in: [src/api/entities/DividendDistribution/index.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/DividendDistribution/index.ts#L73)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [src/api/entities/DividendDistribution/index.ts:73](https://github.c
 
 > **origin**: [`DefaultPortfolio`](../../DefaultPortfolio/classes/DefaultPortfolio.mdx) \| [`NumberedPortfolio`](../../NumberedPortfolio/classes/NumberedPortfolio.mdx)
 
-Defined in: [src/api/entities/DividendDistribution/index.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/DividendDistribution/index.ts#L70)
+Defined in: [src/api/entities/DividendDistribution/index.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/DividendDistribution/index.ts#L70)
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: [src/api/entities/DividendDistribution/index.ts:70](https://github.c
 
 > **paymentDate**: `Date`
 
-Defined in: [src/api/entities/DividendDistribution/index.ts:75](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/DividendDistribution/index.ts#L75)
+Defined in: [src/api/entities/DividendDistribution/index.ts:75](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/DividendDistribution/index.ts#L75)
 
 ***
 
@@ -52,4 +52,4 @@ Defined in: [src/api/entities/DividendDistribution/index.ts:75](https://github.c
 
 > **perShare**: `BigNumber`
 
-Defined in: [src/api/entities/DividendDistribution/index.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/DividendDistribution/index.ts#L72)
+Defined in: [src/api/entities/DividendDistribution/index.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/DividendDistribution/index.ts#L72)

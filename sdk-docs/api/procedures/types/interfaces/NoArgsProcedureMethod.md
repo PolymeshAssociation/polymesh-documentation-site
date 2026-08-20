@@ -1,10 +1,10 @@
 # Interface: NoArgsProcedureMethod()\<ProcedureReturnValue, ReturnValue\>
 
-> Defined in: [src/api/procedures/types.ts:222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L222)
+> Defined in: [src/api/procedures/types.ts:220](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L220)
 
 # Interface: NoArgsProcedureMethod()\
 
-Defined in: [src/api/procedures/types.ts:222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L222)
+Defined in: [src/api/procedures/types.ts:220](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L220)
 
 ## Type Parameters
 
@@ -21,7 +21,7 @@ Default type
 
 > **NoArgsProcedureMethod**(`opts?`: [`ProcedureOpts`](ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../type-aliases/GenericPolymeshTransaction.mdx)\<`ProcedureReturnValue`, `ReturnValue`\>\>
 
-Defined in: [src/api/procedures/types.ts:223](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L223)
+Defined in: [src/api/procedures/types.ts:221](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L221)
 
 ## Parameters
 
@@ -42,7 +42,7 @@ Type
 
 > **checkAuthorization**: (`opts?`: [`ProcedureOpts`](ProcedureOpts.mdx)) => `Promise`\<[`ProcedureAuthorizationStatus`](ProcedureAuthorizationStatus.mdx)\>
 
-Defined in: [src/api/procedures/types.ts:224](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L224)
+Defined in: [src/api/procedures/types.ts:222](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L222)
 
 #### Parameters
 

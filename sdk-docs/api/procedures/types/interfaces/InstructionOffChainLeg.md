@@ -1,10 +1,10 @@
 # Interface: InstructionOffChainLeg
 
-> Defined in: [src/api/procedures/types.ts:1075](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1075)
+> Defined in: [src/api/procedures/types.ts:1057](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1057)
 
 # Interface: InstructionOffChainLeg
 
-Defined in: [src/api/procedures/types.ts:1075](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1075)
+Defined in: [src/api/procedures/types.ts:1057](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1057)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/procedures/types.ts:1075](https://github.com/PolymeshAssoci
 
 > **asset**: `string`
 
-Defined in: [src/api/procedures/types.ts:1081](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1081)
+Defined in: [src/api/procedures/types.ts:1063](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1063)
 
 the ticker of the off chain asset
 
@@ -22,7 +22,7 @@ the ticker of the off chain asset
 
 > **from**: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
 
-Defined in: [src/api/procedures/types.ts:1076](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1076)
+Defined in: [src/api/procedures/types.ts:1058](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1058)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [src/api/procedures/types.ts:1076](https://github.com/PolymeshAssoci
 
 > **offChainAmount**: `BigNumber`
 
-Defined in: [src/api/procedures/types.ts:1082](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1082)
+Defined in: [src/api/procedures/types.ts:1064](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1064)
 
 ***
 
@@ -38,4 +38,4 @@ Defined in: [src/api/procedures/types.ts:1082](https://github.com/PolymeshAssoci
 
 > **to**: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
 
-Defined in: [src/api/procedures/types.ts:1077](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1077)
+Defined in: [src/api/procedures/types.ts:1059](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1059)

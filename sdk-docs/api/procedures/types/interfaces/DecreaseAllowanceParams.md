@@ -1,10 +1,10 @@
 # Interface: DecreaseAllowanceParams
 
-> Defined in: [src/api/procedures/types.ts:1742](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1742)
+> Defined in: [src/api/procedures/types.ts:1672](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1672)
 
 # Interface: DecreaseAllowanceParams
 
-Defined in: [src/api/procedures/types.ts:1742](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1742)
+Defined in: [src/api/procedures/types.ts:1672](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1672)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: [src/api/procedures/types.ts:1742](https://github.com/PolymeshAssoci
 
 > **allowance**: `BigNumber`
 
-Defined in: [src/api/procedures/types.ts:1746](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1746)
+Defined in: [src/api/procedures/types.ts:1676](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1676)
 
 amount of POLYX to decrease the allowance by
 
@@ -22,4 +22,4 @@ amount of POLYX to decrease the allowance by
 
 > **operation**: [`Decrease`](../enumerations/AllowanceOperation.mdx#decrease)
 
-Defined in: [src/api/procedures/types.ts:1747](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1747)
+Defined in: [src/api/procedures/types.ts:1677](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1677)
