@@ -6,10 +6,16 @@ sidebar_label: "MULTISIG_MANAGEMENT_TX_TAGS"
 
 > `const` **MULTISIG\_MANAGEMENT\_TX\_TAGS**: \[[`CreateMultisig`](../../enumerations/MultiSigTx.mdx#createmultisig)\]
 
-Defined in: [src/types/txGroupConstants.ts:370](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/types/txGroupConstants.ts#L370)
+Defined in: [src/types/txGroupConstants.ts:463](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/types/txGroupConstants.ts#L463)
 
 Transaction tags for MultiSig Management operations
 Contains operations for managing multi-signature accounts.
 
 Values:
 - TxTags.multiSig.CreateMultisig
+
+## Note
+
+a MultiSig executes proposals under its own origin, so what it may do via proposal is
+  constrained by the permissions held by the MultiSig Account itself, not by those of its
+  signers. Those permissions are drawn from these same groups

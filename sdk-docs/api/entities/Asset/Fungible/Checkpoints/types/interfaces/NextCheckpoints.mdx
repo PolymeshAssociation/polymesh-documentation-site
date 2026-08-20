@@ -1,0 +1,37 @@
+---
+sidebar_label: "NextCheckpoints"
+---
+
+# Interface: NextCheckpoints
+
+Defined in: [src/api/entities/Asset/Fungible/Checkpoints/types.ts:40](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Checkpoints/types.ts#L40)
+
+## Properties
+
+### nextAt
+
+> **nextAt**: `Date`
+
+Defined in: [src/api/entities/Asset/Fungible/Checkpoints/types.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Checkpoints/types.ts#L44)
+
+closest upcoming Checkpoint creation date across all of the Asset's active Schedules
+
+***
+
+### schedules
+
+> **schedules**: [`ScheduleNextCheckpoint`](ScheduleNextCheckpoint.mdx)[]
+
+Defined in: [src/api/entities/Asset/Fungible/Checkpoints/types.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Checkpoints/types.ts#L52)
+
+next Checkpoint creation date for each active Schedule
+
+***
+
+### totalPending
+
+> **totalPending**: `BigNumber`
+
+Defined in: [src/api/entities/Asset/Fungible/Checkpoints/types.ts:48](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Checkpoints/types.ts#L48)
+
+total amount of pending Checkpoints across all of the Asset's active Schedules

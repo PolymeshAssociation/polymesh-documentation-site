@@ -1,0 +1,70 @@
+---
+sidebar_label: "ClaimValue"
+---
+
+# Type Alias: ClaimValue
+
+> **ClaimValue** = `object`
+
+Defined in: [src/api/entities/Asset/types.ts:426](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L426)
+
+For all claim types except Jurisdiction - tracks holders with and without the claim
+
+## Properties
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+<a id="property-withclaim"></a> `withClaim`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+The number of individual Asset holders that have the claim, or the total balance of tokens held by all holders with the claim
+
+</td>
+<td>
+
+[src/api/entities/Asset/types.ts:430](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L430)
+
+</td>
+</tr>
+<tr>
+<td>
+
+<a id="property-withoutclaim"></a> `withoutClaim`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+The number of individual Asset holders that do not have the claim, or the total balance of tokens held by all holders without the claim
+
+</td>
+<td>
+
+[src/api/entities/Asset/types.ts:435](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/types.ts#L435)
+
+</td>
+</tr>
+</tbody>
+</table>

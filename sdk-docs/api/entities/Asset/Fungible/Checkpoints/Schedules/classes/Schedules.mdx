@@ -4,7 +4,7 @@ sidebar_label: "Schedules"
 
 # Class: Schedules
 
-Defined in: [src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L26)
+Defined in: [src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L27)
 
 Handles all Asset Checkpoint Schedules related functionality
 
@@ -18,7 +18,7 @@ Handles all Asset Checkpoint Schedules related functionality
 
 > **create**(`args`: [`CreateCheckpointScheduleParams`](../../../../../../procedures/types/interfaces/CreateCheckpointScheduleParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`CheckpointSchedule`](../../../../../CheckpointSchedule/classes/CheckpointSchedule.mdx), [`CheckpointSchedule`](../../../../../CheckpointSchedule/classes/CheckpointSchedule.mdx)\>\>
 
-Defined in: [src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts:52](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L52)
+Defined in: [src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts:53](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L53)
 
 Create a schedule for Checkpoint creation (e.g. "Create a checkpoint every week for 5 weeks, starting next tuesday")
 
@@ -83,7 +83,7 @@ this method is of type [ProcedureMethod](../../../../../../procedures/types/inte
 
 > **get**(): `Promise`\<[`ScheduleWithDetails`](../../../../../types/interfaces/ScheduleWithDetails.mdx)[]\>
 
-Defined in: [src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L82)
+Defined in: [src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts:83](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L83)
 
 Retrieve all active Checkpoint Schedules
 
@@ -93,11 +93,27 @@ Retrieve all active Checkpoint Schedules
 
 ***
 
+### getNextCheckpoint()
+
+> **getNextCheckpoint**(): `Promise`\<[`NextCheckpoints`](../../types/interfaces/NextCheckpoints.mdx) \| `null`\>
+
+Defined in: [src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts:141](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L141)
+
+Retrieve the cached next Checkpoint information for this Asset, aggregated across all of its active Schedules
+
+#### Returns
+
+`Promise`\<[`NextCheckpoints`](../../types/interfaces/NextCheckpoints.mdx) \| `null`\>
+
+`null` if the Asset has no active Schedules
+
+***
+
 ### getOne()
 
 > **getOne**(`__namedParameters`: `object`): `Promise`\<[`ScheduleWithDetails`](../../../../../types/interfaces/ScheduleWithDetails.mdx)\>
 
-Defined in: [src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L64)
+Defined in: [src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts:65](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L65)
 
 Retrieve a single Checkpoint Schedule associated to this Asset by its ID
 
@@ -152,7 +168,7 @@ if there is no Schedule with the passed ID
 
 > **maxComplexity**(): `Promise`\<`BigNumber`\>
 
-Defined in: [src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L127)
+Defined in: [src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts:128](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L128)
 
 Retrieve the maximum allowed Schedule complexity for this Asset
 
@@ -166,7 +182,7 @@ Retrieve the maximum allowed Schedule complexity for this Asset
 
 > **remove**(`args`: [`RemoveCheckpointScheduleParams`](../../../../../../procedures/types/interfaces/RemoveCheckpointScheduleParams.mdx), `opts?`: [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts:57](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L57)
+Defined in: [src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts:58](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L58)
 
 Remove the supplied Checkpoint Schedule for a given Asset
 

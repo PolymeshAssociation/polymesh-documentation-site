@@ -4,7 +4,7 @@ sidebar_label: "RegisterIdentityParams"
 
 # Interface: RegisterIdentityParams
 
-Defined in: [src/api/procedures/types.ts:985](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L985)
+Defined in: [src/api/procedures/types.ts:955](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L955)
 
 ## Properties
 
@@ -12,9 +12,14 @@ Defined in: [src/api/procedures/types.ts:985](https://github.com/PolymeshAssocia
 
 > `optional` **createCdd?**: `boolean`
 
-Defined in: [src/api/procedures/types.ts:998](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L998)
+Defined in: [src/api/procedures/types.ts:971](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L971)
 
 (optional) also issue a CDD claim for the created DID, completing the onboarding process for the Account
+
+#### Note
+
+as of chain v8, `cdd_register_did`/`cdd_register_did_with_cdd` are deprecated and no
+  longer attach a `CustomerDueDiligence` claim, so this flag no longer has any on-chain effect
 
 ***
 
@@ -22,9 +27,13 @@ Defined in: [src/api/procedures/types.ts:998](https://github.com/PolymeshAssocia
 
 > `optional` **expiry?**: `Date`
 
-Defined in: [src/api/procedures/types.ts:1002](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1002)
+Defined in: [src/api/procedures/types.ts:977](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L977)
 
 (optional) when the generated CDD claim should expire, `createCdd` must be true if specified
+
+#### Note
+
+as of chain v8, this no longer has any on-chain effect (see `createCdd`)
 
 ***
 
@@ -32,7 +41,7 @@ Defined in: [src/api/procedures/types.ts:1002](https://github.com/PolymeshAssoci
 
 > `optional` **secondaryAccounts?**: [`Modify`](../../../../types/utils/type-aliases/Modify.mdx)\<[`PermissionedAccount`](../../../entities/types/interfaces/PermissionedAccount.mdx), \{ `permissions`: [`PermissionsLike`](../../../entities/types/type-aliases/PermissionsLike.mdx); \}\>[]
 
-Defined in: [src/api/procedures/types.ts:994](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L994)
+Defined in: [src/api/procedures/types.ts:964](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L964)
 
 (optional) secondary accounts for the new Identity with their corresponding permissions.
 
@@ -46,6 +55,6 @@ Each Account will need to accept the generated authorizations before being linke
 
 > **targetAccount**: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
 
-Defined in: [src/api/procedures/types.ts:989](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L989)
+Defined in: [src/api/procedures/types.ts:959](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L959)
 
 The Account that should function as the primary key of the newly created Identity. Can be ss58 encoded address or an instance of Account

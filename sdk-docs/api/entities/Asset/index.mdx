@@ -174,6 +174,12 @@ Re-exports [MetadataKeyId](types/type-aliases/MetadataKeyId.mdx)
 
 ***
 
+### NextCheckpoints
+
+Re-exports [NextCheckpoints](Fungible/Checkpoints/types/interfaces/NextCheckpoints.mdx)
+
+***
+
 ### Nft
 
 Re-exports [Nft](NonFungible/Nft/classes/Nft.mdx)
@@ -204,6 +210,12 @@ Re-exports [NftUniqueIdentifiers](NonFungible/Nft/type-aliases/NftUniqueIdentifi
 
 ***
 
+### ScheduleNextCheckpoint
+
+Re-exports [ScheduleNextCheckpoint](Fungible/Checkpoints/types/interfaces/ScheduleNextCheckpoint.mdx)
+
+***
+
 ### SecurityIdentifier
 
 Re-exports [SecurityIdentifier](types/interfaces/SecurityIdentifier.mdx)
@@ -213,6 +225,12 @@ Re-exports [SecurityIdentifier](types/interfaces/SecurityIdentifier.mdx)
 ### SecurityIdentifierType
 
 Re-exports [SecurityIdentifierType](types/enumerations/SecurityIdentifierType.mdx)
+
+***
+
+### TickerRegistrationConfig
+
+Re-exports [TickerRegistrationConfig](types/interfaces/TickerRegistrationConfig.mdx)
 
 ***
 
@@ -249,12 +267,6 @@ Re-exports [TransferRestrictionResult](types/interfaces/TransferRestrictionResul
 ### TransferRestrictionStatValues
 
 Re-exports [TransferRestrictionStatValues](types/interfaces/TransferRestrictionStatValues.mdx)
-
-***
-
-### TransferStatus
-
-Re-exports [TransferStatus](types/enumerations/TransferStatus.mdx)
 
 ***
 

@@ -1,0 +1,39 @@
+---
+sidebar_label: "CheckRolesResult"
+---
+
+# Interface: CheckRolesResult
+
+Defined in: [src/api/entities/types.ts:742](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L742)
+
+Result of a `checkRoles` call
+
+## Properties
+
+### message?
+
+> `optional` **message?**: `string`
+
+Defined in: [src/api/entities/types.ts:754](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L754)
+
+optional message explaining the reason for failure in special cases
+
+***
+
+### missingRoles?
+
+> `optional` **missingRoles?**: [`Role`](../../../procedures/types/type-aliases/Role.mdx)[]
+
+Defined in: [src/api/entities/types.ts:746](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L746)
+
+required roles which the Identity *DOESN'T* have. Only present if `result` is `false`
+
+***
+
+### result
+
+> **result**: `boolean`
+
+Defined in: [src/api/entities/types.ts:750](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/types.ts#L750)
+
+whether the signer possesses all the required roles or not

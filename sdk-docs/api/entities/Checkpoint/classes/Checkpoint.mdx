@@ -4,7 +4,7 @@ sidebar_label: "Checkpoint"
 
 # Class: Checkpoint
 
-Defined in: [src/api/entities/Checkpoint.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Checkpoint.ts#L36)
+Defined in: [src/api/entities/Checkpoint.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Checkpoint.ts#L36)
 
 Represents a snapshot of the Asset's holders and their respective balances
   at a certain point in time
@@ -19,7 +19,7 @@ Represents a snapshot of the Asset's holders and their respective balances
 
 > **asset**: [`FungibleAsset`](../../Asset/Fungible/classes/FungibleAsset.mdx)
 
-Defined in: [src/api/entities/Checkpoint.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Checkpoint.ts#L55)
+Defined in: [src/api/entities/Checkpoint.ts:55](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Checkpoint.ts#L55)
 
 Asset whose balances are being recorded in this Checkpoint
 
@@ -29,7 +29,7 @@ Asset whose balances are being recorded in this Checkpoint
 
 > **id**: `BigNumber`
 
-Defined in: [src/api/entities/Checkpoint.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Checkpoint.ts#L50)
+Defined in: [src/api/entities/Checkpoint.ts:50](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Checkpoint.ts#L50)
 
 Checkpoint identifier number
 
@@ -39,7 +39,7 @@ Checkpoint identifier number
 
 > **uuid**: `string`
 
-Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L46)
+Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L46)
 
 #### Inherited from
 
@@ -51,7 +51,7 @@ Defined in: [src/api/entities/Entity.ts:46](https://github.com/PolymeshAssociati
 
 > **allBalances**(`paginationOpts?`: [`PaginationOptions`](../../types/interfaces/PaginationOptions.mdx)): `Promise`\<[`ResultSet`](../../types/interfaces/ResultSet.mdx)\<[`IdentityBalance`](../../Asset/types/interfaces/IdentityBalance.mdx)\>\>
 
-Defined in: [src/api/entities/Checkpoint.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Checkpoint.ts#L107)
+Defined in: [src/api/entities/Checkpoint.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Checkpoint.ts#L107)
 
 Retrieve all Asset Holder balances at this Checkpoint
 
@@ -103,7 +103,7 @@ This arises from a chain storage optimization and pagination.
 
 > **balance**(`args?`: `object`): `Promise`\<`BigNumber`\>
 
-Defined in: [src/api/entities/Checkpoint.ts:209](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Checkpoint.ts#L209)
+Defined in: [src/api/entities/Checkpoint.ts:209](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Checkpoint.ts#L209)
 
 Retrieve the balance of a specific Asset Holder Identity at this Checkpoint
 
@@ -171,7 +171,7 @@ The balance is stored only when the Identity makes a transaction after a Checkpo
 
 > **createdAt**(): `Promise`\<`Date`\>
 
-Defined in: [src/api/entities/Checkpoint.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Checkpoint.ts#L87)
+Defined in: [src/api/entities/Checkpoint.ts:87](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Checkpoint.ts#L87)
 
 Retrieve this Checkpoint's creation date
 
@@ -185,7 +185,7 @@ Retrieve this Checkpoint's creation date
 
 > **exists**(): `Promise`\<`boolean`\>
 
-Defined in: [src/api/entities/Checkpoint.ts:254](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Checkpoint.ts#L254)
+Defined in: [src/api/entities/Checkpoint.ts:254](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Checkpoint.ts#L254)
 
 Determine whether this Checkpoint exists on chain
 
@@ -203,7 +203,7 @@ Determine whether this Checkpoint exists on chain
 
 > **isEqual**(`entity`: [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>): `boolean`
 
-Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L61)
+Defined in: [src/api/entities/Entity.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L61)
 
 Determine whether this Entity is the same as another one
 
@@ -246,7 +246,7 @@ Determine whether this Entity is the same as another one
 
 > **toHuman**(): [`HumanReadable`](../interfaces/HumanReadable.mdx)
 
-Defined in: [src/api/entities/Checkpoint.ts:276](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Checkpoint.ts#L276)
+Defined in: [src/api/entities/Checkpoint.ts:276](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Checkpoint.ts#L276)
 
 Return the Checkpoint's ticker and identifier
 
@@ -264,7 +264,7 @@ Return the Checkpoint's ticker and identifier
 
 > **totalSupply**(): `Promise`\<`BigNumber`\>
 
-Defined in: [src/api/entities/Checkpoint.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Checkpoint.ts#L72)
+Defined in: [src/api/entities/Checkpoint.ts:72](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Checkpoint.ts#L72)
 
 Retrieve the Asset's total supply at this checkpoint
 
@@ -278,7 +278,7 @@ Retrieve the Asset's total supply at this checkpoint
 
 > `static` **generateUuid**\<`Identifiers`\>(`identifiers`: `Identifiers`): `string`
 
-Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L14)
+Defined in: [src/api/entities/Entity.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L14)
 
 Generate the Entity's UUID from its identifying properties
 
@@ -346,7 +346,7 @@ Generate the Entity's UUID from its identifying properties
 
 > `static` **unserialize**\<`Identifiers`\>(`serialized`: `string`): `Identifiers`
 
-Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/entities/Entity.ts#L23)
+Defined in: [src/api/entities/Entity.ts:23](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L23)
 
 Unserialize a UUID into its Unique Identifiers
 

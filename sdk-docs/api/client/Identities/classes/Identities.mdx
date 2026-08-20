@@ -4,7 +4,7 @@ sidebar_label: "Identities"
 
 # Class: Identities
 
-Defined in: [src/api/client/Identities.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Identities.ts#L37)
+Defined in: [src/api/client/Identities.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Identities.ts#L34)
 
 Handles all Identity related functionality
 
@@ -14,7 +14,7 @@ Handles all Identity related functionality
 
 > **allowIdentityToCreatePortfolios**(`args`: [`AllowIdentityToCreatePortfoliosParams`](../../../procedures/types/type-aliases/AllowIdentityToCreatePortfoliosParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/Identities.ts:269](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Identities.ts#L269)
+Defined in: [src/api/client/Identities.ts:229](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Identities.ts#L229)
 
 Gives permission to the Identity to create Portfolios on behalf of the signing Identity
 
@@ -75,9 +75,9 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **attestPrimaryKeyRotation**(`args`: [`AttestPrimaryKeyRotationParams`](../../../procedures/types/interfaces/AttestPrimaryKeyRotationParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx), [`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
 
-Defined in: [src/api/client/Identities.ts:155](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Identities.ts#L155)
+Defined in: [src/api/client/Identities.ts:157](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Identities.ts#L157)
 
-Get CDD Provider's attestation to change primary key
+Get a DID Registrar's attestation to change primary key
 
 #### Parameters
 
@@ -122,7 +122,7 @@ Get CDD Provider's attestation to change primary key
 
 #### Note
 
-the transaction signer must be a CDD provider
+the transaction signer must be a DID Registrar
 
 #### Note
 
@@ -133,7 +133,7 @@ this creates an [Authorization Requests](../../../entities/AuthorizationRequest/
 #### Note
 
 required role:
-  - Customer Due Diligence Provider
+  - DID Registrar
 
 #### Note
 
@@ -141,153 +141,11 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 ***
 
-### ~~createChild()~~
-
-> **createChild**(`args`: [`CreateChildIdentityParams`](../../../procedures/types/interfaces/CreateChildIdentityParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`ChildIdentity`](../../../entities/Identity/ChildIdentity/classes/ChildIdentity.mdx), [`ChildIdentity`](../../../entities/Identity/ChildIdentity/classes/ChildIdentity.mdx)\>\>
-
-Defined in: [src/api/client/Identities.ts:245](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Identities.ts#L245)
-
-Creates a child identity and makes the `secondaryKey` as the primary key of the child identity
-
-#### Parameters
-
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`args`
-
-</td>
-<td>
-
-[`CreateChildIdentityParams`](../../../procedures/types/interfaces/CreateChildIdentityParams.mdx)
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts?`
-
-</td>
-<td>
-
-[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
-
-</td>
-</tr>
-</tbody>
-</table>
-
-#### Returns
-
-`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`ChildIdentity`](../../../entities/Identity/ChildIdentity/classes/ChildIdentity.mdx), [`ChildIdentity`](../../../entities/Identity/ChildIdentity/classes/ChildIdentity.mdx)\>\>
-
-#### Note
-
-the given `secondaryKey` is removed as secondary key from the signing Identity
-
-#### Throws
-
-if
- - the transaction signer is not the primary account of which the `secondaryKey` is a secondary key
- - the `secondaryKey` can't be unlinked (can happen when it's part of a multisig with some balance)
- - the signing account is not a primary key
- - the signing Identity is already a child of some other identity
-
-#### Deprecated
-
-Child identities are no longer supported in chain v8
-
-#### Note
-
-this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [createChild.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
-***
-
-### ~~createChildren()~~
-
-> **createChildren**(`args`: [`CreateChildIdentitiesParams`](../../../procedures/types/interfaces/CreateChildIdentitiesParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`ChildIdentity`](../../../entities/Identity/ChildIdentity/classes/ChildIdentity.mdx)[], [`ChildIdentity`](../../../entities/Identity/ChildIdentity/classes/ChildIdentity.mdx)[]\>\>
-
-Defined in: [src/api/client/Identities.ts:260](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Identities.ts#L260)
-
-Create child identities using off chain authorization
-
-#### Parameters
-
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`args`
-
-</td>
-<td>
-
-[`CreateChildIdentitiesParams`](../../../procedures/types/interfaces/CreateChildIdentitiesParams.mdx)
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts?`
-
-</td>
-<td>
-
-[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
-
-</td>
-</tr>
-</tbody>
-</table>
-
-#### Returns
-
-`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`ChildIdentity`](../../../entities/Identity/ChildIdentity/classes/ChildIdentity.mdx)[], [`ChildIdentity`](../../../entities/Identity/ChildIdentity/classes/ChildIdentity.mdx)[]\>\>
-
-#### Note
-
-the list of `key` provided in the params should not be linked to any other account
-
-#### Throws
-
-if
- - the signing account is not a primary key
- - the signing Identity is already a child of some other identity
- - `expiresAt` is not a future date
- - the any `key` in `childKeyAuths` is already linked to an Identity
-
-#### Deprecated
-
-Child identities are no longer supported in chain v8
-
-#### Note
-
-this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [createChildren.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
-
-***
-
 ### createPortfolio()
 
 > **createPortfolio**(`args`: `object`, `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`NumberedPortfolio`](../../../entities/NumberedPortfolio/classes/NumberedPortfolio.mdx)[], [`NumberedPortfolio`](../../../entities/NumberedPortfolio/classes/NumberedPortfolio.mdx)\>\>
 
-Defined in: [src/api/client/Identities.ts:189](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Identities.ts#L189)
+Defined in: [src/api/client/Identities.ts:191](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Identities.ts#L191)
 
 Create a new Portfolio under the ownership of the signing Identity
 
@@ -370,7 +228,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **createPortfolios**(`args`: `object`, `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`NumberedPortfolio`](../../../entities/NumberedPortfolio/classes/NumberedPortfolio.mdx)[], [`NumberedPortfolio`](../../../entities/NumberedPortfolio/classes/NumberedPortfolio.mdx)[]\>\>
 
-Defined in: [src/api/client/Identities.ts:199](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Identities.ts#L199)
+Defined in: [src/api/client/Identities.ts:201](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Identities.ts#L201)
 
 Creates a set of new Portfolios under the ownership of the signing Identity
 
@@ -453,7 +311,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **getAllowedCustodians**(`did`: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)): `Promise`\<`string`[]\>
 
-Defined in: [src/api/client/Identities.ts:291](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Identities.ts#L291)
+Defined in: [src/api/client/Identities.ts:251](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Identities.ts#L251)
 
 Returns a list of allowed custodian did(s) for Identity
 
@@ -493,70 +351,11 @@ if
 
 ***
 
-### ~~getChildIdentity()~~
-
-> **getChildIdentity**(`args`: `object`): `Promise`\<[`ChildIdentity`](../../../entities/Identity/ChildIdentity/classes/ChildIdentity.mdx)\>
-
-Defined in: [src/api/client/Identities.ts:220](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Identities.ts#L220)
-
-Create a ChildIdentity instance from a DID
-
-#### Parameters
-
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`args`
-
-</td>
-<td>
-
-\{ `did`: `string`; \}
-
-</td>
-</tr>
-<tr>
-<td>
-
-`args.did`
-
-</td>
-<td>
-
-`string`
-
-</td>
-</tr>
-</tbody>
-</table>
-
-#### Returns
-
-`Promise`\<[`ChildIdentity`](../../../entities/Identity/ChildIdentity/classes/ChildIdentity.mdx)\>
-
-#### Throws
-
-if there is no ChildIdentity with the passed DID
-
-#### Deprecated
-
-Child identities are no longer supported in chain v8
-
-***
-
 ### getIdentity()
 
 > **getIdentity**(`args`: `object`): `Promise`\<[`Identity`](../../../entities/Identity/classes/Identity.mdx)\>
 
-Defined in: [src/api/client/Identities.ts:209](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Identities.ts#L209)
+Defined in: [src/api/client/Identities.ts:211](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Identities.ts#L211)
 
 Create an Identity instance from a DID
 
@@ -611,7 +410,7 @@ if there is no Identity with the passed DID
 
 > **isIdentityValid**(`args`: `object`): `Promise`\<`boolean`\>
 
-Defined in: [src/api/client/Identities.ts:228](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Identities.ts#L228)
+Defined in: [src/api/client/Identities.ts:218](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Identities.ts#L218)
 
 Return whether the supplied Identity/DID exists
 
@@ -658,11 +457,78 @@ Return whether the supplied Identity/DID exists
 
 ***
 
-### registerIdentity()
+### registerDid()
+
+> **registerDid**(`args`: [`RegisterDidParams`](../../../procedures/types/interfaces/RegisterDidParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Identity`](../../../entities/Identity/classes/Identity.mdx), [`Identity`](../../../entities/Identity/classes/Identity.mdx)\>\>
+
+Defined in: [src/api/client/Identities.ts:144](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Identities.ts#L144)
+
+Register a new DID for the `targetAccount`
+
+#### Parameters
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`args`
+
+</td>
+<td>
+
+[`RegisterDidParams`](../../../procedures/types/interfaces/RegisterDidParams.mdx)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`opts?`
+
+</td>
+<td>
+
+[`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+#### Returns
+
+`Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Identity`](../../../entities/Identity/classes/Identity.mdx), [`Identity`](../../../entities/Identity/classes/Identity.mdx)\>\>
+
+#### Note
+
+the transaction signer must be an active DID Registrar
+
+#### Note
+
+unlike [registerIdentity](#registeridentity), this does not support secondary keys or CDD claims
+
+#### Throws
+
+if the `targetAccount` is already linked to an Identity
+
+#### Note
+
+this method is of type [ProcedureMethod](../../../procedures/types/interfaces/ProcedureMethod.mdx), which means you can call [registerDid.checkAuthorization](../../../procedures/types/interfaces/ProcedureMethod.mdx#checkauthorization) on it to see whether the signing Account and Identity have the required roles and permissions to run it
+
+***
+
+### ~~registerIdentity()~~
 
 > **registerIdentity**(`args`: [`RegisterIdentityParams`](../../../procedures/types/interfaces/RegisterIdentityParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Identity`](../../../entities/Identity/classes/Identity.mdx), [`Identity`](../../../entities/Identity/classes/Identity.mdx)\>\>
 
-Defined in: [src/api/client/Identities.ts:135](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Identities.ts#L135)
+Defined in: [src/api/client/Identities.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Identities.ts#L127)
 
 Register an Identity
 
@@ -707,6 +573,12 @@ Register an Identity
 
 `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Identity`](../../../entities/Identity/classes/Identity.mdx), [`Identity`](../../../entities/Identity/classes/Identity.mdx)\>\>
 
+#### Deprecated
+
+as of chain v8, `createCdd`/`expiry` no longer have any on-chain effect (the
+  underlying `cdd_register_did`/`cdd_register_did_with_cdd` calls are deprecated and no longer
+  attach a `CustomerDueDiligence` claim). Use [registerDid](#registerdid) instead.
+
 #### Note
 
 the transaction signer must be a DID Registrar
@@ -732,7 +604,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **revokeIdentityToCreatePortfolios**(`args`: [`RevokeIdentityToCreatePortfoliosParams`](../../../procedures/types/type-aliases/RevokeIdentityToCreatePortfoliosParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/Identities.ts:281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Identities.ts#L281)
+Defined in: [src/api/client/Identities.ts:241](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Identities.ts#L241)
 
 Revokes permission from the Identity to create Portfolios on behalf of the signing Identity
 
@@ -793,7 +665,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **rotatePrimaryKey**(`args`: [`RotatePrimaryKeyParams`](../../../procedures/types/interfaces/RotatePrimaryKeyParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx), [`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
 
-Defined in: [src/api/client/Identities.ts:167](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Identities.ts#L167)
+Defined in: [src/api/client/Identities.ts:169](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Identities.ts#L169)
 
 Creates an Authorization to rotate primary key of the signing Identity by the `targetAccount`
 
@@ -840,7 +712,7 @@ Creates an Authorization to rotate primary key of the signing Identity by the `t
 
 #### Note
 
-this creates an [Authorization Requests](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx) which have to be accepted by the `targetAccount` along with the optional CDD authorization generated by CDD provider attesting the rotation of primary key
+this creates an [Authorization Requests](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx) which have to be accepted by the `targetAccount`
   An [Account](../../../entities/Account/classes/Account.mdx) or [Identity](../../../entities/Identity/classes/Identity.mdx) can fetch its pending Authorization Requests by calling [authorizations.getReceived](../../../entities/common/namespaces/Authorizations/classes/Authorizations.mdx#getreceived).
   Also, an Account or Identity can directly fetch the details of an Authorization Request by calling [authorizations.getOne](../../../entities/common/namespaces/Authorizations/classes/Authorizations.mdx#getone)
 
@@ -854,7 +726,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **rotatePrimaryKeyToSecondary**(`args`: [`RotatePrimaryKeyToSecondaryParams`](../../../procedures/types/type-aliases/RotatePrimaryKeyToSecondaryParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx), [`AuthorizationRequest`](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx)\>\>
 
-Defined in: [src/api/client/Identities.ts:180](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Identities.ts#L180)
+Defined in: [src/api/client/Identities.ts:182](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Identities.ts#L182)
 
 Creates an Authorization to rotate primary key of the signing Identity to an existing secondary key identified by the `targetAccount`
 
@@ -905,7 +777,7 @@ the given `targetAccount` must be an existing secondaryKey or unlinked to any ot
 
 #### Note
 
-this creates an [Authorization Requests](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx) which have to be accepted by the `targetAccount` along with the optional CDD authorization generated by CDD provider attesting the rotation of primary key
+this creates an [Authorization Requests](../../../entities/AuthorizationRequest/classes/AuthorizationRequest.mdx) which have to be accepted by the `targetAccount`
   An [Account](../../../entities/Account/classes/Account.mdx) or [Identity](../../../entities/Identity/classes/Identity.mdx) can fetch its pending Authorization Requests by calling [authorizations.getReceived](../../../entities/common/namespaces/Authorizations/classes/Authorizations.mdx#getreceived).
   Also, an Account or Identity can directly fetch the details of an Authorization Request by calling [authorizations.getOne](../../../entities/common/namespaces/Authorizations/classes/Authorizations.mdx#getone)
 
@@ -931,7 +803,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **selfRegisterDid**(`opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Identity`](../../../entities/Identity/classes/Identity.mdx), [`Identity`](../../../entities/Identity/classes/Identity.mdx)\>\>
 
-Defined in: [src/api/client/Identities.ts:142](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Identities.ts#L142)
+Defined in: [src/api/client/Identities.ts:134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Identities.ts#L134)
 
 Register a new DID for the signing Account
 

@@ -4,7 +4,7 @@ sidebar_label: "Claims"
 
 # Class: Claims
 
-Defined in: [src/api/client/Claims.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Claims.ts#L61)
+Defined in: [src/api/client/Claims.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Claims.ts#L54)
 
 Handles all Claims related functionality
 
@@ -14,7 +14,7 @@ Handles all Claims related functionality
 
 > **addClaims**(`args`: `Pick`\<[`ModifyClaimsParams`](../../../procedures/types/type-aliases/ModifyClaimsParams.mdx), `"claims"`\>, `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/Claims.ts:133](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Claims.ts#L133)
+Defined in: [src/api/client/Claims.ts:126](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Claims.ts#L126)
 
 Add claims to Identities
 
@@ -62,7 +62,7 @@ Add claims to Identities
 #### Note
 
 required roles:
-  - Customer Due Diligence Provider: if there is at least one CDD claim in the arguments
+  - DID Registrar: if there is at least one CDD claim in the arguments
 
 #### Note
 
@@ -74,7 +74,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **editClaims**(`args`: `Pick`\<[`ModifyClaimsParams`](../../../procedures/types/type-aliases/ModifyClaimsParams.mdx), `"claims"`\>, `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/Claims.ts:141](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Claims.ts#L141)
+Defined in: [src/api/client/Claims.ts:134](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Claims.ts#L134)
 
 Edit claims associated to Identities (only the expiry date can be modified)
 
@@ -122,7 +122,7 @@ Edit claims associated to Identities (only the expiry date can be modified)
 #### Note
 
 required roles:
-  - Customer Due Diligence Provider: if there is at least one CDD claim in the arguments
+  - DID Registrar: if there is at least one CDD claim in the arguments
 
 #### Note
 
@@ -134,7 +134,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **getAllCustomClaimTypes**(`opts?`: `object`): `Promise`\<[`ResultSet`](../../../entities/types/interfaces/ResultSet.mdx)\<[`CustomClaimTypeWithDid`](../../types/type-aliases/CustomClaimTypeWithDid.mdx)\>\>
 
-Defined in: [src/api/client/Claims.ts:637](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Claims.ts#L637)
+Defined in: [src/api/client/Claims.ts:564](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Claims.ts#L564)
 
 Retrieve registered CustomClaimTypes
 
@@ -234,94 +234,11 @@ uses the middlewareV2 (Required)
 
 ***
 
-### ~~getCddClaims()~~
-
-> **getCddClaims**(`opts?`: `object`): `Promise`\<[`ClaimData`](../../../entities/types/interfaces/ClaimData.mdx)\<[`CddClaim`](../../../entities/types/interfaces/CddClaim.mdx)\>[]\>
-
-Defined in: [src/api/client/Claims.ts:397](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Claims.ts#L397)
-
-Retrieve the list of CDD claims for a target Identity
-
-#### Parameters
-
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-`opts`
-
-</td>
-<td>
-
-\{ `includeExpired?`: `boolean`; `target?`: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx); \}
-
-</td>
-<td>
-
-&hyphen;
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.includeExpired?`
-
-</td>
-<td>
-
-`boolean`
-
-</td>
-<td>
-
-whether to include expired claims. Defaults to true
-
-</td>
-</tr>
-<tr>
-<td>
-
-`opts.target?`
-
-</td>
-<td>
-
-`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
-
-</td>
-<td>
-
-Identity for which to fetch CDD claims (optional, defaults to the signing Identity)
-
-</td>
-</tr>
-</tbody>
-</table>
-
-#### Returns
-
-`Promise`\<[`ClaimData`](../../../entities/types/interfaces/ClaimData.mdx)\<[`CddClaim`](../../../entities/types/interfaces/CddClaim.mdx)\>[]\>
-
-#### Deprecated
-
-CDD claims are no longer supported with v8 chains
-
-***
-
 ### getClaimScopes()
 
 > **getClaimScopes**(`opts?`: `object`): `Promise`\<[`ClaimScope`](../../../entities/types/interfaces/ClaimScope.mdx)[]\>
 
-Defined in: [src/api/client/Claims.ts:281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Claims.ts#L281)
+Defined in: [src/api/client/Claims.ts:273](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Claims.ts#L273)
 
 Retrieve all scopes in which claims have been made for the target Identity.
   If the scope is an asset DID, the corresponding ticker is returned as well
@@ -388,7 +305,7 @@ in order for scopes to include scopes for custom claims, middlewareV2 is require
 
 > **getCustomClaimTypeById**(`id`: `BigNumber`): `Promise`\<[`CustomClaimType`](../../types/type-aliases/CustomClaimType.mdx) \| `null`\>
 
-Defined in: [src/api/client/Claims.ts:612](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Claims.ts#L612)
+Defined in: [src/api/client/Claims.ts:539](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Claims.ts#L539)
 
 Retrieves a custom claim type based on its ID
 
@@ -433,7 +350,7 @@ The ID of the custom claim type to retrieve
 
 > **getCustomClaimTypeByName**(`name`: `string`): `Promise`\<[`CustomClaimType`](../../types/type-aliases/CustomClaimType.mdx) \| `null`\>
 
-Defined in: [src/api/client/Claims.ts:589](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Claims.ts#L589)
+Defined in: [src/api/client/Claims.ts:516](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Claims.ts#L516)
 
 Retrieves a custom claim type based on its name
 
@@ -478,7 +395,7 @@ The name of the custom claim type to retrieve
 
 > **getIdentitiesWithClaims**(`opts?`: `object`): `Promise`\<[`ResultSet`](../../../entities/types/interfaces/ResultSet.mdx)\<[`IdentityWithClaims`](../../../entities/types/interfaces/IdentityWithClaims.mdx)\>\>
 
-Defined in: [src/api/client/Claims.ts:195](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Claims.ts#L195)
+Defined in: [src/api/client/Claims.ts:187](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Claims.ts#L187)
 
 Retrieve a list of Identities with claims associated to them. Can be filtered using parameters
 
@@ -650,7 +567,7 @@ uses the middleware V2
 
 > **getIssuedClaims**(`opts?`: `object`): `Promise`\<[`ResultSet`](../../../entities/types/interfaces/ResultSet.mdx)\<[`ClaimData`](../../../entities/types/interfaces/ClaimData.mdx)\<[`Claim`](../../../entities/types/type-aliases/Claim.mdx)\>\>\>
 
-Defined in: [src/api/client/Claims.ts:160](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Claims.ts#L160)
+Defined in: [src/api/client/Claims.ts:152](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Claims.ts#L152)
 
 Retrieve all claims issued by an Identity
 
@@ -771,7 +688,7 @@ uses the middlewareV2
 
 > **getTargetingClaims**(`opts?`: `object`): `Promise`\<[`ResultSet`](../../../entities/types/interfaces/ResultSet.mdx)\<[`IdentityWithClaims`](../../../entities/types/interfaces/IdentityWithClaims.mdx)\>\>
 
-Defined in: [src/api/client/Claims.ts:497](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Claims.ts#L497)
+Defined in: [src/api/client/Claims.ts:424](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Claims.ts#L424)
 
 Retrieve all claims issued about an Identity, grouped by claim issuer
 
@@ -926,7 +843,7 @@ uses the middlewareV2 (optional)
 
 > **registerCustomClaimType**(`args`: [`RegisterCustomClaimTypeParams`](../../../procedures/types/interfaces/RegisterCustomClaimTypeParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`BigNumber`, `BigNumber`\>\>
 
-Defined in: [src/api/client/Claims.ts:582](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Claims.ts#L582)
+Defined in: [src/api/client/Claims.ts:509](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Claims.ts#L509)
 
 Creates a custom claim type using the `name` and returns the `id` of the created claim type
 
@@ -987,7 +904,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **revokeClaims**(`args`: `Pick`\<[`ModifyClaimsParams`](../../../procedures/types/type-aliases/ModifyClaimsParams.mdx), `"claims"`\>, `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/Claims.ts:149](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Claims.ts#L149)
+Defined in: [src/api/client/Claims.ts:141](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Claims.ts#L141)
 
 Revoke claims from Identities
 
@@ -1034,8 +951,7 @@ Revoke claims from Identities
 
 #### Note
 
-required roles:
-  - Customer Due Diligence Provider: if there is at least one CDD claim in the arguments
+a claim can only be revoked by the Identity that issued it
 
 #### Note
 

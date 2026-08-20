@@ -1,0 +1,55 @@
+---
+sidebar_label: "NftControllerTransferParams"
+---
+
+# Interface: NftControllerTransferParams
+
+Defined in: [src/api/procedures/types.ts:1295](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1295)
+
+## Properties
+
+### destination?
+
+> `optional` **destination?**: [`AssetHolderLike`](../../../entities/types/type-aliases/AssetHolderLike.mdx)
+
+Defined in: [src/api/procedures/types.ts:1317](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1317)
+
+(optional) portfolio (or portfolio ID) or account to which Assets will be transferred to. Defaults to default portfolio. If specified it must be one of the callers own portfolios or accounts
+
+#### Note
+
+this takes precedence over `destinationPortfolio`
+
+***
+
+### ~~destinationPortfolio?~~
+
+> `optional` **destinationPortfolio?**: [`PortfolioLike`](../../../entities/types/type-aliases/PortfolioLike.mdx)
+
+Defined in: [src/api/procedures/types.ts:1310](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1310)
+
+Optional portfolio (or portfolio ID) to which NFTs will be transferred to. Defaults to default portfolio. If specified it must be one of the callers own portfolios
+
+#### Deprecated
+
+in favour of `destination`. If both are passed `destination` will take precedence
+
+***
+
+### nfts
+
+> **nfts**: (`BigNumber` \| [`Nft`](../../../entities/Asset/NonFungible/Nft/classes/Nft.mdx))[]
+
+Defined in: [src/api/procedures/types.ts:1303](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1303)
+
+The NFTs to transfer
+
+***
+
+### originPortfolio
+
+> **originPortfolio**: [`PortfolioLike`](../../../entities/types/type-aliases/PortfolioLike.mdx)
+
+Defined in: [src/api/procedures/types.ts:1299](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/procedures/types.ts#L1299)
+
+portfolio (or portfolio ID) from which NFTs will be transferred from

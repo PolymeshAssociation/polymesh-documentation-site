@@ -4,7 +4,7 @@ sidebar_label: "Network"
 
 # Class: Network
 
-Defined in: [src/api/client/Network.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Network.ts#L42)
+Defined in: [src/api/client/Network.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L42)
 
 Handles all Network related functionality, including querying for historical events from middleware
 
@@ -14,7 +14,7 @@ Handles all Network related functionality, including querying for historical eve
 
 > **getEventByIndexedArgs**(`opts`: `object`): `Promise`\<[`EventIdentifier`](../../types/interfaces/EventIdentifier.mdx) \| `null`\>
 
-Defined in: [src/api/client/Network.ts:174](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Network.ts#L174)
+Defined in: [src/api/client/Network.ts:174](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L174)
 
 Retrieve a single event by any of its indexed arguments. Can be filtered using parameters
 
@@ -148,7 +148,7 @@ uses the middlewareV2
 
 > **getEventsByIndexedArgs**(`opts`: `object`): `Promise`\<[`EventIdentifier`](../../types/interfaces/EventIdentifier.mdx)[] \| `null`\>
 
-Defined in: [src/api/client/Network.ts:361](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Network.ts#L361)
+Defined in: [src/api/client/Network.ts:360](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L360)
 
 Retrieve a list of events. Can be filtered using parameters
 
@@ -318,7 +318,7 @@ uses the middlewareV2
 
 > **getLatestBlock**(): `Promise`\<`BigNumber`\>
 
-Defined in: [src/api/client/Network.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Network.ts#L60)
+Defined in: [src/api/client/Network.ts:60](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L60)
 
 Retrieve the number of the latest finalized block in the chain
 
@@ -332,7 +332,7 @@ Retrieve the number of the latest finalized block in the chain
 
 > **getMiddlewareLag**(): `Promise`\<`BigNumber`\>
 
-Defined in: [src/api/client/Network.ts:516](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Network.ts#L516)
+Defined in: [src/api/client/Network.ts:514](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L514)
 
 Get the number of blocks the middleware needs to process to be synced with chain.
 The lag can be around somewhere upto 15 blocks, but this can increase if the block size being processed by the Middleware is too large.
@@ -352,7 +352,7 @@ uses the middleware V2
 
 > **getMiddlewareMetadata**(): `Promise`\<[`MiddlewareMetadata`](../../types/interfaces/MiddlewareMetadata.mdx) \| `null`\>
 
-Defined in: [src/api/client/Network.ts:505](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Network.ts#L505)
+Defined in: [src/api/client/Network.ts:503](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L503)
 
 Retrieve middleware metadata.
 Returns null if middleware is disabled
@@ -371,7 +371,7 @@ uses the middleware V2
 
 > **getNetworkProperties**(): `Promise`\<[`NetworkProperties`](../../types/interfaces/NetworkProperties.mdx)\>
 
-Defined in: [src/api/client/Network.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Network.ts#L81)
+Defined in: [src/api/client/Network.ts:81](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L81)
 
 Retrieve information for the current network
 
@@ -385,7 +385,7 @@ Retrieve information for the current network
 
 > **getProtocolFees**(`args`: `object`): `Promise`\<[`ProtocolFees`](../../types/interfaces/ProtocolFees.mdx)[]\>
 
-Defined in: [src/api/client/Network.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Network.ts#L107)
+Defined in: [src/api/client/Network.ts:107](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L107)
 
 Retrieve the protocol fees associated with running specific transactions
 
@@ -447,7 +447,7 @@ list of transaction tags (e.g. [TxTags.asset.CreateAsset, TxTags.asset.RegisterU
 
 > **getSs58Format**(): `BigNumber`
 
-Defined in: [src/api/client/Network.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Network.ts#L74)
+Defined in: [src/api/client/Network.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L74)
 
 Retrieve the chain's SS58 format
 
@@ -461,7 +461,7 @@ Retrieve the chain's SS58 format
 
 > **getTransactionByHash**(`opts`: `object`): `Promise`\<[`ExtrinsicDataWithFees`](../../types/interfaces/ExtrinsicDataWithFees.mdx) \| `null`\>
 
-Defined in: [src/api/client/Network.ts:410](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Network.ts#L410)
+Defined in: [src/api/client/Network.ts:408](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L408)
 
 Retrieve a transaction by hash
 
@@ -527,7 +527,7 @@ uses the middlewareV2
 
 > **getTreasuryAccount**(): [`Account`](../../../entities/Account/classes/Account.mdx)
 
-Defined in: [src/api/client/Network.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Network.ts#L114)
+Defined in: [src/api/client/Network.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L114)
 
 Get the treasury wallet address
 
@@ -543,7 +543,7 @@ Get the treasury wallet address
 
 > **getTreasuryBalance**(): `Promise`\<`BigNumber`\>
 
-Defined in: [src/api/client/Network.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Network.ts#L127)
+Defined in: [src/api/client/Network.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L127)
 
 Get the Treasury POLYX balance
 
@@ -557,7 +557,7 @@ Promise that resolves to the current Treasury balance
 
 > **getTreasuryBalance**(`callback`: [`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<`BigNumber`\>): `Promise`\<[`UnsubCallback`](../../../entities/types/type-aliases/UnsubCallback.mdx)\>
 
-Defined in: [src/api/client/Network.ts:138](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Network.ts#L138)
+Defined in: [src/api/client/Network.ts:138](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L138)
 
 Get the Treasury POLYX balance (with subscription support)
 
@@ -608,7 +608,7 @@ can be subscribed to, if connected to node using a web socket
 
 > **getVersion**(): `Promise`\<`string`\>
 
-Defined in: [src/api/client/Network.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Network.ts#L67)
+Defined in: [src/api/client/Network.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L67)
 
 Fetch the current network version (e.g. 3.1.0)
 
@@ -622,7 +622,7 @@ Fetch the current network version (e.g. 3.1.0)
 
 > **submitTransaction**(`txPayload`: [`TransactionPayloadInput`](../../../../base/types/type-aliases/TransactionPayloadInput.mdx), `signature`: `string`): `Promise`\<[`SubmissionDetails`](../../types/interfaces/SubmissionDetails.mdx)\>
 
-Defined in: [src/api/client/Network.ts:213](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Network.ts#L213)
+Defined in: [src/api/client/Network.ts:212](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L212)
 
 Submits a transaction payload with its signature to the chain. `signature` should be hex encoded
 
@@ -677,7 +677,7 @@ if the signature is not hex encoded
 
 > **supportsConfidentialAssets**(): `boolean`
 
-Defined in: [src/api/client/Network.ts:533](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Network.ts#L533)
+Defined in: [src/api/client/Network.ts:531](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L531)
 
 Returns whether or not the connected chain node as support for confidential assets
 
@@ -691,7 +691,7 @@ Returns whether or not the connected chain node as support for confidential asse
 
 > **supportsSubscription**(): `boolean`
 
-Defined in: [src/api/client/Network.ts:549](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Network.ts#L549)
+Defined in: [src/api/client/Network.ts:547](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L547)
 
 Returns if functions can be subscribed.
 
@@ -707,7 +707,7 @@ Returns if functions can be subscribed.
 
 > **transferPolyx**(`args`: [`TransferPolyxParams`](../../../procedures/types/interfaces/TransferPolyxParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`void`, `void`\>\>
 
-Defined in: [src/api/client/Network.ts:161](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Network.ts#L161)
+Defined in: [src/api/client/Network.ts:161](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L161)
 
 Transfer an amount of POLYX to a specified Account
 

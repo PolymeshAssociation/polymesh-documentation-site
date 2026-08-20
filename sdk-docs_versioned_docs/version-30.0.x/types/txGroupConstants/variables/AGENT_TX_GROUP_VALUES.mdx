@@ -1,0 +1,26 @@
+---
+sidebar_label: "AGENT_TX_GROUP_VALUES"
+---
+
+# Variable: AGENT\_TX\_GROUP\_VALUES
+
+> `const` **AGENT\_TX\_GROUP\_VALUES**: readonly \[[`AdvancedAssetManagement`](../../../api/procedures/types/enumerations/TxGroup.mdx#advancedassetmanagement), [`AssetDocumentManagement`](../../../api/procedures/types/enumerations/TxGroup.mdx#assetdocumentmanagement), [`AssetManagement`](../../../api/procedures/types/enumerations/TxGroup.mdx#assetmanagement), [`AssetMetadataManagement`](../../../api/procedures/types/enumerations/TxGroup.mdx#assetmetadatamanagement), [`CapitalDistribution`](../../../api/procedures/types/enumerations/TxGroup.mdx#capitaldistribution), [`CheckpointManagement`](../../../api/procedures/types/enumerations/TxGroup.mdx#checkpointmanagement), [`ComplianceManagement`](../../../api/procedures/types/enumerations/TxGroup.mdx#compliancemanagement), [`CorporateActionsManagement`](../../../api/procedures/types/enumerations/TxGroup.mdx#corporateactionsmanagement), [`CorporateBallotManagement`](../../../api/procedures/types/enumerations/TxGroup.mdx#corporateballotmanagement), [`ExternalAgentManagement`](../../../api/procedures/types/enumerations/TxGroup.mdx#externalagentmanagement), [`Issuance`](../../../api/procedures/types/enumerations/TxGroup.mdx#issuance), [`Redemption`](../../../api/procedures/types/enumerations/TxGroup.mdx#redemption), [`StoManagement`](../../../api/procedures/types/enumerations/TxGroup.mdx#stomanagement), [`TrustedClaimIssuersManagement`](../../../api/procedures/types/enumerations/TxGroup.mdx#trustedclaimissuersmanagement)\]
+
+Defined in: [src/types/txGroupConstants.ts:513](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/types/txGroupConstants.ts#L513)
+
+Runtime list of `TxGroup` values that are permitted for External Agent permissions.
+
+- Pairs with [AgentTxGroup](../../../api/procedures/types/type-aliases/AgentTxGroup.mdx) for compile-time safety.
+- Use this constant when you need to iterate, validate, or render the allowed groups at runtime
+  without duplicating definitions.
+- All transactions in these groups are available to both Agents and Secondary Keys.
+- Groups are ordered alphabetically for consistency.
+
+## Example
+
+```ts
+AGENT_TX_GROUP_VALUES.forEach(group => {
+  const tags = txGroupToTxTags(group);
+  // render group with its tags, build UI options, etc.
+});
+```

@@ -4,7 +4,7 @@ sidebar_label: "Settlements"
 
 # Class: Settlements
 
-Defined in: [src/api/client/Settlements.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Settlements.ts#L33)
+Defined in: [src/api/client/Settlements.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Settlements.ts#L33)
 
 Handles all Settlement related functionality
 
@@ -14,7 +14,7 @@ Handles all Settlement related functionality
 
 > **addInstruction**(`args`: [`AddInstructionWithVenueIdParams`](../../../procedures/types/type-aliases/AddInstructionWithVenueIdParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Instruction`](../../../entities/Instruction/classes/Instruction.mdx)[], [`Instruction`](../../../entities/Instruction/classes/Instruction.mdx)\>\>
 
-Defined in: [src/api/client/Settlements.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Settlements.ts#L119)
+Defined in: [src/api/client/Settlements.ts:119](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Settlements.ts#L119)
 
 Create an Instruction to exchange Assets
 
@@ -69,7 +69,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **affirmInstruction**(`args`: [`InstructionIdParams`](../../../procedures/types/interfaces/InstructionIdParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Instruction`](../../../entities/Instruction/classes/Instruction.mdx), [`Instruction`](../../../entities/Instruction/classes/Instruction.mdx)\>\>
 
-Defined in: [src/api/client/Settlements.ts:128](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Settlements.ts#L128)
+Defined in: [src/api/client/Settlements.ts:128](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Settlements.ts#L128)
 
 Affirm an Instruction (authorize)
 
@@ -124,7 +124,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **createVenue**(`args`: [`CreateVenueParams`](../../../procedures/types/interfaces/CreateVenueParams.mdx), `opts?`: [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)): `Promise`\<[`GenericPolymeshTransaction`](../../../procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<[`Venue`](../../../entities/Venue/classes/Venue.mdx), [`Venue`](../../../entities/Venue/classes/Venue.mdx)\>\>
 
-Defined in: [src/api/client/Settlements.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Settlements.ts#L114)
+Defined in: [src/api/client/Settlements.ts:114](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Settlements.ts#L114)
 
 Create a Venue under the ownership of the signing Identity
 
@@ -179,7 +179,7 @@ this method is of type [ProcedureMethod](../../../procedures/types/interfaces/Pr
 
 > **getHistoricalInstructions**(`filter`: [`HistoricalInstructionFilters`](../../types/interfaces/HistoricalInstructionFilters.mdx)): `Promise`\<[`ResultSet`](../../../entities/types/interfaces/ResultSet.mdx)\<[`HistoricInstruction`](../../../entities/Venue/types/type-aliases/HistoricInstruction.mdx)\>\>
 
-Defined in: [src/api/client/Settlements.ts:137](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Settlements.ts#L137)
+Defined in: [src/api/client/Settlements.ts:137](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Settlements.ts#L137)
 
 Retrieve all Instructions that have been associated with this Identity's DID
 
@@ -226,7 +226,7 @@ supports pagination
 
 > **getInstruction**(`args`: `object`): `Promise`\<[`Instruction`](../../../entities/Instruction/classes/Instruction.mdx)\>
 
-Defined in: [src/api/client/Settlements.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Settlements.ts#L95)
+Defined in: [src/api/client/Settlements.ts:95](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Settlements.ts#L95)
 
 Retrieve an Instruction by its ID
 
@@ -288,7 +288,7 @@ identifier number of the Instruction
 
 > **getVenue**(`args`: `object`): `Promise`\<[`Venue`](../../../entities/Venue/classes/Venue.mdx)\>
 
-Defined in: [src/api/client/Settlements.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/api/client/Settlements.ts#L74)
+Defined in: [src/api/client/Settlements.ts:74](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Settlements.ts#L74)
 
 Retrieve a Venue by its ID
 

@@ -1,0 +1,102 @@
+---
+sidebar_label: "PayingAccount"
+---
+
+# Type Alias: PayingAccount
+
+> **PayingAccount** = \{ `account`: [`Account`](../../../api/entities/Account/classes/Account.mdx); `allowance`: `BigNumber`; `type`: [`Subsidy`](../enumerations/PayingAccountType.mdx#subsidy); \} \| \{ `account`: [`Account`](../../../api/entities/Account/classes/Account.mdx); `type`: [`Caller`](../enumerations/PayingAccountType.mdx#caller) \| [`Other`](../enumerations/PayingAccountType.mdx#other) \| [`MultiSigCreator`](../enumerations/PayingAccountType.mdx#multisigcreator); \}
+
+Defined in: [src/base/types.ts:144](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/types.ts#L144)
+
+Data representing the Account responsible for paying fees for a transaction
+
+## Union Members
+
+### Type Literal
+
+\{ `account`: [`Account`](../../../api/entities/Account/classes/Account.mdx); `allowance`: `BigNumber`; `type`: [`Subsidy`](../enumerations/PayingAccountType.mdx#subsidy); \}
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Defined in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+`account`
+
+</td>
+<td>
+
+[`Account`](../../../api/entities/Account/classes/Account.mdx)
+
+</td>
+<td>
+
+Account that pays for the transaction
+
+</td>
+<td>
+
+[src/base/types.ts:150](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/types.ts#L150)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`allowance`
+
+</td>
+<td>
+
+`BigNumber`
+
+</td>
+<td>
+
+total amount that can be paid for
+
+</td>
+<td>
+
+[src/base/types.ts:154](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/types.ts#L154)
+
+</td>
+</tr>
+<tr>
+<td>
+
+`type`
+
+</td>
+<td>
+
+[`Subsidy`](../enumerations/PayingAccountType.mdx#subsidy)
+
+</td>
+<td>
+
+&hyphen;
+
+</td>
+<td>
+
+[src/base/types.ts:146](https://github.com/PolymeshAssociation/polymesh-sdk/blob/a7c926afa47310145607dc47eeba1d09b58421b6/src/base/types.ts#L146)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+***
+
+### Type Literal
+
+\{ `account`: [`Account`](../../../api/entities/Account/classes/Account.mdx); `type`: [`Caller`](../enumerations/PayingAccountType.mdx#caller) \| [`Other`](../enumerations/PayingAccountType.mdx#other) \| [`MultiSigCreator`](../enumerations/PayingAccountType.mdx#multisigcreator); \}

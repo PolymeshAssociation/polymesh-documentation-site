@@ -75,7 +75,7 @@ const config: Config = {
         includeCurrentVersion: true,
         versions: {
           current: {
-            label: '30.0.x',
+            label: '31.0.x',
           },
         },
         lastVersion: 'current',
