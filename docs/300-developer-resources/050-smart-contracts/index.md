@@ -69,7 +69,7 @@ Values set in `impl pallet_revive::Config for Runtime`:
 | `NativeToEthRatio` | `10^12`                                                             | Bridges Polymesh's 6-decimal POLYX to Ethereum's 18-decimal wei convention                  |
 | `AllowEVMBytecode` | `true`                                                              | Enables the `revm` EVM-bytecode path (`solc` output) alongside PolkaVM contracts            |
 | `GasScale`         | `100`                                                               | Scales EVM gas to Polymesh's weight-based fee model                                         |
-| `Precompiles`      | `()`                                                                | No custom precompiles configured yet — see [Precompiles](#precompiles) below                |
+| `Precompiles`      | `FungibleAssetInterface`                                            | Exposes native fungible assets to contracts as ERC-20 — see [Precompiles](#precompiles)     |
 | `AddressMapper`    | `AccountId32Mapper`                                                 | See [Address mapping](#address-mapping) above                                               |
 
 ## Interacting with native Polymesh functionality
@@ -78,15 +78,15 @@ Values set in `impl pallet_revive::Config for Runtime`:
 
 A precompile is a fixed contract address that, instead of running interpreted bytecode, triggers native logic on the runtime side — from a contract's perspective it looks like a normal contract implementing some interface (an ABI, for the EVM case), but calls to it are handled directly by a pallet rather than by executing PolkaVM/EVM code. This is the mechanism `pallet-revive` uses to expose native chain functionality to contracts: `impl pallet_revive::Config for Runtime` has a `Precompiles` associated type (see the [runtime configuration](#runtime-configuration) table above) that lists which precompiles are wired in for a given network.
 
-:::caution No native-asset precompiles yet
-As of this writing, Polymesh's `Precompiles` configuration is empty (`()`) on Mainnet, Testnet, and Develop. There is currently **no** supported way for a contract — PolkaVM or EVM — to call into the `Asset`, `Settlement`, or `Identity` pallets. Contracts are limited to their own storage and native POLYX balance flows (receiving, holding, transferring), which don't depend on a precompile.
+Polymesh currently ships one: the [**Fungible Asset precompile**](/development/smart-contracts/precompiles/fungible-asset), which makes every native fungible asset callable as an ERC-20 token — `transfer`, `approve`, `transferFrom`, `balanceOf`, `allowance`, plus `mint`/`burn` and the ERC-7943 `canTransfer`/`forcedTransfer` pair — with full compliance and settlement enforcement behind every call. It is enabled on Mainnet, Testnet, and Develop.
 
-Precompiles for interacting with native assets (such as an ERC-20-style interface for fungible assets — `transfer`, `approve`, `transferFrom`, `balanceOf`, `allowance`) are planned for a future release. This page will be updated once they ship; until then, treat contract-driven native-asset interaction as a planned capability, not an available one.
-:::
+**See [Precompiles](/development/smart-contracts/precompiles)** for the address scheme, the semantics shared by all precompiles, and the current list of what is and isn't exposed. There is not yet a precompile for NFT collections, portfolios, settlement instructions, compliance management, or identity — contracts cannot call those pallets.
 
 ### Allowances (`asset::approve` / `settlement::transfer_funds`)
 
-The `Asset` and `Settlement` pallets provide an ERC-20-style `approve`/`transferFrom` pattern at the chain level: an asset holder calls `asset::approve(asset_id, spender, amount)` to authorize a spender to move up to `amount` of the asset on their behalf, without granting the spender a broader identity permission. The spender then calls `settlement::transfer_funds` naming the owner's account as the source — no separate signature from the owner is required for that transfer, and the allowance is drawn down accordingly. See [Allowances](/core/assets/fungible#allowances) and [Direct Transfers](/settlement#direct-transfers-transfer_funds) for the full mechanics. This is a general chain feature usable today by any permitted caller (an off-chain service, another pallet, or — once the precompile above ships — a contract); it does not itself require a contract.
+The `Asset` and `Settlement` pallets provide an ERC-20-style `approve`/`transferFrom` pattern at the chain level: an asset holder calls `asset::approve(asset_id, spender, amount)` to authorize a spender to move up to `amount` of the asset on their behalf, without granting the spender a broader identity permission. The spender then calls `settlement::transfer_funds` naming the owner's account as the source — no separate signature from the owner is required for that transfer, and the allowance is drawn down accordingly. See [Allowances](/core/assets/fungible#allowances) and [Direct Transfers](/settlement#direct-transfers-transfer_funds) for the full mechanics.
+
+This is a general chain feature usable by any permitted caller — an off-chain service, another pallet, or a contract. It is also exactly what the fungible-asset precompile's `approve`/`transferFrom` methods drive, so allowances set through either path are the same on-chain state.
 
 ## Running EVM JSON-RPC
 
@@ -107,4 +107,5 @@ Polymesh's `pallet-revive` is built on the same upstream pallet used across the 
 1. Target `pallet-revive` for all contract work on Polymesh.
 2. To interact with contracts using standard Ethereum tooling, run the `eth-rpc` proxy alongside your node and use the correct `ChainId` for your network.
 3. Have users call `map_account` **before** they receive funds at their derived Ethereum-style address — see the warning in [Address mapping](#address-mapping).
-4. Contracts cannot yet call into native Polymesh pallets (no precompiles are configured) — see [Precompiles](#precompiles). Native-asset precompiles are planned for a future release.
+4. To read or move native Polymesh assets from a contract, use the [Fungible Asset precompile](/development/smart-contracts/precompiles/fungible-asset) — and give the contract its own identity, since a precompile call acts as the contract's account, not the user's.
+5. Check [Precompiles](/development/smart-contracts/precompiles) before assuming a native capability is reachable from contract code — only fungible assets are exposed today.

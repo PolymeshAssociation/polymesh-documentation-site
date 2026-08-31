@@ -1,0 +1,9 @@
+{
+  "label": "Precompiles",
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "doc",
+    "id": "precompiles-index"
+  }
+}
