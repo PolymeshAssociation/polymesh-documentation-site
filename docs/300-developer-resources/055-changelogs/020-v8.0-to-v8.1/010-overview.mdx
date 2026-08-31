@@ -1,0 +1,81 @@
+---
+title: Polymesh Chain Changelog - v8.0 to v8.1
+description: Executive summary and migration notes for upgrading integrations from Polymesh chain v8.0 to v8.1 - the ERC-20 precompile for native fungible assets, ERC-7943 support, and post-upgrade cleanup.
+id: v8.0-to-v8.1-overview
+slug: /development/changelogs/v8.0-to-v8.1
+sidebar_label: Overview
+tags:
+  - migration
+  - changelog
+  - runtime
+---
+
+This is the entry point for the Polymesh **v8.0 → v8.1** runtime changelog. v8.1 is a **minor, non-breaking release**: `spec_version` moves from `8_000_020` to `8_001_000` and `transaction_version` stays at `8`. Nothing in the extrinsic, event, error, storage, or constant surface changes, so existing integrations keep working without modification.
+
+The release is dominated by one feature: Polymesh native fungible assets are now reachable from EVM code through a **standard ERC-20 precompile**, built on the `pallet-revive` support added in [v8.0](../010-v7.4-to-v8.0/080-smart-contracts-evm.mdx).
+
+:::info Baseline for this changelog
+The "v8.0" side of this comparison is chain **v8.0.2** (`spec_version` `8_000_020`), the last v8.0.x patch release. If you are still on v8.0.0 or v8.0.1, see the [note on patch releases](#a-note-on-the-v80x-patch-releases) below.
+:::
+
+## Who this is for
+
+- **Smart contract developers, EVM tooling and wallet integrators, DeFi builders** — see [ERC-20 Precompile](./020-erc20-precompile.mdx) for what shipped, then the [Precompiles](/development/smart-contracts/precompiles) documentation for how to use it. This is the whole release for you.
+- **Asset issuers** wanting their asset usable from Solidity, EVM wallets, or block explorers — see [ERC-20 Precompile](./020-erc20-precompile.mdx); no action is needed on your side, every existing fungible asset is exposed automatically.
+- **Node and infrastructure operators** — see [Other Runtime Changes](./030-other-runtime-changes.mdx) for the Grandpa warp-sync fix, the removed v8 storage migrations, and the change to how the Ethereum JSON-RPC proxy (`eth-rpc`) is distributed.
+- **Exchanges, custodians, indexers, SDK users** — no action required. Nothing in the pallet API changed. Skim [Other Runtime Changes](./030-other-runtime-changes.mdx) if you want to confirm.
+
+## Key themes
+
+### ERC-20 precompile for native fungible assets
+
+Every Polymesh fungible asset is now callable as an ERC-20 token from EVM/PolkaVM contracts and standard Ethereum tooling, at a deterministic address derived from its `AssetId`. The precompile is backed by `pallet-asset` and `pallet-settlement`, so identity, compliance, and settlement rules still apply on every transfer — an ERC-20 `transfer` that would fail compliance reverts rather than silently succeeding.
+
+Beyond the core ERC-20 interface, it exposes `mint`/`burn` (mapped to Polymesh `issue`/`redeem`) and the ERC-7943 `canTransfer`/`forcedTransfer` pair for compliance-aware pre-checks and controller-style forced transfers. EIP-2612 `permit` is declared in the interface but **not implemented** — it reverts.
+
+The precompile also serves stub Solidity bytecode, so block explorers like Blockscout can verify the contract and render a proper Read/Write method UI for each asset.
+
+It is a standard ERC-20 **ABI**, but not drop-in ERC-20 **behaviour**: infinite approvals, zero-value transfers, self-transfers, and transfers to un-onboarded addresses all revert. Anyone porting an existing integration should read [ERC-20 conformance and deviations](/development/smart-contracts/precompiles/fungible-asset#erc-20-conformance-and-deviations) first.
+
+See [ERC-20 Precompile](./020-erc20-precompile.mdx) for the release detail, and the [Fungible Asset precompile reference](/development/smart-contracts/precompiles/fungible-asset) for the address scheme, method-by-method behaviour, and revert reasons.
+
+### ERC-7943 compliance hooks
+
+`canTransfer(from, to, value)` runs the full Polymesh transfer report (compliance rules, transfer restrictions/statistics, frozen checks, balances) and returns a boolean, letting a contract check a transfer before attempting it. `forcedTransfer(from, amount)` performs a Polymesh controller transfer into the caller's own account, for the recovery and regulatory-seizure scenarios ERC-7943 is designed around. Both are covered in the [Fungible Asset precompile reference](/development/smart-contracts/precompiles/fungible-asset#erc-7943-methods).
+
+### Post-upgrade cleanup and a warp-sync fix
+
+The one-shot storage migrations that ran during the v8.0 upgrade have been removed from the runtime now that all networks have upgraded, and a new `Grandpa` migration corrects `CurrentSetId`, repairing warp sync. Because the v8 migrations are gone, **v8.1.0 must be applied to a chain already running v8.0.x** — it cannot be used to upgrade a v7.4 chain directly. See [Other Runtime Changes](./030-other-runtime-changes.mdx).
+
+### Development-chain conveniences
+
+Multicall3 and the deterministic-deployment CREATE2 proxy already exist on Polymesh at their canonical Ethereum addresses, deployed manually as ordinary contracts. v8.1 bakes them into **development** chain specs' genesis instead, alongside pre-mapped dev accounts, so a fresh local chain has them from block zero and Foundry/Hardhat/viem workflows work without deploying them by hand first. See [Pre-deployed standard contracts](/development/smart-contracts#pre-deployed-standard-contracts).
+
+## Migration checklist
+
+For most integrators this release is a no-op. Work through the list below only if an item applies to you:
+
+1. **No call-index, event, or storage changes.** `transaction_version` is unchanged at `8`, so existing signing, decoding, and indexing code needs no update. There is no equivalent of the v7.4 → v8.0 re-verification exercise.
+2. If you build EVM contracts or tooling that should hold or move Polymesh assets, read the [Fungible Asset precompile reference](/development/smart-contracts/precompiles/fungible-asset) — particularly [address derivation](/development/smart-contracts/precompiles/fungible-asset#precompile-addresses) and [ERC-20 conformance and deviations](/development/smart-contracts/precompiles/fungible-asset#erc-20-conformance-and-deviations).
+3. If you approve with `type(uint256).max`, transfer zero amounts, allow self-transfers, or send to addresses that may not be onboarded, expect reverts — all four deviate from ERC-20 and need handling.
+4. If you rely on EIP-2612 `permit` in your ERC-20 integration path, note that `permit`, `nonces`, and `DOMAIN_SEPARATOR` are declared in the ABI but revert. Detect and fall back to `approve`.
+5. If your EVM tooling assumes token decimals vary per token, note that **every** Polymesh asset reports `decimals() == 6` through the precompile — including indivisible assets, which then only accept whole multiples of `1_000_000`.
+6. If you run the Ethereum JSON-RPC proxy, note that Polymesh no longer publishes its own `eth-rpc` binary or Docker images — see [Other Runtime Changes](./030-other-runtime-changes.mdx#eth-rpc-fork-removed-in-favour-of-upstream).
+7. If you operate a node that is still on v8.0.0 or v8.0.1, upgrade the node binary as normal; if you maintain a private or forked network still on v7.4, you must pass through a v8.0.x runtime before v8.1.0 — see [Other Runtime Changes](./030-other-runtime-changes.mdx#v8-storage-migrations-removed).
+
+## Runtime API, RPC, and pallet API surface
+
+Unchanged. No calls, events, errors, storage items, or constants were added, removed, or modified between v8.0.2 and v8.1.0, and no Runtime API or custom JSON-RPC method changed. `pallet-precompiles` is **not** a runtime pallet — it plugs into `pallet_revive::Config::Precompiles`, so it takes no pallet index and adds nothing to chain metadata.
+
+For that reason there is no "Full Pallet API Reference" page for this release; the equivalent page for the previous release is [here](../010-v7.4-to-v8.0/110-pallet-api-reference.mdx).
+
+Two weight entries were added to `pallet-asset`'s internal `WeightInfo` trait (`asset_transfer_report_best_case`, `asset_transfer_report_worst_case`) to price the `canTransfer` precompile call. These are not extrinsic weights and do not appear in metadata.
+
+## A note on the v8.0.x patch releases
+
+The [v7.4 → v8.0 changelog](../010-v7.4-to-v8.0/010-overview.mdx) documents the v8 runtime **as deployed**, which is `spec_version` `8_000_010` (v8.0.1) and later — not the initial v8.0.0 tag. Two patch releases followed v8.0.0:
+
+- **v8.0.1** (`8_000_010`) — removed the legacy `Contracts`/`PolymeshContracts` (Wasm/ink!) pallets, moved to Substrate `stable2603-4`, plus runtime fixes (secondary-key permission check in `transfer_funds`, blocking transfers of frozen assets, a same-DID check in `unverified_transfer_asset`, an automatic-payout fix) and corrected benchmark weights. All of this is already reflected in the v7.4 → v8.0 changelog.
+- **v8.0.2** (`8_000_020`) — CI and Docker packaging changes only; no runtime logic change.
+
+This changelog picks up from v8.0.2.

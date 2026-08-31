@@ -1,0 +1,88 @@
+---
+title: ERC-20 Precompile Changelog - v8.0 to v8.1
+description: Polymesh chain v8.1 exposes every native fungible asset as an ERC-20 token through a pallet-revive precompile, including ERC-7943 canTransfer and forcedTransfer.
+id: v8.0-to-v8.1-erc20-precompile
+slug: /development/changelogs/v8.0-to-v8.1/erc20-precompile
+sidebar_label: ERC-20 Precompile
+tags:
+  - migration
+  - changelog
+  - runtime
+  - smart-contracts
+  - evm
+---
+
+This page covers what shipped in v8.1 for smart contract integrators. It is part of the [v8.0 → v8.1 changelog](./010-overview.mdx).
+
+**Audience:** smart contract developers, EVM wallet and tooling integrators, and asset issuers who want their asset usable from Solidity.
+
+:::tip Reference documentation
+This is a release note, not the reference. The precompile is documented in full under **[Smart Contracts → Precompiles](/development/smart-contracts/precompiles)**:
+
+- [Precompiles](/development/smart-contracts/precompiles) — the address scheme and the semantics shared by all precompiles
+- [Fungible Asset (ERC-20)](/development/smart-contracts/precompiles/fungible-asset) — the method reference, events, revert reasons, and design considerations
+
+:::
+
+---
+
+## What shipped
+
+v8.0 added `pallet-revive`, giving Polymesh a dual-VM (PolkaVM + EVM) contract engine, but contracts had no way to touch **native** Polymesh assets — the assets tracked by `pallet-asset` with identity, compliance, and settlement enforcement. v8.1 closes that gap.
+
+A new crate, `pallet-precompiles`, provides `FungibleAssetInterface`, wired into `pallet_revive::Config::Precompiles` on **all three runtimes** (Mainnet, Testnet, Develop):
+
+```rust
+type Precompiles = (pallet_precompiles::FungibleAssetInterface<Runtime>,);
+```
+
+What it gives you:
+
+- **Every fungible asset is an ERC-20 token**, at a deterministic address derived from its `AssetId` (`0x<assetId>00080000`). No deployment, registration, or issuer opt-in — existing and future assets are exposed automatically.
+- **Core ERC-20 plus metadata**: `totalSupply`, `balanceOf`, `transfer`, `approve`, `allowance`, `transferFrom`, `name`, `symbol`, `decimals`.
+- **Polymesh issuance**: `mint` and `burn`, mapped onto `Asset::issue` and `Asset::redeem`.
+- **ERC-7943 compliance hooks**: `canTransfer(from, to, value)` runs the full Polymesh transfer report so a contract can branch on compliance instead of absorbing a revert, and `forcedTransfer(from, amount)` performs a controller transfer for recovery and regulatory-seizure scenarios. Both emit the ERC-7943 `ForcedTransfer` event where applicable.
+- **Block explorer support**: the precompile serves stub Solidity bytecode, so Blockscout and similar explorers can verify each asset and render a correct Read/Write method UI.
+
+Calls route through `pallet-asset` and `pallet-settlement`, so identity, compliance, transfer restrictions, freezes, and agent permissions are enforced exactly as for a Substrate transaction. An ERC-20 call that would break a Polymesh rule reverts.
+
+## No change to the Substrate API
+
+`pallet-precompiles` is **not a runtime pallet**. It has no pallet index, no extrinsics, no Substrate events, and does not appear in chain metadata — it plugs into `pallet-revive` as a config type. Nothing in the call, event, error, storage, or constant surface changed in v8.1.
+
+Substrate-side indexers need no changes either: the underlying `Asset` and `Settlement` events are emitted exactly as for any other transfer, so a transfer made through the precompile is indistinguishable from one made through an extrinsic.
+
+Two weight entries (`asset_transfer_report_best_case`, `asset_transfer_report_worst_case`) were added to `pallet-asset`'s internal `WeightInfo` trait to price `canTransfer`. These are not extrinsic weights and do not appear in metadata.
+
+## Know before you adopt
+
+The ABI is standard ERC-20, but the behaviour deviates in several places that mainstream tooling depends on. Each is covered in full in [ERC-20 conformance and deviations](/development/smart-contracts/precompiles/fungible-asset#erc-20-conformance-and-deviations):
+
+- **Infinite approvals revert.** `approve(spender, type(uint256).max)` fails; Polymesh balances are `u128`, so the unlimited-allowance value is `2^128-1`. Most wallets and DEX routers send `type(uint256).max`, so this needs a Polymesh-specific path.
+- **Zero-value and self-transfers revert** (`ZeroAmount`, `SenderSameAsReceiver`), against the ERC-20 requirement that zero transfers succeed. Guard both in your own code.
+- **Recipients must have an active identity.** Transfers to un-onboarded addresses — including `address(0)`, so no burn-by-transfer idiom — revert. You cannot airdrop to arbitrary EVM addresses, and a contract that custodies assets needs its own identity.
+- **Transfers must complete atomically.** `transfer`/`transferFrom` revert if the settlement instruction cannot execute in the same call — typically when the receiver has mandatory receiver affirmation, or the asset requires mediator affirmation. Those transfers must use the Substrate settlement flow.
+- **`decimals()` is always `6`, even for indivisible assets**, which silently accept only whole multiples of `1_000_000`.
+- **EIP-2612 `permit` is declared but not implemented.** `permit`, `nonces`, and `DOMAIN_SEPARATOR` are in the ABI — so ABI-based feature detection reports the token as permit-capable — but all three revert. Fall back to `approve`.
+- **`balanceOf` is the account-level holding**, not the sum of the linked identity's portfolios, and `mint`/`burn` take no address — they always act on the calling account.
+
+## Multicall3 and CREATE2 in development chain genesis
+
+[Multicall3](https://github.com/mds1/multicall3) (`0xcA11bde05977b3631167028862bE2a173976CA11`) and the [deterministic-deployment CREATE2 proxy](https://github.com/Arachnid/deterministic-deployment-proxy) (`0x4e59b44847b379578588920ca78fbf26c0b4956c`) are available on Polymesh at their canonical Ethereum addresses, where most Ethereum tooling — viem, wagmi, ethers, Foundry — expects to find them. On live networks they were deployed manually, as ordinary contracts.
+
+What changed in v8.1 is that **development chain specs now carry them in genesis**, alongside pre-mapped dev accounts (Alice through Eve), so a fresh local chain has them from block zero and you no longer need to deploy them by hand before running tooling that depends on them. The addresses and bytecode are identical either way — this is a local-setup convenience, not a new capability.
+
+See [Pre-deployed standard contracts](/development/smart-contracts#pre-deployed-standard-contracts) for what these contracts do and how to confirm their presence on a given network.
+
+## Migration checklist
+
+Nothing here is required — the precompile is additive and no existing behaviour changed. Work through the list if you are adopting it:
+
+1. Read [Precompiles](/development/smart-contracts/precompiles) and [Fungible Asset (ERC-20)](/development/smart-contracts/precompiles/fungible-asset) before writing code against it.
+2. Derive addresses from the `AssetId`; there is no registry call or index lookup.
+3. Do not rely on `permit`, and do not assume 18 decimals or a non-empty `symbol()`.
+4. Give any contract that holds or moves assets its own identity — a precompile call acts as the contract's account, not the caller's.
+5. Expect assets or counterparties requiring receiver or mediator affirmation to be untransferable through this interface.
+6. Substrate-side indexers need no changes.
+
+The precompile is not a runtime pallet, so it does not appear in the metadata-derived [Full Pallet API Reference](../010-v7.4-to-v8.0/110-pallet-api-reference.mdx) for the previous release.

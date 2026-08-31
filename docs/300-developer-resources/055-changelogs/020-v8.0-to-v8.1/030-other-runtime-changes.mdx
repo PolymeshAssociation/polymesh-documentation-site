@@ -1,0 +1,72 @@
+---
+title: Other Runtime Changes Changelog - v8.0 to v8.1
+description: Remaining Polymesh chain v8.1 changes - removal of the completed v8 storage migrations, a Grandpa CurrentSetId fix repairing warp sync, and the retirement of the forked eth-rpc build.
+id: v8.0-to-v8.1-other-runtime-changes
+slug: /development/changelogs/v8.0-to-v8.1/other-runtime-changes
+sidebar_label: Other Runtime Changes
+tags:
+  - migration
+  - changelog
+  - runtime
+---
+
+This page covers the v8.1 changes outside the [ERC-20 precompile](./020-erc20-precompile.mdx). It is part of the [v8.0 → v8.1 changelog](./010-overview.mdx).
+
+**Audience:** node and infrastructure operators, and anyone auditing chain-level changes. Application integrators can skip this page.
+
+---
+
+## v8 storage migrations removed
+
+The one-shot storage migrations that ran during the v7.4 → v8.0 upgrade have been deleted now that every network has upgraded through them. Removed:
+
+- The runtime-level `SingleBlockMigrations` tuple entries: `UpgradeSessionKeys` (which added the BEEFY key to each validator's session keys), `RemoveRandomnessCollectiveFlipStorage`, `MigrateCddServiceProvidersToDidRegistrars`, and the upstream Grandpa/ImOnline/Offences/Session/Staking version migrations.
+- The `on_runtime_upgrade` hooks and `migrations` modules in `pallet-asset`, `pallet-identity`, `pallet-nft`, `pallet-portfolio`, `pallet-relayer`, `pallet-settlement`, `pallet-sto`, and `pallet-validators`.
+- The now-dead `OldSessionKeys` type and its transform function.
+
+This is invisible to integrations — no storage layout changed, only the code that would have converted an older layout. `pallet-asset`'s in-code storage version moves from `7` to `8` to match.
+
+:::warning v8.1.0 cannot upgrade a pre-v8 chain
+Because these migrations are gone, a chain still running a v7.4 runtime **cannot** upgrade directly to v8.1.0 — its storage would never be converted. It must pass through a v8.0.x runtime first. This affects private or forked networks; Mainnet, Testnet, and Develop have all already upgraded.
+:::
+
+## New Grandpa migration: `CurrentSetId` resync (warp-sync fix)
+
+A new versioned migration, `MigrateGrandpaToV5`, replaces the removed tuple and is the only migration in the v8.1 runtime. It:
+
+1. Reads the legacy `GrandpaFinality::CurrentSetId` storage value (from the pre-v4 Grandpa storage prefix), removing it if present.
+2. Adds it to the current `Grandpa::CurrentSetId` and writes back the sum, resynchronising the authority set id.
+3. Clears the legacy `:grandpa_authorities` storage key left over from the upstream v5 migration.
+
+The practical effect is that **warp sync works again**. A node warp-syncing verifies Grandpa justifications against the authority set id it derives from state; a set id that disagreed with the finality proofs made warp sync fail. Operators bootstrapping new nodes should use v8.1.0 or later.
+
+## `eth-rpc` fork removed in favour of upstream
+
+Polymesh previously maintained a fork of `pallet-revive-eth-rpc` (the Ethereum JSON-RPC proxy, binary name `eth-rpc`) in-tree, built it in CI, and published `polymeshassociation/polymesh-eth-rpc` Docker images. As of v8.1.0:
+
+- The `eth-rpc` crate is removed from the workspace.
+- CI no longer builds the `eth-rpc` binary or publishes the `polymesh-eth-rpc` Docker images.
+- The upstream Parity `eth-rpc` image is used instead — CI runs `paritypr/eth-rpc:stable2606-73b734d9` against the Polymesh dev chain for the EVM integration tests.
+
+The proxy itself is unchanged in role: it is still a separate process you run alongside the node so MetaMask, ethers.js, viem, and other standard Ethereum tooling can reach `pallet-revive` contracts and the new [ERC-20 precompile](./020-erc20-precompile.mdx). See [Smart Contracts](/development/smart-contracts#running-evm-json-rpc) for the conceptual guide.
+
+**If you pinned the `polymeshassociation/polymesh-eth-rpc` image or built the binary from the Polymesh repository, you need to switch to an upstream build.** Confirm the exact version to run against a v8.1 node with the Polymesh Association before changing a production deployment — the runtime tracks the `polymesh-v8-stable2603-4` polkadot-sdk branch, while CI currently exercises a `stable2606` proxy build.
+
+## Legacy ink! example contracts removed
+
+The `contracts/` directory of ink!/Wasm example contracts (`erc20`, `flipper`, `nft_royalty`, `polyx-vesting`, `settlements`, `wrapped-polyx`, `upgradeable-polymesh-ink`, and the rest) is deleted. These targeted `pallet-contracts`, which was removed from the runtime back in v8.0.1 — they had been unbuildable against the v8 runtime since then. Nothing on chain is affected.
+
+EVM and PolkaVM contract examples now live with the Rust integration test suite (`integration/contracts/`), covering `pallet-revive` deployment, ERC-20 precompile use, and a sample swap contract.
+
+## Build and tooling
+
+- The pinned Rust toolchain adds the `rust-analyzer` component. The channel (`nightly-2025-12-01`) and target (`wasm32v1-none`) are unchanged.
+- Two new weight entries, `asset_transfer_report_best_case` and `asset_transfer_report_worst_case`, are added to `pallet-asset`'s `WeightInfo` to price the precompile's `canTransfer` call. They are not extrinsic weights and do not appear in chain metadata.
+
+## Migration checklist
+
+1. Upgrade node binaries as normal. No client, signing, or decoding changes are needed.
+2. Use v8.1.0 or later when bootstrapping nodes by warp sync.
+3. If you run a private or forked network still on a v7.4 runtime, upgrade through a v8.0.x runtime before v8.1.0.
+4. If you deploy the Ethereum JSON-RPC proxy from Polymesh-published binaries or Docker images, switch to an upstream build and confirm the version to pair with a v8.1 node.
+5. If you maintain build tooling against the `contracts/` ink! examples, note they are gone; EVM/PolkaVM examples live in `integration/contracts/`.
