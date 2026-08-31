@@ -1,10 +1,19 @@
 {
   "cSpell.words": [
+    "Blockscout",
+    "keccak",
+    "Multicall",
     "onboarded",
     "permissioning",
+    "PolkaVM",
     "PostgrSQL",
+    "precompile",
+    "precompiles",
+    "resolc",
     "Subscan",
-    "subsite"
+    "subsite",
+    "viem",
+    "wagmi"
   ],
   "[mdx]": {
     "editor.wordWrap": "on"
