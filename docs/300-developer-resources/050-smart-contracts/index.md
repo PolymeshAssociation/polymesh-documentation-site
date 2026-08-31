@@ -88,6 +88,31 @@ The `Asset` and `Settlement` pallets provide an ERC-20-style `approve`/`transfer
 
 This is a general chain feature usable by any permitted caller — an off-chain service, another pallet, or a contract. It is also exactly what the fungible-asset precompile's `approve`/`transferFrom` methods drive, so allowances set through either path are the same on-chain state.
 
+## Pre-deployed standard contracts
+
+Two contracts that most Ethereum tooling assumes exist are deployed on Polymesh at the same canonical addresses they use on every other EVM chain:
+
+| Contract                                                                    | Address                                      | What it's for                                                                                                                                                    |
+| --------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Multicall3](https://github.com/mds1/multicall3)                            | `0xcA11bde05977b3631167028862bE2a173976CA11` | Aggregates many contract calls into a single JSON-RPC request. Used by viem, wagmi, ethers, and most dApp front-ends to batch reads.                             |
+| [CREATE2 proxy](https://github.com/Arachnid/deterministic-deployment-proxy) | `0x4e59b44847b379578588920ca78fbf26c0b4956c` | The deterministic deployment proxy. Lets you deploy a contract to the same address on every chain, and is what Foundry uses for `CREATE2`/deterministic deploys. |
+
+Both reach the same address on every chain by being deployed from a single-use account whose transaction is pre-signed, so the deployer address — and therefore the contract address — is fixed regardless of when or where it is deployed. Multicall3's [documentation site](https://multicall3.com) and the CREATE2 proxy's [repository](https://github.com/Arachnid/deterministic-deployment-proxy) explain the mechanism and the ABIs in full.
+
+On live Polymesh networks these were deployed manually, in the ordinary way, after the network launched. On **development chains** they are instead written into the genesis config, so a fresh local chain has them from block zero and you don't have to deploy them yourself before using tooling that depends on them.
+
+:::tip Confirm before depending on them
+Because these are ordinary deployed contracts rather than runtime features, the reliable check is to ask the chain:
+
+```bash
+curl -s -H 'Content-Type: application/json' \
+  -d '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xcA11bde05977b3631167028862bE2a173976CA11","latest"],"id":1}' \
+  <your eth-rpc endpoint>
+```
+
+A response other than `0x` means the contract is present.
+:::
+
 ## Running EVM JSON-RPC
 
 `pallet-revive` is a Substrate pallet, not a full Ethereum node — it doesn't speak Ethereum's JSON-RPC (`eth_call`, `eth_sendRawTransaction`, `eth_getBalance`, etc.) directly. A separate proxy process, `pallet-revive-eth-rpc` (binary name `eth-rpc`), translates standard Ethereum JSON-RPC into calls against the node. Run it alongside your node to point MetaMask, ethers.js, or other standard Ethereum tooling at Polymesh, using the `ChainId` for your target network from the table above.
