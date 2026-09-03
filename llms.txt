@@ -87,7 +87,7 @@ This file contains links to documentation sections following the llmstxt.org sta
 - [Runtime APIs & JSON-RPC Changelog - v7.4 to v8.0](https://polymeshassociation.github.io/polymesh-documentation-site/development/changelogs/v7.4-to-v8.0/runtime-apis-and-rpc.md): Changes to Polymesh's state_call runtime APIs (AssetApi, StakingApi, SettlementApi, IdentityApi, and others) and the node's JSON-RPC method surface...
 - [Chain Changelogs](https://polymeshassociation.github.io/polymesh-documentation-site/development/changelogs.md): Runtime-level changelogs for Polymesh chain releases, covering breaking changes, new features, and migration guidance for node operators and integr...
 - [Bug Bounty Rules, Terms and Conditions](https://polymeshassociation.github.io/polymesh-documentation-site/development/bug-bounty/rules.md): Comprehensive information about the Polymesh bug bounty policies and procedures.
-- [Bug Bounty](https://polymeshassociation.github.io/polymesh-documentation-site/development/bug-bounty.md): Security Program Details
+- [Bug Bounty](https://polymeshassociation.github.io/polymesh-documentation-site/development/bug-bounty.md): Polymesh Bug Bounty Program: scope, rules, report requirements, and rewards
 - [Useful Links & Resources](https://polymeshassociation.github.io/polymesh-documentation-site/developer-resources/links.md): A curated list of useful Polymesh links, repositories, explorers, and community resources.
 - [Developer Resources](https://polymeshassociation.github.io/polymesh-documentation-site/development.md): Technical documentation
 - [Welcome to Polymesh](https://polymeshassociation.github.io/polymesh-documentation-site/index.md): Introduction to Polymesh: regulated blockchain for digital assets
