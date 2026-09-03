@@ -55,12 +55,11 @@ All feedback, unsolicited and solicited, Reports, and any materials that you sub
 
 #### (2.1) Scope
 
-The Program covers the Polymesh blockchain related source code and any associated released binaries, as set out in **Exhibit A**. Exhibit A defines four scope tiers:
+The Program covers the Polymesh blockchain related source code and any associated released binaries, as set out in **Exhibit A**. Exhibit A defines three scope tiers:
 
-1. **In-scope** items: eligible under the standard reward schedule in Exhibit B;
-2. **Limited-scope** items: eligible subject to the conditions in Exhibit A;
-3. **Responsible-disclosure** items: Reports are welcomed but carry no entitlement to a Bounty Payout; Polymesh may award a discretionary payout; and
-4. **Out-of-scope** items: not eligible for any Bounty Payout.
+1. **In-scope** items: eligible under the standard reward schedule in Exhibit B, subject to any item-specific conditions set out in Exhibit A;
+2. **Responsible-disclosure** items: Reports are welcomed but carry no entitlement to a Bounty Payout; Polymesh may award a discretionary payout; and
+3. **Out-of-scope** items: not eligible for any Bounty Payout.
 
 If you believe you have found a Vulnerability in code that is within scope, we encourage you to let us know right away by submitting a Report. Before submitting a Report, please review these Terms, including our Responsible Investigation and Reporting requirements (section 2.2 below), Report Integrity requirements (section 2.3 below), Rewards Details (in Exhibit B), and the Program Scope (in Exhibit A). If you are unsure whether something is within scope, ask us at [bugbounty@polymesh.network](mailto:bugbounty@polymesh.network) before you begin testing.
 
@@ -76,7 +75,7 @@ For you to participate in the Program, we require that you:
 - Do not target our physical security measures (attempts against Polymesh property or data centers), or attempt to use social engineering (including phishing), spam, or distributed denial of service (DDoS) attacks.
 - Do not perform denial-of-service or resource-exhaustion testing against Mainnet, Testnet, public RPC nodes, or any infrastructure you do not control; such Vulnerabilities must be demonstrated only against local nodes or private networks under your control.
 - Do not engage in attacks that consume a substantial amount of POLYX which would be otherwise cost-prohibitive on Mainnet, or that degrade Testnet for other users.
-- Test limited-scope Confidential Assets functionality (see Exhibit A) only on Testnet or on local/private networks under your control.
+- Test Confidential Assets functionality (see Exhibit A) only on Testnet or on local/private networks under your control, as it is not yet deployed to Mainnet.
 - Do not exploit a Vulnerability except as necessary for responsible testing and reporting, and do not access, retain, or disclose any data belonging to others obtained in the course of your research.
 - Do not submit any intellectual property to us unless you have the right to grant us a license to use it.
 - Report Vulnerabilities only to us and not to anyone else. Do not publicly disclose Vulnerabilities until they have been addressed by Polymesh, especially for critical issues.
@@ -181,20 +180,14 @@ The invalidity or unenforceability of any provision of these Terms will not affe
 The following are in-scope of the Program under the standard reward schedule in Exhibit B:
 
 - The [Polymesh node](https://github.com/PolymeshAssociation/Polymesh) Rust source code and associated [released binaries](https://github.com/PolymeshAssociation/Polymesh/releases/latest), as deployed in the **Mainnet runtime**. Vulnerabilities must be reproducible in the latest published release; issues present only on unreleased development branches may be accepted at Polymesh's discretion.
+- Polymesh Confidential Assets (the new P-DART-based confidential asset functionality introduced in Polymesh v8), comprising `pallet_confidential_assets` in the [Polymesh repository](https://github.com/PolymeshAssociation/Polymesh) and the [polymesh-dart](https://github.com/PolymeshAssociation/polymesh-dart) zero-knowledge proof library, subject to the conditions below.
 
-### LIMITED SCOPE: CONFIDENTIAL ASSETS (POST-AUDIT, PRE-MAINNET)
+### CONFIDENTIAL ASSETS (PRE-MAINNET)
 
-The following Confidential Assets functionality is in scope subject to the conditions below:
+Conditions applicable to Confidential Assets while it remains pre-Mainnet:
 
-- `pallet_confidential_assets` in the [Polymesh repository](https://github.com/PolymeshAssociation/Polymesh); and
-- the [polymesh-dart](https://github.com/PolymeshAssociation/polymesh-dart) zero-knowledge proof library.
-
-Conditions applicable to limited-scope items:
-
-1. Confidential Assets is a pre-release feature deployed on **Testnet only**; it is not yet deployed to Mainnet. The polymesh-dart cryptography has completed its first external security audit. All testing of limited-scope items must be performed on Testnet or on local/private networks under the Participant's control.
+1. Confidential Assets is deployed on **Testnet only**; it is not yet deployed to Mainnet. The polymesh-dart cryptography has completed its first external security audit. All testing must be performed on Testnet or on local/private networks under the Participant's control.
 2. Reports that restate limitations already documented in the [Confidential Assets documentation](/confidential-assets), or that duplicate findings already identified by Polymesh's commissioned external audit, are not eligible for a Bounty Payout.
-3. Bounty Payouts for limited-scope findings are discretionary and will generally be paid at a reduced rate relative to the standard reward schedule (typically up to 70% of the applicable range), reflecting the pre-release, Testnet-only status of the code.
-4. Upon deployment of Confidential Assets to Mainnet, these items automatically move into full scope and the standard reward schedule applies; this takes effect on Mainnet deployment itself, whether or not this page or the main bug bounty page has yet been updated to reflect it. Polymesh will update these pages to reflect the change.
 
 For the avoidance of doubt, the legacy confidential assets (v1 / MERCAT) functionality and the Polymesh Private repositories are out of scope (see below).
 
@@ -242,7 +235,7 @@ Bounty Payouts are processed twice a month, on the 15th and the last day of the 
 
 Please note that we cannot issue Bounty Payouts to individuals, entities, or residents of countries that are listed in the U.S. Department of The Treasury Office of Foreign Assets Control (OFAC) sanctions list, European Union (EU) sanctions list, or the United Nations (UN) Security Council sanctions list.
 
-Bounty Payouts are classified according to the severity of the reported Vulnerability. Severity is determined by the impact class that the Report credibly demonstrates, assessed against realistic impact on the Mainnet network and adjusted for the prerequisites, cost, and likelihood of a real attack. The impact classes below are representative, not exhaustive; impacts not listed will be classified by analogy to the closest listed class. Severity classification, eligibility, and the amount of any Bounty Payout are determined at Polymesh's sole and final discretion. The amount awarded within a range reflects, among other factors, the quality of the Report, the reproducibility of the finding, the realism of the demonstrated impact, and the quality of any suggested fix.
+Bounty Payouts are classified according to the severity of the reported Vulnerability. Severity is determined by the impact class that the Report credibly demonstrates, assessed against realistic impact on the Mainnet network and adjusted for the prerequisites, cost, and likelihood of a real attack (for Confidential Assets, which is not yet deployed to Mainnet, severity is assessed against its intended Mainnet behavior). The impact classes below are representative, not exhaustive; impacts not listed will be classified by analogy to the closest listed class. Severity classification, eligibility, and the amount of any Bounty Payout are determined at Polymesh's sole and final discretion. The amount awarded within a range reflects, among other factors, the quality of the Report, the reproducibility of the finding, the realism of the demonstrated impact, and the quality of any suggested fix.
 
 <SeverityRewardTable />
 
@@ -250,6 +243,6 @@ The following principles apply to severity classification:
 
 <SeverityAssessmentPrinciples />
 
-Bounty Payouts for limited-scope Confidential Assets findings are subject to the reduced-rate conditions in Exhibit A (typically up to 70% of the applicable range above). Payouts, if any, for Responsible-Disclosure Items are entirely discretionary and are not subject to the schedule above.
+Payouts, if any, for Responsible-Disclosure Items are entirely discretionary and are not subject to the schedule above.
 
 Where we receive multiple Reports about the same or similar vulnerability, we will reward a Bounty Payout only for the first Report received. In addition, multiple vulnerabilities that relate to one underlying vulnerability will be treated as one vulnerability and entitled to one Bounty Payout.

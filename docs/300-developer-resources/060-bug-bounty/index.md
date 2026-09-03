@@ -20,8 +20,7 @@ Before you start, please read this page in full together with the program [Terms
 
 :::info Program summary
 
-- **In scope:** the [Polymesh node](https://github.com/PolymeshAssociation/Polymesh) source code and released binaries, as deployed on Mainnet.
-- **Limited scope (post-audit, Testnet only):** Confidential Assets (`pallet_confidential_assets` and the [polymesh-dart](https://github.com/PolymeshAssociation/polymesh-dart) cryptography library). Moves to full scope once deployed to Mainnet; see [Confidential Assets scope](#limited-scope-confidential-assets).
+- **In scope:** the [Polymesh node](https://github.com/PolymeshAssociation/Polymesh) source code and released binaries, as deployed on Mainnet, including the audited Confidential Assets functionality (`pallet_confidential_assets` and the [polymesh-dart](https://github.com/PolymeshAssociation/polymesh-dart) cryptography library), currently live on Testnet ahead of its Mainnet deployment. See [Confidential Assets scope](#confidential-assets).
 - **Responsible disclosure (no reward schedule):** client libraries and off-chain tooling, including the SDK, REST API, wallet extension, and Portal. See [Responsible disclosure](#responsible-disclosure-client-libraries-and-tooling).
 - **Rewards:** up to USD 40,000 depending on severity and impact.
 - **Submissions:** by email to [bugbounty@polymesh.network](mailto:bugbounty@polymesh.network).
@@ -40,25 +39,23 @@ The program covers vulnerabilities in the following code:
 | Asset                                                                                                                                                | Status                                      | Notes                                                                                                                                                             |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Polymesh node](https://github.com/PolymeshAssociation/Polymesh) ([latest release](https://github.com/PolymeshAssociation/Polymesh/releases/latest)) | **Full scope**                              | The Rust source code and released binaries for the Polymesh chain node, as deployed in the **Mainnet runtime**.                                                   |
-| `pallet_confidential_assets` (in the [Polymesh repository](https://github.com/PolymeshAssociation/Polymesh))                                         | **Limited scope**: post-audit, Testnet only | Automatically moves to full scope (standard reward schedule) once deployed to Mainnet. See [Confidential Assets scope](#limited-scope-confidential-assets) below. |
-| [polymesh-dart](https://github.com/PolymeshAssociation/polymesh-dart) (P-DART zero-knowledge proof library)                                          | **Limited scope**: post-audit, Testnet only | Automatically moves to full scope (standard reward schedule) once deployed to Mainnet. See [Confidential Assets scope](#limited-scope-confidential-assets) below. |
+| `pallet_confidential_assets` (in the [Polymesh repository](https://github.com/PolymeshAssociation/Polymesh))                                         | **Full scope**                              | Audited; currently deployed on Testnet only, ahead of its Mainnet deployment. See [Confidential Assets scope](#confidential-assets) below.                        |
+| [polymesh-dart](https://github.com/PolymeshAssociation/polymesh-dart) (P-DART zero-knowledge proof library)                                          | **Full scope**                              | Audited; currently deployed on Testnet only, ahead of its Mainnet deployment. See [Confidential Assets scope](#confidential-assets) below.                        |
 | Client libraries and off-chain tooling: SDK, REST API, SubQuery indexer, signing managers, Portal, wallet extension                                  | **Responsible disclosure**                  | No reward schedule; discretionary payouts possible. See [Responsible disclosure](#responsible-disclosure-client-libraries-and-tooling) below.                     |
 
 A vulnerability must be reproducible in the **latest published release** (or, for Confidential Assets, the latest code deployed to Testnet). Issues that exist only on unreleased development branches may be accepted at Polymesh's discretion, but are typically rated lower because they do not affect a live network.
 
-### Limited scope: Confidential Assets
+### Confidential Assets
 
-Polymesh Confidential Assets (the new P-DART-based confidential asset functionality introduced in Polymesh v8) is **in scope with the caveats below**. This covers:
+Polymesh Confidential Assets (the new P-DART-based confidential asset functionality introduced in Polymesh v8) is **in scope under the standard reward schedule**, subject to the notes below. This covers:
 
 - `pallet_confidential_assets` in the [Polymesh repository](https://github.com/PolymeshAssociation/Polymesh); and
 - the [polymesh-dart](https://github.com/PolymeshAssociation/polymesh-dart) library, which implements the underlying zero-knowledge proof system.
 
-:::info Post-audit, pre-Mainnet status
+:::info Pre-Mainnet status
 
-1. Confidential Assets is a pre-release feature deployed on **Testnet only**; it is not yet deployed to Mainnet. The polymesh-dart cryptography has completed its first external security audit. All testing of limited-scope items must be performed on Testnet or on local/private networks under the Participant's control.
+1. Confidential Assets is deployed on **Testnet only**; it is not yet deployed to Mainnet. The polymesh-dart cryptography has completed its first external security audit. All testing must be performed on Testnet or on local/private networks under the Participant's control.
 2. Reports that restate limitations already documented in the [Confidential Assets documentation](/confidential-assets), or that duplicate findings already identified by Polymesh's commissioned external audit, are not eligible for a Bounty Payout.
-3. Bounty Payouts for limited-scope findings are discretionary and will generally be paid at a reduced rate relative to the standard reward schedule (typically up to 70% of the applicable range), reflecting the pre-release, Testnet-only status of the code.
-4. Upon deployment of Confidential Assets to Mainnet, these items automatically move into full scope and the standard reward schedule applies; this takes effect on Mainnet deployment itself, whether or not this page or the main bug bounty page has yet been updated to reflect it. Polymesh will update these pages to reflect the change.
 
 :::
 
@@ -129,7 +126,7 @@ AI assistants, fuzzers, static analyzers, and similar tools are welcome as part 
 
 ## Severity and rewards
 
-Severity is classified by **impact** (what the vulnerability realistically allows an attacker to do) rather than by a scoring formula. Each report is assigned to the band containing the worst impact class it credibly demonstrates, assessed against the **Mainnet** network (for limited-scope Confidential Assets findings, the [reduced-rate policy](#limited-scope-confidential-assets) also applies). The impact classes below are representative, not exhaustive: impacts not listed are classified by analogy to the closest listed class. All classifications and reward amounts are at Polymesh's sole discretion.
+Severity is classified by **impact** (what the vulnerability realistically allows an attacker to do) rather than by a scoring formula. Each report is assigned to the band containing the worst impact class it credibly demonstrates, assessed against the **Mainnet** network (for Confidential Assets, which is not yet deployed to Mainnet, severity is assessed against its intended Mainnet behavior; see [Confidential Assets scope](#confidential-assets)). The impact classes below are representative, not exhaustive: impacts not listed are classified by analogy to the closest listed class. All classifications and reward amounts are at Polymesh's sole discretion.
 
 <SeverityRewardTable />
 
