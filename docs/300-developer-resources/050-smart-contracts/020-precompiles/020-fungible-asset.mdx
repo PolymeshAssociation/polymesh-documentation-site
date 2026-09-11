@@ -1,0 +1,365 @@
+---
+title: Fungible Asset Precompile (ERC-20)
+description: Use any Polymesh fungible asset as an ERC-20 token from Solidity and Ethereum tooling - address derivation, the full method reference, events, revert reasons, and the limits to design around.
+id: precompile-fungible-asset
+slug: /development/smart-contracts/precompiles/fungible-asset
+sidebar_label: Fungible Asset (ERC-20)
+tags:
+  - development
+  - smart contracts
+  - evm
+  - precompiles
+  - erc20
+---
+
+Every Polymesh fungible asset is callable as an **ERC-20 token** from contracts and standard Ethereum tooling, at a deterministic address derived from its `AssetId`. No deployment, registration, or opt-in is needed — existing and future assets are exposed automatically.
+
+Calls route into `pallet-asset` and `pallet-settlement`, so identity, compliance, transfer restrictions, freezes, and agent permissions are all enforced exactly as they are for a Substrate transaction. An ERC-20 `transfer` that would break a Polymesh rule reverts.
+
+Available since chain **v8.1** on Mainnet, Testnet, and Develop.
+
+:::warning It is not a drop-in ERC-20
+The ABI is standard, but the behaviour is not in several places that mainstream tooling depends on. Infinite approvals, zero-value transfers, self-transfers, and transfers to un-onboarded addresses all **revert**. Read [ERC-20 conformance and deviations](#erc-20-conformance-and-deviations) before porting an existing integration.
+:::
+
+:::tip Read the shared semantics first
+[Precompiles](./index.mdx) covers the rules common to every Polymesh precompile — how EVM callers resolve to Polymesh accounts, why failures revert rather than return `false`, delegate-call and read-only restrictions, and gas. This page covers only what is specific to fungible assets.
+:::
+
+## Precompile addresses
+
+The address embeds the asset's 16-byte `AssetId`, followed by the matcher id `0x0008` and two reserved zero bytes:
+
+```text
+0x <asset_id: 16 bytes> 0008 0000
+   └── 32 hex chars ──┘ └─ 8 hex ─┘
+```
+
+An asset with `AssetId` `0x0198c4b0f0d54a8fa1a2d3f4e5b6c7d8` is therefore reachable at:
+
+```text
+0x0198c4b0f0d54a8fa1a2d3f4e5b6c7d800080000
+```
+
+In JavaScript:
+
+```js
+/** Precompile address for a Polymesh fungible asset. */
+function fungibleAssetPrecompile(assetId) {
+  const id = assetId.replace(/^0x/, '').toLowerCase();
+  if (!/^[0-9a-f]{32}$/.test(id)) throw new Error('AssetId must be 16 bytes');
+  return `0x${id}00080000`;
+}
+```
+
+In Solidity:
+
+```solidity
+library PolymeshAsset {
+    /// @dev Precompile address for a Polymesh fungible asset.
+    function precompile(bytes16 assetId) internal pure returns (address) {
+        return address((uint160(uint128(assetId)) << 32) | 0x00080000);
+    }
+}
+```
+
+The address is stable, computable offline, and identical on every network where the asset exists.
+
+## Getting an `AssetId`
+
+`AssetId` is a 16-byte UUID-like identifier assigned when the asset is created. Tickers are optional labels linked to an asset, not the identifier itself. You can obtain it from:
+
+- the [Polymesh SDK](/development/tooling/sdk) (`asset.id`),
+- the [REST API](/development/tooling/rest-api) or [SubQuery indexer](/development/tooling/subquery),
+- a block explorer's asset page,
+- or on-chain storage: `asset.tickerAssetId(ticker)` maps a registered ticker to its `AssetId`.
+
+## Interface
+
+The Solidity interface is `IFungibleAsset`, combining OpenZeppelin's `IERC20`, `IERC20Metadata`, and `IERC20Permit` with Polymesh and ERC-7943 extensions:
+
+```solidity
+interface IFungibleAsset {
+    event Transfer(address indexed from, address indexed to, uint256 value);
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+    event ForcedTransfer(address indexed from, address indexed to, uint256 amount);
+
+    // ERC-20
+    function totalSupply() external view returns (uint256);
+    function balanceOf(address account) external view returns (uint256);
+    function transfer(address to, uint256 value) external returns (bool);
+    function allowance(address owner, address spender) external view returns (uint256);
+    function approve(address spender, uint256 value) external returns (bool);
+    function transferFrom(address from, address to, uint256 value) external returns (bool);
+
+    // ERC-20 metadata
+    function name() external view returns (string memory);
+    function symbol() external view returns (string memory);
+    function decimals() external view returns (uint8);
+
+    // EIP-2612 permit — declared, NOT implemented (see below)
+    function permit(
+        address owner, address spender, uint256 value,
+        uint256 deadline, uint8 v, bytes32 r, bytes32 s
+    ) external;
+    function nonces(address owner) external view returns (uint256);
+    function DOMAIN_SEPARATOR() external view returns (bytes32);
+
+    // Polymesh extensions
+    function mint(uint256 value) external returns (bool);
+    function burn(uint256 value) external returns (bool);
+
+    // ERC-7943
+    function canTransfer(address from, address to, uint256 value) external view returns (bool);
+    function forcedTransfer(address from, uint256 amount) external returns (bool);
+}
+```
+
+## Method reference
+
+### Core ERC-20
+
+| Method                          | Runs                                          | Notes                                                                                         |
+| ------------------------------- | --------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `totalSupply()`                 | reads `Asset::Assets`                         | The asset's total issued supply.                                                              |
+| `balanceOf(account)`            | reads `Asset::AssetBalance`                   | The account's own asset holding — see [balances](#balances-and-allowances-are-account-level). |
+| `transfer(to, value)`           | `Settlement::transfer_funds`                  | Caller's account → `to`, full compliance and settlement path. Emits `Transfer`.               |
+| `approve(spender, value)`       | `Asset::approve`                              | Emits `Approval`.                                                                             |
+| `allowance(owner, spender)`     | reads `Asset::Allowances`                     | `0` when nothing is approved.                                                                 |
+| `transferFrom(from, to, value)` | `Settlement::transfer_funds` (with allowance) | Caller is the spender; the runtime draws down the allowance. Emits `Transfer`.                |
+
+### Metadata
+
+| Method       | Behaviour                                                                                                 |
+| ------------ | --------------------------------------------------------------------------------------------------------- |
+| `name()`     | The asset's name; empty string if unset.                                                                  |
+| `symbol()`   | The unique ticker linked to the asset, trailing padding trimmed. **Empty string if no ticker is linked.** |
+| `decimals()` | Always **`6`** — see [decimals](#decimals-is-always-6-even-for-indivisible-assets).                       |
+
+### Issuance and redemption
+
+| Method        | Runs            | Notes                                                                                                                         |
+| ------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `mint(value)` | `Asset::issue`  | Issues **to the caller's own account**. Caller needs issuance permission for the asset. Emits `Transfer(0x0, caller, value)`. |
+| `burn(value)` | `Asset::redeem` | Redeems **from the caller's own account**. Emits `Transfer(caller, 0x0, value)`.                                              |
+
+:::warning `mint` and `burn` take no address
+Unlike the `mint(to, amount)` / `burn(from, amount)` shape common in OpenZeppelin-derived tokens, these always act on the **calling account**. To issue to a third party, `mint` then `transfer`.
+:::
+
+### ERC-7943 methods
+
+[ERC-7943](https://eips.ethereum.org/EIPS/eip-7943) defines a minimal interface for regulated, transfer-restricted tokens. Polymesh implements two of its methods on the fungible-asset precompile.
+
+| Method                         | Runs                           | Notes                                                                                                                                                                  |
+| ------------------------------ | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `canTransfer(from, to, value)` | `Asset::asset_transfer_report` | `view`. Runs the full transfer report — compliance rules, transfer restrictions and statistics, frozen state, balances — and returns `true` if it reports no errors.   |
+| `forcedTransfer(from, amount)` | `Asset::controller_transfer`   | Moves `amount` from `from` **to the caller's own account**. Caller must be an agent with controller-transfer permission. Emits `ForcedTransfer(from, caller, amount)`. |
+
+`canTransfer` is the useful primitive for contracts that must branch on compliance instead of absorbing a revert — an AMM, escrow, or router can test a leg before committing to it:
+
+```solidity
+if (!asset.canTransfer(msg.sender, address(this), amount)) {
+    // route around it, queue it, or surface a clear error
+    revert TransferNotPermitted();
+}
+```
+
+It is charged at the worst-case transfer-report weight and refunded down to actual consumption.
+
+:::caution `canTransfer` returning `true` does not guarantee the transfer succeeds
+It evaluates the asset-level transfer report: asset existence and fungibility, both parties' identities, granularity, balances, receiver DID validity, frozen state, transfer restrictions, and compliance rules.
+
+It does **not** model: a [zero `value`](#zero-value-transfers-revert), a [self-transfer](#self-transfers-revert), the spender's [allowance](#transferfrom-by-the-owner-consumes-no-allowance) when used ahead of `transferFrom`, or whether the transfer can [execute atomically](#transfers-must-complete-atomically). Each of those reverts despite `canTransfer` reporting `true`.
+
+Treat it as "compliance and balances permit this", not "this call will not revert".
+:::
+
+`forcedTransfer` follows the ERC-7943 signature, which sends seized tokens to the **caller** rather than to a chosen destination. An agent recovering tokens therefore receives them into its own account and must move them on from there.
+
+### EIP-2612 permit is not implemented
+
+`permit`, `nonces`, and `DOMAIN_SEPARATOR` appear in the ABI — so ABI-based feature detection will report the token as permit-capable — but **all three revert**:
+
+```text
+permit is not implemented yet
+nonces is not implemented yet
+domain_separator is not implemented yet
+```
+
+If your integration probes `DOMAIN_SEPARATOR()` to decide whether to offer gasless approvals, that probe reverts rather than returning a value. Detect this and fall back to `approve`.
+
+## Events
+
+| Event                                                                      | Emitted by                                                                 |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `Transfer(address indexed from, address indexed to, uint256 value)`        | `transfer`, `transferFrom`, `mint` (`from` = `0x0`), `burn` (`to` = `0x0`) |
+| `Approval(address indexed owner, address indexed spender, uint256 value)`  | `approve`                                                                  |
+| `ForcedTransfer(address indexed from, address indexed to, uint256 amount)` | `forcedTransfer`                                                           |
+
+These are EVM logs. The underlying `Asset` and `Settlement` pallets emit their normal Substrate events at the same time, so Substrate-side indexers see these transfers exactly as they see any other and need no precompile-specific handling.
+
+## Revert reasons
+
+| Revert reason                                                                                                    | Cause                                                                                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Asset not found`                                                                                                | No asset exists for the `AssetId` embedded in the called address.                                                                                             |
+| `Asset is not fungible`                                                                                          | The `AssetId` belongs to an NFT collection. This precompile is fungible-only.                                                                                 |
+| `Extrinsic returned an error: <message>`                                                                         | The underlying pallet call failed; its own error message is appended — compliance failure, insufficient balance, missing permission, frozen asset, and so on. |
+| `Instruction was not executed; Most likely the instruction is missing an affirmation from the receiver/mediator` | The transfer could not complete atomically — see [below](#transfers-must-complete-atomically).                                                                |
+| `Invalid caller` / `Invalid account id`                                                                          | An address could not be resolved to a valid Polymesh account.                                                                                                 |
+| `Balance conversion failed`                                                                                      | A `uint256` value does not fit Polymesh's `Balance` type, or vice versa.                                                                                      |
+| `permit is not implemented yet` (and `nonces`, `domain_separator`)                                               | EIP-2612 methods are declared but unimplemented.                                                                                                              |
+
+Plus the shared guards documented in [Precompiles](./index.mdx#shared-call-semantics): `PrecompileDelegateDenied` for delegate calls, and `StateChangeDenied` for state-changing methods invoked in a read-only context.
+
+### Pallet errors you will actually hit
+
+These arrive wrapped as `Extrinsic returned an error: <name>`. The names below are Polymesh pallet errors, not Solidity ones, so they will not look familiar to an EVM developer — this table is the translation.
+
+| Pallet error                          | Means                                                                                                                                                             |
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ZeroAmount`                          | `value` was `0`. See [zero-value transfers](#zero-value-transfers-revert).                                                                                        |
+| `SenderSameAsReceiver`                | Sender and recipient are the same holder. See [self-transfers](#self-transfers-revert).                                                                           |
+| `IdentityNotFoundForAccountPortfolio` | An account involved in the transfer is not linked to an identity — including `address(0)`. See [recipients must be onboarded](#recipients-must-have-an-identity). |
+| `InvalidGranularity`                  | The asset is indivisible and `value` is not a whole multiple of `1_000_000`. See [decimals](#decimals-is-always-6-even-for-indivisible-assets).                   |
+| `InsufficientBalance`                 | Not enough unlocked balance in the sender's account holding.                                                                                                      |
+| `InsufficientAllowance`               | The spender's allowance is lower than `value`.                                                                                                                    |
+| `InvalidTransferComplianceFailure`    | The asset's compliance rules reject this sender/receiver pair.                                                                                                    |
+| `InvalidTransferFrozenAsset`          | The asset is frozen.                                                                                                                                              |
+| `InvalidTransferInvalidReceiverDID`   | The recipient's identity exists but is not active.                                                                                                                |
+| `UnauthorizedAgent`                   | The caller lacks the agent permission a privileged method needs (`mint`, `forcedTransfer`).                                                                       |
+
+### Unknown selectors panic rather than revert
+
+Calling a selector the interface does not define returns an ABI-encoded `Panic(0x41)` — rendered by most tooling as "memory allocation error" — rather than a plain revert. This is upstream `pallet-revive` behaviour: calldata that fails to decode against the precompile's interface is reported as a panic.
+
+It matters if you probe for optional methods by calling them and catching the failure: a `try`/`catch` on a `Panic` behaves differently from one on an `Error(string)`, and the panic code is misleading about the cause. Prefer feature-detecting from a known interface version rather than by probing.
+
+## ERC-20 conformance and deviations
+
+The precompile implements the ERC-20 ABI faithfully, but a Polymesh asset is a regulated instrument, not a free-floating token balance. Several behaviours therefore diverge from what the [ERC-20 standard](https://eips.ethereum.org/EIPS/eip-20) mandates or what tooling has come to assume.
+
+**Read this section before porting an existing ERC-20 integration.** The deviations are not obscure edge cases — infinite approvals, zero-value transfers, and self-transfers are all things mainstream routers, vaults, and wallets do routinely.
+
+### Summary
+
+| Behaviour                                                                   | ERC-20 expectation                   | Polymesh                                                | Impact                                                                |
+| --------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------- | --------------------------------------------------------------------- |
+| [Infinite approval](#infinite-approvals-revert)                             | `approve(spender, 2^256-1)` succeeds | **Reverts** above `2^128-1`                             | High — most wallets and DEX routers send `type(uint256).max`          |
+| [Zero-value transfer](#zero-value-transfers-revert)                         | MUST succeed and emit `Transfer`     | **Reverts** (`ZeroAmount`)                              | High — common in batch, sweep, and settlement loops                   |
+| [Self-transfer](#self-transfers-revert)                                     | Permitted                            | **Reverts** (`SenderSameAsReceiver`)                    | Medium — routers and vaults do this incidentally                      |
+| [Transfer to `address(0)`](#recipients-must-have-an-identity)               | Permitted (burn idiom)               | **Reverts** (`IdentityNotFoundForAccountPortfolio`)     | Medium — use `burn` instead                                           |
+| [Unonboarded recipient](#recipients-must-have-an-identity)                  | Any address can receive              | **Reverts** unless the recipient has an active identity | High — you cannot airdrop to arbitrary EVM addresses                  |
+| [Deferred settlement](#transfers-must-complete-atomically)                  | n/a                                  | **Reverts** if the transfer cannot settle atomically    | Medium — affects assets requiring affirmation or mediation            |
+| [`decimals()`](#decimals-is-always-6-even-for-indivisible-assets)           | Reflects divisibility                | Always `6`, even for indivisible assets                 | Medium — indivisible assets silently require multiples of `1_000_000` |
+| [`transferFrom` by owner](#transferfrom-by-the-owner-consumes-no-allowance) | Consumes allowance                   | Consumes none when `from` is the caller                 | Low — more permissive than the standard                               |
+| [`permit`](#eip-2612-permit-is-not-implemented)                             | EIP-2612 optional extension          | Declared in the ABI but reverts                         | Medium — breaks gasless-approval feature detection                    |
+| [`symbol()`](#symbol-can-be-empty)                                          | A short symbol string                | Empty when no ticker is linked                          | Low                                                                   |
+| [Unknown selector](#unknown-selectors-panic-rather-than-revert)             | Revert                               | `Panic(0x41)`                                           | Low                                                                   |
+
+### Infinite approvals revert
+
+`approve(spender, type(uint256).max)` — the near-universal "approve once, forever" idiom — **reverts** with `Balance conversion failed`.
+
+Polymesh balances are `u128`, and the precompile converts `uint256` arguments with a checked conversion. The boundary is exact: `2^128 - 1` succeeds, `2^128` and anything above reverts.
+
+Unlimited allowance _is_ supported natively — an allowance of exactly `2^128 - 1` is treated by the runtime as infinite and is never decremented on spend. The precompile simply cannot be reached with the value standard tooling sends.
+
+Two consequences to design around:
+
+- **Approve `2^128 - 1`, not `2^256 - 1`,** if you want an unlimited allowance. Any integration that hardcodes `type(uint256).max` needs a Polymesh-specific path.
+- **`allowance()` reads back `2^128 - 1`** for an unlimited allowance, not `type(uint256).max`. Tooling that detects "already infinitely approved" by comparing against `type(uint256).max` will conclude the allowance is finite and try to re-approve — which then reverts.
+
+```solidity
+uint256 constant POLYMESH_MAX_ALLOWANCE = type(uint128).max;
+
+// instead of: token.approve(spender, type(uint256).max)
+token.approve(spender, POLYMESH_MAX_ALLOWANCE);
+```
+
+### Zero-value transfers revert
+
+ERC-20 states that transfers of `0` MUST be treated as normal transfers and MUST fire the `Transfer` event. On Polymesh, `transfer(to, 0)` and `transferFrom(from, to, 0)` **revert** with `ZeroAmount`.
+
+This is enforced by the settlement layer for every transfer path, not by the precompile, so it applies to Substrate transfers too.
+
+It matters more than it sounds. Batch loops, sweep functions, fee-distribution routines, and accounting code frequently transfer a computed amount that can legitimately be zero, on the assumption that the call is a harmless no-op. On Polymesh that reverts the whole transaction. **Guard zero amounts in your own code** rather than relying on the token to absorb them.
+
+### Self-transfers revert
+
+`transfer(msg.sender, value)` — sender and recipient resolving to the same holder — **reverts** with `SenderSameAsReceiver`. ERC-20 imposes no such restriction, and it is a documented no-op in most implementations.
+
+Routers, vaults, and aggregators hit this incidentally when a computed route happens to start and end at the same address. As with zero-value transfers, guard for it in your own code.
+
+### Recipients must have an identity
+
+Every party to a Polymesh asset transfer must be linked to an identity. If the resolved recipient account has no linked DID, the transfer **reverts** with `IdentityNotFoundForAccountPortfolio`; if it has one that is not active, with `InvalidTransferInvalidReceiverDID`.
+
+This has consequences with no ERC-20 equivalent:
+
+- **You cannot transfer to an arbitrary EVM address.** Airdrops, faucets, and "send to any address" flows do not work unless every recipient has been onboarded.
+- **`transfer(address(0), value)` reverts** with `IdentityNotFoundForAccountPortfolio`. The transfer-to-zero-address burn idiom is not supported — use [`burn`](#issuance-and-redemption), which redeems from the caller's own holding and emits the same `Transfer(caller, 0x0, value)` log.
+- **Contracts need their own identity.** A contract calling the precompile acts as its own account, not as the user who called it, so a vault or router that custodies assets must itself be onboarded and compliant. See [Precompiles](./index.mdx#callers-are-resolved-to-polymesh-accounts).
+
+`balanceOf` is unaffected — it returns `0` for an unonboarded address rather than reverting.
+
+### Transfers must complete atomically
+
+`transfer` and `transferFrom` go through the settlement engine, which creates an instruction and immediately attempts to execute it. If it **cannot** complete within the same call — most often because the receiver has mandatory receiver affirmation enabled, or the asset requires mediator affirmation — the precompile **reverts** and the instruction is rolled back.
+
+This keeps ERC-20 semantics honest: `transfer` returning `true` always means the tokens actually moved, and no half-finished instruction is left behind for the caller to discover later. The cost is that **assets or counterparties requiring affirmation or mediation cannot be transferred through the ERC-20 interface at all** — those transfers must use the Substrate settlement flow.
+
+Note that the call still pays the full transfer weight before reverting; a failed deferred transfer is not a cheap failure.
+
+### `decimals()` is always `6`, even for indivisible assets
+
+`decimals()` returns `6` unconditionally. Polymesh fungible balances are stored in units of `10^-6`, so this is an honest description of the storage unit — but it does not describe the asset's actual granularity.
+
+An **indivisible** asset only accepts amounts that are whole multiples of `1_000_000`. Any other amount reverts with `InvalidGranularity`. Because the token advertises 6 decimals, standard tooling will happily let a user enter `1.5` and generate a transfer of `1_500_000` — which reverts.
+
+There is no way to detect this through the ERC-20 interface. If your integration supports arbitrary assets, either read the asset's `divisible` flag from chain state, or handle `InvalidGranularity` and surface a meaningful error. Anything assuming an 18-decimal default — a hardcoded `parseEther`, a `1e18` constant — will additionally be wrong by twelve orders of magnitude.
+
+### `transferFrom` by the owner consumes no allowance
+
+When `from` resolves to the calling account, `transferFrom(from, to, value)` behaves exactly like `transfer(to, value)` and draws down **no** allowance. Widely used implementations (including OpenZeppelin's) deduct from the caller's self-allowance in this case, so a contract that relies on `transferFrom` self-calls to meter its own spending will find the meter never moves.
+
+This is more permissive than the standard, not less, so it does not cause reverts — but do not use a self-allowance as a spending limit.
+
+### Balances and allowances are account-level
+
+`balanceOf` reads the account's own asset holding — the account-level holding model introduced in chain v8 — not the sum of the linked identity's portfolios. An address whose assets sit in DID portfolios reports `0`.
+
+Allowances likewise sit between two **accounts** for one asset. An allowance grants no portfolio access and no agent permissions. Because the precompile is a front-end onto `pallet-asset`'s own allowance storage, an allowance granted through the precompile is visible to and usable by the equivalent Substrate calls, and vice versa — see [Allowances](/core/assets/fungible#allowances).
+
+### Transfers within one identity skip compliance
+
+When sender and recipient accounts resolve to the **same** identity, the transfer is executed directly rather than through a settlement instruction, and compliance rules and transfer restrictions are not evaluated. This is consistent with Polymesh's model — compliance governs who may hold an asset, and beneficial ownership has not changed — but it means a `transfer` between two of your own accounts is not a valid test that compliance would permit a transfer to a third party.
+
+### `symbol()` can be empty
+
+Assets are identified by `AssetId`; a ticker is an optional, separately registered link. An asset with no linked unique ticker returns an empty `symbol()`. Never treat the symbol as an identifier — the address (and the `AssetId` inside it) is the identifier.
+
+Where a ticker is linked, trailing padding is trimmed, so a 7-character ticker returns a 7-character string.
+
+### Fungible assets only
+
+NFT collections revert with `Asset is not fungible` on every method. There is no ERC-721 or ERC-1155 precompile.
+
+:::note Addresses exist even when the asset does not
+Precompile addresses are matched on address shape alone, without consulting storage, so `eth_getCode` returns the stub bytecode for **any** address of the form `0x<16 bytes>00080000` — including ones whose `AssetId` belongs to an NFT collection or to no asset at all.
+
+An explorer or indexer scanning address ranges will therefore find "contracts" at addresses that back nothing. Every call to them reverts (`Asset not found` or `Asset is not fungible`), so they are inert, but their existence is not a signal that an asset exists.
+:::
+
+## Block explorer verification
+
+The precompile serves a stub contract (`FungibleAssetStub`) whose ABI mirrors `IFungibleAsset`, so `eth_getCode` returns real bytecode and explorers can verify and render a proper Read/Write method UI. Verify one address per network; twin-matching covers the rest. See [Block explorer support](./index.mdx#block-explorer-support) for the workflow and the helper scripts.
+
+## Related
+
+- [Precompiles](./index.mdx) — shared semantics, address scheme, and the full precompile list
+- [Smart Contracts](/development/smart-contracts) — `pallet-revive`, address mapping, and the `eth-rpc` proxy
+- [Fungible Assets](/core/assets/fungible) — the native asset model, including allowances
+- [Compliance](/compliance) and [Transfer Restrictions](/compliance/transfer-restrictions) — what `canTransfer` evaluates
+- [Direct Transfers](/settlement#direct-transfers-transfer_funds) — the settlement path behind `transfer`/`transferFrom`
