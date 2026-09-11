@@ -122,6 +122,10 @@ Controller transfers allow the asset owner or an authorized agent to forcibly tr
 - **Fungible Assets:** Use the `asset::controller_transfer` method. Parameters are `asset_id`, `value` (amount to transfer), `source` (the [`AssetHolder`](/asset-holdings) — account or portfolio — to debit), and `destination_kind` (an `AssetHolderKind` selecting where on the caller's identity the tokens land: `Account`, `DefaultPortfolio`, or `UserPortfolio`).
 - **Non-Fungible Assets (NFTs):** Use the `nft::controller_transfer` method. Parameters are `nfts` (the collection and specific NFT IDs to transfer), `source` (the `AssetHolder` — account or portfolio — to debit), and `destination_kind` (an `AssetHolderKind` selecting where on the caller's identity the NFTs land).
 
+Both methods deliver to the calling agent. To seize assets and deliver them straight to a third party in a single transaction, use `asset::controller_transfer_to` or `nft::controller_transfer_to` instead, which take a `destination` `AssetHolder` rather than a `destination_kind`. These are useful when returning assets to a rightful owner, since the assets never pass through the agent's own custody.
+
+Both `controller_transfer_to` variants fail if the destination requires the receiver to affirm incoming transfers — a forced transfer cannot bypass that requirement.
+
 :::info
 **Note:** Assets that are locked in a settlement instruction cannot be transferred using controller transfer. While controller transfers bypass many compliance and restriction checks, they cannot bypass basic balance checks. If tokens or NFTs are locked (e.g., as part of a pending settlement), controller transfer will fail due to insufficient available balance.
 :::
@@ -140,6 +144,19 @@ Assets and NFT collections on Polymesh can be frozen or unfrozen by the asset ow
 :::info
 While an asset is frozen, controller transfers are still permitted. This allows issuers or agents to forcibly move tokens or NFTs even when the asset is otherwise locked down.
 :::
+
+### Freezing an individual holder
+
+Freezing the whole asset is a blunt instrument. Issuers and agents can instead restrict a single holder — an account key or a portfolio — leaving every other holder unaffected. This is what sanctions screening, dispute holds and per-investor lock-ups need.
+
+- **Freeze a holder:** `asset::set_holder_frozen` with the `asset_holder`, `asset_id` and `freeze` flag. A frozen holder cannot send the asset.
+- **Freeze part of a balance:** `asset::freeze_partial_tokens` adds to the amount already frozen, and `asset::unfreeze_partial_tokens` releases some of it. `asset::set_frozen_tokens` sets the frozen amount outright, replacing whatever was frozen before.
+
+A holder's transferable balance becomes `balance − locked − frozen`, so a partially frozen holder can still move whatever is left. Freezing restricts **sending only**: a frozen holder can still receive the asset, and anything they receive is not automatically frozen.
+
+Holder freezing applies to fungible assets. NFT collections support freezing the whole collection and freezing a holder, but not partial amounts.
+
+As with asset-wide freezing, controller transfers bypass holder freezes — an agent does not need to unfreeze a holder before seizing from them.
 
 ## Further Reading
 

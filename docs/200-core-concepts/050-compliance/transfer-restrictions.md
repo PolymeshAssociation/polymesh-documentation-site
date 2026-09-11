@@ -37,7 +37,7 @@ Transfer restrictions can only be configured for fungible assets on Polymesh. No
 The statistics module tracks various statistics about asset holders, and transfer restrictions are enforced based on these statistics. Each type of restriction has specific logic for how it impacts senders and receivers:
 
 :::info Statistic Limit and Performance
-A maximum of 4 statistics can be tracked for a single asset at any time. Attempting to add more will result in an error.
+A maximum of 10 statistics can be tracked for a single asset at any time. Attempting to add more will result in an error.
 
 Each statistic that is tracked adds additional overhead to every transfer involving the asset, regardless of whether a restriction is enforced on it. For best performance, only enable the minimum set of statistics and restrictions required for your compliance needs.
 :::
@@ -91,13 +91,12 @@ These mechanisms ensure that all configured restrictions are enforced at the pro
 
 ### 1. Set Active Statistic Types
 
-To begin, use `statistics::setActiveAssetStats` to define which statistics (counts or balances) will be tracked for a given asset. This initializes the storage for the selected stat types. Only identities with Agent permission for the asset can perform this action. Setting new stat types will replace any existing types. You cannot set a new stat type if a previous one is still in use by transfer conditions. Maximum of 4 stat types per asset.
+To begin, use `statistics::setActiveAssetStats` to define which statistics (counts or balances) will be tracked for a given asset. This initializes the storage for the selected stat types. Only identities with Agent permission for the asset can perform this action. Setting new stat types will replace any existing types. You cannot set a new stat type if a previous one is still in use by transfer conditions. Maximum of 10 stat types per asset.
 
 **Parameters:**
 
 - `asset_id`: The asset to configure.
-- `stat_types`: The new stat types to track (e.g., `Count` for holder count, `Balance` for percentage-based rules).
-- `claimIssuer` (optional): Specify a claim issuer for claim-based stats.
+- `stat_types`: The new stat types to track. Each entry pairs an operation type (`Count` for holder count, `Balance` for percentage-based rules) with an optional `claim_issuer` — a `(ClaimType, IdentityId)` pair that scopes the statistic to holders carrying that claim from that issuer.
 
 ---
 
@@ -120,8 +119,7 @@ Configure the actual transfer restrictions for the asset using `statistics::setA
 **Parameters:**
 
 - `asset_id`: The asset to configure.
-- `transfer_conditions`: The set of transfer conditions to enforce (e.g., `MaxInvestorCount`, `MaxInvestorOwnership`, `ClaimCount`, `ClaimOwnership`).
-- `claimIssuer` (optional): Specify a claim issuer for claim-based restrictions.
+- `transfer_conditions`: The set of transfer conditions to enforce (e.g., `MaxInvestorCount`, `MaxInvestorOwnership`, `ClaimCount`, `ClaimOwnership`). The claim-based conditions carry their own claim and issuer, so no separate claim issuer parameter is needed.
 
 ---
 
@@ -131,9 +129,8 @@ To exempt specific identities from one or more transfer restrictions, use `stati
 
 **Parameters:**
 
-- `asset_id`: The asset for which to set exemptions.
 - `is_exempt`: Enable or disable exemption for the entities.
-- `exempt_key`: The stat type and asset ID for which the exemption applies.
+- `exempt_key`: A `TransferConditionExemptKey` identifying what the exemption applies to — the `asset_id`, the stat operation type (`op`), and an optional `claim_type`. The asset is named here rather than as a separate parameter.
 - `entities`: The DIDs of the token holders to set or unset as exempt.
 
 ## Exemptions

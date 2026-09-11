@@ -58,7 +58,7 @@ Upon successful creation, the venue is assigned a unique Venue ID that can be us
 
 - `settlement::update_venue_details` to update the venue's details
 - `settlement::update_venue_type` to change the venue type
-- `settlement::set_venue_signers` to update the list of authorized receipt signers
+- `settlement::update_venue_signers` to update the list of authorized receipt signers
 
 ### Venue Filtering
 
