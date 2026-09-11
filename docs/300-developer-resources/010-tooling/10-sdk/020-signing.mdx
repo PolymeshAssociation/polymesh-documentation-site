@@ -48,85 +48,85 @@ Polymesh provides several official Signing Manager implementations:
 
 ### 1. Local Signing Manager
 
--   **Package:** [`@polymeshassociation/local-signing-manager`](https://github.com/PolymeshAssociation/local-signing-manager)
--   **Use Case:** Primarily for **development, testing, and simple scripts**. Ideal for getting started quickly and running examples.
--   **Mechanism:** Stores BIP39 mnemonics or raw private keys **directly in memory** within the running application.
--   **Security:** **Low.** Keys are exposed in the application's memory. **Not suitable for production environments or managing real assets.**
--   **Environment:** Node.js
+- **Package:** [`@polymeshassociation/local-signing-manager`](https://github.com/PolymeshAssociation/local-signing-manager)
+- **Use Case:** Primarily for **development, testing, and simple scripts**. Ideal for getting started quickly and running examples.
+- **Mechanism:** Stores BIP39 mnemonics or raw private keys **directly in memory** within the running application.
+- **Security:** **Low.** Keys are exposed in the application's memory. **Not suitable for production environments or managing real assets.**
+- **Environment:** Node.js
 
 ---
 
 ### 2. Browser Extension Signing Manager
 
--   **Package:** [`@polymeshassociation/browser-extension-signing-manager`](https://github.com/PolymeshAssociation/browser-extension-signing-manager)
--   **Use Case:** For building **web-based dApps** that interact with users' Polymesh Wallet browser extensions (or other compatible extensions like SubWallet, Talisman).
--   **Mechanism:** Communicates with the browser extension via injected scripts. The extension manages the keys and prompts the user for authorization and signing.
--   **Security:** **Medium-High.** Keys remain within the user's secure browser extension environment. Relies on the security of the user's extension and device.
--   **Environment:** Browser
+- **Package:** [`@polymeshassociation/browser-extension-signing-manager`](https://github.com/PolymeshAssociation/browser-extension-signing-manager)
+- **Use Case:** For building **web-based dApps** that interact with users' Polymesh Wallet browser extensions (or other compatible extensions like SubWallet, Talisman).
+- **Mechanism:** Communicates with the browser extension via injected scripts. The extension manages the keys and prompts the user for authorization and signing.
+- **Security:** **Medium-High.** Keys remain within the user's secure browser extension environment. Relies on the security of the user's extension and device.
+- **Environment:** Browser
 
 ---
 
 ### 3. HashiCorp Vault Signing Manager
 
--   **Package:** [`@polymeshassociation/hashicorp-vault-signing-manager`](https://github.com/PolymeshAssociation/hashicorp-vault-signing-manager)
--   **Use Case:** For **server-side applications and enterprise environments** requiring secure, centralized key management using [HashiCorp Vault](https://www.vaultproject.io/).
--   **Mechanism:** Interacts with a Vault instance via its API. Leverages Vault's `transit` secrets engine to perform signing operations without exposing private keys outside Vault.
--   **Security:** **High.** Keys are managed within Vault's secure and auditable environment. Supports HSM integration via Vault Enterprise.
--   **Environment:** Node.js
+- **Package:** [`@polymeshassociation/hashicorp-vault-signing-manager`](https://github.com/PolymeshAssociation/hashicorp-vault-signing-manager)
+- **Use Case:** For **server-side applications and enterprise environments** requiring secure, centralized key management using [HashiCorp Vault](https://www.vaultproject.io/).
+- **Mechanism:** Interacts with a Vault instance via its API. Leverages Vault's `transit` secrets engine to perform signing operations without exposing private keys outside Vault.
+- **Security:** **High.** Keys are managed within Vault's secure and auditable environment. Supports HSM integration via Vault Enterprise.
+- **Environment:** Node.js
 
 ---
 
 ### 4. Azure Signing Manager
 
--   **Package:** [`@polymeshassociation/azure-signing-manager`](https://github.com/PolymeshAssociation/azure-signing-manager)
--   **Use Case:** For **server-side applications and enterprise environments** leveraging Microsoft Azure Key Vault for key management.
--   **Mechanism:** Interacts with Azure Key Vault API to perform signing operations using keys stored within the vault.
--   **Security:** **High.** Keys are managed within Azure's secure cloud infrastructure.
--   **Environment:** Node.js
+- **Package:** [`@polymeshassociation/azure-signing-manager`](https://github.com/PolymeshAssociation/azure-signing-manager)
+- **Use Case:** For **server-side applications and enterprise environments** leveraging Microsoft Azure Key Vault for key management.
+- **Mechanism:** Interacts with Azure Key Vault API to perform signing operations using keys stored within the vault.
+- **Security:** **High.** Keys are managed within Azure's secure cloud infrastructure.
+- **Environment:** Node.js
 
 ---
 
 ### 5. Fireblocks Signing Manager
 
--   **Package:** [`@polymeshassociation/fireblocks-signing-manager`](https://github.com/PolymeshAssociation/fireblocks-signing-manager)
--   **Use Case:** For **institutions using the Fireblocks platform** for digital asset custody and key management.
--   **Mechanism:** Integrates with the Fireblocks API and MPC (Multi-Party Computation) signing process.
--   **Security:** **Very High.** Leverages Fireblocks' MPC technology and institutional-grade security infrastructure.
--   **Environment:** Node.js
+- **Package:** [`@polymeshassociation/fireblocks-signing-manager`](https://github.com/PolymeshAssociation/fireblocks-signing-manager)
+- **Use Case:** For **institutions using the Fireblocks platform** for digital asset custody and key management.
+- **Mechanism:** Integrates with the Fireblocks API and MPC (Multi-Party Computation) signing process.
+- **Security:** **Very High.** Leverages Fireblocks' MPC technology and institutional-grade security infrastructure.
+- **Environment:** Node.js
 
 ---
 
 ### 6. Approval Signing Manager
 
--   **Package:** [`@polymeshAssociation/approval-signing-manager`](https://github.com/PolymeshAssociation/approval-signing-manager)
--   **Use Case:** Facilitating **workflows requiring explicit approval** before a transaction is signed. Useful for internal controls or integrating human approval steps.
--   **Mechanism:** Acts as a wrapper around another Signing Manager. It intercepts signing requests, triggers an approval workflow (which needs to be implemented by the developer, e.g., via UI, email, internal system), and only proceeds with the actual signing (using the wrapped manager) upon receiving approval.
--   **Security:** Depends on the wrapped Signing Manager and the implementation of the approval workflow. Adds a layer of operational control.
--   **Environment:** Node.js
+- **Package:** [`@polymeshAssociation/approval-signing-manager`](https://github.com/PolymeshAssociation/approval-signing-manager)
+- **Use Case:** Facilitating **workflows requiring explicit approval** before a transaction is signed. Useful for internal controls or integrating human approval steps.
+- **Mechanism:** Acts as a wrapper around another Signing Manager. It intercepts signing requests, triggers an approval workflow (which needs to be implemented by the developer, e.g., via UI, email, internal system), and only proceeds with the actual signing (using the wrapped manager) upon receiving approval.
+- **Security:** Depends on the wrapped Signing Manager and the implementation of the approval workflow. Adds a layer of operational control.
+- **Environment:** Node.js
 
 ---
 
 ### 7. WalletConnect Signing Manager
 
--   **Package:** [`@polymeshassociation/walletconnect-signing-manager`](https://github.com/PolymeshAssociation/walletconnect-signing-manager)
--   **Use Case:** Enabling **dApps (web or potentially desktop/mobile)** to connect and request signatures from **mobile wallets** supporting WalletConnect v2 and the `polkadot_signTransaction` method on the Polymesh namespace.
--   **Mechanism:** Uses the WalletConnect v2 protocol to relay signing requests to a compatible mobile wallet. The user approves the transaction on their mobile device.
--   **Security:** **Medium-High.** Keys remain on the user's mobile device within their wallet app. Relies on the security of the mobile wallet and device.
--   **Environment:** Browser, Node.js (depending on WalletConnect client implementation)
+- **Package:** [`@polymeshassociation/walletconnect-signing-manager`](https://github.com/PolymeshAssociation/walletconnect-signing-manager)
+- **Use Case:** Enabling **dApps (web or potentially desktop/mobile)** to connect and request signatures from **mobile wallets** supporting WalletConnect v2 and the `polkadot_signTransaction` method on the Polymesh namespace.
+- **Mechanism:** Uses the WalletConnect v2 protocol to relay signing requests to a compatible mobile wallet. The user approves the transaction on their mobile device.
+- **Security:** **Medium-High.** Keys remain on the user's mobile device within their wallet app. Relies on the security of the mobile wallet and device.
+- **Environment:** Browser, Node.js (depending on WalletConnect client implementation)
 
 ---
 
 ## Choosing the Right Manager
 
-| Manager                            | Environment      | Use Case                                       | Security Level        | Key Storage           |
-| :--------------------------------- | :--------------- | :--------------------------------------------- | :-------------------- | :-------------------- |
-| **Local**                          | Node.js          | Development, Testing, Simple Scripts           | Low                   | In Memory             |
-| **Browser Extension**              | Browser          | Web dApps interacting with user wallets      | Medium-High           | Browser Extension     |
-| **HashiCorp Vault**                | Node.js          | Server-side, Enterprise, Centralized KMS       | High                  | Vault (optional HSM)  |
-| **Azure**                          | Node.js          | Server-side, Enterprise, Azure Cloud           | High                  | Azure Key Vault       |
-| **Fireblocks**                     | Node.js          | Institutional Custody with Fireblocks          | Very High             | Fireblocks MPC        |
-| **Approval**                       | Node.js          | Workflows requiring explicit approval steps    | Adds Operational Ctrl | Wraps another manager |
-| **WalletConnect**                  | Browser/Node.js  | dApps interacting with mobile wallets        | Medium-High           | Mobile Wallet         |
+| Manager               | Environment     | Use Case                                    | Security Level        | Key Storage           |
+| :-------------------- | :-------------- | :------------------------------------------ | :-------------------- | :-------------------- |
+| **Local**             | Node.js         | Development, Testing, Simple Scripts        | Low                   | In Memory             |
+| **Browser Extension** | Browser         | Web dApps interacting with user wallets     | Medium-High           | Browser Extension     |
+| **HashiCorp Vault**   | Node.js         | Server-side, Enterprise, Centralized KMS    | High                  | Vault (optional HSM)  |
+| **Azure**             | Node.js         | Server-side, Enterprise, Azure Cloud        | High                  | Azure Key Vault       |
+| **Fireblocks**        | Node.js         | Institutional Custody with Fireblocks       | Very High             | Fireblocks MPC        |
+| **Approval**          | Node.js         | Workflows requiring explicit approval steps | Adds Operational Ctrl | Wraps another manager |
+| **WalletConnect**     | Browser/Node.js | dApps interacting with mobile wallets       | Medium-High           | Mobile Wallet         |
 
 ## Basic Usage Example
 
@@ -152,7 +152,9 @@ async function main() {
   console.log('Signing Account Address:', signingAccount);
 
   // Example: Get balance
-  const account = await sdk.accountManagement.getAccount({ address: signingAccount });
+  const account = await sdk.accountManagement.getAccount({
+    address: signingAccount,
+  });
   const balance = await account.getBalance();
   console.log('Balance:', balance.free.toString());
 
@@ -164,21 +166,21 @@ main().catch(console.error);
 
 ## Offline Signing
 
-For maximum security, especially in air-gapped environments, you might need to sign transactions offline. Signing Managers facilitate the *first* and *last* steps of this process:
+For maximum security, especially in air-gapped environments, you might need to sign transactions offline. Signing Managers facilitate the _first_ and _last_ steps of this process:
 
 1.  **Generate Payload:** Use the SDK (with any configured Signing Manager, even a temporary local one) to prepare the transaction. Instead of calling `.run()`, call the `.toSignablePayload()` method on the transaction object. This returns the data that needs to be signed.
 2.  **Sign Offline:** Transfer this payload securely to your offline signing environment (e.g., air-gapped machine with keys, HSM). Use appropriate tools (like `polkadot-js/keyring` or hardware-specific tools) to sign the **raw payload** (`payload.rawPayload.data`) using the intended private key. Remember to prefix the signature correctly based on the key type (e.g., `0x00` for ed25519, `0x01` for sr25519) if the tool doesn't do it automatically.
-3.  **Submit Signed Transaction:** Bring the generated signature back to an online environment. Use the `sdk.network.submitTransaction()` method, providing the *original payload* (either `payload.payload` for JSON or `payload.rawPayload` for raw) and the hex-encoded *signature*.
+3.  **Submit Signed Transaction:** Bring the generated signature back to an online environment. Use the `sdk.network.submitTransaction()` method, providing the _original payload_ (either `payload.payload` for JSON or `payload.rawPayload` for raw) and the hex-encoded _signature_.
 
 The `offline-signing-examples` repository demonstrates this flow:
 [`offline-signing-examples`](https://github.com/PolymeshAssociation/offline-signing-examples)
 
-Signing Managers are **not** directly involved in the *actual offline signing step* (step 2), but they are essential for generating the correct payload (step 1) and can be used for submitting the pre-signed transaction (step 3, although `submitTransaction` doesn't strictly require a *signing* manager, just SDK connectivity).
+Signing Managers are **not** directly involved in the _actual offline signing step_ (step 2), but they are essential for generating the correct payload (step 1) and can be used for submitting the pre-signed transaction (step 3, although `submitTransaction` doesn't strictly require a _signing_ manager, just SDK connectivity).
 
 ## Security Considerations
 
--   **Never expose production private keys or mnemonics** in your application code or insecure storage. Use secure Signing Managers like Vault, Azure, Fireblocks, or Browser Extension for production.
--   **Secure API Keys/Tokens:** If using Vault, Azure, or Fireblocks, ensure the API credentials used by the Signing Manager are stored and accessed securely (e.g., environment variables, secrets management systems). Grant them least-privilege access.
--   **Local Signing Manager:** Only use for development and testing with non-valuable keys.
--   **Approval Signing Manager:** The security of the approval workflow itself is critical. Ensure it's robust and cannot be easily bypassed.
--   **Regular Audits:** Periodically review your key management setup and signing workflows.
+- **Never expose production private keys or mnemonics** in your application code or insecure storage. Use secure Signing Managers like Vault, Azure, Fireblocks, or Browser Extension for production.
+- **Secure API Keys/Tokens:** If using Vault, Azure, or Fireblocks, ensure the API credentials used by the Signing Manager are stored and accessed securely (e.g., environment variables, secrets management systems). Grant them least-privilege access.
+- **Local Signing Manager:** Only use for development and testing with non-valuable keys.
+- **Approval Signing Manager:** The security of the approval workflow itself is critical. Ensure it's robust and cannot be easily bypassed.
+- **Regular Audits:** Periodically review your key management setup and signing workflows.

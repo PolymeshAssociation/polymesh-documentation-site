@@ -31,9 +31,9 @@ Its primary purposes are:
 
 You should directly use or be aware of [`@polymeshassociation/polymesh-types`](https://www.npmjs.com/package/@polymeshassociation/polymesh-types) if you are:
 
-*   Developing applications using `@polkadot/api` directly against a Polymesh node.
-*   Building custom libraries or tooling that requires detailed knowledge of Polymesh's on-chain types and APIs.
-*   Debugging low-level interactions with the Polymesh chain.
+- Developing applications using `@polkadot/api` directly against a Polymesh node.
+- Building custom libraries or tooling that requires detailed knowledge of Polymesh's on-chain types and APIs.
+- Debugging low-level interactions with the Polymesh chain.
 
 **Important:** If you are using the main [`@polymeshassociation/polymesh-sdk`](https://www.npmjs.com/package/@polymeshassociation/polymesh-sdk) package, you generally **do not** need to install or configure [`polymesh-types`](https://www.npmjs.com/package/@polymeshassociation/polymesh-types) yourself. The SDK handles type integration internally. This package primarily serves those working closer to the chain's API layer.
 
@@ -41,10 +41,10 @@ You should directly use or be aware of [`@polymeshassociation/polymesh-types`](h
 
 The package exports several key components:
 
-*   **`typesBundle`:** The most commonly used export, designed for initializing `@polkadot/api`. It contains type overrides and definitions for different chain specifications (Polkadot, Substrate, and Polymesh-specific types).
-*   **`rpc`:** Definitions for Polymesh-specific RPC methods.
-*   **`runtime`:** Definitions for Polymesh runtime API calls.
-*   **`signedExtensions`:** Specifications for Polymesh's custom signed extensions, influencing transaction construction and signing.
+- **`typesBundle`:** The most commonly used export, designed for initializing `@polkadot/api`. It contains type overrides and definitions for different chain specifications (Polkadot, Substrate, and Polymesh-specific types).
+- **`rpc`:** Definitions for Polymesh-specific RPC methods.
+- **`runtime`:** Definitions for Polymesh runtime API calls.
+- **`signedExtensions`:** Specifications for Polymesh's custom signed extensions, influencing transaction construction and signing.
 
 ## Versioning
 
@@ -101,7 +101,7 @@ async function connectToPolymesh() {
   await api.disconnect();
 }
 
-connectToPolymesh().catch(error => {
+connectToPolymesh().catch((error) => {
   console.error('Failed to connect:', error);
   process.exit(1);
 });
@@ -115,9 +115,9 @@ If you are using the SDK, you benefit from the type safety provided by [`polymes
 
 ## Links
 
-*   **GitHub Repository:** [`polymesh-types`](https://github.com/PolymeshAssociation/polymesh-types)
-*   **NPM Packages:**
-    *   [`@polymeshassociation/polymesh-types`](https://www.npmjs.com/package/@polymeshassociation/polymesh-types)
-    *   [`@polymeshassociation/polymesh-sdk`](https://www.npmjs.com/package/@polymeshassociation/polymesh-sdk)
-*   **Polymesh SDK Documentation:** [`/sdk-docs`](/sdk-docs)
-*   **`@polkadot/api` Official Documentation:** [`https://polkadot.js.org/docs/api/`](https://polkadot.js.org/docs/api/)
+- **GitHub Repository:** [`polymesh-types`](https://github.com/PolymeshAssociation/polymesh-types)
+- **NPM Packages:**
+  - [`@polymeshassociation/polymesh-types`](https://www.npmjs.com/package/@polymeshassociation/polymesh-types)
+  - [`@polymeshassociation/polymesh-sdk`](https://www.npmjs.com/package/@polymeshassociation/polymesh-sdk)
+- **Polymesh SDK Documentation:** [`/sdk-docs`](/sdk-docs)
+- **`@polkadot/api` Official Documentation:** [`https://polkadot.js.org/docs/api/`](https://polkadot.js.org/docs/api/)
