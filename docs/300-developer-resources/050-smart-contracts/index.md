@@ -1,9 +1,9 @@
 ---
-title: Smart Contracts
-description: Smart Contract Development
+title: EVM & Smart Contracts
+description: Polymesh's EVM surface - the pallet-revive dual-VM contract engine, precompiles, EVM address mapping, runtime calls from a wallet, and the Ethereum JSON-RPC proxy
 id: smart-contracts
 slug: /development/smart-contracts
-sidebar_label: Smart Contracts
+sidebar_label: EVM & Smart Contracts
 tags:
   - development
   - smart contracts
@@ -21,6 +21,41 @@ This allows teams to keep core regulated operations on the native layer while im
 - permissioned operations with custom approval paths
 - upgradeable application-level policy logic
 
+## EVM compatibility on Polymesh
+
+Polymesh is **EVM-compatible**. This is a statement about formats and tooling, not about networks.
+
+**What Polymesh has:**
+
+- An **EVM** — `revm`, a Rust implementation of the Ethereum Virtual Machine — that executes standard EVM bytecode compiled by `solc`.
+- **EVM addresses and keys**: 20-byte addresses controlled by secp256k1 keys, the same kind MetaMask and hardware wallets hold.
+- **EVM transactions**: legacy, EIP-2930 and EIP-1559 transactions, RLP-encoded and signed the usual way.
+- **Ethereum JSON-RPC compatibility**, through the [`eth-rpc` proxy](#running-evm-json-rpc), so tools built for Ethereum — MetaMask, viem, ethers, Foundry, Hardhat, Blockscout — work against Polymesh.
+
+**What Polymesh is not:**
+
+- It is **not connected to the Ethereum network**, and there is no bridge to it in the runtime. An EVM transaction you sign for Polymesh is submitted to Polymesh and settles on Polymesh.
+- It holds **no Ether and no Ethereum-issued tokens**. Gas and fees are paid in POLYX; an ERC-20 exposed by a [precompile](./020-precompiles/index.mdx) is a native Polymesh asset, not a token bridged from anywhere.
+- A contract address, an account balance or a transaction hash on Polymesh has **no relationship** to the same value on Ethereum.
+
+### How we use the terms
+
+| Term                     | Means                                                                                                                                 | Also called                               |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| **EVM**                  | The execution environment, and Polymesh's compatibility with EVM formats generally                                                    | —                                         |
+| **EVM key / EVM wallet** | A secp256k1 key, and the wallet holding it — MetaMask, Ledger, a viem or ethers account                                               | Ethereum key, Ethereum wallet, ETH wallet |
+| **EVM address**          | The 20-byte address derived from such a key, or from a Polymesh account (see [Address mapping](./010-address-mapping.mdx))            | Ethereum address, `0x` address, H160      |
+| **EVM transaction**      | An RLP-encoded, EVM-signed transaction, submitted to Polymesh                                                                         | Ethereum transaction                      |
+| **Ethereum**             | Reserved for the Ethereum network itself, EIP/ERC standards, the `eth_*` JSON-RPC method names, and tools from the Ethereum ecosystem | —                                         |
+
+### Ethereum key, Ethereum wallet, ETH wallet
+
+These are the common industry names for what this documentation calls an EVM key and an EVM wallet: the same secp256k1 key, the same MetaMask account, the same `0x` address. The EVM prefix is used because such a key on Polymesh does not involve the Ethereum network.
+
+Chain mechanism: [Runtime Calls from an EVM Wallet](./030-runtime-calls.mdx). Application use through the SDK: [EVM Wallets](/development/tooling/sdk/evm-wallets).
+
+Some code identifiers predate this convention and use `Eth`/`Ethereum` for what this documentation calls EVM — the SDK's `EthSigningManager` and `AccountKeyType.Ethereum`, the chain's `eth_transact` and `eth_substrate_call`. Those names are unchanged; they refer to EVM keys and EVM transactions on Polymesh, not to anything on Ethereum.
+
 ## `pallet-revive`: a dual-VM contract engine (PolkaVM + EVM)
 
 The smart contract pallet on Polymesh is `pallet-revive`. It is a **dual-VM contract execution engine**: it runs two different virtual machines, and which one executes a given contract is determined by how that contract was compiled — not by which way you call it.
@@ -36,41 +71,32 @@ When you deploy a contract you upload its compiled code, and the runtime selects
 
 ## Address mapping
 
-Polymesh accounts are 32-byte (`AccountId32`), not 20-byte Ethereum addresses. `AddressMapper = pallet_revive::AccountId32Mapper<Self>` bridges the two, and the two directions work differently:
+Polymesh accounts are 32-byte (`AccountId32`), not 20-byte EVM addresses, and `pallet-revive` bridges the two. The derivation is one-way in the native-to-EVM direction, so **an account must call `map_account` before receiving funds at its EVM address** or they are credited to a separate fallback account.
 
-- **Native account → Ethereum address**: computed by hashing the 32-byte account with Keccak-256 and taking the last 20 bytes. This is a one-way derivation — the original 32-byte account cannot be recovered from the 20-byte hash output alone.
-- **Ethereum address → native account**: if the account has previously called `map_account`, the chain looks up the real account via the stored `OriginalAccount` mapping. If it hasn't, the chain falls back to a deterministic **fallback account**: the 20-byte address padded with twelve `0xEE` bytes to make 32 bytes. `unmap_account` removes a stored mapping.
-
-:::danger Map your account before receiving tokens at its Ethereum-style address
-The native-to-Ethereum direction above is a one-way hash, so the chain cannot invert it on its own. Until an account calls `map_account`, any transfer sent to that account's derived Ethereum-style address is credited to the `0xEE`-padded **fallback account** instead — a distinct 32-byte account from the real one.
-
-This is not automatically lost: the real account holder can call `dispatch_as_fallback_account` to dispatch a call (e.g. a transfer) as that fallback account and move the funds out, since the runtime re-derives the same fallback account from their signed origin. But this is a manual recovery step that most wallets and tooling won't surface by default, so **the safe practice is to call `map_account` before ever advertising or receiving funds at your derived Ethereum-style address** — mapped accounts receive transfers directly, with no recovery step ever needed.
-:::
-
-Tools such as [Subscan's account-conversion utility](https://polymesh.subscan.io/tools/format_transform) can compute both directions for you (Ethereum → SS58 pads with `0xEE`; SS58 → Ethereum performs the Keccak-256 derivation) — useful for looking up addresses, but it does not perform or substitute for the on-chain `map_account` call.
+See [Address Mapping](./010-address-mapping.mdx) for the full model, the recovery path, and the conversion tools.
 
 ## Calls
 
 `pallet-revive` exposes the standard upstream call set — Polymesh has not added or removed any calls at the pallet level; customization is entirely in runtime configuration (below):
 
 - `call`, `instantiate`, `instantiate_with_code` — native (Substrate) calls to invoke or deploy a contract. `instantiate_with_code` accepts **either** PolkaVM or EVM bytecode; the runtime selects the VM from the uploaded code, so these deploy Solidity/EVM contracts to `revm` too — not only PolkaVM contracts.
-- `eth_transact`, `eth_instantiate_with_code`, `eth_call`, `eth_substrate_call` — Ethereum-transaction-shaped entry points (RLP-encoded, ETH-signed) that the `eth-rpc` proxy uses so standard Ethereum tooling can reach the same contracts. They are an alternative submission path, not a different VM.
+- `eth_transact`, `eth_instantiate_with_code`, `eth_call`, `eth_substrate_call` — EVM-transaction-shaped entry points (RLP-encoded, ETH-signed) that the `eth-rpc` proxy uses so standard Ethereum tooling can reach the same contracts. They are an alternative submission path, not a different VM. `eth_substrate_call` is the odd one out: it dispatches a native extrinsic rather than touching a contract, and is how [an EVM wallet calls runtime pallets directly](./030-runtime-calls.mdx).
 - `upload_code`, `remove_code`, `set_code` — manage contract code independently of instances (again, either bytecode kind)
-- `map_account`, `unmap_account` — manage the reversible `AccountId32` ↔ Ethereum address mapping
+- `map_account`, `unmap_account` — manage the reversible `AccountId32` ↔ EVM address mapping
 - `dispatch_as_fallback_account` — dispatch a call as a contract's fallback account
 
 ## Runtime configuration
 
 Values set in `impl pallet_revive::Config for Runtime`:
 
-| Setting            | Value                                                               | Notes                                                                                       |
-| ------------------ | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `ChainId`          | `1_641_820` (Mainnet), `1_641_819` (Testnet), `1_641_818` (Develop) | The EVM chain ID wallets and tooling (MetaMask, ethers.js) need to target the right network |
-| `NativeToEthRatio` | `10^12`                                                             | Bridges Polymesh's 6-decimal POLYX to Ethereum's 18-decimal wei convention                  |
-| `AllowEVMBytecode` | `true`                                                              | Enables the `revm` EVM-bytecode path (`solc` output) alongside PolkaVM contracts            |
-| `GasScale`         | `100`                                                               | Scales EVM gas to Polymesh's weight-based fee model                                         |
-| `Precompiles`      | `FungibleAssetInterface`                                            | Exposes native fungible assets to contracts as ERC-20 — see [Precompiles](#precompiles)     |
-| `AddressMapper`    | `AccountId32Mapper`                                                 | See [Address mapping](#address-mapping) above                                               |
+| Setting            | Value                                                                             | Notes                                                                                          |
+| ------------------ | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ChainId`          | `1_641_820` (Mainnet), `1_641_819` (Testnet), `1_641_818` (Develop)               | The EVM chain ID wallets and tooling (MetaMask, ethers.js) need to target the right network    |
+| `NativeToEthRatio` | `10^12`                                                                           | Converts Polymesh's 6-decimal POLYX to Ethereum's 18-decimal wei convention                    |
+| `AllowEVMBytecode` | `true`                                                                            | Enables the `revm` EVM-bytecode path (`solc` output) alongside PolkaVM contracts               |
+| `GasScale`         | `100`                                                                             | Scales EVM gas to Polymesh's weight-based fee model                                            |
+| `Precompiles`      | `FungibleAssetInterface`, `NonFungibleAssetInterface`, `PolymeshRuntimeInterface` | Exposes native assets and general runtime calls to contracts — see [Precompiles](#precompiles) |
+| `AddressMapper`    | `AccountId32Mapper`                                                               | See [Address mapping](./010-address-mapping.mdx) above                                         |
 
 ## Interacting with native Polymesh functionality
 
@@ -78,9 +104,23 @@ Values set in `impl pallet_revive::Config for Runtime`:
 
 A precompile is a fixed contract address that, instead of running interpreted bytecode, triggers native logic on the runtime side — from a contract's perspective it looks like a normal contract implementing some interface (an ABI, for the EVM case), but calls to it are handled directly by a pallet rather than by executing PolkaVM/EVM code. This is the mechanism `pallet-revive` uses to expose native chain functionality to contracts: `impl pallet_revive::Config for Runtime` has a `Precompiles` associated type (see the [runtime configuration](#runtime-configuration) table above) that lists which precompiles are wired in for a given network.
 
-Polymesh currently ships one: the [**Fungible Asset precompile**](/development/smart-contracts/precompiles/fungible-asset), which makes every native fungible asset callable as an ERC-20 token — `transfer`, `approve`, `transferFrom`, `balanceOf`, `allowance`, plus `mint`/`burn` and the ERC-7943 `canTransfer`/`forcedTransfer` pair — with full compliance and settlement enforcement behind every call. It is enabled on Mainnet, Testnet, and Develop.
+Polymesh ships three, all enabled on Mainnet, Testnet, and Develop:
 
-**See [Precompiles](/development/smart-contracts/precompiles)** for the address scheme, the semantics shared by all precompiles, and the current list of what is and isn't exposed. There is not yet a precompile for NFT collections, portfolios, settlement instructions, compliance management, or identity — contracts cannot call those pallets.
+- The [**Fungible Asset precompile**](/development/smart-contracts/precompiles/fungible-asset) makes every native fungible asset callable as an **ERC-20** token — `transfer`, `approve`, `transferFrom`, `balanceOf`, `allowance`, plus `mint`/`burn`, the ERC-7943 transfer checks and forced transfers, and part of the ERC-3643 administration surface.
+- The [**Non-Fungible Asset precompile**](/development/smart-contracts/precompiles/non-fungible-asset) makes every NFT collection callable as an **ERC-721** token, with ERC-721Metadata token URIs, approvals, and part of ERC-7943.
+- The [**Polymesh Runtime precompile**](/development/smart-contracts/precompiles/polymesh-runtime) exposes the general-purpose calls that are not scoped to an asset: asset creation, ticker registration, DID onboarding, and external agent authorization.
+
+Full compliance and settlement enforcement sits behind every call.
+
+**See [Precompiles](/development/smart-contracts/precompiles)** for the address scheme, the semantics shared by all precompiles, and the current list of what is and isn't exposed. There is not yet a precompile for portfolios, settlement instructions, compliance management, or claims — contracts cannot call those pallets.
+
+### Runtime calls from an EVM wallet
+
+Precompiles serve contracts. A wallet holding only an EVM key has a second, broader route: send a zero-value transaction to the reserved address `0x6d6f646c70792f70616464720000000000000000` with a **SCALE-encoded `RuntimeCall`** as its calldata, and the runtime dispatches that extrinsic with the EVM signer as the origin.
+
+Nothing runs in a VM, no contract is involved, and the whole runtime is reachable — not just the parts a precompile exposes. This is what lets an EVM-keyed user create assets, affirm instructions, or manage portfolios without ever holding a Polymesh key.
+
+**See [Runtime Calls from an EVM Wallet](./030-runtime-calls.mdx)** for the calldata format, which account the call runs as, permissions, fees, and the limits.
 
 ### Allowances (`asset::approve` / `settlement::transfer_funds`)
 
@@ -131,6 +171,6 @@ Polymesh's `pallet-revive` is built on the same upstream pallet used across the 
 
 1. Target `pallet-revive` for all contract work on Polymesh.
 2. To interact with contracts using standard Ethereum tooling, run the `eth-rpc` proxy alongside your node and use the correct `ChainId` for your network.
-3. Have users call `map_account` **before** they receive funds at their derived Ethereum-style address — see the warning in [Address mapping](#address-mapping).
-4. To read or move native Polymesh assets from a contract, use the [Fungible Asset precompile](/development/smart-contracts/precompiles/fungible-asset) — and give the contract its own identity, since a precompile call acts as the contract's account, not the user's.
-5. Check [Precompiles](/development/smart-contracts/precompiles) before assuming a native capability is reachable from contract code — only fungible assets are exposed today.
+3. Have users call `map_account` **before** they receive funds at their derived EVM address — see the warning in [Address mapping](./010-address-mapping.mdx).
+4. To read or move native Polymesh assets from a contract, use the [Fungible Asset](/development/smart-contracts/precompiles/fungible-asset) or [Non-Fungible Asset](/development/smart-contracts/precompiles/non-fungible-asset) precompile — and give the contract its own identity, since a precompile call acts as the contract's account, not the user's.
+5. Check [Precompiles](/development/smart-contracts/precompiles) before assuming a native capability is reachable from contract code. If you are building for a **wallet** rather than a contract, [runtime calls](./030-runtime-calls.mdx) reach the whole runtime instead.

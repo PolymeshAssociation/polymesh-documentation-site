@@ -1,0 +1,117 @@
+---
+title: NFT Precompile Changelog - v8.0 to v8.1.1
+description: Polymesh chain v8.1.1 exposes every NFT collection as an ERC-721 token through a pallet-revive precompile, with ERC-721Metadata token URIs, ERC-165 introspection and ERC-7943 transfer checks.
+id: v8.0-to-v8.1.1-nft-precompile
+slug: /development/changelogs/v8.0-to-v8.1.1/nft-precompile
+sidebar_label: NFT Precompile
+tags:
+  - migration
+  - changelog
+  - runtime
+  - smart-contracts
+  - evm
+  - nft
+---
+
+This page covers the ERC-721 precompile added in v8.1.1. It is part of the [v8.0 → v8.1.1 changelog](./010-overview.mdx).
+
+**Audience:** smart contract developers, NFT marketplace and wallet integrators, and issuers of Polymesh NFT collections.
+
+:::tip Reference documentation
+This is a release note, not the reference. See [Non-Fungible Asset (ERC-721)](/development/smart-contracts/precompiles/non-fungible-asset) for the method reference, events, revert reasons and conformance detail.
+:::
+
+---
+
+## Overview
+
+Every Polymesh NFT collection is now callable as an ERC-721 token from EVM/PolkaVM contracts and standard Ethereum tooling, at a deterministic address derived from the collection's `AssetId`:
+
+```text
+0x<assetId>00090000
+```
+
+The layout matches the fungible-asset precompile, with matcher id `0x0009` instead of `0x0008`. The ERC-721 `tokenId` is the on-chain `NFTId` — the sequential number within the collection, not a global identifier.
+
+As with fungible assets, there is no deployment step and no issuer opt-in: every existing and future collection is exposed automatically, and calls route through `pallet-nft` and `pallet-settlement`, so compliance, transfer restrictions and agent permissions are enforced on every transfer.
+
+### What it implements
+
+| Interface       | Methods                                                                                                                                        |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| ERC-721         | `balanceOf`, `ownerOf`, `transferFrom`, `safeTransferFrom` (both overloads), `approve`, `setApprovalForAll`, `getApproved`, `isApprovedForAll` |
+| ERC-721Metadata | `name`, `symbol`, `tokenURI`                                                                                                                   |
+| ERC-165         | `supportsInterface`                                                                                                                            |
+| ERC-7943        | `canTransfer`, `canSend`, `canReceive`, `forcedTransfer`                                                                                       |
+| Polymesh        | `mint`, `burn`, `totalSupply`                                                                                                                  |
+
+`mint` takes the collection's mandatory metadata values, in the order the collection defines its keys, and returns the new `tokenId`. `burn` redeems an NFT the caller holds. Both act on the **caller's own account key** — neither takes an address.
+
+`totalSupply` is the count of NFTs in the collection. It is a Polymesh convenience, not the ERC-721Enumerable extension: `tokenByIndex` and `tokenOfOwnerByIndex` are not implemented, and `supportsInterface` does not claim ERC-721Enumerable.
+
+### Token URIs
+
+`tokenURI(tokenId)` resolves in two steps:
+
+1. The NFT's own `tokenUri` metadata value, if set.
+2. Otherwise the collection's `baseTokenUri` metadata value.
+
+In either case a literal `{tokenId}` in the value is replaced with the decimal token id. If the value contains no placeholder, the id is appended. An unset URI returns an empty string rather than reverting.
+
+This means a collection can set one `baseTokenUri` such as `https://example.com/nft/{tokenId}.json` and get correct per-token URIs for free, while still allowing any individual NFT to override it.
+
+The two metadata keys are global asset metadata keys, configured per network on the runtime. Issuers should use the standard `tokenUri` and `baseTokenUri` global keys rather than registering local keys of the same name, which the precompile does not read.
+
+## Deviations from ERC-721
+
+These are the three that break tooling expectations. All are covered in full in the [reference](/development/smart-contracts/precompiles/non-fungible-asset).
+
+### `safeTransferFrom` rejects all contract receivers
+
+ERC-721's `safeTransferFrom` protects against NFTs being locked in contracts that cannot handle them, by requiring the receiver to acknowledge the transfer through `onERC721Received`. A precompile cannot re-enter the EVM to make that call.
+
+Rather than silently drop the guarantee, the precompile **refuses every receiver that has code** — including receivers that do implement `onERC721Received` correctly, and including other precompile addresses. The revert message is explicit about the alternative:
+
+```text
+safeTransferFrom only supports externally-owned accounts; the receiver has code. Use transferFrom
+```
+
+A contract that knowingly handles NFTs can still receive them through `transferFrom`. This is stricter than the standard, deliberately: it fails loudly rather than risking a stranded NFT.
+
+### `ownerOf` reverts for portfolio-held NFTs
+
+Polymesh NFTs can be held by an account key or by a **portfolio**. A portfolio has no EVM address, so there is no address `ownerOf` could return. Rather than return the zero address — which ERC-721 tooling reads as "burned" — it reverts:
+
+```text
+NFT is held in a portfolio, which has no address
+```
+
+Marketplace and indexer code that assumes `ownerOf` always succeeds for an existing token needs to handle this. `canTransfer` and the Substrate-side `Nft::Owner` storage remain usable for portfolio-held NFTs.
+
+### `balanceOf` counts the account key, not the identity
+
+`balanceOf(owner)` returns the number of NFTs in the collection held by that **account key**. A Polymesh identity may hold NFTs across several keys and portfolios; those are not included. This matches the fungible precompile's treatment of `balanceOf` and is the same distinction described in [Precompiles](/development/smart-contracts/precompiles).
+
+### `forcedTransfer` takes a recipient
+
+```solidity
+function forcedTransfer(address from, address to, uint256 tokenId) external returns (bool);
+```
+
+Like its fungible counterpart it moves the token without compliance checks, requires the caller to be an agent of the collection, and emits both `ForcedTransfer` and `Transfer`.
+
+## Approvals
+
+ERC-721's `approve` and `setApprovalForAll` are backed by new Substrate-level NFT approvals rather than being an EVM-only construct — an approval granted through the precompile is visible to, and usable from, the Substrate API and vice versa. `approve(address(0), tokenId)` clears an approval, per the standard.
+
+Approvals are covered in [NFT Approvals](./060-nft-approvals.mdx).
+
+## Migration checklist
+
+1. Nothing breaks. The precompile is additive; existing NFT integrations over the Substrate API are unaffected.
+2. Read [Non-Fungible Asset (ERC-721)](/development/smart-contracts/precompiles/non-fungible-asset) before writing contracts against a collection.
+3. Handle `ownerOf` reverting — do not assume an existing token has an address owner.
+4. Use `transferFrom`, not `safeTransferFrom`, when the receiver is a contract.
+5. Set `baseTokenUri` on a collection (or `tokenUri` per NFT) if you want `tokenURI` to return anything.
+6. Do not rely on `supportsInterface` to detect ERC-721Enumerable or ERC-7943 — neither interface id is reported, though the ERC-7943 methods are present.
+7. Give any contract that will hold NFTs its own identity, and remember it cannot receive them through `safeTransferFrom`.

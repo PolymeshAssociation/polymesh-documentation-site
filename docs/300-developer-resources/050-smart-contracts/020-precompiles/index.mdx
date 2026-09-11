@@ -15,7 +15,7 @@ A **precompile** is a fixed contract address that, instead of running interprete
 
 This is how contracts on Polymesh reach **native** chain functionality: assets, compliance, settlement, and identity live in Substrate pallets, not in contract storage, and precompiles are the bridge.
 
-## Why it matters on Polymesh
+## Purpose
 
 On a general-purpose EVM chain, a token is just a contract someone deployed. On Polymesh, a fungible asset is a first-class chain object with an issuer, compliance rules, transfer restrictions, agents, and a settlement engine behind it. Precompiles let a contract work with those assets **without** the chain giving up any of that enforcement — a precompile call routes into the same pallet code an ordinary Substrate extrinsic would, with the same identity checks, the same compliance evaluation, and the same events.
 
@@ -23,19 +23,25 @@ The practical consequence: a Solidity contract can treat a Polymesh asset as an 
 
 ## Available precompiles
 
-| Precompile                                 | Interface                             | Address range         | Since | Status    |
-| ------------------------------------------ | ------------------------------------- | --------------------- | ----- | --------- |
-| [Fungible Asset](./020-fungible-asset.mdx) | ERC-20 (+ metadata, partial ERC-7943) | `0x<assetId>00080000` | v8.1  | Available |
+| Precompile                                         | Interface                                   | Address                                      | Since |
+| -------------------------------------------------- | ------------------------------------------- | -------------------------------------------- | ----- |
+| [Fungible Asset](./020-fungible-asset.mdx)         | ERC-20, ERC-3643 (partial), ERC-7943        | `0x<assetId>00080000`                        | v8.1  |
+| [Non-Fungible Asset](./030-non-fungible-asset.mdx) | ERC-721, ERC-721Metadata, ERC-165, ERC-7943 | `0x<assetId>00090000`                        | v8.1  |
+| [Polymesh Runtime](./040-polymesh-runtime.mdx)     | `IPolymeshRuntime`                          | `0x00000000000000000000000000000000ffff0000` | v8.1  |
 
-Precompiles are configured per runtime via the `Precompiles` associated type on `pallet_revive::Config`. The fungible-asset precompile is enabled on **Mainnet, Testnet, and Develop**.
+Precompiles are configured per runtime via the `Precompiles` associated type on `pallet_revive::Config`. All three are enabled on **Mainnet, Testnet, and Develop**.
+
+The two asset precompiles serve **every** asset and collection automatically — there is no deployment, registration or issuer opt-in. The runtime precompile lives at one fixed address and covers the calls that are not scoped to a single asset: asset creation, ticker registration, DID onboarding and agent authorization.
 
 :::info Not yet available
-There is currently no precompile for NFT collections (ERC-721/ERC-1155), portfolios, settlement instructions, compliance rule management, or identity/claims. Contracts cannot call those pallets. This page is updated as precompiles are added — check the table above rather than assuming a capability exists.
+There is no precompile for portfolios, settlement instructions, compliance rule management, claims, or ERC-1155 semantics. Contracts cannot call those pallets. This page is updated as precompiles are added — check the table above rather than assuming a capability exists.
+
+This limit applies to **contracts**. An EVM wallet is not restricted to the precompiled surface: it can dispatch any extrinsic through [runtime calls](/development/smart-contracts/runtime-calls).
 :::
 
 ## Address scheme
 
-Polymesh precompiles use `pallet-revive`'s **variable-prefix** address matching, which lets a single precompile implementation serve many addresses by encoding data into the address itself.
+The asset precompiles use `pallet-revive`'s **variable-prefix** address matching, which lets a single precompile implementation serve many addresses by encoding data into the address itself. The runtime precompile uses **fixed** matching: it carries no data and answers at exactly one address.
 
 A 20-byte precompile address is laid out as:
 
@@ -48,11 +54,13 @@ A 20-byte precompile address is laid out as:
 
 The trailing 4 bytes identify **which** precompile is being called (a big-endian `u16` matcher id in bytes 16–17, then two zero bytes); the leading bytes carry whatever data that precompile needs. Every byte between the data and the matcher suffix must be zero.
 
-| Matcher id | Precompile                                 | Data bytes                 |
-| ---------- | ------------------------------------------ | -------------------------- |
-| `0x0008`   | [Fungible Asset](./020-fungible-asset.mdx) | 16 (the asset's `AssetId`) |
+| Matcher id | Precompile                                         | Data bytes                      |
+| ---------- | -------------------------------------------------- | ------------------------------- |
+| `0x0008`   | [Fungible Asset](./020-fungible-asset.mdx)         | 16 (the asset's `AssetId`)      |
+| `0x0009`   | [Non-Fungible Asset](./030-non-fungible-asset.mdx) | 16 (the collection's `AssetId`) |
+| `0xffff`   | [Polymesh Runtime](./040-polymesh-runtime.mdx)     | 0 (one fixed address)           |
 
-Because the data is embedded in the address, there is **no registry to query and no deployment step** — the address for a given asset is computable offline, stable forever, and the same on every network where that asset exists.
+Because the data is embedded in the address, there is **no registry to query and no deployment step** — the address for a given asset or collection is computable offline, stable forever, and the same on every network where that asset exists.
 
 :::note Address collisions
 Widening the data window trades collision resistance for address space: a keccak-derived address (an EOA, `CREATE`, or `CREATE2` address) falls into a precompile's range with probability `2^-(8 × (20 - data_bytes))`. At 16 data bytes that is `2^-32`, and any such collision would have to also produce a valid `AssetId` to do anything. This is a property of the upstream `pallet-revive` matcher design, not something specific to Polymesh.
@@ -64,7 +72,7 @@ These rules apply to every Polymesh precompile, so they are documented once here
 
 ### Callers are resolved to Polymesh accounts
 
-A precompile receives a 20-byte EVM caller address. It resolves that to a 32-byte Polymesh `AccountId32` through the runtime's `AddressMapper` (`AccountId32Mapper`) — the same mapping used everywhere else in `pallet-revive`. See [Address mapping](/development/smart-contracts#address-mapping) for how that works, and why calling `map_account` matters.
+A precompile receives a 20-byte EVM caller address. It resolves that to a 32-byte Polymesh `AccountId32` through the runtime's `AddressMapper` (`AccountId32Mapper`) — the same mapping used everywhere else in `pallet-revive`. See [Address mapping](/development/smart-contracts/address-mapping) for how that works, and why calling `map_account` matters.
 
 That resolved account is the origin the underlying pallet call runs as. It is subject to exactly the same requirements as any other Polymesh account: to act on assets it must be linked to an identity, hold the necessary permissions, and pass compliance.
 
@@ -96,6 +104,22 @@ Precompiles emit EVM logs, visible through `eth_getLogs` and standard Ethereum t
 
 Substrate-side indexers therefore need no precompile-specific handling — a transfer made through a precompile looks like any other transfer.
 
+## Interfaces and bytecode
+
+Each precompile's Solidity interface and the stub runtime bytecode are checked into the Polymesh repository:
+
+| Precompile                                         | Interface                                                                                                                                      | Runtime bytecode                                                                                                                               |
+| -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Fungible Asset](./020-fungible-asset.mdx)         | [`FungibleAssetStub.sol`](https://github.com/PolymeshAssociation/Polymesh/blob/mainnet/precompiles/src/interfaces/FungibleAssetStub.sol)       | [`FungibleAssetStub.bin`](https://github.com/PolymeshAssociation/Polymesh/blob/mainnet/precompiles/src/interfaces/FungibleAssetStub.bin)       |
+| [Non-Fungible Asset](./030-non-fungible-asset.mdx) | [`NonFungibleAssetStub.sol`](https://github.com/PolymeshAssociation/Polymesh/blob/mainnet/precompiles/src/interfaces/NonFungibleAssetStub.sol) | [`NonFungibleAssetStub.bin`](https://github.com/PolymeshAssociation/Polymesh/blob/mainnet/precompiles/src/interfaces/NonFungibleAssetStub.bin) |
+| [Polymesh Runtime](./040-polymesh-runtime.mdx)     | [`PolymeshRuntime.sol`](https://github.com/PolymeshAssociation/Polymesh/blob/mainnet/precompiles/src/interfaces/PolymeshRuntime.sol)           | [`PolymeshRuntime.bin`](https://github.com/PolymeshAssociation/Polymesh/blob/mainnet/precompiles/src/interfaces/PolymeshRuntime.bin)           |
+
+Each `.sol` file defines two things: the interface (`IFungibleAsset`, `INonFungibleAsset`, `IPolymeshRuntime`) and a stub contract of the same shape whose methods all revert with `NotExecutable()`. Import the interface to call a precompile from a contract; the stub exists only to produce the bytecode the precompile serves for explorer verification.
+
+No ABI JSON is checked in. Generate one from the interface with `solc --abi <file>`, or `forge inspect IFungibleAsset abi`, then use it with viem, ethers or web3 against any address in the precompile's range.
+
+Links point at the `mainnet` branch, which tracks the runtime deployed to Mainnet. A precompile added in a release that Mainnet has not yet taken will not be present there; the [`develop`](https://github.com/PolymeshAssociation/Polymesh/tree/develop/precompiles/src/interfaces) branch carries the newest interfaces.
+
 ## Block explorer support
 
 Precompiles serve real bytecode for their address range: a checked-in **stub contract** whose ABI matches the precompile's interface. `eth_getCode` on a precompile address returns it, which lets explorers such as Blockscout verify the contract and render a proper method UI, split correctly into Read and Write tabs based on each method's declared state mutability.
@@ -104,10 +128,12 @@ The stub is only ever a carrier for code and an ABI — every method in it rever
 
 Verifying **one** address per precompile per network is enough. Because every address in a precompile's range serves identical bytecode, Blockscout's twin-matching applies the verified ABI to the rest automatically.
 
-The [Polymesh repository](https://github.com/PolymeshAssociation/Polymesh) ships helper scripts for this workflow under `scripts/` (`build_precompile_stub.sh`, `blockscout_find_precompile_addresses.sh`, `blockscout_check_precompile_code.sh`, `blockscout_verify_precompile.sh`, `blockscout_precompile_status.sh`), with usage notes in `precompiles/README.md`.
+The Polymesh repository ships helper scripts for this workflow under [`scripts/`](https://github.com/PolymeshAssociation/Polymesh/tree/mainnet/scripts) (`build_precompile_stub.sh`, `blockscout_find_precompile_addresses.sh`, `blockscout_check_precompile_code.sh`, `blockscout_verify_precompile.sh`, `blockscout_precompile_status.sh`), with usage notes in [`precompiles/README.md`](https://github.com/PolymeshAssociation/Polymesh/blob/mainnet/precompiles/README.md).
 
 ## Related
 
-- [Smart Contracts](/development/smart-contracts) — `pallet-revive`, the dual-VM model, address mapping, and running the `eth-rpc` proxy
+- [EVM & Smart Contracts](/development/smart-contracts) — `pallet-revive`, the dual-VM model, address mapping, and running the `eth-rpc` proxy
+- [Runtime Calls from an EVM Wallet](/development/smart-contracts/runtime-calls) — reaching the whole runtime from a wallet, without a contract
 - [Fungible Assets](/core/assets/fungible) — the native asset model the fungible-asset precompile exposes
 - [Compliance](/compliance) — the rules evaluated on every transfer
+- [v8.0 → v8.1.1 changelog](/development/changelogs/v8.0-to-v8.1.1) — what shipped, and when

@@ -1,6 +1,6 @@
 ---
 title: Fungible Asset Precompile (ERC-20)
-description: Use any Polymesh fungible asset as an ERC-20 token from Solidity and Ethereum tooling - address derivation, the full method reference, events, revert reasons, and the limits to design around.
+description: Use any Polymesh fungible asset as an ERC-20 token from Solidity and Ethereum tooling, with parts of ERC-3643 and ERC-7943 - address derivation, the full method reference, events, revert reasons, and the limits to design around.
 id: precompile-fungible-asset
 slug: /development/smart-contracts/precompiles/fungible-asset
 sidebar_label: Fungible Asset (ERC-20)
@@ -76,7 +76,9 @@ The address is stable, computable offline, and identical on every network where 
 
 ## Interface
 
-The Solidity interface is `IFungibleAsset`, combining OpenZeppelin's `IERC20`, `IERC20Metadata`, and `IERC20Permit` with Polymesh and ERC-7943 extensions:
+The Solidity interface is `IFungibleAsset`, combining OpenZeppelin's `IERC20`, `IERC20Metadata`, and `IERC20Permit` with Polymesh, ERC-3643 and ERC-7943 extensions:
+
+The interface below is abridged for readability. The complete source, with NatSpec, is [`FungibleAssetStub.sol`](https://github.com/PolymeshAssociation/Polymesh/blob/mainnet/precompiles/src/interfaces/FungibleAssetStub.sol) — import it to call this precompile from a contract, or compile it (`solc --abi`, `forge inspect IFungibleAsset abi`) for an ABI to use with viem, ethers or web3. The runtime bytecode the precompile serves is [`FungibleAssetStub.bin`](https://github.com/PolymeshAssociation/Polymesh/blob/mainnet/precompiles/src/interfaces/FungibleAssetStub.bin).
 
 ```solidity
 interface IFungibleAsset {
@@ -111,7 +113,21 @@ interface IFungibleAsset {
 
     // ERC-7943
     function canTransfer(address from, address to, uint256 value) external view returns (bool);
-    function forcedTransfer(address from, uint256 amount) external returns (bool);
+    function forcedTransfer(address from, address to, uint256 amount) external returns (bool);
+    function canSend(address account) external view returns (bool);
+    function canReceive(address account) external view returns (bool);
+    function setFrozenTokens(address account, uint256 amount) external returns (bool);
+    function getFrozenTokens(address account) external view returns (uint256);
+
+    // ERC-3643
+    function pause() external;
+    function unpause() external;
+    function setName(string calldata name) external;
+    function setSymbol(string calldata symbol) external;
+    function setAddressFrozen(address account, bool freeze) external;
+    function freezePartialTokens(address account, uint256 amount) external;
+    function unfreezePartialTokens(address account, uint256 amount) external;
+    function isAgent(address account) external view returns (bool);
 }
 ```
 
@@ -149,12 +165,16 @@ Unlike the `mint(to, amount)` / `burn(from, amount)` shape common in OpenZeppeli
 
 ### ERC-7943 methods
 
-[ERC-7943](https://eips.ethereum.org/EIPS/eip-7943) defines a minimal interface for regulated, transfer-restricted tokens. Polymesh implements two of its methods on the fungible-asset precompile.
+[ERC-7943](https://eips.ethereum.org/EIPS/eip-7943) (uRWA) defines a minimal interface for regulated, transfer-restricted tokens. All six of its functions and both of its events are implemented here, with the deviations noted in [Standards conformance](#standards-conformance).
 
-| Method                         | Runs                           | Notes                                                                                                                                                                  |
-| ------------------------------ | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `canTransfer(from, to, value)` | `Asset::asset_transfer_report` | `view`. Runs the full transfer report — compliance rules, transfer restrictions and statistics, frozen state, balances — and returns `true` if it reports no errors.   |
-| `forcedTransfer(from, amount)` | `Asset::controller_transfer`   | Moves `amount` from `from` **to the caller's own account**. Caller must be an agent with controller-transfer permission. Emits `ForcedTransfer(from, caller, amount)`. |
+| Method                             | Runs                                    | Notes                                                                                                                                                                             |
+| ---------------------------------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `canTransfer(from, to, value)`     | `Asset::asset_transfer_report`          | `view`. Runs the full transfer report — compliance rules, transfer restrictions and statistics, frozen state, balances — and returns `true` if it reports no errors.              |
+| `forcedTransfer(from, to, amount)` | `Asset::controller_transfer_to`         | Moves `amount` from `from` to `to`, bypassing compliance and frozen state. Caller must be an agent with controller-transfer permission. Emits `ForcedTransfer(from, to, amount)`. |
+| `canSend(account)`                 | `Asset::transfer_is_allowed_for_holder` | `view`. Whether the account may send this asset at all — asset existence, asset freeze, holder freeze, and the sender side of compliance. Takes no amount.                        |
+| `canReceive(account)`              | `Asset::transfer_is_allowed_for_holder` | `view`. Whether the account may receive this asset at all. Does **not** consider a holder freeze, which only restricts sending.                                                   |
+| `setFrozenTokens(account, amount)` | `Asset::set_frozen_tokens`              | Sets the account's frozen balance to exactly `amount`. Agent only. Emits `Frozen`.                                                                                                |
+| `getFrozenTokens(account)`         | reads the frozen balance                | `view`. The account's currently frozen balance. `0` when nothing is frozen.                                                                                                       |
 
 `canTransfer` is the useful primitive for contracts that must branch on compliance instead of absorbing a revert — an AMM, escrow, or router can test a leg before committing to it:
 
@@ -175,8 +195,6 @@ It does **not** model: a [zero `value`](#zero-value-transfers-revert), a [self-t
 Treat it as "compliance and balances permit this", not "this call will not revert".
 :::
 
-`forcedTransfer` follows the ERC-7943 signature, which sends seized tokens to the **caller** rather than to a chosen destination. An agent recovering tokens therefore receives them into its own account and must move them on from there.
-
 ### EIP-2612 permit is not implemented
 
 `permit`, `nonces`, and `DOMAIN_SEPARATOR` appear in the ABI — so ABI-based feature detection will report the token as permit-capable — but **all three revert**:
@@ -189,13 +207,79 @@ domain_separator is not implemented yet
 
 If your integration probes `DOMAIN_SEPARATOR()` to decide whether to offer gasless approvals, that probe reverts rather than returning a value. Detect this and fall back to `approve`.
 
+### ERC-3643 methods
+
+ERC-3643 (T-REX) describes the administrative surface of a permissioned token. The precompile implements the subset below; these methods are agent-only unless noted, and each maps onto an existing Polymesh capability. The identity-registry, compliance-contract, batch-operation and recovery parts of ERC-3643 are **not** implemented — see [Standards conformance](#standards-conformance).
+
+| Method                                   | Runs                                                                  | Notes                                                                                      |
+| ---------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `pause()`                                | `Asset::freeze`                                                       | Halts every transfer of the asset. Emits `Paused`.                                         |
+| `unpause()`                              | `Asset::unfreeze`                                                     | Resumes transfers. Emits `Unpaused`.                                                       |
+| `setName(name)`                          | `Asset::rename_asset`                                                 | Renames the asset.                                                                         |
+| `setSymbol(symbol)`                      | `Asset::register_unique_ticker` then `Asset::link_ticker_to_asset_id` | Registers a **new** ticker to the caller's identity and links it to the asset — see below. |
+| `setAddressFrozen(account, freeze)`      | `Asset::set_holder_frozen`                                            | Freezes or unfreezes the account entirely for this asset. Emits `AddressFrozen`.           |
+| `freezePartialTokens(account, amount)`   | `Asset::freeze_partial_tokens`                                        | Freezes `amount` **in addition to** what is already frozen. Emits `TokensFrozen`.          |
+| `unfreezePartialTokens(account, amount)` | `Asset::unfreeze_partial_tokens`                                      | Releases `amount` from the frozen balance. Emits `TokensUnfrozen`.                         |
+| `isAgent(account)`                       | reads external agent membership                                       | `view`. `false` for an account with no identity.                                           |
+
+#### `setSymbol` registers a ticker
+
+On most ERC-3643 tokens `setSymbol` writes a string. On Polymesh a **ticker is a distinct, globally unique, registered object**, so `setSymbol` does two things: it registers the ticker to the caller's identity, then links it to the asset.
+
+The consequences are worth planning for:
+
+- The ticker must be **available**. One already registered to another identity causes a revert.
+- Registering charges the standard **ticker registration fee**, so the call costs POLYX beyond gas.
+- The ticker is at most **12 characters**; longer input reverts with `Invalid symbol; Ticker is too long`.
+- The caller needs permission to register a ticker and to link it, not merely agent rights over the asset.
+
+#### Freezing: relative and absolute
+
+`freezePartialTokens` is relative and `setFrozenTokens` is absolute. Calling `freezePartialTokens(account, 100)` twice leaves 200 frozen; calling `setFrozenTokens(account, 100)` twice leaves 100.
+
+A frozen balance reduces what the holder can send:
+
+```text
+available = balance − locked − frozen
+```
+
+A transfer above that fails with `InsufficientBalance`; a transfer by a fully frozen holder fails with `InvalidTransferSenderIsFrozen`. Freezing restricts **sending only** — a frozen holder can still receive, and `canReceive` ignores the freeze.
+
+`forcedTransfer` deliberately bypasses both, which is what allows an agent to seize from a frozen holder without unfreezing them first.
+
+Polymesh applies freezes to a **holder**, which may be an account key or a portfolio. Only the account form has an EVM address, so these methods reach account holders only; portfolios must be frozen through the Substrate API. See the [Asset Freezing changelog](/development/changelogs/v8.0-to-v8.1.1/asset-freezing).
+
+## Standards conformance
+
+The precompile implements the ERC-20 interface in full, plus parts of ERC-3643 and ERC-7943. The table records where it falls short of each standard, so an integrator can tell what is safe to rely on.
+
+| Standard     | Implemented                                                                                                               | Known deviations                                                                                                                                                                                                                 |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ERC-20**   | Core interface and metadata                                                                                               | Behavioural deviations only — see [ERC-20 conformance and deviations](#erc-20-conformance-and-deviations)                                                                                                                        |
+| **EIP-2612** | Declared in the ABI                                                                                                       | Not implemented; `permit`, `nonces` and `DOMAIN_SEPARATOR` revert                                                                                                                                                                |
+| **ERC-7943** | All six functions and both events                                                                                         | Not advertised through ERC-165; the standard's four custom errors are not raised; `forcedTransfer` does not emit `Transfer`; `canTransfer` returns `false` for excluded reasons; view functions can revert on out-of-range input |
+| **ERC-3643** | `pause`, `unpause`, `setName`, `setSymbol`, `isAgent`, `setAddressFrozen`, `freezePartialTokens`, `unfreezePartialTokens` | Identity registry, compliance contract, `onchainID`, batch operations and recovery are not implemented                                                                                                                           |
+
+Four ERC-7943 points are worth spelling out, because each changes how a contract should be written:
+
+- **No ERC-165.** `IFungibleAsset` declares no `supportsInterface`, so a contract cannot detect ERC-7943 — or ERC-20 — by interface id. Assume the interface from the address range instead.
+- **No typed errors.** ERC-7943 defines `ERC7943CannotSend`, `ERC7943CannotReceive`, `ERC7943CannotTransfer` and `ERC7943InsufficientUnfrozenBalance`. Failures revert with `Error(string)` instead, so a `try`/`catch` cannot discriminate on the error type — match on the revert string, or pre-check with `canTransfer`.
+- **`forcedTransfer` emits only `ForcedTransfer`**, not the ERC-20 `Transfer` that the standard also requires. An indexer tracking balances from `Transfer` logs alone will miss a seizure; read `ForcedTransfer` as well.
+- **`canTransfer` is not purely a permission check.** It returns `false` for insufficient balance, granularity and overflow — which ERC-7943 says it must not — so a `false` result does not by itself mean the parties are ineligible. It can also revert for a `value` above `2^128-1` rather than returning `false`.
+
 ## Events
 
-| Event                                                                      | Emitted by                                                                 |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `Transfer(address indexed from, address indexed to, uint256 value)`        | `transfer`, `transferFrom`, `mint` (`from` = `0x0`), `burn` (`to` = `0x0`) |
-| `Approval(address indexed owner, address indexed spender, uint256 value)`  | `approve`                                                                  |
-| `ForcedTransfer(address indexed from, address indexed to, uint256 amount)` | `forcedTransfer`                                                           |
+| Event                                                                        | Emitted by                                                                 |
+| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `Transfer(address indexed from, address indexed to, uint256 value)`          | `transfer`, `transferFrom`, `mint` (`from` = `0x0`), `burn` (`to` = `0x0`) |
+| `Approval(address indexed owner, address indexed spender, uint256 value)`    | `approve`                                                                  |
+| `ForcedTransfer(address indexed from, address indexed to, uint256 amount)`   | `forcedTransfer`                                                           |
+| `Frozen(address indexed account, uint256 amount)`                            | `setFrozenTokens`                                                          |
+| `TokensFrozen(address indexed account, uint256 amount)`                      | `freezePartialTokens`                                                      |
+| `TokensUnfrozen(address indexed account, uint256 amount)`                    | `unfreezePartialTokens`                                                    |
+| `AddressFrozen(address indexed account, bool freeze, address indexed owner)` | `setAddressFrozen`                                                         |
+| `Paused(address userAddress)`                                                | `pause`                                                                    |
+| `Unpaused(address userAddress)`                                              | `unpause`                                                                  |
 
 These are EVM logs. The underlying `Asset` and `Settlement` pallets emit their normal Substrate events at the same time, so Substrate-side indexers see these transfers exactly as they see any other and need no precompile-specific handling.
 
@@ -210,25 +294,31 @@ These are EVM logs. The underlying `Asset` and `Settlement` pallets emit their n
 | `Invalid caller` / `Invalid account id`                                                                          | An address could not be resolved to a valid Polymesh account.                                                                                                 |
 | `Balance conversion failed`                                                                                      | A `uint256` value does not fit Polymesh's `Balance` type, or vice versa.                                                                                      |
 | `permit is not implemented yet` (and `nonces`, `domain_separator`)                                               | EIP-2612 methods are declared but unimplemented.                                                                                                              |
+| `Invalid symbol; Ticker is too long`                                                                             | `setSymbol` was given more than 12 characters.                                                                                                                |
 
 Plus the shared guards documented in [Precompiles](./index.mdx#shared-call-semantics): `PrecompileDelegateDenied` for delegate calls, and `StateChangeDenied` for state-changing methods invoked in a read-only context.
 
-### Pallet errors you will actually hit
+### Common pallet errors
 
 These arrive wrapped as `Extrinsic returned an error: <name>`. The names below are Polymesh pallet errors, not Solidity ones, so they will not look familiar to an EVM developer — this table is the translation.
 
-| Pallet error                          | Means                                                                                                                                                             |
-| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ZeroAmount`                          | `value` was `0`. See [zero-value transfers](#zero-value-transfers-revert).                                                                                        |
-| `SenderSameAsReceiver`                | Sender and recipient are the same holder. See [self-transfers](#self-transfers-revert).                                                                           |
-| `IdentityNotFoundForAccountPortfolio` | An account involved in the transfer is not linked to an identity — including `address(0)`. See [recipients must be onboarded](#recipients-must-have-an-identity). |
-| `InvalidGranularity`                  | The asset is indivisible and `value` is not a whole multiple of `1_000_000`. See [decimals](#decimals-is-always-6-even-for-indivisible-assets).                   |
-| `InsufficientBalance`                 | Not enough unlocked balance in the sender's account holding.                                                                                                      |
-| `InsufficientAllowance`               | The spender's allowance is lower than `value`.                                                                                                                    |
-| `InvalidTransferComplianceFailure`    | The asset's compliance rules reject this sender/receiver pair.                                                                                                    |
-| `InvalidTransferFrozenAsset`          | The asset is frozen.                                                                                                                                              |
-| `InvalidTransferInvalidReceiverDID`   | The recipient's identity exists but is not active.                                                                                                                |
-| `UnauthorizedAgent`                   | The caller lacks the agent permission a privileged method needs (`mint`, `forcedTransfer`).                                                                       |
+| Pallet error                                    | Means                                                                                                                                                             |
+| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ZeroAmount`                                    | `value` was `0`. See [zero-value transfers](#zero-value-transfers-revert).                                                                                        |
+| `SenderSameAsReceiver`                          | Sender and recipient are the same holder. See [self-transfers](#self-transfers-revert).                                                                           |
+| `IdentityNotFoundForAccountPortfolio`           | An account involved in the transfer is not linked to an identity — including `address(0)`. See [recipients must be onboarded](#recipients-must-have-an-identity). |
+| `InvalidGranularity`                            | The asset is indivisible and `value` is not a whole multiple of `1_000_000`. See [decimals](#decimals-is-always-6-even-for-indivisible-assets).                   |
+| `InsufficientBalance`                           | Not enough unlocked balance in the sender's account holding.                                                                                                      |
+| `InsufficientAllowance`                         | The spender's allowance is lower than `value`.                                                                                                                    |
+| `InvalidTransferComplianceFailure`              | The asset's compliance rules reject this sender/receiver pair.                                                                                                    |
+| `InvalidTransferFrozenAsset`                    | The asset is frozen.                                                                                                                                              |
+| `InvalidTransferInvalidReceiverDID`             | The recipient's identity exists but is not active.                                                                                                                |
+| `UnauthorizedAgent`                             | The caller lacks the agent permission a privileged method needs (`mint`, `forcedTransfer`, and the ERC-3643 methods).                                             |
+| `InvalidTransferSenderIsFrozen`                 | The sending holder is frozen for this asset. See [freezing](#freezing-relative-and-absolute).                                                                     |
+| `InsufficientFrozenBalance`                     | `unfreezePartialTokens` was asked to release more than is frozen.                                                                                                 |
+| `FreezePartialTokenMustNotExceedHoldersBalance` | `freezePartialTokens` would freeze more than the holder holds.                                                                                                    |
+| `ReceiverAffirmationRequired`                   | `forcedTransfer`'s destination requires the receiver to affirm incoming transfers.                                                                                |
+| `UnexpectedNonFungibleToken`                    | A freezing method was called for an NFT collection. Use the [NFT precompile](./030-non-fungible-asset.mdx).                                                       |
 
 ### Unknown selectors panic rather than revert
 
@@ -284,7 +374,7 @@ ERC-20 states that transfers of `0` MUST be treated as normal transfers and MUST
 
 This is enforced by the settlement layer for every transfer path, not by the precompile, so it applies to Substrate transfers too.
 
-It matters more than it sounds. Batch loops, sweep functions, fee-distribution routines, and accounting code frequently transfer a computed amount that can legitimately be zero, on the assumption that the call is a harmless no-op. On Polymesh that reverts the whole transaction. **Guard zero amounts in your own code** rather than relying on the token to absorb them.
+Batch loops, sweep functions, fee-distribution routines, and accounting code frequently transfer a computed amount that can legitimately be zero, on the assumption that the call is a harmless no-op. On Polymesh that reverts the whole transaction. **Guard zero amounts in your own code** rather than relying on the token to absorb them.
 
 ### Self-transfers revert
 
@@ -359,7 +449,7 @@ The precompile serves a stub contract (`FungibleAssetStub`) whose ABI mirrors `I
 ## Related
 
 - [Precompiles](./index.mdx) — shared semantics, address scheme, and the full precompile list
-- [Smart Contracts](/development/smart-contracts) — `pallet-revive`, address mapping, and the `eth-rpc` proxy
+- [EVM & Smart Contracts](/development/smart-contracts) — `pallet-revive`, address mapping, and the `eth-rpc` proxy
 - [Fungible Assets](/core/assets/fungible) — the native asset model, including allowances
 - [Compliance](/compliance) and [Transfer Restrictions](/compliance/transfer-restrictions) — what `canTransfer` evaluates
 - [Direct Transfers](/settlement#direct-transfers-transfer_funds) — the settlement path behind `transfer`/`transferFrom`

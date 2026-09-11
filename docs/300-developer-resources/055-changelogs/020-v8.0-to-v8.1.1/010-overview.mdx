@@ -1,0 +1,87 @@
+---
+title: Polymesh Chain Changelog - v8.0 to v8.1.1
+description: Executive summary and migration notes for upgrading integrations from Polymesh chain v8.0 to v8.1.1 - EVM precompiles for fungible assets, NFT collections and general runtime calls, holder-level asset freezing, NFT approvals, and ETH wallet support.
+id: v8.0-to-v8.1.1-overview
+slug: /development/changelogs/v8.0-to-v8.1.1
+sidebar_label: Overview
+tags:
+  - migration
+  - changelog
+  - runtime
+---
+
+This is the entry point for the Polymesh **v8.0 → v8.1.1** runtime changelog. `spec_version` moves from `8_000_020` to `8_001_010`, and `transaction_version` stays at `8`.
+
+The release is dominated by one theme: **making Polymesh assets usable from EVM code without giving up compliance**. v8.1 exposed fungible assets as ERC-20 tokens; v8.1.1 completes that surface with ERC-3643 and ERC-7943 coverage, adds an ERC-721 precompile for NFT collections, and adds a general-purpose runtime precompile for the calls that are not scoped to an asset. Supporting that work, the chain gains holder-level asset freezing, NFT approvals, and first-class support for ETH wallets in the Relayer and MultiSig pallets.
+
+:::info Baseline
+The "v8.0" side of this comparison is chain **v8.0.2** (`spec_version` `8_000_020`), the last v8.0.x patch release. If you are still on v8.0.0 or v8.0.1, see the [note on patch releases](#a-note-on-the-v80x-patch-releases) below.
+
+:::
+
+## Who this is for
+
+- **Smart contract developers, EVM tooling and wallet integrators** — three precompiles are now available. Start with [Fungible Asset Precompile](./020-fungible-asset-precompile.mdx), [NFT Precompile](./030-nft-precompile.mdx), and [Polymesh Runtime Precompile](./040-runtime-precompile.mdx), then the [Precompiles reference](/development/smart-contracts/precompiles) for how to use them.
+- **Asset issuers and their agents** — [Asset Freezing](./050-asset-freezing.mdx) is new capability you can use immediately: freeze an individual holder, or part of a holder's balance, rather than the whole asset. NFT issuers should also read [NFT Approvals](./060-nft-approvals.mdx).
+- **Exchanges, custodians, indexers** — **this release changes the pallet API**, unlike v8.1. New extrinsics, events, errors and storage items exist, and two storage migrations run at the upgrade. See [Full Pallet API Reference](./090-pallet-api-reference.mdx), and note the new `Asset` and `Nft` events your indexer will start seeing.
+- **Wallet and SDK integrators** — [ETH Wallets](./070-eth-wallets.mdx) covers EVM-keyed accounts as subsidy beneficiaries and MultiSig signers, and the restriction of transaction tipping to Governance Committee members.
+- **Node and infrastructure operators** — [Other Runtime Changes](./080-other-runtime-changes.mdx) for the storage migrations and the Grandpa warp-sync fix.
+
+## Key themes
+
+### Precompiles
+
+v8.0 added `pallet-revive`, giving Polymesh a dual-VM contract engine. v8.1 and v8.1.1 use it to expose native chain functionality to contracts through **three precompiles**:
+
+| Precompile                                                                        | Address               | Interface                                           | Covers                                                                   |
+| --------------------------------------------------------------------------------- | --------------------- | --------------------------------------------------- | ------------------------------------------------------------------------ |
+| [Fungible Asset](/development/smart-contracts/precompiles/fungible-asset)         | `0x<assetId>00080000` | ERC-20, partial ERC-3643 and ERC-7943               | Every fungible asset                                                     |
+| [Non-Fungible Asset](/development/smart-contracts/precompiles/non-fungible-asset) | `0x<assetId>00090000` | ERC-721, ERC-721Metadata, ERC-165, partial ERC-7943 | Every NFT collection                                                     |
+| [Polymesh Runtime](/development/smart-contracts/precompiles/polymesh-runtime)     | `0x…0000ffff0000`     | `IPolymeshRuntime`                                  | Asset creation, ticker registration, DID onboarding, agent authorization |
+
+Every asset and every collection is exposed automatically — there is no deployment step, no registry, and no issuer opt-in. Calls route through the same pallet code an extrinsic would, so identity, compliance, transfer restrictions and agent permissions are enforced exactly as before. A call that would break a Polymesh rule reverts rather than silently succeeding.
+
+The practical consequence for a contract developer is that a Polymesh asset behaves like a standard token **until a rule says otherwise**. Both asset precompiles deviate from their standards in ways mainstream tooling does not expect, and each precompile page documents those deviations in full. Read them before porting an existing integration.
+
+### ERC-3643 and ERC-7943 methods
+
+The fungible-asset precompile gains much of the permissioned-token surface that ERC-3643 (T-REX) and ERC-7943 (uRWA) define: `pause`/`unpause`, `setName`/`setSymbol`, `isAgent`, `setAddressFrozen`, `freezePartialTokens`/`unfreezePartialTokens`, `setFrozenTokens`/`getFrozenTokens`, and `canSend`/`canReceive`. This lets tooling written for regulated-asset standards work against Polymesh assets with less Polymesh-specific code. Neither standard is implemented in full — the [fungible-asset reference](/development/smart-contracts/precompiles/fungible-asset#standards-conformance) records what is implemented and where it deviates.
+
+`forcedTransfer` now delivers to a **named recipient** rather than to the caller, on both the fungible and NFT precompiles. See [Fungible Asset Precompile](./020-fungible-asset-precompile.mdx#forcedtransfer-now-takes-a-recipient).
+
+### Holder-level asset freezing
+
+Before this release, freezing was all-or-nothing: an agent could freeze an entire asset, stopping every transfer. v8.1.1 adds freezing scoped to a **single holder** — either an account key or a portfolio — and to **part of a holder's balance**.
+
+This is the Substrate-side feature with the widest reach: it adds five extrinsics to `pallet-asset`, new storage in `pallet-asset` and `pallet-portfolio`, new transfer-time errors, and new events. Anything that pre-checks whether a transfer will succeed needs to account for it. See [Asset Freezing](./050-asset-freezing.mdx).
+
+### NFT approvals
+
+NFTs gain the approval model fungible assets already had: a per-token spender (`Nft::approve`) and a collection-wide operator (`Nft::set_approval_for_all`), which together back ERC-721's `approve`/`setApprovalForAll`. `Settlement::transfer_funds` now accepts non-fungible funds in spender mode, consuming an approval. See [NFT Approvals](./060-nft-approvals.mdx).
+
+### EVM key support
+
+An EVM-keyed account can now be subsidised by the Relayer pallet — including the storage deposit pre-charged for an EVM transaction — and can act as a MultiSig signer. ETH wallets accepting authorizations do not pay the transaction fee, matching Substrate keys. Separately, transaction tipping is now restricted to Governance Committee members. See [ETH Wallets](./070-eth-wallets.mdx).
+
+## Migration checklist
+
+Unlike v8.1, **this release changes the pallet API**. Work through the list below:
+
+1. **Re-generate metadata-derived code.** New extrinsics, events, errors and storage items exist across `pallet-asset`, `pallet-nft`, `pallet-portfolio` and `pallet-settlement`. `transaction_version` is unchanged at `8`, so existing **signing** code is unaffected, but decoding and type generation should be refreshed against v8.1.1 metadata. See [Full Pallet API Reference](./090-pallet-api-reference.mdx).
+2. **Update transfer pre-checks for holder freezing.** A transfer can now fail because the sender or their portfolio is frozen for that asset, or because the amount exceeds their unfrozen balance — with errors that did not exist in v8.0. See [Asset Freezing](./050-asset-freezing.mdx#what-integrators-need-to-change).
+3. **Handle the new events** if you index chain state: `Asset::FrozenBalanceSet`, `Asset::SetAccountFreeze`, `Asset::ControllerTransferTo`, `Nft::NFTApproval`, `Nft::NFTApprovalForAll`, `Nft::NFTApprovalSpent`.
+4. **`Settlement::AllowancesNotSupportedForNFTs` is renamed**, not removed — it is now `DeprecatedAllowancesNotSupportedForNFTs` and keeps its index, so decoders keyed on the index still resolve. NFT spender transfers now fail with `Nft::InsufficientNFTApproval` instead. Update any error-name matching.
+5. **Two storage migrations run at the upgrade**, backfilling NFT counts. No action is required, but node operators should expect the upgrade block to do proportionally more work on chains with many NFTs. See [Other Runtime Changes](./080-other-runtime-changes.mdx#storage-migrations).
+6. **If you use `NFTApi`**, note it is now at version 4 with two added methods. Version 3 clients continue to work.
+7. **If your secondary keys call into the EVM**, permission checks now evaluate the extrinsic actually being dispatched rather than the `pallet-revive` call carrying it. A secondary key that could previously make a precompile call may now need permission for the underlying extrinsic. See [Other Runtime Changes](./080-other-runtime-changes.mdx#evm-calls-are-permission-checked-against-the-underlying-extrinsic).
+8. **If you submit tips**, only Governance Committee members can now do so. DID Registrars have lost that ability. See [ETH Wallets](./070-eth-wallets.mdx#transaction-tipping-restricted-to-the-governance-committee).
+9. **If you build EVM contracts or tooling**, read the precompile pages and the [Precompiles reference](/development/smart-contracts/precompiles) before writing code.
+
+## A note on the v8.0.x patch releases
+
+The [v7.4 → v8.0 changelog](../010-v7.4-to-v8.0/010-overview.mdx) documents the v8 runtime **as deployed**, which is `spec_version` `8_000_010` (v8.0.1) and later — not the initial v8.0.0 tag. Two patch releases followed v8.0.0:
+
+- **v8.0.1** (`8_000_010`) — removed the legacy `Contracts`/`PolymeshContracts` (Wasm/ink!) pallets, moved to Substrate `stable2603-4`, plus runtime fixes (secondary-key permission check in `transfer_funds`, blocking transfers of frozen assets, a same-DID check in `unverified_transfer_asset`, an automatic-payout fix) and corrected benchmark weights. All of this is already reflected in the v7.4 → v8.0 changelog.
+- **v8.0.2** (`8_000_020`) — CI and Docker packaging changes only; no runtime logic change.
+
+This changelog picks up from v8.0.2.

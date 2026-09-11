@@ -1,0 +1,63 @@
+---
+title: ETH Wallets Changelog - v8.0 to v8.1.1
+description: Polymesh chain v8.1.1 supports EVM-keyed accounts as subsidy beneficiaries and MultiSig signers, makes authorization acceptance fee-free for them, and restricts transaction tipping to the Governance Committee.
+id: v8.0-to-v8.1.1-eth-wallets
+slug: /development/changelogs/v8.0-to-v8.1.1/eth-wallets
+sidebar_label: ETH Wallets
+tags:
+  - migration
+  - changelog
+  - runtime
+  - identity
+  - evm
+---
+
+This page covers EVM-keyed account support added in v8.1.1, and the change to transaction tipping. It is part of the [v8.0 → v8.1.1 changelog](./010-overview.mdx).
+
+**Audience:** wallet integrators, onboarding providers, anyone operating a subsidy relayer, and MultiSig users.
+
+---
+
+## Background
+
+v8.0 allowed interaction with Polymesh using an EVM key, through `pallet-revive` and the Ethereum JSON-RPC proxy, but such an account had to hold POLYX to do anything. The two mechanisms that onboard users without funding them first — relayer subsidies and fee-free authorization acceptance — recognised Substrate keys only.
+
+The effect was that a user arriving with an EVM wallet and an authorization to join an identity could not accept it without first acquiring POLYX. v8.1.1 removes that restriction.
+
+## ETH wallets can be subsidised
+
+The [Relayer pallet](/accounts/subsidized) lets one account pay another's transaction fees. It now accepts EVM-keyed accounts as beneficiaries, so a provider can sponsor a user who holds only an EVM key.
+
+Subsidies also now cover the **storage deposit** that an EVM transaction pre-charges, not just the transaction fee. This matters because a contract interaction reserves a deposit for the storage it might create; without it being subsidised, a sponsored user would still need their own POLYX to make the very calls the sponsorship exists to enable.
+
+## ETH wallets can be MultiSig signers
+
+An EVM-keyed account can now be added as a signer on a MultiSig account, approve proposals, and be counted toward the signature threshold, exactly as a Substrate key can. See [MultiSig](/identity/advanced/multisig).
+
+## Accepting authorizations is fee-free
+
+Polymesh has always made accepting an authorization free for the accepting key, with the fee falling to whoever created the authorization — that is what lets a new user join an identity before they hold any POLYX.
+
+That now applies to EVM-keyed accounts too, for the same calls: `Identity::join_identity_as_key`, `MultiSig::accept_multisig_signer`, and the other authorization acceptances.
+
+The mechanism is that an EVM transaction carrying an `Identity`, `MultiSig` or `Relayer` call is now recognised by the runtime's fee-attribution logic, rather than being treated as an opaque contract call. EVM transactions carrying other calls are unaffected.
+
+### Supported EVM transaction types
+
+Legacy, EIP-2930 and EIP-1559 transactions are supported. **EIP-7702** (account abstraction delegation) and **EIP-4844** (blob transactions) are explicitly rejected.
+
+## Transaction tipping restricted to the Governance Committee
+
+Polymesh restricts transaction tipping — the tip that raises a transaction's priority — to a small set of privileged accounts, rather than allowing anyone to bid for block space.
+
+That set has narrowed. Previously both Governance Committee members and DID Registrars (formerly CDD Providers) could tip. **Only Governance Committee members can now do so.** A tip submitted by any other account, including a DID Registrar, causes the transaction to be rejected.
+
+If you operate a DID Registrar and your signing code sets a non-zero tip, set it to zero.
+
+## Migration checklist
+
+1. **If you set a non-zero tip and are not a Governance Committee member**, set it to zero. This is the one item on this page that can break existing code.
+2. **If you onboard users holding EVM keys**, you can now sponsor them through the Relayer pallet and let them accept authorizations without funding them first.
+3. **If you operate a subsidy relayer**, budget for the storage deposit as well as the transaction fee when sponsoring EVM transactions.
+4. **If you use MultiSig**, EVM-keyed signers are now possible; nothing about existing MultiSig accounts changes.
+5. **If your tooling submits EIP-7702 or EIP-4844 transactions**, it will be rejected — use a legacy, EIP-2930 or EIP-1559 transaction.

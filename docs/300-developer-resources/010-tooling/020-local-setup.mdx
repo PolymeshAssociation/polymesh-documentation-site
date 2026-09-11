@@ -595,7 +595,7 @@ curl -s -H 'Content-Type: application/json' \
 
 ### 9.3 The pre-funded development accounts
 
-The `--dev` chain spec pre-funds five well-known Ethereum-style accounts, immediately usable from Ethereum tooling — no `map_account` call needed, since they're funded directly at genesis to their `0xEE`-padded [fallback account](/development/smart-contracts#address-mapping):
+The `--dev` chain spec pre-funds five well-known Ethereum-style accounts, immediately usable from Ethereum tooling — no `map_account` call needed, since they're funded directly at genesis to their `0xEE`-padded [fallback account](/development/smart-contracts/address-mapping):
 
 | Name      | Address                                      | Private key                                                          |
 | --------- | -------------------------------------------- | -------------------------------------------------------------------- |
@@ -611,7 +611,7 @@ These are the same well-known Ethereum dev accounts — named to loosely pair wi
 They are well-known development keys published across Substrate/Frontier-ecosystem documentation. Anyone can spend from them. Use them only on throwaway local chains.
 :::
 
-To use **your own** Polymesh account from the EVM side instead, that account must first call `map_account` on `pallet-revive`. Until it does, funds sent to its derived Ethereum-style address land in a distinct `0xEE`-padded fallback account. Read [Address mapping](/development/smart-contracts#address-mapping) before doing this — it's the most common source of "missing" funds in EVM work on Polymesh.
+To use **your own** Polymesh account from the EVM side instead, that account must first call `map_account` on `pallet-revive`. Until it does, funds sent to its derived Ethereum-style address land in a distinct `0xEE`-padded fallback account. Read [Address mapping](/development/smart-contracts/address-mapping) before doing this — it's the most common source of "missing" funds in EVM work on Polymesh.
 
 ### 9.4 Pre-deployed Multicall3 and CREATE2 proxy
 

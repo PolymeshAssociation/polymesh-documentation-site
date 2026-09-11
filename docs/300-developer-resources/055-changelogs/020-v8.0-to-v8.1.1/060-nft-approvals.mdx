@@ -1,0 +1,95 @@
+---
+title: NFT Approvals Changelog - v8.0 to v8.1.1
+description: Polymesh chain v8.1.1 adds per-token and collection-wide NFT approvals, spender-mode NFT transfers through Settlement::transfer_funds, and NFTApi version 4.
+id: v8.0-to-v8.1.1-nft-approvals
+slug: /development/changelogs/v8.0-to-v8.1.1/nft-approvals
+sidebar_label: NFT Approvals
+tags:
+  - migration
+  - changelog
+  - runtime
+  - nft
+---
+
+This page covers the NFT approval model added in v8.1.1. It is part of the [v8.0 → v8.1.1 changelog](./010-overview.mdx).
+
+**Audience:** NFT issuers, marketplace and custody integrators, indexers, and contract developers using the [NFT precompile](./030-nft-precompile.mdx).
+
+---
+
+## What changed
+
+Fungible assets have had allowances since v8.0: an owner approves a spender for an amount, and the spender moves the tokens. NFTs had no equivalent, so an NFT could only ever be moved by its holder. Any marketplace or escrow flow had to take custody of the NFT first.
+
+v8.1.1 adds the two approval forms ERC-721 defines, as first-class chain state:
+
+| Call                                                      | Grants                                                                         |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| `Nft::approve(asset_id, nft_id, spender)`                 | One named account may transfer one specific NFT                                |
+| `Nft::set_approval_for_all(asset_id, operator, approved)` | One named account may transfer **any** of the caller's NFTs in that collection |
+
+`approve` takes an `Option<AccountId>`: passing `None` clears the approval. This is what the precompile's `approve(address(0), tokenId)` maps onto.
+
+An operator approval is granted by a holder over their own NFTs and is recorded per `(holder, operator, collection)` — it is not an issuer-level role. An operator can transfer any of that holder's NFTs in the collection without a per-token approval, and can also set per-token approvals on the holder's behalf. Only the holder of an NFT, or one of their operators, may set a per-token approval on it; anything else fails with `Nft::NFTApprovalNotAuthorized`.
+
+These are Substrate-level approvals, not an EVM construct. An approval granted through the [NFT precompile](./030-nft-precompile.mdx) is visible to the Substrate API, and one granted by extrinsic is honoured by the precompile.
+
+## Spending an approval
+
+A spender moves an approved NFT with `Settlement::transfer_funds`, passing `from = Some(holder)` — the same shape already used for fungible allowance transfers.
+
+Before v8.1.1 that combination rejected non-fungible funds outright. It now consumes the approval, emits `Nft::NFTApprovalSpent`, and moves the NFT.
+
+**An NFT has at most one approved spender.** `Nft::TokenApproval` is keyed by `(asset_id, nft_id)` alone, so each `approve` replaces the previous approval rather than adding to it, and any authorised caller can replace or clear one set by someone else. Operator approvals and fungible allowances are keyed by grantee, so several of those coexist — indexers should treat `NFTApproval` as a set, not an append.
+
+**Per-token approvals never survive a transfer.** A per-token approval is cleared whenever the NFT changes hands, by any route — including a transfer by the holder themselves, and including forced transfers. This matches ERC-721 and means an approval cannot be reused after the NFT comes back to the original holder.
+
+Operator approvals behave differently in both respects: they are **not consumed** when used, and a transfer does not revoke them. Because they are scoped to a holder rather than to specific NFTs, an operator keeps its rights over whatever that holder currently owns in the collection, and gains nothing over an NFT that moves to somebody else. They persist until explicitly revoked.
+
+## New and renamed errors
+
+`Settlement::AllowancesNotSupportedForNFTs` — the error that previously rejected these transfers — has been **renamed to `DeprecatedAllowancesNotSupportedForNFTs`** and is no longer raised. It was kept rather than deleted so that the indices of every error after it in the pallet are unchanged, which means decoders keyed on error index continue to resolve correctly across the upgrade. Decoders keyed on the error _name_ need updating.
+
+Two new `Nft` errors replace it:
+
+| Error                      | Raised when                                                                                                |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `NFTApprovalNotAuthorized` | The caller may not set this approval — they neither hold the NFT nor operate the collection for its holder |
+| `InsufficientNFTApproval`  | A spender attempted a transfer without an approval for that NFT                                            |
+
+## New events
+
+| Event                    | Fields                                                         |
+| ------------------------ | -------------------------------------------------------------- |
+| `Nft::NFTApproval`       | `owner`, `spender` (`None` when cleared), `asset_id`, `nft_id` |
+| `Nft::NFTApprovalForAll` | `owner`, `operator`, `asset_id`, `approved`                    |
+| `Nft::NFTApprovalSpent`  | `owner`, `spender`, `asset_id`, `nft_id`                       |
+
+`owner` is the holder of the NFT, which is not always the account that submitted the call: an operator can set a per-token approval on a holder's behalf, and the event still names the holder. Index on `owner` to answer "whose NFT is this approval over".
+
+## Querying approvals
+
+`NFTApi` moves to **version 4**, adding two methods:
+
+- `token_approval(asset_id, nft_id)` — the account approved for that NFT, if any. This is ERC-721's `getApproved`.
+- `operator_approval(owner, operator, asset_id)` — whether `operator` may transfer any of `owner`'s NFTs in the collection. This is ERC-721's `isApprovedForAll`, scoped to one collection.
+
+Version 3 clients continue to work; the existing methods are unchanged.
+
+## NFT counts and the storage migrations
+
+Supporting ERC-721's `balanceOf`, the chain now tracks how many NFTs of a collection each holder has, in two new storage items: `Nft::NFTAccountCount` (per account key) and `Portfolio::PortfolioNFTCount` (per portfolio).
+
+Both are **backfilled by a storage migration** at the upgrade, walking the existing holdings. No action is required, but the upgrade block does proportionally more work on a chain with many NFTs. See [Other Runtime Changes](./080-other-runtime-changes.mdx#storage-migrations).
+
+## Related `transfer_funds` change
+
+Unrelated to approvals, `Settlement::transfer_funds` also drops a redundant check in v8.1.1: an instruction where the **caller is the receiver but does not have custody of the receiving portfolio** is now allowed. Previously this was rejected even though the receiving side of a transfer does not require custody to be the destination.
+
+## Migration checklist
+
+1. **If you match on `Settlement::AllowancesNotSupportedForNFTs` by name**, update to `Nft::InsufficientNFTApproval`. Index-based decoding is unaffected.
+2. **If you index NFT activity**, add the three new `Nft` events, and note that a per-token approval is implicitly cleared on every transfer — no event is emitted for that clearing.
+3. **If you build marketplace or escrow flows**, you no longer need to take custody: approve the NFT and let the counterparty pull it.
+4. **If you use `NFTApi`**, version 4 adds approval queries; version 3 keeps working.
+5. Nothing existing breaks — approvals are additive, and an NFT with no approval behaves exactly as before.

@@ -1,0 +1,325 @@
+---
+title: Non-Fungible Asset Precompile (ERC-721)
+description: Use any Polymesh NFT collection as an ERC-721 token from Solidity and Ethereum tooling - address derivation, the full method reference, token URIs, approvals, events, revert reasons, and the deviations to design around.
+id: precompile-non-fungible-asset
+slug: /development/smart-contracts/precompiles/non-fungible-asset
+sidebar_label: Non-Fungible Asset (ERC-721)
+tags:
+  - development
+  - smart contracts
+  - evm
+  - precompiles
+  - erc721
+  - nft
+---
+
+Every Polymesh NFT collection is callable as an **ERC-721 token** from contracts and standard Ethereum tooling, at a deterministic address derived from the collection's `AssetId`. No deployment, registration, or opt-in is needed — existing and future collections are exposed automatically.
+
+Calls route into `pallet-nft` and `pallet-settlement`, so identity, compliance, transfer restrictions, and agent permissions are all enforced exactly as they are for a Substrate transaction. An ERC-721 `transferFrom` that would break a Polymesh rule reverts.
+
+Available since chain **v8.1** on Mainnet, Testnet, and Develop.
+
+:::warning It is not a drop-in ERC-721
+`safeTransferFrom` **rejects every contract receiver**, and `ownerOf` **reverts** for an NFT held in a portfolio. Both are deliberate, and both break assumptions that marketplace and wallet code normally makes. Read [ERC-721 conformance and deviations](#erc-721-conformance-and-deviations) before porting an existing integration.
+:::
+
+:::tip Read the shared semantics first
+[Precompiles](./index.mdx) covers the rules common to every Polymesh precompile — how EVM callers resolve to Polymesh accounts, why failures revert rather than return `false`, delegate-call and read-only restrictions, and gas. This page covers only what is specific to NFT collections.
+:::
+
+## Precompile addresses
+
+A collection's precompile address embeds its 16-byte `AssetId`:
+
+```text
+0x<assetId>00090000
+```
+
+The layout is identical to the [fungible-asset precompile](./020-fungible-asset.mdx), with matcher id `0x0009` in place of `0x0008`. See [Address scheme](./index.mdx#address-scheme) for the full derivation.
+
+Calling a fungible asset's id at the `0x0009` prefix reverts with `Asset is not non-fungible`, and vice versa.
+
+## Token ids
+
+The ERC-721 `tokenId` is the on-chain `NFTId`: a number assigned sequentially **within the collection**, starting at 1. It is not globally unique — the same `tokenId` exists in every collection that has issued that many NFTs, which is exactly how ERC-721 expects ids to behave, since each collection is its own contract address.
+
+`NFTId` is a `u64`. A `tokenId` above `2^64-1` reverts with `Token id out of range`.
+
+## Interface
+
+The Solidity interface is `INonFungibleAsset`, combining `IERC721`, `IERC721Metadata` and `IERC165` with Polymesh and ERC-7943 extensions:
+
+The interface below is abridged for readability. The complete source, with NatSpec, is [`NonFungibleAssetStub.sol`](https://github.com/PolymeshAssociation/Polymesh/blob/mainnet/precompiles/src/interfaces/NonFungibleAssetStub.sol) — import it to call this precompile from a contract, or compile it (`solc --abi`, `forge inspect INonFungibleAsset abi`) for an ABI to use with viem, ethers or web3. The runtime bytecode the precompile serves is [`NonFungibleAssetStub.bin`](https://github.com/PolymeshAssociation/Polymesh/blob/mainnet/precompiles/src/interfaces/NonFungibleAssetStub.bin).
+
+```solidity
+interface INonFungibleAsset {
+    event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);
+    event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId);
+    event ApprovalForAll(address indexed owner, address indexed operator, bool approved);
+    event ForcedTransfer(address indexed from, address indexed to, uint256 indexed tokenId);
+
+    // ERC-721
+    function balanceOf(address owner) external view returns (uint256 balance);
+    function ownerOf(uint256 tokenId) external view returns (address owner);
+    function transferFrom(address from, address to, uint256 tokenId) external;
+    function safeTransferFrom(address from, address to, uint256 tokenId) external;
+    function safeTransferFrom(address from, address to, uint256 tokenId, bytes calldata data) external;
+    function approve(address to, uint256 tokenId) external;
+    function setApprovalForAll(address operator, bool approved) external;
+    function getApproved(uint256 tokenId) external view returns (address operator);
+    function isApprovedForAll(address owner, address operator) external view returns (bool);
+
+    // ERC-721 metadata
+    function name() external view returns (string memory);
+    function symbol() external view returns (string memory);
+    function tokenURI(uint256 tokenId) external view returns (string memory);
+
+    // ERC-165
+    function supportsInterface(bytes4 interfaceId) external view returns (bool);
+
+    // Polymesh extensions
+    function totalSupply() external view returns (uint256);
+    function mint(bytes[] calldata metadataValues) external returns (uint256 tokenId);
+    function burn(uint256 tokenId) external returns (bool);
+
+    // ERC-7943
+    function canTransfer(address from, address to, uint256 tokenId) external view returns (bool);
+    function forcedTransfer(address from, address to, uint256 tokenId) external returns (bool);
+    function canSend(address account) external view returns (bool);
+    function canReceive(address account) external view returns (bool);
+}
+```
+
+## Method reference
+
+### Core ERC-721
+
+| Method                                      | Runs                          | Notes                                                                                                             |
+| ------------------------------------------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `balanceOf(owner)`                          | reads `Nft::NFTAccountCount`  | NFTs of this collection held by that **account key** — see [balances](#balanceof-counts-the-account-key).         |
+| `ownerOf(tokenId)`                          | reads `Nft::Owner`            | **Reverts** for a portfolio-held NFT and for a non-existent one.                                                  |
+| `transferFrom(from, to, tokenId)`           | `Settlement::transfer_funds`  | Full compliance and settlement path. Consumes an approval when the caller is not `from`. Emits `Transfer`.        |
+| `safeTransferFrom(from, to, tokenId)`       | `Settlement::transfer_funds`  | As above, but **rejects any receiver with code** — see [below](#safetransferfrom-rejects-all-contract-receivers). |
+| `safeTransferFrom(from, to, tokenId, data)` | `Settlement::transfer_funds`  | Identical; `data` is ignored, since `onERC721Received` is never called.                                           |
+| `approve(to, tokenId)`                      | `Nft::approve`                | `to = address(0)` clears the approval. Emits `Approval`.                                                          |
+| `setApprovalForAll(operator, approved)`     | `Nft::set_approval_for_all`   | Collection-wide. Emits `ApprovalForAll`.                                                                          |
+| `getApproved(tokenId)`                      | reads `Nft::TokenApproval`    | `address(0)` when there is no approval.                                                                           |
+| `isApprovedForAll(owner, operator)`         | reads `Nft::OperatorApproval` |                                                                                                                   |
+
+### Metadata
+
+| Method              | Behaviour                                                                                                              |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `name()`            | The collection's name; empty string if unset.                                                                          |
+| `symbol()`          | The unique ticker linked to the collection, trailing padding trimmed. **Empty string if no ticker is linked.**         |
+| `tokenURI(tokenId)` | Resolved from asset metadata — see [Token URIs](#token-uris). Empty string when unset; never reverts for an unset URI. |
+
+### ERC-165
+
+`supportsInterface(interfaceId)` returns `true` for exactly three interface ids:
+
+| Interface         | Id           |
+| ----------------- | ------------ |
+| `IERC165`         | `0x01ffc9a7` |
+| `IERC721`         | `0x80ac58cd` |
+| `IERC721Metadata` | `0x5b5e139f` |
+
+It returns `false` for everything else, **including ERC-7943**, whose methods are present but not advertised, and **including ERC-721Enumerable**, which is not implemented. Do not use interface detection to decide whether the ERC-7943 methods are callable.
+
+### Issuance and redemption
+
+| Method                 | Runs                          | Notes                                                                                                             |
+| ---------------------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `totalSupply()`        | reads `Nft::NFTsInCollection` | The number of NFTs in the collection. A Polymesh convenience, not ERC-721Enumerable.                              |
+| `mint(metadataValues)` | `Nft::issue_nft`              | Issues **to the caller's own account key** and returns the new `tokenId`. Emits `Transfer(0x0, caller, tokenId)`. |
+| `burn(tokenId)`        | `Nft::redeem_nft`             | Redeems **from the caller's own account key**. Emits `Transfer(caller, 0x0, tokenId)`.                            |
+
+`mint` takes one value per **mandatory collection metadata key**, in the order those keys were registered for the collection. Supplying a different number of values reverts with `Wrong number of metadata values for this collection`. Query the collection's keys from the Substrate API before minting; there is no precompile method that returns them.
+
+### ERC-7943 methods
+
+| Method                              | Runs                                    | Notes                                                                                                                                  |
+| ----------------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `canTransfer(from, to, tokenId)`    | `Nft::nft_transfer_report`              | `view`. Runs the checks a real transfer would — compliance, restrictions, frozen state, ownership — and returns `true` if none fail.   |
+| `canSend(account)`                  | `Asset::transfer_is_allowed_for_holder` | `view`. Whether the account may send this collection's NFTs at all. Takes no token id.                                                 |
+| `canReceive(account)`               | `Asset::transfer_is_allowed_for_holder` | `view`. Whether the account may receive them at all.                                                                                   |
+| `forcedTransfer(from, to, tokenId)` | `Nft::controller_transfer_to`           | Moves the NFT bypassing compliance and frozen state. Caller must be an agent of the collection. Emits `ForcedTransfer` and `Transfer`. |
+
+`canTransfer` is the pre-flight check for one specific transfer; `canSend`/`canReceive` are cheaper per-account eligibility checks for onboarding and allowlist UIs.
+
+## Token URIs
+
+`tokenURI(tokenId)` resolves in two steps:
+
+1. The NFT's own **`tokenUri`** metadata value, if set.
+2. Otherwise the collection's **`baseTokenUri`** metadata value.
+
+In either case, a literal `{tokenId}` in the value is replaced with the decimal token id. If the value contains no placeholder, the id is **appended**. An unset URI returns an empty string.
+
+```text
+baseTokenUri = "https://example.com/nft/{tokenId}.json"
+tokenURI(42) → "https://example.com/nft/42.json"
+
+baseTokenUri = "https://example.com/nft/"
+tokenURI(42) → "https://example.com/nft/42"
+```
+
+Both are **global** asset metadata keys. An issuer who registers a _local_ metadata key named `tokenUri` will find that the precompile does not read it — use the global keys.
+
+Setting `baseTokenUri` once on the collection is usually enough; per-NFT `tokenUri` values are for the tokens that need to differ.
+
+## Approvals
+
+`approve` and `setApprovalForAll` write real chain state, shared with the Substrate API: an approval granted through the precompile can be spent by a Substrate extrinsic, and one granted by extrinsic is honoured here.
+
+Two rules differ from a typical ERC-721 implementation only in where they are enforced, not in effect:
+
+- Only the account key **currently holding** the NFT, or an operator that holder has approved, may set a per-token approval — an operator can delegate a narrower, single-token right to a third account. Anything else reverts with `NFTApprovalNotAuthorized`.
+- A per-token approval is **cleared on every transfer**, by any route, including forced transfers. Operator approvals persist until revoked.
+
+As in ERC-721, an NFT has at most one approved spender: `approve` replaces any previous approval, and `getApproved` returns a single address. Operator approvals are separate — several operators can be active for one owner at the same time.
+
+A spender transferring an approved NFT consumes the approval. A spender with no approval reverts with `InsufficientNFTApproval`.
+
+An operator — the grantee of `setApprovalForAll` — is scoped to one owner's holdings, keyed as `(owner, operator, collection)`, not to the collection as a whole. It can transfer any of that owner's NFTs in the collection without a per-token approval, and its approval is **never consumed** by a transfer.
+
+## Standards conformance
+
+| Standard              | Implemented                                              | Known deviations                                                                                                                                                                                                 |
+| --------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ERC-721**           | Core interface                                           | `safeTransferFrom` rejects contract receivers; `ownerOf` reverts for portfolio-held NFTs; `balanceOf` is per account key — see [ERC-721 conformance and deviations](#erc-721-conformance-and-deviations)         |
+| **ERC-721Metadata**   | `name`, `symbol`, `tokenURI`                             | None                                                                                                                                                                                                             |
+| **ERC-165**           | `supportsInterface`                                      | Reports ERC-165, ERC-721 and ERC-721Metadata only                                                                                                                                                                |
+| **ERC-721Enumerable** | Not implemented                                          | `totalSupply` exists but is a Polymesh addition, not the extension                                                                                                                                               |
+| **ERC-7943**          | `canSend`, `canReceive`, `canTransfer`, `forcedTransfer` | `setFrozenTokens`, `getFrozenTokens` and the `Frozen` event are absent; not advertised through ERC-165; no typed errors; `canTransfer` returns `false` for excluded reasons and can revert on out-of-range input |
+
+**ERC-7943 is partially implemented.** Four of its six members are present. The per-token freeze members — `setFrozenTokens`, `getFrozenTokens` and the `Frozen` event — are not, because Polymesh has no per-NFT freeze: freezing applies to a holder across a whole collection, not to an individual token. See [Asset Freezing](/development/changelogs/v8.0-to-v8.1.1/asset-freezing).
+
+As on the fungible side, failures revert with `Error(string)` rather than the standard's typed errors, and `canTransfer` returns `false` for ownership, count and lock reasons that ERC-7943 excludes from a permission check. It can also revert for a `tokenId` above `2^64-1` rather than returning `false`.
+
+## Events
+
+| Event                                                                                | Emitted by                                                                                           |
+| ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| `Transfer(address indexed from, address indexed to, uint256 indexed tokenId)`        | `transferFrom`, `safeTransferFrom`, `mint` (`from` = `0x0`), `burn` (`to` = `0x0`), `forcedTransfer` |
+| `Approval(address indexed owner, address indexed approved, uint256 indexed tokenId)` | `approve`                                                                                            |
+| `ApprovalForAll(address indexed owner, address indexed operator, bool approved)`     | `setApprovalForAll`                                                                                  |
+| `ForcedTransfer(address indexed from, address indexed to, uint256 indexed tokenId)`  | `forcedTransfer`                                                                                     |
+
+Per ERC-721, `Approval.owner` and `ApprovalForAll.owner` are the **owner of the NFT**, not the caller. These differ when an operator sets a per-token approval on the owner's behalf.
+
+No EVM event is emitted when a per-token approval is implicitly cleared by a transfer.
+
+The underlying `Nft` and `Settlement` Substrate events are emitted as well, so Substrate-side indexers need no precompile-specific handling.
+
+## Revert reasons
+
+| Revert reason                                                                                                    | Cause                                                                                                     |
+| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `Asset not found`                                                                                                | No asset exists for the `AssetId` embedded in the called address.                                         |
+| `Asset is not non-fungible`                                                                                      | The `AssetId` belongs to a fungible asset. Use the [fungible-asset precompile](./020-fungible-asset.mdx). |
+| `NFT does not exist`                                                                                             | No NFT with that `tokenId` in this collection.                                                            |
+| `NFT is held in a portfolio, which has no address`                                                               | `ownerOf` on a portfolio-held NFT.                                                                        |
+| `safeTransferFrom only supports externally-owned accounts; the receiver has code. Use transferFrom`              | The `safeTransferFrom` receiver is a contract.                                                            |
+| `Token id out of range`                                                                                          | The `tokenId` exceeds `2^64-1`.                                                                           |
+| `Wrong number of metadata values for this collection`                                                            | `mint` was given the wrong number of metadata values.                                                     |
+| `Extrinsic returned an error: <message>`                                                                         | The underlying pallet call failed; its own error message is appended.                                     |
+| `Instruction was not executed; Most likely the instruction is missing an affirmation from the receiver/mediator` | The transfer could not complete atomically — see [below](#transfers-must-complete-atomically).            |
+| `Invalid caller` / `Invalid account id`                                                                          | An address could not be resolved to a valid Polymesh account.                                             |
+
+### Common pallet errors
+
+| Pallet error                          | Means                                                                                                       |
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `InvalidNFTTransferNFTNotOwned`       | `from` does not hold the NFT.                                                                               |
+| `NFTApprovalNotAuthorized`            | The caller may not set this approval — they neither hold the NFT nor operate the collection for its holder. |
+| `InsufficientNFTApproval`             | The caller is not approved to transfer this NFT.                                                            |
+| `IdentityNotFoundForAccountPortfolio` | An account in the transfer is not linked to an identity — including `address(0)`.                           |
+| `InvalidNFTTransferComplianceFailure` | The collection's compliance rules reject this sender/receiver pair.                                         |
+| `InvalidNFTTransferFrozenAsset`       | The collection is frozen.                                                                                   |
+| `InvalidNFTTransferNFTIsLocked`       | The NFT is locked by a pending settlement instruction.                                                      |
+| `InvalidTransferSenderIsFrozen`       | The sending holder is frozen for this collection (raised by `pallet-asset`).                                |
+| `ReceiverAffirmationRequired`         | A forced transfer's destination requires the receiver to affirm incoming transfers.                         |
+| `UnauthorizedAgent`                   | The caller lacks the agent permission `mint` or `forcedTransfer` needs.                                     |
+
+## ERC-721 conformance and deviations
+
+### Summary
+
+| Behaviour                                                                            | ERC-721 expectation                                    | Polymesh                                                       | Impact                                                                   |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------ | -------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [`safeTransferFrom` to a contract](#safetransferfrom-rejects-all-contract-receivers) | Succeeds if the receiver implements `onERC721Received` | **Reverts for every receiver with code**                       | High — breaks marketplaces and vaults that hold NFTs                     |
+| [`ownerOf` for a portfolio-held NFT](#ownerof-reverts-for-portfolio-held-nfts)       | Returns an address for any existing token              | **Reverts**                                                    | High — breaks the assumption that an existing token has an owner address |
+| [`balanceOf`](#balanceof-counts-the-account-key)                                     | All tokens the owner holds                             | Only those held by that **account key**                        | Medium — undercounts an identity's holdings                              |
+| [Recipients must be onboarded](#recipients-must-have-an-identity)                    | Any address can receive                                | **Reverts** unless the recipient has an active identity        | High — you cannot airdrop to arbitrary EVM addresses                     |
+| [Transfer to `address(0)`](#recipients-must-have-an-identity)                        | Permitted by some implementations as a burn            | **Reverts** — use `burn`                                       | Low                                                                      |
+| [Deferred settlement](#transfers-must-complete-atomically)                           | n/a                                                    | **Reverts** if the transfer cannot settle atomically           | Medium — affects collections requiring affirmation or mediation          |
+| [ERC-721Enumerable](#erc-165)                                                        | Optional extension                                     | Not implemented; `totalSupply` exists but is not the extension | Low                                                                      |
+| [ERC-165 for ERC-7943](#erc-165)                                                     | n/a                                                    | Methods present, interface id not advertised                   | Low                                                                      |
+| [`symbol()`](#metadata)                                                              | A short symbol string                                  | Empty when no ticker is linked                                 | Low                                                                      |
+
+### `safeTransferFrom` rejects all contract receivers
+
+ERC-721's `safeTransferFrom` exists to stop NFTs being locked in contracts that cannot handle them. It does that by calling `onERC721Received` on the receiver and requiring the correct acknowledgement.
+
+A precompile cannot re-enter the EVM to make that call. Two options follow: skip the check and silently drop the guarantee, or refuse contract receivers. Polymesh refuses them.
+
+The rule is **any receiver with code**, so a fully compliant receiver contract is rejected too, as is any precompile address. The revert names the alternative:
+
+```text
+safeTransferFrom only supports externally-owned accounts; the receiver has code. Use transferFrom
+```
+
+A contract that knowingly handles NFTs receives them through `transferFrom`, which performs no receiver check — in exactly the same way a plain ERC-721 `transferFrom` does not.
+
+### `ownerOf` reverts for portfolio-held NFTs
+
+A Polymesh NFT is held by an `AssetHolder`, which is either an account key or a **portfolio**. Portfolios are how identities organise holdings, and they have no EVM address.
+
+`ownerOf` therefore cannot answer for a portfolio-held NFT. Returning `address(0)` would be worse than reverting — ERC-721 tooling reads the zero address as "burned", so a portfolio-held NFT would appear destroyed. It reverts instead:
+
+```text
+NFT is held in a portfolio, which has no address
+```
+
+Handle this wherever you call `ownerOf`. `canTransfer` still works for portfolio-held NFTs, as does the Substrate `Nft::Owner` storage, which returns the holder in either form.
+
+### `balanceOf` counts the account key
+
+`balanceOf(owner)` counts NFTs of this collection held by that **account key**. A Polymesh identity can hold NFTs across several keys and portfolios; none of the rest are counted.
+
+This matches the fungible precompile's `balanceOf` and follows from the same principle: a precompile call acts as an account, and it reports what that account holds. Use the Substrate API when you need an identity-wide view.
+
+### Recipients must have an identity
+
+Every party to a transfer must be an account linked to an **active identity**. Transfers to un-onboarded addresses revert with `IdentityNotFoundForAccountPortfolio`.
+
+This includes `address(0)`, so the burn-by-transfer idiom does not work — use `burn`. It also means a contract that will hold NFTs needs its own identity, like any other holder.
+
+### Transfers must complete atomically
+
+`transferFrom` creates and executes a settlement instruction in one call. If the instruction cannot execute immediately — typically because the receiver requires affirmation, or the collection requires mediator affirmation — the call reverts with:
+
+```text
+Instruction was not executed; Most likely the instruction is missing an affirmation from the receiver/mediator
+```
+
+Those transfers must go through the Substrate settlement flow, where the instruction can sit pending until affirmed.
+
+## Design considerations
+
+**A contract is a holder, not a bystander.** A contract calling this precompile acts as its own account. It needs an identity, it must pass the collection's compliance rules, and it cannot receive NFTs through `safeTransferFrom`. Plan the contract's onboarding before writing its logic.
+
+**There is no enumeration.** You cannot list a holder's NFTs from the precompile: there is no `tokenOfOwnerByIndex`. Use the [SubQuery indexer](/development/tooling/subquery), the [REST API](/development/tooling/rest-api), or `Nft` storage.
+
+**Gas reflects real work.** A transfer runs compliance evaluation and settlement, so it costs materially more than a plain Solidity NFT transfer. Use `canTransfer` to avoid paying for a transfer that will fail.
+
+**Mint metadata is positional.** `mint` matches values to the collection's mandatory keys by order. If the collection's keys change, minting code must change with them.
+
+## Related
+
+- [Precompiles](./index.mdx) — the address scheme and shared call semantics
+- [Fungible Asset (ERC-20)](./020-fungible-asset.mdx) — the same model for fungible assets
+- [NFT Collections](/core/assets/nft) — the native NFT model this precompile exposes
+- [Compliance](/compliance) — the rules evaluated on every transfer
+- [v8.0 → v8.1.1 changelog](/development/changelogs/v8.0-to-v8.1.1/nft-precompile) — what shipped, and when

@@ -1,0 +1,82 @@
+---
+title: Polymesh Runtime Precompile Changelog - v8.0 to v8.1.1
+description: Polymesh chain v8.1.1 adds a general-purpose precompile exposing asset creation, ticker registration, DID onboarding and external agent authorization to EVM contracts.
+id: v8.0-to-v8.1.1-runtime-precompile
+slug: /development/changelogs/v8.0-to-v8.1.1/runtime-precompile
+sidebar_label: Polymesh Runtime Precompile
+tags:
+  - migration
+  - changelog
+  - runtime
+  - smart-contracts
+  - evm
+---
+
+This page covers the `IPolymeshRuntime` precompile added in v8.1.1. It is part of the [v8.0 → v8.1.1 changelog](./010-overview.mdx).
+
+**Audience:** smart contract developers building onboarding, issuance or agent-management flows on Polymesh.
+
+:::tip Reference documentation
+This is a release note, not the reference. See [Polymesh Runtime](/development/smart-contracts/precompiles/polymesh-runtime) for the full method reference, types, events and revert reasons.
+:::
+
+---
+
+## Overview
+
+The asset precompiles are **scoped to one asset**: the address tells the runtime which asset or collection you are acting on. That works for everything you do _to_ an asset, but not for the calls that create one, or that have nothing to do with a specific asset at all.
+
+`IPolymeshRuntime` fills that gap. It lives at a **single fixed address** on every network:
+
+```text
+0x00000000000000000000000000000000ffff0000
+```
+
+and exposes six calls:
+
+| Method                                                               | Runs                                  | Notes                                                                            |
+| -------------------------------------------------------------------- | ------------------------------------- | -------------------------------------------------------------------------------- |
+| `assetCreateAsset(name, divisible, type, identifiers, fundingRound)` | `Asset::create_asset`                 | Returns the new `bytes16` asset id. Emits `AssetCreated`.                        |
+| `assetRegisterTicker(ticker)`                                        | `Asset::register_unique_ticker`       | At most 12 characters. Emits `TickerRegistered`.                                 |
+| `identityRegisterDid(targetAccount)`                                 | `Identity::register_did`              | Caller must be an active DID Registrar. Returns the new DID. Emits `DidCreated`. |
+| `identitySelfRegisterDid()`                                          | `Identity::self_register_did`         | Self-onboarding; returns the caller's new DID. Emits `DidCreated`.               |
+| `externalAgentsAuthorizeBecomeAgent(target, assetId, agentGroup)`    | `Identity::add_authorization`         | Creates a non-expiring `BecomeAgent` authorization; returns its `authId`.        |
+| `externalAgentsAcceptBecomeAgent(authId)`                            | `ExternalAgents::accept_become_agent` | Accepts a pending authorization.                                                 |
+
+The asset id returned by `assetCreateAsset` is the same value the [Fungible Asset](/development/smart-contracts/precompiles/fungible-asset) and [NFT](/development/smart-contracts/precompiles/non-fungible-asset) precompiles embed in their addresses, so a contract can create an asset and immediately compute the address at which to call it.
+
+### Scope
+
+With the asset precompiles, a contract can now complete a full workflow without dropping out to the Substrate API: onboard an account to an identity, create an asset under it, register and link a ticker, and authorize an agent.
+
+Self-onboarding is the main case. A contract can call `identitySelfRegisterDid` for a user who arrives with only an EVM address, in the same transaction as the operation that user came to perform.
+
+### Types
+
+The Solidity interface mirrors the Polymesh primitives it wraps:
+
+- `AssetType` — a `kind` enum covering the fungible types (`EquityCommon` through `StableCoin`) and the non-fungible ones (`NonFungibleDerivative`, `NonFungibleFixedIncome`, `NonFungibleInvoice`, `NonFungibleCustom`), plus a `customTypeId` used only by the two `Custom` variants.
+- `AssetIdentifier` — a `identifierType` enum (`CUSIP`, `CINS`, `ISIN`, `LEI`, `FIGI`) and a `value` whose length must match the type exactly: 9 bytes for CUSIP and CINS, 12 for ISIN and FIGI, 20 for LEI.
+- `AgentGroup` — `Full`, `Custom`, `ExceptMeta`, `PolymeshV1CAA` or `PolymeshV1PIA`, with `customId` used only by `Custom`.
+
+Pass an empty string for `fundingRoundName` to mean "none".
+
+## Constraints
+
+**Every method changes state.** There are no `view` methods on this interface, so the whole precompile is rejected in a read-only context — `eth_call`, `staticcall`, or gas estimation performed as a static call will revert with `StateChangeDenied` rather than returning a result. Simulate these calls by sending a transaction against a development network, not with `eth_call`.
+
+**Calls act as the calling account.** `identitySelfRegisterDid` registers a DID for the _contract_ when a contract calls it, not for the user who called the contract. The same is true of `assetCreateAsset`, which creates the asset under the calling account's identity. This is the general precompile rule described in [Precompiles](/development/smart-contracts/precompiles), and it is easy to get wrong in an onboarding contract — the contract needs its own identity, and it cannot register a DID on a user's behalf unless it is itself a DID Registrar.
+
+**`identityRegisterDid` is permissioned.** Only an active DID Registrar can call it. For any other caller it reverts. Most contracts will want `identitySelfRegisterDid` instead.
+
+**Ticker registration is a real registration**, charging the usual fee and failing if the ticker is already taken by another identity.
+
+**Delegate calls are rejected**, as with every Polymesh precompile.
+
+## Migration checklist
+
+1. Nothing breaks. The precompile is additive.
+2. Read [Polymesh Runtime](/development/smart-contracts/precompiles/polymesh-runtime) before writing contracts against it.
+3. Do not attempt to simulate these calls with `eth_call` — they all change state.
+4. If you are writing an onboarding contract, be explicit about whose identity is being created: the contract's or the user's.
+5. Give the contract its own identity and, if it needs to register DIDs for others, the DID Registrar role.

@@ -116,6 +116,17 @@ Polymesh provides several official Signing Manager implementations:
 
 ---
 
+### 8. Eth Signing Manager
+
+- **Package:** [`@polymeshassociation/eth-signing-manager`](https://github.com/PolymeshAssociation/eth-signing-manager)
+- **Use Case:** Letting users sign Polymesh transactions with an **EVM key** — MetaMask and other [EIP-1193](https://eips.ethereum.org/EIPS/eip-1193) providers, plus local viem/ethers accounts. No Polymesh key is required.
+- **Mechanism:** The chain's `revive` pallet dispatches a runtime call on behalf of the Account derived from the EVM address. The SDK builds the whole transaction; this manager only signs it, or has the wallet sign and broadcast it.
+- **Security:** **Medium-High** for injected wallets (keys stay in the user's wallet); **Low** for local viem/ethers accounts, which hold keys in memory like the Local manager.
+- **Environment:** Browser (injected providers), Node.js (local accounts)
+- **See:** [EVM Wallets](./040-evm-wallets.mdx) for setup, submission modes and limitations.
+
+---
+
 ## Choosing the Right Manager
 
 | Manager               | Environment     | Use Case                                    | Security Level        | Key Storage           |
@@ -127,6 +138,7 @@ Polymesh provides several official Signing Manager implementations:
 | **Fireblocks**        | Node.js         | Institutional Custody with Fireblocks       | Very High             | Fireblocks MPC        |
 | **Approval**          | Node.js         | Workflows requiring explicit approval steps | Adds Operational Ctrl | Wraps another manager |
 | **WalletConnect**     | Browser/Node.js | dApps interacting with mobile wallets       | Medium-High           | Mobile Wallet         |
+| **Eth**               | Browser/Node.js | Users signing with an EVM key (MetaMask)    | Medium-High           | EVM Wallet            |
 
 ## Basic Usage Example
 
