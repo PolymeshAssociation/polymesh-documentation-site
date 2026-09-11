@@ -9,8 +9,8 @@ tags:
   - bug bounty
 ---
 
-import SeverityRewardTable from './\_severity-reward-table.mdx';
-import SeverityAssessmentPrinciples from './\_severity-assessment-principles.mdx';
+import SeverityRewardTable from './_severity-reward-table.mdx';
+import SeverityAssessmentPrinciples from './_severity-assessment-principles.mdx';
 
 ## Overview
 

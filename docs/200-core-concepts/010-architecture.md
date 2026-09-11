@@ -23,7 +23,7 @@ Polymesh provides core business logic and financial abstractions at its base lay
 
 Polymesh also supports Layer 2 [Smart Contract](../development/smart-contracts/) logic via `pallet-revive`, allowing network users to extend and leverage the base layer primitives to build on-chain financial and identity based protocols. `pallet-revive` is a dual-VM contract engine: Solidity compiled with `resolc` runs as native [PolkaVM](https://github.com/paritytech/polkavm) (a RISC-V based execution engine) bytecode with partial EVM compatibility, while Solidity compiled with the standard `solc` compiler produces EVM bytecode that runs in a separate Rust EVM implementation (`revm`) with full EVM compatibility. The executing VM is chosen from the uploaded bytecode, not from how the transaction is submitted — so EVM contracts can be deployed and called through ordinary Substrate transactions, as well as via standard Ethereum tooling routed through a dedicated JSON-RPC proxy. See [Smart Contracts](../development/smart-contracts/) for detail.
 
-## Architecture
+## Architecture Diagram
 
 ![Architecture Diagram](./images/architecture/Polymesh_Architecture.png)
 

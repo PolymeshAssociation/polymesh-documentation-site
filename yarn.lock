@@ -5160,10 +5160,10 @@ docusaurus-plugin-copy-page-button@^0.8.4:
   resolved "https://registry.yarnpkg.com/docusaurus-plugin-copy-page-button/-/docusaurus-plugin-copy-page-button-0.8.4.tgz#f78dd7709e73a61ac31f38dedce3c5b1a6bf6c52"
   integrity sha512-OBWmUEFIqR3BJ5giae6D518b69ZfZQ5HKrazrY2IPA6tDNX2F3m1ejeyE0oqcVcE7GVkE+K0+vJ5T+kIos8u1w==
 
-docusaurus-plugin-llms@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/docusaurus-plugin-llms/-/docusaurus-plugin-llms-0.5.1.tgz#166c7600d19e0eb0c430b2304fa4d23eb370cdd8"
-  integrity sha512-4kNSK+TU67Y+pV45MJhvkW2ISNDh3SYet8PcPvwShV3VL/Ydwpvms0pTgvmOx1GEdLtJMYjD4PNkdmO3kAvLyw==
+docusaurus-plugin-llms@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/docusaurus-plugin-llms/-/docusaurus-plugin-llms-0.6.0.tgz#acacf2371e191dd265575009ca8b0da407d3dbbd"
+  integrity sha512-v9I6QEJLujkmtKjfWZ/SniWu7oOGZd0JUkyxO5MaFU09+qZHjQuraYuJZ+2AoZdesrrcktgDmZtqPL/sJtHe6A==
   dependencies:
     gray-matter "4.0.3"
     minimatch "9.0.3"
