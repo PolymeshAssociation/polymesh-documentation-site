@@ -58,7 +58,9 @@ Freezing and controller transfers act on a holder in either form. Because the tw
 | 41    | `freeze_partial_tokens`   | `asset_id: AssetId`, `asset_holder: AssetHolder`, `amount: Balance`                      |
 | 42    | `unfreeze_partial_tokens` | `asset_id: AssetId`, `asset_holder: AssetHolder`, `amount: Balance`                      |
 
-All five require the caller to be an external agent of the asset with the relevant permission. The four freezing calls apply to fungible assets only and fail with `UnexpectedNonFungibleToken` otherwise.
+All five require the caller to be an external agent of the asset with the relevant permission.
+
+`set_frozen_tokens`, `freeze_partial_tokens` and `unfreeze_partial_tokens` apply to fungible assets only, and fail with `UnexpectedNonFungibleToken` otherwise. `set_holder_frozen` applies to NFT collections as well, and `pallet-nft` enforces it on transfer.
 
 `set_frozen_tokens` sets the frozen balance absolutely; `freeze_partial_tokens` and `unfreeze_partial_tokens` adjust it relatively. See [Asset Freezing](./050-asset-freezing.mdx#relative-and-absolute-freezing).
 
@@ -108,7 +110,7 @@ These cover account holders. Portfolio holders are stored in [Portfolio](#portfo
 
 `approve` with `spender: None` clears the approval. Only the account key holding the NFT, or an approved collection operator, may call it.
 
-`controller_transfer_to` requires the caller to be an external agent of the collection.
+`controller_transfer_to` requires the caller to be an external agent of the collection. Unlike `Asset::controller_transfer_to`, it emits no dedicated event: like `Nft::controller_transfer` it reports through the existing `NFTHoldingsUpdated`, whose `HoldingsUpdateReason` is `ControllerTransfer` and whose source and destination holders are both carried in the event.
 
 ### Events
 

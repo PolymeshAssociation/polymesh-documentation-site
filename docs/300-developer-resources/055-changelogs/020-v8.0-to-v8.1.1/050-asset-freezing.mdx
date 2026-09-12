@@ -32,7 +32,17 @@ v8.1.1 adds two finer levels. There are now three:
 
 This is what regulated-asset workflows need for sanctions screening, dispute holds, lock-up periods enforced per investor, and partial escrow — each of which previously required either freezing the entire asset or moving the tokens away.
 
-All of these calls require the caller to be an **external agent** of the asset with the appropriate permission, and all of them apply to **fungible assets only**. Calling them for an NFT collection fails with `Asset::UnexpectedNonFungibleToken`.
+All of these calls require the caller to be an **external agent** of the asset with the appropriate permission.
+
+The three calls that freeze part of a balance — `set_frozen_tokens`, `freeze_partial_tokens` and `unfreeze_partial_tokens` — apply to **fungible assets only**, and fail with `Asset::UnexpectedNonFungibleToken` for an NFT collection.
+
+`Asset::set_holder_frozen` applies to **both**. Freezing a holder of an NFT collection stops it sending any NFT in that collection: `pallet-nft` runs the same holder check on every transfer, so the transfer fails with `Asset::InvalidTransferSenderIsFrozen`, exactly as for a fungible asset.
+
+:::caution NFT transfer reports do not check the holder freeze
+`Nft::nft_transfer_report` evaluates the collection-level freeze but not the holder freeze, though the transfer itself enforces it. That gap reaches both the `NFTApi::transfer_report` runtime API and the NFT precompile's `canTransfer`, so a report can come back clean for a transfer the chain will reject with `Asset::InvalidTransferSenderIsFrozen`.
+
+Read `Asset::FrozenAccounts` (or `Portfolio::FrozenPortfolios`) for the sending holder alongside the report. The fungible report has no such gap — `Asset::asset_transfer_report` covers the holder freeze through its balance check.
+:::
 
 ## Holders: accounts and portfolios
 

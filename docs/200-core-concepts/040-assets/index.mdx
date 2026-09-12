@@ -154,7 +154,7 @@ Freezing the whole asset is a blunt instrument. Issuers and agents can instead r
 
 A holder's transferable balance becomes `balance − locked − frozen`, so a partially frozen holder can still move whatever is left. Freezing restricts **sending only**: a frozen holder can still receive the asset, and anything they receive is not automatically frozen.
 
-Holder freezing applies to fungible assets. NFT collections support freezing the whole collection and freezing a holder, but not partial amounts.
+Freezing a holder works for both fungible assets and NFT collections. Freezing **part** of a balance is fungible-only — `asset::set_frozen_tokens`, `freeze_partial_tokens` and `unfreeze_partial_tokens` fail for an NFT collection with `Asset::UnexpectedNonFungibleToken`.
 
 As with asset-wide freezing, controller transfers bypass holder freezes — an agent does not need to unfreeze a holder before seizing from them.
 

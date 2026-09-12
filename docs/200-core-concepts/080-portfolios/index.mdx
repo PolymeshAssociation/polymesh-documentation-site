@@ -159,7 +159,7 @@ Parameters:
 
 ### Portfolio Freezing
 
-An asset's issuer or an authorised agent can freeze a portfolio for a **specific asset**, preventing that portfolio from sending it. This is done from the asset side, with `asset::set_holder_frozen`, passing the portfolio as the `asset_holder`. Part of a portfolio's balance can be frozen instead of all of it, using `asset::freeze_partial_tokens`, `asset::unfreeze_partial_tokens` or `asset::set_frozen_tokens`.
+An asset's issuer or an authorised agent can freeze a portfolio for a **specific asset**, preventing that portfolio from sending it. This is done from the asset side, with `asset::set_holder_frozen`, passing the portfolio as the `asset_holder`. This works for both fungible assets and NFT collections. For a fungible asset, part of a portfolio's balance can be frozen instead of all of it, using `asset::freeze_partial_tokens`, `asset::unfreeze_partial_tokens` or `asset::set_frozen_tokens`; those three do not apply to NFT collections.
 
 A frozen portfolio cannot move the asset by any route, including moves to another portfolio of the same identity; those fail with `portfolio::PortfolioIsFrozen`. It can still receive the asset, and freezing is per asset — a portfolio frozen for one asset moves its other holdings normally.
 

@@ -318,7 +318,6 @@ These arrive wrapped as `Extrinsic returned an error: <name>`. The names below a
 | `InsufficientFrozenBalance`                     | `unfreezePartialTokens` was asked to release more than is frozen.                                                                                                 |
 | `FreezePartialTokenMustNotExceedHoldersBalance` | `freezePartialTokens` would freeze more than the holder holds.                                                                                                    |
 | `ReceiverAffirmationRequired`                   | `forcedTransfer`'s destination requires the receiver to affirm incoming transfers.                                                                                |
-| `UnexpectedNonFungibleToken`                    | A freezing method was called for an NFT collection. Use the [NFT precompile](./030-non-fungible-asset.mdx).                                                       |
 
 ### Unknown selectors panic rather than revert
 
@@ -434,7 +433,7 @@ Where a ticker is linked, trailing padding is trimmed, so a 7-character ticker r
 
 ### Fungible assets only
 
-NFT collections revert with `Asset is not fungible` on every method. There is no ERC-721 or ERC-1155 precompile.
+This precompile serves fungible assets only. An `AssetId` belonging to an NFT collection reverts with `Asset is not fungible` on every method, before any runtime call is made — use the [Non-Fungible Asset precompile](./030-non-fungible-asset.mdx) at address prefix `9` instead. There is no ERC-1155 precompile.
 
 :::note Addresses exist even when the asset does not
 Precompile addresses are matched on address shape alone, without consulting storage, so `eth_getCode` returns the stub bytecode for **any** address of the form `0x<16 bytes>00080000` — including ones whose `AssetId` belongs to an NFT collection or to no asset at all.

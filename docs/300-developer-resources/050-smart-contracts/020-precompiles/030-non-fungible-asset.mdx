@@ -140,12 +140,18 @@ It returns `false` for everything else, **including ERC-7943**, whose methods ar
 
 | Method                              | Runs                                    | Notes                                                                                                                                  |
 | ----------------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `canTransfer(from, to, tokenId)`    | `Nft::nft_transfer_report`              | `view`. Runs the checks a real transfer would — compliance, restrictions, frozen state, ownership — and returns `true` if none fail.   |
+| `canTransfer(from, to, tokenId)`    | `Nft::nft_transfer_report`              | `view`. Compliance, transfer restrictions, collection-level freeze and ownership. Does **not** check the holder freeze — see below.    |
 | `canSend(account)`                  | `Asset::transfer_is_allowed_for_holder` | `view`. Whether the account may send this collection's NFTs at all. Takes no token id.                                                 |
 | `canReceive(account)`               | `Asset::transfer_is_allowed_for_holder` | `view`. Whether the account may receive them at all.                                                                                   |
 | `forcedTransfer(from, to, tokenId)` | `Nft::controller_transfer_to`           | Moves the NFT bypassing compliance and frozen state. Caller must be an agent of the collection. Emits `ForcedTransfer` and `Transfer`. |
 
 `canTransfer` is the pre-flight check for one specific transfer; `canSend`/`canReceive` are cheaper per-account eligibility checks for onboarding and allowlist UIs.
+
+:::caution `canTransfer` does not check whether the holder is frozen
+An agent can freeze a holder for a whole collection with `Asset::set_holder_frozen`, and `pallet-nft` enforces that on every transfer. `Nft::nft_transfer_report` — and therefore `canTransfer` — does not evaluate it, so `canTransfer` can return `true` for a transfer that then fails with `InvalidTransferSenderIsFrozen`.
+
+`canSend` does account for it, so pair the two when pre-checking an NFT transfer. The equivalent fungible check has no such gap.
+:::
 
 ## Token URIs
 
@@ -193,7 +199,7 @@ An operator — the grantee of `setApprovalForAll` — is scoped to one owner's 
 | **ERC-721Enumerable** | Not implemented                                          | `totalSupply` exists but is a Polymesh addition, not the extension                                                                                                                                               |
 | **ERC-7943**          | `canSend`, `canReceive`, `canTransfer`, `forcedTransfer` | `setFrozenTokens`, `getFrozenTokens` and the `Frozen` event are absent; not advertised through ERC-165; no typed errors; `canTransfer` returns `false` for excluded reasons and can revert on out-of-range input |
 
-**ERC-7943 is partially implemented.** Four of its six members are present. The per-token freeze members — `setFrozenTokens`, `getFrozenTokens` and the `Frozen` event — are not, because Polymesh has no per-NFT freeze: freezing applies to a holder across a whole collection, not to an individual token. See [Asset Freezing](/development/changelogs/v8.0-to-v8.1.1/asset-freezing).
+**ERC-7943 is partially implemented.** Four of its six members are present. The per-token freeze members — `setFrozenTokens`, `getFrozenTokens` and the `Frozen` event — are not, because Polymesh has no per-NFT freeze: freezing applies to a holder across a whole collection, not to an individual token. That collection-wide holder freeze is set with `Asset::set_holder_frozen` on the Substrate API and is not exposed by this precompile, though transfers through it are still subject to it. See [Asset Freezing](/development/changelogs/v8.0-to-v8.1.1/asset-freezing).
 
 As on the fungible side, failures revert with `Error(string)` rather than the standard's typed errors, and `canTransfer` returns `false` for ownership, count and lock reasons that ERC-7943 excludes from a permission check. It can also revert for a `tokenId` above `2^64-1` rather than returning `false`.
 
