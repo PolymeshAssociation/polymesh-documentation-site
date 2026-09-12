@@ -26,7 +26,7 @@ Mediation can be enforced at two levels:
 
 Asset issuers can designate mediators that must approve all transfers of their assets, ensuring consistent validation criteria regardless of who creates settlement instructions.
 
-**Management**: Asset mediators are controlled through `asset::add_mandatory_mediator` and `asset::remove_mandatory_mediator` transactions.
+**Management**: Asset mediators are controlled through `asset::add_mandatory_mediators` and `asset::remove_mandatory_mediators` transactions.
 
 **Behavior**:
 

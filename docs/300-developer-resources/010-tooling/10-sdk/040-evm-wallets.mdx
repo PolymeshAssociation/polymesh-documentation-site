@@ -1,0 +1,191 @@
+---
+title: EVM Wallets
+description: Sign and submit Polymesh transactions with an EVM key - MetaMask, WalletConnect, viem and ethers - using the Polymesh SDK's EVM signing manager.
+id: sdk-evm-wallets
+slug: /development/tooling/sdk/evm-wallets
+sidebar_label: EVM Wallets
+tags:
+  - sdk
+  - signing
+  - evm
+  - signing manager
+---
+
+An EVM key — the Ethereum-style secp256k1 key a wallet such as MetaMask holds — can sign any Polymesh transaction. A user with MetaMask and no Polymesh key can create assets, affirm settlement instructions and manage portfolios, and from your application's point of view nothing about the SDK call changes.
+
+This page covers the SDK side. The chain mechanism underneath it is described in [Runtime Calls from an EVM Wallet](/development/smart-contracts/runtime-calls), and [EVM compatibility on Polymesh](/development/smart-contracts#evm-compatibility-on-polymesh) covers why these docs say EVM key rather than Ethereum key.
+
+## Components
+
+Three pieces, each with one job:
+
+1. **The chain** reserves an address that turns an EVM transaction into a native extrinsic, dispatched as the Account `AccountId32 = <20-byte H160> ++ [0xEE; 12]`. Every EVM address controls exactly one Polymesh Account, with no registration step.
+2. **The SDK** builds that transaction in full — the SCALE-encoded call, the destination address, gas, nonce and chain id all come from the Substrate connection.
+3. **The signing manager** only gets it signed, and in some cases broadcast. It never estimates gas, fetches a nonce, or knows the destination address.
+
+Because the SDK builds the whole transaction, every existing procedure works unchanged — routing is per-Account and automatic. A signing manager holding both native and EVM keys needs no extra configuration.
+
+## Connecting
+
+```bash
+yarn add @polymeshassociation/eth-signing-manager
+```
+
+### MetaMask and other injected wallets
+
+```typescript
+import { EthSigningManager } from '@polymeshassociation/eth-signing-manager';
+import { Polymesh } from '@polymeshassociation/polymesh-sdk';
+
+// prompts the user to connect, via eth_requestAccounts
+const signingManager = await EthSigningManager.create({
+  provider: window.ethereum,
+});
+
+const sdk = await Polymesh.connect({ nodeUrl, signingManager });
+
+const accounts = await signingManager.getAccounts(); // SS58-encoded 0xEE Accounts
+sdk.setSigningAccount(accounts[0]);
+
+// unchanged call, unchanged result
+await sdk.assets.createAsset({ ... });
+```
+
+React to the user switching account or network in their wallet:
+
+```typescript
+signingManager.onAccountChange((newAccounts) => {
+  /* re-set the signing Account, update UI */
+});
+signingManager.onNetworkChange((networkInfo) => {
+  /* networkInfo.chainId is 0x-prefixed hex */
+});
+```
+
+### viem and ethers
+
+Neither library is a dependency of the signing manager. Adapt an account with `fromViemAccount` or `fromEthersWallet` — do not pass one straight through, because the SDK's request is EIP-1193 wire format (hex strings, `gas` rather than `gasLimit`), which viem rejects and ethers silently signs with a zero gas limit.
+
+```typescript
+import { privateKeyToAccount } from 'viem/accounts';
+import {
+  EthSigningManager,
+  fromViemAccount,
+} from '@polymeshassociation/eth-signing-manager';
+
+const signingManager = await EthSigningManager.create({
+  accounts: [fromViemAccount(privateKeyToAccount('0x...'))],
+});
+```
+
+```typescript
+import { Wallet } from 'ethers';
+import {
+  EthSigningManager,
+  fromEthersWallet,
+} from '@polymeshassociation/eth-signing-manager';
+
+const signingManager = await EthSigningManager.create({
+  accounts: [fromEthersWallet(new Wallet('0x...'))],
+});
+```
+
+Any other in-process signer can implement `EthLocalAccount` directly; `toViemTransaction` and `toEthersTransaction` are exported for converting the request yourself.
+
+## Submission modes
+
+Which mode applies is decided once, when the signing manager is created, and is expressed by which methods the resulting signer exposes.
+
+|                    | Sign only                                               | Wallet signs and broadcasts           |
+| ------------------ | ------------------------------------------------------- | ------------------------------------- |
+| Signer method      | `signTransaction` → raw signed bytes                    | `sendTransaction` → EVM tx hash       |
+| Who broadcasts     | The SDK, over its Substrate connection                  | The wallet, via `eth_sendTransaction` |
+| Who owns the nonce | The SDK                                                 | The wallet                            |
+| Typical signers    | viem/ethers local accounts, Ledger, Fireblocks, KMS/HSM | MetaMask, Rabby, Coinbase Wallet      |
+
+Sign-only is the better mode — the nonce stays under SDK control and the transaction lifecycle matches the native path. The SDK prefers it whenever the signer supports it. Wallet broadcast exists because MetaMask, the wallet most users reach for, does not implement `eth_signTransaction`.
+
+Injected providers therefore default to wallet broadcast. If you know a particular wallet supports `eth_signTransaction` — some WalletConnect wallets and Ledger via WalletConnect do — opt in explicitly:
+
+```typescript
+await EthSigningManager.create({
+  provider,
+  capabilities: { signTransaction: true },
+});
+```
+
+This is never auto-detected, because probing would mean sending a speculative request to the user's wallet. If the override is wrong the call throws a clear error rather than silently falling back, since handing nonce control to the wallet mid-flight would be the worse failure.
+
+## Addresses
+
+Each EVM address is presented to the SDK as the SS58 encoding of `<h160> ++ [0xEE; 12]`. Helpers convert in both directions:
+
+```typescript
+import {
+  ss58FromEthAddress,
+  ethAddressFromSs58,
+  isEthDerivedAddress,
+} from '@polymeshassociation/eth-signing-manager';
+```
+
+The SDK side adds `Account.ethAddress` (the checksummed address controlling the Account, or `null`) and `AccountKeyType.Ethereum` from `Account.getTypeInfo()`.
+
+### Map a native Account before advertising its EVM address
+
+This applies to **native** Accounts, not EVM-derived ones. The EVM address of a native Account is `keccak256(accountId)[12..]`, which the chain cannot invert. Until the Account calls `mapEvmAccount`, anything sent to that address is credited to the `0xEE`-padded fallback Account instead.
+
+```typescript
+const account = await sdk.accountManagement.getSigningAccount();
+const { address, isMapped, fallbackAccount } =
+  await account.getEvmAddressDetails();
+
+if (!isMapped) {
+  const tx = await sdk.accountManagement.mapEvmAccount();
+  await tx.run();
+}
+```
+
+Funds sent before mapping are not lost, but recovering them is a manual step the SDK does not wrap in this release — check `fallbackAccount`'s balance. `fallbackAccount` is still reported after mapping, precisely because mapping does not move what arrived earlier. See [Address mapping](/development/smart-contracts/address-mapping).
+
+## Pre-submission checks
+
+Two checks run before the wallet prompts the user.
+
+**Dry run over the Substrate connection.** Failures such as a missing Identity surface as structured SDK errors rather than a wallet-level revert.
+
+**Chain id comparison.** The manager reads `eth_chainId` and compares it with the chain id the SDK put in the request, throwing without opening the wallet if they disagree. The destination is an address that is only meaningful on Polymesh: a wallet left on Ethereum Mainnet would broadcast the call there, to an address with no code, spending gas for no effect while the Polymesh transaction never happens. An unreadable chain id is treated as a mismatch. Local accounts skip the check, having no notion of a current network.
+
+## Fees
+
+`getTotalFees()` is the single entry point and is correct on both paths. On the EVM path the gas component comes from the dry run rather than `payment_queryInfo`, so it can differ slightly from the native equivalent — measured at 1.008–1.011× what the chain charges, erring high. Protocol fees are still included.
+
+**An EVM-signed transaction costs more than the same call signed natively**, because the outer extrinsic carries the entire signed EVM transaction as its payload.
+
+## Limitations
+
+These throw rather than failing quietly:
+
+- **Off-chain signatures are not supported.** The chain's `verify_any_signature` accepts only sr25519 and ed25519, which an EVM key cannot produce. This blocks bulk secondary-key addition (`addSecondaryAccountsWithAuth`) and off-chain settlement and investment receipts. Onboarding a single EVM key into an existing Identity is unaffected — that is two ordinary signed dispatches (`inviteAccount`, then accepting), not an off-chain signature.
+- **MultiSig signing with an EVM key is out of scope** for this release and throws `NotSupported`.
+- **Transaction history is not yet indexed** for EVM-derived Accounts, so `getTransactionHistory()` throws `NotSupported` rather than returning a misleadingly empty list. Event-driven activity such as `getPolyxTransactions` is unaffected.
+- **`toSignablePayload()` throws** for an EVM-derived Account — use `toEthSignablePayload()`.
+- **`mortality` is rejected**, as is an explicit `nonce` when the wallet owns nonce management. EVM transactions have no era; replay protection comes from the nonce and chain id.
+- **MetaMask shows an unavoidable warning.** Because the destination address has no contract code, MetaMask displays "You're sending call data to an address that isn't a contract." It cannot be suppressed by the SDK or the signing manager, and it is safe to proceed.
+
+## Custody and air-gapped signing
+
+No signing manager is required to build a payload for an external signer:
+
+```typescript
+const payload = await tx.toEthSignablePayload(); // pass { eip1559: false } for legacy-only signers
+// ... sign elsewhere (Fireblocks, KMS/HSM, air-gapped device) ...
+await sdk.network.submitEthTransaction(signed);
+```
+
+`Network.decodeCall(hex)` decodes a SCALE-encoded call into its `TxTag`, argument metadata and a human-readable form, so an application can show the user what they are signing alongside the wallet prompt.
+
+## Related
+
+- [Runtime Calls from an EVM Wallet](/development/smart-contracts/runtime-calls) — the chain mechanism this builds on
+- [Signing Managers](./020-signing.mdx) — the other signing manager implementations
+- [Address mapping](/development/smart-contracts/address-mapping) — how EVM addresses and Polymesh Accounts relate

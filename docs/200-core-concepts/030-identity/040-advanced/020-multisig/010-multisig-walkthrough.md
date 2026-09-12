@@ -56,7 +56,7 @@ To accept these authorizations, we need the authorization ID for each signer. Th
 
 ![Signer Authorizations](./images/multisig/8-accept_multisig_signer_event.png)
 
-Once you have the authorization ID for each signing key, you can call `multiSig::acceptMultisigSignerAsKey` separately from each of the signing keys (each signer will have a different authorization ID to accept).
+Once you have the authorization ID for each signing key, you can call `multiSig::acceptMultisigSigner` separately from each of the signing keys (each signer will have a different authorization ID to accept).
 
 ![Signer Accepting](./images/multisig/9-accept_multisig.png)
 

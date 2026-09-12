@@ -1,0 +1,39 @@
+---
+title: Address Mapping
+description: How Polymesh 32-byte accounts and 20-byte EVM addresses map onto each other, why the mapping is one-way in one direction, and why an account must call map_account before receiving funds at its EVM address.
+id: evm-address-mapping
+slug: /development/smart-contracts/address-mapping
+sidebar_label: Address Mapping
+tags:
+  - development
+  - smart contracts
+  - evm
+  - accounts
+---
+
+Polymesh accounts are 32-byte (`AccountId32`), not 20-byte EVM addresses. `AddressMapper = pallet_revive::AccountId32Mapper<Self>` bridges the two, and the two directions work differently:
+
+- **Native account → EVM address**: computed by hashing the 32-byte account with Keccak-256 and taking the last 20 bytes. This is a one-way derivation — the original 32-byte account cannot be recovered from the 20-byte hash output alone.
+- **EVM address → native account**: if the account has previously called `map_account`, the chain looks up the real account via the stored `OriginalAccount` mapping. If it hasn't, the chain falls back to a deterministic **fallback account**: the 20-byte address padded with twelve `0xEE` bytes to make 32 bytes. `unmap_account` removes a stored mapping.
+
+:::danger Map your account before receiving tokens at its EVM address
+The native-to-Ethereum direction above is a one-way hash, so the chain cannot invert it on its own. Until an account calls `map_account`, any transfer sent to that account's derived EVM address is credited to the `0xEE`-padded **fallback account** instead — a distinct 32-byte account from the real one.
+
+This is not automatically lost: the real account holder can call `dispatch_as_fallback_account` to dispatch a call (e.g. a transfer) as that fallback account and move the funds out, since the runtime re-derives the same fallback account from their signed origin. But this is a manual recovery step that most wallets and tooling won't surface by default, so **the safe practice is to call `map_account` before ever advertising or receiving funds at your derived EVM address** — mapped accounts receive transfers directly, with no recovery step ever needed.
+:::
+
+Tools such as [Subscan's account-conversion utility](https://polymesh.subscan.io/tools/format_transform) can compute both directions for you (EVM address → SS58 pads with `0xEE`; SS58 → EVM address performs the Keccak-256 derivation) — useful for looking up addresses, but it does not perform or substitute for the on-chain `map_account` call.
+
+## Where this applies
+
+The mapping governs every EVM-side interaction with Polymesh:
+
+- [Precompiles](./020-precompiles/index.mdx) resolve an EVM caller to the account whose permissions and holdings apply.
+- [Runtime calls from an EVM wallet](./030-runtime-calls.mdx) dispatch as the signer's `0xEE` fallback account.
+- The [Polymesh SDK](/development/tooling/sdk/evm-wallets) exposes the same model through `Account.evmAddress`, `getEvmAddressDetails()` and `mapEvmAccount()`.
+
+## Related
+
+- [EVM & Smart Contracts](./index.md) — `pallet-revive`, the dual-VM model, and the EVM compatibility scope
+- [Precompiles](./020-precompiles/index.mdx) — calling native functionality from a contract
+- [Runtime Calls from an EVM Wallet](./030-runtime-calls.mdx) — calling native functionality from a wallet

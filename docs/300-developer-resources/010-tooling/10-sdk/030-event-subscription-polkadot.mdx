@@ -5,13 +5,13 @@ id: polkadot-api-events
 slug: /development/tooling/sdk/polkadot-api-events
 sidebar_label: Chain Event Subscription (@polkadot/api)
 tags:
-    - polkadot.js
-    - api
-    - events
-    - subscription
-    - sdk
-    - development
-    - tooling
+  - polkadot.js
+  - api
+  - events
+  - subscription
+  - sdk
+  - development
+  - tooling
 ---
 
 ## Introduction
@@ -50,10 +50,10 @@ let sdk: Polymesh | null = null;
 let api: Polymesh['_polkadotApi'] | null = null;
 ```
 
--   `Polymesh`: The main SDK entry point.
--   `UnsubCallback`: The type for the function returned when creating a subscription, used to unsubscribe later.
--   `balanceToBigNumber`, `instructionMemoToString`: Utility functions from the SDK to convert chain data types (like `Balance` or `Memo`) into more usable formats (like `BigNumber` or `string`).
--   We define the `nodeUrl` and initialize `sdk` and `api` variables.
+- `Polymesh`: The main SDK entry point.
+- `UnsubCallback`: The type for the function returned when creating a subscription, used to unsubscribe later.
+- `balanceToBigNumber`, `instructionMemoToString`: Utility functions from the SDK to convert chain data types (like `Balance` or `Memo`) into more usable formats (like `BigNumber` or `string`).
+- We define the `nodeUrl` and initialize `sdk` and `api` variables.
 
 ### 2. Connecting and Accessing the API
 
@@ -82,11 +82,10 @@ const main = async () => {
       'Successfully connected to',
       networkProps.name,
       'Spec version:',
-      networkProps.version.toString(),
+      networkProps.version.toString()
     );
 
     // ... subscription logic comes next ...
-
   } catch (error) {
     console.error('Error:', error);
     if (unsubscribeFinalizedHeads) {
@@ -99,33 +98,33 @@ const main = async () => {
 main();
 ```
 
--   We connect using `Polymesh.connect`, passing the node URL.
--   Crucially, we obtain the `@polkadot/api` instance using `sdk._polkadotApi`. This instance is already configured with all Polymesh-specific types.
--   We fetch network properties using the SDK's `network.getNetworkProperties()` method to verify the connection.
+- We connect using `Polymesh.connect`, passing the node URL.
+- Crucially, we obtain the `@polkadot/api` instance using `sdk._polkadotApi`. This instance is already configured with all Polymesh-specific types.
+- We fetch network properties using the SDK's `network.getNetworkProperties()` method to verify the connection.
 
 ### 3. Subscribing to Finalized Blocks
 
 We use the accessed `api` object to subscribe to finalized block headers:
 
 ```typescript
-    // Inside the main function's try block:
-    unsubscribeFinalizedHeads = await api.rpc.chain.subscribeFinalizedHeads(
-      async (header) => {
-        // Callback function triggered for each finalized block
-        if (!api) throw new Error('API not initialized'); // Type guard
-        const blockHash = header.hash.toString();
+// Inside the main function's try block:
+unsubscribeFinalizedHeads = await api.rpc.chain.subscribeFinalizedHeads(
+  async (header) => {
+    // Callback function triggered for each finalized block
+    if (!api) throw new Error('API not initialized'); // Type guard
+    const blockHash = header.hash.toString();
 
-        // Process events within this block
-        await processBlockEvents(blockHash);
-      },
-    );
+    // Process events within this block
+    await processBlockEvents(blockHash);
+  }
+);
 ```
 
--   `api.rpc.chain.subscribeFinalizedHeads` establishes a WebSocket subscription.
--   It takes a callback function that executes every time a new block is finalized.
--   The callback receives the block `header`. We extract the `blockHash` from it.
--   We call a separate function, `processBlockEvents`, to handle the logic for fetching and parsing events for that specific block.
--   The `subscribeFinalizedHeads` method returns an `UnsubCallback` function, which we store in `unsubscribeFinalizedHeads` to allow us to stop the subscription later.
+- `api.rpc.chain.subscribeFinalizedHeads` establishes a WebSocket subscription.
+- It takes a callback function that executes every time a new block is finalized.
+- The callback receives the block `header`. We extract the `blockHash` from it.
+- We call a separate function, `processBlockEvents`, to handle the logic for fetching and parsing events for that specific block.
+- The `subscribeFinalizedHeads` method returns an `UnsubCallback` function, which we store in `unsubscribeFinalizedHeads` to allow us to stop the subscription later.
 
 ### 4. Processing Block Events (`processBlockEvents`)
 
@@ -158,39 +157,39 @@ async function processBlockEvents(hash: string): Promise<void> {
 }
 ```
 
--   **Get Block Data:** We fetch the full block using `api.rpc.chain.getBlock(hash)`. This gives us access to the block header (for the number) and the list of extrinsics included in the block.
--   **API at Block State:** We get a specific instance of the API pinned to the state of the chain *at that block hash* using `api.at(hash)`. This is essential because chain state can change between blocks, and querying events requires looking at the state corresponding to the block they occurred in.
--   **Query Events:** We use the block-specific API instance (`apiAtBlock`) to query all events recorded for that block via `apiAtBlock.query.system.events()`.
--   **Iterate Events:** We loop through the array of event records.
+- **Get Block Data:** We fetch the full block using `api.rpc.chain.getBlock(hash)`. This gives us access to the block header (for the number) and the list of extrinsics included in the block.
+- **API at Block State:** We get a specific instance of the API pinned to the state of the chain _at that block hash_ using `api.at(hash)`. This is essential because chain state can change between blocks, and querying events requires looking at the state corresponding to the block they occurred in.
+- **Query Events:** We use the block-specific API instance (`apiAtBlock`) to query all events recorded for that block via `apiAtBlock.query.system.events()`.
+- **Iterate Events:** We loop through the array of event records.
 
 ### 5. Extracting Event and Extrinsic Details
 
 Inside the `forEach` loop, we extract information about each event and, if applicable, the extrinsic that triggered it:
 
 ```typescript
-    // Inside the events.forEach loop:
-    if (!api) throw new Error('API not initialized'); // Type guard needed inside loop too
-    const { event, phase } = record;
-    let extrinsicHash: string | undefined;
-    let extrinsicId: number | undefined;
-    let method: string | undefined;
-    let section: string | undefined;
+// Inside the events.forEach loop:
+if (!api) throw new Error('API not initialized'); // Type guard needed inside loop too
+const { event, phase } = record;
+let extrinsicHash: string | undefined;
+let extrinsicId: number | undefined;
+let method: string | undefined;
+let section: string | undefined;
 
-    // Check if the event was emitted during an extrinsic's execution phase
-    if (phase.isApplyExtrinsic) {
-      extrinsicId = phase.asApplyExtrinsic.toNumber();
-      // Get the corresponding extrinsic from the block's list
-      const extrinsic = extrinsics[extrinsicId];
-      extrinsicHash = extrinsic.hash.toString();
-      method = extrinsic.method.method; // e.g., 'transferWithMemo'
-      section = extrinsic.method.section; // e.g., 'balances'
-    }
+// Check if the event was emitted during an extrinsic's execution phase
+if (phase.isApplyExtrinsic) {
+  extrinsicId = phase.asApplyExtrinsic.toNumber();
+  // Get the corresponding extrinsic from the block's list
+  const extrinsic = extrinsics[extrinsicId];
+  extrinsicHash = extrinsic.hash.toString();
+  method = extrinsic.method.method; // e.g., 'transferWithMemo'
+  section = extrinsic.method.section; // e.g., 'balances'
+}
 ```
 
--   Each `record` contains the `event` itself and the `phase` during which it occurred.
--   The `phase` tells us if the event happened during the application of an extrinsic (`phase.isApplyExtrinsic`). If so, we can get the index (`extrinsicId`) of that extrinsic within the block's list.
--   We use the `extrinsicId` to look up the actual extrinsic object from the `extrinsics` array obtained earlier.
--   From the extrinsic, we can get its `hash`, `method` (the function name), and `section` (the pallet/module name).
+- Each `record` contains the `event` itself and the `phase` during which it occurred.
+- The `phase` tells us if the event happened during the application of an extrinsic (`phase.isApplyExtrinsic`). If so, we can get the index (`extrinsicId`) of that extrinsic within the block's list.
+- We use the `extrinsicId` to look up the actual extrinsic object from the `extrinsics` array obtained earlier.
+- From the extrinsic, we can get its `hash`, `method` (the function name), and `section` (the pallet/module name).
 
 ### 6. Handling a Specific Event Type (`balances.Transfer`)
 
@@ -226,16 +225,16 @@ Now, we check if the current `event` is the one we're interested in – `balance
   }); // End of events.forEach
 ```
 
--   **Type Check:** `api.events.balances.Transfer.is(event)` is a type guard provided by `@polkadot/api` (aware of Polymesh types via the SDK's setup). It safely checks if the generic `event` object is specifically a `balances.Transfer` event.
--   **Data Extraction:** If it is a `balances.Transfer` event, we access its specific payload via `event.data`. The indices (`balancesEvent[0]`, `balancesEvent[1]`, etc.) correspond to the fields defined for the `Transfer` event in the Polymesh runtime:
-    -   `[0]`: `Option<IdentityId>` (Sender DID)
-    -   `[1]`: `AccountId` (Sender Address)
-    -   `[2]`: `Option<IdentityId>` (Receiver DID)
-    -   `[3]`: `AccountId` (Receiver Address)
-    -   `[4]`: `Balance` (Amount transferred)
-    -   `[5]`: `Option<Memo>` (Optional memo)
--   **Data Conversion:** We use `.toString()` for addresses and DIDs. For complex types like `Balance` and `Memo`, we use the SDK's utility functions (`balanceToBigNumber`, `instructionMemoToString`) for safe conversion. We also handle `Option` types using `.unwrapOrDefault()` or `.isSome`/`.unwrap()`.
--   **Logging:** Finally, we log the extracted transfer details along with the block number and extrinsic information for context.
+- **Type Check:** `api.events.balances.Transfer.is(event)` is a type guard provided by `@polkadot/api` (aware of Polymesh types via the SDK's setup). It safely checks if the generic `event` object is specifically a `balances.Transfer` event.
+- **Data Extraction:** If it is a `balances.Transfer` event, we access its specific payload via `event.data`. The indices (`balancesEvent[0]`, `balancesEvent[1]`, etc.) correspond to the fields defined for the `Transfer` event in the Polymesh runtime:
+  - `[0]`: `Option<IdentityId>` (Sender DID)
+  - `[1]`: `AccountId` (Sender Address)
+  - `[2]`: `Option<IdentityId>` (Receiver DID)
+  - `[3]`: `AccountId` (Receiver Address)
+  - `[4]`: `Balance` (Amount transferred)
+  - `[5]`: `Option<Memo>` (Optional memo)
+- **Data Conversion:** We use `.toString()` for addresses and DIDs. For complex types like `Balance` and `Memo`, we use the SDK's utility functions (`balanceToBigNumber`, `instructionMemoToString`) for safe conversion. We also handle `Option` types using `.unwrapOrDefault()` or `.isSome`/`.unwrap()`.
+- **Logging:** Finally, we log the extracted transfer details along with the block number and extrinsic information for context.
 
 ### 7. Error Handling and Cleanup
 
@@ -256,8 +255,8 @@ The `main` function includes a `catch` block to handle potential errors during c
   // (e.g., on SIGINT/SIGTERM) and call unsubscribeFinalizedHeads() there too.
 ```
 
--   If any error occurs, it's logged.
--   Crucially, `unsubscribeFinalizedHeads()` is called if the subscription was successfully established before the error occurred. This closes the WebSocket connection for the subscription and prevents resource leaks.
+- If any error occurs, it's logged.
+- Crucially, `unsubscribeFinalizedHeads()` is called if the subscription was successfully established before the error occurred. This closes the WebSocket connection for the subscription and prevents resource leaks.
 
 ## Full Example Script
 
@@ -299,7 +298,9 @@ async function processBlockEvents(hash: string): Promise<void> {
 
     const blockNumber = finalizedBlock.block.header.number.unwrap().toString();
     const { extrinsics } = finalizedBlock.block;
-    console.log(`--- Processing Block #${blockNumber} (${hash.substring(0, 10)}...) ---`);
+    console.log(
+      `--- Processing Block #${blockNumber} (${hash.substring(0, 10)}...) ---`
+    );
 
     // Get an API instance at the specific block's state for accurate event querying
     const apiAtBlock = await api.at(hash);
@@ -359,7 +360,9 @@ async function processBlockEvents(hash: string): Promise<void> {
           console.log(`     Memo:     "${memo}"`);
         }
         if (extrinsicId !== undefined) {
-          console.log(`     Context: Extrinsic #${extrinsicId} (${section}.${method}), Hash: ${extrinsicHash?.substring(0, 10)}...`);
+          console.log(
+            `     Context: Extrinsic #${extrinsicId} (${section}.${method}), Hash: ${extrinsicHash?.substring(0, 10)}...`
+          );
         }
       }
       // --- Add more 'else if' blocks here to handle other event types ---
@@ -414,12 +417,15 @@ const main = async () => {
       }
     );
 
-    console.log('Subscription active. Waiting for new blocks... (Press Ctrl+C to exit)');
+    console.log(
+      'Subscription active. Waiting for new blocks... (Press Ctrl+C to exit)'
+    );
 
     // Keep the script running until interrupted (e.g., Ctrl+C)
     // In a real service, you might have a more robust way to handle lifecycle.
-    await new Promise(() => { /* Keep running indefinitely */ });
-
+    await new Promise(() => {
+      /* Keep running indefinitely */
+    });
   } catch (error) {
     console.error('Initialization or subscription error:', error);
     // Attempt to clean up the subscription if it was established
@@ -429,7 +435,7 @@ const main = async () => {
     }
     // Disconnect SDK if initialized
     if (sdk) {
-       await sdk.disconnect();
+      await sdk.disconnect();
     }
     process.exit(1);
   } finally {

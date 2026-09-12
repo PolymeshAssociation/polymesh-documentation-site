@@ -1,0 +1,113 @@
+---
+title: Runtime Calls from an EVM Wallet
+description: Submit native Polymesh extrinsics from an EVM key such as a MetaMask account, by sending a transaction to the reserved runtime-pallets address - no smart contract and no precompile involved.
+id: runtime-calls-from-evm
+slug: /development/smart-contracts/runtime-calls
+sidebar_label: Runtime Calls from EVM Wallets
+tags:
+  - development
+  - smart contracts
+  - evm
+  - identity
+---
+
+`pallet-revive` reserves one address that is not a contract and not a precompile. A transaction sent to it is not executed by either VM — its calldata is decoded as a **`RuntimeCall`** and dispatched as an ordinary Substrate extrinsic, with the EVM signer as the origin:
+
+```text
+0x6d6f646c70792f70616464720000000000000000
+```
+
+The address is the same on every network. It is derived from the pallet id `py/paddr` (`modl` + `py/paddr`, zero-padded to 20 bytes), which is why it is human-readable as ASCII. The runtime also reports it from the `ReviveApi::runtimePalletsAddress` runtime API, which is the robust way for tooling to obtain it.
+
+An account holding **only an EVM key** — an Ethereum-style secp256k1 key, held in MetaMask, a hardware wallet, or an exchange signing service — can therefore run any extrinsic: create assets, affirm settlement instructions, manage portfolios. No Polymesh key, no deployed contract, and no precompile coverage is required.
+
+:::tip Precompiles compared with runtime calls
+Both reach native functionality from the EVM side. They differ in caller and coverage.
+
+|                        | [Precompiles](./020-precompiles/index.mdx) | Runtime-call address        |
+| ---------------------- | ------------------------------------------ | --------------------------- |
+| Calldata               | ABI-encoded, standard Solidity interfaces  | SCALE-encoded `RuntimeCall` |
+| Callable by a contract | **Yes**                                    | No                          |
+| Callable by a wallet   | Yes                                        | **Yes**                     |
+| Coverage               | Only what each precompile exposes          | The whole runtime           |
+
+A Solidity contract can only use precompiles. A wallet can use either, and should prefer the runtime-call address whenever it needs something no precompile covers.
+:::
+
+## Building the transaction
+
+Three fields matter:
+
+| Field   | Value                                                                                  |
+| ------- | -------------------------------------------------------------------------------------- |
+| `to`    | `0x6d6f646c70792f70616464720000000000000000`                                           |
+| `data`  | The **SCALE-encoded** `RuntimeCall` — not ABI-encoded, and with no function selector   |
+| `value` | Must be **zero**. A non-zero value makes the transaction invalid rather than reverting |
+
+Everything else — nonce, gas, chain id, signature — is an ordinary EVM transaction, submitted through the [`eth-rpc` proxy](./index.md#running-evm-json-rpc) like any other.
+
+:::tip The SDK does all of this for you
+The [Polymesh SDK's EVM signing manager](/development/tooling/sdk/evm-wallets) builds these transactions end to end — encoding, destination, gas, nonce and chain id — so an application can let users sign with MetaMask without assembling any of what follows by hand. Read on if you are building the transaction yourself or want to understand what the SDK is doing.
+:::
+
+The calldata is the same encoding a Substrate client already produces for an extrinsic, so the usual approach is to build the call with Polymesh tooling and hand the bytes to an Ethereum library for signing:
+
+```js
+// 1. Build and SCALE-encode the call with a Substrate client.
+//    This is just encoding — nothing is signed or submitted here.
+const call = api.tx.asset.freeze(assetId);
+const data = call.method.toHex();
+
+// 2. Sign and submit it as an ordinary EVM transaction.
+const hash = await walletClient.sendTransaction({
+  to: '0x6d6f646c70792f70616464720000000000000000',
+  data,
+  value: 0n,
+});
+```
+
+Nested calls work too — a `utility.batch` encodes and dispatches exactly as it would from a Substrate client.
+
+## Which account the call runs as
+
+The extrinsic is dispatched as the EVM signer's **fallback account**: its 20-byte address padded with twelve `0xEE` bytes to make a 32-byte `AccountId32`. That is the same derivation described in [Address mapping](./010-address-mapping.mdx), and for a wallet whose identity _is_ an EVM keypair it is simply that wallet's Polymesh account.
+
+Consequences:
+
+- **The account needs an identity.** Most Polymesh extrinsics require the origin to be linked to a DID, so an EVM wallet must be onboarded before it can do much. It can onboard itself through the [`IPolymeshRuntime` precompile's](./020-precompiles/040-polymesh-runtime.mdx) `identitySelfRegisterDid`, or accept an authorization from an existing identity.
+- **The account pays the fee**, in POLYX, unless it is subsidised. The [Relayer pallet](/accounts/subsidized) can sponsor EVM-keyed accounts, including the storage deposit an EVM transaction pre-charges, which is how a wallet holding no POLYX can transact at all.
+
+`map_account` is not part of this flow. It exists so a **Substrate** account can claim its derived EVM address; an EVM key's account is already the `0xEE` fallback account and needs no mapping.
+
+## Permissions
+
+If the signing account is a **secondary key**, its permissions are checked against the extrinsic actually being dispatched — not against the `pallet-revive` call that carried it. A secondary key permitted only for `asset::issue` can dispatch exactly that through this address and nothing else.
+
+This is a deliberate behaviour of the runtime's dispatch hook; see [Secondary Keys](/identity/advanced/secondary-keys) for how permissions are configured.
+
+## Gas, fees and dry-running
+
+`eth_estimateGas` and `eth_call` both work against this address, and the dry run **actually dispatches the call** in a throwaway context to confirm it succeeds. A call that would fail — bad permissions, failed compliance, insufficient balance — is reported at estimation time as a dispatch error rather than being accepted and failing on chain.
+
+Two differences from a normal contract call:
+
+- The cost is the **Substrate transaction fee** for the dispatched extrinsic, converted to wei for the EVM-facing interfaces. It reflects Polymesh's weight model, not EVM gas metering.
+- Because nothing runs in a VM, there is **no EVM gas consumed by execution itself**, and the receipt reflects that rather than reporting contract-style gas usage.
+
+Since the dry run is what surfaces failures, skipping estimation and sending a fixed gas limit will let a doomed call onto the chain, where it consumes fees and fails.
+
+## Limits
+
+- **Zero value only.** Transfer POLYX with a `balances` call in the calldata, not with the transaction's `value` field.
+- **No re-entrancy.** A dispatched call cannot itself be another runtime-address call; the inner dispatch runs with a signed origin, which the entry point rejects.
+- **Contracts cannot use it.** The address is special only when it is the _destination of a transaction_. A contract that `CALL`s it reaches an account with no code and dispatches nothing — a contract needs a [precompile](./020-precompiles/index.mdx).
+- **Supported transaction types** are legacy, EIP-2930 and EIP-1559. EIP-7702 and EIP-4844 transactions are rejected.
+- **Encoded calls have a decode depth limit**, so deeply nested batches are rejected rather than decoded.
+
+## Related
+
+- [Precompiles](./020-precompiles/index.mdx) — the ABI-based route, usable from contracts
+- [Polymesh Runtime precompile](./020-precompiles/040-polymesh-runtime.mdx) — onboarding and asset creation for contracts
+- [Address mapping](./010-address-mapping.mdx) — how EVM addresses and Polymesh accounts relate
+- [EVM Wallets with the SDK](/development/tooling/sdk/evm-wallets) — doing this from an application, with MetaMask, viem or ethers
+- [Subsidized accounts](/accounts/subsidized) — sponsoring an EVM wallet's fees

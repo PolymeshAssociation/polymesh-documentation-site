@@ -44,7 +44,7 @@
     "@docusaurus/types": "^3.7.0",
     "@types/react": "^18.3.18",
     "bufferutil": "^4.0.9",
-    "docusaurus-plugin-llms": "^0.5.1",
+    "docusaurus-plugin-llms": "^0.6.0",
     "dotenv": "^16.4.7",
     "patch-package": "^8.0.1",
     "postinstall-postinstall": "^2.1.0",

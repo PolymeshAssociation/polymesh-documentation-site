@@ -1,0 +1,73 @@
+---
+title: Other Runtime Changes Changelog - v8.0 to v8.1.1
+description: Remaining Polymesh chain v8.1.1 runtime changes - the runtime version, storage migrations, EVM permission checks against the underlying extrinsic, and a Grandpa CurrentSetId fix repairing warp sync.
+id: v8.0-to-v8.1.1-other-runtime-changes
+slug: /development/changelogs/v8.0-to-v8.1.1/other-runtime-changes
+sidebar_label: Other Runtime Changes
+tags:
+  - migration
+  - changelog
+  - runtime
+---
+
+This page covers the changes outside the precompiles, asset freezing and NFT approvals. It is part of the [v8.0 → v8.1.1 changelog](./010-overview.mdx).
+
+**Audience:** node and infrastructure operators, and anyone auditing chain-level changes.
+
+---
+
+## Runtime version
+
+`spec_version` moves from `8_000_020` (v8.0.2) to **`8_001_010`** (v8.1.1). `transaction_version` is unchanged at `8`, so transaction signing is unaffected.
+
+## Storage migrations
+
+Two migrations run at the v8.1.1 upgrade, both backfilling the NFT counts that back ERC-721's `balanceOf`:
+
+| Migration          | Backfills           | From           | Storage version |
+| ------------------ | ------------------- | -------------- | --------------- |
+| `pallet-nft`       | `NFTAccountCount`   | `NFTHolder`    | 7 → 8           |
+| `pallet-portfolio` | `PortfolioNFTCount` | `PortfolioNFT` | 4 → 5           |
+
+Each walks every existing NFT holding once and writes one count per holder/collection pair. The work is proportional to the number of NFTs on the chain, so the upgrade block is heavier on NFT-rich networks. No integration action is required and no existing storage layout changes.
+
+## EVM calls are permission-checked against the underlying extrinsic
+
+When a call enters the runtime through the EVM — a precompile call, or a Substrate call carried by an EVM transaction — the runtime now evaluates permissions against **the extrinsic actually being dispatched**, rather than against the `pallet-revive` call that carried it.
+
+This makes secondary-key permissions behave the way operators expect: a key permitted to call `Asset::issue` and nothing else cannot use a precompile to reach anything further, and a key permitted only for `pallet-revive` no longer inherits blanket access to whatever an EVM call dispatches.
+
+**If you use secondary keys with restricted call permissions and those keys interact with the EVM**, review their permissions: a key that could previously make a precompile call may now need explicit permission for the underlying extrinsic.
+
+## v8 storage migrations removed
+
+The one-shot storage migrations that ran during the v7.4 → v8.0 upgrade have been deleted, now that every network has upgraded through them. Removed:
+
+- The runtime-level `SingleBlockMigrations` tuple entries: `UpgradeSessionKeys` (which added the BEEFY key to each validator's session keys), `RemoveRandomnessCollectiveFlipStorage`, `MigrateCddServiceProvidersToDidRegistrars`, and the upstream Grandpa/ImOnline/Offences/Session/Staking version migrations.
+- The `on_runtime_upgrade` hooks and `migrations` modules in `pallet-asset`, `pallet-identity`, `pallet-nft`, `pallet-portfolio`, `pallet-relayer`, `pallet-settlement`, `pallet-sto`, and `pallet-validators`.
+- The now-dead `OldSessionKeys` type and its transform function.
+
+This is invisible to integrations — no storage layout changed, only the code that would have converted an older layout. `pallet-asset`'s in-code storage version moves from `7` to `8` to match.
+
+:::warning v8.1.x cannot upgrade a pre-v8 chain
+Because these migrations are gone, a chain still running a v7.4 runtime **cannot** upgrade directly to v8.1 — its storage would never be converted. It must pass through a v8.0.x runtime first. This affects private or forked networks; Mainnet, Testnet, and Develop have all already upgraded.
+:::
+
+## Grandpa migration: `CurrentSetId` resync (warp-sync fix)
+
+A versioned migration, `MigrateGrandpaToV5`:
+
+1. Reads the legacy `GrandpaFinality::CurrentSetId` storage value (from the pre-v4 Grandpa storage prefix), removing it if present.
+2. Adds it to the current `Grandpa::CurrentSetId` and writes back the sum, resynchronising the authority set id.
+3. Clears the legacy `:grandpa_authorities` storage key left over from the upstream v5 migration.
+
+The practical effect is that **warp sync works again**. A node warp-syncing verifies Grandpa justifications against the authority set id it derives from state; a set id that disagreed with the finality proofs made warp sync fail. Operators bootstrapping new nodes should use v8.1 or later.
+
+## Migration checklist
+
+1. Upgrade node binaries as normal. Transaction signing is unaffected — `transaction_version` is still `8`.
+2. Expect a heavier upgrade block if your chain holds many NFTs, while the count migrations run.
+3. Review secondary-key permissions for any key that interacts with the EVM.
+4. Use v8.1 or later when bootstrapping nodes by warp sync.
+5. If you run a private or forked network still on a v7.4 runtime, upgrade through a v8.0.x runtime first.
+6. Refresh metadata-derived types and decoders — see the [Full Pallet API Reference](./090-pallet-api-reference.mdx).

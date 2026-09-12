@@ -1,0 +1,117 @@
+---
+title: Asset Freezing Changelog - v8.0 to v8.1.1
+description: Polymesh chain v8.1.1 adds holder-level asset freezing - freeze a single account or portfolio, or part of a holder's balance - plus a controller transfer that delivers to a named recipient.
+id: v8.0-to-v8.1.1-asset-freezing
+slug: /development/changelogs/v8.0-to-v8.1.1/asset-freezing
+sidebar_label: Asset Freezing
+tags:
+  - migration
+  - changelog
+  - runtime
+  - assets
+  - compliance
+---
+
+This page covers holder-level asset freezing, added in v8.1.1. It is part of the [v8.0 → v8.1.1 changelog](./010-overview.mdx).
+
+**Audience:** asset issuers and their agents, exchanges, custodians, indexers, and anyone whose code decides whether a transfer will succeed.
+
+---
+
+## What changed
+
+Before v8.1.1, freezing an asset was all-or-nothing. `Asset::freeze` halted every transfer of the asset for every holder; there was no way to restrict one investor without restricting all of them.
+
+v8.1.1 adds two finer levels. There are now three:
+
+| Level             | Call                                                                                         | Effect                                         |
+| ----------------- | -------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| Whole asset       | `Asset::freeze` / `Asset::unfreeze`                                                          | No holder can transfer the asset               |
+| Whole holder      | `Asset::set_holder_frozen`                                                                   | One holder cannot send the asset               |
+| Part of a balance | `Asset::set_frozen_tokens`, `Asset::freeze_partial_tokens`, `Asset::unfreeze_partial_tokens` | One holder cannot send _some_ of their balance |
+
+This is what regulated-asset workflows need for sanctions screening, dispute holds, lock-up periods enforced per investor, and partial escrow — each of which previously required either freezing the entire asset or moving the tokens away.
+
+All of these calls require the caller to be an **external agent** of the asset with the appropriate permission.
+
+The three calls that freeze part of a balance — `set_frozen_tokens`, `freeze_partial_tokens` and `unfreeze_partial_tokens` — apply to **fungible assets only**, and fail with `Asset::UnexpectedNonFungibleToken` for an NFT collection.
+
+`Asset::set_holder_frozen` applies to **both**. Freezing a holder of an NFT collection stops it sending any NFT in that collection: `pallet-nft` runs the same holder check on every transfer, so the transfer fails with `Asset::InvalidTransferSenderIsFrozen`, exactly as for a fungible asset.
+
+:::caution NFT transfer reports do not check the holder freeze
+`Nft::nft_transfer_report` evaluates the collection-level freeze but not the holder freeze, though the transfer itself enforces it. That gap reaches both the `NFTApi::transfer_report` runtime API and the NFT precompile's `canTransfer`, so a report can come back clean for a transfer the chain will reject with `Asset::InvalidTransferSenderIsFrozen`.
+
+Read `Asset::FrozenAccounts` (or `Portfolio::FrozenPortfolios`) for the sending holder alongside the report. The fungible report has no such gap — `Asset::asset_transfer_report` covers the holder freeze through its balance check.
+:::
+
+## Holders: accounts and portfolios
+
+Each of the new calls takes an `AssetHolder`, which is either:
+
+- `AssetHolder::Account(AccountId)` — a single account key, or
+- `AssetHolder::Portfolio(PortfolioId)` — a portfolio belonging to an identity.
+
+This matters because freezing is **not** applied at the identity level. Freezing one account key of an identity does not freeze that identity's other keys or its portfolios. An agent freezing a sanctioned investor needs to freeze each holder that investor controls.
+
+Portfolio freezes are enforced in `pallet-portfolio` as well as `pallet-asset`, so a frozen portfolio cannot move the asset out by any route, including portfolio-to-portfolio moves within the same identity. The error there is `Portfolio::PortfolioIsFrozen`.
+
+## How a frozen balance affects transfers
+
+A holder's transferable balance is now:
+
+```text
+available = balance − locked − frozen
+```
+
+where `locked` is the existing settlement lock and `frozen` is the new frozen amount. A transfer of more than `available` fails with `Asset::InsufficientBalance`, the same error as before — so code that already handles insufficient balance will not break, it will simply see the error in a situation it did not previously.
+
+A transfer attempted by a **fully frozen** holder fails earlier, with the new `Asset::InvalidTransferSenderIsFrozen`.
+
+Freezing only restricts **sending**. A frozen holder can still receive the asset, and the received tokens are not automatically frozen.
+
+Frozen state persists across transfers and is not cleared by a balance reaching zero — unfreezing is always an explicit agent action.
+
+### Controller transfers bypass freezes
+
+`Asset::controller_transfer` and the new `Asset::controller_transfer_to` deliberately ignore both the holder freeze and the frozen balance; they only respect the settlement lock. This is what makes seizure from a frozen holder possible — otherwise an agent would have to unfreeze an account to act on it, opening a window in which the holder could move the tokens themselves.
+
+## Relative and absolute freezing
+
+Two of the calls look similar and behave differently:
+
+- `freeze_partial_tokens(asset_id, holder, amount)` is **relative**. It adds `amount` to whatever is already frozen. Calling it twice with `100` leaves 200 frozen. It fails with `Asset::FreezePartialTokenMustNotExceedHoldersBalance` if the result would exceed the holder's balance.
+- `set_frozen_tokens(asset_id, holder, amount)` is **absolute**. It sets the frozen balance to exactly `amount`, whatever it was before. It does not check the holder's balance — setting a frozen amount above the current balance is allowed and simply leaves nothing available.
+
+`unfreeze_partial_tokens` is relative, and fails with `Asset::InsufficientFrozenBalance` if you try to release more than is frozen.
+
+Both paths emit `Asset::FrozenBalanceSet` carrying the resulting frozen balance, so an indexer only ever needs to track the absolute value.
+
+## Controller transfers to a named recipient
+
+`Asset::controller_transfer_to(asset_id, value, source, destination)` is a new extrinsic that seizes from `source` and delivers to `destination`, both `AssetHolder`s.
+
+The existing `Asset::controller_transfer` delivers to a portfolio of the calling agent, which meant returning seized assets to a rightful owner took two steps and left the assets in the agent's custody in between. `controller_transfer_to` does it in one, and is what backs `forcedTransfer` on both asset precompiles.
+
+It emits the new `Asset::ControllerTransferTo` event. `pallet-nft` gains an equivalent `Nft::controller_transfer_to` for collections.
+
+Both fail with `ReceiverAffirmationRequired` if the destination requires the receiver to affirm incoming transfers — a forced transfer cannot bypass that.
+
+## What integrators need to change
+
+**If you pre-check transfers**, a transfer can now fail for two reasons that did not exist in v8.0. Add `Asset::InvalidTransferSenderIsFrozen` and `Portfolio::PortfolioIsFrozen` to your handling, and note that `Asset::InsufficientBalance` now accounts for frozen tokens.
+
+The cheapest way to pre-check is the transfer report used by `canTransfer`, which already accounts for all of this. From the EVM side, `canSend`/`canReceive`/`canTransfer` on the [fungible-asset precompile](/development/smart-contracts/precompiles/fungible-asset) do the same.
+
+**If you display balances**, a holder's spendable balance is no longer `balance − locked`. Read the frozen balance and subtract it, or you will show users an amount they cannot send.
+
+**If you index events**, three new `Asset` events exist:
+
+| Event                  | Fields                                                      |
+| ---------------------- | ----------------------------------------------------------- |
+| `FrozenBalanceSet`     | `caller_did`, `asset_holder`, `asset_id`, `frozen_balance`  |
+| `SetAccountFreeze`     | `caller_did`, `holder`, `asset_id`, `freeze`                |
+| `ControllerTransferTo` | `caller_did`, `asset_id`, `source`, `destination`, `amount` |
+
+**If you are an issuer or agent**, no action is required — existing assets have nothing frozen, and asset-level freezing behaves exactly as before.
+
+See the [Full Pallet API Reference](./090-pallet-api-reference.mdx) for exact call signatures, indices, errors and storage items.

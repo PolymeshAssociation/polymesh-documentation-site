@@ -1,0 +1,184 @@
+---
+title: Polymesh Runtime Precompile
+description: Call general-purpose Polymesh extrinsics from Solidity - create assets, register tickers, onboard identities and authorize external agents through a single fixed-address precompile.
+id: precompile-polymesh-runtime
+slug: /development/smart-contracts/precompiles/polymesh-runtime
+sidebar_label: Polymesh Runtime
+tags:
+  - development
+  - smart contracts
+  - evm
+  - precompiles
+  - identity
+---
+
+The asset precompiles are scoped to one asset: the address says which asset or collection you are acting on. `IPolymeshRuntime` covers what is left — the calls that **create** an asset, or that have nothing to do with a particular asset at all.
+
+It lives at a single fixed address on every network:
+
+```text
+0x00000000000000000000000000000000ffff0000
+```
+
+Available since chain **v8.1** on Mainnet, Testnet, and Develop.
+
+:::warning Every method changes state
+There are no `view` methods on this interface, so the whole precompile is rejected in a read-only context. `eth_call` and `staticcall` revert with `StateChangeDenied` rather than returning a result — including gas estimation performed as a static call.
+:::
+
+:::tip Read the shared semantics first
+[Precompiles](./index.mdx) covers the rules common to every Polymesh precompile — how EVM callers resolve to Polymesh accounts, why failures revert rather than return `false`, delegate-call and read-only restrictions, and gas.
+:::
+
+## Exposed calls
+
+| Method                                                                                  | Runs                                  | Returns                        |
+| --------------------------------------------------------------------------------------- | ------------------------------------- | ------------------------------ |
+| `assetCreateAsset(assetName, divisible, assetType, assetIdentifiers, fundingRoundName)` | `Asset::create_asset`                 | The new `bytes16` asset id     |
+| `assetRegisterTicker(ticker)`                                                           | `Asset::register_unique_ticker`       | —                              |
+| `identityRegisterDid(targetAccount)`                                                    | `Identity::register_did`              | The new `bytes32` DID          |
+| `identitySelfRegisterDid()`                                                             | `Identity::self_register_did`         | The caller's new `bytes32` DID |
+| `externalAgentsAuthorizeBecomeAgent(target, assetId, agentGroup)`                       | `Identity::add_authorization`         | The `uint64` authorization id  |
+| `externalAgentsAcceptBecomeAgent(authId)`                                               | `ExternalAgents::accept_become_agent` | —                              |
+
+The asset id returned by `assetCreateAsset` is the value the [fungible](./020-fungible-asset.mdx) and [NFT](./030-non-fungible-asset.mdx) precompiles embed in their addresses, so a contract can create an asset and immediately compute where to call it.
+
+## Interface
+
+The interface below is abridged for readability. The complete source, with NatSpec, is [`PolymeshRuntime.sol`](https://github.com/PolymeshAssociation/Polymesh/blob/mainnet/precompiles/src/interfaces/PolymeshRuntime.sol) — import it to call this precompile from a contract, or compile it (`solc --abi`, `forge inspect IPolymeshRuntime abi`) for an ABI to use with viem, ethers or web3. The runtime bytecode the precompile serves is [`PolymeshRuntime.bin`](https://github.com/PolymeshAssociation/Polymesh/blob/mainnet/precompiles/src/interfaces/PolymeshRuntime.bin).
+
+```solidity
+interface IPolymeshRuntime {
+    enum AssetTypeKind {
+        EquityCommon, EquityPreferred, Commodity, FixedIncome, REIT, Fund,
+        RevenueShareAgreement, StructuredProduct, Derivative, Custom, StableCoin,
+        NonFungibleDerivative, NonFungibleFixedIncome, NonFungibleInvoice, NonFungibleCustom
+    }
+    struct AssetType { AssetTypeKind kind; uint32 customTypeId; }
+
+    enum AssetIdentifierKind { CUSIP, CINS, ISIN, LEI, FIGI }
+    struct AssetIdentifier { AssetIdentifierKind identifierType; bytes value; }
+
+    enum AgentGroupKind { Full, Custom, ExceptMeta, PolymeshV1CAA, PolymeshV1PIA }
+    struct AgentGroup { AgentGroupKind kind; uint32 customId; }
+
+    event AssetCreated(bytes32 indexed did, bytes16 indexed assetId, string assetName);
+    event TickerRegistered(bytes32 indexed did, string ticker, uint64 expiry);
+    event DidCreated(bytes32 indexed did, address indexed targetAccount);
+
+    function assetCreateAsset(
+        string calldata assetName,
+        bool divisible,
+        AssetType calldata assetType,
+        AssetIdentifier[] calldata assetIdentifiers,
+        string calldata fundingRoundName
+    ) external returns (bytes16 assetId);
+
+    function assetRegisterTicker(string calldata ticker) external;
+
+    function identityRegisterDid(address targetAccount) external returns (bytes32 did);
+    function identitySelfRegisterDid() external returns (bytes32 did);
+
+    function externalAgentsAuthorizeBecomeAgent(
+        bytes32 target,
+        bytes16 assetId,
+        AgentGroup calldata agentGroup
+    ) external returns (uint64 authId);
+
+    function externalAgentsAcceptBecomeAgent(uint64 authId) external;
+}
+```
+
+## Types
+
+### `AssetType`
+
+`kind` selects the security type. `EquityCommon` through `StableCoin` are fungible; `NonFungibleDerivative`, `NonFungibleFixedIncome`, `NonFungibleInvoice` and `NonFungibleCustom` create an NFT collection.
+
+`customTypeId` is read **only** when `kind` is `Custom` or `NonFungibleCustom`, and must be the id of a custom asset type already registered on chain. It is ignored otherwise.
+
+### `AssetIdentifier`
+
+`value` must be exactly the length its `identifierType` requires, or the call reverts with `Asset identifier value has the wrong length for its type`:
+
+| Type    | Bytes |
+| ------- | ----- |
+| `CUSIP` | 9     |
+| `CINS`  | 9     |
+| `ISIN`  | 12    |
+| `LEI`   | 20    |
+| `FIGI`  | 12    |
+
+Pass an empty array when the asset has no identifiers.
+
+### `AgentGroup`
+
+`Full`, `ExceptMeta`, `PolymeshV1CAA` and `PolymeshV1PIA` are the built-in groups. `customId` is read only when `kind` is `Custom`, and must be an agent group already defined for that asset.
+
+## Method behaviour
+
+### Asset creation
+
+`assetCreateAsset` creates the asset under the **calling account's identity**. Pass an empty string for `fundingRoundName` to mean "none". The asset is created with no ticker; link one separately with `assetRegisterTicker` and the asset precompile's `setSymbol`, or through the Substrate API.
+
+Emits `AssetCreated`.
+
+### Ticker registration
+
+`assetRegisterTicker` registers a ticker to the caller's identity. A ticker is a globally unique, registered object on Polymesh, so this is a real registration:
+
+- The ticker must be **available** — one held by another identity reverts.
+- Registration charges the standard **ticker fee** in POLYX, beyond gas.
+- The ticker is at most **12 characters**; longer input reverts with `Ticker is too long`.
+
+Emits `TickerRegistered`, whose `expiry` is a millisecond Unix timestamp, or `0` when the registration does not expire.
+
+### Identity onboarding
+
+`identitySelfRegisterDid` creates a DID for the **caller**. `identityRegisterDid` creates one for another account and requires the caller to be an **active DID Registrar**; for any other caller it reverts.
+
+Both emit `DidCreated`.
+
+:::danger A precompile call acts as its immediate caller
+When a contract calls `identitySelfRegisterDid`, the DID is created for the **contract's own account**, not for the user who called the contract. A contract cannot onboard a user unless it is itself a DID Registrar and calls `identityRegisterDid` with the user's address.
+
+This is the general rule that a precompile call acts as its immediate caller, described in [Precompiles](./index.mdx#callers-are-resolved-to-polymesh-accounts). It is the single most common mistake in an onboarding contract.
+:::
+
+### Agent authorization
+
+`externalAgentsAuthorizeBecomeAgent` creates a `BecomeAgent` authorization for the target identity on the given asset, and returns its `authId`. The authorization **never expires**.
+
+The target then calls `externalAgentsAcceptBecomeAgent(authId)` to become an agent. The two calls are usually made by different parties.
+
+Note that `target` is a **DID** (`bytes32`), not an address — authorizations are issued to identities.
+
+## Revert reasons
+
+| Revert reason                                              | Cause                                                                                                                                   |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `Ticker is too long`                                       | A ticker longer than 12 characters.                                                                                                     |
+| `Asset identifier value has the wrong length for its type` | An `AssetIdentifier` whose `value` length does not match its type.                                                                      |
+| `Asset not found`                                          | The asset could not be read back after creation.                                                                                        |
+| `DID lookup failed after registration`                     | The DID could not be read back after registration.                                                                                      |
+| `Ticker registration not found after registering it`       | The registration could not be read back.                                                                                                |
+| `Extrinsic returned an error: <message>`                   | The underlying pallet call failed; its own error message is appended — insufficient permission, ticker taken, duplicate DID, and so on. |
+| `Invalid caller` / `Invalid account id`                    | An address could not be resolved to a valid Polymesh account.                                                                           |
+
+## Design considerations
+
+**The contract is the actor.** Every call here acts as the calling account. A contract creating an asset owns that asset; a contract registering a DID registers its own. Give the contract an identity before it needs one.
+
+**You cannot simulate these calls.** With no `view` methods, `eth_call` always reverts. Test against a development network with real transactions.
+
+**Onboarding needs a registrar.** A contract that onboards users must hold the DID Registrar role, which is granted by governance. Without it, `identityRegisterDid` reverts and only self-registration is available.
+
+**Fees are not only gas.** Asset creation and ticker registration charge Polymesh protocol fees in POLYX, on top of EVM gas.
+
+## Related
+
+- [Precompiles](./index.mdx) — the address scheme and shared call semantics
+- [Fungible Asset (ERC-20)](./020-fungible-asset.mdx) and [Non-Fungible Asset (ERC-721)](./030-non-fungible-asset.mdx) — acting on an asset once it exists
+- [Identity](/identity) — DIDs, keys, and onboarding
+- [Asset Agents](/asset-agents) — agent groups and permissions
+- [v8.0 → v8.1.1 changelog](/development/changelogs/v8.0-to-v8.1.1/runtime-precompile) — what shipped, and when
