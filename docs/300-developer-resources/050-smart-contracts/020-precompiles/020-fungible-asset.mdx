@@ -16,7 +16,7 @@ Every Polymesh fungible asset is callable as an **ERC-20 token** from contracts 
 
 Calls route into `pallet-asset` and `pallet-settlement`, so identity, compliance, transfer restrictions, freezes, and agent permissions are all enforced exactly as they are for a Substrate transaction. An ERC-20 `transfer` that would break a Polymesh rule reverts.
 
-Available since chain **v8.1** on Mainnet, Testnet, and Develop.
+Enabled on Mainnet, Testnet, and Develop.
 
 :::warning It is not a drop-in ERC-20
 The ABI is standard, but the behaviour is not in several places that mainstream tooling depends on. Infinite approvals, zero-value transfers, self-transfers, and transfers to un-onboarded addresses all **revert**. Read [ERC-20 conformance and deviations](#erc-20-conformance-and-deviations) before porting an existing integration.
@@ -247,7 +247,7 @@ A transfer above that fails with `InsufficientBalance`; a transfer by a fully fr
 
 `forcedTransfer` deliberately bypasses both, which is what allows an agent to seize from a frozen holder without unfreezing them first.
 
-Polymesh applies freezes to a **holder**, which may be an account key or a portfolio. Only the account form has an EVM address, so these methods reach account holders only; portfolios must be frozen through the Substrate API. See the [Asset Freezing changelog](/development/changelogs/v8.0-to-v8.1.1/asset-freezing).
+Polymesh applies freezes to a **holder**, which may be an account key or a portfolio. Only the account form has an EVM address, so these methods reach account holders only; portfolios must be frozen through the Substrate API. See [Freezing an individual holder](/core/assets#freezing-an-individual-holder).
 
 ## Standards conformance
 
@@ -296,7 +296,7 @@ These are EVM logs. The underlying `Asset` and `Settlement` pallets emit their n
 | `permit is not implemented yet` (and `nonces`, `domain_separator`)                                               | EIP-2612 methods are declared but unimplemented.                                                                                                              |
 | `Invalid symbol; Ticker is too long`                                                                             | `setSymbol` was given more than 12 characters.                                                                                                                |
 
-Plus the shared guards documented in [Precompiles](./index.mdx#shared-call-semantics): `PrecompileDelegateDenied` for delegate calls, and `StateChangeDenied` for state-changing methods invoked in a read-only context.
+Plus the shared guards documented in [Precompiles](./index.mdx#shared-call-semantics): `PrecompileDelegateDenied` for delegate calls, and `StateChangeDenied` for state-changing methods reached through `staticcall` or another read-only execution frame. `eth_call` is a dry run rather than a read-only frame, so a simulated write reports success and commits nothing.
 
 ### Common pallet errors
 

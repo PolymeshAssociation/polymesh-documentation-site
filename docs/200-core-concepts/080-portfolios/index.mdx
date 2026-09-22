@@ -163,6 +163,8 @@ An asset's issuer or an authorised agent can freeze a portfolio for a **specific
 
 A frozen portfolio cannot move the asset by any route, including moves to another portfolio of the same identity; those fail with `portfolio::PortfolioIsFrozen`. It can still receive the asset, and freezing is per asset — a portfolio frozen for one asset moves its other holdings normally.
 
+A **partially** frozen portfolio can move only its unfrozen tokens. The amount available to move is `balance − locked − frozen`, and a move beyond that fails with `portfolio::InsufficientPortfolioBalance`. The same limit applies to locking an NFT into a settlement instruction: an NFT held in a frozen portfolio cannot be locked, so it cannot be committed to an instruction while the freeze holds.
+
 Portfolio freezing is controlled by the asset's agents, not by the portfolio's owner or custodian. See [Freezing and Unfreezing Assets](/core/assets#freezing-and-unfreezing-assets).
 
 ### Querying Portfolio Information

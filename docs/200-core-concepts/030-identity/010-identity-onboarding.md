@@ -11,7 +11,7 @@ tags:
 
 ## Overview
 
-From Polymesh v8, onboarding on Polymesh is only based on DID registration. To access identity and asset related functionality, a key must be linked to an on-chain identity (DID).
+Onboarding on Polymesh is based on DID registration. To access identity and asset related functionality, a key must be linked to an on-chain identity (DID).
 
 Accounts used only for POLYX transfers and staking (excluding validator activities) do not require a DID.
 

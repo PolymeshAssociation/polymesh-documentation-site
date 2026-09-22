@@ -158,6 +158,8 @@ Freezing a holder works for both fungible assets and NFT collections. Freezing *
 
 As with asset-wide freezing, controller transfers bypass holder freezes — an agent does not need to unfreeze a holder before seizing from them.
 
+A holder freeze is enforced on every route out of the holding, including moves between portfolios of the same identity and locking an NFT into a settlement instruction. It is also reflected in the transfer reports used to pre-check a transfer, so a report that comes back clean and a transfer that then succeeds agree with one another.
+
 ## Further Reading
 
 - [Fungible Assets](/core/assets/fungible)

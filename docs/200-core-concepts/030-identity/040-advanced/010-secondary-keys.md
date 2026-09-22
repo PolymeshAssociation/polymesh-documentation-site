@@ -157,7 +157,7 @@ Because extrinsic permissions delegate the authority of the calls they allow, gr
 
 When permissioning secondary keys:
 
-- Apply least privilege: grant only the specific extrinsics a key needs for its role, and prefer a minimal, explicit extrinsic set over broad "all functions" (`Whole`) access.
+- Apply least privilege: grant only the specific extrinsics a key needs for its role, and prefer a minimal, explicit extrinsic set over broad "all functions" (`Whole`) access. An "everything except these" (`Except`) extrinsic set is not available — the chain rejects it with `identity::ExceptNotAllowedForExtrinsics`, because such a set silently widens when a runtime upgrade adds an extrinsic. Enumerate what you intend to allow instead; see [Why `Except` is refused](/asset-agents#why-except-is-refused).
 - Treat permission to call any permission-, key-, or authorization-management extrinsic as granting that management authority itself.
 - Do not rely on `Assets` or `Portfolios` scoping to contain a key that also holds such an extrinsic permission — those scopes bound only portfolio access and external-agent actions, not the authority a management call carries.
 - Note that the most critical identity functions are reserved to the primary key and cannot be delegated to a secondary key at all — see **Primary Key Exclusive Functions** below.

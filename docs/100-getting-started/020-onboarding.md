@@ -13,7 +13,7 @@ tags:
 
 Polymesh users who participate in **asset** and **identity** related transactions must have an on-chain identity (DID). Accounts used solely for POLYX transfers and staking (excluding validator activities) are not subject to this requirement.
 
-From Polymesh v8, onboarding is to receive a DID and supports two paths:
+Onboarding is to receive a DID, and supports two paths:
 
 - **Self-registration**: The user calls `identity::self_register_did` for their own key and pays the transaction fee.
 - **Registrar-assisted registration**: A permissioned DID registrar registers a DID for a user key using `identity::register_did`, and pays the transaction fee.

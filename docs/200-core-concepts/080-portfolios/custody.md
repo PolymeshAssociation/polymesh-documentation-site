@@ -280,7 +280,9 @@ Upon acceptance, the custodian immediately gains custody rights over the specifi
 
 If a custodian no longer wishes to manage the portfolio or cannot fulfill their duties, they can relinquish their custodian rights to a portfolio by calling `portfolio::quit_portfolio_custody`.
 
-This function immediately ends the custodian's management rights over the portfolio, and the portfolio owner regains full control and management authority. Note that only the current custodian of a portfolio can invoke this function. The portfolio owner cannot unilaterally revoke custody.
+This function immediately ends the custodian's management rights over the portfolio, and the portfolio owner regains full control and management authority. Note that only the current custodian of a portfolio can invoke this function; another identity is rejected with `portfolio::UnauthorizedCustodian`. The portfolio owner cannot unilaterally revoke custody.
+
+If the call is signed by a **secondary key** of the custodian identity, that key must also hold portfolio permission for the portfolio it is relinquishing. A key whose portfolio permissions exclude it cannot quit custody on the identity's behalf, the same rule that governs every other portfolio operation. Restrict the keys that manage custody accordingly.
 
 ## Querying Custody Information
 

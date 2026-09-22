@@ -20,10 +20,12 @@ It lives at a single fixed address on every network:
 0x00000000000000000000000000000000ffff0000
 ```
 
-Available since chain **v8.1** on Mainnet, Testnet, and Develop.
+Enabled on Mainnet, Testnet, and Develop.
 
 :::warning Every method changes state
-There are no `view` methods on this interface, so the whole precompile is rejected in a read-only context. `eth_call` and `staticcall` revert with `StateChangeDenied` rather than returning a result — including gas estimation performed as a static call.
+There are no `view` methods on this interface, so every method is rejected when a contract reaches it through `staticcall` or any other read-only execution frame, failing with `StateChangeDenied`.
+
+`eth_call` and `eth_estimateGas` are dry runs rather than read-only frames, so they execute the call against a throwaway overlay and report the result without committing anything. A simulated call therefore reports success rather than reverting — see [read-only contexts](./index.mdx#read-only-contexts-reject-state-changes).
 :::
 
 :::tip Read the shared semantics first
@@ -169,7 +171,7 @@ Note that `target` is a **DID** (`bytes32`), not an address — authorizations a
 
 **The contract is the actor.** Every call here acts as the calling account. A contract creating an asset owns that asset; a contract registering a DID registers its own. Give the contract an identity before it needs one.
 
-**You cannot simulate these calls.** With no `view` methods, `eth_call` always reverts. Test against a development network with real transactions.
+**A simulation is not a commitment.** `eth_call` dry-runs these methods against a throwaway overlay, so a simulated `assetCreateAsset` or `identitySelfRegisterDid` reports success without creating anything. Use it to check whether a call would succeed, and send a real transaction when you want the effect.
 
 **Onboarding needs a registrar.** A contract that onboards users must hold the DID Registrar role, which is granted by governance. Without it, `identityRegisterDid` reverts and only self-registration is available.
 
@@ -181,4 +183,4 @@ Note that `target` is a **DID** (`bytes32`), not an address — authorizations a
 - [Fungible Asset (ERC-20)](./020-fungible-asset.mdx) and [Non-Fungible Asset (ERC-721)](./030-non-fungible-asset.mdx) — acting on an asset once it exists
 - [Identity](/identity) — DIDs, keys, and onboarding
 - [Asset Agents](/asset-agents) — agent groups and permissions
-- [v8.0 → v8.1.1 changelog](/development/changelogs/v8.0-to-v8.1.1/runtime-precompile) — what shipped, and when
+- [v8.0 → v8.1.2 changelog](/development/changelogs/v8.0-to-v8.1.2/runtime-precompile) — what shipped, and when

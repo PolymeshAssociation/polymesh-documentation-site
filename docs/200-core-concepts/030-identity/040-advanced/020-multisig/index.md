@@ -51,6 +51,9 @@ The basic flow for multisig operations:
 When a multisig is created by calling `multisig::create_multisig`:
 
 1. It's automatically added as a secondary key to the creator's identity. Optionally the creator can assign [secondary key permissions](/identity/advanced/secondary-keys/#secondary-key-permissions) to the multisig when creating — but only if the caller is the **primary key** of the creator's identity. A secondary key can also call `create_multisig`, but only without specifying custom permissions (the new multisig signer key is then created with empty permissions); passing custom permissions from a secondary key is rejected with `KeyNotAllowed`.
+
+   Custom permissions supplied here are validated at creation against the same length and complexity limits as every other permission-setting call, so an oversized permission set is rejected rather than stored. `Except` extrinsic permissions are refused — see [Why `Except` is refused](/asset-agents#why-except-is-refused). The call's fee rises with the size of the permission set.
+
 2. The creator's identity becomes the paying identity
 3. Authorization requests are sent to all designated signers
 4. Signers must accept their authorizations before participating

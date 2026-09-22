@@ -23,11 +23,11 @@ The practical consequence: a Solidity contract can treat a Polymesh asset as an 
 
 ## Available precompiles
 
-| Precompile                                         | Interface                                   | Address                                      | Since |
-| -------------------------------------------------- | ------------------------------------------- | -------------------------------------------- | ----- |
-| [Fungible Asset](./020-fungible-asset.mdx)         | ERC-20, ERC-3643 (partial), ERC-7943        | `0x<assetId>00080000`                        | v8.1  |
-| [Non-Fungible Asset](./030-non-fungible-asset.mdx) | ERC-721, ERC-721Metadata, ERC-165, ERC-7943 | `0x<assetId>00090000`                        | v8.1  |
-| [Polymesh Runtime](./040-polymesh-runtime.mdx)     | `IPolymeshRuntime`                          | `0x00000000000000000000000000000000ffff0000` | v8.1  |
+| Precompile                                         | Interface                                   | Address                                      |
+| -------------------------------------------------- | ------------------------------------------- | -------------------------------------------- |
+| [Fungible Asset](./020-fungible-asset.mdx)         | ERC-20, ERC-3643 (partial), ERC-7943        | `0x<assetId>00080000`                        |
+| [Non-Fungible Asset](./030-non-fungible-asset.mdx) | ERC-721, ERC-721Metadata, ERC-165, ERC-7943 | `0x<assetId>00090000`                        |
+| [Polymesh Runtime](./040-polymesh-runtime.mdx)     | `IPolymeshRuntime`                          | `0x00000000000000000000000000000000ffff0000` |
 
 Precompiles are configured per runtime via the `Precompiles` associated type on `pallet_revive::Config`. All three are enabled on **Mainnet, Testnet, and Develop**.
 
@@ -92,11 +92,26 @@ A contract cannot `delegatecall` into a precompile. Attempting it fails with `Pr
 
 ### Read-only contexts reject state changes
 
-Calling a state-changing precompile method through `eth_call`, `staticcall`, or any other read-only context fails with `StateChangeDenied` rather than appearing to succeed. Simulating a write with `eth_call` will therefore revert — use it only for `view` methods.
+A contract that reaches a state-changing precompile method through `staticcall` — or any other read-only execution frame — fails with `StateChangeDenied` rather than appearing to succeed. This is what stops a precompile writing to Polymesh storage from inside a frame the EVM believes cannot write, since the EVM cannot roll back a pallet write it never saw.
+
+`eth_call` and `eth_estimateGas` are **not** read-only frames. They are dry runs: the call executes normally against a throwaway overlay, and the result is discarded when the query returns. Simulating a write therefore reports success rather than reverting, exactly as it does on any Ethereum node, and nothing is committed. Treat a successful `eth_call` on a state-changing method as "this would have worked", not as evidence that it happened.
+
+Two consequences worth designing around:
+
+- A dry run does not check a signature, so simulating a call from an address you do not control still reports what that address could do. Do not use `eth_call` as an authorization test.
+- A dry run does dispatch the underlying pallet call, so it surfaces genuine failures — failed compliance, missing permissions, insufficient balance — as a revert at estimation time.
 
 ### Gas is charged from Polymesh weights
 
 Precompiles charge the worst-case weight of the underlying pallet call up front and refund down to actual consumption where the runtime can measure it. Gas estimates from Ethereum tooling reflect Polymesh's weight model (scaled by the runtime's `GasScale`), so a precompile call can be materially more expensive than an equivalent operation against a plain Solidity token — it is doing real compliance and settlement work.
+
+### The caller pays, and can be subsidised
+
+The runtime records a **current fee payer** for the call it is dispatching, which is what the Relayer pallet consults to decide whether a call is [subsidised](/accounts/subsidized). A precompile sets that payer before dispatching the underlying pallet call and restores the previous value afterwards.
+
+The payer is the precompile's **immediate caller**, resolved to its Polymesh account. When an account calls a precompile directly, that account pays. When a **contract** calls a precompile, the contract's own account pays — not the account that submitted the transaction. A contract that acts on behalf of users therefore needs its own subsidy, or its own POLYX, for the pallet calls it makes; it does not inherit the caller's.
+
+This is about _who pays for the pallet call_, not about EVM gas: gas for the transaction itself is still paid by the account that submitted it.
 
 ### Events are EVM logs
 
@@ -136,4 +151,4 @@ The Polymesh repository ships helper scripts for this workflow under [`scripts/`
 - [Runtime Calls from an EVM Wallet](/development/smart-contracts/runtime-calls) — reaching the whole runtime from a wallet, without a contract
 - [Fungible Assets](/core/assets/fungible) — the native asset model the fungible-asset precompile exposes
 - [Compliance](/compliance) — the rules evaluated on every transfer
-- [v8.0 → v8.1.1 changelog](/development/changelogs/v8.0-to-v8.1.1) — what shipped, and when
+- [v8.0 → v8.1.2 changelog](/development/changelogs/v8.0-to-v8.1.2) — what shipped, and when

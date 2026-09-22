@@ -30,13 +30,14 @@ Permissions are not assigned directly to agents but rather to **Agent Groups**. 
 
 Polymesh employs a hierarchical permission system allowing fine-grained control. Permissions determine which actions (extrinsics within specific pallets) an agent belonging to a group can perform for the asset.
 
-Permissions can be defined at the group level using three main types:
+Permissions can be defined at the group level using two types:
 
 - **Full**: Grants access to all extrinsics across all pallets related to the asset.
 - **These**: Grants access _only_ to specified extrinsics within specified pallets.
-- **Except**: Grants access to all extrinsics _except_ for specified ones within specified pallets.
 
 This allows for precise delegation, such as granting an agent permission only to manage asset documentation (`asset::add_documents`, `asset::remove_documents`) but nothing else.
+
+A third form, **Except** — everything but a named set — exists in the `ExtrinsicPermissions` type but is **not accepted for agent groups**. See [Why `Except` is refused](#why-except-is-refused).
 
 ## Permission Groups
 
@@ -87,7 +88,6 @@ At both levels, you can use:
 
 - `Whole`: All pallets or all extrinsics in a pallet.
 - `These`: Only the specified pallets or extrinsics.
-- `Except`: All except the specified pallets or extrinsics.
 
 **Example:**
 
@@ -99,9 +99,26 @@ At both levels, you can use:
 When defining custom agent permissions, pallet names use `UpperCamelCase` (e.g., `Asset`), and extrinsic names use `snake_case` (e.g., `add_documents`). The chain metadata can be used to identify supported pallets and functions. [Subscan](https://polymesh.subscan.io/runtime) offers a convenient tool for exploring the chain metadata to identify correct pallet and extrinsic names.
 :::
 
-:::warning
-When using `Except` at either the pallet or extrinsic level, be aware that future chain upgrades may add new pallets or extrinsics. Agents in a group with `Except` permissions could automatically gain access to new functionality, which may not be intended. For maximum security, prefer using `These` to explicitly enumerate allowed actions.
+### Why `Except` is refused
+
+The `ExtrinsicPermissions` type has a third variant, `Except`, meaning "everything but these". It is **rejected when setting agent group permissions**, at both the pallet level and the extrinsic level within a pallet.
+
+The reason is that an `Except` permission silently widens. It is defined against the extrinsics that exist when it is written, so a chain upgrade that adds an extrinsic grants it to every agent in that group without anyone deciding to. A permission set meant to withhold `asset::issue` would, after an upgrade adding a new issuance call, grant that call too. `These` cannot widen this way: a new extrinsic is simply not in the list.
+
+The chain enforces this:
+
+| Where `Except` appears                                            | Error                                         |
+| ----------------------------------------------------------------- | --------------------------------------------- |
+| At the pallet level — `Except([Asset])`                           | `externalAgents::ExceptPermissionsNotAllowed` |
+| Nested inside a `These` entry — `These([Asset: Except([issue])])` | `identity::ExceptNotAllowedForExtrinsics`     |
+
+Both apply to `externalAgents::create_group` and `externalAgents::set_group_permissions`, and the same rule governs secondary key permissions. Enumerate the calls you intend to allow with `These` instead.
+
+:::note Existing groups are not re-validated
+The check runs only when permissions are set, so a group created before this rule took effect keeps whatever it was given and continues to work. It is re-checked the next time someone calls `set_group_permissions` on it, which will fail until the `Except` is replaced with an explicit `These` set.
 :::
+
+`Except` remains valid for **asset** and **portfolio** permissions, which name concrete on-chain entities rather than extrinsics and so cannot widen through a runtime upgrade.
 
 :::warning
 Carefully consider whether to grant access to the `ExternalAgents` pallet when defining custom group permissions. Granting permission to this pallet allows agents to modify agent groups and permissions including their own. To prevent agents from escalating their privileges or altering group membership, it is recommended to **not include** the `ExternalAgents` pallet unless such administrative control is intended.
