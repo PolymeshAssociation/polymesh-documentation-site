@@ -1,8 +1,8 @@
 ---
-title: Polymesh Chain Changelog - v8.0 to v8.1.1
-description: Executive summary and migration notes for upgrading integrations from Polymesh chain v8.0 to v8.1.1 - EVM precompiles for fungible assets, NFT collections and general runtime calls, holder-level asset freezing, NFT approvals, and ETH wallet support.
-id: v8.0-to-v8.1.1-overview
-slug: /development/changelogs/v8.0-to-v8.1.1
+title: Polymesh Chain Changelog - v8.0 to v8.1.2
+description: Executive summary and migration notes for upgrading integrations from Polymesh chain v8.0 to v8.1.2 - EVM precompiles for fungible assets, NFT collections and general runtime calls, holder-level asset freezing, NFT approvals, ETH wallet support, and the v8.1.2 correctness fixes.
+id: v8.0-to-v8.1.2-overview
+slug: /development/changelogs/v8.0-to-v8.1.2
 sidebar_label: Overview
 tags:
   - migration
@@ -10,12 +10,14 @@ tags:
   - runtime
 ---
 
-This is the entry point for the Polymesh **v8.0 → v8.1.1** runtime changelog. `spec_version` moves from `8_000_020` to `8_001_010`, and `transaction_version` stays at `8`.
+This is the entry point for the Polymesh **v8.0 → v8.1.2** runtime changelog. `spec_version` moves from `8_000_020` to `8_001_020`, and `transaction_version` stays at `8`.
 
 The release is dominated by one theme: **making Polymesh assets usable from EVM code without giving up compliance**. v8.1 exposed fungible assets as ERC-20 tokens; v8.1.1 completes that surface with ERC-3643 and ERC-7943 coverage, adds an ERC-721 precompile for NFT collections, and adds a general-purpose runtime precompile for the calls that are not scoped to an asset. Supporting that work, the chain gains holder-level asset freezing, NFT approvals, and first-class support for ETH wallets in the Relayer and MultiSig pallets.
 
 :::info Baseline
 The "v8.0" side of this comparison is chain **v8.0.2** (`spec_version` `8_000_020`), the last v8.0.x patch release. If you are still on v8.0.0 or v8.0.1, see the [note on patch releases](#a-note-on-the-v80x-patch-releases) below.
+
+**v8.1.0 and v8.1.1 were Testnet and Develop releases.** Mainnet's first v8.1.x runtime is **v8.1.2**, so it upgrades from v8.0.x in a single step and this changelog is written as one v8.0.2 → v8.1.2 upgrade. If you operate against Testnet or Develop and already ran v8.1.1, read [What changed in v8.1.2](./085-v8.1.2-fixes.mdx) instead — it is the delta you need, and the rest of this section will be familiar.
 
 :::
 
@@ -25,7 +27,8 @@ The "v8.0" side of this comparison is chain **v8.0.2** (`spec_version` `8_000_02
 - **Asset issuers and their agents** — [Asset Freezing](./050-asset-freezing.mdx) is new capability you can use immediately: freeze an individual holder, or part of a holder's balance, rather than the whole asset. NFT issuers should also read [NFT Approvals](./060-nft-approvals.mdx).
 - **Exchanges, custodians, indexers** — **this release changes the pallet API**, unlike v8.1. New extrinsics, events, errors and storage items exist, and two storage migrations run at the upgrade. See [Full Pallet API Reference](./090-pallet-api-reference.mdx), and note the new `Asset` and `Nft` events your indexer will start seeing.
 - **Wallet and SDK integrators** — [ETH Wallets](./070-eth-wallets.mdx) covers EVM-keyed accounts as subsidy beneficiaries and MultiSig signers, and the restriction of transaction tipping to Governance Committee members.
-- **Node and infrastructure operators** — [Other Runtime Changes](./080-other-runtime-changes.mdx) for the storage migrations and the Grandpa warp-sync fix.
+- **Node and infrastructure operators** — [Other Runtime Changes](./080-other-runtime-changes.mdx) for the storage migrations, the Grandpa warp-sync fix, and the refreshed weights.
+- **Anyone already running v8.1.1** on Testnet, Develop or a private network — [What changed in v8.1.2](./085-v8.1.2-fixes.mdx) is the short list of what v8.1.2 corrects on top of it.
 
 ## Key themes
 
@@ -63,12 +66,23 @@ NFTs gain the approval model fungible assets already had: a per-token spender (`
 
 An EVM-keyed account can now be subsidised by the Relayer pallet — including the storage deposit pre-charged for an EVM transaction — and can act as a MultiSig signer. ETH wallets accepting authorizations do not pay the transaction fee, matching Substrate keys. Separately, transaction tipping is now restricted to Governance Committee members. See [ETH Wallets](./070-eth-wallets.mdx).
 
+### Correctness fixes in v8.1.2
+
+v8.1.2 adds no new capability. It closes gaps in the features above and tightens three permission checks:
+
+- **Freeze enforcement now reaches the pre-flight reports.** In v8.1.1 a transfer report could come back clean for a transfer the chain would then reject because the sender was frozen. Both the fungible and NFT reports now evaluate the holder freeze and the frozen balance, so the report and the transfer agree.
+- **Freezing now covers every route out of a portfolio.** Portfolio-to-portfolio moves check the frozen _balance_, not just a whole-portfolio freeze, and an NFT held in a frozen portfolio can no longer be locked into an instruction.
+- **`Sto::invest` no longer assumes its settlement completed.** An offering whose asset has mandatory mediators previously debited the fundraiser's tiers even though the instruction was still pending affirmation.
+- **Three permission checks tightened**: secondary keys need portfolio permission to quit custody, `MultiSig::create_multisig` validates the permissions it is given, and `Except` extrinsic permissions are now refused wherever they are still accepted.
+
+See [What changed in v8.1.2](./085-v8.1.2-fixes.mdx) for the detail.
+
 ## Migration checklist
 
 Unlike v8.1, **this release changes the pallet API**. Work through the list below:
 
-1. **Re-generate metadata-derived code.** New extrinsics, events, errors and storage items exist across `pallet-asset`, `pallet-nft`, `pallet-portfolio` and `pallet-settlement`. `transaction_version` is unchanged at `8`, so existing **signing** code is unaffected, but decoding and type generation should be refreshed against v8.1.1 metadata. See [Full Pallet API Reference](./090-pallet-api-reference.mdx).
-2. **Update transfer pre-checks for holder freezing.** A transfer can now fail because the sender or their portfolio is frozen for that asset, or because the amount exceeds their unfrozen balance — with errors that did not exist in v8.0. See [Asset Freezing](./050-asset-freezing.mdx#what-integrators-need-to-change).
+1. **Re-generate metadata-derived code.** New extrinsics, events, errors and storage items exist across `pallet-asset`, `pallet-nft`, `pallet-portfolio` and `pallet-settlement`. `transaction_version` is unchanged at `8`, so existing **signing** code is unaffected, but decoding and type generation should be refreshed against v8.1.2 metadata. See [Full Pallet API Reference](./090-pallet-api-reference.mdx).
+2. **Update transfer pre-checks for holder freezing.** A transfer can now fail because the sender or their portfolio is frozen for that asset, or because the amount exceeds their unfrozen balance — with errors that did not exist in v8.0. The pre-flight reports account for both as of v8.1.2, so a clean report is again a reliable signal. See [Asset Freezing](./050-asset-freezing.mdx#what-integrators-need-to-change).
 3. **Handle the new events** if you index chain state: `Asset::FrozenBalanceSet`, `Asset::SetAccountFreeze`, `Asset::ControllerTransferTo`, `Nft::NFTApproval`, `Nft::NFTApprovalForAll`, `Nft::NFTApprovalSpent`.
 4. **`Settlement::AllowancesNotSupportedForNFTs` is renamed**, not removed — it is now `DeprecatedAllowancesNotSupportedForNFTs` and keeps its index, so decoders keyed on the index still resolve. NFT spender transfers now fail with `Nft::InsufficientNFTApproval` instead. Update any error-name matching.
 5. **Two storage migrations run at the upgrade**, backfilling NFT counts. No action is required, but node operators should expect the upgrade block to do proportionally more work on chains with many NFTs. See [Other Runtime Changes](./080-other-runtime-changes.mdx#storage-migrations).
@@ -76,6 +90,9 @@ Unlike v8.1, **this release changes the pallet API**. Work through the list belo
 7. **If your secondary keys call into the EVM**, permission checks now evaluate the extrinsic actually being dispatched rather than the `pallet-revive` call carrying it. A secondary key that could previously make a precompile call may now need permission for the underlying extrinsic. See [Other Runtime Changes](./080-other-runtime-changes.mdx#evm-calls-are-permission-checked-against-the-underlying-extrinsic).
 8. **If you submit tips**, only Governance Committee members can now do so. DID Registrars have lost that ability. See [ETH Wallets](./070-eth-wallets.mdx#transaction-tipping-restricted-to-the-governance-committee).
 9. **If you build EVM contracts or tooling**, read the precompile pages and the [Precompiles reference](/development/smart-contracts/precompiles) before writing code.
+10. **If you create external agent groups or secondary keys programmatically**, stop emitting `Except` extrinsic permissions. They are refused at both the pallet and the extrinsic level — build the equivalent `These` set instead. See [What changed in v8.1.2](./085-v8.1.2-fixes.mdx#except-extrinsic-permissions-are-refused).
+11. **If you run an STO**, handle the new `Sto::InstructionNotSettled` error. An offering asset with mandatory mediators makes every `Sto::invest` fail with it, because the investment instruction cannot settle within the call. See [What changed in v8.1.2](./085-v8.1.2-fixes.mdx#stoinvest-requires-its-instruction-to-settle).
+12. **Re-estimate fees.** Weights were re-benchmarked across `pallet-asset`, `pallet-nft`, `pallet-portfolio` and `pallet-settlement`. `Nft::redeem_nft` and `MultiSig::create_multisig` also changed how their weight is derived. See [Other Runtime Changes](./080-other-runtime-changes.mdx#weights-were-re-benchmarked).
 
 ## A note on the v8.0.x patch releases
 

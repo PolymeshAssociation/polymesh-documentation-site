@@ -1,8 +1,8 @@
 ---
-title: Asset Freezing Changelog - v8.0 to v8.1.1
-description: Polymesh chain v8.1.1 adds holder-level asset freezing - freeze a single account or portfolio, or part of a holder's balance - plus a controller transfer that delivers to a named recipient.
-id: v8.0-to-v8.1.1-asset-freezing
-slug: /development/changelogs/v8.0-to-v8.1.1/asset-freezing
+title: Asset Freezing Changelog - v8.0 to v8.1.2
+description: Polymesh chain v8.1.1 adds holder-level asset freezing - freeze a single account or portfolio, or part of a holder's balance - plus a controller transfer that delivers to a named recipient. v8.1.2 closes the gaps in how that freeze is enforced.
+id: v8.0-to-v8.1.2-asset-freezing
+slug: /development/changelogs/v8.0-to-v8.1.2/asset-freezing
 sidebar_label: Asset Freezing
 tags:
   - migration
@@ -12,7 +12,7 @@ tags:
   - compliance
 ---
 
-This page covers holder-level asset freezing, added in v8.1.1. It is part of the [v8.0 → v8.1.1 changelog](./010-overview.mdx).
+This page covers holder-level asset freezing, added in v8.1.1. It is part of the [v8.0 → v8.1.2 changelog](./010-overview.mdx).
 
 **Audience:** asset issuers and their agents, exchanges, custodians, indexers, and anyone whose code decides whether a transfer will succeed.
 
@@ -38,10 +38,10 @@ The three calls that freeze part of a balance — `set_frozen_tokens`, `freeze_p
 
 `Asset::set_holder_frozen` applies to **both**. Freezing a holder of an NFT collection stops it sending any NFT in that collection: `pallet-nft` runs the same holder check on every transfer, so the transfer fails with `Asset::InvalidTransferSenderIsFrozen`, exactly as for a fungible asset.
 
-:::caution NFT transfer reports do not check the holder freeze
-`Nft::nft_transfer_report` evaluates the collection-level freeze but not the holder freeze, though the transfer itself enforces it. That gap reaches both the `NFTApi::transfer_report` runtime API and the NFT precompile's `canTransfer`, so a report can come back clean for a transfer the chain will reject with `Asset::InvalidTransferSenderIsFrozen`.
+:::info Transfer reports check the freeze as of v8.1.2
+In v8.1.1, `Nft::nft_transfer_report` evaluated the collection-level freeze but not the holder freeze, so a report could come back clean for a transfer the chain would then reject with `Asset::InvalidTransferSenderIsFrozen`. The fungible report had a narrower version of the same gap.
 
-Read `Asset::FrozenAccounts` (or `Portfolio::FrozenPortfolios`) for the sending holder alongside the report. The fungible report has no such gap — `Asset::asset_transfer_report` covers the holder freeze through its balance check.
+v8.1.2 fixes both. Every report now evaluates the holder freeze explicitly and measures the available balance net of frozen tokens, so a clean report and a successful transfer agree again. This applies to the `NFTApi::transfer_report` and `AssetApi::transfer_report` runtime APIs and to `canTransfer` on both precompiles. If you are running v8.1.1, read `Asset::FrozenAccounts` (or `Portfolio::FrozenPortfolios`) for the sending holder alongside the report until you upgrade.
 :::
 
 ## Holders: accounts and portfolios
@@ -55,6 +55,8 @@ This matters because freezing is **not** applied at the identity level. Freezing
 
 Portfolio freezes are enforced in `pallet-portfolio` as well as `pallet-asset`, so a frozen portfolio cannot move the asset out by any route, including portfolio-to-portfolio moves within the same identity. The error there is `Portfolio::PortfolioIsFrozen`.
 
+As of v8.1.2 that enforcement sits in the balance check every portfolio movement shares, rather than only in the multi-asset move path. Two consequences: a **partially** frozen portfolio can no longer move its frozen tokens between portfolios — previously only a full portfolio freeze was checked there — and an NFT held in a frozen portfolio can no longer be locked into a settlement instruction.
+
 ## How a frozen balance affects transfers
 
 A holder's transferable balance is now:
@@ -63,7 +65,7 @@ A holder's transferable balance is now:
 available = balance − locked − frozen
 ```
 
-where `locked` is the existing settlement lock and `frozen` is the new frozen amount. A transfer of more than `available` fails with `Asset::InsufficientBalance`, the same error as before — so code that already handles insufficient balance will not break, it will simply see the error in a situation it did not previously.
+where `locked` is the existing settlement lock and `frozen` is the new frozen amount. A transfer of more than `available` fails with `Asset::InsufficientBalance`, the same error as before — so code that already handles insufficient balance will not break, it will simply see the error in a situation it did not previously. The same formula governs portfolio-to-portfolio moves, which fail with `Portfolio::InsufficientPortfolioBalance`.
 
 A transfer attempted by a **fully frozen** holder fails earlier, with the new `Asset::InvalidTransferSenderIsFrozen`.
 
@@ -100,7 +102,7 @@ Both fail with `ReceiverAffirmationRequired` if the destination requires the rec
 
 **If you pre-check transfers**, a transfer can now fail for two reasons that did not exist in v8.0. Add `Asset::InvalidTransferSenderIsFrozen` and `Portfolio::PortfolioIsFrozen` to your handling, and note that `Asset::InsufficientBalance` now accounts for frozen tokens.
 
-The cheapest way to pre-check is the transfer report used by `canTransfer`, which already accounts for all of this. From the EVM side, `canSend`/`canReceive`/`canTransfer` on the [fungible-asset precompile](/development/smart-contracts/precompiles/fungible-asset) do the same.
+The cheapest way to pre-check is the transfer report used by `canTransfer`, which accounts for all of this from v8.1.2 onwards. From the EVM side, `canSend`/`canReceive`/`canTransfer` on the [fungible-asset precompile](/development/smart-contracts/precompiles/fungible-asset) and `canTransfer` on the [NFT precompile](/development/smart-contracts/precompiles/non-fungible-asset) do the same.
 
 **If you display balances**, a holder's spendable balance is no longer `balance − locked`. Read the frozen balance and subtract it, or you will show users an amount they cannot send.
 

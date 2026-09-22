@@ -1,0 +1,129 @@
+---
+title: What Changed in v8.1.2 - Polymesh Chain Changelog
+description: The correctness and permission fixes Polymesh chain v8.1.2 applies on top of v8.1.1 - freeze enforcement in transfer reports and portfolio moves, STO settlement verification, refused Except permissions, and the custody and MultiSig permission checks.
+id: v8.0-to-v8.1.2-fixes
+slug: /development/changelogs/v8.0-to-v8.1.2/v8.1.2-fixes
+sidebar_label: What Changed in v8.1.2
+tags:
+  - migration
+  - changelog
+  - runtime
+---
+
+This page is the delta from **v8.1.1 to v8.1.2**. It is part of the [v8.0 → v8.1.2 changelog](./010-overview.mdx).
+
+**Audience:** anyone who already ran v8.1.1 on Testnet, Develop or a private network. If you are upgrading from v8.0.x — which is the case for Mainnet — you do not need this page: every change below is already folded into the topic pages, and the [Overview](./010-overview.mdx) is the right entry point.
+
+`spec_version` moves from `8_001_010` to `8_001_020`. `transaction_version` stays at `8`, so signing is unaffected.
+
+:::info No new features
+v8.1.2 adds no new extrinsics and no new capability. It corrects behaviour in features v8.1 and v8.1.1 introduced, tightens three permission checks, and refreshes weights. One new error variant is added; nothing is removed.
+:::
+
+---
+
+## Freeze enforcement
+
+v8.1.1 introduced holder-level freezing. Three paths did not enforce it consistently.
+
+### Transfer reports evaluate the holder freeze
+
+`Nft::nft_transfer_report` evaluated the collection-level freeze but not the holder freeze, so it could report a transfer as clean that the chain would then reject with `Asset::InvalidTransferSenderIsFrozen`. `Asset::asset_transfer_report` had a narrower version of the same problem: when called in the mode that skips the lock check, it compared the transfer against the holder's **total** balance rather than their balance net of frozen tokens.
+
+Both now check the holder freeze explicitly and measure availability as `balance − frozen`. The fix reaches every consumer of those reports:
+
+| Surface                                        | Before                                          | After                                   |
+| ---------------------------------------------- | ----------------------------------------------- | --------------------------------------- |
+| `NFTApi::transfer_report` runtime API          | Missed the holder freeze                        | Reports `InvalidTransferSenderIsFrozen` |
+| `AssetApi::transfer_report` runtime API        | Missed frozen tokens in the skip-locked mode    | Accounts for the frozen balance         |
+| `canTransfer` on the NFT precompile            | Could return `true` for a transfer that reverts | Agrees with the transfer                |
+| `canTransfer` on the fungible-asset precompile | Could overstate the available balance           | Agrees with the transfer                |
+
+If you added a compensating read of `Asset::FrozenAccounts` or `Portfolio::FrozenPortfolios` alongside the report to work around this on v8.1.1, it is now redundant. It remains harmless.
+
+### Portfolio moves respect the frozen balance
+
+The freeze check for portfolio-to-portfolio movement lived in the multi-asset move loop, which meant it only caught a **fully** frozen portfolio, and only on that one path. It now sits in `ensure_sufficient_balance`, the check every portfolio movement shares.
+
+The practical difference is partial freezes. A portfolio with 1,000 tokens of which 400 are frozen could previously move all 1,000 into another portfolio of the same identity, escaping the freeze without ever transferring the asset. It can now move 600, and fails with `Portfolio::InsufficientPortfolioBalance` beyond that. A fully frozen portfolio still fails with `Portfolio::PortfolioIsFrozen`.
+
+### NFTs cannot be locked from a frozen portfolio
+
+Locking an NFT into a settlement instruction did not check the holder freeze, so a frozen holder could affirm an instruction and have the NFT leave on execution. The lock now runs the same holder check as a transfer and fails with `Asset::InvalidTransferSenderIsFrozen`.
+
+An instruction affirmed before the freeze was applied is unaffected — the lock already happened. Agents freezing a holder should check `Portfolio::PortfolioLockedNFT` for NFTs already committed to pending instructions.
+
+## `Sto::invest` requires its instruction to settle
+
+`Sto::invest` creates a settlement instruction and executes it in the same call, then debits the purchased amount from the fundraiser's tiers. It did not verify that the instruction actually reached a settled state before doing so.
+
+When the offering asset has **mandatory mediators**, the instruction cannot settle inside the call — it waits for mediator affirmation. The fundraiser's tiers were decremented anyway, so the offering recorded a sale that had not happened and the investor received nothing.
+
+`invest` now checks the instruction's status after execution and returns the new `Sto::InstructionNotSettled` error unless it is `InstructionStatus::Success`, rolling the whole call back.
+
+:::caution An offering asset with mandatory mediators cannot be sold through the STO pallet
+This is a correctness fix, not a workaround: the failure is now visible instead of silent. If your offering asset has mandatory mediators, every `Sto::invest` call fails with `InstructionNotSettled`. Remove the mandatory mediators from the offering asset, or run the raise through settlement instructions directly rather than through `pallet-sto`.
+:::
+
+The same check protects any other route where the instruction is held up — a receiver that requires affirmation for incoming transfers, for example.
+
+## `Except` extrinsic permissions are refused
+
+`ExtrinsicPermissions` can be `Whole`, `These(...)` or `Except(...)`, at both the pallet level and the extrinsic level within a pallet. The `Except` form is unsafe for permissioning because extrinsic names change between runtime versions: a permission defined as "everything except `issue`" silently widens when a new extrinsic is added.
+
+Secondary keys already rejected it. External agent groups rejected only the **outer** form, with `ExternalAgents::ExceptPermissionsNotAllowed`; a nested `Except` inside a `These` entry — "these pallets, and within `Asset`, every extrinsic except `issue`" — was accepted.
+
+The nested form is now refused too, with `Identity::ExceptNotAllowedForExtrinsics`. This affects `ExternalAgents::create_group` and `ExternalAgents::set_group_permissions`.
+
+**Existing groups are unaffected.** No migration runs and nothing stored is re-validated; the check applies only when permissions are set. If you create groups programmatically, replace any `Except` with the equivalent `These` set. Asset and portfolio permissions are not affected — `Except` remains valid for those.
+
+## Permission checks on custody and MultiSig creation
+
+**`Portfolio::quit_portfolio_custody`** verified that the caller's identity was the custodian, but ran no secondary-key permission check. Any secondary key of the custodian identity could relinquish custody, including one whose portfolio permissions excluded that portfolio. The call now runs the standard portfolio permission check, so a secondary key needs the portfolio in its permissions. `UnauthorizedCustodian` is still returned when the caller is not the custodian.
+
+**`MultiSig::create_multisig`** accepted custom permissions without validating them. They now pass the same length and complexity limits every other permission-setting call applies, so an oversized permission set is rejected at creation rather than stored. The `Except` refusal above applies here as well. The call's weight now includes the cost of validating those permissions, so creating a MultiSig with a large custom permission set costs measurably more than one without.
+
+## `Nft::redeem_nft` is re-benchmarked
+
+`redeem_nft` takes an optional `number_of_keys`, which callers pass as an assertion about how many metadata keys the redemption will remove. Supplying a value lower than the real count fails the call with `Nft::NumberOfKeysIsLessThanExpected`. **That check still applies** — it is the source of the count, not the check, that changed.
+
+The count was previously obtained by draining the NFT's metadata values and counting them, which the benchmark could not bound. It is now read from the collection's `CollectionKeys` before the metadata is cleared. The two are always equal: `issue_nft` requires exactly one value per collection key, and a collection's key set is fixed at creation. **No caller sees a different outcome** — the same arguments succeed and fail as before, and the call index and encoding are unchanged.
+
+What does change is the fee, because the benchmark was reworked around the bounded count. The base cost rises and the per-key increment falls sharply, so the two curves cross at roughly seven collection keys:
+
+| Collection metadata keys | Fee versus v8.1.1                                                |
+| ------------------------ | ---------------------------------------------------------------- |
+| Up to ~6                 | Slightly higher                                                  |
+| ~7                       | About the same                                                   |
+| More than ~7             | Progressively lower — substantially so for key-heavy collections |
+
+## Precompile calls set a fee payer
+
+A runtime call dispatched through a precompile did not set the runtime's **current fee payer** before dispatching, so anything consulting it — subsidy resolution in particular — did not see the EVM caller.
+
+The precompile layer now sets the payer for the duration of the dispatch and restores the previous value afterwards. The payer is the precompile's **immediate caller** resolved to its Polymesh account: the calling account when an account calls a precompile directly, and the **contract's own account** when a contract does. A contract acting for users therefore draws on its own subsidy rather than the transaction submitter's.
+
+Every precompile method now passes that account explicitly, and the metadata-swap weight rises slightly to cover reading and restoring the payer. See the [Precompiles reference](/development/smart-contracts/precompiles).
+
+## Runtime and weights
+
+`spec_version` `8_001_010` → `8_001_020`. No storage migration runs at this upgrade; the two NFT-count migrations belong to the v8.1.1 upgrade and do not repeat.
+
+Weights were re-benchmarked across `pallet-asset`, `pallet-nft`, `pallet-portfolio` and `pallet-settlement`. Fee estimates derived from v8.1.1 weights should be regenerated. See [Other Runtime Changes](./080-other-runtime-changes.mdx#weights-were-re-benchmarked).
+
+The runtime also moved to a newer Rust toolchain and refreshed its dependencies. Neither changes the chain API, but anyone building the node from source needs the toolchain named in `rust-toolchain.toml`.
+
+## What integrators need to change
+
+| If you…                                            | Do this                                                                                                                                                 |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Pre-check transfers with a transfer report         | Nothing — reports are now correct. Drop any compensating freeze lookup you added for v8.1.1.                                                            |
+| Move assets between portfolios                     | Handle `Portfolio::InsufficientPortfolioBalance` where a partial freeze now reduces the movable amount.                                                 |
+| Run an STO                                         | Handle `Sto::InstructionNotSettled`, and remove mandatory mediators from the offering asset.                                                            |
+| Create external agent groups programmatically      | Replace `Except` extrinsic permissions with the equivalent `These` set.                                                                                 |
+| Create MultiSigs with custom permissions           | Expect validation failures for oversized sets, and a higher fee.                                                                                        |
+| Call `quit_portfolio_custody` from a secondary key | Give the key permission for that portfolio.                                                                                                             |
+| Call `redeem_nft`                                  | Nothing — behaviour is unchanged. Re-estimate the fee: it falls for collections with more than about seven metadata keys and rises slightly below that. |
+| Estimate fees from weights                         | Regenerate against v8.1.2 metadata.                                                                                                                     |
+
+See the [Full Pallet API Reference](./090-pallet-api-reference.mdx) for exact signatures, indices and errors.

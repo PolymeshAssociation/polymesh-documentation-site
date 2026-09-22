@@ -1,8 +1,8 @@
 ---
-title: Full Pallet API Reference - v8.0 to v8.1.1
-description: Pallet-by-pallet reference of every added and modified call, event, error, storage item and runtime API between Polymesh chain v8.0.2 and v8.1.1.
-id: v8.0-to-v8.1.1-pallet-api-reference
-slug: /development/changelogs/v8.0-to-v8.1.1/pallet-api-reference
+title: Full Pallet API Reference - v8.0 to v8.1.2
+description: Pallet-by-pallet reference of every added and modified call, event, error, storage item and runtime API between Polymesh chain v8.0.2 and v8.1.2, including the v8.1.2 permission and settlement fixes.
+id: v8.0-to-v8.1.2-pallet-api-reference
+slug: /development/changelogs/v8.0-to-v8.1.2/pallet-api-reference
 sidebar_label: Full Pallet API Reference
 tags:
   - migration
@@ -11,13 +11,13 @@ tags:
   - metadata
 ---
 
-Every structural API change between Polymesh chain **v8.0.2** and **v8.1.1**: each call, event, error, storage item and runtime API that was added, renamed or had its behaviour change. It complements the narrative pages in the [v8.0 → v8.1.1 changelog](./010-overview.mdx).
+Every structural API change between Polymesh chain **v8.0.2** and **v8.1.2**: each call, event, error, storage item and runtime API that was added, renamed or had its behaviour change. It complements the narrative pages in the [v8.0 → v8.1.2 changelog](./010-overview.mdx).
 
 **Scope:**
 
 - No pallets were added or removed, and no constants changed.
 - `transaction_version` is unchanged at `8`. Existing signing code needs no update.
-- Nothing was removed. The only rename is one `Settlement` error, which retains its index.
+- Nothing was removed. The only rename is one `Settlement` error, which retains its index. One `Sto` error is added in v8.1.2, at the end of its variant list.
 - `pallet-precompiles` is not a runtime pallet — it plugs into `pallet_revive::Config::Precompiles`, takes no pallet index and adds nothing to metadata. The [precompile](./020-fungible-asset-precompile.mdx) interfaces are not part of this reference.
 
 ## Summary
@@ -28,6 +28,9 @@ Every structural API change between Polymesh chain **v8.0.2** and **v8.1.1**: ea
 | [Nft](#nft)               | 3 added | 3 added | 3 added   | 3 added |
 | [Portfolio](#portfolio)   | —       | —       | 1 added   | 3 added |
 | [Settlement](#settlement) | —       | —       | 1 renamed | —       |
+| [Sto](#sto)               | —       | —       | 1 added   | —       |
+
+Five calls change behaviour or cost without changing their signature: `MultiSig::create_multisig`, `Portfolio::quit_portfolio_custody`, `ExternalAgents::create_group`/`set_group_permissions`, `Sto::invest` and `Portfolio::move_portfolio_funds`. See [Behaviour changes without a signature change](#behaviour-changes-without-a-signature-change).
 
 Storage versions: `pallet-nft` 7 → 8, `pallet-portfolio` 4 → 5. Both are migrated automatically — see [Other Runtime Changes](./080-other-runtime-changes.mdx#storage-migrations).
 
@@ -152,6 +155,8 @@ Storage version 7 → 8; `NFTAccountCount` is backfilled by migration.
 | ------------------- | ------------------------------------------------- |
 | `PortfolioIsFrozen` | The portfolio is frozen for the asset being moved |
 
+As of v8.1.2 both this error and the pre-existing `InsufficientPortfolioBalance` are raised from `ensure_sufficient_balance`, the check shared by every portfolio movement, rather than only from the multi-asset move path. `InsufficientPortfolioBalance` now measures `balance − locked − frozen`, so a partially frozen portfolio hits it where it previously did not.
+
 ### Storage
 
 | Item                    | Shape                               |
@@ -185,6 +190,35 @@ The variant was renamed rather than deleted so that the indices of the errors af
 
 ---
 
+## Sto
+
+### Errors
+
+| Error                   | Raised when                                                                                     |
+| ----------------------- | ----------------------------------------------------------------------------------------------- |
+| `InstructionNotSettled` | `invest` created an instruction that did not reach `InstructionStatus::Success` within the call |
+
+Added in v8.1.2 at the end of the variant list, so the indices of existing `Sto` errors are unchanged. The common cause is an offering asset with mandatory mediators, whose instruction cannot settle without a separate affirmation. See [What changed in v8.1.2](./085-v8.1.2-fixes.mdx#stoinvest-requires-its-instruction-to-settle).
+
+---
+
+## Behaviour changes without a signature change
+
+These calls keep their index, arguments and encoding. Clients need no regeneration for them, but their outcome or cost differs.
+
+| Call                                                    | Change in v8.1.2                                                                                                                                                                                                                                             |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `MultiSig::create_multisig`                             | Custom permissions are validated against the standard length and complexity limits. Weight includes that validation when permissions are supplied.                                                                                                           |
+| `Portfolio::quit_portfolio_custody`                     | Runs the secondary-key portfolio permission check in addition to the custodian check.                                                                                                                                                                        |
+| `ExternalAgents::create_group`, `set_group_permissions` | A nested `Except` extrinsic restriction is refused with `Identity::ExceptNotAllowedForExtrinsics`. The outer form was already refused with `ExternalAgents::ExceptPermissionsNotAllowed`.                                                                    |
+| `Sto::invest`                                           | Verifies its instruction settled; see above.                                                                                                                                                                                                                 |
+| `Portfolio::move_portfolio_funds`                       | Enforces the frozen balance, not only a whole-portfolio freeze.                                                                                                                                                                                              |
+| `Nft::redeem_nft`                                       | No behavioural change: `number_of_keys` is still validated and `Nft::NumberOfKeysIsLessThanExpected` is still raised. The count is now read from the collection's key set rather than from the drained metadata, and the call is re-benchmarked accordingly. |
+
+No error variant, event or storage item was removed in v8.1.2.
+
+---
+
 ## Runtime APIs
 
 | API      | Version | Change                                                                                                                 |
@@ -192,5 +226,7 @@ The variant was renamed rather than deleted so that the indices of the errors af
 | `NFTApi` | 3 → 4   | Added `token_approval(asset_id, nft_id) → Option<AccountId>` and `operator_approval(owner, operator, asset_id) → bool` |
 
 Existing `NFTApi` methods are unchanged, and version 3 clients continue to work.
+
+`NFTApi::transfer_report` and `AssetApi::transfer_report` keep their signatures but return more errors as of v8.1.2: both now evaluate the holder freeze and measure the available balance net of frozen tokens. A caller that treated an empty error list as "this transfer will succeed" gets a more accurate answer; no decoding change is required. See [What changed in v8.1.2](./085-v8.1.2-fixes.mdx#transfer-reports-evaluate-the-holder-freeze).
 
 No custom JSON-RPC methods were added, removed or changed.
