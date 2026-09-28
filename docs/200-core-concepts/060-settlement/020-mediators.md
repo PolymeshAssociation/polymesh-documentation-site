@@ -24,15 +24,19 @@ Mediation can be enforced at two levels:
 
 ### Asset-Level Mediators
 
-Asset issuers can designate mediators that must approve all transfers of their assets, ensuring consistent validation criteria regardless of who creates settlement instructions.
+Asset issuers can designate mediators that must approve settlement instructions involving their assets, ensuring consistent validation criteria regardless of who creates settlement instructions.
 
 **Management**: Asset mediators are controlled through `asset::add_mandatory_mediators` and `asset::remove_mandatory_mediators` transactions.
 
 **Behavior**:
 
-- All settlement instructions involving the asset require mediator approval
+- Every settlement instruction created while a mediator is set for the asset requires that mediator's approval
 - Multiple mediators can be assigned to a single asset
-- Applies automatically to any instruction involving the asset
+- Applies automatically to any new instruction involving the asset
+
+:::note Mandatory mediators apply from instruction creation
+An instruction's mediators are fixed when the instruction is created: the asset's mandatory mediators at that moment are copied into the instruction, and execution checks that stored set. Adding a mandatory mediator does not affect instructions that already exist, and removing one does not release instructions already waiting on it. To stop transfers in pending instructions that have not been locked, use asset-level controls such as [freezing the asset](/core/assets#freezing-and-unfreezing-assets) or updating compliance rules. An instruction that has already been locked is not re-checked against those controls at execution; see [How Settlement Locking Works](#how-settlement-locking-works).
+:::
 
 ### Instruction-Level Mediators
 
