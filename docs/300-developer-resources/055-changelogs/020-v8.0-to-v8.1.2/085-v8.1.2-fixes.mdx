@@ -47,6 +47,8 @@ The freeze check for portfolio-to-portfolio movement lived in the multi-asset mo
 
 The practical difference is partial freezes. A portfolio with 1,000 tokens of which 400 are frozen could previously move all 1,000 into another portfolio of the same identity, escaping the freeze without ever transferring the asset. It can now move 600, and fails with `Portfolio::InsufficientPortfolioBalance` beyond that. A fully frozen portfolio still fails with `Portfolio::PortfolioIsFrozen`.
 
+`ensure_sufficient_balance` is not only used for moves. It also checks the offering portfolio when `Sto::create_fundraiser` locks the tokens on offer, and the source portfolio when `CapitalDistribution::distribute` locks the amount to pay out. Before v8.1.2 neither path checked the freeze at all, so even a **fully** frozen portfolio could launch an offering or fund a distribution and have its tokens locked for it. Both now fail with `Portfolio::PortfolioIsFrozen` for a frozen portfolio, and with `Portfolio::InsufficientPortfolioBalance` when the amount exceeds `balance − locked − frozen`. Offerings and distributions created before the upgrade keep their lock.
+
 ### NFTs cannot be locked from a frozen portfolio
 
 Locking an NFT into a settlement instruction did not check the holder freeze, so a frozen holder could affirm an instruction and have the NFT leave on execution. The lock now runs the same holder check as a transfer and fails with `Asset::InvalidTransferSenderIsFrozen`.
@@ -57,15 +59,15 @@ An instruction affirmed before the freeze was applied is unaffected — the lock
 
 `Sto::invest` creates a settlement instruction and executes it in the same call, then debits the purchased amount from the fundraiser's tiers. It did not verify that the instruction actually reached a settled state before doing so.
 
-When the offering asset has **mandatory mediators**, the instruction cannot settle inside the call — it waits for mediator affirmation. The fundraiser's tiers were decremented anyway, so the offering recorded a sale that had not happened and the investor received nothing.
+An instruction collects the mandatory mediators of **every asset in its legs**. An investment funded on chain has two legs — the offering asset to the investor, and the raising asset to the fundraiser — so a mandatory mediator on **either** asset holds the instruction pending until that mediator affirms. An investment funded off chain, with a receipt, has only the offering-asset leg. When the instruction was held up, the fundraiser's tiers were decremented anyway, so the offering recorded a sale that had not happened and the investor received nothing.
 
 `invest` now checks the instruction's status after execution and returns the new `Sto::InstructionNotSettled` error unless it is `InstructionStatus::Success`, rolling the whole call back.
 
-:::caution An offering asset with mandatory mediators cannot be sold through the STO pallet
-This is a correctness fix, not a workaround: the failure is now visible instead of silent. If your offering asset has mandatory mediators, every `Sto::invest` call fails with `InstructionNotSettled`. Remove the mandatory mediators from the offering asset, or run the raise through settlement instructions directly rather than through `pallet-sto`.
+:::caution An asset with mandatory mediators cannot be sold, or raised, through the STO pallet
+This is a correctness fix, not a workaround: the failure is now visible instead of silent. If the offering asset has mandatory mediators, every `Sto::invest` call fails with `InstructionNotSettled`. If the raising asset has them, every investment funded on chain fails the same way. Remove the mandatory mediators from the asset concerned, or run the raise through settlement instructions directly rather than through `pallet-sto`.
 :::
 
-The same check protects any other route where the instruction is held up — a receiver that requires affirmation for incoming transfers, for example.
+Receiver affirmation is not a cause. `invest` affirms both receiving portfolios itself — the investor's investment portfolio and the fundraiser's raising portfolio — whenever either would otherwise require affirmation, so a receiver's mandatory affirmation setting does not hold the instruction up.
 
 ## `Except` extrinsic permissions are refused
 
@@ -119,7 +121,8 @@ The runtime also moved to a newer Rust toolchain and refreshed its dependencies.
 | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Pre-check transfers with a transfer report         | Nothing — reports are now correct. Drop any compensating freeze lookup you added for v8.1.1.                                                            |
 | Move assets between portfolios                     | Handle `Portfolio::InsufficientPortfolioBalance` where a partial freeze now reduces the movable amount.                                                 |
-| Run an STO                                         | Handle `Sto::InstructionNotSettled`, and remove mandatory mediators from the offering asset.                                                            |
+| Launch an STO or a capital distribution            | Handle `Portfolio::PortfolioIsFrozen` and `Portfolio::InsufficientPortfolioBalance`: a frozen portfolio, or its frozen tokens, can no longer fund one.  |
+| Run an STO                                         | Handle `Sto::InstructionNotSettled`, and remove mandatory mediators from the offering asset, and from the raising asset if investors fund on chain.     |
 | Create external agent groups programmatically      | Replace `Except` extrinsic permissions with the equivalent `These` set.                                                                                 |
 | Create MultiSigs with custom permissions           | Expect validation failures for oversized sets, and a higher fee.                                                                                        |
 | Call `quit_portfolio_custody` from a secondary key | Give the key permission for that portfolio.                                                                                                             |

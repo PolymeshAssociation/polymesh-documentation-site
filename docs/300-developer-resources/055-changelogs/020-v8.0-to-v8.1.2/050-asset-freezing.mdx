@@ -55,7 +55,7 @@ This matters because freezing is **not** applied at the identity level. Freezing
 
 Portfolio freezes are enforced in `pallet-portfolio` as well as `pallet-asset`, so a frozen portfolio cannot move the asset out by any route, including portfolio-to-portfolio moves within the same identity. The error there is `Portfolio::PortfolioIsFrozen`.
 
-As of v8.1.2 that enforcement sits in the balance check every portfolio movement shares, rather than only in the multi-asset move path. Two consequences: a **partially** frozen portfolio can no longer move its frozen tokens between portfolios — previously only a full portfolio freeze was checked there — and an NFT held in a frozen portfolio can no longer be locked into a settlement instruction.
+As of v8.1.2 that enforcement sits in the portfolio balance check shared by moves, STO launches and capital distributions, rather than only in the multi-asset move path. Three consequences: a **partially** frozen portfolio can no longer move its frozen tokens between portfolios — previously only a full portfolio freeze was checked there — a frozen portfolio, or its frozen tokens, can no longer fund an STO (`Sto::create_fundraiser`) or a capital distribution (`CapitalDistribution::distribute`), and an NFT held in a frozen portfolio can no longer be locked into a settlement instruction.
 
 ## How a frozen balance affects transfers
 
