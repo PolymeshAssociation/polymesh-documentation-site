@@ -71,8 +71,8 @@ An EVM-keyed account can now be subsidised by the Relayer pallet — including t
 v8.1.2 adds no new capability. It closes gaps in the features above and tightens three permission checks:
 
 - **Freeze enforcement now reaches the pre-flight reports.** In v8.1.1 a transfer report could come back clean for a transfer the chain would then reject because the sender was frozen. Both the fungible and NFT reports now evaluate the holder freeze and the frozen balance, so the report and the transfer agree.
-- **Freezing now covers every route out of a portfolio.** Portfolio-to-portfolio moves check the frozen _balance_, not just a whole-portfolio freeze, and an NFT held in a frozen portfolio can no longer be locked into an instruction.
-- **`Sto::invest` no longer assumes its settlement completed.** An offering whose asset has mandatory mediators previously debited the fundraiser's tiers even though the instruction was still pending affirmation.
+- **Freezing now covers every route out of a portfolio.** Portfolio-to-portfolio moves check the frozen _balance_, not just a whole-portfolio freeze; launching an STO and funding a capital distribution now check the freeze too; and an NFT held in a frozen portfolio can no longer be locked into an instruction.
+- **`Sto::invest` no longer assumes its settlement completed.** When the offering asset — or the raising asset, for an investment funded on chain — had mandatory mediators, `invest` debited the fundraiser's tiers even though the instruction was still pending affirmation.
 - **Three permission checks tightened**: secondary keys need portfolio permission to quit custody, `MultiSig::create_multisig` validates the permissions it is given, and `Except` extrinsic permissions are now refused wherever they are still accepted.
 
 See [What changed in v8.1.2](./085-v8.1.2-fixes.mdx) for the detail.
@@ -91,7 +91,7 @@ Unlike v8.1, **this release changes the pallet API**. Work through the list belo
 8. **If you submit tips**, only Governance Committee members can now do so. DID Registrars have lost that ability. See [ETH Wallets](./070-eth-wallets.mdx#transaction-tipping-restricted-to-the-governance-committee).
 9. **If you build EVM contracts or tooling**, read the precompile pages and the [Precompiles reference](/development/smart-contracts/precompiles) before writing code.
 10. **If you create external agent groups or secondary keys programmatically**, stop emitting `Except` extrinsic permissions. They are refused at both the pallet and the extrinsic level — build the equivalent `These` set instead. See [What changed in v8.1.2](./085-v8.1.2-fixes.mdx#except-extrinsic-permissions-are-refused).
-11. **If you run an STO**, handle the new `Sto::InstructionNotSettled` error. An offering asset with mandatory mediators makes every `Sto::invest` fail with it, because the investment instruction cannot settle within the call. See [What changed in v8.1.2](./085-v8.1.2-fixes.mdx#stoinvest-requires-its-instruction-to-settle).
+11. **If you run an STO**, handle the new `Sto::InstructionNotSettled` error. An offering asset with mandatory mediators makes every `Sto::invest` fail with it, and a raising asset with mandatory mediators does the same for every investment funded on chain, because the investment instruction cannot settle within the call. See [What changed in v8.1.2](./085-v8.1.2-fixes.mdx#stoinvest-requires-its-instruction-to-settle).
 12. **Re-estimate fees.** Weights were re-benchmarked across `pallet-asset`, `pallet-nft`, `pallet-portfolio` and `pallet-settlement`. `Nft::redeem_nft` and `MultiSig::create_multisig` also changed how their weight is derived. See [Other Runtime Changes](./080-other-runtime-changes.mdx#weights-were-re-benchmarked).
 
 ## A note on the v8.0.x patch releases

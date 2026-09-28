@@ -24,15 +24,19 @@ Mediation can be enforced at two levels:
 
 ### Asset-Level Mediators
 
-Asset issuers can designate mediators that must approve all transfers of their assets, ensuring consistent validation criteria regardless of who creates settlement instructions.
+Asset issuers can designate mediators that must approve settlement instructions involving their assets, ensuring consistent validation criteria regardless of who creates settlement instructions.
 
 **Management**: Asset mediators are controlled through `asset::add_mandatory_mediators` and `asset::remove_mandatory_mediators` transactions.
 
 **Behavior**:
 
-- All settlement instructions involving the asset require mediator approval
+- Every settlement instruction created while a mediator is set for the asset requires that mediator's approval
 - Multiple mediators can be assigned to a single asset
-- Applies automatically to any instruction involving the asset
+- Applies automatically to any new instruction involving the asset
+
+:::note Mandatory mediators apply from instruction creation
+An instruction's mediators are fixed when the instruction is created: the asset's mandatory mediators at that moment are copied into the instruction, and execution checks that stored set. Adding a mandatory mediator does not affect instructions that already exist, and removing one does not release instructions already waiting on it. To stop transfers in pending instructions that have not been locked, use asset-level controls such as [freezing the asset](/core/assets#freezing-and-unfreezing-assets) or updating compliance rules. An instruction that has already been locked is not re-checked against those controls at execution; see [How Settlement Locking Works](#how-settlement-locking-works).
+:::
 
 ### Instruction-Level Mediators
 
@@ -96,7 +100,7 @@ Settlement locking is particularly valuable for:
    - **Weight Mechanism**: Weight in Substrate chains acts similar to gas in Ethereum - it measures computational cost and prevents infinite loops. If the weight limit is too low, the transaction will fail before execution begins
    - **Runtime API Available**: Use the `settlement::lock_instruction_weight` runtime API to get the correct weight for a specific instruction and ensure proper fee calculation
    - **Comprehensive validation occurs**: All settlement conditions are validated including compliance rules, mediator affirmation expiries, asset availability, and venue permissions
-   - **Execution guarantee**: Once successfully locked, execution by any mediator cannot fail - all potential failure conditions have been pre-validated
+   - **Execution guarantee**: Once successfully locked, compliance rules, asset freezes and venue permissions are not re-checked at execution, and the assets are held for the instruction. The exception is **transfer restriction statistics** (for example maximum investor count or maximum ownership), which depend on all holders of the asset and are re-checked at execution - see Compliance and Validation below
    - Assets are locked and the instruction status changes to `LockedForExecution`
    - A timestamp is recorded for the locking period
 
@@ -153,9 +157,11 @@ Only designated mediators can call `settlement::lock_instruction` or `settlement
 **Compliance and Validation:**
 
 :::info Critical Design Feature
-When locking an instruction, **all compliance rules, mediator affirmation expiries, asset availability, and settlement conditions are validated**. Once successfully locked, execution by any mediator is guaranteed to succeed - no compliance or validation failures can occur during execution.
+When locking an instruction, **all compliance rules, mediator affirmation expiries, asset availability, and settlement conditions are validated**. Compliance rules and asset freezes are not re-checked at execution: a compliance rule change or an asset freeze after the lock does not prevent the locked instruction from settling.
 
-This design ensures that cross-chain coordinators can rely on Polymesh settlement completion once locking succeeds, enabling atomic cross-chain operations.
+**Transfer restriction statistics are the exception.** Limits such as maximum investor count and maximum investor or claim ownership depend on every holder of the asset, so a lock cannot reserve them. They are re-checked when the locked instruction executes; otherwise several instructions locked against the same state could together exceed the issuer's limit. If other transfers have reached a limit in the meantime, execution fails, the instruction stays `LockedForExecution`, and a mediator can unlock or reject it (any party can reject once the lock period has expired). No assets are lost.
+
+This design lets cross-chain coordinators rely on Polymesh settlement completion once locking succeeds, enabling atomic cross-chain operations, provided the assets involved are not close to a transfer restriction statistics limit. Coordinators using assets with statistics-based restrictions should allow for execution failing if a limit is reached during the lock period.
 :::
 
 **During Lock Period:**

@@ -64,6 +64,7 @@ Once the underlying Corporate Action exists, the distributor attaches the distri
 
 - Creates the distribution record on-chain, linking it to the initiated Corporate Action.
 - Locks the specified `amount` of `currency` in the distributor's `portfolio` for the purposes of the distribution.
+- Requires the `portfolio` not to be [frozen](/portfolios#portfolio-freezing) for `currency`, and its unfrozen, unlocked balance (`balance − locked − frozen`) to cover `amount`. Otherwise the call fails with `portfolio::PortfolioIsFrozen` or `portfolio::InsufficientPortfolioBalance`.
 - Defines the payment terms and timeline.
 
 :::tip Combined Initiation and Distribution

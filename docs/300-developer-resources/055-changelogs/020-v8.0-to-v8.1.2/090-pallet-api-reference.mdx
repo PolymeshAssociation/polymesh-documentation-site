@@ -155,7 +155,15 @@ Storage version 7 → 8; `NFTAccountCount` is backfilled by migration.
 | ------------------- | ------------------------------------------------- |
 | `PortfolioIsFrozen` | The portfolio is frozen for the asset being moved |
 
-As of v8.1.2 both this error and the pre-existing `InsufficientPortfolioBalance` are raised from `ensure_sufficient_balance`, the check shared by every portfolio movement, rather than only from the multi-asset move path. `InsufficientPortfolioBalance` now measures `balance − locked − frozen`, so a partially frozen portfolio hits it where it previously did not.
+As of v8.1.2 both this error and the pre-existing `InsufficientPortfolioBalance` are raised from `ensure_sufficient_balance`, rather than only from the multi-asset move path. `InsufficientPortfolioBalance` now measures `balance − locked − frozen`, so a partially frozen portfolio hits it where it previously did not.
+
+`ensure_sufficient_balance` is not specific to portfolio moves. It backs three calls, and all three now refuse a frozen portfolio and measure its balance net of frozen tokens:
+
+| Call                              | What it checks                                                       |
+| --------------------------------- | -------------------------------------------------------------------- |
+| `Portfolio::move_portfolio_funds` | The sending portfolio can release each amount moved                  |
+| `Sto::create_fundraiser`          | The offering portfolio can lock the full amount offered across tiers |
+| `CapitalDistribution::distribute` | The source portfolio can lock the full distribution amount           |
 
 ### Storage
 
@@ -198,7 +206,7 @@ The variant was renamed rather than deleted so that the indices of the errors af
 | ----------------------- | ----------------------------------------------------------------------------------------------- |
 | `InstructionNotSettled` | `invest` created an instruction that did not reach `InstructionStatus::Success` within the call |
 
-Added in v8.1.2 at the end of the variant list, so the indices of existing `Sto` errors are unchanged. The common cause is an offering asset with mandatory mediators, whose instruction cannot settle without a separate affirmation. See [What changed in v8.1.2](./085-v8.1.2-fixes.mdx#stoinvest-requires-its-instruction-to-settle).
+Added in v8.1.2 at the end of the variant list, so the indices of existing `Sto` errors are unchanged. The cause is a mandatory mediator on either asset in the instruction — the offering asset, or the raising asset when the investment is funded on chain — since the instruction cannot settle without that mediator's separate affirmation. See [What changed in v8.1.2](./085-v8.1.2-fixes.mdx#stoinvest-requires-its-instruction-to-settle).
 
 ---
 
