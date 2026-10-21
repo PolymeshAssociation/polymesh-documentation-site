@@ -1,18 +1,20 @@
-The amounts above are **maximums, not ranges**. There is no minimum payout for any severity, and the maximum is reserved for exceptional Reports: the worst impact in that row, demonstrated end to end against Mainnet code, with complete evidence and a sound fix. Most valid Reports are rewarded well below the maximum.
+The program maximum of **USD 40,000** is reserved for exceptional Reports: a critical impact demonstrated end to end against Mainnet code, with complete evidence and a sound fix. There is no set amount, range, or minimum for any severity, and most valid Reports are rewarded well below the maximum.
 
 Each payout is set case by case, taking into account:
 
 1. **Impact.** The worst impact the Report credibly demonstrates, not the theoretical worst case of the affected code. Claimed impacts that are not demonstrated are not rewarded as if they were.
 2. **Likelihood and prerequisites.** How realistic the attack is: its cost to the attacker, whether it can be sustained, and what access it needs. Attacks that need control of governance, a supermajority of node operators, physical access, or victim cooperation beyond normal use are rated lower or not at all. So is a key or agent that already holds some permission on the target exceeding it, unless the finding bypasses the underlying authorization completely.
-3. **Deployment.** Code running on Mainnet is rewarded above the same impact in code deployed only to Testnet (including Confidential Assets), which in turn is rewarded above code found only on unreleased branches.
+3. **Real-world exposure.** Whether the affected functionality is live on Mainnet and in use with real value. The same impact is rewarded higher where it puts real assets at risk.
 4. **Quality and original work.** A clear, accurate Report that the Participant has reproduced against the stated release, with a working proof of concept, a precise root cause, honestly stated limits, and a useful fix, is rewarded above one that Polymesh has to verify, correct, or complete. Overstated severity or impact counts against a Report.
-5. **Novelty and value to Polymesh.** Whether the finding adds to what our own testing, audits, and commonly available analysis tools would have found, and whether it changes what we fix or how urgently.
+5. **Novelty and value to Polymesh.** Whether the finding adds to what our own testing and audits, or a short prompt to a widely available tool, would readily surface, and whether it changes what we fix or how urgently.
 
 Further principles:
 
 - **Classification is guidance, not entitlement.** Polymesh may set a payout without assigning a severity. A finding of limited impact may receive a small discretionary payout or an acknowledgement only.
 - **Related findings are paid once.** Findings that share a root cause, and instances of the same defect pattern at different call sites submitted by the same Participant, may be treated as a single finding or rewarded at a reduced rate for each additional instance.
-- **Confidential Assets** findings are assessed against the functionality's intended Mainnet behavior. A **soundness break** (creating, inflating, or overdrawing confidential balances) is the most severe class of impact, followed by a **confidentiality break** (recovering amounts, asset identities, or counterparties without the corresponding keys). While Confidential Assets is not deployed to Mainnet, payouts take into account that no live value is at risk.
+- **Confidential Assets** findings are assessed against the functionality's intended Mainnet behavior. A **soundness break** (creating, inflating, or overdrawing confidential balances) is the most severe class of impact, followed by a **confidentiality break** (recovering amounts, asset identities, or counterparties without the corresponding keys).
 - **Revive/EVM and shared mechanisms** (MultiSig, the Relayer/Subsidizer) are assessed by analogy to the equivalent native operation. Fees charged to the account that signs and submits a transaction are not an unauthorized charge.
 - **Greater impact than demonstrated.** If you stop short of fully exploiting a serious issue and we find the impact is greater than you showed, we will take that into account.
+- **Unreleased code.** Issues that exist only on unreleased development branches are eligible for an acknowledgement or, at most, a discretionary payout.
+- **Changes to rewards.** We review the maximum reward and how rewards are set regularly, including in light of submission volume, and may change them at any time.
 - **Scoring systems.** A Report may include a CVSS vector or other scoring as supporting context, but no score or methodology creates any entitlement to a particular classification or Bounty Payout.
