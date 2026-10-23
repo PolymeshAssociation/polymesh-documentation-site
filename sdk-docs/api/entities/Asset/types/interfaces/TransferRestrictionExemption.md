@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Asset/types.ts:469](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L469)
 
-# Interface: TransferRestrictionExemption
-
-Defined in: [src/api/entities/Asset/types.ts:469](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L469)
-
 Identities that are exempt from Transfer Restrictions.
 
 ## Note

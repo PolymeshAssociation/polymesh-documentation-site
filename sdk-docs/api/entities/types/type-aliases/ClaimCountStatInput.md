@@ -2,10 +2,6 @@
 
 > > **ClaimCountStatInput** = \{ `claimType`: [`Accredited`](../enumerations/ClaimType.mdx#accredited); `issuer`: [`Identity`](Identity.mdx); `value?`: \{ `accredited`: `BigNumber`; `nonAccredited`: `BigNumber`; \}; \} \| \{ `claimType`: [`Affiliate`](../enumerations/ClaimType.mdx#affiliate); `issuer`: [`Identity`](Identity.mdx); `value?`: \{ `affiliate`: `BigNumber`; `nonAffiliate`: `BigNumber`; \}; \} \| \{ `claimType`: [`Jurisdiction`](../enumerations/ClaimType.mdx#jurisdiction); `issuer`: [`Identity`](Identity.mdx); `value?`: `object`[]; \}
 
-# Type Alias: ClaimCountStatInput
-
-> **ClaimCountStatInput** = \{ `claimType`: [`Accredited`](../enumerations/ClaimType.mdx#accredited); `issuer`: [`Identity`](Identity.mdx); `value?`: \{ `accredited`: `BigNumber`; `nonAccredited`: `BigNumber`; \}; \} \| \{ `claimType`: [`Affiliate`](../enumerations/ClaimType.mdx#affiliate); `issuer`: [`Identity`](Identity.mdx); `value?`: \{ `affiliate`: `BigNumber`; `nonAffiliate`: `BigNumber`; \}; \} \| \{ `claimType`: [`Jurisdiction`](../enumerations/ClaimType.mdx#jurisdiction); `issuer`: [`Identity`](Identity.mdx); `value?`: `object`[]; \}
-
 Defined in: [src/api/entities/types.ts:570](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L570)
 
 ## Union Members

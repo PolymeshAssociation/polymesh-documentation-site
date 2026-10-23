@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/TickerReservation/types.ts:3](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/TickerReservation/types.ts#L3)
 
-# Enumeration: TickerReservationStatus
-
-Defined in: [src/api/entities/TickerReservation/types.ts:3](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/TickerReservation/types.ts#L3)
-
 ## Enumeration Members
 
 ### AssetCreated

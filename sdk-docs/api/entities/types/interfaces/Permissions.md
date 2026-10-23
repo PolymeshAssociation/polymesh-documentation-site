@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/types.ts:671](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L671)
 
-# Interface: Permissions
-
-Defined in: [src/api/entities/types.ts:671](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L671)
-
 Permissions a Secondary Key has over the Identity. A null value means the key has
   all permissions of that type (e.g. if `assets` is null, the key has permissions over all
   of the Identity's Assets)

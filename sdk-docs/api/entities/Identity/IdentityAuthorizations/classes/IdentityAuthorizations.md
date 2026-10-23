@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Identity/IdentityAuthorizations.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/IdentityAuthorizations.ts#L12)
 
-# Class: IdentityAuthorizations
-
-Defined in: [src/api/entities/Identity/IdentityAuthorizations.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/IdentityAuthorizations.ts#L12)
-
 Handles all Identity Authorization related functionality
 
 ## Extends

@@ -2,10 +2,6 @@
 
 > > `const` **EXTERNAL\_AGENT\_PARTICIPATION\_TX\_TAGS**: \[[`Abdicate`](../../enumerations/ExternalAgentsTx.mdx#abdicate), [`AcceptBecomeAgent`](../../enumerations/ExternalAgentsTx.mdx#acceptbecomeagent)\]
 
-# Variable: EXTERNAL\_AGENT\_PARTICIPATION\_TX\_TAGS
-
-> `const` **EXTERNAL\_AGENT\_PARTICIPATION\_TX\_TAGS**: \[[`Abdicate`](../../enumerations/ExternalAgentsTx.mdx#abdicate), [`AcceptBecomeAgent`](../../enumerations/ExternalAgentsTx.mdx#acceptbecomeagent)\]
-
 Defined in: [src/types/txGroupConstants.ts:343](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/types/txGroupConstants.ts#L343)
 
 Transaction tags for External Agent Participation operations

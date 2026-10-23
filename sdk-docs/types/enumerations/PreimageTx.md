@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:794
 
-# Enumeration: PreimageTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:794
-
 ## Enumeration Members
 
 ### EnsureUpdated

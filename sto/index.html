@@ -8,8 +8,8 @@
 
 
 <script>window.__COPY_PAGE_BUTTON_OPTIONS__={customStyles:{},enabledActions:["copy","view","chatgpt","claude","perplexity","gemini"],generateMarkdownRoutes:!1,markdownUrl:!0,placement:"auto",mcpServer:null,id:"default"}</script><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.c53d1ff3.css">
-<script src="/polymesh-documentation-site/assets/js/runtime~main.c722f074.js" defer="defer"></script>
-<script src="/polymesh-documentation-site/assets/js/main.8ad5cb1f.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/runtime~main.d0f4d422.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/main.d6ebaad6.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -60,6 +60,7 @@
 <li class="">Requires a valid venue of type <code>STO</code>.</li>
 <li class="">Price tiers must be valid (i.e each with non-zero totals).</li>
 <li class="">If both start and end times are specified, start must be before end.</li>
+<li class="">The offering portfolio must not be <a class="" href="/polymesh-documentation-site/portfolios/#portfolio-freezing">frozen</a> for the offering asset, and its unfrozen, unlocked balance (<code>balance − locked − frozen</code>) must cover the sum of the tier totals.</li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-investing-in-an-sto">2. Investing in an STO<a href="#2-investing-in-an-sto" class="hash-link" aria-label="Direct link to 2. Investing in an STO" title="Direct link to 2. Investing in an STO" translate="no">​</a></h3>
 <p>During the active period of an STO, eligible investors can participate by calling the <code>sto::invest</code> transaction.</p>
@@ -78,6 +79,7 @@
 <li class="">Calculates the total investment cost based on the tiered pricing structure and purchase amount.</li>
 <li class="">Validates that the blended price doesn&#x27;t exceed the investor&#x27;s maximum price (if specified).</li>
 <li class="">Creates and executes a settlement instruction exchanging the calculated cost in raising asset for the requested tokens.</li>
+<li class="">Verifies that the instruction settled. If it did not, the whole call is rolled back with <code>sto::InstructionNotSettled</code>.</li>
 <li class="">Updates the remaining available amounts in each affected price tier.</li>
 <li class="">Records the investment transaction on-chain.</li>
 </ul>
@@ -88,7 +90,12 @@
 <li class="">The requested purchase amount must be available across the active tiers.</li>
 <li class="">The calculated investment cost must meet or exceed the minimum investment threshold.</li>
 <li class="">If a maximum price is specified, the blended price must not exceed this limit.</li>
+<li class="">The settlement instruction the call creates must settle within that same call. A mandatory mediator on any asset in the instruction defers settlement, and makes the investment fail. <code>invest</code> affirms both receiving portfolios itself, so a receiver&#x27;s mandatory affirmation setting does not.</li>
 </ul>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>An asset with mandatory mediators cannot be sold, or raised, through an STO</div><div class="admonitionContent_BuS1"><p><code>sto::invest</code> settles its instruction inside the call. An instruction takes on the <a class="" href="/polymesh-documentation-site/settlement/mediators/">mandatory mediators</a> of every asset in its legs, and cannot complete without a separate affirmation from each of them, so it is still pending when the call ends and the investment fails with <code>sto::InstructionNotSettled</code>. That applies to:</p><ul>
+<li class="">the <strong>offering asset</strong>, for every investment</li>
+<li class="">the <strong>raising asset</strong>, for every investment funded on chain. An investment funded off chain, with a receipt, has no raising-asset leg</li>
+</ul><p>Choose one or the other: remove the mandatory mediators from the asset concerned, or run the raise through settlement instructions directly rather than through the STO pallet.</p></div></div>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-managing-an-active-sto">3. Managing an Active STO<a href="#3-managing-an-active-sto" class="hash-link" aria-label="Direct link to 3. Managing an Active STO" title="Direct link to 3. Managing an Active STO" translate="no">​</a></h3>
 <p>Several management functions are available to the STO creator during its lifecycle:</p>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="modifying-the-time-window">Modifying the Time Window<a href="#modifying-the-time-window" class="hash-link" aria-label="Direct link to Modifying the Time Window" title="Direct link to Modifying the Time Window" translate="no">​</a></h4>

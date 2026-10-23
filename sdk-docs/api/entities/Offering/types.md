@@ -1,16 +1,10 @@
 # Entity: Offering/types
 
 > - [OfferingBalanceStatus](enumerations/OfferingBalanceStatus.mdx)
-- [OfferingSaleStatus](enumerations/OfferingSaleStatus.mdx)
-- [OfferingTimingStatus](enumerations/OfferingTimingStatus.mdx)
-
-# Entity: Offering/types
+> - [OfferingSaleStatus](enumerations/OfferingSaleStatus.mdx)
+> - [OfferingTimingStatus](enumerations/OfferingTimingStatus.mdx)
 
 ## Enumerations
-
-- [OfferingBalanceStatus](enumerations/OfferingBalanceStatus.mdx)
-- [OfferingSaleStatus](enumerations/OfferingSaleStatus.mdx)
-- [OfferingTimingStatus](enumerations/OfferingTimingStatus.mdx)
 
 ## Interfaces
 

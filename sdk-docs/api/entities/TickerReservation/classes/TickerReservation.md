@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/TickerReservation/index.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/TickerReservation/index.ts#L44)
 
-# Class: TickerReservation
-
-Defined in: [src/api/entities/TickerReservation/index.ts:44](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/TickerReservation/index.ts#L44)
-
 Represents a reserved Asset symbol in the Polymesh blockchain. Ticker reservations expire
   after a set length of time, after which they can be reserved by another Identity.
   A Ticker must be previously reserved by an Identity for that Identity to be able create an Asset with it

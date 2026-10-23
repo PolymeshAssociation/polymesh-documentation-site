@@ -2,10 +2,6 @@
 
 > > **ClaimBalanceStatInput** = \{ `claimType`: [`Accredited`](../../../entities/types/enumerations/ClaimType.mdx#accredited); `issuer`: [`Identity`](../../../entities/Identity/classes/Identity.mdx); `value?`: \{ `accredited`: `BigNumber`; `nonAccredited`: `BigNumber`; \}; \} \| \{ `claimType`: [`Affiliate`](../../../entities/types/enumerations/ClaimType.mdx#affiliate); `issuer`: [`Identity`](../../../entities/Identity/classes/Identity.mdx); `value?`: \{ `affiliate`: `BigNumber`; `nonAffiliate`: `BigNumber`; \}; \} \| \{ `claimType`: [`Jurisdiction`](../../../entities/types/enumerations/ClaimType.mdx#jurisdiction); `issuer`: [`Identity`](../../../entities/Identity/classes/Identity.mdx); `value?`: `object`[]; \}
 
-# Type Alias: ClaimBalanceStatInput
-
-> **ClaimBalanceStatInput** = \{ `claimType`: [`Accredited`](../../../entities/types/enumerations/ClaimType.mdx#accredited); `issuer`: [`Identity`](../../../entities/Identity/classes/Identity.mdx); `value?`: \{ `accredited`: `BigNumber`; `nonAccredited`: `BigNumber`; \}; \} \| \{ `claimType`: [`Affiliate`](../../../entities/types/enumerations/ClaimType.mdx#affiliate); `issuer`: [`Identity`](../../../entities/Identity/classes/Identity.mdx); `value?`: \{ `affiliate`: `BigNumber`; `nonAffiliate`: `BigNumber`; \}; \} \| \{ `claimType`: [`Jurisdiction`](../../../entities/types/enumerations/ClaimType.mdx#jurisdiction); `issuer`: [`Identity`](../../../entities/Identity/classes/Identity.mdx); `value?`: `object`[]; \}
-
 Defined in: [src/api/procedures/types.ts:514](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L514)
 
 ## Union Members

@@ -2,8 +2,6 @@
 
 > Architectural design and components of Polymesh Confidential Assets
 
-# Confidential Assets Architecture
-
 This page provides an architectural overview of Polymesh Confidential Assets (PCA), explaining the core design principles, system components, and how they work together to enable privacy-preserving transfers with regulatory compliance.
 
 Polymesh Confidential Assets implement a sophisticated protocol for privacy-preserving asset transfers on Polymesh. The implementation uses account-based confidential state with zero-knowledge proofs, enabling fully anonymous transfers while supporting the multi-party settlement workflows required for regulated securities.

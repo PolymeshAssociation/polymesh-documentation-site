@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Asset/Base/Metadata/index.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Metadata/index.ts#L37)
 
-# Class: Metadata
-
-Defined in: [src/api/entities/Asset/Base/Metadata/index.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Metadata/index.ts#L37)
-
 Handles all Asset Metadata related functionality
 
 ## Extends

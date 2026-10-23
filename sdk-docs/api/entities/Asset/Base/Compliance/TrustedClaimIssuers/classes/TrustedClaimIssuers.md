@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L26)
 
-# Class: TrustedClaimIssuers
-
-Defined in: [src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/TrustedClaimIssuers.ts#L26)
-
 Handles all Asset Default Trusted Claim Issuers related functionality
 
 ## Extends

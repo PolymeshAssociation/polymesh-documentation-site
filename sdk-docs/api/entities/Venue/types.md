@@ -2,11 +2,7 @@
 
 > - [VenueType](enumerations/VenueType.mdx)
 
-# Entity: Venue/types
-
 ## Enumerations
-
-- [VenueType](enumerations/VenueType.mdx)
 
 ## Interfaces
 

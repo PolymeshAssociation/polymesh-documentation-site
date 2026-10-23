@@ -2,8 +2,4 @@
 
 > > **Params** = [`Params`](../../CorporateAction/interfaces/Params.mdx) & [`DividendDistributionParams`](../interfaces/DividendDistributionParams.mdx)
 
-# Type Alias: Params
-
-> **Params** = [`Params`](../../CorporateAction/interfaces/Params.mdx) & [`DividendDistributionParams`](../interfaces/DividendDistributionParams.mdx)
-
 Defined in: [src/api/entities/DividendDistribution/index.ts:78](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/DividendDistribution/index.ts#L78)

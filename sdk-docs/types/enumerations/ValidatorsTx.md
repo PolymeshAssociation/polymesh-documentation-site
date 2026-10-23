@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:838
 
-# Enumeration: ValidatorsTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:838
-
 ## Enumeration Members
 
 ### AddPermissionedValidator

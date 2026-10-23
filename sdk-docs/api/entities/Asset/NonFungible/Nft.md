@@ -2,11 +2,7 @@
 
 > - [Nft](classes/Nft.mdx)
 
-# Entity: Asset/NonFungible/Nft
-
 ## Classes
-
-- [Nft](classes/Nft.mdx)
 
 ## Interfaces
 

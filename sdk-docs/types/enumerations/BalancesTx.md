@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:288
 
-# Enumeration: BalancesTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:288
-
 ## Enumeration Members
 
 ### Burn

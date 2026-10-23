@@ -2,10 +2,6 @@
 
 > > `const` **PORTFOLIO\_MANAGEMENT\_TX\_TAGS**: \[[`AcceptPortfolioCustody`](../../enumerations/PortfolioTx.mdx#acceptportfoliocustody), [`AllowIdentityToCreatePortfolios`](../../enumerations/PortfolioTx.mdx#allowidentitytocreateportfolios), [`CreateCustodyPortfolio`](../../enumerations/PortfolioTx.mdx#createcustodyportfolio), [`CreatePortfolio`](../../enumerations/PortfolioTx.mdx#createportfolio), [`DeletePortfolio`](../../enumerations/PortfolioTx.mdx#deleteportfolio), [`MovePortfolioFunds`](../../enumerations/PortfolioTx.mdx#moveportfoliofunds), [`QuitPortfolioCustody`](../../enumerations/PortfolioTx.mdx#quitportfoliocustody), [`RenamePortfolio`](../../enumerations/PortfolioTx.mdx#renameportfolio), [`RevokeCreatePortfoliosPermission`](../../enumerations/PortfolioTx.mdx#revokecreateportfoliospermission)\]
 
-# Variable: PORTFOLIO\_MANAGEMENT\_TX\_TAGS
-
-> `const` **PORTFOLIO\_MANAGEMENT\_TX\_TAGS**: \[[`AcceptPortfolioCustody`](../../enumerations/PortfolioTx.mdx#acceptportfoliocustody), [`AllowIdentityToCreatePortfolios`](../../enumerations/PortfolioTx.mdx#allowidentitytocreateportfolios), [`CreateCustodyPortfolio`](../../enumerations/PortfolioTx.mdx#createcustodyportfolio), [`CreatePortfolio`](../../enumerations/PortfolioTx.mdx#createportfolio), [`DeletePortfolio`](../../enumerations/PortfolioTx.mdx#deleteportfolio), [`MovePortfolioFunds`](../../enumerations/PortfolioTx.mdx#moveportfoliofunds), [`QuitPortfolioCustody`](../../enumerations/PortfolioTx.mdx#quitportfoliocustody), [`RenamePortfolio`](../../enumerations/PortfolioTx.mdx#renameportfolio), [`RevokeCreatePortfoliosPermission`](../../enumerations/PortfolioTx.mdx#revokecreateportfoliospermission)\]
-
 Defined in: [src/types/txGroupConstants.ts:482](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/types/txGroupConstants.ts#L482)
 
 Transaction tags for Portfolio Management operations

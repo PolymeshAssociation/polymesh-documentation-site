@@ -1,14 +1,9 @@
 # Client: types
 
 > - [ErrorCode](enumerations/ErrorCode.mdx)
-- [InstructionStatusEnum](enumerations/InstructionStatusEnum.mdx)
-
-# Client: types
+> - [InstructionStatusEnum](enumerations/InstructionStatusEnum.mdx)
 
 ## Enumerations
-
-- [ErrorCode](enumerations/ErrorCode.mdx)
-- [InstructionStatusEnum](enumerations/InstructionStatusEnum.mdx)
 
 ## Interfaces
 

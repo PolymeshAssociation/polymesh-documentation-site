@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Asset/types.ts:411](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L411)
 
-# Interface: TransferRestrictionStatValues
-
-Defined in: [src/api/entities/Asset/types.ts:411](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L411)
-
 Asset Stat along with its current value
 
 ## Properties

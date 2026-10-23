@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Identity/index.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L103)
 
-# Class: Identity
-
-Defined in: [src/api/entities/Identity/index.ts:103](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L103)
-
 Represents an Identity in the Polymesh blockchain
 
 ## Extends

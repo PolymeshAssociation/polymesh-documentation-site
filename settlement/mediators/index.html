@@ -8,8 +8,8 @@
 
 
 <script>window.__COPY_PAGE_BUTTON_OPTIONS__={customStyles:{},enabledActions:["copy","view","chatgpt","claude","perplexity","gemini"],generateMarkdownRoutes:!1,markdownUrl:!0,placement:"auto",mcpServer:null,id:"default"}</script><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.c53d1ff3.css">
-<script src="/polymesh-documentation-site/assets/js/runtime~main.c722f074.js" defer="defer"></script>
-<script src="/polymesh-documentation-site/assets/js/main.8ad5cb1f.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/runtime~main.d0f4d422.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/main.d6ebaad6.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -25,14 +25,15 @@
 <li class=""><strong>Instruction Level</strong>: Required for specific settlement instructions (chosen during instruction creation)</li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="asset-level-mediators">Asset-Level Mediators<a href="#asset-level-mediators" class="hash-link" aria-label="Direct link to Asset-Level Mediators" title="Direct link to Asset-Level Mediators" translate="no">​</a></h3>
-<p>Asset issuers can designate mediators that must approve all transfers of their assets, ensuring consistent validation criteria regardless of who creates settlement instructions.</p>
-<p><strong>Management</strong>: Asset mediators are controlled through <code>asset::add_mandatory_mediator</code> and <code>asset::remove_mandatory_mediator</code> transactions.</p>
+<p>Asset issuers can designate mediators that must approve settlement instructions involving their assets, ensuring consistent validation criteria regardless of who creates settlement instructions.</p>
+<p><strong>Management</strong>: Asset mediators are controlled through <code>asset::add_mandatory_mediators</code> and <code>asset::remove_mandatory_mediators</code> transactions.</p>
 <p><strong>Behavior</strong>:</p>
 <ul>
-<li class="">All settlement instructions involving the asset require mediator approval</li>
+<li class="">Every settlement instruction created while a mediator is set for the asset requires that mediator&#x27;s approval</li>
 <li class="">Multiple mediators can be assigned to a single asset</li>
-<li class="">Applies automatically to any instruction involving the asset</li>
+<li class="">Applies automatically to any new instruction involving the asset</li>
 </ul>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Mandatory mediators apply from instruction creation</div><div class="admonitionContent_BuS1"><p>An instruction&#x27;s mediators are fixed when the instruction is created: the asset&#x27;s mandatory mediators at that moment are copied into the instruction, and execution checks that stored set. Adding a mandatory mediator does not affect instructions that already exist, and removing one does not release instructions already waiting on it. To stop transfers in pending instructions that have not been locked, use asset-level controls such as <a class="" href="/polymesh-documentation-site/core/assets/#freezing-and-unfreezing-assets">freezing the asset</a> or updating compliance rules. An instruction that has already been locked is not re-checked against those controls at execution; see <a href="#how-settlement-locking-works" class="">How Settlement Locking Works</a>.</p></div></div>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instruction-level-mediators">Instruction-Level Mediators<a href="#instruction-level-mediators" class="hash-link" aria-label="Direct link to Instruction-Level Mediators" title="Direct link to Instruction-Level Mediators" translate="no">​</a></h3>
 <p>Settlement instructions can specify additional mediators beyond any asset-level requirements, allowing flexible validation for specific transaction needs.</p>
 <p><strong>Scope</strong>: These mediators are instruction-specific and must approve in addition to any asset-level mediators.</p>
@@ -90,7 +91,7 @@
 <li class=""><strong>Weight Mechanism</strong>: Weight in Substrate chains acts similar to gas in Ethereum - it measures computational cost and prevents infinite loops. If the weight limit is too low, the transaction will fail before execution begins</li>
 <li class=""><strong>Runtime API Available</strong>: Use the <code>settlement::lock_instruction_weight</code> runtime API to get the correct weight for a specific instruction and ensure proper fee calculation</li>
 <li class=""><strong>Comprehensive validation occurs</strong>: All settlement conditions are validated including compliance rules, mediator affirmation expiries, asset availability, and venue permissions</li>
-<li class=""><strong>Execution guarantee</strong>: Once successfully locked, execution by any mediator cannot fail - all potential failure conditions have been pre-validated</li>
+<li class=""><strong>Execution guarantee</strong>: Once successfully locked, compliance rules, asset freezes and venue permissions are not re-checked at execution, and the assets are held for the instruction. The exception is <strong>transfer restriction statistics</strong> (for example maximum investor count or maximum ownership), which depend on all holders of the asset and are re-checked at execution - see Compliance and Validation below</li>
 <li class="">Assets are locked and the instruction status changes to <code>LockedForExecution</code></li>
 <li class="">A timestamp is recorded for the locking period</li>
 </ul>
@@ -167,7 +168,7 @@
 </li>
 </ul>
 <p><strong>Compliance and Validation:</strong></p>
-<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Critical Design Feature</div><div class="admonitionContent_BuS1"><p>When locking an instruction, <strong>all compliance rules, mediator affirmation expiries, asset availability, and settlement conditions are validated</strong>. Once successfully locked, execution by any mediator is guaranteed to succeed - no compliance or validation failures can occur during execution.</p><p>This design ensures that cross-chain coordinators can rely on Polymesh settlement completion once locking succeeds, enabling atomic cross-chain operations.</p></div></div>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Critical Design Feature</div><div class="admonitionContent_BuS1"><p>When locking an instruction, <strong>all compliance rules, mediator affirmation expiries, asset availability, and settlement conditions are validated</strong>. Compliance rules and asset freezes are not re-checked at execution: a compliance rule change or an asset freeze after the lock does not prevent the locked instruction from settling.</p><p><strong>Transfer restriction statistics are the exception.</strong> Limits such as maximum investor count and maximum investor or claim ownership depend on every holder of the asset, so a lock cannot reserve them. They are re-checked when the locked instruction executes; otherwise several instructions locked against the same state could together exceed the issuer&#x27;s limit. If other transfers have reached a limit in the meantime, execution fails, the instruction stays <code>LockedForExecution</code>, and a mediator can unlock or reject it (any party can reject once the lock period has expired). No assets are lost.</p><p>This design lets cross-chain coordinators rely on Polymesh settlement completion once locking succeeds, enabling atomic cross-chain operations, provided the assets involved are not close to a transfer restriction statistics limit. Coordinators using assets with statistics-based restrictions should allow for execution failing if a limit is reached during the lock period.</p></div></div>
 <p><strong>During Lock Period:</strong></p>
 <ul>
 <li class=""><strong>Execution</strong>: Only mediators can execute the instruction during the lock period</li>

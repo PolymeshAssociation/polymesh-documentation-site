@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:436
 
-# Enumeration: BridgeTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:436
-
 ## Enumeration Members
 
 ### AddFreezeAdmin

@@ -1,21 +1,11 @@
 # types/utils
 
 > - [ArgsType](type-aliases/ArgsType.mdx)
-- [Ensured](type-aliases/Ensured.mdx)
-- [HumanReadableType](type-aliases/HumanReadableType.mdx)
-- [Modify](type-aliases/Modify.mdx)
-- [PaginatedQueryArgs](type-aliases/PaginatedQueryArgs.mdx)
-- [QueryArgs](type-aliases/QueryArgs.mdx)
-- [WithRequired](type-aliases/WithRequired.mdx)
-
-# types/utils
+> - [Ensured](type-aliases/Ensured.mdx)
+> - [HumanReadableType](type-aliases/HumanReadableType.mdx)
+> - [Modify](type-aliases/Modify.mdx)
+> - [PaginatedQueryArgs](type-aliases/PaginatedQueryArgs.mdx)
+> - [QueryArgs](type-aliases/QueryArgs.mdx)
+> - [WithRequired](type-aliases/WithRequired.mdx)
 
 ## Type Aliases
-
-- [ArgsType](type-aliases/ArgsType.mdx)
-- [Ensured](type-aliases/Ensured.mdx)
-- [HumanReadableType](type-aliases/HumanReadableType.mdx)
-- [Modify](type-aliases/Modify.mdx)
-- [PaginatedQueryArgs](type-aliases/PaginatedQueryArgs.mdx)
-- [QueryArgs](type-aliases/QueryArgs.mdx)
-- [WithRequired](type-aliases/WithRequired.mdx)

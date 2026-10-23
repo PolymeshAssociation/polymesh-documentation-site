@@ -2,10 +2,6 @@
 
 > > **InputCorporateActionTaxWithholdings** = [`Modify`](../../../../types/utils/type-aliases/Modify.mdx)\<[`TaxWithholding`](../../../entities/CorporateActionBase/types/interfaces/TaxWithholding.mdx), \{ `identity`: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx); \}\>[]
 
-# Type Alias: InputCorporateActionTaxWithholdings
-
-> **InputCorporateActionTaxWithholdings** = [`Modify`](../../../../types/utils/type-aliases/Modify.mdx)\<[`TaxWithholding`](../../../entities/CorporateActionBase/types/interfaces/TaxWithholding.mdx), \{ `identity`: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx); \}\>[]
-
 Defined in: [src/api/procedures/types.ts:238](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L238)
 
 Per-Identity tax withholdings of a corporate action in a flexible structure for input purposes

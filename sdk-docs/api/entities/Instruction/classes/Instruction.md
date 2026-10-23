@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Instruction/index.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L117)
 
-# Class: Instruction
-
-Defined in: [src/api/entities/Instruction/index.ts:117](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Instruction/index.ts#L117)
-
 Represents a settlement Instruction to be executed on a certain Venue
 
 ## Extends

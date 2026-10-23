@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:781
 
-# Enumeration: PolymeshContractsTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:781
-
 ## Enumeration Members
 
 ### Call

@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Asset/types.ts:220](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L220)
 
-# Interface: HistoricNftTransaction
-
-Defined in: [src/api/entities/Asset/types.ts:220](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L220)
-
 ## Extends
 
 - [`BaseHistoricAssetTransaction`](BaseHistoricAssetTransaction.mdx)

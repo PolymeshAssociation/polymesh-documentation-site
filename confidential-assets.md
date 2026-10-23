@@ -2,8 +2,6 @@
 
 > Privacy-preserving asset transfers with regulatory compliance on Polymesh
 
-# Confidential Assets
-
 Polymesh Confidential Assets (**PCA**) enable privacy-preserving transfers of digital assets while still supporting regulated-market workflows like **receiver affirmation**, **multi-leg settlement** (transfers), and **asset-specific compliance access**.
 
 At a high level, participants submit **Zero-Knowledge Proofs** (**ZKP**) that a balance update is valid (e.g., “I can afford this debit”, “this state transition is well-formed”) without revealing the underlying amounts or linking the sender/receiver identities. Separately, encrypted settlement details can be made accessible to designated compliance participants.

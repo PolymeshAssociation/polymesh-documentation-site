@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:649
 
-# Enumeration: SchedulerTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:649
-
 ## Enumeration Members
 
 ### Cancel

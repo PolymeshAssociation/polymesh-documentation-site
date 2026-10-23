@@ -2,8 +2,6 @@
 
 > A curated list of useful Polymesh links, repositories, explorers, and community resources.
 
-# Useful Links & Resources
-
 ## Official Repositories
 
 - [Polymesh GitHub](https://github.com/PolymeshAssociation/)

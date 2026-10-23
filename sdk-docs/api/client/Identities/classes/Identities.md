@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/client/Identities.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Identities.ts#L34)
 
-# Class: Identities
-
-Defined in: [src/api/client/Identities.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Identities.ts#L34)
-
 Handles all Identity related functionality
 
 ## Methods

@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:847
 
-# Enumeration: DidRegistrarsTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:847
-
 ## Enumeration Members
 
 ### AbdicateMembership

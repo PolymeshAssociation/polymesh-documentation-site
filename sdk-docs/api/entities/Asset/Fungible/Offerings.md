@@ -2,8 +2,4 @@
 
 > - [Offerings](classes/Offerings.mdx)
 
-# Entity: Asset/Fungible/Offerings
-
 ## Classes
-
-- [Offerings](classes/Offerings.mdx)

@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/types.ts:795](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L795)
 
-# Interface: CheckpointWithData
-
-Defined in: [src/api/entities/types.ts:795](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L795)
-
 ## Properties
 
 ### checkpoint

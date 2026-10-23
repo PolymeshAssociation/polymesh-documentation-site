@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:1
 
-# Enumeration: CountryCode
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:1
-
 ## Enumeration Members
 
 ### Ad

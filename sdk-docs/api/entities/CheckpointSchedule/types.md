@@ -2,11 +2,7 @@
 
 > - [ScheduleDetails](interfaces/ScheduleDetails.mdx)
 
-# Entity: CheckpointSchedule/types
-
 ## Interfaces
-
-- [ScheduleDetails](interfaces/ScheduleDetails.mdx)
 
 ## Type Aliases
 

@@ -1,11 +1,6 @@
 # Entity: Asset/Base/Settlements
 
 > - [FungibleSettlements](classes/FungibleSettlements.mdx)
-- [NonFungibleSettlements](classes/NonFungibleSettlements.mdx)
-
-# Entity: Asset/Base/Settlements
+> - [NonFungibleSettlements](classes/NonFungibleSettlements.mdx)
 
 ## Classes
-
-- [FungibleSettlements](classes/FungibleSettlements.mdx)
-- [NonFungibleSettlements](classes/NonFungibleSettlements.mdx)

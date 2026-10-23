@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/DividendDistribution/index.ts:86](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/DividendDistribution/index.ts#L86)
 
-# Class: DividendDistribution
-
-Defined in: [src/api/entities/DividendDistribution/index.ts:86](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/DividendDistribution/index.ts#L86)
-
 Represents a Corporate Action via which an Asset issuer wishes to distribute dividends
   between a subset of the Asset Holders (targets)
 

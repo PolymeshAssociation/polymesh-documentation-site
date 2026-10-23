@@ -2,8 +2,4 @@
 
 > > **AssetHolderBalance** = [`PortfolioBalance`](../../Portfolio/types/interfaces/PortfolioBalance.mdx)
 
-# Type Alias: AssetHolderBalance
-
-> **AssetHolderBalance** = [`PortfolioBalance`](../../Portfolio/types/interfaces/PortfolioBalance.mdx)
-
 Defined in: [src/api/entities/types.ts:820](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L820)

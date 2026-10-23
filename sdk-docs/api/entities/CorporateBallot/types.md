@@ -2,11 +2,7 @@
 
 > - [CorporateBallotStatus](enumerations/CorporateBallotStatus.mdx)
 
-# Entity: CorporateBallot/types
-
 ## Enumerations
-
-- [CorporateBallotStatus](enumerations/CorporateBallotStatus.mdx)
 
 ## Interfaces
 

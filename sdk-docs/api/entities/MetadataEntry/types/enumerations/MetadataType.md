@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/MetadataEntry/types.ts:5](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MetadataEntry/types.ts#L5)
 
-# Enumeration: MetadataType
-
-Defined in: [src/api/entities/MetadataEntry/types.ts:5](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MetadataEntry/types.ts#L5)
-
 ## Enumeration Members
 
 ### Global

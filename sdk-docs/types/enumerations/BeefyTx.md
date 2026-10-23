@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:859
 
-# Enumeration: BeefyTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:859
-
 ## Enumeration Members
 
 ### ReportDoubleVoting

@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:828
 
-# Enumeration: ElectionProviderMultiPhaseTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:828
-
 ## Enumeration Members
 
 ### GovernanceFallback

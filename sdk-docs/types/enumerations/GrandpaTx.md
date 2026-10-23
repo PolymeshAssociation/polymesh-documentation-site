@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:505
 
-# Enumeration: GrandpaTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:505
-
 ## Enumeration Members
 
 ### NoteStalled

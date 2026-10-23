@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:277
 
-# Enumeration: IndicesTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:277
-
 ## Enumeration Members
 
 ### Claim

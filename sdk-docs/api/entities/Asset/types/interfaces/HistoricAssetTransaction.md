@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Asset/types.ts:211](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L211)
 
-# Interface: HistoricAssetTransaction
-
-Defined in: [src/api/entities/Asset/types.ts:211](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L211)
-
 ## Extends
 
 - [`BaseHistoricAssetTransaction`](BaseHistoricAssetTransaction.mdx)

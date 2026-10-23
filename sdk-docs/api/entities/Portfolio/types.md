@@ -1,16 +1,10 @@
 # Entity: Portfolio/types
 
 > - [HistoricSettlement](interfaces/HistoricSettlement.mdx)
-- [PortfolioBalance](interfaces/PortfolioBalance.mdx)
-- [PortfolioCollection](interfaces/PortfolioCollection.mdx)
-
-# Entity: Portfolio/types
+> - [PortfolioBalance](interfaces/PortfolioBalance.mdx)
+> - [PortfolioCollection](interfaces/PortfolioCollection.mdx)
 
 ## Interfaces
-
-- [HistoricSettlement](interfaces/HistoricSettlement.mdx)
-- [PortfolioBalance](interfaces/PortfolioBalance.mdx)
-- [PortfolioCollection](interfaces/PortfolioCollection.mdx)
 
 ## Type Aliases
 

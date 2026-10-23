@@ -2,11 +2,7 @@
 
 > - [Subsidy](classes/Subsidy.mdx)
 
-# Entity: Subsidy
-
 ## Classes
-
-- [Subsidy](classes/Subsidy.mdx)
 
 ## Interfaces
 

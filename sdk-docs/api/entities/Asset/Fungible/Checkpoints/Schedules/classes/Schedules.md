@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L27)
 
-# Class: Schedules
-
-Defined in: [src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts:27](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Checkpoints/Schedules.ts#L27)
-
 Handles all Asset Checkpoint Schedules related functionality
 
 ## Extends

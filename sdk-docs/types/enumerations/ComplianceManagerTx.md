@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:581
 
-# Enumeration: ComplianceManagerTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:581
-
 ## Enumeration Members
 
 ### AddComplianceRequirement

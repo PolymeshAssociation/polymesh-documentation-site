@@ -8,8 +8,8 @@
 
 
 <script>window.__COPY_PAGE_BUTTON_OPTIONS__={customStyles:{},enabledActions:["copy","view","chatgpt","claude","perplexity","gemini"],generateMarkdownRoutes:!1,markdownUrl:!0,placement:"auto",mcpServer:null,id:"default"}</script><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.c53d1ff3.css">
-<script src="/polymesh-documentation-site/assets/js/runtime~main.c722f074.js" defer="defer"></script>
-<script src="/polymesh-documentation-site/assets/js/main.8ad5cb1f.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/runtime~main.d0f4d422.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/main.d6ebaad6.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -34,7 +34,7 @@
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="restriction-types-and-enforcement">Restriction Types and Enforcement<a href="#restriction-types-and-enforcement" class="hash-link" aria-label="Direct link to Restriction Types and Enforcement" title="Direct link to Restriction Types and Enforcement" translate="no">​</a></h2>
 <p>The statistics module tracks various statistics about asset holders, and transfer restrictions are enforced based on these statistics. Each type of restriction has specific logic for how it impacts senders and receivers:</p>
-<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Statistic Limit and Performance</div><div class="admonitionContent_BuS1"><p>A maximum of 4 statistics can be tracked for a single asset at any time. Attempting to add more will result in an error.</p><p>Each statistic that is tracked adds additional overhead to every transfer involving the asset, regardless of whether a restriction is enforced on it. For best performance, only enable the minimum set of statistics and restrictions required for your compliance needs.</p></div></div>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Statistic Limit and Performance</div><div class="admonitionContent_BuS1"><p>A maximum of 10 statistics can be tracked for a single asset at any time. Attempting to add more will result in an error.</p><p>Each statistic that is tracked adds additional overhead to every transfer involving the asset, regardless of whether a restriction is enforced on it. For best performance, only enable the minimum set of statistics and restrictions required for your compliance needs.</p></div></div>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="holder-count-restrictions">Holder Count Restrictions<a href="#holder-count-restrictions" class="hash-link" aria-label="Direct link to Holder Count Restrictions" title="Direct link to Holder Count Restrictions" translate="no">​</a></h3>
 <ul>
 <li class="">Triggered when a new token holder is being added (receiver previously had zero balance).</li>
@@ -79,12 +79,11 @@ If the maximum holder count is 100 and there are already 101 holders (perhaps du
 <p>These mechanisms ensure that all configured restrictions are enforced at the protocol level, and that compliance is maintained for both count- and percentage-based rules, including those scoped to specific claims or the absence of claims.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="transfer-restrictions-lifecycle">Transfer Restrictions Lifecycle<a href="#transfer-restrictions-lifecycle" class="hash-link" aria-label="Direct link to Transfer Restrictions Lifecycle" title="Direct link to Transfer Restrictions Lifecycle" translate="no">​</a></h2>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-set-active-statistic-types">1. Set Active Statistic Types<a href="#1-set-active-statistic-types" class="hash-link" aria-label="Direct link to 1. Set Active Statistic Types" title="Direct link to 1. Set Active Statistic Types" translate="no">​</a></h3>
-<p>To begin, use <code>statistics::setActiveAssetStats</code> to define which statistics (counts or balances) will be tracked for a given asset. This initializes the storage for the selected stat types. Only identities with Agent permission for the asset can perform this action. Setting new stat types will replace any existing types. You cannot set a new stat type if a previous one is still in use by transfer conditions. Maximum of 4 stat types per asset.</p>
+<p>To begin, use <code>statistics::setActiveAssetStats</code> to define which statistics (counts or balances) will be tracked for a given asset. This initializes the storage for the selected stat types. Only identities with Agent permission for the asset can perform this action. Setting new stat types will replace any existing types. You cannot set a new stat type if a previous one is still in use by transfer conditions. Maximum of 10 stat types per asset.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li class=""><code>asset_id</code>: The asset to configure.</li>
-<li class=""><code>stat_types</code>: The new stat types to track (e.g., <code>Count</code> for holder count, <code>Balance</code> for percentage-based rules).</li>
-<li class=""><code>claimIssuer</code> (optional): Specify a claim issuer for claim-based stats.</li>
+<li class=""><code>stat_types</code>: The new stat types to track. Each entry pairs an operation type (<code>Count</code> for holder count, <code>Balance</code> for percentage-based rules) with an optional <code>claim_issuer</code> — a <code>(ClaimType, IdentityId)</code> pair that scopes the statistic to holders carrying that claim from that issuer.</li>
 </ul>
 <hr>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-batch-update-asset-statistics">2. Batch Update Asset Statistics<a href="#2-batch-update-asset-statistics" class="hash-link" aria-label="Direct link to 2. Batch Update Asset Statistics" title="Direct link to 2. Batch Update Asset Statistics" translate="no">​</a></h3>
@@ -101,17 +100,15 @@ If the maximum holder count is 100 and there are already 101 holders (perhaps du
 <p><strong>Parameters:</strong></p>
 <ul>
 <li class=""><code>asset_id</code>: The asset to configure.</li>
-<li class=""><code>transfer_conditions</code>: The set of transfer conditions to enforce (e.g., <code>MaxInvestorCount</code>, <code>MaxInvestorOwnership</code>, <code>ClaimCount</code>, <code>ClaimOwnership</code>).</li>
-<li class=""><code>claimIssuer</code> (optional): Specify a claim issuer for claim-based restrictions.</li>
+<li class=""><code>transfer_conditions</code>: The set of transfer conditions to enforce (e.g., <code>MaxInvestorCount</code>, <code>MaxInvestorOwnership</code>, <code>ClaimCount</code>, <code>ClaimOwnership</code>). The claim-based conditions carry their own claim and issuer, so no separate claim issuer parameter is needed.</li>
 </ul>
 <hr>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-optional-set-entities-exempt">4. (Optional) Set Entities Exempt<a href="#4-optional-set-entities-exempt" class="hash-link" aria-label="Direct link to 4. (Optional) Set Entities Exempt" title="Direct link to 4. (Optional) Set Entities Exempt" translate="no">​</a></h3>
 <p>To exempt specific identities from one or more transfer restrictions, use <code>statistics::setEntitiesExempt</code>. Exemptions can be set or removed at any time, and are useful for allowing certain parties (such as company insiders or strategic partners) to bypass specific compliance rules without affecting the overall statistics.</p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li class=""><code>asset_id</code>: The asset for which to set exemptions.</li>
 <li class=""><code>is_exempt</code>: Enable or disable exemption for the entities.</li>
-<li class=""><code>exempt_key</code>: The stat type and asset ID for which the exemption applies.</li>
+<li class=""><code>exempt_key</code>: A <code>TransferConditionExemptKey</code> identifying what the exemption applies to — the <code>asset_id</code>, the stat operation type (<code>op</code>), and an optional <code>claim_type</code>. The asset is named here rather than as a separate parameter.</li>
 <li class=""><code>entities</code>: The DIDs of the token holders to set or unset as exempt.</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="exemptions">Exemptions<a href="#exemptions" class="hash-link" aria-label="Direct link to Exemptions" title="Direct link to Exemptions" translate="no">​</a></h2>

@@ -2,11 +2,7 @@
 
 > - [Identity](classes/Identity.mdx)
 
-# Entity: Identity
-
 ## Classes
-
-- [Identity](classes/Identity.mdx)
 
 ## Interfaces
 

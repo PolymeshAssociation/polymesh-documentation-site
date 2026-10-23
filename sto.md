@@ -60,6 +60,7 @@ Asset issuers or their appointed [agents](/asset-agents) can create an STO by ca
 - Requires a valid venue of type `STO`.
 - Price tiers must be valid (i.e each with non-zero totals).
 - If both start and end times are specified, start must be before end.
+- The offering portfolio must not be [frozen](/portfolios#portfolio-freezing) for the offering asset, and its unfrozen, unlocked balance (`balance − locked − frozen`) must cover the sum of the tier totals.
 
 ### 2. Investing in an STO
 
@@ -80,6 +81,7 @@ During the active period of an STO, eligible investors can participate by callin
 - Calculates the total investment cost based on the tiered pricing structure and purchase amount.
 - Validates that the blended price doesn't exceed the investor's maximum price (if specified).
 - Creates and executes a settlement instruction exchanging the calculated cost in raising asset for the requested tokens.
+- Verifies that the instruction settled. If it did not, the whole call is rolled back with `sto::InstructionNotSettled`.
 - Updates the remaining available amounts in each affected price tier.
 - Records the investment transaction on-chain.
 
@@ -90,6 +92,16 @@ During the active period of an STO, eligible investors can participate by callin
 - The requested purchase amount must be available across the active tiers.
 - The calculated investment cost must meet or exceed the minimum investment threshold.
 - If a maximum price is specified, the blended price must not exceed this limit.
+- The settlement instruction the call creates must settle within that same call. A mandatory mediator on any asset in the instruction defers settlement, and makes the investment fail. `invest` affirms both receiving portfolios itself, so a receiver's mandatory affirmation setting does not.
+
+:::warning An asset with mandatory mediators cannot be sold, or raised, through an STO
+`sto::invest` settles its instruction inside the call. An instruction takes on the [mandatory mediators](/settlement/mediators) of every asset in its legs, and cannot complete without a separate affirmation from each of them, so it is still pending when the call ends and the investment fails with `sto::InstructionNotSettled`. That applies to:
+
+- the **offering asset**, for every investment
+- the **raising asset**, for every investment funded on chain. An investment funded off chain, with a receipt, has no raising-asset leg
+
+Choose one or the other: remove the mandatory mediators from the asset concerned, or run the raise through settlement instructions directly rather than through the STO pallet.
+:::
 
 ### 3. Managing an Active STO
 

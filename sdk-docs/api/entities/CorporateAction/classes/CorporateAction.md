@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/CorporateAction.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateAction.ts#L42)
 
-# Class: CorporateAction
-
-Defined in: [src/api/entities/CorporateAction.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateAction.ts#L42)
-
 Represents an action initiated by the issuer of an Asset which may affect the positions of
   the Asset Holders
 

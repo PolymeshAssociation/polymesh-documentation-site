@@ -2,11 +2,7 @@
 
 > - [AuthorizationRequest](classes/AuthorizationRequest.mdx)
 
-# Entity: AuthorizationRequest
-
 ## Classes
-
-- [AuthorizationRequest](classes/AuthorizationRequest.mdx)
 
 ## Interfaces
 

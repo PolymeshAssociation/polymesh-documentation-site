@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/procedures/types.ts:830](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L830)
 
-# Interface: IssueTokensParams
-
-Defined in: [src/api/procedures/types.ts:830](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L830)
-
 ## Properties
 
 ### account?

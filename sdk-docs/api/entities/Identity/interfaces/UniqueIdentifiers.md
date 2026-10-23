@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Identity/index.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L96)
 
-# Interface: UniqueIdentifiers
-
-Defined in: [src/api/entities/Identity/index.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/index.ts#L96)
-
 Properties that uniquely identify an Identity
 
 ## Properties

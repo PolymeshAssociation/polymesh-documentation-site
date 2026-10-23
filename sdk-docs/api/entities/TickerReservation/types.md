@@ -2,11 +2,7 @@
 
 > - [TickerReservationStatus](enumerations/TickerReservationStatus.mdx)
 
-# Entity: TickerReservation/types
-
 ## Enumerations
-
-- [TickerReservationStatus](enumerations/TickerReservationStatus.mdx)
 
 ## Type Aliases
 

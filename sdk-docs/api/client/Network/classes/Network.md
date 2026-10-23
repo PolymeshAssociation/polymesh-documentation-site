@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/client/Network.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L42)
 
-# Class: Network
-
-Defined in: [src/api/client/Network.ts:42](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Network.ts#L42)
-
 Handles all Network related functionality, including querying for historical events from middleware
 
 ## Methods

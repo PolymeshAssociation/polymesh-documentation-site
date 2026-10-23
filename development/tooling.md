@@ -2,8 +2,6 @@
 
 > Overview of available tools and resources for developing on Polymesh blockchain
 
-# Polymesh Tooling
-
 Welcome to the Polymesh Tooling section! Here you'll find everything you need to build, test, and integrate with the Polymesh blockchain using a variety of tools and APIs.
 
 ## What You'll Find in This Section
@@ -22,4 +20,4 @@ Each tool comes with detailed documentation, setup instructions, and practical e
 - [REST API](./rest-api/)
 - [SubQuery Indexer](./subquery/)
 - [Local Dev Environment](./local-setup/)
-- [Smart Contracts](/development/smart-contracts/)
+- [EVM & Smart Contracts](/development/smart-contracts/)

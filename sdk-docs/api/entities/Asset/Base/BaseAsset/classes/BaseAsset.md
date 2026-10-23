@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L69)
 
-# Class: BaseAsset
-
-Defined in: [src/api/entities/Asset/Base/BaseAsset.ts:69](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/BaseAsset.ts#L69)
-
 Class used to manage functionality common to all assets.
 
 ## Extends

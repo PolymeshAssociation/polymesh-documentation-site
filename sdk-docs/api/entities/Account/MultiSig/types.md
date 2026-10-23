@@ -1,13 +1,7 @@
 # Entity: Account/MultiSig/types
 
 > - [HistoricalMultiSigProposal](interfaces/HistoricalMultiSigProposal.mdx)
-- [MultiSigDetails](interfaces/MultiSigDetails.mdx)
-- [MultiSigSigners](interfaces/MultiSigSigners.mdx)
-
-# Entity: Account/MultiSig/types
+> - [MultiSigDetails](interfaces/MultiSigDetails.mdx)
+> - [MultiSigSigners](interfaces/MultiSigSigners.mdx)
 
 ## Interfaces
-
-- [HistoricalMultiSigProposal](interfaces/HistoricalMultiSigProposal.mdx)
-- [MultiSigDetails](interfaces/MultiSigDetails.mdx)
-- [MultiSigSigners](interfaces/MultiSigSigners.mdx)

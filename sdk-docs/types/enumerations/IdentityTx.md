@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:304
 
-# Enumeration: IdentityTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:304
-
 ## Enumeration Members
 
 ### AcceptPrimaryKey

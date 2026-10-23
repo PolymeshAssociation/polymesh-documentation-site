@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:575
 
-# Enumeration: CheckpointTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:575
-
 ## Enumeration Members
 
 ### CreateCheckpoint

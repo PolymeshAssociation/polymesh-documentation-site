@@ -2,10 +2,6 @@
 
 > Defined in: [src/base/PolymeshError.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/PolymeshError.ts#L15)
 
-# Class: PolymeshError
-
-Defined in: [src/base/PolymeshError.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/PolymeshError.ts#L15)
-
 Wraps an error to give more information about its type
 
 ## Extends

@@ -4,8 +4,6 @@
 
 ## Purpose of Sequence Diagrams
 
-These sequence diagrams provide a detailed overview of the steps involved in the settlement process for Assets. They outline each step comprehensively, from account setup to instruction creation, affirmation, rejection, and execution.
-
 It's important to note that these diagrams offer a low-level representation, including all steps of the listed process. This level of detail ensures clarity and precision in understanding the settlement process.
 
 When using tools such as the Polymesh REST API or the Polymesh TypeScript SDK, some of the steps depicted in these diagrams are combined into a single user action. These tools can simplify the process for integrators, streamlining the integration of Assets.

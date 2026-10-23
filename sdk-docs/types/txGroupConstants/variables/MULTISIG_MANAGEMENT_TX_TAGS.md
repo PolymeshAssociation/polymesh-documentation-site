@@ -2,10 +2,6 @@
 
 > > `const` **MULTISIG\_MANAGEMENT\_TX\_TAGS**: \[[`CreateMultisig`](../../enumerations/MultiSigTx.mdx#createmultisig)\]
 
-# Variable: MULTISIG\_MANAGEMENT\_TX\_TAGS
-
-> `const` **MULTISIG\_MANAGEMENT\_TX\_TAGS**: \[[`CreateMultisig`](../../enumerations/MultiSigTx.mdx#createmultisig)\]
-
 Defined in: [src/types/txGroupConstants.ts:463](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/types/txGroupConstants.ts#L463)
 
 Transaction tags for MultiSig Management operations

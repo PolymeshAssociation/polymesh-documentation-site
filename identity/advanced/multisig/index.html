@@ -8,8 +8,8 @@
 
 
 <script>window.__COPY_PAGE_BUTTON_OPTIONS__={customStyles:{},enabledActions:["copy","view","chatgpt","claude","perplexity","gemini"],generateMarkdownRoutes:!1,markdownUrl:!0,placement:"auto",mcpServer:null,id:"default"}</script><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.c53d1ff3.css">
-<script src="/polymesh-documentation-site/assets/js/runtime~main.c722f074.js" defer="defer"></script>
-<script src="/polymesh-documentation-site/assets/js/main.8ad5cb1f.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/runtime~main.d0f4d422.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/main.d6ebaad6.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -47,10 +47,19 @@
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="creation-and-setup">Creation and Setup<a href="#creation-and-setup" class="hash-link" aria-label="Direct link to Creation and Setup" title="Direct link to Creation and Setup" translate="no">​</a></h3>
 <p>When a multisig is created by calling <code>multisig::create_multisig</code>:</p>
 <ol>
-<li class="">It&#x27;s automatically added as a secondary key to the creator&#x27;s identity. Optionally the creator can assign <a class="" href="/polymesh-documentation-site/identity/advanced/secondary-keys/#secondary-key-permissions">secondary key permissions</a> to the multisig when creating — but only if the caller is the <strong>primary key</strong> of the creator&#x27;s identity. A secondary key can also call <code>create_multisig</code>, but only without specifying custom permissions (the new multisig signer key is then created with empty permissions); passing custom permissions from a secondary key is rejected with <code>KeyNotAllowed</code>.</li>
-<li class="">The creator&#x27;s identity becomes the paying identity</li>
-<li class="">Authorization requests are sent to all designated signers</li>
-<li class="">Signers must accept their authorizations before participating</li>
+<li class="">
+<p>It&#x27;s automatically added as a secondary key to the creator&#x27;s identity. Optionally the creator can assign <a class="" href="/polymesh-documentation-site/identity/advanced/secondary-keys/#secondary-key-permissions">secondary key permissions</a> to the multisig when creating — but only if the caller is the <strong>primary key</strong> of the creator&#x27;s identity. A secondary key can also call <code>create_multisig</code>, but only without specifying custom permissions (the new multisig signer key is then created with empty permissions); passing custom permissions from a secondary key is rejected with <code>KeyNotAllowed</code>.</p>
+<p>Custom permissions supplied here are validated at creation against the same length and complexity limits as every other permission-setting call, so an oversized permission set is rejected rather than stored. <code>Except</code> extrinsic permissions are refused — see <a class="" href="/polymesh-documentation-site/asset-agents/#why-except-is-refused">Why <code>Except</code> is refused</a>. The call&#x27;s fee rises with the size of the permission set.</p>
+</li>
+<li class="">
+<p>The creator&#x27;s identity becomes the paying identity</p>
+</li>
+<li class="">
+<p>Authorization requests are sent to all designated signers</p>
+</li>
+<li class="">
+<p>Signers must accept their authorizations before participating</p>
+</li>
 </ol>
 <p>When selecting signing keys for a multisig consider the following requirements:</p>
 <ul>

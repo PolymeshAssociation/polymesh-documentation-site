@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/client/types.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L29)
 
-# Interface: ExtrinsicDataWithFees
-
-Defined in: [src/api/client/types.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L29)
-
 ## Extends
 
 - [`ExtrinsicData`](ExtrinsicData.mdx)

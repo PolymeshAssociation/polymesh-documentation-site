@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:604
 
-# Enumeration: CorporateBallotTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:604
-
 ## Enumeration Members
 
 ### AttachBallot

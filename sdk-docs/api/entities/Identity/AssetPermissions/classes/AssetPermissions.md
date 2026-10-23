@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Identity/AssetPermissions.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/AssetPermissions.ts#L82)
 
-# Class: AssetPermissions
-
-Defined in: [src/api/entities/Identity/AssetPermissions.ts:82](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/AssetPermissions.ts#L82)
-
 Handles all Asset Permissions (External Agents) related functionality on the Identity side
 
 ## Extends

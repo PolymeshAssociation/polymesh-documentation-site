@@ -2,10 +2,6 @@
 
 > > `const` **CLAIMS\_MANAGEMENT\_TX\_TAGS**: \[[`AddClaim`](../../enumerations/IdentityTx.mdx#addclaim), [`RegisterCustomClaimType`](../../enumerations/IdentityTx.mdx#registercustomclaimtype), [`RevokeClaim`](../../enumerations/IdentityTx.mdx#revokeclaim), [`RevokeClaimByIndex`](../../enumerations/IdentityTx.mdx#revokeclaimbyindex)\]
 
-# Variable: CLAIMS\_MANAGEMENT\_TX\_TAGS
-
-> `const` **CLAIMS\_MANAGEMENT\_TX\_TAGS**: \[[`AddClaim`](../../enumerations/IdentityTx.mdx#addclaim), [`RegisterCustomClaimType`](../../enumerations/IdentityTx.mdx#registercustomclaimtype), [`RevokeClaim`](../../enumerations/IdentityTx.mdx#revokeclaim), [`RevokeClaimByIndex`](../../enumerations/IdentityTx.mdx#revokeclaimbyindex)\]
-
 Defined in: [src/types/txGroupConstants.ts:201](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/types/txGroupConstants.ts#L201)
 
 Transaction tags for Claims Management operations

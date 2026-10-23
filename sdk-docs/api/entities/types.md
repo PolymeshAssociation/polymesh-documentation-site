@@ -1,30 +1,17 @@
 # Entity: types
 
 > - [AuthorizationType](enumerations/AuthorizationType.mdx)
-- [ClaimType](enumerations/ClaimType.mdx)
-- [ConditionTarget](enumerations/ConditionTarget.mdx)
-- [ConditionType](enumerations/ConditionType.mdx)
-- [NewStatType](enumerations/NewStatType.mdx)
-- [PermissionGroupType](enumerations/PermissionGroupType.mdx)
-- [PermissionType](enumerations/PermissionType.mdx)
-- [ScopeType](enumerations/ScopeType.mdx)
-- [SignerType](enumerations/SignerType.mdx)
-- [StatType](enumerations/StatType.mdx)
-
-# Entity: types
+> - [ClaimType](enumerations/ClaimType.mdx)
+> - [ConditionTarget](enumerations/ConditionTarget.mdx)
+> - [ConditionType](enumerations/ConditionType.mdx)
+> - [NewStatType](enumerations/NewStatType.mdx)
+> - [PermissionGroupType](enumerations/PermissionGroupType.mdx)
+> - [PermissionType](enumerations/PermissionType.mdx)
+> - [ScopeType](enumerations/ScopeType.mdx)
+> - [SignerType](enumerations/SignerType.mdx)
+> - [StatType](enumerations/StatType.mdx)
 
 ## Enumerations
-
-- [AuthorizationType](enumerations/AuthorizationType.mdx)
-- [ClaimType](enumerations/ClaimType.mdx)
-- [ConditionTarget](enumerations/ConditionTarget.mdx)
-- [ConditionType](enumerations/ConditionType.mdx)
-- [NewStatType](enumerations/NewStatType.mdx)
-- [PermissionGroupType](enumerations/PermissionGroupType.mdx)
-- [PermissionType](enumerations/PermissionType.mdx)
-- [ScopeType](enumerations/ScopeType.mdx)
-- [SignerType](enumerations/SignerType.mdx)
-- [StatType](enumerations/StatType.mdx)
 
 ## Interfaces
 

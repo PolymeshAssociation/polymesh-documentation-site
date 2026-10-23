@@ -2,11 +2,7 @@
 
 > - [DefaultTrustedClaimIssuer](classes/DefaultTrustedClaimIssuer.mdx)
 
-# Entity: DefaultTrustedClaimIssuer
-
 ## Classes
-
-- [DefaultTrustedClaimIssuer](classes/DefaultTrustedClaimIssuer.mdx)
 
 ## Interfaces
 

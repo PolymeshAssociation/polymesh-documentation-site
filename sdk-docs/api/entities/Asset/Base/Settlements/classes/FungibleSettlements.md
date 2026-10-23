@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Asset/Base/Settlements/index.ts:225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Settlements/index.ts#L225)
 
-# Class: FungibleSettlements
-
-Defined in: [src/api/entities/Asset/Base/Settlements/index.ts:225](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Settlements/index.ts#L225)
-
 Handles all Asset Settlements related functionality
 
 ## Extends

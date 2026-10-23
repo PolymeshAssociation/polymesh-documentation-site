@@ -2,11 +2,7 @@
 
 > - [Portfolio](classes/Portfolio.mdx)
 
-# Entity: Portfolio
-
 ## Classes
-
-- [Portfolio](classes/Portfolio.mdx)
 
 ## Interfaces
 

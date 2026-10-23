@@ -1,11 +1,6 @@
 # Entity: Subsidy/types
 
 > - [SubsidyData](interfaces/SubsidyData.mdx)
-- [SubsidyWithAllowance](interfaces/SubsidyWithAllowance.mdx)
-
-# Entity: Subsidy/types
+> - [SubsidyWithAllowance](interfaces/SubsidyWithAllowance.mdx)
 
 ## Interfaces
-
-- [SubsidyData](interfaces/SubsidyData.mdx)
-- [SubsidyWithAllowance](interfaces/SubsidyWithAllowance.mdx)

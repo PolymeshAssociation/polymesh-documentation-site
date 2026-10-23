@@ -2,10 +2,6 @@
 
 > Defined in: [src/base/PolymeshTransaction.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/PolymeshTransaction.ts#L14)
 
-# Class: PolymeshTransaction\
-
-Defined in: [src/base/PolymeshTransaction.ts:14](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/PolymeshTransaction.ts#L14)
-
 Wrapper class for a Polymesh Transaction
 
 ## Extends

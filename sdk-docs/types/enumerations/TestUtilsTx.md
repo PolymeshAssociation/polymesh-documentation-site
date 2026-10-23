@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:775
 
-# Enumeration: TestUtilsTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:775
-
 ## Enumeration Members
 
 ### GetCddOf

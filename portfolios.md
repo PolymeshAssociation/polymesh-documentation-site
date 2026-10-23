@@ -113,7 +113,7 @@ A portfolio can be renamed by calling `portfolio::rename_portfolio`. The default
 
 ### Delete a Portfolio
 
-Portfolios can be deleted by calling `portfolio::delete_portfolio` and providing the portfolio ID as a parameter. Only empty portfolios can be deleted. The default portfolio cannot be deleted.
+Portfolios can be deleted by calling `portfolio::delete_portfolio` and providing the portfolio number as a parameter. Only empty portfolios can be deleted. The default portfolio cannot be deleted.
 
 ### Moving funds between Portfolios
 
@@ -123,8 +123,7 @@ Parameters:
 
 - `from`: The DID and the ID of the sender's portfolio.
 - `to`: The DID and the ID of the receiver's portfolio.
-- `funds`: The type (`Fungible` or `NonFungible`), the asset ID and the amount or NFT IDs of the asset being moved between portfolios.
-- `memo`: A short memo can be added to each token amount moved. This is publicly visible on the chain and can be used to identify the transaction.
+- `funds`: The assets to move. Each entry carries a `description` — the type (`Fungible` or `NonFungible`), the asset ID and the amount or NFT IDs — and an optional `memo`. The memo is set per fund rather than per call, and is publicly visible on chain, so it can be used to identify the transaction.
 
 :::info
 To move assets between portfolios of different identities, the [Settlement](/settlement) process must be used.
@@ -148,8 +147,20 @@ To revoke or delete a previously granted pre-approval for a portfolio to automat
 
 Parameters:
 
-- `asset_id`: The asset that will be exempt from affirmation.
-- `portfolio_id`: The portfolio that can receive the asset without affirmation.
+- `asset_id`: The asset whose pre-approval is being removed.
+- `portfolio_id`: The portfolio that will no longer receive the asset without affirmation.
+
+### Portfolio Freezing
+
+An asset's issuer or an authorised agent can freeze a portfolio for a **specific asset**, preventing that portfolio from sending it. This is done from the asset side, with `asset::set_holder_frozen`, passing the portfolio as the `asset_holder`. This works for both fungible assets and NFT collections. For a fungible asset, part of a portfolio's balance can be frozen instead of all of it, using `asset::freeze_partial_tokens`, `asset::unfreeze_partial_tokens` or `asset::set_frozen_tokens`; those three do not apply to NFT collections.
+
+A frozen portfolio cannot move the asset by any route, including moves to another portfolio of the same identity; those fail with `portfolio::PortfolioIsFrozen`. It can still receive the asset, and freezing is per asset — a portfolio frozen for one asset moves its other holdings normally.
+
+A **partially** frozen portfolio can move only its unfrozen tokens. The amount available to move is `balance − locked − frozen`, and a move beyond that fails with `portfolio::InsufficientPortfolioBalance`.
+
+The same check applies when a portfolio's tokens are locked to fund something. A frozen portfolio cannot be the offering portfolio of a new [STO](/sto) (`sto::create_fundraiser`) or the source of a new capital distribution (`capitalDistribution::distribute`), and a partially frozen one can lock only its unfrozen tokens for either. An NFT held in a frozen portfolio cannot be locked into a settlement instruction, so it cannot be committed to an instruction while the freeze holds.
+
+Portfolio freezing is controlled by the asset's agents, not by the portfolio's owner or custodian. See [Freezing and Unfreezing Assets](/core/assets#freezing-and-unfreezing-assets).
 
 ### Querying Portfolio Information
 

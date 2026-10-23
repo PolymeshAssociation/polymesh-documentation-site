@@ -2,11 +2,7 @@
 
 > - [MultiSigProposal](classes/MultiSigProposal.mdx)
 
-# Entity: MultiSigProposal
-
 ## Classes
-
-- [MultiSigProposal](classes/MultiSigProposal.mdx)
 
 ## Interfaces
 

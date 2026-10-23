@@ -2,11 +2,7 @@
 
 > - [CorporateBallot](classes/CorporateBallot.mdx)
 
-# Entity: CorporateBallot
-
 ## Classes
-
-- [CorporateBallot](classes/CorporateBallot.mdx)
 
 ## Interfaces
 

@@ -2,10 +2,6 @@
 
 > > `const` **EXTERNAL\_AGENT\_MANAGEMENT\_TX\_TAGS**: \[[`AcceptBecomeAgent`](../../enumerations/ExternalAgentsTx.mdx#acceptbecomeagent), [`ChangeGroup`](../../enumerations/ExternalAgentsTx.mdx#changegroup), [`CreateAndChangeCustomGroup`](../../enumerations/ExternalAgentsTx.mdx#createandchangecustomgroup), [`CreateGroup`](../../enumerations/ExternalAgentsTx.mdx#creategroup), [`CreateGroupAndAddAuth`](../../enumerations/ExternalAgentsTx.mdx#creategroupandaddauth), [`RemoveAgent`](../../enumerations/ExternalAgentsTx.mdx#removeagent), [`SetGroupPermissions`](../../enumerations/ExternalAgentsTx.mdx#setgrouppermissions)\]
 
-# Variable: EXTERNAL\_AGENT\_MANAGEMENT\_TX\_TAGS
-
-> `const` **EXTERNAL\_AGENT\_MANAGEMENT\_TX\_TAGS**: \[[`AcceptBecomeAgent`](../../enumerations/ExternalAgentsTx.mdx#acceptbecomeagent), [`ChangeGroup`](../../enumerations/ExternalAgentsTx.mdx#changegroup), [`CreateAndChangeCustomGroup`](../../enumerations/ExternalAgentsTx.mdx#createandchangecustomgroup), [`CreateGroup`](../../enumerations/ExternalAgentsTx.mdx#creategroup), [`CreateGroupAndAddAuth`](../../enumerations/ExternalAgentsTx.mdx#creategroupandaddauth), [`RemoveAgent`](../../enumerations/ExternalAgentsTx.mdx#removeagent), [`SetGroupPermissions`](../../enumerations/ExternalAgentsTx.mdx#setgrouppermissions)\]
-
 Defined in: [src/types/txGroupConstants.ts:325](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/types/txGroupConstants.ts#L325)
 
 Transaction tags for External Agent Management operations

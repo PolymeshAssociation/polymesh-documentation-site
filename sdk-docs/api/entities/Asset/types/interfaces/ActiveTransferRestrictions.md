@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Asset/types.ts:438](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L438)
 
-# Interface: ActiveTransferRestrictions
-
-Defined in: [src/api/entities/Asset/types.ts:438](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L438)
-
 The active Transfer Restrictions enabled on an Asset
 
 ## Properties

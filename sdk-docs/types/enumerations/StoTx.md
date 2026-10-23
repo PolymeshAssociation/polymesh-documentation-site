@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:723
 
-# Enumeration: StoTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:723
-
 ## Enumeration Members
 
 ### CreateFundraiser

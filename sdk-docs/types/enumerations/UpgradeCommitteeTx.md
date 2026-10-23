@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:380
 
-# Enumeration: UpgradeCommitteeTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:380
-
 ## Enumeration Members
 
 ### SetExpiresAfter

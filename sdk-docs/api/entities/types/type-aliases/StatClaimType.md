@@ -2,8 +2,4 @@
 
 > > **StatClaimType** = [`Accredited`](../enumerations/ClaimType.mdx#accredited) \| [`Affiliate`](../enumerations/ClaimType.mdx#affiliate) \| [`Jurisdiction`](../enumerations/ClaimType.mdx#jurisdiction)
 
-# Type Alias: StatClaimType
-
-> **StatClaimType** = [`Accredited`](../enumerations/ClaimType.mdx#accredited) \| [`Affiliate`](../enumerations/ClaimType.mdx#affiliate) \| [`Jurisdiction`](../enumerations/ClaimType.mdx#jurisdiction)
-
 Defined in: [src/api/entities/types.ts:253](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L253)

@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:396
 
-# Enumeration: MultiSigTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:396
-
 ## Enumeration Members
 
 ### AcceptMultisigSigner

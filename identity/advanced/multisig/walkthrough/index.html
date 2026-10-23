@@ -8,8 +8,8 @@
 
 
 <script>window.__COPY_PAGE_BUTTON_OPTIONS__={customStyles:{},enabledActions:["copy","view","chatgpt","claude","perplexity","gemini"],generateMarkdownRoutes:!1,markdownUrl:!0,placement:"auto",mcpServer:null,id:"default"}</script><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.c53d1ff3.css">
-<script src="/polymesh-documentation-site/assets/js/runtime~main.c722f074.js" defer="defer"></script>
-<script src="/polymesh-documentation-site/assets/js/main.8ad5cb1f.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/runtime~main.d0f4d422.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/main.d6ebaad6.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -37,7 +37,7 @@
 <p>When we created the MultiSig, the signers are not immediately linked to it. You can see in the events emitted that 3 instances of the <code>AuthorizationAdded</code> event were emitted. Authorization requests were created for the signers to join the MultiSig, and they must accept the requests to confirm their desire to be linked to the MultiSig. We now need to accept the authorization from each of the three signers specified in Step 2.</p>
 <p>To accept these authorizations, we need the authorization ID for each signer. These are available from the events emitted when the MultiSig is created, or alternatively, you can query the <code>identity::authorizations</code> storage or view pending authorization requests in the <a href="https://portal.polymesh.network/authorizations" target="_blank" rel="noopener noreferrer" class="">Polymesh Portal</a>.</p>
 <p><img decoding="async" loading="lazy" alt="Signer Authorizations" src="/polymesh-documentation-site/assets/images/8-accept_multisig_signer_event-e1df26e7f32fc1b4b1b2cea70a8d74be.png" width="1213" height="1364" class="img_ev3q"></p>
-<p>Once you have the authorization ID for each signing key, you can call <code>multiSig::acceptMultisigSignerAsKey</code> separately from each of the signing keys (each signer will have a different authorization ID to accept).</p>
+<p>Once you have the authorization ID for each signing key, you can call <code>multiSig::acceptMultisigSigner</code> separately from each of the signing keys (each signer will have a different authorization ID to accept).</p>
 <p><img decoding="async" loading="lazy" alt="Signer Accepting" src="/polymesh-documentation-site/assets/images/9-accept_multisig-67fe5a5a312e6d7d74a8e3ea8b033452.png" width="1219" height="463" class="img_ev3q"></p>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>When accepting these authorizations, the current primary key of the <em>Paying Identity</em> will pay for the transactions.</p></div></div>
 <p>At this point, your MultiSig is created, and the three signing keys have been associated with it.</p>

@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:612
 
-# Enumeration: PipsTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:612
-
 ## Enumeration Members
 
 ### ApproveCommitteeProposal

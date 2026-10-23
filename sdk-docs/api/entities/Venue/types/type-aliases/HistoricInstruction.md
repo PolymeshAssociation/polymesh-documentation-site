@@ -2,10 +2,6 @@
 
 > > **HistoricInstruction** = `Omit`\<[`InstructionDetails`](../../../Instruction/types/type-aliases/InstructionDetails.mdx), `"status"` \| `"venue"`\> & `object`
 
-# Type Alias: HistoricInstruction
-
-> **HistoricInstruction** = `Omit`\<[`InstructionDetails`](../../../Instruction/types/type-aliases/InstructionDetails.mdx), `"status"` \| `"venue"`\> & `object`
-
 Defined in: [src/api/entities/Venue/types.ts:29](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Venue/types.ts#L29)
 
 ## Type Declaration

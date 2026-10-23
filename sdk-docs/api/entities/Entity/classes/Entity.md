@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Entity.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L8)
 
-# Abstract Class: Entity\
-
-Defined in: [src/api/entities/Entity.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Entity.ts#L8)
-
 Represents an object or resource in the Polymesh Ecosystem with its own set of properties and functionality
 
 ## Extended by

@@ -2,11 +2,7 @@
 
 > - [CheckpointSchedule](classes/CheckpointSchedule.mdx)
 
-# Entity: CheckpointSchedule
-
 ## Classes
-
-- [CheckpointSchedule](classes/CheckpointSchedule.mdx)
 
 ## Interfaces
 

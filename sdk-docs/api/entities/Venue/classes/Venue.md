@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Venue/index.ts:75](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Venue/index.ts#L75)
 
-# Class: Venue
-
-Defined in: [src/api/entities/Venue/index.ts:75](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Venue/index.ts#L75)
-
 Represents a Venue through which settlements are handled
 
 ## Extends

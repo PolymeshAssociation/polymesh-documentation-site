@@ -2,13 +2,9 @@
 
 > Re-exports [ActiveTransferRestrictions](types/interfaces/ActiveTransferRestrictions.mdx)
 
-# Entity: Asset
-
 ## References
 
 ### ActiveTransferRestrictions
-
-Re-exports [ActiveTransferRestrictions](types/interfaces/ActiveTransferRestrictions.mdx)
 
 ***
 

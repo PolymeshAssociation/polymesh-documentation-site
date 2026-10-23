@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:592
 
-# Enumeration: CorporateActionTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:592
-
 ## Enumeration Members
 
 ### ChangeRecordDate

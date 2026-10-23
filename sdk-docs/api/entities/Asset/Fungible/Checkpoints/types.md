@@ -2,11 +2,7 @@
 
 > - [CaCheckpointType](enumerations/CaCheckpointType.mdx)
 
-# Entity: Asset/Fungible/Checkpoints/types
-
 ## Enumerations
-
-- [CaCheckpointType](enumerations/CaCheckpointType.mdx)
 
 ## Interfaces
 

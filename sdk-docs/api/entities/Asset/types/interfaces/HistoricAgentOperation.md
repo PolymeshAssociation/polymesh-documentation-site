@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Asset/types.ts:351](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L351)
 
-# Interface: HistoricAgentOperation
-
-Defined in: [src/api/entities/Asset/types.ts:351](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L351)
-
 Events triggered by transactions performed by an Agent Identity, related to the Token's configuration
   For example: changing compliance requirements, inviting/removing agent Identities, freezing/unfreezing transfers
 

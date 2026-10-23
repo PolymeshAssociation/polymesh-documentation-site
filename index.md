@@ -2,8 +2,6 @@
 
 > Introduction to Polymesh: regulated blockchain for digital assets
 
-# Welcome to Polymesh
-
 Polymesh is a public permissioned blockchain purpose-built for regulated assets and capital markets. It streamlines antiquated processes and opens the door to new financial instruments by solving challenges around governance, identity, compliance, confidentiality, and settlement.
 
 ---

@@ -2,8 +2,4 @@
 
 > > **OffChainFundingDetails** = \{ `enabled`: `false`; \} \| \{ `enabled`: `true`; `offChainTicker`: `string`; \}
 
-# Type Alias: OffChainFundingDetails
-
-> **OffChainFundingDetails** = \{ `enabled`: `false`; \} \| \{ `enabled`: `true`; `offChainTicker`: `string`; \}
-
 Defined in: [src/api/entities/Offering/types.ts:94](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Offering/types.ts#L94)

@@ -2,8 +2,4 @@
 
 > > **InputTargets** = [`Modify`](../../../../../types/utils/type-aliases/Modify.mdx)\<[`CorporateActionTargets`](../interfaces/CorporateActionTargets.mdx), \{ `identities`: (`string` \| [`Identity`](../../../Identity/classes/Identity.mdx))[]; \}\>
 
-# Type Alias: InputTargets
-
-> **InputTargets** = [`Modify`](../../../../../types/utils/type-aliases/Modify.mdx)\<[`CorporateActionTargets`](../interfaces/CorporateActionTargets.mdx), \{ `identities`: (`string` \| [`Identity`](../../../Identity/classes/Identity.mdx))[]; \}\>
-
 Defined in: [src/api/entities/CorporateActionBase/types.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateActionBase/types.ts#L21)

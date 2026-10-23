@@ -2,10 +2,6 @@
 
 > Defined in: [src/middleware/types.ts:5869](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L5869)
 
-# Enumeration: MultiSigProposalVoteActionEnum
-
-Defined in: [src/middleware/types.ts:5869](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L5869)
-
 ## Enumeration Members
 
 ### Approved

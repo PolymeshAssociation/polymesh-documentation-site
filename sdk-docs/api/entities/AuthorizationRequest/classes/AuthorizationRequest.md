@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/AuthorizationRequest.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/AuthorizationRequest.ts#L51)
 
-# Class: AuthorizationRequest
-
-Defined in: [src/api/entities/AuthorizationRequest.ts:51](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/AuthorizationRequest.ts#L51)
-
 Represents a request made by an Identity to another Identity (or Account) for some sort of authorization. This has multiple uses. For example, if Alice
   wants to transfer ownership of one of her Assets to Bob, this method emits an authorization request for Bob,
   who then has to accept it in order to complete the ownership transfer

@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:813
 
-# Enumeration: NftTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:813
-
 ## Enumeration Members
 
 ### ControllerTransfer

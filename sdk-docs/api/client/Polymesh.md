@@ -2,11 +2,7 @@
 
 > - [Polymesh](classes/Polymesh.mdx)
 
-# Client: Polymesh
-
 ## Classes
-
-- [Polymesh](classes/Polymesh.mdx)
 
 ## Interfaces
 

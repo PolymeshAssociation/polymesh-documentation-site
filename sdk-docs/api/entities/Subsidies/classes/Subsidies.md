@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Subsidies.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Subsidies.ts#L8)
 
-# Class: Subsidies
-
-Defined in: [src/api/entities/Subsidies.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Subsidies.ts#L8)
-
 Handles all Account Subsidies related functionality
 
 ## Extends

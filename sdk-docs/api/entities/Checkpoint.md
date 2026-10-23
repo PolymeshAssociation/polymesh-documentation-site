@@ -2,11 +2,7 @@
 
 > - [Checkpoint](classes/Checkpoint.mdx)
 
-# Entity: Checkpoint
-
 ## Classes
-
-- [Checkpoint](classes/Checkpoint.mdx)
 
 ## Interfaces
 

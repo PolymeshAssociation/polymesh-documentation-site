@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/CheckpointSchedule/index.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CheckpointSchedule/index.ts#L34)
 
-# Class: CheckpointSchedule
-
-Defined in: [src/api/entities/CheckpointSchedule/index.ts:34](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CheckpointSchedule/index.ts#L34)
-
 Represents a Checkpoint Schedule for an Asset. Schedules can be set up to create Checkpoints at regular intervals
 
 ## Extends

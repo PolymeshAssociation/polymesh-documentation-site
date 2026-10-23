@@ -2,10 +2,6 @@
 
 > Defined in: [src/middleware/types.ts:847](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L847)
 
-# Enumeration: AuthTypeEnum
-
-Defined in: [src/middleware/types.ts:847](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L847)
-
 ## Enumeration Members
 
 ### AddMultiSigSigner

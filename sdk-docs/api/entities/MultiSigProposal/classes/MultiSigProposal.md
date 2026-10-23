@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/MultiSigProposal/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/index.ts#L49)
 
-# Class: MultiSigProposal
-
-Defined in: [src/api/entities/MultiSigProposal/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/index.ts#L49)
-
 A proposal for a MultiSig transaction. This is a wrapper around an extrinsic that will be executed when the amount of approvals reaches the signature threshold set on the MultiSig Account
 
 ## Extends

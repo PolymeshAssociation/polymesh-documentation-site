@@ -2,8 +2,4 @@
 
 > > **Role** = [`TickerOwnerRole`](../interfaces/TickerOwnerRole.mdx) \| [`VenueOwnerRole`](../interfaces/VenueOwnerRole.mdx) \| [`PortfolioCustodianRole`](../interfaces/PortfolioCustodianRole.mdx) \| [`IdentityRole`](../interfaces/IdentityRole.mdx) \| [`DidRegistrarRole`](../interfaces/DidRegistrarRole.mdx)
 
-# Type Alias: Role
-
-> **Role** = [`TickerOwnerRole`](../interfaces/TickerOwnerRole.mdx) \| [`VenueOwnerRole`](../interfaces/VenueOwnerRole.mdx) \| [`PortfolioCustodianRole`](../interfaces/PortfolioCustodianRole.mdx) \| [`IdentityRole`](../interfaces/IdentityRole.mdx) \| [`DidRegistrarRole`](../interfaces/DidRegistrarRole.mdx)
-
 Defined in: [src/api/procedures/types.ts:312](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L312)

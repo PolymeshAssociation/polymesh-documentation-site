@@ -2,11 +2,7 @@
 
 > - [MetadataEntry](classes/MetadataEntry.mdx)
 
-# Entity: MetadataEntry
-
 ## Classes
-
-- [MetadataEntry](classes/MetadataEntry.mdx)
 
 ## Interfaces
 

@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:912
 
-# Enumeration: ModuleName
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:912
-
 ## Enumeration Members
 
 ### Asset

@@ -2,11 +2,7 @@
 
 > - [DividendDistribution](classes/DividendDistribution.mdx)
 
-# Entity: DividendDistribution
-
 ## Classes
-
-- [DividendDistribution](classes/DividendDistribution.mdx)
 
 ## Interfaces
 

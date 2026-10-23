@@ -2,10 +2,6 @@
 
 > > `const` **CORPORATE\_ACTIONS\_MANAGEMENT\_TX\_TAGS**: \[[`ChangeRecordDate`](../../enumerations/CorporateActionTx.mdx#changerecorddate), [`InitiateCorporateAction`](../../enumerations/CorporateActionTx.mdx#initiatecorporateaction), [`InitiateCorporateActionAndBallot`](../../enumerations/CorporateActionTx.mdx#initiatecorporateactionandballot), [`InitiateCorporateActionAndDistribute`](../../enumerations/CorporateActionTx.mdx#initiatecorporateactionanddistribute), [`LinkCaDoc`](../../enumerations/CorporateActionTx.mdx#linkcadoc), [`RemoveCa`](../../enumerations/CorporateActionTx.mdx#removeca), [`SetDefaultTargets`](../../enumerations/CorporateActionTx.mdx#setdefaulttargets), [`SetDefaultWithholdingTax`](../../enumerations/CorporateActionTx.mdx#setdefaultwithholdingtax), [`SetDidWithholdingTax`](../../enumerations/CorporateActionTx.mdx#setdidwithholdingtax)\]
 
-# Variable: CORPORATE\_ACTIONS\_MANAGEMENT\_TX\_TAGS
-
-> `const` **CORPORATE\_ACTIONS\_MANAGEMENT\_TX\_TAGS**: \[[`ChangeRecordDate`](../../enumerations/CorporateActionTx.mdx#changerecorddate), [`InitiateCorporateAction`](../../enumerations/CorporateActionTx.mdx#initiatecorporateaction), [`InitiateCorporateActionAndBallot`](../../enumerations/CorporateActionTx.mdx#initiatecorporateactionandballot), [`InitiateCorporateActionAndDistribute`](../../enumerations/CorporateActionTx.mdx#initiatecorporateactionanddistribute), [`LinkCaDoc`](../../enumerations/CorporateActionTx.mdx#linkcadoc), [`RemoveCa`](../../enumerations/CorporateActionTx.mdx#removeca), [`SetDefaultTargets`](../../enumerations/CorporateActionTx.mdx#setdefaulttargets), [`SetDefaultWithholdingTax`](../../enumerations/CorporateActionTx.mdx#setdefaultwithholdingtax), [`SetDidWithholdingTax`](../../enumerations/CorporateActionTx.mdx#setdidwithholdingtax)\]
-
 Defined in: [src/types/txGroupConstants.ts:264](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/types/txGroupConstants.ts#L264)
 
 Transaction tags for Corporate Actions Management operations

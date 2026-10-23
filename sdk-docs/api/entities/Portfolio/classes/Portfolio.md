@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Portfolio/index.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/index.ts#L76)
 
-# Abstract Class: Portfolio
-
-Defined in: [src/api/entities/Portfolio/index.ts:76](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/index.ts#L76)
-
 Represents a base Portfolio for a specific Identity in the Polymesh blockchain
 
 ## Extends

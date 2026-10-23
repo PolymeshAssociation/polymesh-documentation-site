@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/CorporateBallot/types.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/types.ts#L73)
 
-# Enumeration: CorporateBallotStatus
-
-Defined in: [src/api/entities/CorporateBallot/types.ts:73](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/types.ts#L73)
-
 ## Enumeration Members
 
 ### Active

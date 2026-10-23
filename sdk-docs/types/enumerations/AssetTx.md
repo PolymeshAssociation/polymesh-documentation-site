@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:520
 
-# Enumeration: AssetTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:520
-
 ## Enumeration Members
 
 ### AcceptAssetOwnershipTransfer

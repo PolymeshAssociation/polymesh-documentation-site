@@ -2,10 +2,6 @@
 
 > Defined in: [src/base/PolymeshTransactionBase.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/PolymeshTransactionBase.ts#L59)
 
-# Abstract Class: PolymeshTransactionBase\
-
-Defined in: [src/base/PolymeshTransactionBase.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/PolymeshTransactionBase.ts#L59)
-
 Wrapper class for a Polymesh Transaction
 
 ## Extended by

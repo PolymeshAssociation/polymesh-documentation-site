@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Asset/Base/Settlements/index.ts:253](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Settlements/index.ts#L253)
 
-# Class: NonFungibleSettlements
-
-Defined in: [src/api/entities/Asset/Base/Settlements/index.ts:253](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Settlements/index.ts#L253)
-
 Handles all Asset Settlements related functionality
 
 ## Extends

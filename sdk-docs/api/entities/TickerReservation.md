@@ -2,11 +2,7 @@
 
 > - [TickerReservation](classes/TickerReservation.mdx)
 
-# Entity: TickerReservation
-
 ## Classes
-
-- [TickerReservation](classes/TickerReservation.mdx)
 
 ## Interfaces
 

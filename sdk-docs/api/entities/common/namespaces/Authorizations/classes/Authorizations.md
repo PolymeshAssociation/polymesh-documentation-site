@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/common/namespaces/Authorizations.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/common/namespaces/Authorizations.ts#L35)
 
-# Class: Authorizations\
-
-Defined in: [src/api/entities/common/namespaces/Authorizations.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/common/namespaces/Authorizations.ts#L35)
-
 Handles all Authorization related functionality
 
 ## Extends

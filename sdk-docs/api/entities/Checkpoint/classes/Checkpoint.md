@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Checkpoint.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Checkpoint.ts#L36)
 
-# Class: Checkpoint
-
-Defined in: [src/api/entities/Checkpoint.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Checkpoint.ts#L36)
-
 Represents a snapshot of the Asset's holders and their respective balances
   at a certain point in time
 

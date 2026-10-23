@@ -2,10 +2,6 @@
 
 > Defined in: [src/middleware/types.ts:1831](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1831)
 
-# Enumeration: CallIdEnum
-
-Defined in: [src/middleware/types.ts:1831](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L1831)
-
 ## Enumeration Members
 
 ### Abdicate

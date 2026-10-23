@@ -2,10 +2,6 @@
 
 > > `const` **AUTHORIZATION\_MANAGEMENT\_TX\_TAGS**: \[[`AddAuthorization`](../../enumerations/IdentityTx.mdx#addauthorization), [`RemoveAuthorization`](../../enumerations/IdentityTx.mdx#removeauthorization)\]
 
-# Variable: AUTHORIZATION\_MANAGEMENT\_TX\_TAGS
-
-> `const` **AUTHORIZATION\_MANAGEMENT\_TX\_TAGS**: \[[`AddAuthorization`](../../enumerations/IdentityTx.mdx#addauthorization), [`RemoveAuthorization`](../../enumerations/IdentityTx.mdx#removeauthorization)\]
-
 Defined in: [src/types/txGroupConstants.ts:127](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/types/txGroupConstants.ts#L127)
 
 Transaction tags for Authorization Management operations

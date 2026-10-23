@@ -1,14 +1,9 @@
 # Entity: CorporateActionBase/types
 
 > - [CorporateActionKind](enumerations/CorporateActionKind.mdx)
-- [TargetTreatment](enumerations/TargetTreatment.mdx)
-
-# Entity: CorporateActionBase/types
+> - [TargetTreatment](enumerations/TargetTreatment.mdx)
 
 ## Enumerations
-
-- [CorporateActionKind](enumerations/CorporateActionKind.mdx)
-- [TargetTreatment](enumerations/TargetTreatment.mdx)
 
 ## Interfaces
 

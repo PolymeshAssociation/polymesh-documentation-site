@@ -2,10 +2,6 @@
 
 > > `const` **DID\_REGISTRATION\_TX\_TAGS**: \[[`RegisterDid`](../../enumerations/IdentityTx.mdx#registerdid)\]
 
-# Variable: DID\_REGISTRATION\_TX\_TAGS
-
-> `const` **DID\_REGISTRATION\_TX\_TAGS**: \[[`RegisterDid`](../../enumerations/IdentityTx.mdx#registerdid)\]
-
 Defined in: [src/types/txGroupConstants.ts:172](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/types/txGroupConstants.ts#L172)
 
 Transaction tags for DID Registration operations

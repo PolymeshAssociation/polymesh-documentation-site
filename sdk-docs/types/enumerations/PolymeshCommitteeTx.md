@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:348
 
-# Enumeration: PolymeshCommitteeTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:348
-
 ## Enumeration Members
 
 ### SetExpiresAfter

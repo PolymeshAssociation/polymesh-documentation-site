@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:713
 
-# Enumeration: StatisticsTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:713
-
 ## Enumeration Members
 
 ### AddExemptedEntities

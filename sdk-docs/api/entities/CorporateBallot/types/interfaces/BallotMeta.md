@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/CorporateBallot/types.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/types.ts#L36)
 
-# Interface: BallotMeta
-
-Defined in: [src/api/entities/CorporateBallot/types.ts:36](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/types.ts#L36)
-
 ## Properties
 
 ### motions

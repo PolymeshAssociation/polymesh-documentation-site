@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/client/types.ts:145](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L145)
 
-# Interface: PolkadotConfig
-
-Defined in: [src/api/client/types.ts:145](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/types.ts#L145)
-
 ## Properties
 
 ### metadata?

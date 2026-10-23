@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/CorporateActionBase/index.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateActionBase/index.ts#L66)
 
-# Abstract Class: CorporateActionBase
-
-Defined in: [src/api/entities/CorporateActionBase/index.ts:66](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateActionBase/index.ts#L66)
-
 Represents an action initiated by the issuer of an Asset which may affect the positions of
   the Asset Holders
 

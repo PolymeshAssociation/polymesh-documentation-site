@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/types.ts:244](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L244)
 
-# Interface: ClaimData\
-
-Defined in: [src/api/entities/types.ts:244](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L244)
-
 ## Type Parameters
 
 Type Parameter

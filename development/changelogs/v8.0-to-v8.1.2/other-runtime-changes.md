@@ -1,0 +1,88 @@
+# Other Runtime Changes Changelog - v8.0 to v8.1.2
+
+> Remaining Polymesh chain v8.1.2 runtime changes - the runtime version, storage migrations, re-benchmarked weights, EVM permission checks against the underlying extrinsic, a Grandpa CurrentSetId fix repairing warp sync, and the DART audit report.
+
+This page covers the changes outside the precompiles, asset freezing and NFT approvals. It is part of the [v8.0 → v8.1.2 changelog](./010-overview.mdx).
+
+**Audience:** node and infrastructure operators, and anyone auditing chain-level changes.
+
+---
+
+## Runtime version
+
+`spec_version` moves from `8_000_020` (v8.0.2) to **`8_001_020`** (v8.1.2). `transaction_version` is unchanged at `8`, so transaction signing is unaffected.
+
+The v8.1.x line reached Testnet and Develop as v8.1.0 (`8_001_000`) and v8.1.1 (`8_001_010`). **Mainnet upgrades directly from v8.0.x to v8.1.2**, so for a Mainnet integration this is a single `8_000_020` → `8_001_020` step. The intermediate spec versions are listed only so operators can identify what a given network is running.
+
+## Storage migrations
+
+Two migrations run when a chain first takes a v8.1.1-or-later runtime, both backfilling the NFT counts that back ERC-721's `balanceOf`:
+
+| Migration          | Backfills           | From           | Storage version |
+| ------------------ | ------------------- | -------------- | --------------- |
+| `pallet-nft`       | `NFTAccountCount`   | `NFTHolder`    | 7 → 8           |
+| `pallet-portfolio` | `PortfolioNFTCount` | `PortfolioNFT` | 4 → 5           |
+
+Each walks every existing NFT holding once and writes one count per holder/collection pair. The work is proportional to the number of NFTs on the chain, so the upgrade block is heavier on NFT-rich networks. No integration action is required and no existing storage layout changes.
+
+They are versioned migrations, so they run once. A chain already on v8.1.1 does not repeat them when it takes v8.1.2, and **v8.1.2 itself adds no new migration**.
+
+## Weights were re-benchmarked
+
+Weights were regenerated across `pallet-asset`, `pallet-nft`, `pallet-portfolio` and `pallet-settlement` for v8.1.2. Most movements are small and follow from the freeze checks added to the transfer and portfolio paths, but two calls changed how their weight is derived rather than only its value:
+
+- **`Nft::redeem_nft`** was benchmarked against a metadata count obtained by draining the NFT's values, which the benchmark could not bound. It now reads the count from the collection's key set before clearing the metadata. Behaviour is identical — the same calls succeed and fail — but the re-benchmarked weight has a higher base and a much smaller per-key increment, so the fee falls for collections with more than about seven metadata keys and rises slightly below that.
+- **`MultiSig::create_multisig`** now adds the cost of validating custom permissions when any are supplied. Creating a MultiSig without custom permissions is unchanged.
+
+Anything that quotes fees to users, pre-funds accounts, or asserts on exact fee values should regenerate its estimates against v8.1.2 metadata. See [What changed in v8.1.2](./085-v8.1.2-fixes.mdx).
+
+## EVM calls are permission-checked against the underlying extrinsic
+
+When a call enters the runtime through the EVM — a precompile call, or a Substrate call carried by an EVM transaction — the runtime now evaluates permissions against **the extrinsic actually being dispatched**, rather than against the `pallet-revive` call that carried it.
+
+This makes secondary-key permissions behave the way operators expect: a key permitted to call `Asset::issue` and nothing else cannot use a precompile to reach anything further, and a key permitted only for `pallet-revive` no longer inherits blanket access to whatever an EVM call dispatches.
+
+**If you use secondary keys with restricted call permissions and those keys interact with the EVM**, review their permissions: a key that could previously make a precompile call may now need explicit permission for the underlying extrinsic.
+
+## v8 storage migrations removed
+
+The one-shot storage migrations that ran during the v7.4 → v8.0 upgrade have been deleted, now that every network has upgraded through them. Removed:
+
+- The runtime-level `SingleBlockMigrations` tuple entries: `UpgradeSessionKeys` (which added the BEEFY key to each validator's session keys), `RemoveRandomnessCollectiveFlipStorage`, `MigrateCddServiceProvidersToDidRegistrars`, and the upstream Grandpa/ImOnline/Offences/Session/Staking version migrations.
+- The `on_runtime_upgrade` hooks and `migrations` modules in `pallet-asset`, `pallet-identity`, `pallet-nft`, `pallet-portfolio`, `pallet-relayer`, `pallet-settlement`, `pallet-sto`, and `pallet-validators`.
+- The now-dead `OldSessionKeys` type and its transform function.
+
+This is invisible to integrations — no storage layout changed, only the code that would have converted an older layout. `pallet-asset`'s in-code storage version moves from `7` to `8` to match.
+
+:::warning v8.1.x cannot upgrade a pre-v8 chain
+Because these migrations are gone, a chain still running a v7.4 runtime **cannot** upgrade directly to v8.1 — its storage would never be converted. It must pass through a v8.0.x runtime first. This affects private or forked networks; Mainnet, Testnet, and Develop have all already upgraded.
+:::
+
+## Grandpa migration: `CurrentSetId` resync (warp-sync fix)
+
+A versioned migration, `MigrateGrandpaToV5`:
+
+1. Reads the legacy `GrandpaFinality::CurrentSetId` storage value (from the pre-v4 Grandpa storage prefix), removing it if present.
+2. Adds it to the current `Grandpa::CurrentSetId` and writes back the sum, resynchronising the authority set id.
+3. Clears the legacy `:grandpa_authorities` storage key left over from the upstream v5 migration.
+
+The practical effect is that **warp sync works again**. A node warp-syncing verifies Grandpa justifications against the authority set id it derives from state; a set id that disagreed with the finality proofs made warp sync fail. Operators bootstrapping new nodes should use v8.1 or later.
+
+## Build toolchain
+
+The runtime moved to a newer Rust nightly toolchain and refreshed its dependencies. This does not change the chain API, but anyone **building the node from source** must use the toolchain pinned in `rust-toolchain.toml` rather than an older nightly. Operators running released binaries are unaffected.
+
+## DART audit report
+
+The audit of DART — the protocol behind [Confidential Assets](/confidential-assets) — carried out by Least Authority is published in the [Polymesh repository](https://github.com/PolymeshAssociation/Polymesh/tree/develop/audit). It is a review of the protocol and its implementation; it does not correspond to a runtime change in this release.
+
+## Migration checklist
+
+1. Upgrade node binaries as normal. Transaction signing is unaffected — `transaction_version` is still `8`.
+2. Expect a heavier upgrade block if your chain holds many NFTs, while the count migrations run.
+3. Review secondary-key permissions for any key that interacts with the EVM.
+4. Use v8.1 or later when bootstrapping nodes by warp sync.
+5. If you run a private or forked network still on a v7.4 runtime, upgrade through a v8.0.x runtime first.
+6. Refresh metadata-derived types and decoders — see the [Full Pallet API Reference](./090-pallet-api-reference.mdx).
+7. Regenerate fee estimates against v8.1.2 weights, particularly for `Nft::redeem_nft` and `MultiSig::create_multisig`.
+8. If you build the node from source, install the toolchain pinned in `rust-toolchain.toml`.

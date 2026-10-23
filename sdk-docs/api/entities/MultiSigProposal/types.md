@@ -1,14 +1,9 @@
 # Entity: MultiSigProposal/types
 
 > - [MultiSigProposalAction](enumerations/MultiSigProposalAction.mdx)
-- [ProposalStatus](enumerations/ProposalStatus.mdx)
-
-# Entity: MultiSigProposal/types
+> - [ProposalStatus](enumerations/ProposalStatus.mdx)
 
 ## Enumerations
-
-- [MultiSigProposalAction](enumerations/MultiSigProposalAction.mdx)
-- [ProposalStatus](enumerations/ProposalStatus.mdx)
 
 ## Interfaces
 

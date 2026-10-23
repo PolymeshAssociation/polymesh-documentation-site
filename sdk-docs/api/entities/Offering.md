@@ -2,11 +2,7 @@
 
 > - [Offering](classes/Offering.mdx)
 
-# Entity: Offering
-
 ## Classes
-
-- [Offering](classes/Offering.mdx)
 
 ## Interfaces
 

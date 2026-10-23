@@ -2,8 +2,6 @@
 
 > Create confidential assets, register accounts, and mint balances with a proof service
 
-# Asset Operations
-
 This page explains how to create a confidential asset, register confidential accounts for that asset, and mint balances.
 
 What you can do here:

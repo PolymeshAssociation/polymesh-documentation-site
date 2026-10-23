@@ -2,11 +2,7 @@
 
 > - [KnownPermissionGroup](classes/KnownPermissionGroup.mdx)
 
-# Entity: KnownPermissionGroup
-
 ## Classes
-
-- [KnownPermissionGroup](classes/KnownPermissionGroup.mdx)
 
 ## Interfaces
 

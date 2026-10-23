@@ -2,11 +2,7 @@
 
 > - [CorporateActionBase](classes/CorporateActionBase.mdx)
 
-# Entity: CorporateActionBase
-
 ## Classes
-
-- [CorporateActionBase](classes/CorporateActionBase.mdx)
 
 ## Interfaces
 

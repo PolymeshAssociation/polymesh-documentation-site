@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Portfolio/types.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/types.ts#L31)
 
-# Interface: HistoricSettlement
-
-Defined in: [src/api/entities/Portfolio/types.ts:31](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/types.ts#L31)
-
 ## Properties
 
 ### accounts

@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/Requirements.ts#L39)
 
-# Class: Requirements
-
-Defined in: [src/api/entities/Asset/Base/Compliance/Requirements.ts:39](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/Requirements.ts#L39)
-
 Handles all Asset Compliance Requirements related functionality
 
 ## Extends

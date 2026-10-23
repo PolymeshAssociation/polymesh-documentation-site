@@ -56,8 +56,13 @@ A non-fungible token can be redeemed by calling the `redeem_nft` function. To su
 - An NFT collection associated with `AssetId` must exist.
 - The caller must have the appropriate permission for the `Asset`.
 - The `nft_id` of the token must exist in the caller's portfolio.
+- The token must not be locked into a settlement instruction, and the holder must not be frozen for the collection.
 
-Once the transaction succeeds, the non-fungible token will no longer exist on chain and be removed from the caller's portfolio.
+Once the transaction succeeds, the non-fungible token will no longer exist on chain and be removed from the caller's portfolio. Any metadata values attached to the token are removed with it.
+
+`redeem_nft` also takes an optional `number_of_keys`, an assertion about how many metadata values the redemption will remove. Supplying a value lower than the collection's key count fails the call with `nft::NumberOfKeysIsLessThanExpected`. Because every NFT carries exactly one value per collection key, the safe value to pass is the collection's key count — or omit the argument and skip the check.
+
+The fee scales with the number of metadata keys the collection defines, since those are the values the redemption clears.
 
 ## NFTs and the Settlement Pallet
 
@@ -65,9 +70,27 @@ Polymesh's [Settlement](/settlement#overview) engine fully supports NFTs, and tr
 
 For a direct account-to-account transfer of specific NFTs without going through the settlement instruction/affirmation cycle, use `nft::transfer_nft(nfts, to, memo)`, or the more general [`transfer_funds`](/settlement#direct-transfers-transfer_funds) which also accepts portfolios on either side.
 
-:::note
-Allowances (`asset::approve`) do not apply to NFTs — only fungible assets support third-party, allowance-drawn transfers.
-:::
+### NFT Approvals
+
+An NFT holder can authorise another account to move an NFT on their behalf, without transferring custody first. This is the non-fungible counterpart to fungible allowances (`asset::approve`), and it comes in two forms:
+
+- **Per-token:** `nft::approve(asset_id, nft_id, spender)` authorises one account (the _spender_) to transfer one specific NFT. Passing `None` as the spender clears the approval.
+- **Collection-wide:** `nft::set_approval_for_all(asset_id, operator, approved)` authorises one account (the _operator_) to transfer any of the caller's NFTs in that collection.
+
+An operator approval is granted by an individual holder over their own NFTs, and is recorded per `(holder, operator, collection)`. It is not an issuer-level role over the collection, and it gives the operator no rights over NFTs held by anyone else.
+
+An operator can do two things:
+
+- **Transfer any of that holder's NFTs in the collection**, without needing a per-token approval. Unlike a per-token approval, an operator approval is not consumed by a transfer.
+- **Set per-token approvals on that holder's behalf**, naming a third account as the spender for a single NFT.
+
+So the accounts that can set a per-token approval on an NFT are the account key currently holding it, and any operator that holder has approved for the collection.
+
+**An NFT has at most one approved spender.** Each `approve` replaces the previous approval rather than adding to it, and any authorised caller — the holder or any of their operators — can replace or clear an approval set by someone else. This differs from fungible allowances and from operator approvals, where each grantee is tracked separately and several can be active at once.
+
+An approved spender moves the NFT with [`transfer_funds`](/settlement#direct-transfers-transfer_funds), passing the holder as `from`. Doing so consumes the approval.
+
+A per-token approval is **cleared whenever the NFT changes hands**, by any route — including a transfer by the holder themselves. Collection-wide operator approvals persist until explicitly revoked.
 
 ## Metadata Specifications
 
@@ -145,15 +168,15 @@ Both Token and Image URIs follow a consistent resolution process:
 
 2. Collection Base URI
    - Fall back to collection's base URI (`baseTokenUri`/`baseImageUri`)
-   - Substitute `{tokenId}` placeholder if present
-   - Append `/{tokenId}` if no placeholder exists
+   - Substitute the `{tokenId}` placeholder if present
+   - Append the token id directly to the end of the value if no placeholder exists — no separator is inserted, so include any trailing `/` you need in the base URI itself
 
    Example Base URIs:
 
    ```js
    baseTokenUri: "https://metadata.polymesh.network/collection/{tokenId}"
    baseImageUri: "https://images.polymesh.network/collection/v1/{tokenId}.png"
-   baseImageUri: "https://images.polymesh.network/collection/v1"  # expects the token id to be appended
+   baseImageUri: "https://images.polymesh.network/collection/v1/"  # token id appended directly, so keep the trailing slash
    ```
 
 :::note Notes

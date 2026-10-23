@@ -2,10 +2,6 @@
 
 > > `const` **TxTags**: `object`
 
-# Variable: TxTags
-
-> `const` **TxTags**: `object`
-
 Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:969
 
 ## Type Declaration

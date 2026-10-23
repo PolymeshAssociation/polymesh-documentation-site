@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/types.ts:656](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L656)
 
-# Interface: TransactionPermissions
-
-Defined in: [src/api/entities/types.ts:656](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L656)
-
 Permissions related to Transactions. Can include/exclude individual transactions or entire modules
 
 ## Extends

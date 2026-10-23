@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:748
 
-# Enumeration: ExternalAgentsTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:748
-
 ## Enumeration Members
 
 ### Abdicate

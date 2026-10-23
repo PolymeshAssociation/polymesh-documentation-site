@@ -14,7 +14,7 @@ Polymesh offers this Program as an initiative for our community members that are
 
 The Program is not a competition. No fees are payable and no purchase is necessary to participate in the Program. There is no guarantee that you will earn a Bounty Payout. The Program is provided “as-is”.
 
-This Program is a discretionary initiative. All determinations regarding the eligibility of a Report (as defined in Section 2), the classification and severity of a Vulnerability, and the amount (if any) of a Bounty Payout are made by Polymesh in its sole and final discretion. Polymesh, in its sole discretion, may modify these Terms at any time and may modify, restrict, suspend, terminate, or otherwise change any aspect of this Program, and/or the fulfillment of any Bounty Payouts, at any time, as noted in Section 7 below.
+This Program is a discretionary initiative. All determinations regarding the eligibility of a Report (as defined in Section 2), the classification and severity of a Vulnerability, and the amount (if any) of a Bounty Payout are made by Polymesh in its sole and final discretion. The severity levels, examples, and maximum amount published for the Program are guidance only. They create no entitlement to any classification or to any minimum Bounty Payout, and Polymesh may determine a Bounty Payout without assigning a classification. Polymesh, in its sole discretion, may modify these Terms at any time and may modify, restrict, suspend, terminate, or otherwise change any aspect of this Program, and/or the fulfillment of any Bounty Payouts, at any time, as noted in Section 7 below.
 
 You must meet the following criteria in order to be eligible to be a Participant:
 
@@ -47,7 +47,7 @@ All feedback, unsolicited and solicited, Reports, and any materials that you sub
 
 The Program covers the Polymesh blockchain related source code and any associated released binaries, as set out in **Exhibit A**. Exhibit A defines three scope tiers:
 
-1. **In-scope** items: eligible under the standard reward schedule in Exhibit B, subject to any item-specific conditions set out in Exhibit A;
+1. **In-scope** items: eligible for a Bounty Payout determined as described in Exhibit B, subject to any item-specific conditions set out in Exhibit A;
 2. **Responsible-disclosure** items: Reports are welcomed but carry no entitlement to a Bounty Payout; Polymesh may award a discretionary payout; and
 3. **Out-of-scope** items: not eligible for any Bounty Payout.
 
@@ -79,7 +79,8 @@ For you to participate in the Program, we require that you:
 Each Report must reflect genuine, personally validated security research. As a condition of eligibility for any Bounty Payout:
 
 - You must have personally verified, prior to submission, that the reported Vulnerability exists in the current in-scope code and that the reproduction steps in your Report work as described.
-- Each Report must address a single Vulnerability and must include the information set out in the Report requirements on the main [bug bounty page](/development/bug-bounty#report-requirements), including precise code references and reproduction instructions, and (for critical and high severity claims) a working proof of concept.
+- Each Report must address a single Vulnerability and must include the information set out in the Report requirements on the main [bug bounty page](/development/bug-bounty#report-requirements), including precise code references, reproduction instructions, and a working proof of concept. A Report without a working proof of concept is eligible for an acknowledgement or a small discretionary Bounty Payout only. The Report must be set out in the body of the submission email; attachments and links may supplement it but must not be needed to understand it.
+- The amount of any Bounty Payout reflects the research the Participant has contributed. Where a Report overstates its severity or impact, or leaves substantial verification, reproduction, or analysis to Polymesh, Polymesh may reduce or decline the Bounty Payout.
 - You may use artificial intelligence tools, fuzzers, scanners, and other automated tooling to assist your research; however, you remain personally responsible for the accuracy of every claim in your Report. Raw or untriaged output of any automated tool or AI system does not constitute a Report.
 - Reports that are fraudulent, deceptive, forged, altered, incomplete, incomprehensible, garbled, or otherwise not personally validated by the Participant (including, without limitation, Reports referencing code, functions, or behavior that does not exist in the in-scope codebase, generic reports not tied to actual Polymesh code, or Reports containing fabricated proofs of concept) are ineligible and may be closed without a detailed response. This applies regardless of whether the Report was produced with the help of a macro, bot, script, or artificial intelligence system, or written by hand.
 - You must be able to meaningfully answer follow-up questions about your own Report. Failure or inability to do so may, at Polymesh's sole discretion, disqualify the Report.
@@ -111,9 +112,9 @@ All notices provided to Polymesh in relation to the Program shall be sent to [bu
 
 ### (4) BOUNTIES
 
-Participants will receive Bounty Payouts upon satisfying criteria for such payouts on their Reports, subject to verification. See Exhibit B for current information regarding Bounty Payouts, including how Bounty Payouts are calculated (collectively, “**Rewards Details**”). We may change the Bounty Payouts and the manner in which they are calculated at any time. All Bounty Payout details not specified in these Terms (including Exhibit B) will be determined at Polymesh's sole discretion. Bounty Payouts are not the property of any Participant until such payouts are actually received by a Participant.
+Polymesh may award a Bounty Payout for a Report that meets the criteria in these Terms, subject to verification. See Exhibit B for current information regarding Bounty Payouts, including how Bounty Payouts are calculated (collectively, “**Rewards Details**”). We may change the Bounty Payouts and the manner in which they are calculated at any time, without notice. All Bounty Payout details not specified in these Terms (including Exhibit B) will be determined at Polymesh's sole discretion. Bounty Payouts are not the property of any Participant until such payouts are actually received by a Participant.
 
-Bounty Payouts are paid in United States Dollars, USDC or another stablecoin, or POLYX, and shall be sent using the details provided by Participant as specified in Exhibit B. Polymesh is not responsible for a Participant's inability to accept or receive a Bounty Payout for any reason. **We are not able to issue Bounty Payouts to Participants who are in violation of a material term of these Terms, including being on a sanctions list or residing in a country on a sanctions list**.
+Bounty Payouts are paid in USDC on Ethereum or in POLYX, or by another method at Polymesh's discretion, and shall be sent using the details provided by Participant as specified in Exhibit B. A Bounty Payout offer lapses if Polymesh has not received a valid invoice for it within ninety (90) days of the offer. Polymesh is not responsible for a Participant's inability to accept or receive a Bounty Payout for any reason. **We are not able to issue Bounty Payouts to Participants who are in violation of a material term of these Terms, including being on a sanctions list or residing in a country on a sanctions list**.
 
 Any taxes (federal, national, state, prefectural, territorial, provincial, and/or local) and other costs and expenses associated with Bounty Payout acceptance or receipt will be the sole responsibility of the Participant. No more than the stated Bounty Payout will be awarded. Polymesh will not replace any lost or stolen Bounty Payouts or any Bounty Payouts that are undeliverable or do not reach the Participant because of an incorrect or changed address or contact information. If a Participant does not accept the entire Bounty Payout, the unaccepted part of the Bounty Payout will be forfeited, and Polymesh will have no further obligation with respect to that Bounty Payout or portion of the Bounty Payout. Participants are strictly prohibited from selling, auctioning, trading, or otherwise transferring their entitlements to Bounty Payouts. Bounty Payouts may be impermissible (for example, if prevented by a government or regulatory agency), impractical (e.g. excessive transfer costs, duties, or taxes), or impossible for Polymesh to award to Participants who live in certain jurisdictions. Polymesh reserves the right, but not the obligation, to cancel the payment of such Bounty Payout in such circumstances. Each Participant waives the right to assert as a cost of receiving any Bounty Payout any and all costs of verification and costs to claim the Bounty Payout and any liability and publicity which might arise from claiming or seeking to claim said Bounty Payout.
 
@@ -135,7 +136,7 @@ Except where prohibited, as a condition of participating in this Program, each P
 
 ### (7) CHANGES TO THESE PROGRAM TERMS AND TERMINATION OF THE PROGRAM
 
-Polymesh reserves the right to modify, restrict, suspend, or otherwise change any aspect of the Program, and/or these Terms from time-to-time, for any reason, including any reason beyond Polymesh's control, and within its sole discretion, including without limitation, the manner in which Participants participate, the scope of the Program, the manner in which Bounty Payouts are calculated, with reasonable notice to Participants. If you have submitted any Vulnerability to us already, we will notify you of changes to these Terms via an email. The updated Terms will be effective as of the time of posting, or upon such later date as specified by Polymesh. The updated Terms will apply to your participation in the Program beginning as of their effective date, or upon such later date, or by such other method as specified by Polymesh. If you do not agree to such an amendment, you must cease your participation in the Program immediately. Except where exigencies require a shorter time frame, we reserve the right to terminate the Program completely by providing you with thirty (30) days' notice of the impending termination.
+Polymesh reserves the right to modify, restrict, suspend, or otherwise change any aspect of the Program, and/or these Terms, at any time, for any reason, including any reason beyond Polymesh's control, and within its sole discretion, including without limitation, the manner in which Participants participate, the scope of the Program, and the manner in which Bounty Payouts are calculated. Polymesh is not required to give notice of, or to notify Participants individually of, any such change. Updated Terms are effective when posted, or from such later date as Polymesh specifies, and apply to Reports received from that time. It is each Participant's responsibility to review these Terms before submitting a Report. If you do not agree to an amendment, you must cease your participation in the Program immediately. Polymesh may terminate the Program at any time, without notice.
 
 We may terminate your engagement with us and any entitlement to any Bounty Payout if you violate any part of these Terms. Polymesh reserves the right to restrict or void participation from any identifiable source if any suspicious participation is detected or any violation of these Terms is suspected or detected. Polymesh reserves the right, in its sole discretion, to void the participation of any Participant who Polymesh believes has attempted to tamper with or impair the administration, security, fairness, or proper execution of the Program. If Polymesh determines at any time, in its sole discretion, that a Participant is engaging in behavior that Polymesh deems obnoxious, deceptive, inappropriate, threatening, illegal or that is intended to annoy, abuse, or harass any other person, Polymesh reserves the right to disqualify that Participant.
 
@@ -167,9 +168,9 @@ The invalidity or unenforceability of any provision of these Terms will not affe
 
 ### IN SCOPE
 
-The following are in-scope of the Program under the standard reward schedule in Exhibit B:
+The following are in-scope of the Program, with any Bounty Payout determined as described in Exhibit B:
 
-- The [Polymesh node](https://github.com/PolymeshAssociation/Polymesh) Rust source code and associated [released binaries](https://github.com/PolymeshAssociation/Polymesh/releases/latest), as deployed in the **Mainnet runtime**. Vulnerabilities must be reproducible in the latest published release; issues present only on unreleased development branches may be accepted at Polymesh's discretion.
+- The [Polymesh node](https://github.com/PolymeshAssociation/Polymesh) Rust source code and associated [released binaries](https://github.com/PolymeshAssociation/Polymesh/releases/latest), as deployed in the **Mainnet runtime**. Vulnerabilities must be reproducible in the latest published release; issues present only on unreleased development branches are eligible for an acknowledgement or, at most, a discretionary Bounty Payout.
 - Polymesh Confidential Assets (the new P-DART-based confidential asset functionality introduced in Polymesh v8), comprising `pallet_confidential_assets` in the [Polymesh repository](https://github.com/PolymeshAssociation/Polymesh) and the [polymesh-dart](https://github.com/PolymeshAssociation/polymesh-dart) zero-knowledge proof library, subject to the conditions below.
 
 ### CONFIDENTIAL ASSETS (PRE-MAINNET)
@@ -194,7 +195,7 @@ Reports concerning the following client libraries and off-chain tooling (“**Re
 
   Conditions applicable to Responsible-Disclosure Items:
 
-1. Responsible-Disclosure Items are not covered by the standard reward schedule, and Reports concerning them create no entitlement to a Bounty Payout.
+1. Responsible-Disclosure Items are not covered by the rewards table in Exhibit B, and Reports concerning them create no entitlement to a Bounty Payout.
 2. Polymesh may, in its sole discretion, award a discretionary payout for a high-impact, well-evidenced finding concerning a Responsible-Disclosure Item.
 3. All other requirements apply to Reports concerning Responsible-Disclosure Items, including the submission channel, the responsible investigation and reporting requirements, the report integrity requirements, and non-disclosure obligations.
 
@@ -210,25 +211,56 @@ The following are out-of-scope of the Program and not eligible for any Bounty Pa
 
 ## Exhibit B – Rewards Details
 
-You can elect to receive Bounty Payouts via wire-transfer (from USD to your preferred currency), USDC or another stablecoin, or POLYX. For a crypto payout, we'll need the appropriate wallet address: an ETH address for USDC or another Ethereum-based stablecoin, or a Polymesh address for POLYX.
+### HOW BOUNTY PAYOUTS ARE DETERMINED
 
-We will communicate with you by email and need the following information in order to process a Bounty Payout:
+Each Bounty Payout is determined case by case, according to the value of the Report to the security of Polymesh. Severity, assessed by the realistic impact on the Mainnet network that the Report credibly demonstrates, is one input to that determination; the amount awarded is determined by the factors and principles below. No severity carries a set amount, range, or minimum. The impacts listed in the table are illustrative, not exhaustive; impacts not listed will be assessed by analogy. Severity classification, eligibility, and the amount of any Bounty Payout are determined at Polymesh's sole and final discretion.
 
-- Participant Name
-- Participant Address
-- Phone Number
-- Email Address
-- Wire Information (Bank Name, Bank Address, Account Number, SWIFT Code)
-- Crypto Address (for payment in USDC, another stablecoin, or POLYX; specify the network)
+| Severity | Typical impact (illustrative, not exhaustive)                                                                                                                                                                    |
+| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CRITICAL | Unauthorized minting or theft of POLYX or assets; double-spending or a break of settlement finality; network halt or consensus split; takeover of an identity the attacker has no rights to.                     |
+| HIGH     | Permanent freezing of another user's funds or assets; bypass of compliance rules, transfer restrictions, or permission checks by an attacker holding no relevant permission; a network-wide node crash or stall. |
+| MEDIUM   | Incorrect state that other users or the chain rely on, without loss of funds; temporary griefing of other users; resource consumption underpriced enough to have a demonstrated effect on block production.      |
+| LOW      | Issues with genuine security relevance but limited practical impact, such as resource exhaustion of a single node under unusual conditions.                                                                      |
 
-Bounty Payouts are processed twice a month, on the 15th and the last day of the month. You can expect your payout to arrive within 10 days of the next processing date.
+The program maximum of **USD 40,000** is reserved for exceptional Reports: a critical impact demonstrated end to end against Mainnet code, with complete evidence and a sound fix. There is no set amount, range, or minimum for any severity, and most valid Reports are rewarded well below the maximum.
+
+Each payout is set case by case, taking into account:
+
+1. **Impact.** The worst impact the Report credibly demonstrates, not the theoretical worst case of the affected code. Claimed impacts that are not demonstrated are not rewarded as if they were.
+2. **Likelihood and prerequisites.** How realistic the attack is: its cost to the attacker, whether it can be sustained, and what access it needs. Attacks that need control of governance, a supermajority of node operators, physical access, or victim cooperation beyond normal use are rated lower or not at all. So is a key or agent that already holds some permission on the target exceeding it, unless the finding bypasses the underlying authorization completely.
+3. **Real-world exposure.** Whether the affected functionality is live on Mainnet and in use with real value. The same impact is rewarded higher where it puts real assets at risk.
+4. **Quality and original work.** A clear, accurate Report that the Participant has reproduced against the stated release, with a working proof of concept, a precise root cause, honestly stated limits, and a useful fix, is rewarded above one that Polymesh has to verify, correct, or complete. Overstated severity or impact counts against a Report.
+5. **Novelty and value to Polymesh.** Whether the finding adds to what our own testing and audits, or a short prompt to a widely available tool, would readily surface, and whether it changes what we fix or how urgently.
+
+Further principles:
+
+- **Classification is guidance, not entitlement.** Polymesh may set a payout without assigning a severity. A finding of limited impact may receive a small discretionary payout or an acknowledgement only.
+- **Related findings are paid once.** Findings that share a root cause, and instances of the same defect pattern at different call sites submitted by the same Participant, may be treated as a single finding or rewarded at a reduced rate for each additional instance.
+- **Confidential Assets** findings are assessed against the functionality's intended Mainnet behavior. A **soundness break** (creating, inflating, or overdrawing confidential balances) is the most severe class of impact, followed by a **confidentiality break** (recovering amounts, asset identities, or counterparties without the corresponding keys).
+- **Revive/EVM and shared mechanisms** (MultiSig, the Relayer/Subsidizer) are assessed by analogy to the equivalent native operation. Fees charged to the account that signs and submits a transaction are not an unauthorized charge.
+- **Greater impact than demonstrated.** If you stop short of fully exploiting a serious issue and we find the impact is greater than you showed, we will take that into account.
+- **Unreleased code.** Issues that exist only on unreleased development branches are eligible for an acknowledgement or, at most, a discretionary payout.
+- **Changes to rewards.** We review the maximum reward and how rewards are set regularly, including in light of submission volume, and may change them at any time.
+- **Scoring systems.** A Report may include a CVSS vector or other scoring as supporting context, but no score or methodology creates any entitlement to a particular classification or Bounty Payout.
+
+Payouts, if any, for Responsible-Disclosure Items are entirely discretionary and are not subject to the table above.
+
+Where we receive multiple Reports about the same or similar vulnerability, we will reward a Bounty Payout only for the first Report received. Multiple vulnerabilities that relate to one underlying vulnerability will be treated as one vulnerability and entitled to one Bounty Payout.
+
+A Participant may ask once, within fourteen (14) days of being notified of an outcome, for that outcome to be reconsidered, giving technical information that Polymesh did not have when it made its determination. Polymesh's decision on that request is final.
+
+### PAYMENT
+
+Bounty Payouts are paid in USDC on Ethereum or in POLYX on Polymesh Mainnet. Polymesh may agree to another method at its discretion. Where a POLYX amount is offered, it is fixed at the time of the offer and applies only for the period stated in the offer; after that, POLYX is calculated at the market rate on the date of the invoice.
+
+To receive a Bounty Payout, send an invoice to [bugbounty@polymesh.network](mailto:bugbounty@polymesh.network) containing:
+
+- Participant's full legal name and address
+- Invoice number and date
+- A short description of the Report
+- The amount and currency
+- The receiving wallet address and network: an Ethereum address for USDC, or a Polymesh Mainnet address for POLYX
+
+A Bounty Payout offer lapses if a valid invoice for it has not been received within ninety (90) days of the offer. Bounty Payouts are processed in Polymesh's regular payment cycle after a valid invoice is received and any identity verification or sanctions screening is complete.
 
 Please note that we cannot issue Bounty Payouts to individuals, entities, or residents of countries that are listed in the U.S. Department of The Treasury Office of Foreign Assets Control (OFAC) sanctions list, European Union (EU) sanctions list, or the United Nations (UN) Security Council sanctions list.
-
-Bounty Payouts are classified according to the severity of the reported Vulnerability. Severity is determined by the impact class that the Report credibly demonstrates, assessed against realistic impact on the Mainnet network and adjusted for the prerequisites, cost, and likelihood of a real attack (for Confidential Assets, which is not yet deployed to Mainnet, severity is assessed against its intended Mainnet behavior). The impact classes below are representative, not exhaustive; impacts not listed will be classified by analogy to the closest listed class. Severity classification, eligibility, and the amount of any Bounty Payout are determined at Polymesh's sole and final discretion. The amount awarded within a range reflects, among other factors, the quality of the Report, the reproducibility of the finding, the realism of the demonstrated impact, and the quality of any suggested fix.
-
-The following principles apply to severity classification:
-
-Payouts, if any, for Responsible-Disclosure Items are entirely discretionary and are not subject to the schedule above.
-
-Where we receive multiple Reports about the same or similar vulnerability, we will reward a Bounty Payout only for the first Report received. In addition, multiple vulnerabilities that relate to one underlying vulnerability will be treated as one vulnerability and entitled to one Bounty Payout.

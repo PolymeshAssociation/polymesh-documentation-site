@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/procedures/types.ts:1775](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1775)
 
-# Interface: SetPermissionGroupParams
-
-Defined in: [src/api/procedures/types.ts:1775](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1775)
-
 This procedure can be called with:
   - An Asset's existing Custom Permission Group. The Identity will be assigned as an Agent of that Group for that Asset
   - A Known Permission Group and an Asset. The Identity will be assigned as an Agent of that Group for that Asset

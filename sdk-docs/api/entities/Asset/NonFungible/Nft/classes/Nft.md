@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/NonFungible/Nft.ts#L45)
 
-# Class: Nft
-
-Defined in: [src/api/entities/Asset/NonFungible/Nft.ts:45](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/NonFungible/Nft.ts#L45)
-
 Class used to manage Nft functionality. Each NFT belongs to an NftCollection, which specifies the expected metadata values for each NFT
 
 ## Extends

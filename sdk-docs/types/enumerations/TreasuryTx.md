@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:732
 
-# Enumeration: TreasuryTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:732
-
 ## Enumeration Members
 
 ### Disbursement

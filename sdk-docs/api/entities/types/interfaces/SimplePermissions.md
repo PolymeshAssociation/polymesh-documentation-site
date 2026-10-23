@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/types.ts:710](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L710)
 
-# Interface: SimplePermissions
-
-Defined in: [src/api/entities/types.ts:710](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L710)
-
 This represents positive permissions (i.e. only "includes"). It is used
   for specifying procedure requirements and querying if an Account has certain
   permissions. Null values represent full permissions in that category

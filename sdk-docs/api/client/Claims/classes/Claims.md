@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/client/Claims.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Claims.ts#L54)
 
-# Class: Claims
-
-Defined in: [src/api/client/Claims.ts:54](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Claims.ts#L54)
-
 Handles all Claims related functionality
 
 ## Methods

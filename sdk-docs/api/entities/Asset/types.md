@@ -1,20 +1,12 @@
 # Entity: Asset/types
 
 > - [KnownAssetType](enumerations/KnownAssetType.mdx)
-- [KnownNftType](enumerations/KnownNftType.mdx)
-- [NftOwnerStatus](enumerations/NftOwnerStatus.mdx)
-- [SecurityIdentifierType](enumerations/SecurityIdentifierType.mdx)
-- [TransferError](enumerations/TransferError.mdx)
-
-# Entity: Asset/types
+> - [KnownNftType](enumerations/KnownNftType.mdx)
+> - [NftOwnerStatus](enumerations/NftOwnerStatus.mdx)
+> - [SecurityIdentifierType](enumerations/SecurityIdentifierType.mdx)
+> - [TransferError](enumerations/TransferError.mdx)
 
 ## Enumerations
-
-- [KnownAssetType](enumerations/KnownAssetType.mdx)
-- [KnownNftType](enumerations/KnownNftType.mdx)
-- [NftOwnerStatus](enumerations/NftOwnerStatus.mdx)
-- [SecurityIdentifierType](enumerations/SecurityIdentifierType.mdx)
-- [TransferError](enumerations/TransferError.mdx)
 
 ## Interfaces
 

@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:455
 
-# Enumeration: StakingTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:455
-
 ## Enumeration Members
 
 ### AddPermissionedValidator

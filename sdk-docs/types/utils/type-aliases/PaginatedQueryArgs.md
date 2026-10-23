@@ -2,10 +2,6 @@
 
 > > **PaginatedQueryArgs**\<`T`\> = `T` & `object`
 
-# Type Alias: PaginatedQueryArgs\
-
-> **PaginatedQueryArgs**\<`T`\> = `T` & `object`
-
 Defined in: [src/types/utils/index.ts:91](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/types/utils/index.ts#L91)
 
 ## Type Declaration

@@ -2,10 +2,6 @@
 
 > > **CollectionKey** = [`MetadataKeyId`](MetadataKeyId.mdx) & [`MetadataDetails`](../../../MetadataEntry/types/interfaces/MetadataDetails.mdx)
 
-# Type Alias: CollectionKey
-
-> **CollectionKey** = [`MetadataKeyId`](MetadataKeyId.mdx) & [`MetadataDetails`](../../../MetadataEntry/types/interfaces/MetadataDetails.mdx)
-
 Defined in: [src/api/entities/Asset/types.ts:281](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L281)
 
 A metadata entry for which each NFT in the collection must have an entry for

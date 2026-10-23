@@ -2,10 +2,6 @@
 
 > > `const` **CHECKPOINT\_MANAGEMENT\_TX\_TAGS**: \[[`CreateCheckpoint`](../../enumerations/CheckpointTx.mdx#createcheckpoint), [`CreateSchedule`](../../enumerations/CheckpointTx.mdx#createschedule), [`RemoveSchedule`](../../enumerations/CheckpointTx.mdx#removeschedule)\]
 
-# Variable: CHECKPOINT\_MANAGEMENT\_TX\_TAGS
-
-> `const` **CHECKPOINT\_MANAGEMENT\_TX\_TAGS**: \[[`CreateCheckpoint`](../../enumerations/CheckpointTx.mdx#createcheckpoint), [`CreateSchedule`](../../enumerations/CheckpointTx.mdx#createschedule), [`RemoveSchedule`](../../enumerations/CheckpointTx.mdx#removeschedule)\]
-
 Defined in: [src/types/txGroupConstants.ts:185](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/types/txGroupConstants.ts#L185)
 
 Transaction tags for Checkpoint Management operations

@@ -8,8 +8,8 @@
 
 
 <script>window.__COPY_PAGE_BUTTON_OPTIONS__={customStyles:{},enabledActions:["copy","view","chatgpt","claude","perplexity","gemini"],generateMarkdownRoutes:!1,markdownUrl:!0,placement:"auto",mcpServer:null,id:"default"}</script><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.c53d1ff3.css">
-<script src="/polymesh-documentation-site/assets/js/runtime~main.c722f074.js" defer="defer"></script>
-<script src="/polymesh-documentation-site/assets/js/main.8ad5cb1f.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/runtime~main.d0f4d422.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/main.d6ebaad6.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -123,7 +123,8 @@ This is particularly useful for institutional or custody models, where, for exam
 <p>Upon acceptance, the custodian immediately gains custody rights over the specified portfolio. The portfolio owner retains beneficial ownership but cannot manage assets until custody is relinquished.</p>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-ending-portfolio-custody">3. Ending Portfolio Custody<a href="#3-ending-portfolio-custody" class="hash-link" aria-label="Direct link to 3. Ending Portfolio Custody" title="Direct link to 3. Ending Portfolio Custody" translate="no">​</a></h4>
 <p>If a custodian no longer wishes to manage the portfolio or cannot fulfill their duties, they can relinquish their custodian rights to a portfolio by calling <code>portfolio::quit_portfolio_custody</code>.</p>
-<p>This function immediately ends the custodian&#x27;s management rights over the portfolio, and the portfolio owner regains full control and management authority. Note that only the current custodian of a portfolio can invoke this function. The portfolio owner cannot unilaterally revoke custody.</p>
+<p>This function immediately ends the custodian&#x27;s management rights over the portfolio, and the portfolio owner regains full control and management authority. Note that only the current custodian of a portfolio can invoke this function; another identity is rejected with <code>portfolio::UnauthorizedCustodian</code>. The portfolio owner cannot unilaterally revoke custody.</p>
+<p>If the call is signed by a <strong>secondary key</strong> of the custodian identity, that key must also hold portfolio permission for the portfolio it is relinquishing. A key whose portfolio permissions exclude it cannot quit custody on the identity&#x27;s behalf, the same rule that governs every other portfolio operation. Restrict the keys that manage custody accordingly.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="querying-custody-information">Querying Custody Information<a href="#querying-custody-information" class="hash-link" aria-label="Direct link to Querying Custody Information" title="Direct link to Querying Custody Information" translate="no">​</a></h2>
 <p>Portfolio owners and custodians can access custody information through several query methods:</p>
 <ul>

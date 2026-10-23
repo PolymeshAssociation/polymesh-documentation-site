@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Identity/Portfolios.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/Portfolios.ts#L35)
 
-# Class: Portfolios
-
-Defined in: [src/api/entities/Identity/Portfolios.ts:35](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Identity/Portfolios.ts#L35)
-
 Handles all Portfolio related functionality on the Identity side
 
 ## Extends

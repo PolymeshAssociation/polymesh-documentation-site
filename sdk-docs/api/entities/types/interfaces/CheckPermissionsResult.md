@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/types.ts:746](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L746)
 
-# Interface: CheckPermissionsResult\
-
-Defined in: [src/api/entities/types.ts:746](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L746)
-
 Result of a `checkPermissions` call. If `Type` is `Account`, represents whether the Account
   has all the necessary secondary key Permissions. If `Type` is `Identity`, represents whether the
   Identity has all the necessary external agent Permissions

@@ -12,8 +12,8 @@ Before you start, please read this page in full together with the program [Terms
 
 - **In scope:** the [Polymesh node](https://github.com/PolymeshAssociation/Polymesh) source code and released binaries, as deployed on Mainnet, including the audited Confidential Assets functionality (`pallet_confidential_assets` and the [polymesh-dart](https://github.com/PolymeshAssociation/polymesh-dart) cryptography library), currently live on Testnet ahead of its Mainnet deployment. See [Confidential Assets scope](#confidential-assets).
 - **Responsible disclosure (no reward schedule):** client libraries and off-chain tooling, including the SDK, REST API, wallet extension, and Portal. See [Responsible disclosure](#responsible-disclosure-client-libraries-and-tooling).
-- **Rewards:** up to USD 40,000 depending on severity and impact.
-- **Submissions:** by email to [bugbounty@polymesh.network](mailto:bugbounty@polymesh.network).
+- **Rewards:** up to USD 40,000 for a critical vulnerability in Mainnet code. Each reward is set case by case by the impact you demonstrate, how realistic the attack is, the real-world exposure of the affected code, and the quality of your own research. There is no set amount or minimum for any severity. See [How rewards are determined](#how-rewards-are-determined).
+- **Submissions:** by email to [bugbounty@polymesh.network](mailto:bugbounty@polymesh.network), with the report in the body of the email.
 - All severity ratings, reward eligibility, and reward amounts are determined at Polymesh's sole and final discretion.
 
 :::
@@ -26,18 +26,18 @@ Prior knowledge of Rust, Substrate, and capital markets is beneficial. To learn 
 
 The program covers vulnerabilities in the following code:
 
-| Asset                                                                                                                                                | Status                                      | Notes                                                                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Polymesh node](https://github.com/PolymeshAssociation/Polymesh) ([latest release](https://github.com/PolymeshAssociation/Polymesh/releases/latest)) | **Full scope**                              | The Rust source code and released binaries for the Polymesh chain node, as deployed in the **Mainnet runtime**.                                                   |
-| `pallet_confidential_assets` (in the [Polymesh repository](https://github.com/PolymeshAssociation/Polymesh))                                         | **Full scope**                              | Audited; currently deployed on Testnet only, ahead of its Mainnet deployment. See [Confidential Assets scope](#confidential-assets) below.                        |
-| [polymesh-dart](https://github.com/PolymeshAssociation/polymesh-dart) (P-DART zero-knowledge proof library)                                          | **Full scope**                              | Audited; currently deployed on Testnet only, ahead of its Mainnet deployment. See [Confidential Assets scope](#confidential-assets) below.                        |
-| Client libraries and off-chain tooling: SDK, REST API, SubQuery indexer, signing managers, Portal, wallet extension                                  | **Responsible disclosure**                  | No reward schedule; discretionary payouts possible. See [Responsible disclosure](#responsible-disclosure-client-libraries-and-tooling) below.                     |
+| Asset                                                                                                                                                | Status                     | Notes                                                                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Polymesh node](https://github.com/PolymeshAssociation/Polymesh) ([latest release](https://github.com/PolymeshAssociation/Polymesh/releases/latest)) | **Full scope**             | The Rust source code and released binaries for the Polymesh chain node, as deployed in the **Mainnet runtime**.                               |
+| `pallet_confidential_assets` (in the [Polymesh repository](https://github.com/PolymeshAssociation/Polymesh))                                         | **Full scope**             | Audited; currently deployed on Testnet only, ahead of its Mainnet deployment. See [Confidential Assets scope](#confidential-assets) below.    |
+| [polymesh-dart](https://github.com/PolymeshAssociation/polymesh-dart) (P-DART zero-knowledge proof library)                                          | **Full scope**             | Audited; currently deployed on Testnet only, ahead of its Mainnet deployment. See [Confidential Assets scope](#confidential-assets) below.    |
+| Client libraries and off-chain tooling: SDK, REST API, SubQuery indexer, signing managers, Portal, wallet extension                                  | **Responsible disclosure** | No reward schedule; discretionary payouts possible. See [Responsible disclosure](#responsible-disclosure-client-libraries-and-tooling) below. |
 
-A vulnerability must be reproducible in the **latest published release** (or, for Confidential Assets, the latest code deployed to Testnet). Issues that exist only on unreleased development branches may be accepted at Polymesh's discretion, but are typically rated lower because they do not affect a live network.
+A vulnerability must be reproducible in the **latest published release** (or, for Confidential Assets, the latest code deployed to Testnet). Issues that exist only on unreleased development branches are eligible for an acknowledgement or, at most, a discretionary payout, because they do not affect a live network.
 
 ### Confidential Assets
 
-Polymesh Confidential Assets (the new P-DART-based confidential asset functionality introduced in Polymesh v8) is **in scope under the standard reward schedule**, subject to the notes below. This covers:
+Polymesh Confidential Assets (the new P-DART-based confidential asset functionality introduced in Polymesh v8) is **in scope**, subject to the notes below. This covers:
 
 - `pallet_confidential_assets` in the [Polymesh repository](https://github.com/PolymeshAssociation/Polymesh); and
 - the [polymesh-dart](https://github.com/PolymeshAssociation/polymesh-dart) library, which implements the underlying zero-knowledge proof system.
@@ -62,7 +62,7 @@ We welcome vulnerability reports for our client libraries and off-chain tooling 
 - [Polymesh Portal](https://github.com/PolymeshAssociation/polymesh-portal)
 - [Polymesh Wallet browser extension](https://github.com/PolymeshAssociation/polymesh-wallet)
 
-1. Responsible-Disclosure Items are not covered by the standard reward schedule, and Reports concerning them create no entitlement to a Bounty Payout.
+1. Responsible-Disclosure Items are not covered by the rewards table, and Reports concerning them create no entitlement to a Bounty Payout.
 2. Polymesh may, in its sole discretion, award a discretionary payout for a high-impact, well-evidenced finding concerning a Responsible-Disclosure Item.
 3. All other requirements apply to Reports concerning Responsible-Disclosure Items, including the submission channel, the responsible investigation and reporting requirements, the report integrity requirements, and non-disclosure obligations.
 
@@ -82,22 +82,25 @@ If you are unsure whether something is in scope, ask us at [bugbounty@polymesh.n
 
 ## Report requirements
 
-High-quality reports get triaged faster and are rewarded at the upper end of the applicable range. Every report **must** include:
+The quality of a report, and how much of the work in it is your own, is one of the main factors in the reward (see [How rewards are determined](#how-rewards-are-determined)). Every report **must** include:
 
-1. **One vulnerability per report.** Submit separate reports for separate issues. Multiple vulnerabilities sharing one underlying root cause are treated as a single vulnerability.
-2. **A clear description of the vulnerability and its impact**: what an attacker can achieve, and why it matters.
-3. **Precise code references**: the affected repository, release tag or commit hash, and file/line references to the vulnerable code.
-4. **Step-by-step reproduction instructions** against a stated environment (e.g., local node built from release vX.Y.Z, Testnet), including any accounts, extrinsics, or preconditions required.
-5. **A working proof of concept** for Critical and High severity claims. A PoC is strongly encouraged for all reports; reports without one are rated conservatively.
-6. **Your severity assessment** against the [impact classes](#severity-and-rewards) in the severity table, with a short justification of the worst impact your finding demonstrates. Polymesh's own severity assessment is final.
+1. **One vulnerability per report.** Submit separate reports for separate issues. Findings that share one root cause are treated as a single vulnerability.
+2. **The report in the body of the email**, written as readable plain text. Attachments and links may supplement the report but must not be needed to understand the claim. We do not open archives or executables.
+3. **A clear description of the vulnerability and its impact**: what an attacker can achieve, against whom, and at what cost.
+4. **Precise code references**: the affected repository, release tag or commit hash, and file/line references to the vulnerable code in that release.
+5. **Step-by-step reproduction instructions** against a stated environment (e.g., a local node built from release vX.Y.Z, or Testnet), including any accounts, extrinsics, or preconditions required.
+6. **A working proof of concept** that you have run yourself, with its output. Reports without one are eligible for an acknowledgement or a small discretionary payout only.
+7. **The limits of what you demonstrated**: the preconditions, the environment you tested in, and anything you assumed rather than showed.
 
-Supporting evidence such as logs, transaction hashes, and screenshots helps us validate faster.
+You may include your own view of the severity, but overstating it counts against the report. Polymesh's assessment is final. Supporting evidence such as logs, transaction hashes, and screenshots helps us validate faster.
 
 ### Use of AI and automated tools
 
 AI assistants, fuzzers, static analyzers, and similar tools are welcome as part of genuine security research, but you're responsible for what you submit:
 
 - **You are personally responsible for every claim in your report.** Before submitting, you must have personally validated that the vulnerability exists in the current in-scope code and that your reproduction steps work.
+- **We reward the research you add, not the tool's output.** Findings that commonly available tools surface with little effort are rewarded on the value of the verification, demonstration, and analysis you contributed, which may be modest.
+- **Check before you submit.** Many reports describe documented behavior, issues already fixed on a newer release or development branch, or issues that are the subject of an open pull request. These are not eligible.
 - Reports referencing functions, files, or behavior that don't exist in the codebase, giving generic descriptions not tied to actual Polymesh code, or including a fabricated PoC will be **closed as invalid without detailed rebuttal** and treated as spam. This applies whether the report came from an AI tool, a template, or a person typing by hand.
 - Raw, untriaged output from scanners or AI tools does not qualify as a report.
 - You must be able to answer follow-up questions about your own submission. Inability to meaningfully discuss your finding may disqualify it.
@@ -106,19 +109,46 @@ AI assistants, fuzzers, static analyzers, and similar tools are welcome as part 
 ## Program rules
 
 - All determinations of eligibility, scope, severity, and reward amount are made at Polymesh's **sole and final discretion**. This program is discretionary; nothing on this page constitutes a guarantee of payment.
-- Rewards are granted on a **first come, first served** basis. Where multiple reports describe the same or a similar vulnerability, only the first valid report received is eligible. Duplicates, including issues we already know about internally, issues that are publicly known, and issues identified in published or in-progress audit reports, are not eligible.
-- To add information to an existing submission, reply in the same email thread. Do not open a new submission for the same issue.
+- Rewards are granted on a **first come, first served** basis. Where multiple reports describe the same or a similar vulnerability, only the first valid report received is eligible. Duplicates are not eligible. This includes issues we already know about internally, issues that are publicly known, issues already fixed or under review in a public branch or pull request, and issues identified in published or in-progress audit reports.
+- Submit complete reports. A report is assessed, including for priority against duplicates, on what it contained when received; information sent later counts from when it arrives. Unprompted follow-ups that correct or extend the original claim count against the quality of the report. If you must add information, reply in the same email thread rather than opening a new submission.
+- We may limit how many unresolved reports a researcher has open at once.
 - Report vulnerabilities **only to us**, through the approved channel. Do not disclose a vulnerability publicly, or to any third party, until Polymesh has confirmed it has been addressed. Premature public disclosure disqualifies the submission from a reward.
-- Reward amounts within a severity band reflect the quality of the report: clarity of the description, reproducibility, realism of impact, and the quality of any suggested fix.
+- If you disagree with an outcome, you may ask once for it to be reconsidered, within 14 days, giving technical information we did not have. Our decision on that request is final.
 - Any deliberate interference with the protocol, live networks, or other users during your research invalidates your submission (see [Testing rules](#testing-rules-and-exclusions) below).
 - Submissions must comply with the [Terms and Conditions](/development/bug-bounty/rules), including the responsible investigation and reporting requirements. Non-compliant submissions are not eligible for a reward.
-- We may modify the scope, rules, and rewards of this program, or terminate the program, at any time.
+- We may modify the scope, rules, and rewards of this program, or terminate the program, at any time and without notice. Changes take effect when posted on this page.
 
-## Severity and rewards
+## How rewards are determined
 
-Severity is classified by **impact** (what the vulnerability realistically allows an attacker to do) rather than by a scoring formula. Each report is assigned to the band containing the worst impact class it credibly demonstrates, assessed against the **Mainnet** network (for Confidential Assets, which is not yet deployed to Mainnet, severity is assessed against its intended Mainnet behavior; see [Confidential Assets scope](#confidential-assets)). The impact classes below are representative, not exhaustive: impacts not listed are classified by analogy to the closest listed class. All classifications and reward amounts are at Polymesh's sole discretion.
+Rewards are set case by case, according to the value of the finding to the security of Polymesh. Severity, judged by what the vulnerability realistically allows an attacker to do on **Mainnet**, is one input to that assessment. The table gives some examples of the impacts each severity covers; impacts not listed are judged by analogy. All classifications and reward amounts are at Polymesh's sole discretion.
 
-### How severity is assessed
+| Severity | Typical impact (illustrative, not exhaustive)                                                                                                                                                                    |
+| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CRITICAL | Unauthorized minting or theft of POLYX or assets; double-spending or a break of settlement finality; network halt or consensus split; takeover of an identity the attacker has no rights to.                     |
+| HIGH     | Permanent freezing of another user's funds or assets; bypass of compliance rules, transfer restrictions, or permission checks by an attacker holding no relevant permission; a network-wide node crash or stall. |
+| MEDIUM   | Incorrect state that other users or the chain rely on, without loss of funds; temporary griefing of other users; resource consumption underpriced enough to have a demonstrated effect on block production.      |
+| LOW      | Issues with genuine security relevance but limited practical impact, such as resource exhaustion of a single node under unusual conditions.                                                                      |
+
+The program maximum of **USD 40,000** is reserved for exceptional Reports: a critical impact demonstrated end to end against Mainnet code, with complete evidence and a sound fix. There is no set amount, range, or minimum for any severity, and most valid Reports are rewarded well below the maximum.
+
+Each payout is set case by case, taking into account:
+
+1. **Impact.** The worst impact the Report credibly demonstrates, not the theoretical worst case of the affected code. Claimed impacts that are not demonstrated are not rewarded as if they were.
+2. **Likelihood and prerequisites.** How realistic the attack is: its cost to the attacker, whether it can be sustained, and what access it needs. Attacks that need control of governance, a supermajority of node operators, physical access, or victim cooperation beyond normal use are rated lower or not at all. So is a key or agent that already holds some permission on the target exceeding it, unless the finding bypasses the underlying authorization completely.
+3. **Real-world exposure.** Whether the affected functionality is live on Mainnet and in use with real value. The same impact is rewarded higher where it puts real assets at risk.
+4. **Quality and original work.** A clear, accurate Report that the Participant has reproduced against the stated release, with a working proof of concept, a precise root cause, honestly stated limits, and a useful fix, is rewarded above one that Polymesh has to verify, correct, or complete. Overstated severity or impact counts against a Report.
+5. **Novelty and value to Polymesh.** Whether the finding adds to what our own testing and audits, or a short prompt to a widely available tool, would readily surface, and whether it changes what we fix or how urgently.
+
+Further principles:
+
+- **Classification is guidance, not entitlement.** Polymesh may set a payout without assigning a severity. A finding of limited impact may receive a small discretionary payout or an acknowledgement only.
+- **Related findings are paid once.** Findings that share a root cause, and instances of the same defect pattern at different call sites submitted by the same Participant, may be treated as a single finding or rewarded at a reduced rate for each additional instance.
+- **Confidential Assets** findings are assessed against the functionality's intended Mainnet behavior. A **soundness break** (creating, inflating, or overdrawing confidential balances) is the most severe class of impact, followed by a **confidentiality break** (recovering amounts, asset identities, or counterparties without the corresponding keys).
+- **Revive/EVM and shared mechanisms** (MultiSig, the Relayer/Subsidizer) are assessed by analogy to the equivalent native operation. Fees charged to the account that signs and submits a transaction are not an unauthorized charge.
+- **Greater impact than demonstrated.** If you stop short of fully exploiting a serious issue and we find the impact is greater than you showed, we will take that into account.
+- **Unreleased code.** Issues that exist only on unreleased development branches are eligible for an acknowledgement or, at most, a discretionary payout.
+- **Changes to rewards.** We review the maximum reward and how rewards are set regularly, including in light of submission volume, and may change them at any time.
+- **Scoring systems.** A Report may include a CVSS vector or other scoring as supporting context, but no score or methodology creates any entitlement to a particular classification or Bounty Payout.
 
 ### Non-qualifying issues
 
@@ -128,7 +158,8 @@ The following do not qualify for a reward:
 - Best-practice, code-quality, or informational findings (e.g., outdated dependency versions without a demonstrated exploit, missing hardening headers, compiler or lint warnings).
 - Attacks that require control of on-chain governance, a supermajority of validators/operators, or other already-privileged positions.
 - Issues in documentation, comments, or example code with no runtime impact.
-- Duplicates, known issues, and findings already identified in published or commissioned audit reports.
+- Behavior that the documentation or specification describes as intended.
+- Duplicates, known issues, issues already fixed on a newer release or development branch, and findings already identified in published or commissioned audit reports.
 
 ## Testing rules and exclusions
 

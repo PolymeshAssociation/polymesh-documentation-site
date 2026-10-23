@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:339
 
-# Enumeration: CddServiceProvidersTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:339
-
 ## Enumeration Members
 
 ### AbdicateMembership

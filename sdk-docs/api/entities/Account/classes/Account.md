@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Account/index.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L96)
 
-# Class: Account
-
-Defined in: [src/api/entities/Account/index.ts:96](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/index.ts#L96)
-
 Represents an Account in the Polymesh blockchain. Accounts can hold POLYX, control Identities and vote on proposals (among other things)
 
 ## Extends

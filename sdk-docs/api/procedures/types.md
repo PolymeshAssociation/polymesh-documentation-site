@@ -1,24 +1,14 @@
 # Procedure: types
 
 > - [AllowanceOperation](enumerations/AllowanceOperation.mdx)
-- [ClaimOperation](enumerations/ClaimOperation.mdx)
-- [InstructionAffirmationOperation](enumerations/InstructionAffirmationOperation.mdx)
-- [RoleType](enumerations/RoleType.mdx)
-- [SignerKeyRingType](enumerations/SignerKeyRingType.mdx)
-- [TransferRestrictionType](enumerations/TransferRestrictionType.mdx)
-- [TxGroup](enumerations/TxGroup.mdx)
-
-# Procedure: types
+> - [ClaimOperation](enumerations/ClaimOperation.mdx)
+> - [InstructionAffirmationOperation](enumerations/InstructionAffirmationOperation.mdx)
+> - [RoleType](enumerations/RoleType.mdx)
+> - [SignerKeyRingType](enumerations/SignerKeyRingType.mdx)
+> - [TransferRestrictionType](enumerations/TransferRestrictionType.mdx)
+> - [TxGroup](enumerations/TxGroup.mdx)
 
 ## Enumerations
-
-- [AllowanceOperation](enumerations/AllowanceOperation.mdx)
-- [ClaimOperation](enumerations/ClaimOperation.mdx)
-- [InstructionAffirmationOperation](enumerations/InstructionAffirmationOperation.mdx)
-- [RoleType](enumerations/RoleType.mdx)
-- [SignerKeyRingType](enumerations/SignerKeyRingType.mdx)
-- [TransferRestrictionType](enumerations/TransferRestrictionType.mdx)
-- [TxGroup](enumerations/TxGroup.mdx)
 
 ## Interfaces
 

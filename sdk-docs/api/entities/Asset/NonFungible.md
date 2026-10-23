@@ -2,13 +2,9 @@
 
 > Re-exports [HumanReadable](Nft/interfaces/HumanReadable.mdx)
 
-# Entity: Asset/NonFungible
-
 ## References
 
 ### HumanReadable
-
-Re-exports [HumanReadable](Nft/interfaces/HumanReadable.mdx)
 
 ***
 

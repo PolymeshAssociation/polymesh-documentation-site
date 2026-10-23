@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/MultiSigProposal/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/types.ts#L64)
 
-# Enumeration: MultiSigProposalAction
-
-Defined in: [src/api/entities/MultiSigProposal/types.ts:64](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/types.ts#L64)
-
 ## Enumeration Members
 
 ### Approve

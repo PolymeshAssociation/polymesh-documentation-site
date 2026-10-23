@@ -1,16 +1,10 @@
 # Base: types
 
 > - [PayingAccountType](enumerations/PayingAccountType.mdx)
-- [TransactionArgumentType](enumerations/TransactionArgumentType.mdx)
-- [TransactionStatus](enumerations/TransactionStatus.mdx)
-
-# Base: types
+> - [TransactionArgumentType](enumerations/TransactionArgumentType.mdx)
+> - [TransactionStatus](enumerations/TransactionStatus.mdx)
 
 ## Enumerations
-
-- [PayingAccountType](enumerations/PayingAccountType.mdx)
-- [TransactionArgumentType](enumerations/TransactionArgumentType.mdx)
-- [TransactionStatus](enumerations/TransactionStatus.mdx)
 
 ## Interfaces
 

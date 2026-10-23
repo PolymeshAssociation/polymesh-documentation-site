@@ -1,20 +1,12 @@
 # Entity: Instruction/types
 
 > - [AffirmationStatus](enumerations/AffirmationStatus.mdx)
-- [InstructionStatus](enumerations/InstructionStatus.mdx)
-- [InstructionType](enumerations/InstructionType.mdx)
-- [LegStatusType](enumerations/LegStatusType.mdx)
-- [ReceiverAffirmationRequirement](enumerations/ReceiverAffirmationRequirement.mdx)
-
-# Entity: Instruction/types
+> - [InstructionStatus](enumerations/InstructionStatus.mdx)
+> - [InstructionType](enumerations/InstructionType.mdx)
+> - [LegStatusType](enumerations/LegStatusType.mdx)
+> - [ReceiverAffirmationRequirement](enumerations/ReceiverAffirmationRequirement.mdx)
 
 ## Enumerations
-
-- [AffirmationStatus](enumerations/AffirmationStatus.mdx)
-- [InstructionStatus](enumerations/InstructionStatus.mdx)
-- [InstructionType](enumerations/InstructionType.mdx)
-- [LegStatusType](enumerations/LegStatusType.mdx)
-- [ReceiverAffirmationRequirement](enumerations/ReceiverAffirmationRequirement.mdx)
 
 ## Interfaces
 

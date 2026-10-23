@@ -2,10 +2,6 @@
 
 > Defined in: [src/base/types.ts:184](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/types.ts#L184)
 
-# Interface: TransactionPayload
-
-Defined in: [src/base/types.ts:184](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/types.ts#L184)
-
 Unsigned transaction data in JSON a format
 
 ## Properties

@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Account/MultiSig/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/MultiSig/index.ts#L49)
 
-# Class: MultiSig
-
-Defined in: [src/api/entities/Account/MultiSig/index.ts:49](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Account/MultiSig/index.ts#L49)
-
 Represents a MultiSig Account. A MultiSig Account is composed of one or more signing Accounts. In order to submit a transaction, a specific amount of those signing Accounts must approve it first
 
 ## Extends

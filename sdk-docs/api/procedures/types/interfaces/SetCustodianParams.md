@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/procedures/types.ts:1783](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1783)
 
-# Interface: SetCustodianParams
-
-Defined in: [src/api/procedures/types.ts:1783](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L1783)
-
 ## Properties
 
 ### expiry?

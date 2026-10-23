@@ -2,8 +2,6 @@
 
 > Off-chain key generation and on-chain registration for confidential accounts
 
-# Onboarding & Confidential Accounts
-
 This page explains the protocol-level steps to create and use confidential accounts on Polymesh. It focuses on what you do off-chain (generate keys, initialize your prover) and what you do on-chain (register, update state), so readers can apply the concepts in any application or wallet.
 
 ## Prerequisites

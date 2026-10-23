@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/client/Polymesh.ts:88](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Polymesh.ts#L88)
 
-# Class: Polymesh
-
-Defined in: [src/api/client/Polymesh.ts:88](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Polymesh.ts#L88)
-
 Main entry point of the Polymesh SDK
 
 ## Properties

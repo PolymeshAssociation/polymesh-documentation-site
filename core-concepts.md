@@ -2,8 +2,6 @@
 
 > Key concepts and features of the Polymesh blockchain
 
-# Core Concepts
-
 This section introduces the foundational ideas and features that make Polymesh unique. Explore the topics below to understand how Polymesh is purpose-built for regulated markets:
 
 - [**Architecture**](/architecture): Technical stack, consensus, and network design.

@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:355
 
-# Enumeration: CommitteeMembershipTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:355
-
 ## Enumeration Members
 
 ### AbdicateMembership

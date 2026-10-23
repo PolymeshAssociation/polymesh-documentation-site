@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/DefaultTrustedClaimIssuer.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/DefaultTrustedClaimIssuer.ts#L21)
 
-# Class: DefaultTrustedClaimIssuer
-
-Defined in: [src/api/entities/DefaultTrustedClaimIssuer.ts:21](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/DefaultTrustedClaimIssuer.ts#L21)
-
 Represents a default trusted claim issuer for a specific Asset in the Polymesh blockchain
 
 ## Extends

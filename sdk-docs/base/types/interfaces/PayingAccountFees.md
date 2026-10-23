@@ -2,10 +2,6 @@
 
 > Defined in: [src/base/types.ts:165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/types.ts#L165)
 
-# Interface: PayingAccountFees
-
-Defined in: [src/base/types.ts:165](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/types.ts#L165)
-
 Breakdown of the fees that will be paid by a specific Account for a transaction, along
   with data associated to the Paying account
 

@@ -2,10 +2,6 @@
 
 > > `const` **SETTLEMENT\_MANAGEMENT\_TX\_TAGS**: \[[`Approve`](../../enumerations/AssetTx.mdx#approve), [`PreApproveAsset`](../../enumerations/AssetTx.mdx#preapproveasset), [`ReceiverAffirmAssetTransfer`](../../enumerations/AssetTx.mdx#receiveraffirmassettransfer), [`RejectAssetTransfer`](../../enumerations/AssetTx.mdx#rejectassettransfer), [`RemoveAssetPreApproval`](../../enumerations/AssetTx.mdx#removeassetpreapproval), [`TransferAsset`](../../enumerations/AssetTx.mdx#transferasset), [`Claim`](../../enumerations/CapitalDistributionTx.mdx#claim), [`TransferNft`](../../enumerations/NftTx.mdx#transfernft), [`PreApprovePortfolio`](../../enumerations/PortfolioTx.mdx#preapproveportfolio), [`RemovePortfolioPreApproval`](../../enumerations/PortfolioTx.mdx#removeportfoliopreapproval)\]
 
-# Variable: SETTLEMENT\_MANAGEMENT\_TX\_TAGS
-
-> `const` **SETTLEMENT\_MANAGEMENT\_TX\_TAGS**: \[[`Approve`](../../enumerations/AssetTx.mdx#approve), [`PreApproveAsset`](../../enumerations/AssetTx.mdx#preapproveasset), [`ReceiverAffirmAssetTransfer`](../../enumerations/AssetTx.mdx#receiveraffirmassettransfer), [`RejectAssetTransfer`](../../enumerations/AssetTx.mdx#rejectassettransfer), [`RemoveAssetPreApproval`](../../enumerations/AssetTx.mdx#removeassetpreapproval), [`TransferAsset`](../../enumerations/AssetTx.mdx#transferasset), [`Claim`](../../enumerations/CapitalDistributionTx.mdx#claim), [`TransferNft`](../../enumerations/NftTx.mdx#transfernft), [`PreApprovePortfolio`](../../enumerations/PortfolioTx.mdx#preapproveportfolio), [`RemovePortfolioPreApproval`](../../enumerations/PortfolioTx.mdx#removeportfoliopreapproval)\]
-
 Defined in: [src/types/txGroupConstants.ts:382](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/types/txGroupConstants.ts#L382)
 
 Transaction tags for Settlement Management operations

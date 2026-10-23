@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/CustomPermissionGroup.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CustomPermissionGroup.ts#L33)
 
-# Class: CustomPermissionGroup
-
-Defined in: [src/api/entities/CustomPermissionGroup.ts:33](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CustomPermissionGroup.ts#L33)
-
 Represents a group of custom permissions for an Asset
 
 ## Extends

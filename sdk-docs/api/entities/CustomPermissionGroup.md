@@ -2,11 +2,7 @@
 
 > - [CustomPermissionGroup](classes/CustomPermissionGroup.mdx)
 
-# Entity: CustomPermissionGroup
-
 ## Classes
-
-- [CustomPermissionGroup](classes/CustomPermissionGroup.mdx)
 
 ## Interfaces
 

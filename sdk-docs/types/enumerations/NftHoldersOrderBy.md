@@ -2,10 +2,6 @@
 
 > Defined in: [src/middleware/types.ts:6091](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L6091)
 
-# Enumeration: NftHoldersOrderBy
-
-Defined in: [src/middleware/types.ts:6091](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L6091)
-
 ## Enumeration Members
 
 ### AssetIdAsc

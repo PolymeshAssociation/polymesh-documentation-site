@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Asset/Base/Compliance/index.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/index.ts#L8)
 
-# Class: Compliance
-
-Defined in: [src/api/entities/Asset/Base/Compliance/index.ts:8](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Compliance/index.ts#L8)
-
 Handles all Asset Compliance related functionality
 
 ## Extends

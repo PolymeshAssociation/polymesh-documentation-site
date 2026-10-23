@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:631
 
-# Enumeration: PortfolioTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:631
-
 ## Enumeration Members
 
 ### AcceptPortfolioCustody

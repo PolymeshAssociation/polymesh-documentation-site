@@ -1,14 +1,9 @@
 # Entity: DividendDistribution/types
 
 > - [DistributionParticipant](interfaces/DistributionParticipant.mdx)
-- [DividendDistributionDetails](interfaces/DividendDistributionDetails.mdx)
-
-# Entity: DividendDistribution/types
+> - [DividendDistributionDetails](interfaces/DividendDistributionDetails.mdx)
 
 ## Interfaces
-
-- [DistributionParticipant](interfaces/DistributionParticipant.mdx)
-- [DividendDistributionDetails](interfaces/DividendDistributionDetails.mdx)
 
 ## References
 

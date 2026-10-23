@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Portfolio/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/types.ts#L7)
 
-# Interface: PortfolioBalance
-
-Defined in: [src/api/entities/Portfolio/types.ts:7](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/types.ts#L7)
-
 ## Extends
 
 - [`Balance`](../../../Account/types/interfaces/Balance.mdx)

@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/client/Assets.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L59)
 
-# Class: Assets
-
-Defined in: [src/api/client/Assets.ts:59](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Assets.ts#L59)
-
 Handles all Asset related functionality
 
 ## Methods

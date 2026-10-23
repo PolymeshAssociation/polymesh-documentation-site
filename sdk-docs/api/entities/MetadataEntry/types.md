@@ -1,14 +1,9 @@
 # Entity: MetadataEntry/types
 
 > - [MetadataLockStatus](enumerations/MetadataLockStatus.mdx)
-- [MetadataType](enumerations/MetadataType.mdx)
-
-# Entity: MetadataEntry/types
+> - [MetadataType](enumerations/MetadataType.mdx)
 
 ## Enumerations
-
-- [MetadataLockStatus](enumerations/MetadataLockStatus.mdx)
-- [MetadataType](enumerations/MetadataType.mdx)
 
 ## Interfaces
 

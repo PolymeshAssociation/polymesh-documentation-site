@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/client/Polymesh.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Polymesh.ts#L37)
 
-# Interface: ConnectParams
-
-Defined in: [src/api/client/Polymesh.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/client/Polymesh.ts#L37)
-
 ## Properties
 
 ### middlewareV2?

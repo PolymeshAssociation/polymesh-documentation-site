@@ -2,10 +2,6 @@
 
 > Defined in: [src/middleware/types.ts:4551](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L4551)
 
-# Enumeration: ExtrinsicsOrderBy
-
-Defined in: [src/middleware/types.ts:4551](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/middleware/types.ts#L4551)
-
 ## Enumeration Members
 
 ### AddressAsc

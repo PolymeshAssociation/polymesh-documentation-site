@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/types.ts:538](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L538)
 
-# Interface: ClaimPercentageTransferRestriction
-
-Defined in: [src/api/entities/types.ts:538](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L538)
-
 ## Extends
 
 - `TransferRestrictionBase`

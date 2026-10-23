@@ -2,10 +2,6 @@
 
 > Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Permissions/index.ts#L37)
 
-# Class: Permissions
-
-Defined in: [src/api/entities/Asset/Base/Permissions/index.ts:37](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Base/Permissions/index.ts#L37)
-
 Handles all Asset Permissions related functionality
 
 ## Extends

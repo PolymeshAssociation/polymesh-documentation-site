@@ -2,10 +2,6 @@
 
 > Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:883
 
-# Enumeration: MultiBlockMigrationsTx
-
-Defined in: node\_modules/@polymeshassociation/polymesh-types/generated/types.d.ts:883
-
 ## Enumeration Members
 
 ### ClearHistoric

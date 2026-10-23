@@ -2,8 +2,6 @@
 
 > A TypeScript interface for building applications on the Polymesh blockchain
 
-# Polymesh SDK
-
 The Polymesh SDK is a TypeScript/JavaScript library that provides a simple, powerful interface for building applications and integrations on the Polymesh blockchain. It abstracts away blockchain complexity and exposes a feature-rich, user-friendly API for developers.
 
 ## Features
@@ -22,6 +20,8 @@ The Polymesh SDK is a TypeScript/JavaScript library that provides a simple, powe
 
   
 
+**npm**
+
 ```bash
 npm install @polymeshassociation/polymesh-sdk
 ```
@@ -29,12 +29,16 @@ npm install @polymeshassociation/polymesh-sdk
   
   
 
+**Yarn**
+
 ```bash
 yarn add @polymeshassociation/polymesh-sdk
 ```
 
   
   
+
+**pnpm**
 
 ```bash
 pnpm add @polymeshassociation/polymesh-sdk

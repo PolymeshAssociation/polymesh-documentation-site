@@ -1,14 +1,9 @@
 # Entity: Account/types
 
 > - [AccountIdentityRelation](enumerations/AccountIdentityRelation.mdx)
-- [AccountKeyType](enumerations/AccountKeyType.mdx)
-
-# Entity: Account/types
+> - [AccountKeyType](enumerations/AccountKeyType.mdx)
 
 ## Enumerations
-
-- [AccountIdentityRelation](enumerations/AccountIdentityRelation.mdx)
-- [AccountKeyType](enumerations/AccountKeyType.mdx)
 
 ## Interfaces
 

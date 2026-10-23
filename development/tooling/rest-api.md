@@ -171,9 +171,7 @@ curl -s -X GET "${REST_API_BASE_URL}/identities/${TARGET_DID}" \
       "signerType": "Account",
       "address": "5..."
     },
-    "permissions": {
-      /* ... full permissions ... */
-    }
+    "permissions": {/* ... full permissions ... */}
   },
   "secondaryAccounts": [
     // ... list of secondary accounts if any ...
