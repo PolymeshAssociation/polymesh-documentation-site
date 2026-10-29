@@ -1,0 +1,104 @@
+---
+title: What Changed in v8.1.3 - Polymesh Chain Changelog
+description: The fixes Polymesh chain v8.1.3 applies on top of v8.1.2 - dedicated NFT controller transfer events, capped trusted issuers, stricter settlement affirmations and direct transfers, holder checks before freezing, nested relay_tx refused, and weight changes.
+id: v8.0-to-v8.1.3-v8.1.3-fixes
+slug: /development/changelogs/v8.0-to-v8.1.3/v8.1.3-fixes
+sidebar_label: What Changed in v8.1.3
+tags:
+  - migration
+  - changelog
+  - runtime
+---
+
+This page is the delta from **v8.1.2 to v8.1.3**. It is part of the [v8.0 → v8.1.3 changelog](./010-overview.mdx).
+
+**Audience:** anyone who already runs v8.1.2 on Testnet, Develop or a private network. If you are upgrading from v8.0.x, as Mainnet is, you do not need this page. Every change below is already folded into the topic pages, so start from the [Overview](./010-overview.mdx).
+
+`spec_version` moves from `8_001_020` to `8_001_030`. `transaction_version` stays at `8`, so signing is unaffected.
+
+:::info Mostly fixes
+v8.1.3 adds no new extrinsics. It adds two events to `pallet-nft`, tightens validation in compliance, settlement, asset freezing and the relayer, and refreshes weights. Five error variants, two constants and two storage items are added. All are appended, so existing indices are unchanged. Nothing is removed.
+:::
+
+---
+
+## NFT controller transfers emit dedicated events
+
+`Nft::controller_transfer` and `Nft::controller_transfer_to` previously emitted only `NFTHoldingsUpdated`, with the same `ControllerTransfer` reason for both, so the two calls could not be told apart from events alone. Each now also emits its own event, immediately after `NFTHoldingsUpdated`:
+
+| Event                       | Emitted by               | Fields                                                                                    |
+| --------------------------- | ------------------------ | ----------------------------------------------------------------------------------------- |
+| `Nft::ControllerTransfer`   | `controller_transfer`    | `caller_did: IdentityId`, `nfts: NFTs`, `source: AssetHolder`, `destination: AssetHolder` |
+| `Nft::ControllerTransferTo` | `controller_transfer_to` | `caller_did: IdentityId`, `nfts: NFTs`, `source: AssetHolder`, `destination: AssetHolder` |
+
+This matches `pallet-asset`, which emits `Asset::ControllerTransfer` or `Asset::ControllerTransferTo`. Both variants are appended to the `Nft` event enum, so existing decoders keep working, and `NFTHoldingsUpdated` is still emitted. Runtimes before `8_001_030` emit only `NFTHoldingsUpdated`.
+
+## Compliance requirements are validated more strictly
+
+- **`IsAnyOf` and `IsNoneOf` need at least one claim.** A condition of either type with an empty claim list is rejected with `ComplianceManager::EmptyClaimsInCondition` by `add_compliance_requirement`, `change_compliance_requirement` and `replace_asset_compliance`.
+- **Trusted issuers have dedicated limits**, replacing the generic length limit:
+
+| Constant                                           | Value | Applies to                                                                         | Error                            |
+| -------------------------------------------------- | ----- | ---------------------------------------------------------------------------------- | -------------------------------- |
+| `ComplianceManager::MaximumNumberOfTrustedIssuers` | 8     | An asset's default trusted claim issuers, and the `issuers` list of each condition | `TooManyTrustedIssuers`          |
+| `ComplianceManager::MaxTrustedIssuerClaimTypes`    | 16    | The claim types in a `TrustedFor::Specific` list                                   | `TooManyTrustedIssuerClaimTypes` |
+
+Stored compliance is not re-validated. An asset already over a limit keeps its rules, but adding a default trusted issuer, or changing a requirement, must satisfy the new limits.
+
+## Settlement
+
+- **Affirming with an empty holder set is rejected** with `Settlement::EmptyAffirmation`. This applies to `affirm_instruction`, `affirm_instruction_with_count`, `add_and_affirm_instruction` and `add_and_affirm_with_mediators`. `affirm_with_receipts` and `affirm_with_receipts_with_count` accept an empty holder set only when at least one receipt is supplied. To create an instruction without affirming it, use `add_instruction` or `add_instruction_with_mediators`.
+- **Executing an instruction cancels any execution still queued for it**, for example a retry scheduled after a re-affirmation.
+- **`transfer_funds` between holders of the same identity validates the destination.** A user portfolio must exist (`Portfolio::PortfolioDoesNotExist`), and a secondary key needs permission for the destination portfolio as well as the source (`Portfolio::SecondaryKeyNotAuthorizedForPortfolio`).
+
+## Freezing requires a valid holder
+
+`Asset::set_holder_frozen` with `freeze = true`, and `Asset::set_frozen_tokens` with a non-zero amount, now check that the holder is valid:
+
+- An account must be linked to an active identity (`Identity::IdentityNotFoundForAccountPortfolio`, `Identity::DidDoesNotExist`).
+- A user portfolio must exist (`Portfolio::PortfolioDoesNotExist`).
+
+Unfreezing, and setting the frozen amount to `0`, are always allowed, so existing entries can still be cleared.
+
+## NFTs
+
+- **`Nft::issue_nft` enforces `AssetMetadataValueMaxLength`** (8,192 bytes) on every metadata value, failing with `Asset::AssetMetadataValueMaxLengthExceeded`. This also applies to `mint` on the NFT precompile.
+- **`tokenURI` on the NFT precompile reverts for an NFT that does not exist** (never minted, or burned) with `NFT does not exist`, as EIP-721 requires. An existing NFT with no URI configured still returns an empty string.
+
+## Precompile pre-check weights
+
+The weights charged by `canTransfer`, `canSend` and `canReceive` on both the [fungible-asset](/development/smart-contracts/precompiles/fungible-asset) and [NFT](/development/smart-contracts/precompiles/non-fungible-asset) precompiles are corrected, and NFT `canTransfer` and `tokenURI` now use dedicated benchmarks. The answers these methods return are unchanged, but gas estimates should be refreshed. If a check needs more weight than its benchmark allows, it reverts with `Benchmarked weight limit exceeded`.
+
+## Nested `relay_tx` calls are refused
+
+`Relayer::relay_tx` can no longer be nested, however the inner call is reached — directly, inside a `utility` batch, or through a MultiSig proposal. The inner call fails with the new `Relayer::NestingNotAllowed` error. A single `relay_tx` behaves as before.
+
+## `MultiSig::approve` includes the cost of decoding the proposal
+
+The weight of `MultiSig::approve` now includes decoding the stored proposal, so its upfront fee is higher. If the proposal's weight exceeds `max_weight`, the call fails with `MultiSig::MaxWeightTooLow` and is charged for the approval and the decoding.
+
+## Runtime and weights
+
+`spec_version` `8_001_020` → `8_001_030`. One storage migration runs at this upgrade: `pallet-pips` moves from storage version 2 to 3, filling the new `Pips::ProposalProposers` map from existing proposals. PIP voting reads the proposer from it, which makes voting cheaper. The two NFT-count migrations from v8.1.1 do not repeat.
+
+Weights were regenerated for `pallet-asset`, `pallet-compliance-manager`, `pallet-multisig`, `pallet-nft`, `pallet-pips`, `pallet-portfolio`, `pallet-relayer`, `pallet-settlement` and `pallet-sto`. Fee estimates derived from v8.1.2 weights should be regenerated. See [Other Runtime Changes](./080-other-runtime-changes.mdx#weights-were-re-benchmarked).
+
+The node moves to Substrate `stable2603-7`. This does not change the chain API.
+
+## What integrators need to change
+
+| If you…                                                 | Do this                                                                                                     |
+| ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Index NFT controller transfers                          | Decode `Nft::ControllerTransfer` and `Nft::ControllerTransferTo`. Regenerate metadata-derived types.        |
+| Build compliance rules programmatically                 | Never send an empty `IsAnyOf`/`IsNoneOf`. Keep to 8 trusted issuers per list and 16 claim types per issuer. |
+| Affirm instructions                                     | Handle `Settlement::EmptyAffirmation`. Use `add_instruction` to create an instruction without affirming it. |
+| Use `transfer_funds` between portfolios of one identity | Make sure the destination portfolio exists, and that a secondary key has permission for it.                 |
+| Freeze holders as an agent                              | Expect identity and portfolio errors for holders that do not exist.                                         |
+| Mint NFTs with large metadata values                    | Keep each value within 8,192 bytes.                                                                         |
+| Call `tokenURI` from a contract or tooling              | Handle the revert for a token that does not exist.                                                          |
+| Call `canTransfer`/`canSend`/`canReceive`               | Re-estimate gas.                                                                                            |
+| Relay transactions                                      | Do not nest `relay_tx`, including inside batches or MultiSig proposals.                                     |
+| Approve MultiSig proposals                              | Expect a higher upfront fee on `approve`, and set a realistic `max_weight`.                                 |
+| Estimate fees from weights                              | Regenerate against v8.1.3 metadata.                                                                         |
+
+See the [Full Pallet API Reference](./090-pallet-api-reference.mdx) for exact signatures, indices and errors.

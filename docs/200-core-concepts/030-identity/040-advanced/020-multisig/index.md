@@ -165,6 +165,8 @@ When using the Polymesh SDK, regular transactions from a multisig signer must us
 
 Signers vote on proposals by calling either `multisig::approve` or `multisig::reject`, providing the multisig address and the proposal ID generated during the proposal creation as arguments. These transactions must be submitted directly by the signer's key, not through another multisig proposal.
 
+`multisig::approve` also takes an optional `max_weight`, the most weight the signer is willing to pay for if their approval executes the proposal. If the proposal needs more, the approval fails with `multisig::MaxWeightTooLow` and the signer is still charged for the approval, so set `max_weight` to at least the proposal's weight.
+
 Key voting aspects:
 
 - The proposal creator's vote is automatically set to approve upon creation

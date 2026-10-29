@@ -252,6 +252,22 @@ const config: Config = {
             from: '/polymesh-docs/primitives/smart-contracts/',
             to: '/development/smart-contracts/',
           },
+          // v8.0 → v8.1.2 changelog, renamed to v8.0 → v8.1.3
+          ...[
+            '',
+            'fungible-asset-precompile/',
+            'nft-precompile/',
+            'runtime-precompile/',
+            'asset-freezing/',
+            'nft-approvals/',
+            'eth-wallets/',
+            'other-runtime-changes/',
+            'v8.1.2-fixes/',
+            'pallet-api-reference/',
+          ].map((page) => ({
+            from: `/development/changelogs/v8.0-to-v8.1.2/${page}`,
+            to: `/development/changelogs/v8.0-to-v8.1.3/${page}`,
+          })),
         ],
       },
     ],

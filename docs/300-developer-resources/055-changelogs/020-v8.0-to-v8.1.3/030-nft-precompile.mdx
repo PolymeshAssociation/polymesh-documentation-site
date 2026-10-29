@@ -1,8 +1,8 @@
 ---
-title: NFT Precompile Changelog - v8.0 to v8.1.2
-description: Polymesh chain v8.1.1 exposes every NFT collection as an ERC-721 token through a pallet-revive precompile, with ERC-721Metadata token URIs, ERC-165 introspection and ERC-7943 transfer checks.
-id: v8.0-to-v8.1.2-nft-precompile
-slug: /development/changelogs/v8.0-to-v8.1.2/nft-precompile
+title: NFT Precompile Changelog - v8.0 to v8.1.3
+description: Polymesh chain v8.1.1 exposes every NFT collection as an ERC-721 token through a pallet-revive precompile, with ERC-721Metadata token URIs, ERC-165 introspection and ERC-7943 transfer checks. v8.1.3 makes tokenURI revert for an NFT that does not exist.
+id: v8.0-to-v8.1.3-nft-precompile
+slug: /development/changelogs/v8.0-to-v8.1.3/nft-precompile
 sidebar_label: NFT Precompile
 tags:
   - migration
@@ -13,7 +13,7 @@ tags:
   - nft
 ---
 
-This page covers the ERC-721 precompile added in v8.1.1. It is part of the [v8.0 → v8.1.2 changelog](./010-overview.mdx).
+This page covers the ERC-721 precompile added in v8.1.1. It is part of the [v8.0 → v8.1.3 changelog](./010-overview.mdx).
 
 **Audience:** smart contract developers, NFT marketplace and wallet integrators, and issuers of Polymesh NFT collections.
 
@@ -58,6 +58,8 @@ As with fungible assets, there is no deployment step and no issuer opt-in: every
 
 In either case a literal `{tokenId}` in the value is replaced with the decimal token id. If the value contains no placeholder, the id is appended. An unset URI returns an empty string rather than reverting.
 
+As of v8.1.3, `tokenURI` **reverts** with `NFT does not exist` for a `tokenId` that was never minted or has been burned, as EIP-721 requires. Before, a collection with a `baseTokenUri` returned a well-formed URI for any `tokenId`, whether or not the token existed.
+
 This means a collection can set one `baseTokenUri` such as `https://example.com/nft/{tokenId}.json` and get correct per-token URIs for free, while still allowing any individual NFT to override it.
 
 The two metadata keys are global asset metadata keys, configured per network on the runtime. Issuers should use the standard `tokenUri` and `baseTokenUri` global keys rather than registering local keys of the same name, which the precompile does not read.
@@ -98,7 +100,7 @@ Marketplace and indexer code that assumes `ownerOf` always succeeds for an exist
 function forcedTransfer(address from, address to, uint256 tokenId) external returns (bool);
 ```
 
-Like its fungible counterpart it moves the token without compliance checks, requires the caller to be an agent of the collection, and emits both `ForcedTransfer` and `Transfer`.
+Like its fungible counterpart it moves the token without compliance checks, requires the caller to be an agent of the collection, and emits both `ForcedTransfer` and `Transfer`. On the Substrate side it dispatches `Nft::controller_transfer_to`, which as of v8.1.3 emits `Nft::ControllerTransferTo` after `NFTHoldingsUpdated`.
 
 ## Approvals
 
@@ -112,6 +114,7 @@ Approvals are covered in [NFT Approvals](./060-nft-approvals.mdx).
 2. Read [Non-Fungible Asset (ERC-721)](/development/smart-contracts/precompiles/non-fungible-asset) before writing contracts against a collection.
 3. Handle `ownerOf` reverting — do not assume an existing token has an address owner.
 4. Use `transferFrom`, not `safeTransferFrom`, when the receiver is a contract.
-5. Set `baseTokenUri` on a collection (or `tokenUri` per NFT) if you want `tokenURI` to return anything.
+5. Set `baseTokenUri` on a collection (or `tokenUri` per NFT) if you want `tokenURI` to return anything, and handle `tokenURI` reverting for a token that does not exist.
 6. Do not rely on `supportsInterface` to detect ERC-721Enumerable or ERC-7943 — neither interface id is reported, though the ERC-7943 methods are present.
 7. Give any contract that will hold NFTs its own identity, and remember it cannot receive them through `safeTransferFrom`.
+8. Keep each metadata value passed to `mint` within 8,192 bytes. As of v8.1.3, `issue_nft` enforces `AssetMetadataValueMaxLength` on every value.

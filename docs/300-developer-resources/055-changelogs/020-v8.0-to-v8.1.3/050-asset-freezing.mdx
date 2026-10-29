@@ -1,8 +1,8 @@
 ---
-title: Asset Freezing Changelog - v8.0 to v8.1.2
-description: Polymesh chain v8.1.1 adds holder-level asset freezing - freeze a single account or portfolio, or part of a holder's balance - plus a controller transfer that delivers to a named recipient. v8.1.2 closes the gaps in how that freeze is enforced.
-id: v8.0-to-v8.1.2-asset-freezing
-slug: /development/changelogs/v8.0-to-v8.1.2/asset-freezing
+title: Asset Freezing Changelog - v8.0 to v8.1.3
+description: Polymesh chain v8.1.1 adds holder-level asset freezing - freeze a single account or portfolio, or part of a holder's balance - plus a controller transfer that delivers to a named recipient. v8.1.2 closes the gaps in how that freeze is enforced, and v8.1.3 requires the holder to exist.
+id: v8.0-to-v8.1.3-asset-freezing
+slug: /development/changelogs/v8.0-to-v8.1.3/asset-freezing
 sidebar_label: Asset Freezing
 tags:
   - migration
@@ -12,7 +12,7 @@ tags:
   - compliance
 ---
 
-This page covers holder-level asset freezing, added in v8.1.1. It is part of the [v8.0 → v8.1.2 changelog](./010-overview.mdx).
+This page covers holder-level asset freezing, added in v8.1.1. It is part of the [v8.0 → v8.1.3 changelog](./010-overview.mdx).
 
 **Audience:** asset issuers and their agents, exchanges, custodians, indexers, and anyone whose code decides whether a transfer will succeed.
 
@@ -73,6 +73,10 @@ Freezing only restricts **sending**. A frozen holder can still receive the asset
 
 Frozen state persists across transfers and is not cleared by a balance reaching zero — unfreezing is always an explicit agent action.
 
+### The holder must exist
+
+As of v8.1.3, freezing a holder (`set_holder_frozen` with `freeze = true`) or setting a non-zero frozen amount (`set_frozen_tokens`) checks that the holder is valid. An account key must be linked to an active identity, and a user portfolio must exist. Otherwise the call fails with `Identity::IdentityNotFoundForAccountPortfolio`, `Identity::DidDoesNotExist` or `Portfolio::PortfolioDoesNotExist`. Unfreezing, and setting the frozen amount to `0`, are always allowed, so an entry written for a holder that does not exist can still be cleared.
+
 ### Controller transfers bypass freezes
 
 `Asset::controller_transfer` and the new `Asset::controller_transfer_to` deliberately ignore both the holder freeze and the frozen balance; they only respect the settlement lock. This is what makes seizure from a frozen holder possible — otherwise an agent would have to unfreeze an account to act on it, opening a window in which the holder could move the tokens themselves.
@@ -94,7 +98,7 @@ Both paths emit `Asset::FrozenBalanceSet` carrying the resulting frozen balance,
 
 The existing `Asset::controller_transfer` delivers to a portfolio of the calling agent, which meant returning seized assets to a rightful owner took two steps and left the assets in the agent's custody in between. `controller_transfer_to` does it in one, and is what backs `forcedTransfer` on both asset precompiles.
 
-It emits the new `Asset::ControllerTransferTo` event. `pallet-nft` gains an equivalent `Nft::controller_transfer_to` for collections.
+It emits the new `Asset::ControllerTransferTo` event. `pallet-nft` gains an equivalent `Nft::controller_transfer_to` for collections. As of v8.1.3, the NFT calls also emit dedicated events: `Nft::ControllerTransfer` for `controller_transfer` and `Nft::ControllerTransferTo` for `controller_transfer_to`, each after `NFTHoldingsUpdated`. That matches the fungible side, where `Asset::ControllerTransfer` and `Asset::ControllerTransferTo` tell the two calls apart.
 
 Both fail with `ReceiverAffirmationRequired` if the destination requires the receiver to affirm incoming transfers — a forced transfer cannot bypass that.
 
@@ -113,6 +117,8 @@ The cheapest way to pre-check is the transfer report used by `canTransfer`, whic
 | `FrozenBalanceSet`     | `caller_did`, `asset_holder`, `asset_id`, `frozen_balance`  |
 | `SetAccountFreeze`     | `caller_did`, `holder`, `asset_id`, `freeze`                |
 | `ControllerTransferTo` | `caller_did`, `asset_id`, `source`, `destination`, `amount` |
+
+The NFT side adds `Nft::ControllerTransfer` and `Nft::ControllerTransferTo` (v8.1.3), each with `caller_did`, `nfts`, `source` and `destination`.
 
 **If you are an issuer or agent**, no action is required — existing assets have nothing frozen, and asset-level freezing behaves exactly as before.
 

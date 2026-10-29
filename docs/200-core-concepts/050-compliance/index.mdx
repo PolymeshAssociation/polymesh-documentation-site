@@ -78,6 +78,9 @@ Each condition within a rule defines a specific requirement (typically [claim](#
 - **IsAbsent:** Requires that a specific claim is not present.
 - **IsAnyOf:** Requires that at least one claim from a specified set is present.
 - **IsNoneOf:** Requires that none of a specified set of claims are present.
+
+The set of claims given to **IsAnyOf** or **IsNoneOf** must not be empty. A requirement containing either with an empty set is rejected with `complianceManager::EmptyClaimsInCondition`.
+
 - **IsIdentity:** Requires that the sender or receiver is a specific identity (by DID) or is an [ExternalAgent](/asset-agents) of the asset. This condition does not rely on claims, but instead checks for a direct match to a specified identity or agent relationship. For example, this can be used to exempt the asset issuer or a designated agent from other transfer requirements.
 
 The **IsIdentity** condition supports two options:
@@ -110,6 +113,13 @@ Only claims from trusted claim issuers (either default or rule-defined, and for 
 - Restrict certain claim types to specific issuers (e.g., only accept Affiliate claims from the asset issuer)
 
 If a rule does not specify a trusted claim issuer for a claim, the default trusted claim issuers for the asset are used automatically.
+
+Trusted issuer lists are bounded:
+
+- An asset can have at most **8** default trusted claim issuers, and each condition can name at most **8** issuers (`complianceManager::MaximumNumberOfTrustedIssuers`). Exceeding either fails with `complianceManager::TooManyTrustedIssuers`.
+- An issuer trusted for specific claim types can be trusted for at most **16** of them (`complianceManager::MaxTrustedIssuerClaimTypes`). Exceeding this fails with `complianceManager::TooManyTrustedIssuerClaimTypes`.
+
+The overall complexity of an asset's rules is also capped, so conditions with many claims and many issuers can hit the complexity limit, `complianceManager::ComplianceRequirementTooComplex`, before reaching either bound.
 
 ## Claim Scopes
 

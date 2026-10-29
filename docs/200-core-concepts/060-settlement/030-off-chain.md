@@ -130,8 +130,8 @@ Each receipt requires a unique ID (UID) that is tracked via the `settlement::Rec
 
 4. **Receipt Submission and Affirmations**:
 
-   - Any party can submit the signed receipt using `settlement::affirm_with_receipts`
-   - If the receipt submitter is also a party to other legs they can simultaneously affirm those legs by using `settlement::affirm_with_receipts_with_count`
+   - Any party can submit the signed receipt using `settlement::affirm_with_receipts`. A submission that carries receipts does not need to name any asset holder of its own; one with neither receipts nor holders fails with `settlement::EmptyAffirmation`
+   - If the receipt submitter is also a party to other legs they can simultaneously affirm those legs by using `settlement::affirm_with_receipts_with_count`. Its affirmation count must allow for every receipt submitted, or the call fails with `settlement::NumberOfOffChainTransfersUnderestimated`
    - The receipt's signature and UID are verified:
      - Signature must be from a currently authorized signer for the venue
      - UID must not have been used in any other receipt (tracked via `settlement::ReceiptsUsed` storage)

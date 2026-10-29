@@ -126,6 +126,8 @@ Both methods deliver to the calling agent. To seize assets and deliver them stra
 
 Both `controller_transfer_to` variants fail if the destination requires the receiver to affirm incoming transfers — a forced transfer cannot bypass that requirement.
 
+Each of the four calls emits its own event, so the call that made a controller transfer can be identified from events alone. Fungible transfers emit `AssetBalanceUpdated` followed by `asset::ControllerTransfer` or `asset::ControllerTransferTo`. NFT transfers emit `NFTHoldingsUpdated`, with reason `ControllerTransfer` for both calls, followed by `nft::ControllerTransfer` or `nft::ControllerTransferTo`.
+
 :::info
 **Note:** Assets that are locked in a settlement instruction cannot be transferred using controller transfer. While controller transfers bypass many compliance and restriction checks, they cannot bypass basic balance checks. If tokens or NFTs are locked (e.g., as part of a pending settlement), controller transfer will fail due to insufficient available balance.
 :::
@@ -151,6 +153,8 @@ Freezing the whole asset is a blunt instrument. Issuers and agents can instead r
 
 - **Freeze a holder:** `asset::set_holder_frozen` with the `asset_holder`, `asset_id` and `freeze` flag. A frozen holder cannot send the asset.
 - **Freeze part of a balance:** `asset::freeze_partial_tokens` adds to the amount already frozen, and `asset::unfreeze_partial_tokens` releases some of it. `asset::set_frozen_tokens` sets the frozen amount outright, replacing whatever was frozen before.
+
+The holder must exist. An account key must be linked to an active identity, and a user portfolio must have been created; otherwise freezing it, or setting a non-zero frozen amount for it, fails. Unfreezing, and setting the frozen amount to `0`, always succeed.
 
 A holder's transferable balance becomes `balance − locked − frozen`, so a partially frozen holder can still move whatever is left. Freezing restricts **sending only**: a frozen holder can still receive the asset, and anything they receive is not automatically frozen.
 
