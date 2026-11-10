@@ -98,19 +98,25 @@ Defined in: [src/api/entities/DividendDistribution/index.ts:64](https://github.c
 
 Defined in: [src/api/entities/DividendDistribution/index.ts:61](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/DividendDistribution/index.ts#L61)
 
-Name
-Type
-Defined in
+Name | Type | Defined in
 
 `did`
 
+ | 
+
 `string`
+
+ | 
 
 [src/api/entities/Portfolio/index.ts:67](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/index.ts#L67)
 
 `id?`
 
+ | 
+
 `string`
+
+ | 
 
 [src/api/entities/Portfolio/index.ts:68](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Portfolio/index.ts#L68)
 
@@ -138,19 +144,25 @@ Defined in: [src/api/entities/DividendDistribution/index.ts:63](https://github.c
 
 Defined in: [src/api/entities/CorporateAction.ts:24](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateAction.ts#L24)
 
-Name
-Type
-Defined in
+Name | Type | Defined in
 
 `identities`
 
+ | 
+
 `string`[]
+
+ | 
 
 [src/api/entities/CorporateActionBase/types.ts:12](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateActionBase/types.ts#L12)
 
 `treatment`
 
+ | 
+
 [`TargetTreatment`](../../CorporateActionBase/types/enumerations/TargetTreatment.mdx)
+
+ | 
 
 [src/api/entities/CorporateActionBase/types.ts:13](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateActionBase/types.ts#L13)
 
@@ -166,19 +178,25 @@ Defined in
 
 Defined in: [src/api/entities/CorporateAction.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateAction.ts#L26)
 
-Name
-Type
-Defined in
+Name | Type | Defined in
 
 `identity`
 
+ | 
+
 `string`
+
+ | 
 
 [src/api/entities/CorporateActionBase/types.ts:17](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateActionBase/types.ts#L17)
 
 `percentage`
 
+ | 
+
 `string`
+
+ | 
 
 [src/api/entities/CorporateActionBase/types.ts:18](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateActionBase/types.ts#L18)
 

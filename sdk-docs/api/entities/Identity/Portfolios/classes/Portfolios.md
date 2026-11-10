@@ -20,25 +20,35 @@ Delete a Portfolio by ID
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `portfolio`: `BigNumber` \| [`NumberedPortfolio`](../../../NumberedPortfolio/classes/NumberedPortfolio.mdx); \}
+
+ | 
 
 &hyphen;
 
 `args.portfolio`
 
+ | 
+
 `BigNumber` \| [`NumberedPortfolio`](../../../NumberedPortfolio/classes/NumberedPortfolio.mdx)
+
+ | 
 
 Portfolio instance or portfolio ID to delete
 
 `opts?`
 
+ | 
+
 [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)
+
+ | 
 
 &hyphen;
 
@@ -68,13 +78,15 @@ To fetch Portfolios owned by this Identity, use [getPortfolios](#getportfolios)
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `paginationOpts?`
 
+ | 
+
 [`PaginationOptions`](../../../types/interfaces/PaginationOptions.mdx)
+
+ | 
 
 Optional pagination options
 
@@ -116,19 +128,25 @@ Retrieve a Numbered Portfolio by its ID
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `portfolioId`: `BigNumber`; \}
+
+ | 
 
 &hyphen;
 
 `args.portfolioId`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 ID of the Portfolio to retrieve
 
@@ -150,19 +168,25 @@ Retrieve a Numbered Portfolio by its name
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `name`: `string`; \}
+
+ | 
 
 &hyphen;
 
 `args.name`
 
+ | 
+
 `string`
+
+ | 
 
 Name of the Portfolio to fetch
 
@@ -204,31 +228,45 @@ Retrieve a list of transactions where this identity was involved. Can be filtere
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `filters`
 
+ | 
+
 \{ `account?`: `string`; `assetId?`: `string`; `ticker?`: `string`; \}
+
+ | 
 
 &hyphen;
 
 `filters.account?`
 
+ | 
+
 `string`
+
+ | 
 
 Account involved in the settlement
 
 `filters.assetId?`
 
+ | 
+
 `string`
+
+ | 
 
 Asset ID to filter by (overrides ticker if both provided)
 
 `filters.ticker?`
 
+ | 
+
 `string`
+
+ | 
 
 ticker involved in the transaction
 

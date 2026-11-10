@@ -4,18 +4,23 @@
 
 ## Type Parameters
 
-Type Parameter
-Default type
+Type Parameter | Default type
 
 `MethodArgs`
+
+ | 
 
 &hyphen;
 
 `ProcedureReturnValue`
 
+ | 
+
 &hyphen;
 
 `ReturnValue`
+
+ | 
 
 `ProcedureReturnValue`
 
@@ -25,14 +30,17 @@ Defined in: [src/api/procedures/types.ts:197](https://github.com/PolymeshAssocia
 
 ## Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 `MethodArgs`
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](ProcedureOpts.mdx)
 
@@ -50,14 +58,17 @@ Defined in: [src/api/procedures/types.ts:200](https://github.com/PolymeshAssocia
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 `MethodArgs`
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](ProcedureOpts.mdx)
 

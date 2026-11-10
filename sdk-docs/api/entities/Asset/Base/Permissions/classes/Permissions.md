@@ -20,14 +20,17 @@ Create a Permission Group for this Asset. Identities can be assigned to Permissi
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`CreateGroupParams`](../../../../../procedures/types/interfaces/CreateGroupParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -68,19 +71,25 @@ Retrieve a Custom Permission Group by its ID
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `id`: `BigNumber`; \}
+
+ | 
 
 &hyphen;
 
 `args.id`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 Permission Group identifier
 
@@ -104,19 +113,25 @@ Retrieve a Known Permission Group by its type
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `type`: [`PermissionGroupType`](../../../../types/enumerations/PermissionGroupType.mdx); \}
+
+ | 
 
 &hyphen;
 
 `args.type`
 
+ | 
+
 [`PermissionGroupType`](../../../../types/enumerations/PermissionGroupType.mdx)
+
+ | 
 
 The Known Permission Group type
 
@@ -152,14 +167,17 @@ Invite an Identity to be an agent with permissions over this Asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`InviteExternalAgentParams`](../../../../../procedures/types/interfaces/InviteExternalAgentParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -197,14 +215,17 @@ Revoke an agent's permissions over this Asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`RemoveExternalAgentParams`](../../../../../procedures/types/interfaces/RemoveExternalAgentParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 

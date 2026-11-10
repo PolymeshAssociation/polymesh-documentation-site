@@ -4,13 +4,15 @@
 
 ## Type Parameters
 
-Type Parameter
-Default type
-Description
+Type Parameter | Default type | Description
 
 `IsDefault` *extends* `boolean`
 
+ | 
+
 `false`
+
+ | 
 
 whether the Identity is a default trusted claim issuer for an asset or just
   for a specific compliance condition. Defaults to false

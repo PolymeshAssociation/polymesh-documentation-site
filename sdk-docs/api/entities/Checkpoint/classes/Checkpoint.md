@@ -53,10 +53,11 @@ Retrieve all Asset Holder balances at this Checkpoint
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `paginationOpts?`
+
+ | 
 
 [`PaginationOptions`](../../types/interfaces/PaginationOptions.mdx)
 
@@ -89,19 +90,25 @@ Retrieve the balance of a specific Asset Holder Identity at this Checkpoint
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args?`
 
+ | 
+
 \{ `identity`: `string` \| [`Identity`](../../Identity/classes/Identity.mdx); \}
+
+ | 
 
 &hyphen;
 
 `args.identity?`
 
+ | 
+
 `string` \| [`Identity`](../../Identity/classes/Identity.mdx)
+
+ | 
 
 defaults to the signing Identity
 
@@ -159,10 +166,11 @@ Determine whether this Entity is the same as another one
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `entity`
+
+ | 
 
 [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>
 
@@ -224,13 +232,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `identifiers`
 
+ | 
+
 `Identifiers`
+
+ | 
 
 &hyphen;
 
@@ -260,13 +270,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `serialized`
 
+ | 
+
 `string`
+
+ | 
 
 UUID to unserialize
 

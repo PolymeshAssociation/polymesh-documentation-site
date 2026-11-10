@@ -10,10 +10,11 @@ Signer/agent permissions for a specific type
 
 ## Type Parameters
 
-Type Parameter
-Description
+Type Parameter | Description
 
 `T`
+
+ | 
 
 type of Permissions (Asset, Transaction, Portfolio, etc)
 

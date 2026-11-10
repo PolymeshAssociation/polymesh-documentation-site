@@ -159,10 +159,11 @@ Determine whether this Entity is the same as another one
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `entity`
+
+ | 
 
 [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>
 
@@ -186,14 +187,17 @@ Link a list of documents to this corporate action
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`LinkCaDocsParams`](../../../procedures/types/interfaces/LinkCaDocsParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -221,14 +225,17 @@ Modify the Corporate Action's Checkpoint
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`Modify`](../../../../types/utils/type-aliases/Modify.mdx)\<[`ModifyCaCheckpointParams`](../../../procedures/types/interfaces/ModifyCaCheckpointParams.mdx), \{ `checkpoint`: [`InputCaCheckpoint`](../../Asset/Fungible/Checkpoints/types/type-aliases/InputCaCheckpoint.mdx); \}\>
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -276,13 +283,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `identifiers`
 
+ | 
+
 `Identifiers`
+
+ | 
 
 &hyphen;
 
@@ -312,13 +321,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `serialized`
 
+ | 
+
 `string`
+
+ | 
 
 UUID to unserialize
 

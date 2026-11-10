@@ -52,10 +52,11 @@ Close the Offering
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -95,13 +96,15 @@ Retrieve the Offering's details (with subscription support)
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<[`OfferingDetails`](../types/interfaces/OfferingDetails.mdx)\>
+
+ | 
 
 Callback function that receives offering detail updates
 
@@ -127,14 +130,17 @@ Enable off-chain funding for the Offering
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`EnableOffChainFundingParams`](../../../procedures/types/interfaces/EnableOffChainFundingParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -183,10 +189,11 @@ Freeze the Offering
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -210,61 +217,95 @@ Generate an off-chain funding receipt for this offering
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `amount`: `BigNumber`; `expiresAt`: `Date`; `metadata?`: `string`; `offChainTicker`: `string`; `sender`: `string` \| [`Identity`](../../Identity/classes/Identity.mdx); `signer?`: `string` \| [`Account`](../../Account/classes/Account.mdx); `signerKeyRingType?`: [`SignerKeyRingType`](../../../procedures/types/enumerations/SignerKeyRingType.mdx); `uid`: `BigNumber`; \}
+
+ | 
 
 &hyphen;
 
 `args.amount`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 equivalent investment amount in the raising asset (calculated from the off-chain asset value based on STO tier pricing)
 
 `args.expiresAt`
 
+ | 
+
 `Date`
+
+ | 
 
 timestamp at which the receipt expires and can no longer be used to invest
 
 `args.metadata?`
 
+ | 
+
 `string`
+
+ | 
 
 (optional) additional metadata to be associated with the receipt
 
 `args.offChainTicker`
 
+ | 
+
 `string`
+
+ | 
 
 ticker symbol of the off-chain asset being transferred (e.g., 'BTC', 'ETH')
 
 `args.sender`
 
+ | 
+
 `string` \| [`Identity`](../../Identity/classes/Identity.mdx)
+
+ | 
 
 Identity or DID of the investor providing the off-chain funding
 
 `args.signer?`
 
+ | 
+
 `string` \| [`Account`](../../Account/classes/Account.mdx)
+
+ | 
 
 (optional) authorized venue receipt signer to generate the cryptographic signature. Defaults to signing Account associated with the SDK
 
 `args.signerKeyRingType?`
 
+ | 
+
 [`SignerKeyRingType`](../../../procedures/types/enumerations/SignerKeyRingType.mdx)
+
+ | 
 
 (optional) keyring type for signature generation. Defaults to 'Sr25519'. Supported types: SR25519, ED25519, ECDSA
 
 `args.uid`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 unique receipt ID (UID) for this off-chain funding transaction
 
@@ -301,25 +342,35 @@ Retrieve all investments made on this Offering
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `opts`
 
+ | 
+
 \{ `size?`: `BigNumber`; `start?`: `BigNumber`; \}
+
+ | 
 
 &hyphen;
 
 `opts.size?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page size
 
 `opts.start?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page offset
 
@@ -347,14 +398,17 @@ Invest in the Offering
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 `object` & \{ `fundingPortfolio`: [`PortfolioLike`](../../types/type-aliases/PortfolioLike.mdx); \} \| \{ `offChainFundingReceipt`: [`OffChainFundingReceipt`](../types/interfaces/OffChainFundingReceipt.mdx); `offChainTicker`: `string`; \}
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -384,10 +438,11 @@ Determine whether this Entity is the same as another one
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `entity`
+
+ | 
 
 [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>
 
@@ -411,14 +466,17 @@ Modify the start/end time of the Offering
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`ModifyOfferingTimesParams`](../../../procedures/types/type-aliases/ModifyOfferingTimesParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -481,10 +539,11 @@ Unfreeze the Offering
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -514,13 +573,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `identifiers`
 
+ | 
+
 `Identifiers`
+
+ | 
 
 &hyphen;
 
@@ -550,13 +611,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `serialized`
 
+ | 
+
 `string`
+
+ | 
 
 UUID to unserialize
 

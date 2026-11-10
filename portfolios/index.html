@@ -7,9 +7,9 @@
 
 
 
-<script>window.__COPY_PAGE_BUTTON_OPTIONS__={customStyles:{},enabledActions:["copy","view","chatgpt","claude","perplexity","gemini"],generateMarkdownRoutes:!1,markdownUrl:!0,placement:"auto",mcpServer:null,id:"default"}</script><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.c53d1ff3.css">
-<script src="/polymesh-documentation-site/assets/js/runtime~main.d0f4d422.js" defer="defer"></script>
-<script src="/polymesh-documentation-site/assets/js/main.d6ebaad6.js" defer="defer"></script>
+<script>window.__COPY_PAGE_BUTTON_OPTIONS__={customStyles:{},enabledActions:["copy","view","chatgpt","claude","perplexity","gemini"],generateMarkdownRoutes:!1,markdownUrl:!0,placement:"auto",mcpServer:null,id:"default"}</script><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.1f85c761.css">
+<script src="/polymesh-documentation-site/assets/js/runtime~main.d3ba73d9.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/main.e516069c.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -75,7 +75,7 @@ This can streamline the <a class="" href="/polymesh-documentation-site/settlemen
 <li class=""><code>portfolio_id</code>: The portfolio that will no longer receive the asset without affirmation.</li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="portfolio-freezing">Portfolio Freezing<a href="#portfolio-freezing" class="hash-link" aria-label="Direct link to Portfolio Freezing" title="Direct link to Portfolio Freezing" translate="no">​</a></h3>
-<p>An asset&#x27;s issuer or an authorised agent can freeze a portfolio for a <strong>specific asset</strong>, preventing that portfolio from sending it. This is done from the asset side, with <code>asset::set_holder_frozen</code>, passing the portfolio as the <code>asset_holder</code>. This works for both fungible assets and NFT collections. For a fungible asset, part of a portfolio&#x27;s balance can be frozen instead of all of it, using <code>asset::freeze_partial_tokens</code>, <code>asset::unfreeze_partial_tokens</code> or <code>asset::set_frozen_tokens</code>; those three do not apply to NFT collections.</p>
+<p>An asset&#x27;s issuer or an authorised agent can freeze a portfolio for a <strong>specific asset</strong>, preventing that portfolio from sending it. This is done from the asset side, with <code>asset::set_holder_frozen</code>, passing the portfolio as the <code>asset_holder</code>. The portfolio must exist: freezing a user portfolio that has not been created fails with <code>portfolio::PortfolioDoesNotExist</code>. This works for both fungible assets and NFT collections. For a fungible asset, part of a portfolio&#x27;s balance can be frozen instead of all of it, using <code>asset::freeze_partial_tokens</code>, <code>asset::unfreeze_partial_tokens</code> or <code>asset::set_frozen_tokens</code>; those three do not apply to NFT collections.</p>
 <p>A frozen portfolio cannot move the asset by any route, including moves to another portfolio of the same identity; those fail with <code>portfolio::PortfolioIsFrozen</code>. It can still receive the asset, and freezing is per asset — a portfolio frozen for one asset moves its other holdings normally.</p>
 <p>A <strong>partially</strong> frozen portfolio can move only its unfrozen tokens. The amount available to move is <code>balance − locked − frozen</code>, and a move beyond that fails with <code>portfolio::InsufficientPortfolioBalance</code>.</p>
 <p>The same check applies when a portfolio&#x27;s tokens are locked to fund something. A frozen portfolio cannot be the offering portfolio of a new <a class="" href="/polymesh-documentation-site/sto/">STO</a> (<code>sto::create_fundraiser</code>) or the source of a new capital distribution (<code>capitalDistribution::distribute</code>), and a partially frozen one can lock only its unfrozen tokens for either. An NFT held in a frozen portfolio cannot be locked into a settlement instruction, so it cannot be committed to an instruction while the freeze holds.</p>

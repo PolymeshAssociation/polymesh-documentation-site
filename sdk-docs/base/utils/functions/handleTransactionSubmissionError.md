@@ -6,10 +6,11 @@ Defined in: [src/base/utils.ts:185](https://github.com/PolymeshAssociation/polym
 
 ## Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `err`
+
+ | 
 
 `Error`
 

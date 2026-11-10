@@ -20,14 +20,17 @@ Exempt identities from Transfer Restrictions. These identities will not be subje
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`TransferRestrictionExemptionParams`](../../../../../procedures/types/type-aliases/TransferRestrictionExemptionParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -111,14 +114,17 @@ The given identities will no longer be exempt from Transfer Restrictions.
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`TransferRestrictionExemptionParams`](../../../../../procedures/types/type-aliases/TransferRestrictionExemptionParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -146,14 +152,17 @@ TransferRestrictionType.Percentage can limit the maximum percentage an individua
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`TransferRestrictionParams`](../../../../../procedures/types/type-aliases/TransferRestrictionParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -185,14 +194,17 @@ which means it can also be used to remove previously enabled stats.
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`SetTransferRestrictionStatParams`](../../../../../procedures/types/type-aliases/SetTransferRestrictionStatParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 

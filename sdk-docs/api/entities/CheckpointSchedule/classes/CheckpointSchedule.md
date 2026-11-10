@@ -118,10 +118,11 @@ Determine whether this Entity is the same as another one
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `entity`
+
+ | 
 
 [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>
 
@@ -169,13 +170,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `identifiers`
 
+ | 
+
 `Identifiers`
+
+ | 
 
 &hyphen;
 
@@ -205,13 +208,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `serialized`
 
+ | 
+
 `string`
+
+ | 
 
 UUID to unserialize
 

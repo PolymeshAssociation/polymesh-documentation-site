@@ -7,9 +7,9 @@
 
 
 
-<script>window.__COPY_PAGE_BUTTON_OPTIONS__={customStyles:{},enabledActions:["copy","view","chatgpt","claude","perplexity","gemini"],generateMarkdownRoutes:!1,markdownUrl:!0,placement:"auto",mcpServer:null,id:"default"}</script><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.c53d1ff3.css">
-<script src="/polymesh-documentation-site/assets/js/runtime~main.d0f4d422.js" defer="defer"></script>
-<script src="/polymesh-documentation-site/assets/js/main.d6ebaad6.js" defer="defer"></script>
+<script>window.__COPY_PAGE_BUTTON_OPTIONS__={customStyles:{},enabledActions:["copy","view","chatgpt","claude","perplexity","gemini"],generateMarkdownRoutes:!1,markdownUrl:!0,placement:"auto",mcpServer:null,id:"default"}</script><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.1f85c761.css">
+<script src="/polymesh-documentation-site/assets/js/runtime~main.d3ba73d9.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/main.e516069c.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -130,8 +130,8 @@
 <li class="">
 <p><strong>Receipt Submission and Affirmations</strong>:</p>
 <ul>
-<li class="">Any party can submit the signed receipt using <code>settlement::affirm_with_receipts</code></li>
-<li class="">If the receipt submitter is also a party to other legs they can simultaneously affirm those legs by using <code>settlement::affirm_with_receipts_with_count</code></li>
+<li class="">Any party can submit the signed receipt using <code>settlement::affirm_with_receipts</code>. A submission that carries receipts does not need to name any asset holder of its own; one with neither receipts nor holders fails with <code>settlement::EmptyAffirmation</code></li>
+<li class="">If the receipt submitter is also a party to other legs they can simultaneously affirm those legs by using <code>settlement::affirm_with_receipts_with_count</code>. Its affirmation count must allow for every receipt submitted, or the call fails with <code>settlement::NumberOfOffChainTransfersUnderestimated</code></li>
 <li class="">The receipt&#x27;s signature and UID are verified:<!-- -->
 <ul>
 <li class="">Signature must be from a currently authorized signer for the venue</li>

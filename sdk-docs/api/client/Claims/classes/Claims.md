@@ -16,14 +16,17 @@ Add claims to Identities
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 `Pick`\<[`ModifyClaimsParams`](../../../procedures/types/type-aliases/ModifyClaimsParams.mdx), `"claims"`\>
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -52,14 +55,17 @@ Edit claims associated to Identities (only the expiry date can be modified)
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 `Pick`\<[`ModifyClaimsParams`](../../../procedures/types/type-aliases/ModifyClaimsParams.mdx), `"claims"`\>
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -88,31 +94,45 @@ Retrieve registered CustomClaimTypes
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `opts`
 
+ | 
+
 \{ `dids?`: `string`[]; `size?`: `BigNumber`; `start?`: `BigNumber`; \}
+
+ | 
 
 &hyphen;
 
 `opts.dids?`
 
+ | 
+
 `string`[]
+
+ | 
 
 Fetch CustomClaimTypes issued by the given `dids`
 
 `opts.size?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 &hyphen;
 
 `opts.start?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 &hyphen;
 
@@ -141,19 +161,25 @@ Retrieve all scopes in which claims have been made for the target Identity.
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `opts`
 
+ | 
+
 \{ `target?`: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx); \}
+
+ | 
 
 &hyphen;
 
 `opts.target?`
 
+ | 
+
 `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
+
+ | 
 
 Identity for which to fetch claim scopes (optional, defaults to the signing Identity)
 
@@ -177,13 +203,15 @@ Retrieves a custom claim type based on its ID
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `id`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 The ID of the custom claim type to retrieve
 
@@ -203,13 +231,15 @@ Retrieves a custom claim type based on its name
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `name`
 
+ | 
+
 `string`
+
+ | 
 
 The name of the custom claim type to retrieve
 
@@ -229,55 +259,85 @@ Retrieve a list of Identities with claims associated to them. Can be filtered us
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `opts`
 
+ | 
+
 \{ `claimTypes?`: [`TrustedFor`](../../../entities/types/type-aliases/TrustedFor.mdx)[]; `includeExpired?`: `boolean`; `scope?`: [`Scope`](../../../entities/types/interfaces/Scope.mdx); `size?`: `BigNumber`; `start?`: `BigNumber`; `targets?`: (`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx))[]; `trustedClaimIssuers?`: (`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx))[]; \}
+
+ | 
 
 &hyphen;
 
 `opts.claimTypes?`
 
+ | 
+
 [`TrustedFor`](../../../entities/types/type-aliases/TrustedFor.mdx)[]
+
+ | 
 
 types of the claims to fetch. Defaults to any type
 
 `opts.includeExpired?`
 
+ | 
+
 `boolean`
+
+ | 
 
 whether to include expired claims. Defaults to true
 
 `opts.scope?`
 
+ | 
+
 [`Scope`](../../../entities/types/interfaces/Scope.mdx)
+
+ | 
 
 scope of the claims to fetch. Defaults to any scope
 
 `opts.size?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page size
 
 `opts.start?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page offset
 
 `opts.targets?`
 
+ | 
+
 (`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx))[]
+
+ | 
 
 Identities (or Identity IDs) for which to fetch targeting claims. Defaults to all targets
 
 `opts.trustedClaimIssuers?`
 
+ | 
+
 (`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx))[]
+
+ | 
 
 Identity IDs of claim issuers. Defaults to all claim issuers
 
@@ -305,37 +365,55 @@ Retrieve all claims issued by an Identity
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `opts`
 
+ | 
+
 \{ `includeExpired?`: `boolean`; `size?`: `BigNumber`; `start?`: `BigNumber`; `target?`: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx); \}
+
+ | 
 
 &hyphen;
 
 `opts.includeExpired?`
 
+ | 
+
 `boolean`
+
+ | 
 
 whether to include expired claims. Defaults to true
 
 `opts.size?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 &hyphen;
 
 `opts.start?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 &hyphen;
 
 `opts.target?`
 
+ | 
+
 `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
+
+ | 
 
 Identity (optional, defaults to the signing Identity)
 
@@ -363,49 +441,75 @@ Retrieve all claims issued about an Identity, grouped by claim issuer
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `opts`
 
+ | 
+
 \{ `includeExpired?`: `boolean`; `scope?`: [`Scope`](../../../entities/types/interfaces/Scope.mdx); `size?`: `BigNumber`; `start?`: `BigNumber`; `target?`: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx); `trustedClaimIssuers?`: (`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx))[]; \}
+
+ | 
 
 &hyphen;
 
 `opts.includeExpired?`
 
+ | 
+
 `boolean`
+
+ | 
 
 whether to include expired claims. Defaults to true
 
 `opts.scope?`
 
+ | 
+
 [`Scope`](../../../entities/types/interfaces/Scope.mdx)
+
+ | 
 
 &hyphen;
 
 `opts.size?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 &hyphen;
 
 `opts.start?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 &hyphen;
 
 `opts.target?`
 
+ | 
+
 `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
+
+ | 
 
 Identity for which to fetch targeting claims (optional, defaults to the signing Identity)
 
 `opts.trustedClaimIssuers?`
 
+ | 
+
 (`string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx))[]
+
+ | 
 
 &hyphen;
 
@@ -433,14 +537,17 @@ Creates a custom claim type using the `name` and returns the `id` of the created
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`RegisterCustomClaimTypeParams`](../../../procedures/types/interfaces/RegisterCustomClaimTypeParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -470,14 +577,17 @@ Revoke claims from Identities
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 `Pick`\<[`ModifyClaimsParams`](../../../procedures/types/type-aliases/ModifyClaimsParams.mdx), `"claims"`\>
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 

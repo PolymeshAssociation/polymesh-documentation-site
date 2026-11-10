@@ -6,19 +6,25 @@ Defined in: [src/types/utils/index.ts:91](https://github.com/PolymeshAssociation
 
 ## Type Declaration
 
-Name
-Type
-Defined in
+Name | Type | Defined in
 
 `size?`
 
+ | 
+
 `number`
+
+ | 
 
 [src/types/utils/index.ts:92](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/types/utils/index.ts#L92)
 
 `start?`
 
+ | 
+
 `number`
+
+ | 
 
 [src/types/utils/index.ts:93](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/types/utils/index.ts#L93)
 

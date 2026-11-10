@@ -20,19 +20,25 @@ Retrieve all of the Asset's Offerings and their details. Can be filtered using p
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `opts`
 
+ | 
+
 \{ `status?`: `Partial`\<[`OfferingStatus`](../../../../Offering/types/interfaces/OfferingStatus.mdx)\>; \}
+
+ | 
 
 &hyphen;
 
 `opts.status?`
 
+ | 
+
 `Partial`\<[`OfferingStatus`](../../../../Offering/types/interfaces/OfferingStatus.mdx)\>
+
+ | 
 
 status of the Offerings to fetch. If defined, only Offerings that have all passed statuses will be returned
 
@@ -52,14 +58,17 @@ Retrieve a single Offering associated to this Asset by its ID
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 \{ `id`: `BigNumber`; \}
 
 `args.id`
+
+ | 
 
 `BigNumber`
 
@@ -83,14 +92,17 @@ Launch an Asset Offering
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`LaunchOfferingParams`](../../../../../procedures/types/interfaces/LaunchOfferingParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 

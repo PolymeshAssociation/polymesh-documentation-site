@@ -16,14 +16,17 @@ Bond POLYX for staking
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`BondPolyxParams`](../../../procedures/types/interfaces/BondPolyxParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -51,14 +54,17 @@ Bond extra POLYX for staking
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`UpdatePolyxBondParams`](../../../procedures/types/interfaces/UpdatePolyxBondParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -102,13 +108,15 @@ Retrieve the current staking era information (with subscription support)
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<[`StakingEraInfo`](../../types/interfaces/StakingEraInfo.mdx)\>
+
+ | 
 
 Callback function that receives era information updates
 
@@ -134,10 +142,11 @@ Return information about nomination targets
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `paginationOpts?`
+
+ | 
 
 [`PaginationOptions`](../../../entities/types/interfaces/PaginationOptions.mdx)
 
@@ -161,14 +170,17 @@ Nominate validators for the bonded POLYX
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`NominateValidatorsParams`](../../../procedures/types/interfaces/NominateValidatorsParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -196,10 +208,11 @@ Allow for a stash account to update its controller so the stash becomes its own 
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -227,14 +240,17 @@ Allow for a stash account to update where it's staking rewards are deposited
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`SetStakingPayeeParams`](../../../procedures/types/interfaces/SetStakingPayeeParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -262,14 +278,17 @@ Unbond POLYX for staking. The unbonded amount can be withdrawn after the lockup 
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`UpdatePolyxBondParams`](../../../procedures/types/interfaces/UpdatePolyxBondParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -293,10 +312,11 @@ Withdraw unbonded POLYX to free it for the stash account
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 

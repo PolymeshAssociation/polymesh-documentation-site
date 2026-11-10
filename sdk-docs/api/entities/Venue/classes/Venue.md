@@ -42,14 +42,17 @@ Creates a settlement Instruction in this Venue
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`AddInstructionParams`](../../../procedures/types/type-aliases/AddInstructionParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -78,14 +81,17 @@ Creates a batch of settlement Instructions in this Venue
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`AddInstructionsParams`](../../../procedures/types/interfaces/AddInstructionsParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -114,14 +120,17 @@ Adds a list of signers allowed to sign receipts for this Venue
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`UpdateVenueSignersParams`](../../../procedures/types/interfaces/UpdateVenueSignersParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -201,25 +210,35 @@ Retrieve all Instructions that have been associated with this Venue instance
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `opts`
 
+ | 
+
 \{ `size?`: `BigNumber`; `start?`: `BigNumber`; \}
+
+ | 
 
 &hyphen;
 
 `opts.size?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page size
 
 `opts.start?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page offset
 
@@ -275,10 +294,11 @@ Determine whether this Entity is the same as another one
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `entity`
+
+ | 
 
 [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>
 
@@ -302,14 +322,17 @@ Modify description and type
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`ModifyVenueParams`](../../../procedures/types/type-aliases/ModifyVenueParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -338,14 +361,17 @@ Adds a list of signers allowed to sign receipts for this Venue
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`UpdateVenueSignersParams`](../../../procedures/types/interfaces/UpdateVenueSignersParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -402,13 +428,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `identifiers`
 
+ | 
+
 `Identifiers`
+
+ | 
 
 &hyphen;
 
@@ -438,13 +466,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `serialized`
 
+ | 
+
 `string`
+
+ | 
 
 UUID to unserialize
 

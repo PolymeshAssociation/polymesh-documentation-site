@@ -12,10 +12,11 @@ Type Parameter
 
 ## Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `result`
+
+ | 
 
 `T`
 

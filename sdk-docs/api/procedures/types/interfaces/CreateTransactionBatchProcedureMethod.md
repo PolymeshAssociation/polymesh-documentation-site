@@ -14,14 +14,17 @@ Type Parameter
 
 ## Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`CreateTransactionBatchParams`](CreateTransactionBatchParams.mdx)\<`ReturnValues`\>
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](ProcedureOpts.mdx)
 
@@ -45,14 +48,17 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`CreateTransactionBatchParams`](CreateTransactionBatchParams.mdx)\<`ReturnValues`\>
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](ProcedureOpts.mdx)
 

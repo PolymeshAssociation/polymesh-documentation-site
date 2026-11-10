@@ -18,16 +18,11 @@ The Polymesh SDK is a TypeScript/JavaScript library that provides a simple, powe
 
 ### 1. Install the SDK
 
-  
-
 **npm**
 
 ```bash
 npm install @polymeshassociation/polymesh-sdk
 ```
-
-  
-  
 
 **Yarn**
 
@@ -35,16 +30,11 @@ npm install @polymeshassociation/polymesh-sdk
 yarn add @polymeshassociation/polymesh-sdk
 ```
 
-  
-  
-
 **pnpm**
 
 ```bash
 pnpm add @polymeshassociation/polymesh-sdk
 ```
-
-  
 
 > **Note:** It is highly recommended to use npm, yarn, or pnpm. Other package managers may not support all dependency overrides.
 

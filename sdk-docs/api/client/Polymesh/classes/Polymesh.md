@@ -142,14 +142,17 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`CreateTransactionBatchParams`](../../../procedures/types/interfaces/CreateTransactionBatchParams.mdx)\<`ReturnValues`\>
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -247,10 +250,11 @@ Handle connection errors
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `callback`
+
+ | 
 
 (...`args`: `unknown`[]) => `unknown`
 
@@ -272,10 +276,11 @@ Handle disconnection
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `callback`
+
+ | 
 
 (...`args`: `unknown`[]) => `unknown`
 
@@ -297,10 +302,11 @@ Set the SDK's signing Account to the provided one
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `signer`
+
+ | 
 
 `string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
 
@@ -324,10 +330,11 @@ Set the SDK's Signing Manager to the provided one.
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `signingManager`
+
+ | 
 
 `SigningManager` \| `null`
 
@@ -351,10 +358,11 @@ Create an SDK instance and connect to a Polymesh node
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `params`
+
+ | 
 
 [`ConnectParams`](../interfaces/ConnectParams.mdx)
 

@@ -78,14 +78,17 @@ Remove a Corporate Action
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`RemoveCorporateActionParams`](../../../../../procedures/types/interfaces/RemoveCorporateActionParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -109,14 +112,17 @@ Assign default config values(targets, global tax withholding percentage and per-
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`ModifyCaDefaultConfigParams`](../../../../../procedures/types/type-aliases/ModifyCaDefaultConfigParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 

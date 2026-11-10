@@ -213,10 +213,11 @@ Claim the Dividends corresponding to the signing Identity
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -295,19 +296,25 @@ Retrieve an Identity that is entitled to dividends in this Distribution (partici
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args?`
 
+ | 
+
 \{ `identity`: `string` \| [`Identity`](../../Identity/classes/Identity.mdx); \}
+
+ | 
 
 &hyphen;
 
 `args.identity?`
 
+ | 
+
 `string` \| [`Identity`](../../Identity/classes/Identity.mdx)
+
+ | 
 
 defaults to the signing Identity
 
@@ -356,18 +363,23 @@ Retrieve the payment history for this Distribution
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts`
+
+ | 
 
 \{ `size?`: `BigNumber`; `start?`: `BigNumber`; \}
 
 `opts.size?`
 
+ | 
+
 `BigNumber`
 
 `opts.start?`
+
+ | 
 
 `BigNumber`
 
@@ -413,10 +425,11 @@ Determine whether this Entity is the same as another one
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `entity`
+
+ | 
 
 [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>
 
@@ -440,14 +453,17 @@ Link a list of documents to this corporate action
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`LinkCaDocsParams`](../../../procedures/types/interfaces/LinkCaDocsParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -479,14 +495,17 @@ Modify the Distribution's Checkpoint
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`Modify`](../../../../types/utils/type-aliases/Modify.mdx)\<[`ModifyCaCheckpointParams`](../../../procedures/types/interfaces/ModifyCaCheckpointParams.mdx), \{ `checkpoint`: [`InputCaCheckpoint`](../../Asset/Fungible/Checkpoints/types/type-aliases/InputCaCheckpoint.mdx); \}\>
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -514,14 +533,17 @@ Transfer the corresponding share of the dividends to a list of Identities
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`PayDividendsParams`](../../../procedures/types/interfaces/PayDividendsParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -553,10 +575,11 @@ Reclaim any remaining funds back to the origin Portfolio. This can only be done 
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -613,13 +636,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `identifiers`
 
+ | 
+
 `Identifiers`
+
+ | 
 
 &hyphen;
 
@@ -649,13 +674,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `serialized`
 
+ | 
+
 `string`
+
+ | 
 
 UUID to unserialize
 

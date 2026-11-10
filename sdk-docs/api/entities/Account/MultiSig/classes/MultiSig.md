@@ -97,10 +97,11 @@ Check if this Account possesses certain Permissions to act on behalf of its corr
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `permissions`
+
+ | 
 
 [`SimplePermissions`](../../../types/interfaces/SimplePermissions.mdx)
 
@@ -172,19 +173,25 @@ Retrieve the balances of all fungible assets in this Account
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args?`
 
+ | 
+
 \{ `assets`: (`string` \| [`FungibleAsset`](../../../Asset/Fungible/classes/FungibleAsset.mdx))[]; \}
+
+ | 
 
 &hyphen;
 
 `args.assets?`
 
+ | 
+
 (`string` \| [`FungibleAsset`](../../../Asset/Fungible/classes/FungibleAsset.mdx))[]
+
+ | 
 
 array of FungibleAssets (or tickers) for which to fetch balances (optional, all balances are retrieved if not passed)
 
@@ -228,13 +235,15 @@ Get the free/locked POLYX balance of the Account (with subscription support)
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<[`AccountBalance`](../../types/interfaces/AccountBalance.mdx)\>
+
+ | 
 
 Callback function that receives balance updates
 
@@ -264,19 +273,25 @@ Retrieve the NFTs held in this Account
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args?`
 
+ | 
+
 \{ `collections`: (`string` \| [`NftCollection`](../../../Asset/NonFungible/NftCollection/classes/NftCollection.mdx))[]; \}
+
+ | 
 
 &hyphen;
 
 `args.collections?`
 
+ | 
+
 (`string` \| [`NftCollection`](../../../Asset/NonFungible/NftCollection/classes/NftCollection.mdx))[]
+
+ | 
 
 array of NftCollection (or tickers) for which to fetch holdings (optional, all holdings are retrieved if not passed)
 
@@ -318,18 +333,23 @@ Return a set of [MultiSigProposal](../../../MultiSigProposal/classes/MultiSigPro
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 \{ `size?`: `BigNumber`; `start?`: `BigNumber`; \}
 
 `opts.size?`
 
+ | 
+
 `BigNumber`
 
 `opts.start?`
+
+ | 
 
 `BigNumber`
 
@@ -487,25 +507,35 @@ Returns POLYX transactions associated with this account
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `filters`
 
+ | 
+
 \{ `size?`: `BigNumber`; `start?`: `BigNumber`; \}
+
+ | 
 
 &hyphen;
 
 `filters.size?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page size
 
 `filters.start?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page offset
 
@@ -533,14 +563,17 @@ Given an ID, fetch a [MultiSigProposal](../../../MultiSigProposal/classes/MultiS
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 \{ `id`: `BigNumber`; \}
 
 `args.id`
+
+ | 
 
 `BigNumber`
 
@@ -578,55 +611,85 @@ Retrieve a list of transactions signed by this Account. Can be filtered using pa
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `filters`
 
+ | 
+
 \{ `blockHash?`: `string`; `blockNumber?`: `BigNumber`; `orderBy?`: [`ExtrinsicsOrderBy`](../../../../../types/enumerations/ExtrinsicsOrderBy.mdx); `size?`: `BigNumber`; `start?`: `BigNumber`; `success?`: `boolean`; `tag?`: [`TxTag`](../../../../../types/type-aliases/TxTag.mdx); \}
+
+ | 
 
 &hyphen;
 
 `filters.blockHash?`
 
+ | 
+
 `string`
+
+ | 
 
 &hyphen;
 
 `filters.blockNumber?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 &hyphen;
 
 `filters.orderBy?`
 
+ | 
+
 [`ExtrinsicsOrderBy`](../../../../../types/enumerations/ExtrinsicsOrderBy.mdx)
+
+ | 
 
 &hyphen;
 
 `filters.size?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page size
 
 `filters.start?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page offset
 
 `filters.success?`
 
+ | 
+
 `boolean`
+
+ | 
 
 whether the transaction was successful or not
 
 `filters.tag?`
 
+ | 
+
 [`TxTag`](../../../../../types/type-aliases/TxTag.mdx)
+
+ | 
 
 tag associated with the transaction
 
@@ -678,10 +741,11 @@ Determine whether this Entity is the same as another one
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `entity`
+
+ | 
 
 [`Entity`](../../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>
 
@@ -727,14 +791,17 @@ Modify the signers for the MultiSig. The signing Account must belong to the Iden
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 `Pick`\<[`ModifyMultiSigParams`](../../../../procedures/types/interfaces/ModifyMultiSigParams.mdx), `"signers"` \| `"requiredSignatures"`\>
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -759,10 +826,11 @@ MultiSig to pay for it's own fees.
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -791,14 +859,17 @@ as a proposal. When removing an admin it must be called by account belonging to 
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`SetMultiSigAdminParams`](../../../../procedures/types/interfaces/SetMultiSigAdminParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -846,13 +917,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `identifiers`
 
+ | 
+
 `Identifiers`
+
+ | 
 
 &hyphen;
 
@@ -882,13 +955,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `serialized`
 
+ | 
+
 `string`
+
+ | 
 
 UUID to unserialize
 

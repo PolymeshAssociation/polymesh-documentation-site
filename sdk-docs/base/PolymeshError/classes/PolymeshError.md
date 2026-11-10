@@ -136,14 +136,17 @@ a();
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `targetObject`
+
+ | 
 
 `object`
 
 `constructorOpt?`
+
+ | 
 
 `Function`
 
@@ -165,14 +168,17 @@ Defined in: node\_modules/@types/node/globals.d.ts:56
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `err`
+
+ | 
 
 `Error`
 
 `stackTraces`
+
+ | 
 
 `CallSite`[]
 

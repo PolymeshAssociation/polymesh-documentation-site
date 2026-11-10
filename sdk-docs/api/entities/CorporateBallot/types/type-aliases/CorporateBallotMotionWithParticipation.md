@@ -6,15 +6,18 @@ Defined in: [src/api/entities/CorporateBallot/types.ts:127](https://github.com/P
 
 ## Type Declaration
 
-Name
-Type
-Description
-Defined in
+Name | Type | Description | Defined in
 
 `choices`
 
+ | 
+
 [`ChoiceWithParticipation`](ChoiceWithParticipation.mdx)[]
 
+ | 
+
 The choices with their associated votes and fallback choices.
+
+ | 
 
 [src/api/entities/CorporateBallot/types.ts:131](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/CorporateBallot/types.ts#L131)

@@ -20,14 +20,17 @@ Add a new compliance requirement to the the Asset. This doesn't modify existing 
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`AddAssetRequirementParams`](../../../../../../procedures/types/interfaces/AddAssetRequirementParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -81,13 +84,15 @@ Retrieve all of the Asset's compliance requirements, together with the Default T
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../../../../types/type-aliases/SubCallback.mdx)\<[`ComplianceRequirements`](../../../../../types/interfaces/ComplianceRequirements.mdx)\>
+
+ | 
 
 Callback function that receives compliance requirements updates
 
@@ -113,14 +118,17 @@ Modify a compliance requirement for the Asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`ModifyComplianceRequirementParams`](../../../../../../procedures/types/type-aliases/ModifyComplianceRequirementParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -144,10 +152,11 @@ Pause all the Asset's requirements. This means that all transfers will be allowe
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -171,14 +180,17 @@ Remove an existing compliance requirement from the Asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`RemoveAssetRequirementParams`](../../../../../../procedures/types/interfaces/RemoveAssetRequirementParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -202,10 +214,11 @@ Delete all the current requirements for the Asset.
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -229,14 +242,17 @@ Configure compliance requirements for the Asset. This operation will replace all
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`SetAssetRequirementsParams`](../../../../../../procedures/types/interfaces/SetAssetRequirementsParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -267,10 +283,11 @@ Un-pause all the Asset's current requirements
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 

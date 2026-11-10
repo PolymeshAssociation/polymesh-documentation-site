@@ -7,9 +7,9 @@
 
 
 
-<script>window.__COPY_PAGE_BUTTON_OPTIONS__={customStyles:{},enabledActions:["copy","view","chatgpt","claude","perplexity","gemini"],generateMarkdownRoutes:!1,markdownUrl:!0,placement:"auto",mcpServer:null,id:"default"}</script><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.c53d1ff3.css">
-<script src="/polymesh-documentation-site/assets/js/runtime~main.d0f4d422.js" defer="defer"></script>
-<script src="/polymesh-documentation-site/assets/js/main.d6ebaad6.js" defer="defer"></script>
+<script>window.__COPY_PAGE_BUTTON_OPTIONS__={customStyles:{},enabledActions:["copy","view","chatgpt","claude","perplexity","gemini"],generateMarkdownRoutes:!1,markdownUrl:!0,placement:"auto",mcpServer:null,id:"default"}</script><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.1f85c761.css">
+<script src="/polymesh-documentation-site/assets/js/runtime~main.d3ba73d9.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/main.e516069c.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -67,6 +67,9 @@
 <li class=""><strong>IsAbsent:</strong> Requires that a specific claim is not present.</li>
 <li class=""><strong>IsAnyOf:</strong> Requires that at least one claim from a specified set is present.</li>
 <li class=""><strong>IsNoneOf:</strong> Requires that none of a specified set of claims are present.</li>
+</ul>
+<p>The set of claims given to <strong>IsAnyOf</strong> or <strong>IsNoneOf</strong> must not be empty. A requirement containing either with an empty set is rejected with <code>complianceManager::EmptyClaimsInCondition</code>.</p>
+<ul>
 <li class=""><strong>IsIdentity:</strong> Requires that the sender or receiver is a specific identity (by DID) or is an <a class="" href="/polymesh-documentation-site/asset-agents/">ExternalAgent</a> of the asset. This condition does not rely on claims, but instead checks for a direct match to a specified identity or agent relationship. For example, this can be used to exempt the asset issuer or a designated agent from other transfer requirements.</li>
 </ul>
 <p>The <strong>IsIdentity</strong> condition supports two options:</p>
@@ -96,6 +99,12 @@
 <li class="">Restrict certain claim types to specific issuers (e.g., only accept Affiliate claims from the asset issuer)</li>
 </ul>
 <p>If a rule does not specify a trusted claim issuer for a claim, the default trusted claim issuers for the asset are used automatically.</p>
+<p>Trusted issuer lists are bounded:</p>
+<ul>
+<li class="">An asset can have at most <strong>8</strong> default trusted claim issuers, and each condition can name at most <strong>8</strong> issuers (<code>complianceManager::MaximumNumberOfTrustedIssuers</code>). Exceeding either fails with <code>complianceManager::TooManyTrustedIssuers</code>.</li>
+<li class="">An issuer trusted for specific claim types can be trusted for at most <strong>16</strong> of them (<code>complianceManager::MaxTrustedIssuerClaimTypes</code>). Exceeding this fails with <code>complianceManager::TooManyTrustedIssuerClaimTypes</code>.</li>
+</ul>
+<p>The overall complexity of an asset&#x27;s rules is also capped, so conditions with many claims and many issuers can hit the complexity limit, <code>complianceManager::ComplianceRequirementTooComplex</code>, before reaching either bound.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="claim-scopes">Claim Scopes<a href="#claim-scopes" class="hash-link" aria-label="Direct link to Claim Scopes" title="Direct link to Claim Scopes" translate="no">​</a></h2>
 <p>Scopes can be considered as a way to group claims. Each claim has a <strong>scope</strong> that determines what it applies to:</p>
 <ul>

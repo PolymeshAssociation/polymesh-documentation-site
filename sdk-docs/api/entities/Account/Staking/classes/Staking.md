@@ -56,13 +56,15 @@ Fetch the controller associated to this account if there is one
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<[`Account`](../../classes/Account.mdx) \| `null`\>
+
+ | 
 
 Callback function that can be used to listen for changes to the controller
 
@@ -124,13 +126,15 @@ Fetch this account's current nominations
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<[`StakingNomination`](../../types/interfaces/StakingNomination.mdx) \| `null`\>
+
+ | 
 
 Callback function that can be used to listen for changes to the nominations
 
@@ -172,13 +176,15 @@ Fetch the payee that will receive a stash account's rewards
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../../types/type-aliases/SubCallback.mdx)\<[`StakingPayee`](../../types/interfaces/StakingPayee.mdx) \| `null`\>
+
+ | 
 
 Callback function that can be used to listen for changes to the staking payee
 

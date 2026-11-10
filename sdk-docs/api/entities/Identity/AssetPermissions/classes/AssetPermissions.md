@@ -20,18 +20,23 @@ Check whether this Identity has specific transaction Permissions over an Asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 \{ `asset`: `string` \| [`BaseAsset`](../../../Asset/Base/BaseAsset/classes/BaseAsset.mdx); `transactions`: [`TxTag`](../../../../../types/type-aliases/TxTag.mdx)[] \| `null`; \}
 
 `args.asset`
 
+ | 
+
 `string` \| [`BaseAsset`](../../../Asset/Base/BaseAsset/classes/BaseAsset.mdx)
 
 `args.transactions`
+
+ | 
 
 [`TxTag`](../../../../../types/type-aliases/TxTag.mdx)[] \| `null`
 
@@ -52,14 +57,17 @@ Retrieve the identifier data (block number, date and event index) of the event t
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `__namedParameters`
+
+ | 
 
 \{ `asset`: `string` \| [`Asset`](../../../Asset/types/type-aliases/Asset.mdx); \}
 
 `__namedParameters.asset`
+
+ | 
 
 `string` \| [`Asset`](../../../Asset/types/type-aliases/Asset.mdx)
 
@@ -101,14 +109,17 @@ Retrieve this Identity's Permission Group for a specific Asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `__namedParameters`
+
+ | 
 
 \{ `asset`: `string` \| [`BaseAsset`](../../../Asset/Base/BaseAsset/classes/BaseAsset.mdx); \}
 
 `__namedParameters.asset`
+
+ | 
 
 `string` \| [`BaseAsset`](../../../Asset/Base/BaseAsset/classes/BaseAsset.mdx)
 
@@ -128,43 +139,65 @@ Retrieve all Events triggered by Operations this Identity has performed on a spe
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `opts`
 
+ | 
+
 \{ `asset`: `string` \| [`FungibleAsset`](../../../Asset/Fungible/classes/FungibleAsset.mdx); `eventId?`: [`EventIdEnum`](../../../../../types/enumerations/EventIdEnum.mdx); `moduleId?`: [`ModuleIdEnum`](../../../../../types/enumerations/ModuleIdEnum.mdx); `size?`: `BigNumber`; `start?`: `BigNumber`; \}
+
+ | 
 
 &hyphen;
 
 `opts.asset`
 
+ | 
+
 `string` \| [`FungibleAsset`](../../../Asset/Fungible/classes/FungibleAsset.mdx)
+
+ | 
 
 &hyphen;
 
 `opts.eventId?`
 
+ | 
+
 [`EventIdEnum`](../../../../../types/enumerations/EventIdEnum.mdx)
+
+ | 
 
 filters results by event
 
 `opts.moduleId?`
 
+ | 
+
 [`ModuleIdEnum`](../../../../../types/enumerations/ModuleIdEnum.mdx)
+
+ | 
 
 filters results by module
 
 `opts.size?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page size
 
 `opts.start?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page offset
 
@@ -192,14 +225,17 @@ Assign this Identity to a different Permission Group for a given Asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`SetPermissionGroupParams`](../../../../procedures/types/interfaces/SetPermissionGroupParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -223,14 +259,17 @@ Abdicate from the current Permissions Group for a given Asset. This means that t
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`WaivePermissionsParams`](../../../../procedures/types/interfaces/WaivePermissionsParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 

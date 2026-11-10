@@ -22,24 +22,33 @@ Defined in: [src/api/entities/Asset/Fungible/Checkpoints/types.ts:10](https://gi
 
 \{ `id`: `BigNumber`; `type`: [`Existing`](../enumerations/CaCheckpointType.mdx#existing); \}
 
-Name
-Type
-Description
-Defined in
+Name | Type | Description | Defined in
 
 `id`
 
+ | 
+
 `BigNumber`
 
+ | 
+
 identifier for an existing Checkpoint
+
+ | 
 
 [src/api/entities/Asset/Fungible/Checkpoints/types.ts:19](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Checkpoints/types.ts#L19)
 
 `type`
 
+ | 
+
 [`Existing`](../enumerations/CaCheckpointType.mdx#existing)
 
+ | 
+
 &hyphen;
+
+ | 
 
 [src/api/entities/Asset/Fungible/Checkpoints/types.ts:15](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Checkpoints/types.ts#L15)
 
@@ -49,23 +58,32 @@ identifier for an existing Checkpoint
 
 \{ `id`: `BigNumber`; `type`: [`Schedule`](../enumerations/CaCheckpointType.mdx#schedule); \}
 
-Name
-Type
-Description
-Defined in
+Name | Type | Description | Defined in
 
 `id`
 
+ | 
+
 `BigNumber`
 
+ | 
+
 identifier for a Checkpoint Schedule
+
+ | 
 
 [src/api/entities/Asset/Fungible/Checkpoints/types.ts:26](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Checkpoints/types.ts#L26)
 
 `type`
 
+ | 
+
 [`Schedule`](../enumerations/CaCheckpointType.mdx#schedule)
 
+ | 
+
 &hyphen;
+
+ | 
 
 [src/api/entities/Asset/Fungible/Checkpoints/types.ts:22](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/Fungible/Checkpoints/types.ts#L22)

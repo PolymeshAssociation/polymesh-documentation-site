@@ -27,15 +27,18 @@ data related to the Account responsible of paying for the transaction
 
 #### Type Declaration
 
-Name
-Type
-Description
-Defined in
+Name | Type | Description | Defined in
 
 `balance`
 
+ | 
+
 `BigNumber`
 
+ | 
+
 free balance of the Account
+
+ | 
 
 [src/base/types.ts:177](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/base/types.ts#L177)

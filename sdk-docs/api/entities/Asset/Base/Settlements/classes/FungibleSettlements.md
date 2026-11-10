@@ -22,31 +22,45 @@ Check whether it is possible to create a settlement instruction to transfer a ce
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `amount`: `BigNumber`; `from?`: [`AssetHolderLike`](../../../../types/type-aliases/AssetHolderLike.mdx); `to`: [`AssetHolderLike`](../../../../types/type-aliases/AssetHolderLike.mdx); \}
+
+ | 
 
 &hyphen;
 
 `args.amount`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 amount of tokens to transfer
 
 `args.from?`
 
+ | 
+
 [`AssetHolderLike`](../../../../types/type-aliases/AssetHolderLike.mdx)
+
+ | 
 
 sender (Portfolio or Account) (optional, defaults to the signing Identity's Default Portfolio)
 
 `args.to`
 
+ | 
+
 [`AssetHolderLike`](../../../../types/type-aliases/AssetHolderLike.mdx)
+
+ | 
 
 receiver (Portfolio or Account)
 
@@ -73,10 +87,11 @@ Pre-approves receiving this asset for the signing identity. Receiving this asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -104,10 +119,11 @@ Removes pre-approval for this asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 

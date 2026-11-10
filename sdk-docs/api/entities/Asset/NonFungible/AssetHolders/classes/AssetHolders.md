@@ -20,18 +20,23 @@ Retrieve all the NFT Holders with their holdings
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts`
+
+ | 
 
 \{ `size?`: `BigNumber`; `start?`: `BigNumber`; \}
 
 `opts.size?`
 
+ | 
+
 `BigNumber`
 
 `opts.start?`
+
+ | 
 
 `BigNumber`
 

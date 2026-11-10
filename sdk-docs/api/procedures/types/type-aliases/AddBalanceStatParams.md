@@ -6,12 +6,14 @@ Defined in: [src/api/procedures/types.ts:506](https://github.com/PolymeshAssocia
 
 ## Type Declaration
 
-Name
-Type
-Defined in
+Name | Type | Defined in
 
 `type`
 
+ | 
+
 [`Balance`](../../../entities/types/enumerations/StatType.mdx#balance)
+
+ | 
 
 [src/api/procedures/types.ts:507](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L507)

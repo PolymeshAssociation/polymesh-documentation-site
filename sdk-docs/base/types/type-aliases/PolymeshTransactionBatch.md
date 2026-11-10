@@ -6,17 +6,22 @@ Defined in: [src/base/types.ts:239](https://github.com/PolymeshAssociation/polym
 
 ## Type Parameters
 
-Type Parameter
-Default type
+Type Parameter | Default type
 
 `ReturnValue`
+
+ | 
 
 `unknown`
 
 `TransformedReturnValue`
 
+ | 
+
 `ReturnValue`
 
 `Args` *extends* `unknown`[][]
+
+ | 
 
 `unknown`[][]

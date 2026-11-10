@@ -6,10 +6,11 @@ Defined in: [src/base/utils.ts:154](https://github.com/PolymeshAssociation/polym
 
 ## Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `error`
+
+ | 
 
 `DispatchError` \| `SpRuntimeDispatchError`
 

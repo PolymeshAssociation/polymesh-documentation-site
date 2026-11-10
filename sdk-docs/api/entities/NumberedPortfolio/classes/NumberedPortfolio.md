@@ -96,19 +96,25 @@ Retrieve the balances of all fungible assets in this Portfolio
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args?`
 
+ | 
+
 \{ `assets`: (`string` \| [`FungibleAsset`](../../Asset/Fungible/classes/FungibleAsset.mdx))[]; \}
+
+ | 
 
 &hyphen;
 
 `args.assets?`
 
+ | 
+
 (`string` \| [`FungibleAsset`](../../Asset/Fungible/classes/FungibleAsset.mdx))[]
+
+ | 
 
 array of FungibleAssets (or tickers) for which to fetch balances (optional, all balances are retrieved if not passed)
 
@@ -132,19 +138,25 @@ Retrieve the NFTs held in this portfolio
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args?`
 
+ | 
+
 \{ `collections`: (`string` \| [`NftCollection`](../../Asset/NonFungible/NftCollection/classes/NftCollection.mdx))[]; \}
+
+ | 
 
 &hyphen;
 
 `args.collections?`
 
+ | 
+
 (`string` \| [`NftCollection`](../../Asset/NonFungible/NftCollection/classes/NftCollection.mdx))[]
+
+ | 
 
 array of NftCollection (or tickers) for which to fetch holdings (optional, all holdings are retrieved if not passed)
 
@@ -204,31 +216,45 @@ Retrieve a list of transactions where this portfolio was involved. Can be filter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `filters`
 
+ | 
+
 \{ `account?`: `string`; `assetId?`: `string`; `ticker?`: `string`; \}
+
+ | 
 
 &hyphen;
 
 `filters.account?`
 
+ | 
+
 `string`
+
+ | 
 
 Account involved in the settlement
 
 `filters.assetId?`
 
+ | 
+
 `string`
+
+ | 
 
 &hyphen;
 
 `filters.ticker?`
 
+ | 
+
 `string`
+
+ | 
 
 ticker involved in the transaction
 
@@ -256,10 +282,11 @@ Returns whether or not this Portfolio has pre-approved a particular asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `asset`
+
+ | 
 
 `string` \| [`BaseAsset`](../../Asset/Base/BaseAsset/classes/BaseAsset.mdx)
 
@@ -283,19 +310,25 @@ Return whether an Identity is the Portfolio custodian
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args?`
 
+ | 
+
 \{ `identity`: `string` \| [`Identity`](../../Identity/classes/Identity.mdx); \}
+
+ | 
 
 &hyphen;
 
 `args.identity?`
 
+ | 
+
 `string` \| [`Identity`](../../Identity/classes/Identity.mdx)
+
+ | 
 
 optional, defaults to the signing Identity
 
@@ -319,10 +352,11 @@ Determine whether this Entity is the same as another one
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `entity`
+
+ | 
 
 [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>
 
@@ -346,19 +380,25 @@ Return whether an Identity is the Portfolio owner
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args?`
 
+ | 
+
 \{ `identity`: `string` \| [`Identity`](../../Identity/classes/Identity.mdx); \}
+
+ | 
 
 &hyphen;
 
 `args.identity?`
 
+ | 
+
 `string` \| [`Identity`](../../Identity/classes/Identity.mdx)
+
+ | 
 
 defaults to the signing Identity
 
@@ -382,14 +422,17 @@ Rename portfolio
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`RenamePortfolioParams`](../../../procedures/types/interfaces/RenamePortfolioParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -417,14 +460,17 @@ Moves funds from this Portfolio to another one owned by the same Identity
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`MoveFundsParams`](../../../procedures/types/interfaces/MoveFundsParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -457,18 +503,23 @@ Pre-approves receiving an asset for this Portfolio. Receiving this asset in a se
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 \{ `asset`: `string` \| [`BaseAsset`](../../Asset/Base/BaseAsset/classes/BaseAsset.mdx); \}
 
 `args.asset`
 
+ | 
+
 `string` \| [`BaseAsset`](../../Asset/Base/BaseAsset/classes/BaseAsset.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -496,10 +547,11 @@ Returns a list of all assets this Portfolio has pre-approved. These assets will 
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `paginationOpts?`
+
+ | 
 
 [`PaginationOptions`](../../types/interfaces/PaginationOptions.mdx)
 
@@ -523,10 +575,11 @@ Returns the custody of the portfolio to the portfolio owner unilaterally
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -559,18 +612,23 @@ Removes pre-approval of an asset for this Portfolio
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 \{ `asset`: `string` \| [`BaseAsset`](../../Asset/Base/BaseAsset/classes/BaseAsset.mdx); \}
 
 `args.asset`
 
+ | 
+
 `string` \| [`BaseAsset`](../../Asset/Base/BaseAsset/classes/BaseAsset.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -598,14 +656,17 @@ Send an invitation to an Identity to assign it as custodian for this Numbered Po
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`SetCustodianParams`](../../../procedures/types/interfaces/SetCustodianParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -664,13 +725,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `identifiers`
 
+ | 
+
 `Identifiers`
+
+ | 
 
 &hyphen;
 
@@ -700,13 +763,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `serialized`
 
+ | 
+
 `string`
+
+ | 
 
 UUID to unserialize
 

@@ -6,14 +6,17 @@ Defined in: [src/base/utils.ts:66](https://github.com/PolymeshAssociation/polyme
 
 ## Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `rawType`
+
+ | 
 
 `TypeDef`
 
 `name`
+
+ | 
 
 `string`
 

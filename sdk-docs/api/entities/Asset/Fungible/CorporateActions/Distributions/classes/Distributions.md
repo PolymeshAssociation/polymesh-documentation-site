@@ -20,14 +20,17 @@ Create a Dividend Distribution for a subset of the Asset Holders at a certain (e
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`ConfigureDividendDistributionParams`](../../../../../../procedures/types/interfaces/ConfigureDividendDistributionParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -70,14 +73,17 @@ Retrieve a single Dividend Distribution associated to this Asset by its ID
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 \{ `id`: `BigNumber`; \}
 
 `args.id`
+
+ | 
 
 `BigNumber`
 

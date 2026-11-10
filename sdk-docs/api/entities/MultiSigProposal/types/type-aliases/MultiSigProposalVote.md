@@ -6,18 +6,24 @@ Defined in: [src/api/entities/MultiSigProposal/types.ts:69](https://github.com/P
 
 ## Type Declaration
 
-Name
-Type
-Defined in
+Name | Type | Defined in
 
 `action`
 
+ | 
+
 [`MultiSigProposalVoteActionEnum`](../../../../../types/enumerations/MultiSigProposalVoteActionEnum.mdx)
+
+ | 
 
 [src/api/entities/MultiSigProposal/types.ts:71](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/types.ts#L71)
 
 `signer`
 
+ | 
+
 [`Signer`](../../../types/type-aliases/Signer.mdx)
+
+ | 
 
 [src/api/entities/MultiSigProposal/types.ts:70](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/MultiSigProposal/types.ts#L70)

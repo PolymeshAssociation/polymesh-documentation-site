@@ -81,10 +81,11 @@ Check if this Account possesses certain Permissions to act on behalf of its corr
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `permissions`
+
+ | 
 
 [`SimplePermissions`](../../types/interfaces/SimplePermissions.mdx)
 
@@ -124,19 +125,25 @@ Retrieve the balances of all fungible assets in this Account
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args?`
 
+ | 
+
 \{ `assets`: (`string` \| [`FungibleAsset`](../../Asset/Fungible/classes/FungibleAsset.mdx))[]; \}
+
+ | 
 
 &hyphen;
 
 `args.assets?`
 
+ | 
+
 (`string` \| [`FungibleAsset`](../../Asset/Fungible/classes/FungibleAsset.mdx))[]
+
+ | 
 
 array of FungibleAssets (or tickers) for which to fetch balances (optional, all balances are retrieved if not passed)
 
@@ -172,13 +179,15 @@ Get the free/locked POLYX balance of the Account (with subscription support)
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<[`AccountBalance`](../types/interfaces/AccountBalance.mdx)\>
+
+ | 
 
 Callback function that receives balance updates
 
@@ -204,19 +213,25 @@ Retrieve the NFTs held in this Account
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args?`
 
+ | 
+
 \{ `collections`: (`string` \| [`NftCollection`](../../Asset/NonFungible/NftCollection/classes/NftCollection.mdx))[]; \}
+
+ | 
 
 &hyphen;
 
 `args.collections?`
 
+ | 
+
 (`string` \| [`NftCollection`](../../Asset/NonFungible/NftCollection/classes/NftCollection.mdx))[]
+
+ | 
 
 array of NftCollection (or tickers) for which to fetch holdings (optional, all holdings are retrieved if not passed)
 
@@ -346,25 +361,35 @@ Returns POLYX transactions associated with this account
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `filters`
 
+ | 
+
 \{ `size?`: `BigNumber`; `start?`: `BigNumber`; \}
+
+ | 
 
 &hyphen;
 
 `filters.size?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page size
 
 `filters.start?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page offset
 
@@ -388,55 +413,85 @@ Retrieve a list of transactions signed by this Account. Can be filtered using pa
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `filters`
 
+ | 
+
 \{ `blockHash?`: `string`; `blockNumber?`: `BigNumber`; `orderBy?`: [`ExtrinsicsOrderBy`](../../../../types/enumerations/ExtrinsicsOrderBy.mdx); `size?`: `BigNumber`; `start?`: `BigNumber`; `success?`: `boolean`; `tag?`: [`TxTag`](../../../../types/type-aliases/TxTag.mdx); \}
+
+ | 
 
 &hyphen;
 
 `filters.blockHash?`
 
+ | 
+
 `string`
+
+ | 
 
 &hyphen;
 
 `filters.blockNumber?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 &hyphen;
 
 `filters.orderBy?`
 
+ | 
+
 [`ExtrinsicsOrderBy`](../../../../types/enumerations/ExtrinsicsOrderBy.mdx)
+
+ | 
 
 &hyphen;
 
 `filters.size?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page size
 
 `filters.start?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page offset
 
 `filters.success?`
 
+ | 
+
 `boolean`
+
+ | 
 
 whether the transaction was successful or not
 
 `filters.tag?`
 
+ | 
+
 [`TxTag`](../../../../types/type-aliases/TxTag.mdx)
+
+ | 
 
 tag associated with the transaction
 
@@ -480,10 +535,11 @@ Determine whether this Entity is the same as another one
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `entity`
+
+ | 
 
 [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>
 
@@ -549,13 +605,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `identifiers`
 
+ | 
+
 `Identifiers`
+
+ | 
 
 &hyphen;
 
@@ -585,13 +643,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `serialized`
 
+ | 
+
 `string`
+
+ | 
 
 UUID to unserialize
 

@@ -16,14 +16,17 @@ Create an Instruction to exchange Assets
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`AddInstructionWithVenueIdParams`](../../../procedures/types/type-aliases/AddInstructionWithVenueIdParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -47,14 +50,17 @@ Affirm an Instruction (authorize)
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`InstructionIdParams`](../../../procedures/types/interfaces/InstructionIdParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -78,14 +84,17 @@ Create a Venue under the ownership of the signing Identity
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`CreateVenueParams`](../../../procedures/types/interfaces/CreateVenueParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -109,10 +118,11 @@ Retrieve all Instructions that have been associated with this Identity's DID
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `filter`
+
+ | 
 
 [`HistoricalInstructionFilters`](../../types/interfaces/HistoricalInstructionFilters.mdx)
 
@@ -140,19 +150,25 @@ Retrieve an Instruction by its ID
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `id`: `BigNumber`; \}
+
+ | 
 
 &hyphen;
 
 `args.id`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 identifier number of the Instruction
 
@@ -172,19 +188,25 @@ Retrieve a Venue by its ID
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `id`: `BigNumber`; \}
+
+ | 
 
 &hyphen;
 
 `args.id`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 identifier number of the Venue
 

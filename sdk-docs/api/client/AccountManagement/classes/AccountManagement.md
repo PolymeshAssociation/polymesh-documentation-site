@@ -18,14 +18,17 @@ If a CDD service provider approved this change (or this is not required), primar
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`AcceptPrimaryKeyRotationParams`](../../../procedures/types/interfaces/AcceptPrimaryKeyRotationParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -54,14 +57,17 @@ Accepts a pending subsidy request from subsidizer
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`AcceptSubsidyParams`](../../../procedures/types/interfaces/AcceptSubsidyParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -89,14 +95,17 @@ Adds a list of secondary Accounts to the signing Identity
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`AddSecondaryAccountsParams`](../../../procedures/types/interfaces/AddSecondaryAccountsParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -126,14 +135,17 @@ This is to be called in by the paying key to approve allowance with respect to a
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`SubsidizeAccountParams`](../../../procedures/types/interfaces/SubsidizeAccountParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -165,14 +177,17 @@ Create a MultiSig Account
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`CreateMultiSigParams`](../../../procedures/types/interfaces/CreateMultiSigParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -202,10 +217,11 @@ Freeze all of the secondary Accounts in the signing Identity. This means revokin
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -229,31 +245,45 @@ Generate an offchain authorization signature with a specified signer
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `expiry`: `Date`; `signer`: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx); `target`: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx); \}
+
+ | 
 
 &hyphen;
 
 `args.expiry`
 
+ | 
+
 `Date`
+
+ | 
 
 date after which the authorization expires
 
 `args.signer`
 
+ | 
+
 `string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
+
+ | 
 
 Signer to be used to generate the off chain auth signature
 
 `args.target`
 
+ | 
+
 `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
+
+ | 
 
 DID of the identity to which signer is targeting the authorization
 
@@ -273,14 +303,17 @@ Return an Account instance from an address. If the Account has multiSig signers,
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 \{ `address`: `string`; \}
 
 `args.address`
+
+ | 
 
 `string`
 
@@ -302,19 +335,25 @@ Get the free/locked POLYX balance of an Account
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args?`
 
+ | 
+
 \{ `account`: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx); \}
+
+ | 
 
 &hyphen;
 
 `args.account?`
 
+ | 
+
 `string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
+
+ | 
 
 The account to get balance for (defaults to the signing Account)
 
@@ -338,13 +377,15 @@ Get the free/locked POLYX balance of the signing Account (with subscription)
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<[`AccountBalance`](../../../entities/Account/types/interfaces/AccountBalance.mdx)\>
+
+ | 
 
 Callback function to receive balance updates
 
@@ -368,25 +409,35 @@ Get the free/locked POLYX balance of an Account (with subscription)
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `account`: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx); \}
+
+ | 
 
 &hyphen;
 
 `args.account`
 
+ | 
+
 `string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
+
+ | 
 
 The account to get balance for
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<[`AccountBalance`](../../../entities/Account/types/interfaces/AccountBalance.mdx)\>
+
+ | 
 
 Callback function to receive balance updates
 
@@ -444,18 +495,23 @@ Return an Subsidy instance for a pair of beneficiary and subsidizer Account
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 \{ `beneficiary`: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx); `subsidizer`: `string` \| [`Account`](../../../entities/Account/classes/Account.mdx); \}
 
 `args.beneficiary`
 
+ | 
+
 `string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
 
 `args.subsidizer`
+
+ | 
 
 `string` \| [`Account`](../../../entities/Account/classes/Account.mdx)
 
@@ -475,14 +531,17 @@ Send an invitation to an Account to join the signing Identity as a secondary Acc
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`InviteAccountParams`](../../../procedures/types/interfaces/InviteAccountParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -512,19 +571,25 @@ Returns `true`
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `address`: `string`; \}
+
+ | 
 
 &hyphen;
 
 `args.address`
 
+ | 
+
 `string`
+
+ | 
 
 is a valid ss58 address for the connected network
 
@@ -544,10 +609,11 @@ Disassociate the signing Account from its Identity. This operation can only be d
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -571,14 +637,17 @@ Modify all permissions of a list of secondary Accounts associated with the signi
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`ModifySignerPermissionsParams`](../../../procedures/types/interfaces/ModifySignerPermissionsParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -606,14 +675,17 @@ Remove a list of secondary Accounts associated with the signing Identity
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`RemoveSecondaryAccountsParams`](../../../procedures/types/interfaces/RemoveSecondaryAccountsParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -637,18 +709,23 @@ Revoke all permissions of a list of secondary Accounts associated with the signi
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 \{ `secondaryAccounts`: (`string` \| [`Account`](../../../entities/Account/classes/Account.mdx))[]; \}
 
 `args.secondaryAccounts`
 
+ | 
+
 (`string` \| [`Account`](../../../entities/Account/classes/Account.mdx))[]
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -676,14 +753,17 @@ Revokes an already approved subsidy request
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`RevokeSubsidyParams`](../../../procedures/types/interfaces/RevokeSubsidyParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -711,10 +791,11 @@ Unfreeze all of the secondary Accounts in the signing Identity. This will restor
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 

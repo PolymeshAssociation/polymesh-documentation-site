@@ -1,0 +1,321 @@
+# Full Pallet API Reference - v8.0 to v8.1.3
+
+> Pallet-by-pallet reference of every added and modified call, event, error, constant, storage item and runtime API between Polymesh chain v8.0.2 and v8.1.3, including the v8.1.2 and v8.1.3 permission, validation and settlement fixes.
+
+Every structural API change between Polymesh chain **v8.0.2** and **v8.1.3**: each call, event, error, constant, storage item and runtime API that was added, renamed or had its behaviour change. It complements the narrative pages in the [v8.0 → v8.1.3 changelog](./010-overview.mdx).
+
+**Scope:**
+
+- No pallets were added or removed. Two constants are added, both in `ComplianceManager` (v8.1.3), and no existing constant changed.
+- `transaction_version` is unchanged at `8`. Existing signing code needs no update.
+- Nothing was removed. The only rename is one `Settlement` error, which retains its index. Everything added in v8.1.2 and v8.1.3 is appended to the end of its enum, so the indices of existing calls, events and errors are unchanged.
+- `pallet-precompiles` is not a runtime pallet — it plugs into `pallet_revive::Config::Precompiles`, takes no pallet index and adds nothing to metadata. The [precompile](./020-fungible-asset-precompile.mdx) interfaces are not part of this reference.
+
+## Summary
+
+| Pallet                                  | Calls   | Events  | Errors             | Constants | Storage |
+| --------------------------------------- | ------- | ------- | ------------------ | --------- | ------- |
+| [Asset](#asset)                         | 5 added | 3 added | 4 added            | —         | 2 added |
+| [ComplianceManager](#compliancemanager) | —       | —       | 3 added            | 2 added   | —       |
+| [Nft](#nft)                             | 3 added | 5 added | 3 added            | —         | 3 added |
+| [Pips](#pips)                           | —       | —       | —                  | —         | 1 added |
+| [Portfolio](#portfolio)                 | —       | —       | 1 added            | —         | 3 added |
+| [Relayer](#relayer)                     | —       | —       | 1 added            | —         | 1 added |
+| [Settlement](#settlement)               | —       | —       | 1 renamed, 1 added | —         | —       |
+| [Sto](#sto)                             | —       | —       | 1 added            | —         | —       |
+
+Several calls change behaviour or cost without changing their signature, among them `MultiSig::create_multisig`, `MultiSig::approve`, `Portfolio::quit_portfolio_custody`, `Settlement::transfer_funds`, `Sto::invest` and the freezing calls. See [Behaviour changes without a signature change](#behaviour-changes-without-a-signature-change).
+
+Storage versions: `pallet-nft` 7 → 8, `pallet-portfolio` 4 → 5, `pallet-pips` 2 → 3. All three are migrated automatically — see [Other Runtime Changes](./080-other-runtime-changes.mdx#storage-migrations).
+
+### The `AssetHolder` type
+
+Several new calls take an `AssetHolder`, an enum introduced in v8.0 and used more widely here:
+
+```rust
+enum AssetHolder {
+    Portfolio(PortfolioId),
+    Account(AccountId32),
+}
+```
+
+Freezing and controller transfers act on a holder in either form. Because the two forms live in different pallets' storage, an account's frozen state is in `Asset` and a portfolio's is in `Portfolio`.
+
+---
+
+## Asset
+
+### Calls
+
+| Index | Call                      | Arguments                                                                                |
+| ----- | ------------------------- | ---------------------------------------------------------------------------------------- |
+| 38    | `set_frozen_tokens`       | `asset_id: AssetId`, `asset_holder: AssetHolder`, `amount: Balance`                      |
+| 39    | `set_holder_frozen`       | `asset_holder: AssetHolder`, `asset_id: AssetId`, `freeze: bool`                         |
+| 40    | `controller_transfer_to`  | `asset_id: AssetId`, `value: Balance`, `source: AssetHolder`, `destination: AssetHolder` |
+| 41    | `freeze_partial_tokens`   | `asset_id: AssetId`, `asset_holder: AssetHolder`, `amount: Balance`                      |
+| 42    | `unfreeze_partial_tokens` | `asset_id: AssetId`, `asset_holder: AssetHolder`, `amount: Balance`                      |
+
+All five require the caller to be an external agent of the asset with the relevant permission.
+
+`set_frozen_tokens`, `freeze_partial_tokens` and `unfreeze_partial_tokens` apply to fungible assets only, and fail with `UnexpectedNonFungibleToken` otherwise. `set_holder_frozen` applies to NFT collections as well, and `pallet-nft` enforces it on transfer.
+
+`set_frozen_tokens` sets the frozen balance absolutely; `freeze_partial_tokens` and `unfreeze_partial_tokens` adjust it relatively. See [Asset Freezing](./050-asset-freezing.mdx#relative-and-absolute-freezing).
+
+Note the argument order differs between `set_holder_frozen` (holder first) and the other four (asset id first).
+
+### Events
+
+| Event                  | Fields                                                                                                              |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `FrozenBalanceSet`     | `caller_did: IdentityId`, `asset_holder: AssetHolder`, `asset_id: AssetId`, `frozen_balance: Balance`               |
+| `SetAccountFreeze`     | `caller_did: IdentityId`, `holder: AssetHolder`, `asset_id: AssetId`, `freeze: bool`                                |
+| `ControllerTransferTo` | `caller_did: IdentityId`, `asset_id: AssetId`, `source: AssetHolder`, `destination: AssetHolder`, `amount: Balance` |
+
+`FrozenBalanceSet` always carries the resulting absolute frozen balance, whichever call produced it.
+
+### Errors
+
+| Error                                           | Raised when                                                                                    |
+| ----------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `InvalidTransferSenderIsFrozen`                 | The sending holder is frozen for this asset                                                    |
+| `ReceiverAffirmationRequired`                   | The destination requires receiver affirmation, so a controller transfer cannot deliver into it |
+| `InsufficientFrozenBalance`                     | `unfreeze_partial_tokens` was asked to release more than is frozen                             |
+| `FreezePartialTokenMustNotExceedHoldersBalance` | `freeze_partial_tokens` would freeze more than the holder holds                                |
+
+`InsufficientBalance` is unchanged but now accounts for frozen tokens: a holder's available balance is `balance − locked − frozen`.
+
+### Storage
+
+| Item             | Shape                              |
+| ---------------- | ---------------------------------- |
+| `FrozenBalance`  | `(AccountId32, AssetId) → Balance` |
+| `FrozenAccounts` | `(AccountId32, AssetId) → bool`    |
+
+These cover account holders. Portfolio holders are stored in [Portfolio](#portfolio).
+
+### Holder validation when freezing
+
+As of v8.1.3, `set_holder_frozen` with `freeze = true` and `set_frozen_tokens` with a non-zero amount check that the holder is valid. An account must be linked to an active identity, failing with `Identity::IdentityNotFoundForAccountPortfolio` or `Identity::DidDoesNotExist`, and a user portfolio must exist, failing with `Portfolio::PortfolioDoesNotExist`. Unfreezing, and setting the frozen amount to `0`, are always allowed.
+
+---
+
+## ComplianceManager
+
+### Errors
+
+| Error                            | Raised when                                                        |
+| -------------------------------- | ------------------------------------------------------------------ |
+| `EmptyClaimsInCondition`         | An `IsAnyOf` or `IsNoneOf` condition has an empty claim list       |
+| `TooManyTrustedIssuers`          | A trusted issuer list exceeds `MaximumNumberOfTrustedIssuers`      |
+| `TooManyTrustedIssuerClaimTypes` | A `TrustedFor::Specific` list exceeds `MaxTrustedIssuerClaimTypes` |
+
+### Constants
+
+| Constant                        | Value | Bounds                                                                             |
+| ------------------------------- | ----- | ---------------------------------------------------------------------------------- |
+| `MaximumNumberOfTrustedIssuers` | 8     | An asset's default trusted claim issuers, and the `issuers` list of each condition |
+| `MaxTrustedIssuerClaimTypes`    | 16    | The claim types an issuer is trusted for under `TrustedFor::Specific`              |
+
+All five are added in v8.1.3, the errors at the end of the variant list. They replace the generic length limit previously applied to both lists.
+
+`add_compliance_requirement`, `change_compliance_requirement` and `replace_asset_compliance` raise all three errors. `add_default_trusted_claim_issuer` raises the two limit errors. Stored compliance is not re-validated.
+
+---
+
+## Nft
+
+### Calls
+
+| Index | Call                     | Arguments                                                          |
+| ----- | ------------------------ | ------------------------------------------------------------------ |
+| 5     | `approve`                | `asset_id: AssetId`, `nft_id: NFTId`, `spender: Option<AccountId>` |
+| 6     | `set_approval_for_all`   | `asset_id: AssetId`, `operator: AccountId`, `approved: bool`       |
+| 7     | `controller_transfer_to` | `nfts: NFTs`, `source: AssetHolder`, `destination: AssetHolder`    |
+
+`approve` with `spender: None` clears the approval. Only the account key holding the NFT, or an approved collection operator, may call it.
+
+`controller_transfer_to` requires the caller to be an external agent of the collection. Like `Nft::controller_transfer`, it emits the existing `NFTHoldingsUpdated` with `HoldingsUpdateReason::ControllerTransfer`, then, as of v8.1.3, its own dedicated event.
+
+`issue_nft` keeps its signature, but as of v8.1.3 it checks every metadata value against `AssetMetadataValueMaxLength` (8,192 bytes) and fails with `Asset::AssetMetadataValueMaxLengthExceeded` beyond it.
+
+### Events
+
+| Event                  | Fields                                                                                     |
+| ---------------------- | ------------------------------------------------------------------------------------------ |
+| `NFTApproval`          | `owner: AccountId32`, `spender: Option<AccountId32>`, `asset_id: AssetId`, `nft_id: NFTId` |
+| `NFTApprovalForAll`    | `owner: AccountId32`, `operator: AccountId32`, `asset_id: AssetId`, `approved: bool`       |
+| `NFTApprovalSpent`     | `owner: AccountId32`, `spender: AccountId32`, `asset_id: AssetId`, `nft_id: NFTId`         |
+| `ControllerTransfer`   | `caller_did: IdentityId`, `nfts: NFTs`, `source: AssetHolder`, `destination: AssetHolder`  |
+| `ControllerTransferTo` | `caller_did: IdentityId`, `nfts: NFTs`, `source: AssetHolder`, `destination: AssetHolder`  |
+
+In the three approval events, `owner` is the account key **holding the NFT**, not necessarily the caller — an operator may set or spend an approval on the holder's behalf, and the event still reports the holder.
+
+No event is emitted when a per-token approval is implicitly cleared by a transfer.
+
+`ControllerTransfer` and `ControllerTransferTo` are added in v8.1.3, emitted by `controller_transfer` and `controller_transfer_to` respectively, immediately after `NFTHoldingsUpdated`. They mirror `Asset::ControllerTransfer` and `Asset::ControllerTransferTo`, so an indexer can tell the two calls apart without inspecting the extrinsic. Runtimes before `8_001_030` emit only `NFTHoldingsUpdated`.
+
+### Errors
+
+| Error                         | Raised when                                                                                    |
+| ----------------------------- | ---------------------------------------------------------------------------------------------- |
+| `NFTApprovalNotAuthorized`    | The caller neither holds the NFT nor operates the collection for its holder                    |
+| `InsufficientNFTApproval`     | A spender attempted a transfer without an approval for that NFT                                |
+| `ReceiverAffirmationRequired` | The destination requires receiver affirmation, so a controller transfer cannot deliver into it |
+
+### Storage
+
+| Item               | Shape                                                       |
+| ------------------ | ----------------------------------------------------------- |
+| `NFTAccountCount`  | `(AccountId32, AssetId) → NFTCount`                         |
+| `TokenApproval`    | `(AssetId, NFTId) → Option<AccountId32>`                    |
+| `OperatorApproval` | `(AccountId32 owner, AccountId32 operator, AssetId) → bool` |
+
+Storage version 7 → 8; `NFTAccountCount` is backfilled by migration.
+
+---
+
+## Pips
+
+### Storage
+
+| Item                | Shape                           |
+| ------------------- | ------------------------------- |
+| `ProposalProposers` | `PipId → Proposer<AccountId32>` |
+
+Added in v8.1.3. It holds each proposal's proposer separately from `Proposals`.
+
+Storage version 2 → 3; `ProposalProposers` is backfilled from `Proposals` by migration.
+
+---
+
+## Portfolio
+
+### Errors
+
+| Error               | Raised when                                       |
+| ------------------- | ------------------------------------------------- |
+| `PortfolioIsFrozen` | The portfolio is frozen for the asset being moved |
+
+As of v8.1.2 both this error and the pre-existing `InsufficientPortfolioBalance` are raised from `ensure_sufficient_balance`, rather than only from the multi-asset move path. `InsufficientPortfolioBalance` now measures `balance − locked − frozen`, so a partially frozen portfolio hits it where it previously did not.
+
+`ensure_sufficient_balance` is not specific to portfolio moves. It backs three calls, and all three now refuse a frozen portfolio and measure its balance net of frozen tokens:
+
+| Call                              | What it checks                                                       |
+| --------------------------------- | -------------------------------------------------------------------- |
+| `Portfolio::move_portfolio_funds` | The sending portfolio can release each amount moved                  |
+| `Sto::create_fundraiser`          | The offering portfolio can lock the full amount offered across tiers |
+| `CapitalDistribution::distribute` | The source portfolio can lock the full distribution amount           |
+
+### Storage
+
+| Item                    | Shape                               |
+| ----------------------- | ----------------------------------- |
+| `PortfolioNFTCount`     | `(PortfolioId, AssetId) → NFTCount` |
+| `PortfolioFrozenAssets` | `(PortfolioId, AssetId) → Balance`  |
+| `FrozenPortfolios`      | `(PortfolioId, AssetId) → bool`     |
+
+`PortfolioFrozenAssets` and `FrozenPortfolios` are the portfolio counterparts of `Asset::FrozenBalance` and `Asset::FrozenAccounts`.
+
+Storage version 4 → 5; `PortfolioNFTCount` is backfilled by migration.
+
+---
+
+## Relayer
+
+### Errors
+
+| Error               | Raised when                                                                 |
+| ------------------- | --------------------------------------------------------------------------- |
+| `NestingNotAllowed` | `relay_tx` is reached while another `relay_tx` is dispatching, by any route |
+
+### Storage
+
+| Item           | Shape  |
+| -------------- | ------ |
+| `RelayReentry` | `bool` |
+
+Both are added in v8.1.3. `RelayReentry` is the guard that refuses a nested `relay_tx`, whether reached directly, inside a `utility` batch, or through a MultiSig proposal.
+
+---
+
+## Settlement
+
+### Errors
+
+| Change  | Detail                                                                                    |
+| ------- | ----------------------------------------------------------------------------------------- |
+| Renamed | `AllowancesNotSupportedForNFTs` → `DeprecatedAllowancesNotSupportedForNFTs`               |
+| Added   | `EmptyAffirmation` (v8.1.3) — an affirmation named no asset holder and carried no receipt |
+
+The variant was renamed rather than deleted so that the indices of the errors after it are unchanged. It is no longer raised: NFT spender transfers now fail with `Nft::InsufficientNFTApproval`. Decoders keyed on error index are unaffected; decoders keyed on name need updating.
+
+`EmptyAffirmation` is raised by `affirm_instruction`, `affirm_instruction_with_count`, `add_and_affirm_instruction` and `add_and_affirm_with_mediators` when the holder set is empty, and by `affirm_with_receipts` and `affirm_with_receipts_with_count` when both the holder set and the receipt list are empty. See [What changed in v8.1.3](./087-v8.1.3-fixes.mdx#settlement).
+
+### Behaviour changes
+
+`transfer_funds` — four changes, none altering the call signature:
+
+1. With `from = Some(holder)` and a caller other than the holder, **non-fungible funds are now accepted**, consuming an NFT approval. Previously this combination was rejected.
+2. A **redundant custody check was removed**: an instruction where the caller is the receiver but does not have custody of the receiving portfolio is now allowed.
+3. As of v8.1.3, a same-identity transfer checks that the **destination is a valid holder**. A user portfolio that does not exist fails with `Portfolio::PortfolioDoesNotExist`.
+4. As of v8.1.3, a same-identity transfer made by a **secondary key** checks its permission for the destination portfolio as well as the source, and fails with `Portfolio::SecondaryKeyNotAuthorizedForPortfolio` without it.
+
+As of v8.1.3, executing an instruction cancels any execution still queued for it.
+
+---
+
+## Sto
+
+### Errors
+
+| Error                   | Raised when                                                                                     |
+| ----------------------- | ----------------------------------------------------------------------------------------------- |
+| `InstructionNotSettled` | `invest` created an instruction that did not reach `InstructionStatus::Success` within the call |
+
+Added in v8.1.2 at the end of the variant list, so the indices of existing `Sto` errors are unchanged. The cause is a mandatory mediator on either asset in the instruction — the offering asset, or the raising asset when the investment is funded on chain — since the instruction cannot settle without that mediator's separate affirmation. See [What changed in v8.1.2](./085-v8.1.2-fixes.mdx#stoinvest-requires-its-instruction-to-settle).
+
+---
+
+## Behaviour changes without a signature change
+
+These calls keep their index, arguments and encoding. Clients need no regeneration for them, but their outcome or cost differs.
+
+| Call                                                    | Change in v8.1.2                                                                                                                                                                                                                                             |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `MultiSig::create_multisig`                             | Custom permissions are validated against the standard length and complexity limits. Weight includes that validation when permissions are supplied.                                                                                                           |
+| `Portfolio::quit_portfolio_custody`                     | Runs the secondary-key portfolio permission check in addition to the custodian check.                                                                                                                                                                        |
+| `ExternalAgents::create_group`, `set_group_permissions` | A nested `Except` extrinsic restriction is refused with `Identity::ExceptNotAllowedForExtrinsics`. The outer form was already refused with `ExternalAgents::ExceptPermissionsNotAllowed`.                                                                    |
+| `Sto::invest`                                           | Verifies its instruction settled; see above.                                                                                                                                                                                                                 |
+| `Portfolio::move_portfolio_funds`                       | Enforces the frozen balance, not only a whole-portfolio freeze.                                                                                                                                                                                              |
+| `Nft::redeem_nft`                                       | No behavioural change: `number_of_keys` is still validated and `Nft::NumberOfKeysIsLessThanExpected` is still raised. The count is now read from the collection's key set rather than from the drained metadata, and the call is re-benchmarked accordingly. |
+
+v8.1.3 changes these calls in the same way:
+
+| Call                                                                                                         | Change in v8.1.3                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| `Asset::set_holder_frozen`, `Asset::set_frozen_tokens`                                                       | Freezing, or setting a non-zero frozen amount, requires a valid holder. See [Asset](#holder-validation-when-freezing).     |
+| `ComplianceManager::add_compliance_requirement`, `change_compliance_requirement`, `replace_asset_compliance` | Reject empty `IsAnyOf`/`IsNoneOf` claim lists, and enforce the new trusted-issuer limits.                                  |
+| `ComplianceManager::add_default_trusted_claim_issuer`                                                        | Enforces the new trusted-issuer limits.                                                                                    |
+| `MultiSig::approve`                                                                                          | Weight includes decoding the proposal, so the upfront fee is higher.                                                       |
+| `Nft::controller_transfer`, `Nft::controller_transfer_to`                                                    | Emit `Nft::ControllerTransfer` / `Nft::ControllerTransferTo` after `NFTHoldingsUpdated`.                                   |
+| `Nft::issue_nft`                                                                                             | Enforces `AssetMetadataValueMaxLength` on each metadata value.                                                             |
+| `Relayer::relay_tx`                                                                                          | Refuses to nest, failing with `NestingNotAllowed`.                                                                         |
+| `Settlement::affirm_instruction` and the other affirming calls                                               | Refuse an empty affirmation with `EmptyAffirmation`.                                                                       |
+| `Settlement::execute_manual_instruction` and other execution paths                                           | Cancel any execution still queued for the instruction.                                                                     |
+| `Settlement::transfer_funds`                                                                                 | Same-identity transfers validate the destination and the secondary key's permission for it. See [Settlement](#settlement). |
+
+No error variant, event or storage item was removed in v8.1.2 or v8.1.3.
+
+---
+
+## Runtime APIs
+
+| API      | Version | Change                                                                                                                 |
+| -------- | ------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `NFTApi` | 3 → 4   | Added `token_approval(asset_id, nft_id) → Option<AccountId>` and `operator_approval(owner, operator, asset_id) → bool` |
+
+Existing `NFTApi` methods are unchanged, and version 3 clients continue to work.
+
+`NFTApi::transfer_report` and `AssetApi::transfer_report` keep their signatures but return more errors as of v8.1.2: both now evaluate the holder freeze and measure the available balance net of frozen tokens. A caller that treated an empty error list as "this transfer will succeed" gets a more accurate answer; no decoding change is required. See [What changed in v8.1.2](./085-v8.1.2-fixes.mdx#transfer-reports-evaluate-the-holder-freeze).
+
+No custom JSON-RPC methods were added, removed or changed.

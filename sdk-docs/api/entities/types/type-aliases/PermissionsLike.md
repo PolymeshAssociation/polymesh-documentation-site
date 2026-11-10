@@ -10,24 +10,33 @@ Permissions to grant to a Signer over an Identity
 
 ## Type Declaration
 
-Name
-Type
-Description
-Defined in
+Name | Type | Description | Defined in
 
 `assets?`
 
+ | 
+
 [`SectionPermissions`](../interfaces/SectionPermissions.mdx)\<`string` \| [`FungibleAsset`](FungibleAsset.mdx)\> \| `null`
 
+ | 
+
 Assets on which to grant permissions. A null value represents full permissions
+
+ | 
 
 [src/api/entities/types.ts:835](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L835)
 
 `portfolios?`
 
+ | 
+
 [`SectionPermissions`](../interfaces/SectionPermissions.mdx)\<[`PortfolioLike`](PortfolioLike.mdx)\> \| `null`
 
+ | 
+
 Portfolios on which to grant permissions. A null value represents full permissions
+
+ | 
 
 [src/api/entities/types.ts:839](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/types.ts#L839)
 

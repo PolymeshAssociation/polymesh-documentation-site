@@ -20,14 +20,17 @@ Create a schedule for Checkpoint creation (e.g. "Create a checkpoint every week 
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`CreateCheckpointScheduleParams`](../../../../../../procedures/types/interfaces/CreateCheckpointScheduleParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -91,14 +94,17 @@ Retrieve a single Checkpoint Schedule associated to this Asset by its ID
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `__namedParameters`
+
+ | 
 
 \{ `id`: `BigNumber`; \}
 
 `__namedParameters.id`
+
+ | 
 
 `BigNumber`
 
@@ -136,14 +142,17 @@ Remove the supplied Checkpoint Schedule for a given Asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`RemoveCheckpointScheduleParams`](../../../../../../procedures/types/interfaces/RemoveCheckpointScheduleParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 

@@ -30,37 +30,55 @@ Fetch all historical Authorization Requests for which this Signer is the target
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `opts`
 
+ | 
+
 \{ `size?`: `BigNumber`; `start?`: `BigNumber`; `status?`: [`AuthorizationStatusEnum`](../../../../../../types/enumerations/AuthorizationStatusEnum.mdx); `type?`: [`AuthTypeEnum`](../../../../../../types/enumerations/AuthTypeEnum.mdx); \}
+
+ | 
 
 &hyphen;
 
 `opts.size?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page size
 
 `opts.start?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page offset
 
 `opts.status?`
 
+ | 
+
 [`AuthorizationStatusEnum`](../../../../../../types/enumerations/AuthorizationStatusEnum.mdx)
+
+ | 
 
 fetch only authorizations with this status. Fetches all statuses if not passed
 
 `opts.type?`
 
+ | 
+
 [`AuthTypeEnum`](../../../../../../types/enumerations/AuthTypeEnum.mdx)
+
+ | 
 
 fetch only authorizations of this type. Fetches all types if not passed
 
@@ -88,14 +106,17 @@ Retrieve a single Authorization Request targeting this Signer by its ID
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 \{ `id`: `BigNumber`; \}
 
 `args.id`
+
+ | 
 
 `BigNumber`
 
@@ -119,25 +140,35 @@ Fetch all pending Authorization Requests for which this Signer is the target
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `opts?`
 
+ | 
+
 \{ `includeExpired?`: `boolean`; `type?`: [`AuthorizationType`](../../../../types/enumerations/AuthorizationType.mdx); \}
+
+ | 
 
 &hyphen;
 
 `opts.includeExpired?`
 
+ | 
+
 `boolean`
+
+ | 
 
 whether to include expired authorizations. Defaults to true
 
 `opts.type?`
 
+ | 
+
 [`AuthorizationType`](../../../../types/enumerations/AuthorizationType.mdx)
+
+ | 
 
 fetch only authorizations of this type. Fetches all types if not passed
 

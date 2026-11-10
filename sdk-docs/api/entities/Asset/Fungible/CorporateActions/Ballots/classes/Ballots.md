@@ -20,14 +20,17 @@ Create a Ballot for an Asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`CreateBallotParams`](../../../../../../procedures/types/interfaces/CreateBallotParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -65,14 +68,17 @@ Retrieve a single Ballot associated to this Asset by its ID
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 \{ `id`: `BigNumber`; \}
 
 `args.id`
+
+ | 
 
 `BigNumber`
 

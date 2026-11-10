@@ -134,13 +134,15 @@ Check whether secondary Accounts are frozen (with subscription support)
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<`boolean`\>
+
+ | 
 
 Callback function that receives frozen status updates
 
@@ -170,10 +172,11 @@ Check whether this Identity possesses all specified roles
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `roles`
+
+ | 
 
 [`Role`](../../../procedures/types/type-aliases/Role.mdx)[]
 
@@ -221,19 +224,25 @@ Retrieve the balance of a particular Asset by ticker
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `ticker`: `string`; \}
+
+ | 
 
 &hyphen;
 
 `args.ticker`
 
+ | 
+
 `string`
+
+ | 
 
 Asset ticker
 
@@ -257,19 +266,25 @@ Retrieve the balance of a particular Asset by Asset ID
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `assetId`: `string`; \}
+
+ | 
 
 &hyphen;
 
 `args.assetId`
 
+ | 
+
 `string`
+
+ | 
 
 Asset identifier
 
@@ -293,25 +308,35 @@ Retrieve the balance of a particular Asset by ticker (with subscription support)
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `ticker`: `string`; \}
+
+ | 
 
 &hyphen;
 
 `args.ticker`
 
+ | 
+
 `string`
+
+ | 
 
 Asset ticker
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<`BigNumber`\>
+
+ | 
 
 Callback function that receives balance updates
 
@@ -339,25 +364,35 @@ Retrieve the balance of a particular Asset by Asset ID (with subscription suppor
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `assetId`: `string`; \}
+
+ | 
 
 &hyphen;
 
 `args.assetId`
 
+ | 
+
 `string`
+
+ | 
 
 Asset identifier
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<`BigNumber`\>
+
+ | 
 
 Callback function that receives balance updates
 
@@ -387,22 +422,29 @@ Retrieve a list of all Assets which were held at one point by this Identity
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts`
+
+ | 
 
 \{ `order?`: [`AssetHoldersOrderBy`](../../../../types/enumerations/AssetHoldersOrderBy.mdx); `size?`: `BigNumber`; `start?`: `BigNumber`; \}
 
 `opts.order?`
 
+ | 
+
 [`AssetHoldersOrderBy`](../../../../types/enumerations/AssetHoldersOrderBy.mdx)
 
 `opts.size?`
 
+ | 
+
 `BigNumber`
 
 `opts.start?`
+
+ | 
 
 `BigNumber`
 
@@ -434,22 +476,29 @@ Retrieve a list of all NftCollections which were held at one point by this Ident
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts`
+
+ | 
 
 \{ `order?`: [`NftHoldersOrderBy`](../../../../types/enumerations/NftHoldersOrderBy.mdx); `size?`: `BigNumber`; `start?`: `BigNumber`; \}
 
 `opts.order?`
 
+ | 
+
 [`NftHoldersOrderBy`](../../../../types/enumerations/NftHoldersOrderBy.mdx)
 
 `opts.size?`
 
+ | 
+
 `BigNumber`
 
 `opts.start?`
+
+ | 
 
 `BigNumber`
 
@@ -481,10 +530,11 @@ Retrieve all Instructions that have been associated with this Identity's DID
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `filter?`
+
+ | 
 
 `Omit`\<[`HistoricalInstructionFilters`](../../../client/types/interfaces/HistoricalInstructionFilters.mdx), `"identity"`\>
 
@@ -643,13 +693,15 @@ Retrieve the primary Account associated with the Identity (with subscription sup
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<[`PermissionedAccount`](../../types/interfaces/PermissionedAccount.mdx)\>
+
+ | 
 
 Callback function that receives primary Account updates
 
@@ -681,13 +733,15 @@ Get the list of secondary Accounts related to the Identity
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `paginationOpts?`
 
+ | 
+
 [`PaginationOptions`](../../types/interfaces/PaginationOptions.mdx)
+
+ | 
 
 Options for pagination
 
@@ -715,13 +769,15 @@ Get the list of secondary Accounts related to the Identity (with subscription su
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<[`PermissionedAccount`](../../types/interfaces/PermissionedAccount.mdx)[]\>
+
+ | 
 
 Callback function that receives secondary account updates
 
@@ -749,19 +805,25 @@ Get the list of secondary Accounts related to the Identity (with pagination and 
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `paginationOpts`
 
+ | 
+
 [`PaginationOptions`](../../types/interfaces/PaginationOptions.mdx)
+
+ | 
 
 Options for pagination
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<[`PermissionedAccount`](../../types/interfaces/PermissionedAccount.mdx)[]\>
+
+ | 
 
 Callback function that receives secondary account updates
 
@@ -835,10 +897,11 @@ Check whether this Identity possesses the specified Role
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `role`
+
+ | 
 
 [`Role`](../../../procedures/types/type-aliases/Role.mdx)
 
@@ -862,10 +925,11 @@ Returns whether or not this Identity has pre-approved a particular asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `asset`
+
+ | 
 
 `string` \| [`BaseAsset`](../../Asset/Base/BaseAsset/classes/BaseAsset.mdx)
 
@@ -907,10 +971,11 @@ Determine whether this Entity is the same as another one
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `entity`
+
+ | 
 
 [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>
 
@@ -972,10 +1037,11 @@ Returns a list of all assets this Identity has pre-approved. These assets will n
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `paginationOpts?`
+
+ | 
 
 [`PaginationOptions`](../../types/interfaces/PaginationOptions.mdx)
 
@@ -1002,18 +1068,23 @@ When disabled (`ReceiverAffirmationRequirement.Automatic`), all incoming transfe
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 \{ `requirement`: [`ReceiverAffirmationRequirement`](../../Instruction/types/enumerations/ReceiverAffirmationRequirement.mdx); \}
 
 `args.requirement`
 
+ | 
+
 [`ReceiverAffirmationRequirement`](../../Instruction/types/enumerations/ReceiverAffirmationRequirement.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -1079,13 +1150,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `identifiers`
 
+ | 
+
 `Identifiers`
+
+ | 
 
 &hyphen;
 
@@ -1115,13 +1188,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `serialized`
 
+ | 
+
 `string`
+
+ | 
 
 UUID to unserialize
 

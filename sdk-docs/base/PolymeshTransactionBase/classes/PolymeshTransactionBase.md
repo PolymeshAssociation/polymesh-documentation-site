@@ -11,14 +11,17 @@ Wrapper class for a Polymesh Transaction
 
 ## Type Parameters
 
-Type Parameter
-Default type
+Type Parameter | Default type
 
 `ReturnValue`
+
+ | 
 
 `void`
 
 `TransformedReturnValue`
+
+ | 
 
 `ReturnValue`
 
@@ -174,16 +177,19 @@ Retrieve a breakdown of the fees required to run this transaction, as well as th
 
 #### Parameters
 
-Parameter
-Type
-Default value
-Description
+Parameter | Type | Default value | Description
 
 `asProposal`
 
+ | 
+
 `boolean`
 
+ | 
+
 `true`
+
+ | 
 
 When `true` (default), treats the transaction as a MultiSig proposal if the signing account is a MultiSig signer.
   When `false`, treats the transaction as a direct transaction from the signing account, ignoring the MultiSig.
@@ -209,13 +215,15 @@ Subscribe to the results of this transaction being processed by the indexing ser
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `listener`
 
+ | 
+
 (`err?`: [`PolymeshError`](../../PolymeshError/classes/PolymeshError.mdx)) => `void`
+
+ | 
 
 callback function that will be called whenever the middleware is updated with the latest data.
   If there is an error (timeout or middleware offline) it will be passed to this callback
@@ -246,13 +254,15 @@ Subscribe to status changes
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `listener`
 
+ | 
+
 (`transaction`: [`GenericPolymeshTransaction`](../../../api/procedures/types/type-aliases/GenericPolymeshTransaction.mdx)\<`ReturnValue`, `TransformedReturnValue`\>) => `void`
+
+ | 
 
 callback function that will be called whenever the status changes
 
@@ -325,24 +335,33 @@ Returns a representation intended for offline signers.
 
 #### Parameters
 
-Parameter
-Type
-Default value
-Description
+Parameter | Type | Default value | Description
 
 `metadata`
 
+ | 
+
 `Record`\<`string`, `string`\>
 
+ | 
+
 `{}`
+
+ | 
 
 Additional information attached to the payload, such as IDs or memos about the transaction
 
 `asProposal`
 
+ | 
+
 `boolean`
 
+ | 
+
 `true`
+
+ | 
 
 When `true` (default), treats the transaction as a MultiSig proposal if the signing account is a MultiSig signer.
   When `false`, treats the transaction as a direct transaction from the signing account, ignoring the MultiSig.

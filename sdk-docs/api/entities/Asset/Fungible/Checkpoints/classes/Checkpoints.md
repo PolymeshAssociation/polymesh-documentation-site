@@ -28,10 +28,11 @@ Create a snapshot of Asset Holders and their respective balances at this moment
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -55,10 +56,11 @@ Retrieve all Checkpoints created on this Asset, together with their correspondin
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `paginationOpts?`
+
+ | 
 
 [`PaginationOptions`](../../../../types/interfaces/PaginationOptions.mdx)
 
@@ -82,14 +84,17 @@ Retrieve a single Checkpoint for this Asset by its ID
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 \{ `id`: `BigNumber`; \}
 
 `args.id`
+
+ | 
 
 `BigNumber`
 

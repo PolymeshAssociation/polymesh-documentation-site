@@ -52,14 +52,17 @@ Decrease allowance for this Subsidy relationship
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 `Pick`\<[`DecreaseAllowanceParams`](../../../procedures/types/interfaces/DecreaseAllowanceParams.mdx), `"allowance"`\>
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -127,14 +130,17 @@ Increase allowance for this Subsidy relationship
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 `Pick`\<[`IncreaseAllowanceParams`](../../../procedures/types/interfaces/IncreaseAllowanceParams.mdx), `"allowance"`\>
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -162,10 +168,11 @@ Determine whether this Entity is the same as another one
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `entity`
+
+ | 
 
 [`Entity`](../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>
 
@@ -189,10 +196,11 @@ Terminate this Subsidy relationship. The beneficiary Account will be forced to p
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -220,14 +228,17 @@ Set allowance for this Subsidy relationship
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 `Pick`\<[`SetAllowanceParams`](../../../procedures/types/interfaces/SetAllowanceParams.mdx), `"allowance"`\>
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -283,13 +294,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `identifiers`
 
+ | 
+
 `Identifiers`
+
+ | 
 
 &hyphen;
 
@@ -319,13 +332,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `serialized`
 
+ | 
+
 `string`
+
+ | 
 
 UUID to unserialize
 

@@ -16,43 +16,65 @@ Retrieve a single event by any of its indexed arguments. Can be filtered using p
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `opts`
 
+ | 
+
 \{ `eventArg0?`: `string`; `eventArg1?`: `string`; `eventArg2?`: `string`; `eventId`: [`EventIdEnum`](../../../../types/enumerations/EventIdEnum.mdx); `moduleId`: [`ModuleIdEnum`](../../../../types/enumerations/ModuleIdEnum.mdx); \}
+
+ | 
 
 &hyphen;
 
 `opts.eventArg0?`
 
+ | 
+
 `string`
+
+ | 
 
 event parameter value to filter by in position 0
 
 `opts.eventArg1?`
 
+ | 
+
 `string`
+
+ | 
 
 event parameter value to filter by in position 1
 
 `opts.eventArg2?`
 
+ | 
+
 `string`
+
+ | 
 
 event parameter value to filter by in position 2
 
 `opts.eventId`
 
+ | 
+
 [`EventIdEnum`](../../../../types/enumerations/EventIdEnum.mdx)
+
+ | 
 
 type of the event to fetch
 
 `opts.moduleId`
 
+ | 
+
 [`ModuleIdEnum`](../../../../types/enumerations/ModuleIdEnum.mdx)
+
+ | 
 
 type of the module to fetch
 
@@ -76,55 +98,85 @@ Retrieve a list of events. Can be filtered using parameters
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `opts`
 
+ | 
+
 \{ `eventArg0?`: `string`; `eventArg1?`: `string`; `eventArg2?`: `string`; `eventId`: [`EventIdEnum`](../../../../types/enumerations/EventIdEnum.mdx); `moduleId`: [`ModuleIdEnum`](../../../../types/enumerations/ModuleIdEnum.mdx); `size?`: `BigNumber`; `start?`: `BigNumber`; \}
+
+ | 
 
 &hyphen;
 
 `opts.eventArg0?`
 
+ | 
+
 `string`
+
+ | 
 
 event parameter value to filter by in position 0
 
 `opts.eventArg1?`
 
+ | 
+
 `string`
+
+ | 
 
 event parameter value to filter by in position 1
 
 `opts.eventArg2?`
 
+ | 
+
 `string`
+
+ | 
 
 event parameter value to filter by in position 2
 
 `opts.eventId`
 
+ | 
+
 [`EventIdEnum`](../../../../types/enumerations/EventIdEnum.mdx)
+
+ | 
 
 type of the event to fetch
 
 `opts.moduleId`
 
+ | 
+
 [`ModuleIdEnum`](../../../../types/enumerations/ModuleIdEnum.mdx)
+
+ | 
 
 type of the module to fetch
 
 `opts.size?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page size
 
 `opts.start?`
 
+ | 
+
 `BigNumber`
+
+ | 
 
 page offset
 
@@ -217,19 +269,25 @@ Retrieve the protocol fees associated with running specific transactions
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `tags`: [`TxTag`](../../../../types/type-aliases/TxTag.mdx)[]; \}
+
+ | 
 
 &hyphen;
 
 `args.tags`
 
+ | 
+
 [`TxTag`](../../../../types/type-aliases/TxTag.mdx)[]
+
+ | 
 
 list of transaction tags (e.g. [TxTags.asset.CreateAsset, TxTags.asset.RegisterUniqueTicker] or ["asset.createAsset", "asset.registerTicker"])
 
@@ -263,19 +321,25 @@ Retrieve a transaction by hash
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `opts`
 
+ | 
+
 \{ `txHash`: `string`; \}
+
+ | 
 
 &hyphen;
 
 `opts.txHash`
 
+ | 
+
 `string`
+
+ | 
 
 hash of the transaction
 
@@ -329,13 +393,15 @@ Get the Treasury POLYX balance (with subscription support)
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<`BigNumber`\>
+
+ | 
 
 Callback function that receives balance updates
 
@@ -375,14 +441,17 @@ Submits a transaction payload with its signature to the chain. `signature` shoul
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `txPayload`
+
+ | 
 
 [`TransactionPayloadInput`](../../../../base/types/type-aliases/TransactionPayloadInput.mdx)
 
 `signature`
+
+ | 
 
 `string`
 
@@ -436,14 +505,17 @@ Transfer an amount of POLYX to a specified Account
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`TransferPolyxParams`](../../../procedures/types/interfaces/TransferPolyxParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 

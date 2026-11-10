@@ -16,14 +16,17 @@ Gives permission to the Identity to create Portfolios on behalf of the signing I
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`AllowIdentityToCreatePortfoliosParams`](../../../procedures/types/type-aliases/AllowIdentityToCreatePortfoliosParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -53,14 +56,17 @@ Get a DID Registrar's attestation to change primary key
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`AttestPrimaryKeyRotationParams`](../../../procedures/types/interfaces/AttestPrimaryKeyRotationParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -99,22 +105,29 @@ Create a new Portfolio under the ownership of the signing Identity
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 \{ `name`: `string`; `ownerDid?`: `string`; \}
 
 `args.name`
 
+ | 
+
 `string`
 
 `args.ownerDid?`
 
+ | 
+
 `string`
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -142,22 +155,29 @@ Creates a set of new Portfolios under the ownership of the signing Identity
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 \{ `names`: `string`[]; `ownerDid?`: `string`; \}
 
 `args.names`
 
+ | 
+
 `string`[]
 
 `args.ownerDid?`
 
+ | 
+
 `string`
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -185,10 +205,11 @@ Returns a list of allowed custodian did(s) for Identity
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `did`
+
+ | 
 
 `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
 
@@ -213,14 +234,17 @@ Create an Identity instance from a DID
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 \{ `did`: `string`; \}
 
 `args.did`
+
+ | 
 
 `string`
 
@@ -244,14 +268,17 @@ Return whether the supplied Identity/DID exists
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 \{ `identity`: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx); \}
 
 `args.identity`
+
+ | 
 
 `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
 
@@ -271,14 +298,17 @@ Register a new DID for the `targetAccount`
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`RegisterDidParams`](../../../procedures/types/interfaces/RegisterDidParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -314,14 +344,17 @@ Register an Identity
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`RegisterIdentityParams`](../../../procedures/types/interfaces/RegisterIdentityParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -366,14 +399,17 @@ Revokes permission from the Identity to create Portfolios on behalf of the signi
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`RevokeIdentityToCreatePortfoliosParams`](../../../procedures/types/type-aliases/RevokeIdentityToCreatePortfoliosParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -403,14 +439,17 @@ Creates an Authorization to rotate primary key of the signing Identity by the `t
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`RotatePrimaryKeyParams`](../../../procedures/types/interfaces/RotatePrimaryKeyParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -440,14 +479,17 @@ Creates an Authorization to rotate primary key of the signing Identity to an exi
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`RotatePrimaryKeyToSecondaryParams`](../../../procedures/types/type-aliases/RotatePrimaryKeyToSecondaryParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -493,10 +535,11 @@ Register a new DID for the signing Account
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 

@@ -16,14 +16,17 @@ Create an Asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`CreateAssetWithTickerParams`](../../../procedures/types/interfaces/CreateAssetWithTickerParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -52,14 +55,17 @@ Create an NftCollection
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`CreateNftCollectionParams`](../../../procedures/types/interfaces/CreateNftCollectionParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -88,10 +94,11 @@ Retrieve all the Assets on chain
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `paginationOpts?`
+
+ | 
 
 [`PaginationOptions`](../../../entities/types/interfaces/PaginationOptions.mdx)
 
@@ -117,19 +124,25 @@ Retrieve a FungibleAsset or NftCollection by ticker
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `ticker`: `string`; \}
+
+ | 
 
 &hyphen;
 
 `args.ticker`
 
+ | 
+
 `string`
+
+ | 
 
 Unique ticker of the Asset
 
@@ -151,19 +164,25 @@ Retrieve a FungibleAsset or NftCollection by Asset ID
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `assetId`: `string`; \}
+
+ | 
 
 &hyphen;
 
 `args.assetId`
 
+ | 
+
 `string`
+
+ | 
 
 Unique identifier of the Asset
 
@@ -187,19 +206,25 @@ Retrieve all of the Assets owned by an Identity
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args?`
 
+ | 
+
 \{ `owner`: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx); \}
+
+ | 
 
 &hyphen;
 
 `args.owner?`
 
+ | 
+
 `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
+
+ | 
 
 Identity representation or Identity ID as stored in the blockchain
 
@@ -225,25 +250,35 @@ Retrieve a FungibleAsset by Asset ID
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `assetId`: `string`; `skipExistsCheck?`: `boolean`; \}
+
+ | 
 
 &hyphen;
 
 `args.assetId`
 
+ | 
+
 `string`
+
+ | 
 
 Unique identifier of the Fungible Asset
 
 `args.skipExistsCheck?`
 
+ | 
+
 `boolean`
+
+ | 
 
 When true, method will not check if Asset exists before returning instance. Defaults to false
 
@@ -261,19 +296,25 @@ Retrieve a FungibleAsset by ticker
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `ticker`: `string`; \}
+
+ | 
 
 &hyphen;
 
 `args.ticker`
 
+ | 
+
 `string`
+
+ | 
 
 Unique ticker of the Fungible Asset
 
@@ -327,19 +368,25 @@ Retrieve an NftCollection by ticker
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `ticker`: `string`; \}
+
+ | 
 
 &hyphen;
 
 `args.ticker`
 
+ | 
+
 `string`
+
+ | 
 
 Unique ticker of the NftCollection
 
@@ -361,25 +408,35 @@ Retrieve an NftCollection by Asset ID
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `assetId`: `string`; `skipExistsCheck?`: `boolean`; \}
+
+ | 
 
 &hyphen;
 
 `args.assetId`
 
+ | 
+
 `string`
+
+ | 
 
 Unique identifier of the NftCollection
 
 `args.skipExistsCheck?`
 
+ | 
+
 `boolean`
+
+ | 
 
 When true, method will not check if the NftCollection exists before returning instance. Defaults to false
 
@@ -413,19 +470,25 @@ Retrieve a Ticker Reservation
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `ticker`: `string`; \}
+
+ | 
 
 &hyphen;
 
 `args.ticker`
 
+ | 
+
 `string`
+
+ | 
 
 Asset ticker
 
@@ -446,19 +509,25 @@ associated with an Asset
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args?`
 
+ | 
+
 \{ `owner`: `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx); \}
+
+ | 
 
 &hyphen;
 
 `args.owner?`
 
+ | 
+
 `string` \| [`Identity`](../../../entities/Identity/classes/Identity.mdx)
+
+ | 
 
 The identity whose reservations to return. Defaults to the signing Identity if omitted.
 
@@ -486,19 +555,25 @@ Check if a ticker hasn't been reserved
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `ticker`: `string`; \}
+
+ | 
 
 &hyphen;
 
 `args.ticker`
 
+ | 
+
 `string`
+
+ | 
 
 Ticker symbol to check availability for
 
@@ -518,25 +593,35 @@ Check if a ticker hasn't been reserved (with subscription support)
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `ticker`: `string`; \}
+
+ | 
 
 &hyphen;
 
 `args.ticker`
 
+ | 
+
 `string`
+
+ | 
 
 Ticker symbol to check availability for
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../../entities/types/type-aliases/SubCallback.mdx)\<`boolean`\>
+
+ | 
 
 Callback function that receives availability status updates
 
@@ -562,14 +647,17 @@ Register a custom asset type
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`RegisterCustomAssetTypeParams`](../../../procedures/types/interfaces/RegisterCustomAssetTypeParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -594,14 +682,17 @@ Reserve a ticker symbol under the ownership of the signing Identity to later use
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`ReserveTickerParams`](../../../procedures/types/interfaces/ReserveTickerParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -625,14 +716,17 @@ Transfer funds between two asset holders (Account or Portfolio), which may be ow
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`TransferFundsParams`](../../../procedures/types/type-aliases/TransferFundsParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../procedures/types/interfaces/ProcedureOpts.mdx)
 

@@ -20,14 +20,17 @@ Issue a certain amount of Asset tokens to the caller's default portfolio
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`IssueTokensParams`](../../../../../procedures/types/interfaces/IssueTokensParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 

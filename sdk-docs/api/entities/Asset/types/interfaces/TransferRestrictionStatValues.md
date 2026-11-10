@@ -14,25 +14,35 @@ Defined in: [src/api/entities/Asset/types.ts:417](https://github.com/PolymeshAss
 
 The claim of the stat
 
-Name
-Type
-Defined in
+Name | Type | Defined in
 
 `claimType`
 
+ | 
+
 [`TrustedFor`](../../../types/type-aliases/TrustedFor.mdx)
+
+ | 
 
 [src/api/entities/Asset/types.ts:419](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L419)
 
 `issuer`
 
+ | 
+
 [`Identity`](../../../Identity/classes/Identity.mdx)
+
+ | 
 
 [src/api/entities/Asset/types.ts:418](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L418)
 
 `value?`
 
+ | 
+
 [`ClaimValue`](../type-aliases/ClaimValue.mdx) \| [`JurisdictionValue`](../type-aliases/JurisdictionValue.mdx)[]
+
+ | 
 
 [src/api/entities/Asset/types.ts:420](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/entities/Asset/types.ts#L420)
 

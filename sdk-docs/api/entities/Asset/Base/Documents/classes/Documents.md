@@ -20,14 +20,17 @@ Add documents to the Asset's existing list of documents
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`AddAssetDocumentsParams`](../../../../../procedures/types/interfaces/AddAssetDocumentsParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -51,10 +54,11 @@ Retrieve all documents linked to the Asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `paginationOpts?`
+
+ | 
 
 [`PaginationOptions`](../../../../types/interfaces/PaginationOptions.mdx)
 
@@ -82,14 +86,17 @@ Remove specific documents from the Asset by their IDs
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`RemoveAssetDocumentsParams`](../../../../../procedures/types/interfaces/RemoveAssetDocumentsParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -113,14 +120,17 @@ Assign a new list of documents to the Asset by replacing the existing list of do
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`SetAssetDocumentsParams`](../../../../../procedures/types/interfaces/SetAssetDocumentsParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 

@@ -7,9 +7,9 @@
 
 
 
-<script>window.__COPY_PAGE_BUTTON_OPTIONS__={customStyles:{},enabledActions:["copy","view","chatgpt","claude","perplexity","gemini"],generateMarkdownRoutes:!1,markdownUrl:!0,placement:"auto",mcpServer:null,id:"default"}</script><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.c53d1ff3.css">
-<script src="/polymesh-documentation-site/assets/js/runtime~main.d0f4d422.js" defer="defer"></script>
-<script src="/polymesh-documentation-site/assets/js/main.d6ebaad6.js" defer="defer"></script>
+<script>window.__COPY_PAGE_BUTTON_OPTIONS__={customStyles:{},enabledActions:["copy","view","chatgpt","claude","perplexity","gemini"],generateMarkdownRoutes:!1,markdownUrl:!0,placement:"auto",mcpServer:null,id:"default"}</script><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.1f85c761.css">
+<script src="/polymesh-documentation-site/assets/js/runtime~main.d3ba73d9.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/main.e516069c.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -107,6 +107,7 @@
 </ul>
 <p>Both methods deliver to the calling agent. To seize assets and deliver them straight to a third party in a single transaction, use <code>asset::controller_transfer_to</code> or <code>nft::controller_transfer_to</code> instead, which take a <code>destination</code> <code>AssetHolder</code> rather than a <code>destination_kind</code>. These are useful when returning assets to a rightful owner, since the assets never pass through the agent&#x27;s own custody.</p>
 <p>Both <code>controller_transfer_to</code> variants fail if the destination requires the receiver to affirm incoming transfers — a forced transfer cannot bypass that requirement.</p>
+<p>Each of the four calls emits its own event, so the call that made a controller transfer can be identified from events alone. Fungible transfers emit <code>AssetBalanceUpdated</code> followed by <code>asset::ControllerTransfer</code> or <code>asset::ControllerTransferTo</code>. NFT transfers emit <code>NFTHoldingsUpdated</code>, with reason <code>ControllerTransfer</code> for both calls, followed by <code>nft::ControllerTransfer</code> or <code>nft::ControllerTransferTo</code>.</p>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p><strong>Note:</strong> Assets that are locked in a settlement instruction cannot be transferred using controller transfer. While controller transfers bypass many compliance and restriction checks, they cannot bypass basic balance checks. If tokens or NFTs are locked (e.g., as part of a pending settlement), controller transfer will fail due to insufficient available balance.</p></div></div>
 <p>Controller transfers are powerful tools for asset issuers and agents, but should be used with care as they override normal transfer restrictions and compliance checks.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="freezing-and-unfreezing-assets">Freezing and Unfreezing Assets<a href="#freezing-and-unfreezing-assets" class="hash-link" aria-label="Direct link to Freezing and Unfreezing Assets" title="Direct link to Freezing and Unfreezing Assets" translate="no">​</a></h2>
@@ -123,6 +124,7 @@
 <li class=""><strong>Freeze a holder:</strong> <code>asset::set_holder_frozen</code> with the <code>asset_holder</code>, <code>asset_id</code> and <code>freeze</code> flag. A frozen holder cannot send the asset.</li>
 <li class=""><strong>Freeze part of a balance:</strong> <code>asset::freeze_partial_tokens</code> adds to the amount already frozen, and <code>asset::unfreeze_partial_tokens</code> releases some of it. <code>asset::set_frozen_tokens</code> sets the frozen amount outright, replacing whatever was frozen before.</li>
 </ul>
+<p>The holder must exist. An account key must be linked to an active identity, and a user portfolio must have been created; otherwise freezing it, or setting a non-zero frozen amount for it, fails. Unfreezing, and setting the frozen amount to <code>0</code>, always succeed.</p>
 <p>A holder&#x27;s transferable balance becomes <code>balance − locked − frozen</code>, so a partially frozen holder can still move whatever is left. Freezing restricts <strong>sending only</strong>: a frozen holder can still receive the asset, and anything they receive is not automatically frozen.</p>
 <p>Freezing a holder works for both fungible assets and NFT collections. Freezing <strong>part</strong> of a balance is fungible-only — <code>asset::set_frozen_tokens</code>, <code>freeze_partial_tokens</code> and <code>unfreeze_partial_tokens</code> fail for an NFT collection with <code>Asset::UnexpectedNonFungibleToken</code>.</p>
 <p>As with asset-wide freezing, controller transfers bypass holder freezes — an agent does not need to unfreeze a holder before seizing from them.</p>

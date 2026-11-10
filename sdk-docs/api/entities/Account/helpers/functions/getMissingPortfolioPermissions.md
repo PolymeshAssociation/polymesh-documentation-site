@@ -8,14 +8,17 @@ Calculate the difference between the required Transaction permissions and the cu
 
 ## Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `requiredPermissions`
+
+ | 
 
 ([`DefaultPortfolio`](../../../DefaultPortfolio/classes/DefaultPortfolio.mdx) \| [`NumberedPortfolio`](../../../NumberedPortfolio/classes/NumberedPortfolio.mdx))[] \| `null` \| `undefined`
 
 `currentPermissions`
+
+ | 
 
 [`SectionPermissions`](../../../types/interfaces/SectionPermissions.mdx)\<[`DefaultPortfolio`](../../../DefaultPortfolio/classes/DefaultPortfolio.mdx) \| [`NumberedPortfolio`](../../../NumberedPortfolio/classes/NumberedPortfolio.mdx)\> \| `null`
 

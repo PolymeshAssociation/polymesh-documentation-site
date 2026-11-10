@@ -20,10 +20,11 @@ Retrieve all the Asset Holders with their respective balance
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `paginationOpts?`
+
+ | 
 
 [`PaginationOptions`](../../../../types/interfaces/PaginationOptions.mdx)
 

@@ -20,14 +20,17 @@ Add the supplied Identities to the Asset's list of trusted claim issuers
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`ModifyAssetTrustedClaimIssuersAddSetParams`](../../../../../../procedures/types/interfaces/ModifyAssetTrustedClaimIssuersAddSetParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -67,13 +70,15 @@ Retrieve the current Default Trusted Claim Issuers of the Asset
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../../../../types/type-aliases/SubCallback.mdx)\<[`TrustedClaimIssuer`](../../../../../types/interfaces/TrustedClaimIssuer.mdx)\<`true`\>[]\>
+
+ | 
 
 Callback function that receives trusted claim issuers updates
 
@@ -99,14 +104,17 @@ Remove the supplied Identities from the Asset's list of trusted claim issuers   
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`ModifyAssetTrustedClaimIssuersRemoveParams`](../../../../../../procedures/types/interfaces/ModifyAssetTrustedClaimIssuersRemoveParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -132,14 +140,17 @@ This requires two transactions
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`ModifyAssetTrustedClaimIssuersAddSetParams`](../../../../../../procedures/types/interfaces/ModifyAssetTrustedClaimIssuersAddSetParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 

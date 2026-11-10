@@ -6,12 +6,14 @@ Defined in: [src/api/procedures/types.ts:553](https://github.com/PolymeshAssocia
 
 ## Type Declaration
 
-Name
-Type
-Defined in
+Name | Type | Defined in
 
 `asset`
 
+ | 
+
 [`FungibleAsset`](../../../entities/Asset/Fungible/classes/FungibleAsset.mdx)
+
+ | 
 
 [src/api/procedures/types.ts:553](https://github.com/PolymeshAssociation/polymesh-sdk/blob/1473bc3749248826a69330d9fc1dbaf67202c736/src/api/procedures/types.ts#L553)

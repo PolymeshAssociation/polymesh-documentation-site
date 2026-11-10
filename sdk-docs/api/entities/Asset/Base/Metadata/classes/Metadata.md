@@ -52,18 +52,23 @@ Retrieve a single MetadataEntry by its ID and type
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 \{ `id`: `BigNumber`; `type`: [`MetadataType`](../../../../MetadataEntry/types/enumerations/MetadataType.mdx); \}
 
 `args.id`
 
+ | 
+
 `BigNumber`
 
 `args.type`
+
+ | 
 
 [`MetadataType`](../../../../MetadataEntry/types/enumerations/MetadataType.mdx)
 
@@ -88,14 +93,17 @@ The metadata value can be set by passing `value` parameter and specifying other 
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`RegisterMetadataParams`](../../../../../procedures/types/type-aliases/RegisterMetadataParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 

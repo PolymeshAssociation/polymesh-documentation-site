@@ -64,13 +64,15 @@ Get the Subsidy relationship along with the subsidized amount for this Account i
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../types/type-aliases/SubCallback.mdx)\<[`SubsidyWithAllowance`](../../Subsidy/types/interfaces/SubsidyWithAllowance.mdx) \| `null`\>
+
+ | 
 
 Callback function that can be used to listen for changes to the subsidy relationship
 

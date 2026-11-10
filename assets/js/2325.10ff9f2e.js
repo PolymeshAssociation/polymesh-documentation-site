@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkpolymesh_developer_documentation=globalThis.webpackChunkpolymesh_developer_documentation||[]).push([[2325],{2325(e,o,a){a.d(o,{createPacketServices:()=>c.$});var c=a(73858);a(87960)}}]);

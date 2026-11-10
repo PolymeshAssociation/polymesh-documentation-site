@@ -4,10 +4,11 @@
 
 ## Type Parameters
 
-Type Parameter
-Default type
+Type Parameter | Default type
 
 `ClaimType`
+
+ | 
 
 [`Claim`](../type-aliases/Claim.mdx)
 

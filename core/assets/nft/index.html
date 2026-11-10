@@ -7,9 +7,9 @@
 
 
 
-<script>window.__COPY_PAGE_BUTTON_OPTIONS__={customStyles:{},enabledActions:["copy","view","chatgpt","claude","perplexity","gemini"],generateMarkdownRoutes:!1,markdownUrl:!0,placement:"auto",mcpServer:null,id:"default"}</script><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.c53d1ff3.css">
-<script src="/polymesh-documentation-site/assets/js/runtime~main.d0f4d422.js" defer="defer"></script>
-<script src="/polymesh-documentation-site/assets/js/main.d6ebaad6.js" defer="defer"></script>
+<script>window.__COPY_PAGE_BUTTON_OPTIONS__={customStyles:{},enabledActions:["copy","view","chatgpt","claude","perplexity","gemini"],generateMarkdownRoutes:!1,markdownUrl:!0,placement:"auto",mcpServer:null,id:"default"}</script><link rel="stylesheet" href="/polymesh-documentation-site/assets/css/styles.1f85c761.css">
+<script src="/polymesh-documentation-site/assets/js/runtime~main.d3ba73d9.js" defer="defer"></script>
+<script src="/polymesh-documentation-site/assets/js/main.e516069c.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -50,6 +50,7 @@
 <li class="">The caller must have the appropriate permission for the <code>Asset</code>.</li>
 <li class="">The <code>AssetHolderKind</code> (<code>Account</code>, <code>DefaultPortfolio</code>, or <code>UserPortfolio</code>) passed to <code>issue_nft</code> selects the destination, and must be valid for the caller&#x27;s DID.</li>
 <li class="">All metadata keys specified in the NFT collection must have a value set when issuing the token. Issuing a token with metadata keys not defined in the collection will fail.</li>
+<li class="">Each metadata value must be within the asset metadata value length limit (<code>AssetMetadataValueMaxLength</code>, 8,192 bytes). A longer value fails with <code>asset::AssetMetadataValueMaxLengthExceeded</code>.</li>
 </ul>
 <p>Once the transaction succeeds, a unique non-fungible token is linked to the specified account or portfolio.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="redeeming-an-nft">Redeeming an NFT<a href="#redeeming-an-nft" class="hash-link" aria-label="Direct link to Redeeming an NFT" title="Direct link to Redeeming an NFT" translate="no">​</a></h3>

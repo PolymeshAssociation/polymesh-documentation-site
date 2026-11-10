@@ -6,10 +6,11 @@ Transaction data for display purposes
 
 ## Type Parameters
 
-Type Parameter
-Default type
+Type Parameter | Default type
 
 `Args` *extends* `unknown`[]
+
+ | 
 
 `unknown`[]
 

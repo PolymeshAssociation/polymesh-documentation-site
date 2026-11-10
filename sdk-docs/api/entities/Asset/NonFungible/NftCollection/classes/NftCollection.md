@@ -134,14 +134,17 @@ Add required mediators. Mediators must approve any trades involving the asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`AssetMediatorParams`](../../../../../procedures/types/interfaces/AssetMediatorParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -169,14 +172,17 @@ Issues mulitple NFTs for the collection
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`BatchIssueNftParams`](../../../../../procedures/types/type-aliases/BatchIssueNftParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -223,14 +229,17 @@ Force a transfer from the origin portfolio to one of the caller's portfolios
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`NftControllerTransferParams`](../../../../../procedures/types/interfaces/NftControllerTransferParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -296,13 +305,15 @@ Retrieve the Asset's funding round
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../../../types/type-aliases/SubCallback.mdx)\<`string` \| `null`\>
+
+ | 
 
 Callback function that receives funding round updates
 
@@ -352,13 +363,15 @@ Retrieve the NftCollection's data
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../../../types/type-aliases/SubCallback.mdx)\<[`AssetDetails`](../../../types/interfaces/AssetDetails.mdx)\>
+
+ | 
 
 Callback function that receives NftCollection details updates
 
@@ -406,10 +419,11 @@ Freeze transfers of the Asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -471,13 +485,15 @@ Retrieve the Asset's identifiers list
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `callback?`
 
+ | 
+
 [`SubCallback`](../../../../types/type-aliases/SubCallback.mdx)\<[`SecurityIdentifier`](../../../types/interfaces/SecurityIdentifier.mdx)[]\>
+
+ | 
 
 Callback function that receives identifier updates
 
@@ -507,13 +523,15 @@ Retrieve the total amount of the Asset issued in the given funding round
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `fundingRound`
 
+ | 
+
 `string`
+
+ | 
 
 name of the funding round to query
 
@@ -537,14 +555,17 @@ Get an NFT belonging to this collection
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 \{ `id`: `BigNumber`; \}
 
 `args.id`
+
+ | 
 
 `BigNumber`
 
@@ -586,18 +607,23 @@ Retrieve this Collection's transaction history
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts`
+
+ | 
 
 \{ `size?`: `BigNumber`; `start?`: `BigNumber`; \}
 
 `opts.size?`
 
+ | 
+
 `BigNumber`
 
 `opts.start?`
+
+ | 
 
 `BigNumber`
 
@@ -653,10 +679,11 @@ Determine whether this Entity is the same as another one
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `entity`
+
+ | 
 
 [`Entity`](../../../../Entity/classes/Entity.mdx)\<`unknown`, `unknown`\>
 
@@ -700,13 +727,15 @@ Check whether transfers are frozen for the Asset
 
 ##### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `callback`
 
+ | 
+
 [`SubCallback`](../../../../types/type-aliases/SubCallback.mdx)\<`boolean`\>
+
+ | 
 
 Callback function that receives frozen status updates
 
@@ -736,14 +765,17 @@ Issues a new NFT for the collection
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`IssueNftParams`](../../../../../procedures/types/type-aliases/IssueNftParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -771,14 +803,17 @@ Link ticker to the asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`LinkTickerToAssetParams`](../../../../../procedures/types/interfaces/LinkTickerToAssetParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -811,14 +846,17 @@ Modify some properties of the Asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`ModifyAssetParams`](../../../../../procedures/types/type-aliases/ModifyAssetParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -858,14 +896,17 @@ Remove required mediators
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`AssetMediatorParams`](../../../../../procedures/types/interfaces/AssetMediatorParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -893,14 +934,17 @@ Enable/disable venue filtering for this Asset and/or set allowed/disallowed venu
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`SetVenueFilteringParams`](../../../../../procedures/types/type-aliases/SetVenueFilteringParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -947,14 +991,17 @@ Transfer ownership of the Asset to another Identity. This generates an authoriza
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `args`
+
+ | 
 
 [`TransferAssetOwnershipParams`](../../../../../procedures/types/interfaces/TransferAssetOwnershipParams.mdx)
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -995,10 +1042,11 @@ Unfreeze transfers of the Asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -1026,10 +1074,11 @@ Unlink ticker from the Asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -1071,13 +1120,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `identifiers`
 
+ | 
+
 `Identifiers`
+
+ | 
 
 &hyphen;
 
@@ -1107,13 +1158,15 @@ Type Parameter
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `serialized`
 
+ | 
+
 `string`
+
+ | 
 
 UUID to unserialize
 

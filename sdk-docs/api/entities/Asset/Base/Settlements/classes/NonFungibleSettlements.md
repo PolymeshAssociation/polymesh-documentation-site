@@ -22,31 +22,45 @@ Check whether it is possible to create a settlement instruction to transfer an N
 
 #### Parameters
 
-Parameter
-Type
-Description
+Parameter | Type | Description
 
 `args`
 
+ | 
+
 \{ `from?`: [`AssetHolderLike`](../../../../types/type-aliases/AssetHolderLike.mdx); `nfts`: (`BigNumber` \| [`Nft`](../../../NonFungible/Nft/classes/Nft.mdx))[]; `to`: [`AssetHolderLike`](../../../../types/type-aliases/AssetHolderLike.mdx); \}
+
+ | 
 
 &hyphen;
 
 `args.from?`
 
+ | 
+
 [`AssetHolderLike`](../../../../types/type-aliases/AssetHolderLike.mdx)
+
+ | 
 
 sender (Portfolio or Account) (optional, defaults to the signing Identity's Default Portfolio)
 
 `args.nfts`
 
+ | 
+
 (`BigNumber` \| [`Nft`](../../../NonFungible/Nft/classes/Nft.mdx))[]
+
+ | 
 
 the NFTs to transfer
 
 `args.to`
 
+ | 
+
 [`AssetHolderLike`](../../../../types/type-aliases/AssetHolderLike.mdx)
+
+ | 
 
 receiver (Portfolio or Account)
 
@@ -73,10 +87,11 @@ Pre-approves receiving this asset for the signing identity. Receiving this asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
@@ -104,10 +119,11 @@ Removes pre-approval for this asset
 
 #### Parameters
 
-Parameter
-Type
+Parameter | Type
 
 `opts?`
+
+ | 
 
 [`ProcedureOpts`](../../../../../procedures/types/interfaces/ProcedureOpts.mdx)
 
