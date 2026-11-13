@@ -1,0 +1,117 @@
+---
+title: SubQuery v20.0.0 - Data Changes
+description: Values in the Polymesh SubQuery indexer that keep their field but change meaning, encoding or coverage from v19.7.1 to v20.0.0 - canonical event arguments, padded ids, claim ids and scopes, memos, POLYX, keys and permissions, settlement, assets and governance.
+id: subquery-v20-data-changes
+slug: /development/subquery-changelogs/v19.7-to-v20.0/data-changes
+sidebar_label: Data Changes
+tags:
+  - migration
+  - changelog
+  - subquery
+  - indexer
+---
+
+These changes keep a field's name but change what it holds. A query that still runs against v20.0.0 can return different values, so check this list for every field you read.
+
+## Event and call arguments
+
+`Event.args` and `Extrinsic.args` replace `Event.attributesTxt`, `Event.eventArg_0`–`eventArg_3` and `Extrinsic.paramsTxt`. They hold every argument in one canonical JSON encoding, keyed by name. This is not `toHuman()` text:
+
+| Value | Encoding |
+| --- | --- |
+| Integers, balances | Decimal strings in base units, never JSON numbers (`"1000000"` is 1 POLYX) |
+| Moments | Decimal strings of milliseconds. Call `Number()` before `new Date()`. |
+| Accounts | SS58 addresses |
+| Identities, asset ids, hashes, memos, other fixed-size bytes | `0x` hex |
+| Tickers | Text without trailing NUL padding, or `0x` hex when not text |
+| Bytes and text | Text when valid UTF-8 without NULs, otherwise `0x` hex |
+| Structs | Objects keyed by camelCase field name |
+| Tuples, lists, sets | Arrays |
+| Enums | `{ "Variant": value }`, or the bare variant name when it carries no value |
+| Options | The value, or `null` |
+| Results | `{ "ok": value }` or `{ "err": value }` |
+| Maps | Arrays of `[key, value]` pairs |
+| Calls | `{ "section", "method", "args" }` |
+
+Points to watch:
+
+- **Keys follow the runtime that emitted the event.** Each event's fields are named as that runtime's metadata names them, so a field renamed in an upgrade has a different key before and after it. An event whose fields have no names in any runtime is keyed by position (`"0"`, `"1"`, …).
+- **Arguments hold the chain's values, not the index's ids.** For example, an `instructionId` inside `args` is `"14958"`, while the `Instruction` row's id is `"0000014958"`. See [Padded ids](#padded-ids).
+- **`args` is null when an argument didn't decode as its declared type.** An `IndexerAnomaly` row records which argument failed.
+- **To find an entity's events, use `Event.refs`, not `args`.** `refs` is indexed. `args` is not, so an `args` filter must also filter on `moduleId` and `eventId` (and, on `Extrinsic`, `callId`). See the [example](./040-query-migration.mdx#filtering-on-an-event-argument).
+
+The special-purpose `Event` columns are gone too. Read the equivalent value from `args`:
+
+| v19.7.1 column | v20.0.0 |
+| --- | --- |
+| `claimType`, `claimScope`, `claimIssuer`, `claimExpiry` | `args` of the identity claim events, or the `Claim` row |
+| `corporateActionTicker` | `refs` (`asset:` / `ticker:`), or the `CorporateAction` row |
+| `fundraiserOfferingAsset` | `refs`, or the `Sto` row |
+| `transferTo` | `args`, or the `AssetTransaction` / `PolyxEntry` row |
+
+## Padded ids
+
+`Instruction`, `Venue`, `Proposal` and `Authorization` ids are zero-padded to 10 digits, so that ordering by id is numeric: `"0000014712"`, not `"14712"`. Any filter or lookup on these ids must use the padded form, including relation ids such as `Leg.instructionId` and `ProposalVote.proposalId`. Pad user input with `id.padStart(10, "0")`.
+
+`Investment.stoId` is now the offering's id, `asset/number`, instead of the offering's number alone.
+
+## Claims
+
+- **A claim's id includes its issuer.** Claims from different trusted issuers with the same target, type and scope are separate rows. v19.7.1 merged them, so claim counts can rise. Re-issuing a claim replaces the row it re-issues.
+- **A Custom claim without a scope** has a null `scope` and the id `target/issuer/Custom/<customClaimTypeId>`.
+- **From chain v7.0, an asset-scoped claim's `scope.value` is the asset id**, as the chain holds it, not the ticker. Read the asset from `scope.assetId`.
+- **`InvestorUniqueness`, `InvestorUniquenessV2` and `NoData` claims are not indexed.** The v6.0 upgrade deleted them from the chain.
+- **Claims from the genesis config are indexed.** A revoked claim keeps the time it was revoked in `revokeDate`.
+- Compliance requirements are stored in one form whatever runtime set them, and are replaced when changed. A claim condition's value is stored as text. 5.0's transfer managers are recorded as transfer conditions, and two conditions that share a statistic are kept as separate rows.
+
+## Memos and text
+
+- **Memos are decoded as UTF-8.** Non-ASCII text now decodes correctly. A memo that is binary, or contains a NUL or control character, is the `0x`-prefixed hex of all 32 bytes. This applies to every memo column, including those on `AssetTransaction`, `PolyxEntry`, `Instruction` and `ConfidentialSettlement`. In event and call `args`, memos stay as hex.
+- **Text set before metadata v14 keeps its spaces.** Asset names, document names and similar text are stored as the chain holds them, whichever runtime set them.
+- **An asset created with no funding round name** has `fundingRound: ""`.
+
+## POLYX
+
+- **The same staking event name means a lock before v8 and a hold after it.** Before v8 the indexer derives the staking lock from `staking.ledger.total`. From v8 it reads hold reasons, and the legacy staking lock is dropped when v8 stops freezing it.
+- **Fees are charged to the account the runtime charged.** That includes a subsidiser, found among every subsidy offer its user had. Fees before runtime 5.4.0, which the chain took without an event, are reconstructed as that runtime computed them.
+- **Slashes credit their reporters' share.** Treasury disbursements debit the treasury pallet account. A transfer on hold is booked into the destination's free balance.
+- **A write with no event of its own**, such as a fee taken without an announcement, takes the extrinsic's closing `ExtrinsicSuccess` or `ExtrinsicFailed` event as its `createdEvent`.
+
+## Identities, keys and permissions
+
+- **Permissions are stored in one form whatever runtime set them.** Rows from before chain v7.0 hold the map form: `IdentityKey.permissions.transactions`, `AgentGroup.permissions`, the `data` of `JoinIdentity` and `RotatePrimaryKeyToSecondary` authorizations, and the permissions of every built-in group in `AssetAgentHistory`.
+- **Account rows survive key changes.** A bare account is linked to the identity its key record names. An account first seen on a ledger, election or Ethereum transaction path is created by the event that reached it.
+- **Child identities are retired at the v8 boundary.** The `ChildIdentity` entity is removed.
+- **An authorization targets either an identity (`to`) or an account (`toAccount`).** The targeted account is created if it doesn't exist. An offer ends when the chain no longer holds it, and `AuthorizationRetryLimitReached` is indexed as `RetryLimitReached`.
+- **A portfolio's custodian is cleared** once custody returns to the owner.
+
+## Settlement
+
+- **An instruction has one party per identity.** An account-level holder is recorded under its identity's party, not as a party of its own. A holder with no identity is reported as an `IndexerAnomaly` rather than made a party.
+- **`InstructionAffirmation` is one row per holder.** It is created `Pending` with the instruction, holds the holder in `portfolioId` or `accountId`, and returns to `Pending` on a withdrawal. A mediator's row has the id `instructionId/mediator/did` and stays, as `Pending`, when withdrawn.
+- **A rejection writes no affirmation.** Read `Instruction.rejectedBy` and `rejectedBySigner`. `AffirmStatusEnum.Rejected` is removed.
+- **`InstructionEvent.identity` is the caller** for affirm, withdraw and automatic-affirm events.
+- **Behaviour of earlier runtimes is recorded as it happened.** Instructions that runtimes before 6.0 failed without an event are failed. Receivers that 6.0 pre-approved without an event are recorded as automatically affirmed. Each pre-v6 transfer is filed under its own instruction, and a pre-6.0 leg whose ticker is not an asset is off-chain.
+- **A new venue has the signers it was created with.**
+
+## Assets and holdings
+
+- **`Asset.holderCount` counts NFT collection holders too.**
+- **Asset ids are normalised, and `Asset.assetId` is added.** Chain v7.0's migration from tickers to asset ids is applied to asset ids, claims, ticker links, authorizations and permission maps as the chain holds them. A ticker reservation follows its registration through the asset's creation and owners.
+- **NFT controller transfers from chain v8.1.3** are labelled `ControllerTransferTo` when the chain's next event says so.
+- **A pre-v6 over-debit is applied as the chain applied it.**
+- **Funding totals:** from chain v6, `Funding.totalFundingAmount` is the running total of the round, summed from its earlier `Funding` rows. On a seeded index it counts from the start block.
+- **Offering amounts:** `Sto.tiers` holds `price`, `remaining` and `total` as decimal strings (`"123"`, not `"123n"`). An investment is taken from the offering's tiers, and `raisingAsset` is null for an off-chain raising asset, whose ticker is in `raiseToken` / `raisingTicker`.
+- **A distribution's remaining amount falls** as benefits are claimed.
+- **Agents:** an asset's creator is its Full agent, both before chain v3.2, which emitted no event, and later unless the creating extrinsic says otherwise. From chain v7.4, an asset's previous owner leaves its agents. Holder freezes, forced transfers and ticker links are recorded as agent actions.
+
+## Governance, multisigs and staking
+
+- **`MultiSig.creator` is separate from its admin**, and `creator` and `creatorAccount` are nullable. Chain v7.0's and v8.0's multisig migrations are applied, and a signer stays invited while an offer of its place stands.
+- **A community PIP's deposit counts as its proposer's aye vote.** `Proposal.owner` is nullable. The deposit itself is the chain storage `pips.deposits(pipId, proposer)`.
+- **`StakingEvent` gains `eraIndex` and `validator`.** A staking reward records which validator's payout paid it. A CDD-expiry unbond takes its identity from the stash.
+- **Bonded and unbonding amounts** are in `AccountBalance.bonded`. Unbonding chunks, controller, payee and validator preferences are not copied into the index. Read them from the chain.
+
+## Coverage of seeded indexes
+
+An index started after genesis has no history before its start block, so lifetime totals such as `AccountBalance.totalReceived` are counted from the start block. Facts the chain doesn't keep, such as who created a row, are empty on seeded rows. `IndexOrigin.relativeFields` lists every such field. See [Running the Indexer](./020-running-the-indexer.mdx#from-a-later-block-seeded-start).

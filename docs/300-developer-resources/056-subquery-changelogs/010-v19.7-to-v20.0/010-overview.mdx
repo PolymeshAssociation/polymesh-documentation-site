@@ -1,0 +1,57 @@
+---
+title: SubQuery Changelog - v19.7.1 to v20.0.0
+description: Overview and migration checklist for the Polymesh SubQuery indexer redesign (v19.7.1 to v20.0.0) - event provenance on every entity, a double-entry POLYX ledger, portfolio- and account-level holdings, identity key memberships, newly indexed corporate actions and staking, and seeded starts from any block.
+id: subquery-v19.7-to-v20.0-overview
+slug: /development/subquery-changelogs/v19.7-to-v20.0
+sidebar_label: Overview
+tags:
+  - migration
+  - changelog
+  - subquery
+  - indexer
+---
+
+This is the entry point for the **v19.7.1 → v20.0.0** changelog of the Polymesh SubQuery indexer. v20.0.0 is the indexer redesign: a rewrite of the schema and the mappings, so that what the index holds can be checked against chain state, and so that it covers the parts of the chain it previously ignored.
+
+:::warning Breaking release
+v20.0.0 breaks the GraphQL schema in many places, and its database cannot be migrated from an earlier release. Consumers must update their queries. Operators must create a new database and index it again, either from genesis or from a seeded start block. See [Running the Indexer](./020-running-the-indexer.mdx).
+:::
+
+## Who this is for
+
+- **Teams that query the GraphQL API directly**, such as explorers, dashboards, analytics, custodians and back-office tools. Start with the [Quick migration checklist](#quick-migration-checklist), then use [Schema Changes](./030-schema-changes.mdx) as the reference and [Query Migration](./040-query-migration.mdx) for before-and-after examples.
+- **Operators who run their own indexer.** Read [Running the Indexer](./020-running-the-indexer.mdx): the database, the images and the way an index is started have all changed.
+- **SDK and REST API users.** You don't need to change any queries yourself. Upgrade the SDK or REST API to a release that supports indexer v20, and see its own changelog for anything that changed in its API. Some values it returns may still change, because the index now records them as the chain does. [Data Changes](./050-data-changes.mdx) lists those.
+
+## Key themes
+
+- **Every row records where it came from.** Each entity links to the `Event` that created it and the one that last updated it (`createdEvent`, `updatedEvent`). These replace `createdBlock`, `updatedBlock` and the `datetime`, `eventIdx` and `extrinsicIdx` copies that entities carried. Rows written before the first block link to a synthetic `seeding.Seeded` event, so no relation dangles.
+- **Event and call arguments are structured.** `Event.args` and `Extrinsic.args` hold every argument by name in one canonical JSON encoding, which replaces `attributesTxt`, `eventArg_0`–`eventArg_3`, `paramsTxt` and the special-purpose columns on `Event`. `Event.refs` lists every identity, account, asset, ticker and portfolio an event involves. It is indexed, so it is the way to find an entity's events.
+- **POLYX is a double-entry ledger.** `PolyxEntry` replaces `PolyxTransaction`: each balance movement writes one signed entry per account side, with its pool (free or reserved), kind and direction. `AccountBalance` keeps each account's running balance, locks and holds, and is matched to chain balances across every runtime, fees included.
+- **Assets are held at portfolio and account level.** `Holding` records a balance per portfolio, or per account for v8 account-level holders. `AssetHolder` is the per-identity total. `Nft` is one row per token. v8 allowances and NFT approvals are indexed.
+- **Identity keys are memberships with a time range.** `IdentityKey` records each key's membership of an identity with its role, permissions and the blocks it started and ended at. It replaces `Identity.secondaryAccounts`, `AccountHistory` and `Permissions`.
+- **Relations instead of plain strings.** Many columns that held an id as a string, such as `Leg.from`, `AssetTransaction.fromAccount` and `TrustedClaimIssuer.issuer`, are now relations to `Identity`, `Account`, `Portfolio` or `Asset`, and collections have declared names.
+- **New coverage:** corporate actions with their per-identity tax, ballots and votes, checkpoints and schedules, asset metadata, custom asset types, staking eras, elected validators and slashes, subsidies, NFT approvals and allowances, and confidential asset auditor and mediator keys.
+- **Start from any block.** An index started after genesis seeds its entities from chain storage at that block, so balances and holdings are correct from the first block it indexes. `IndexOrigin` records the start block and the fields whose value depends on history before it.
+- **Gaps are recorded.** `IndexerAnomaly` records anything the indexer could not read or reconcile, rather than guessing.
+
+## Quick migration checklist
+
+For consumers of the GraphQL API:
+
+1. **Replace block provenance.** Read `createdEvent { block { blockId datetime } }` instead of `createdBlock`, `datetime`, `eventIdx` or `extrinsicIdx`. Order chronologically with `CREATED_EVENT_ID_ASC` / `_DESC` instead of `CREATED_BLOCK_ID_*`.
+2. **Read relation ids through their `*Id` column.** A column that was a string id and is now a relation, such as `Leg.from` or `Identity.primaryAccount`, returns an object. Filter and select on `fromId` or `primaryAccountId`, or select fields through the relation.
+3. **Rename the renamed entities and collections.** `TickerExternalAgent*` becomes `AssetAgent*`, `polyxTransactions` becomes `polyxEntries`, `claimsByTargetId` becomes `claims`, and so on. The [full tables](./030-schema-changes.mdx) list every one.
+4. **Replace the removed entities.** `PortfolioMovement`, `NftHolder`, `AccountHistory`, `Permissions`, `ChildIdentity`, `ClaimScope`, `TransferManager`, `AssetPreApproval`, `EvmAccountMapping`, `FoundType` and `Debug` are gone. [Schema Changes](./030-schema-changes.mdx#removed-entities) gives each one's replacement.
+5. **Pad the numeric ids.** `Instruction`, `Venue`, `Proposal` and `Authorization` ids are zero-padded to 10 digits (`"0000014712"`, not `"14712"`).
+6. **Read event arguments from `args`.** Values are in the canonical encoding, not `toHuman()` text: integers and balances are decimal strings in base units, moments are milliseconds as decimal strings, accounts are SS58 and assets are their id. Find an entity's events with `refs: { contains: ["asset:0x…"] }`.
+7. **Check what values you depend on.** Claim ids include the issuer, asset-scoped claim scopes from v7 hold the asset id, memos decode as UTF-8 or hex, and a settlement records approvals per holder. [Data Changes](./050-data-changes.mdx) has the details.
+
+For operators: follow [Running the Indexer](./020-running-the-indexer.mdx).
+
+## In this guide
+
+- [Running the Indexer](./020-running-the-indexer.mdx): the database, images, runtime versions, and genesis or seeded starts.
+- [Schema Changes](./030-schema-changes.mdx): every removed, renamed and added entity, the field changes on each entity that remains, and the renamed collections.
+- [Query Migration](./040-query-migration.mdx): before-and-after queries for the common lookups.
+- [Data Changes](./050-data-changes.mdx): values that keep their field but change meaning, encoding or coverage.
