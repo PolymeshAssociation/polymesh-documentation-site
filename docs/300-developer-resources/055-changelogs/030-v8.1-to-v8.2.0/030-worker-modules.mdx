@@ -1,0 +1,80 @@
+---
+title: Worker Modules and Node Changes - v8.1.3 to v8.2.0
+description: Polymesh chain v8.2.0 adds the WorkerModules pallet, which stores Polymesh Worker protocol modules on chain so governance can upgrade them without a node release, and changes how nodes run the worker. What node operators and governance need to know.
+id: v8.1-to-v8.2.0-worker-modules
+slug: /development/changelogs/v8.1-to-v8.2.0/worker-modules
+sidebar_label: Worker Modules and Node Changes
+tags:
+  - migration
+  - changelog
+  - runtime
+  - node
+---
+
+This page covers the new `WorkerModules` pallet and the node-side changes to the Polymesh Worker. It is part of the [v8.1.3 → v8.2.0 changelog](./010-overview.mdx).
+
+**Audience:** node and validator operators, and governance participants. Application developers do not call this pallet, and need only the [summary](#what-integrators-need-to-change).
+
+---
+
+## Background: the Polymesh Worker
+
+Confidential-asset proofs are expensive to verify. The runtime hands them to the **Polymesh Worker**, a proof engine in the node, through a host function. The worker runs a **protocol module**, such as the DART verifier, on one of several backends: native code, PolkaVM or WASM. If a backend fails, the runtime verifies the proof itself. The runtime is always the authoritative verifier, so a node without a working backend still reaches the same result, only more slowly.
+
+Before v8.2.0, the protocol modules were built into the node binary. Changing a module meant a node release, and every operator had to upgrade before the change took effect.
+
+## The `WorkerModules` pallet
+
+`WorkerModules` (pallet index **60**, on Develop, Testnet and Mainnet) stores protocol modules on chain. The worker loads a protocol's modules from chain state, using the configuration that `ProtocolConfigHash` points to, so governance can upgrade a protocol without a node release.
+
+All four calls require **Root**, so on Testnet and Mainnet they go through governance:
+
+| Index | Call                             | Arguments                                                           | Effect                                                                               |
+| ----- | -------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| 0     | `register_protocol`              | `protocol_id: ProtocolId`, `metadata: ProtocolMetadata`             | Registers a protocol                                                                 |
+| 1     | `upload_protocol_module_code`    | `protocol: Protocol`, `code: BoundedVec<u8>`, `module_version: u32` | Stores module code (up to 3 MiB, optionally zstd-compressed) under its hash          |
+| 2     | `upload_protocol_module_context` | `protocol: Protocol`, `context: BoundedVec<u8>`                     | Stores module context (up to 2 MiB) under its hash                                   |
+| 3     | `upload_protocol_module_config`  | `config: ProtocolModuleConfig`                                      | Stores a configuration of up to 8 modules **and makes it the protocol's active one** |
+
+Code, context and configuration are stored by hash, and uploading the same item twice fails. A configuration may only refer to code and context that are already stored.
+
+A chain with no uploaded configuration keeps using the DART modules built into the node. That is the state of every network at the v8.2.0 upgrade.
+
+Module code uses backend module version 2, which stores code and context as SCALE-encoded byte vectors. Version 1 is still accepted, and its code is stored under a separate key that v8.0.x and v8.1.x nodes can read.
+
+The Develop runtime also includes a `WorkerTesting` pallet (index 200), used by the integration tests to exercise module upgrades. It is not present on Testnet or Mainnet.
+
+See the [Full Pallet API Reference](./090-pallet-api-reference.mdx#workermodules) for events, errors and storage.
+
+## Node operators
+
+### Upgrade the node with the runtime
+
+A v8.2.0 runtime only hands DART proofs to the worker if the node's worker is **version 2 or later**, which v8.2.0 nodes provide. On an older node, the runtime verifies the proofs itself. The node stays in consensus, but each confidential-asset transaction costs that node more CPU time when it builds or imports a block.
+
+Validators in particular should run a v8.2.0 node before the runtime upgrade is enacted.
+
+At the upgrade, and at any later upgrade that changes the DART protocol version, the pallet regenerates the DART parameters it caches for in-runtime verification. This makes the upgrade block do more work than usual.
+
+### Worker changes in the node
+
+- **Process isolation.** Native protocol modules now run in a child process of the node, not inside it.
+- **ARM64.** The native backend supports `aarch64` as well as `x86_64`. On other architectures, the worker runs modules in-process. The PolkaVM backend remains `x86_64`-only.
+- **Native modules are built with the node.** They are no longer committed as binaries.
+- **Sessions are tied to the runtime call.** The worker's session for a block is started when first needed and dropped with the runtime call. A request with an unknown session falls back to runtime verification instead of failing.
+- **`polymesh worker-self-test`.** This new subcommand loads and runs the embedded DART v1 native module, and exits non-zero if it fails. It is meant for testing a build or a host, not for production use.
+
+No new flags are needed to run a node.
+
+### Building from source
+
+Worker modules are now built reproducibly in a container (`worker/rebuild.sh`), and CI checks that the committed module artifacts match. Host functions can be selected at build time: `host_workers` (the default), `host_curves` or `no_host_fns`. The `worker-differential` feature, for testing only, runs every request through every available backend and logs the comparisons to the file named by `WORKER_DIFF_LOG`.
+
+## What integrators need to change
+
+| If you…                    | Do this                                                                                                           |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Run a node or validator    | Upgrade to the v8.2.0 node before the runtime upgrade.                                                            |
+| Index chain events         | Decode the four `WorkerModules` events. They are only emitted by governance actions.                              |
+| Participate in governance  | Expect proposals that call `WorkerModules`. A configuration upload switches the protocol to it in the same block. |
+| Build Polymesh from source | Expect native modules to be compiled during the build.                                                            |

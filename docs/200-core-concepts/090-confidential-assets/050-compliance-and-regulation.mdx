@@ -24,6 +24,32 @@ Notes:
 - **Scoped visibility:** They decrypt encrypted payloads for the assets they are assigned to.
 - **Key-privacy requirement:** Polymesh publishes an on-chain record mapping asset types to their auditor/mediator keys. If ciphertexts revealed which key was used, an observer could identify the asset type. The protocol therefore requires encryption schemes that hide both the message and which key was used (key-privacy), preventing asset-type leakage while keeping transaction amounts confidential.
 
+## Role gating
+
+Governance (Root) can require a claim before an identity takes one of three roles. Each requirement is a claim (type, scope and value) and a list of up to 2 trusted claim issuers; an identity meets it while it holds a matching, unexpired claim from one of them.
+
+| Role           | Checked when                                                                                                            |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `AssetCreator` | The issuer creates a confidential asset                                                                                 |
+| `Auditor`      | An asset is created or its keys are updated (for the identity owning each auditor key), and a shared key is distributed |
+| `Mediator`     | An asset is created or its keys are updated (for the identity owning each mediator account)                             |
+
+- `confidentialAssets::set_required_claim(role, claim, trusted_issuers)` sets a requirement, and `remove_required_claim(role)` removes it. With no requirement a role is open to everyone; with an **empty** issuer list it is closed to everyone.
+- If no `Mediator` requirement is set, mediators must meet the `Auditor` requirement.
+- An identity that fails a check gets `MissingRequiredClaim`.
+
+The roles are configured per network:
+
+| Network            | Roles                                                                                                                                                        |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Mainnet            | Closed until governance configures them. The default requirement is the claim `KnowYourCustomer` scoped to `Custom("DART:<Role>")`, with no trusted issuers. |
+| Testnet            | Open. Governance removes the requirements, so anyone can create assets and act as an auditor or mediator for experimentation.                                |
+| Development chains | Gated by the default claim, trusting the first Governance Council member as the issuer.                                                                      |
+
+### Shared auditor and mediator keys
+
+`confidentialAssets::distribute_encryption_key` registers a new encryption key to the caller and proves that its secret has been encrypted to up to 5 recipient encryption keys, so several parties can hold one auditor or mediator key. The caller and every recipient must meet the `Auditor` requirement, and each key can only be distributed once. A mediator's encryption key must be the mediator account's own key, or a shared key distributed to it.
+
 ## Receiver Affirmation
 
 Receivers explicitly accept or reject incoming assets before the incoming value becomes spendable.
@@ -53,6 +79,12 @@ Allows proving balance to any verifier without auditor decryption.
 - Counter-update transactions reduce counters associated with finalized legs so PoB can reference fewer historical items and leak less linkage.
 
 ## Operational Controls
+
+### Freezing a confidential asset
+
+`confidentialAssets::set_asset_frozen(asset_id, frozen)` freezes or unfreezes a whole confidential asset. The asset's issuer or Root can call it; Root takes precedence, so an issuer cannot lift or replace a Root freeze (`AssetFrozenByRoot`).
+
+A freeze stops **new settlements** of the asset: creating a settlement or instant settlement that names it fails with `AssetIsFrozen`. A settlement proof that hides the asset cannot use the frozen asset leaf, although proofs against an asset root from before the freeze remain usable until that root expires, up to 24 hours later. Settlements created before the freeze can still complete, and the issuer can still mint, register accounts and update keys.
 
 :::note Future Features
 

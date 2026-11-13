@@ -1,0 +1,100 @@
+---
+title: NFT Freezing Changelog - v8.1.3 to v8.2.0
+description: Polymesh chain v8.2.0 lets asset agents freeze individual NFTs for a holder. A frozen NFT cannot leave its holder by any route except a controller transfer, which unfreezes it. Also covers the more complete NFT transfer report.
+id: v8.1-to-v8.2.0-nft-freezing
+slug: /development/changelogs/v8.1-to-v8.2.0/nft-freezing
+sidebar_label: NFT Freezing
+tags:
+  - migration
+  - changelog
+  - runtime
+  - assets
+  - nft
+  - compliance
+---
+
+This page covers per-NFT freezes, added in v8.2.0. It is part of the [v8.1.3 → v8.2.0 changelog](./010-overview.mdx).
+
+**Audience:** NFT issuers and their agents, exchanges, custodians, indexers, and anyone whose code decides whether an NFT transfer will succeed. For the EVM side, see [Precompile Changes](./050-precompile-changes.mdx#nft-precompile).
+
+---
+
+## What changed
+
+v8.1 gave NFT collections two freeze levels: the whole collection (`Asset::freeze`) and a whole holder (`Asset::set_holder_frozen`). v8.2.0 adds a third, for individual NFTs:
+
+| Level              | Call                       | Effect                                           |
+| ------------------ | -------------------------- | ------------------------------------------------ |
+| Whole collection   | `Asset::freeze`            | No holder can transfer any NFT of the collection |
+| Whole holder       | `Asset::set_holder_frozen` | One holder cannot send any NFT of the collection |
+| **Individual NFT** | **`Nft::set_nfts_frozen`** | **One holder cannot send the named NFTs**        |
+
+This is the NFT counterpart of the partial balance freeze fungible assets got in v8.1. The three levels are independent: an NFT moves only if none of them applies.
+
+## `Nft::set_nfts_frozen`
+
+```rust
+fn set_nfts_frozen(holder: AssetHolder, nfts: NFTs, frozen: bool)
+```
+
+- `holder` is an account key or a portfolio, as for the other freezes.
+- `nfts` names the collection and up to `MaxNumberOfNFTsCount` NFT ids. Ids must not repeat.
+- `frozen` is `true` to freeze and `false` to unfreeze.
+
+The caller must be an agent of the collection with permission for the call. On success it emits `Nft::NFTsFrozenStatusUpdated { caller_did, holder, nfts, frozen }`.
+
+**A freeze belongs to a holder, not to the NFT.** It is stored per collection, holder and NFT id (`Nft::FrozenNFT`), mirroring ERC-7943. The consequences are:
+
+- A freeze can be set for a holder that does not hold the NFT yet. It applies when the NFT arrives.
+- A freeze does not travel with the NFT. If the NFT leaves the holder by controller transfer, the new holder is not frozen.
+
+**Validation.** A missing collection fails with `Nft::CollectionNotFound`, before the agent check. An empty list fails with `ZeroCount`, a list that is too long with `MaxNumberOfNFTsPerLegExceeded`, and a repeated id with `DuplicatedNFTId`. Freezing also requires every NFT to exist (`NFTNotFound`), and the holder to be valid, as for a holder freeze. Unfreezing skips those last two checks, so a freeze left on a redeemed NFT or a deleted portfolio can always be cleared.
+
+## Where a freeze is enforced
+
+A frozen NFT cannot leave its holder by any route except a controller transfer:
+
+| Route                                                                                    | Error                                   |
+| ---------------------------------------------------------------------------------------- | --------------------------------------- |
+| Settlement execution, `Nft::transfer_nft`, `Settlement::transfer_funds`, approval spends | `Nft::InvalidNFTTransferNFTIsFrozen`    |
+| Affirming an instruction, which locks the NFT (including `lock_instruction`)             | `Nft::NFTIsFrozen`                      |
+| Executing a settle-after-lock instruction                                                | `Nft::InvalidNFTTransferNFTIsFrozen`    |
+| `Portfolio::move_portfolio_funds`                                                        | `Portfolio::InvalidTransferNFTIsFrozen` |
+| `Nft::redeem_nft`, and `burn` on the NFT precompile                                      | `Nft::NFTIsFrozen`                      |
+
+A freeze applied after an instruction was affirmed, or after its mediators locked it, still blocks execution. Rejecting an instruction still releases the lock on a frozen NFT.
+
+**Transfer reports** (`Nft::nft_transfer_report`, the settlement `get_transfer_report` and execute-instruction reports, and `canTransfer` on the precompile) report a frozen NFT. They do so even when locked NFTs are being skipped, because only settlement locks can be skipped.
+
+## Controller transfers unfreeze
+
+`Nft::controller_transfer` and `Nft::controller_transfer_to` still take frozen NFTs, as they take NFTs from a frozen holder or collection. They now also **remove the freeze** on each NFT they take, emitting `NFTsFrozenStatusUpdated { frozen: false }` before the existing `NFTHoldingsUpdated` and `ControllerTransfer` / `ControllerTransferTo` events. If the transfer fails, the unfreeze is rolled back.
+
+## NFT transfer reports return every error
+
+`Nft::nft_transfer_report`, and the settlement reports that use it, used to stop at the first NFT that failed an ownership check. Fixing that error could then reveal another. The report now checks every NFT and returns each applicable error once, in any order:
+
+- `InvalidNFTTransferNFTNotOwned`
+- `InvalidNFTTransferNFTIsLocked`
+- `InvalidNFTTransferNFTIsFrozen`
+
+A report is empty in exactly the same cases as before. Only the list of errors in a non-empty report is longer.
+
+## Weights
+
+All `pallet-nft`, `pallet-portfolio` and `pallet-settlement` weights are regenerated. The changes integrators are most likely to notice:
+
+- `set_nfts_frozen` is charged per NFT.
+- `controller_transfer` and `controller_transfer_to` cost more per NFT, because they now include the unfreeze.
+- Transfer reports read one more storage item per NFT checked.
+- `move_portfolio_funds` is re-fitted. Small moves are much cheaper, but the worst case (10 fungible moves and 100 NFTs) costs more.
+
+## What integrators need to change
+
+| If you…                                              | Do this                                                                                                              |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Index NFT events                                     | Decode `Nft::NFTsFrozenStatusUpdated`. Track freezes per holder: a freeze stays on the holder after the NFT leaves.  |
+| Pre-check NFT transfers                              | Handle `InvalidNFTTransferNFTIsFrozen`, and expect a report to list several ownership errors.                        |
+| Map pallet errors to messages                        | Handle `Nft::InvalidNFTTransferNFTIsFrozen`, `Nft::NFTIsFrozen` and `Portfolio::InvalidTransferNFTIsFrozen`.         |
+| Act as an NFT issuer or agent                        | Use `set_nfts_frozen` to restrict single NFTs. Use a controller transfer to move a frozen NFT; it clears the freeze. |
+| Estimate fees for NFT, portfolio or settlement calls | Regenerate estimates against v8.2.0 metadata.                                                                        |

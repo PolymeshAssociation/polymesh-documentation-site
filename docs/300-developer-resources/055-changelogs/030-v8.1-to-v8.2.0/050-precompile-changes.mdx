@@ -1,0 +1,122 @@
+---
+title: Precompile Changes - v8.1.3 to v8.2.0
+description: Polymesh chain v8.2.0 completes ERC-7943 on both asset precompiles - supportsInterface and the required Transfer and Frozen events on the fungible precompile, per-token freezes on the NFT precompile - and changes the event order of forcedTransfer on both. Also covers setSymbol and NFT canTransfer fixes.
+id: v8.1-to-v8.2.0-precompile-changes
+slug: /development/changelogs/v8.1-to-v8.2.0/precompile-changes
+sidebar_label: Precompile Changes
+tags:
+  - migration
+  - changelog
+  - runtime
+  - smart-contracts
+  - evm
+---
+
+This page covers changes to the [fungible-asset](/development/smart-contracts/precompiles/fungible-asset) and [NFT](/development/smart-contracts/precompiles/non-fungible-asset) precompiles. It is part of the [v8.1.3 → v8.2.0 changelog](./010-overview.mdx).
+
+**Audience:** smart contract developers, EVM tooling and wallet integrators, and indexers that read EVM logs. The [Polymesh Runtime precompile](/development/smart-contracts/precompiles/polymesh-runtime) does not change.
+
+Precompile addresses do not change, and no method is removed. The `FungibleAssetStub.sol` and `NonFungibleAssetStub.sol` interfaces gain the new methods and events. Regenerate your ABI from them.
+
+:::warning Event order changes on both precompiles
+`forcedTransfer` now emits `Transfer` **before** `ForcedTransfer` on both precompiles. On the fungible precompile, v8.1.3 did not emit `Transfer` at all. On the NFT precompile, v8.1.3 emitted `ForcedTransfer` first. Indexers that depend on log order must be updated.
+:::
+
+---
+
+## Fungible-asset precompile
+
+### `supportsInterface` (ERC-165)
+
+The precompile now implements `supportsInterface(bytes4)`. It returns `true` for:
+
+| Interface          | Id           |
+| ------------------ | ------------ |
+| `IERC165`          | `0x01ffc9a7` |
+| `IERC20`           | `0x36372b07` |
+| `IERC7943Fungible` | `0x3edbb4c4` |
+
+and `false` for anything else. In v8.1.3 the selector was unknown, and the call reverted with `Panic(0x41)`. A contract can now detect ERC-7943 support by interface id. ERC-7943 does not require `IERC20` to be reported, but the precompile implements all six ERC-20 functions, as the ERC-7943 reference implementation does.
+
+### Frozen-balance events
+
+ERC-3643 and ERC-7943 report frozen-balance changes differently. ERC-3643 emits `TokensFrozen` or `TokensUnfrozen` with the **change**, and ERC-7943 emits `Frozen` with the **new total**. In v8.1.3 each method emitted only its own standard's event. Every method that changes a frozen balance now emits both, the ERC-3643 event first:
+
+| Method                                   | v8.1.3                            | v8.2.0                                                                                                            |
+| ---------------------------------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `freezePartialTokens(account, amount)`   | `TokensFrozen(account, amount)`   | `TokensFrozen(account, amount)`, then `Frozen(account, newTotal)`                                                 |
+| `unfreezePartialTokens(account, amount)` | `TokensUnfrozen(account, amount)` | `TokensUnfrozen(account, amount)`, then `Frozen(account, newTotal)`                                               |
+| `setFrozenTokens(account, amount)`       | `Frozen(account, amount)`         | `TokensFrozen` or `TokensUnfrozen` with the difference, **if the amount changes**, then `Frozen(account, amount)` |
+
+`setFrozenTokens` emits `Frozen` on every call, even when the amount does not change, as ERC-7943 and its reference implementation do. `freezePartialTokens` and `unfreezePartialTokens` emit their ERC-3643 event on every call, even for an amount of `0`, as T-REX does. `newTotal` is read back from storage after the call, so it always matches what is stored.
+
+### `forcedTransfer` emits `Transfer`
+
+ERC-7943 requires a forced transfer to emit the ERC-20 `Transfer` event, plus a `Frozen` event first if frozen tokens moved. `forcedTransfer` now emits, in order:
+
+1. `TokensUnfrozen(from, consumed)` and `Frozen(from, newTotal)`, **only if** the transfer consumed frozen tokens;
+2. `Transfer(from, to, amount)`;
+3. `ForcedTransfer(from, to, amount)`.
+
+In v8.1.3 it emitted only `ForcedTransfer`, so an indexer that tracked balances from `Transfer` logs missed every forced transfer.
+
+### `setSymbol` can change an existing symbol
+
+`setSymbol(symbol)` registers the ticker and links it to the asset, as before. Two cases now behave differently:
+
+- **The asset already has a ticker.** The current ticker is unlinked from the asset (`Asset::unlink_ticker_from_asset_id`) before the new one is linked, so the caller also needs permission to unlink. In v8.1.3, the call reverted with `AssetIsAlreadyLinkedToATicker`.
+- **The symbol is the asset's current ticker.** The call succeeds without changing anything, as long as the caller has permission to link a ticker to the asset. No registration fee is charged.
+
+### Weight
+
+Every read of a frozen balance is charged at its benchmarked weight. `forcedTransfer` reads the source's frozen balance before the transfer, and once more afterwards only if the source had frozen tokens.
+
+## NFT precompile
+
+### Per-token freezes
+
+The NFT precompile now implements the per-token freeze members of ERC-7943, backed by the new [`Nft::set_nfts_frozen`](./040-nft-freezing.mdx):
+
+```solidity
+event Frozen(address indexed account, uint256 indexed tokenId, bool indexed frozenStatus);
+
+function setFrozenTokens(address account, uint256 tokenId, bool frozenStatus) external returns (bool);
+function getFrozenTokens(address account, uint256 tokenId) external view returns (bool);
+```
+
+- `setFrozenTokens` freezes or unfreezes `tokenId` for `account`, and emits `Frozen`. The caller must be an agent of the collection with permission for `Nft::set_nfts_frozen`.
+- `getFrozenTokens` returns whether `tokenId` is frozen for `account`. It can be called in a read-only context.
+- A freeze belongs to the account, not the token: it can be set before the account holds the token, and does not follow the token to a new holder.
+
+A frozen token cannot be transferred, approved-spent, locked or burned. `burn` reverts with `NFTIsFrozen`, and `canTransfer` returns `false`.
+
+With these, the NFT precompile implements the whole ERC-7943 non-fungible interface.
+
+### `supportsInterface` reports ERC-7943
+
+`supportsInterface` now also returns `true` for `IERC7943NonFungible` (`0xbf1ef5fe`), in addition to `IERC165`, `IERC721` and `IERC721Metadata`.
+
+### `forcedTransfer` event order
+
+`forcedTransfer` now emits, in order:
+
+1. `Frozen(from, tokenId, false)`, **only if** the token was frozen for `from`;
+2. `Transfer(from, to, tokenId)`;
+3. `ForcedTransfer(from, to, tokenId)`.
+
+v8.1.3 emitted `ForcedTransfer` before `Transfer`. The new order matches the fungible precompile and the ERC-7943 reference implementation. As with `Nft::controller_transfer_to`, the transfer removes the freeze.
+
+### `canTransfer` between accounts of one identity
+
+`canTransfer(from, to, tokenId)` now gives the same answer as `Settlement::transfer_funds` when both addresses belong to the **same identity**. Compliance and transfer restrictions are not evaluated, because they do not apply within one identity. The asset freeze, holder freeze, per-token freeze and ownership still are. It returns `false` if `from` and `to` are the same holder. Between different identities it runs the full transfer report, as before.
+
+## What integrators need to change
+
+| If you…                                  | Do this                                                                                                                                                            |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Index EVM logs from `forcedTransfer`     | Expect `Transfer` before `ForcedTransfer` on both precompiles, preceded by frozen-balance events when frozen tokens moved. Avoid counting a forced transfer twice. |
+| Track fungible frozen balances from logs | Take the total from `Frozen`. `TokensFrozen` and `TokensUnfrozen` now accompany it on every frozen-balance change.                                                 |
+| Detect token standards with ERC-165      | Fungible assets now report ERC-165, ERC-20 and ERC-7943. NFT collections now also report ERC-7943.                                                                 |
+| Use `setSymbol`                          | Expect it to replace an existing ticker link, instead of reverting.                                                                                                |
+| Freeze NFTs from a contract              | Use `setFrozenTokens(account, tokenId, bool)` and read with `getFrozenTokens`.                                                                                     |
+| Build ABIs from the stubs                | Regenerate from the v8.2.0 `FungibleAssetStub.sol` and `NonFungibleAssetStub.sol`.                                                                                 |

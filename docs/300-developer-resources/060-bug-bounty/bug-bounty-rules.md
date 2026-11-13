@@ -75,7 +75,6 @@ For you to participate in the Program, we require that you:
 - Do not target our physical security measures (attempts against Polymesh property or data centers), or attempt to use social engineering (including phishing), spam, or distributed denial of service (DDoS) attacks.
 - Do not perform denial-of-service or resource-exhaustion testing against Mainnet, Testnet, public RPC nodes, or any infrastructure you do not control; such Vulnerabilities must be demonstrated only against local nodes or private networks under your control.
 - Do not engage in attacks that consume a substantial amount of POLYX which would be otherwise cost-prohibitive on Mainnet, or that degrade Testnet for other users.
-- Test Confidential Assets functionality (see Exhibit A) only on Testnet or on local/private networks under your control, as it is not yet deployed to Mainnet.
 - Do not exploit a Vulnerability except as necessary for responsible testing and reporting, and do not access, retain, or disclose any data belonging to others obtained in the course of your research.
 - Do not submit any intellectual property to us unless you have the right to grant us a license to use it.
 - Report Vulnerabilities only to us and not to anyone else. Do not publicly disclose Vulnerabilities until they have been addressed by Polymesh, especially for critical issues.
@@ -183,11 +182,11 @@ The following are in-scope of the Program, with any Bounty Payout determined as 
 - The [Polymesh node](https://github.com/PolymeshAssociation/Polymesh) Rust source code and associated [released binaries](https://github.com/PolymeshAssociation/Polymesh/releases/latest), as deployed in the **Mainnet runtime**. Vulnerabilities must be reproducible in the latest published release; issues present only on unreleased development branches are eligible for an acknowledgement or, at most, a discretionary Bounty Payout.
 - Polymesh Confidential Assets (the new P-DART-based confidential asset functionality introduced in Polymesh v8), comprising `pallet_confidential_assets` in the [Polymesh repository](https://github.com/PolymeshAssociation/Polymesh) and the [polymesh-dart](https://github.com/PolymeshAssociation/polymesh-dart) zero-knowledge proof library, subject to the conditions below.
 
-### CONFIDENTIAL ASSETS (PRE-MAINNET)
+### CONFIDENTIAL ASSETS
 
-Conditions applicable to Confidential Assets while it remains pre-Mainnet:
+Conditions applicable to Confidential Assets:
 
-1. Confidential Assets is deployed on **Testnet only**; it is not yet deployed to Mainnet. The polymesh-dart cryptography has completed its first external security audit. All testing must be performed on Testnet or on local/private networks under the Participant's control.
+1. The polymesh-dart cryptography has completed its first external security audit.
 2. Reports that restate limitations already documented in the [Confidential Assets documentation](/confidential-assets), or that duplicate findings already identified by Polymesh's commissioned external audit, are not eligible for a Bounty Payout.
 
 For the avoidance of doubt, the legacy confidential assets (v1 / MERCAT) functionality and the Polymesh Private repositories are out of scope (see below).

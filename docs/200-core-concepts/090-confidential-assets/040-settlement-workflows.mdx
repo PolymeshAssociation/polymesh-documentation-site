@@ -173,6 +173,8 @@ A settlement is created by defining the transaction legs (sender, receiver, asse
 
 The proof also uses accumulator membership to hide which specific asset type is being transferred, maintaining unlinkability while still verifying regulatory compliance.
 
+**Limits:** A settlement can have at most 10 legs (`SettlementTooManyLegs`), and creating a settlement for a [frozen asset](/confidential-assets/compliance-and-regulation#freezing-a-confidential-asset) fails with `AssetIsFrozen`.
+
 **Chain Recording:** Upon validation, the chain assigns a unique settlement identifier and records it in a pending state. Importantly, no balances are deducted yet—the sender's funds remain spendable until they explicitly affirm the settlement. The settlement remains "in transit" awaiting affirmations from required parties (sender, receiver, and mediator if applicable), enabling asynchronous participation where parties need not be online simultaneously.
 
 ## Find and decrypt a settlement
@@ -295,6 +297,10 @@ Applications and authorized participants can inspect settlement state via chain 
 - **Pending finalizations:** Returns how many post-execution steps (claims or counter updates) remain before finalization.
 
 These queries enable UIs and services to track lifecycle progression without revealing confidential values.
+
+:::note Finalized settlements are pruned
+Once a settlement is finalized only its `Finalized` status is kept, permanently, so the settlement proof cannot be replayed. Its encrypted legs, memo, affirmation status and counters are removed. Read or store anything you need before finalization. Rejected settlements are also finalized and pruned once their pending steps (such as sender reverts) are complete.
+:::
 
 ## Batchability and Multi-Party Transactions (MPT)
 

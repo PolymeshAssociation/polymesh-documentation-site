@@ -163,6 +163,8 @@ An agent can remove themselves from an asset using the `externalAgents::abdicate
 
 An authorized agent can remove another agent using the `externalAgents::remove_agent` extrinsic. The last `Full` agent cannot be removed.
 
+A removed agent (whether removed or abdicated) cannot be re-added with a `BecomeAgent` authorization issued before the removal; accepting one fails with `externalAgents::StaleAuthorization`. Send a new invitation instead.
+
 ## Default Permissions
 
 When an Identity creates an asset, that Identity is automatically assigned to the `Full` permission group for that asset as an agent.
