@@ -62,7 +62,7 @@ Before implementing subsidized accounts, be aware of these important limitations
 
 3. **Allowance Management**:
    - Subsidies have a maximum allowance that cannot be exceeded
-   - Once an allowance is exhausted, it must be renewed by the subsidizer before the key can transact again
+   - Once an allowance is exhausted, it must be renewed by the subsidizer before the key can submit subsidised transactions again. `relayer` calls such as `remove_subsidy` are always paid by the key itself, so they work even when the allowance is exhausted
 
 4. **Transaction Requirements**:
    - The subsidizer must have sufficient balance to cover the fees

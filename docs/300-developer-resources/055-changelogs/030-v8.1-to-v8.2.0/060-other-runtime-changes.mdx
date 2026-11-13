@@ -1,0 +1,115 @@
+---
+title: Other Runtime Changes - v8.1.3 to v8.2.0
+description: The smaller Polymesh chain v8.2.0 changes - a new transaction extension, stricter MultiSig, settlement, agent and authorization validation, committee voting fixes, permissioned validator removal, relayer subsidy ordering, metadata locking, and weight changes.
+id: v8.1-to-v8.2.0-other-runtime-changes
+slug: /development/changelogs/v8.1-to-v8.2.0/other-runtime-changes
+sidebar_label: Other Runtime Changes
+tags:
+  - migration
+  - changelog
+  - runtime
+---
+
+This page collects the v8.2.0 changes that are not covered by a topic page of their own. It is part of the [v8.1.3 → v8.2.0 changelog](./010-overview.mdx).
+
+**Audience:** wallet and signer developers, MultiSig and agent tooling, settlement integrators, validator operators and governance participants. Several of these changes make a call fail that v8.1.3 accepted. Each says which error to expect.
+
+---
+
+## New transaction extension
+
+Every runtime adds `CheckRelayerSubmitBatchedProofs` to its transaction extensions. It sits between `CheckMetadataHash` and `SetOrigin`:
+
+```text
+… ChargeTransactionPayment, StoreCallMetadata, CheckMetadataHash,
+  CheckRelayerSubmitBatchedProofs, SetOrigin, WeightReclaim
+```
+
+It only acts on `ConfidentialAssets::relayer_submit_batched_proofs` (see [Confidential Assets](./020-confidential-assets.mdx#the-batch-is-checked-before-it-enters-the-pool)). Its explicit and implicit data are both empty, so it adds **no bytes** to an extrinsic or to the signed payload, and `transaction_version` is unchanged.
+
+- **Metadata-driven signers** (polkadot.js, subxt, the Polymesh SDK) need no change once they load v8.2.0 metadata. Some may log a warning about an unknown extension until they are updated.
+- **Signers that check the extension list** against a fixed set, such as some custody and offline-signing tools, must add `CheckRelayerSubmitBatchedProofs` as an extension with empty data.
+
+## MultiSig
+
+- **Signer lists must not contain duplicates.** `create_multisig`, `add_multisig_signers` and `add_multisig_signers_via_admin` fail with the new `MultiSig::DuplicateSigners` if the same account appears twice.
+- **Removing a signer invalidates the authorizations pending for that key.** After `remove_multisig_signers` or `remove_multisig_signers_via_admin`, every authorization issued to the removed key before its removal is outdated and can no longer be accepted. This stops an outstanding invitation from letting a removed signer rejoin. It applies to **every** pending authorization targeting that key, not only MultiSig invitations. A new authorization issued after the removal works normally.
+
+## External agents and authorizations
+
+- **A removed agent cannot rejoin through an old invitation.** When an agent is removed from an asset, by `ExternalAgents::remove_agent` or `abdicate`, the chain records the current authorization id in the new `ExternalAgents::AgentAuthCutoff` storage. Accepting a `BecomeAgent` authorization for that asset with an id at or below the cutoff fails with the new `ExternalAgents::StaleAuthorization`. Issue a new invitation to re-add a removed agent.
+- **Outdated authorizations can be removed.** An authorization becomes outdated when its target key leaves an identity or, as above, a MultiSig. `Identity::remove_authorization` used to fail for an outdated authorization with `InvalidAuthorization`, leaving it in storage. It can now be removed, by the issuer or the target. Accepting it still fails.
+- **The issuer no longer pays for an outdated authorization.** For the calls whose fee the authorizer pays (such as `join_identity_as_key` and `accept_multisig_signer`), the chain no longer charges the authorizer for an outdated authorization. The caller pays, and acceptance fails.
+
+## Settlement and portfolios
+
+- **Instructions need at least one leg.** Every call that creates an instruction fails with the new `Settlement::InstructionHasNoLegs` if `legs` is empty. Without a leg, an instruction with no venue and no mediators had nobody able to reject or execute it.
+- **Memos are pruned with their instruction.** `Settlement::InstructionMemos` is now removed along with the instruction's other storage when it is pruned. Read the memo from the `InstructionCreated` event, or before the instruction is pruned.
+- **Affirmation counts include legs on both sides.** If the holders in an affirmation include both the sender and the receiver of a leg, that leg now also counts on the receiver side of the `AffirmationCount`. Before, it counted on the sender side only. If you call `affirm_instruction_with_count`, `affirm_with_receipts_with_count` or `reject_instruction_with_count`, get the count from the `get_affirmation_count` runtime API rather than computing it.
+- **NFTs cannot be sent to a portfolio that does not exist.** A settlement NFT transfer into a user portfolio that has not been created fails with `Portfolio::PortfolioDoesNotExist`, and the transfer reports list that error.
+- **Custody can only be accepted for a portfolio that exists.** `Portfolio::accept_portfolio_custody` fails with `Portfolio::PortfolioDoesNotExist` if the portfolio was deleted after the authorization was issued.
+
+See [NFT Freezing](./040-nft-freezing.mdx) for the settlement and portfolio changes related to per-NFT freezes.
+
+## Asset metadata
+
+A metadata value cannot be locked while it is empty. Locking an empty value through `Asset::set_asset_metadata_details`, or setting an empty value together with a lock through `Asset::set_asset_metadata`, fails with `Asset::AssetMetadataValueIsEmpty`.
+
+## Committees
+
+These changes apply to every committee, including the Governance Council and the technical and upgrade committees.
+
+- **A motion needs at least one vote.** A motion with no votes is never approved or rejected, even if the committee has no seats or a zero threshold. It stays open until it expires or a member votes on it.
+- **Removed members lose all their votes.** When several members leave a committee at once, the vote of every one of them is now removed from each open motion. Before, only the first removed member's vote was removed from a given motion, which could leave others' votes counted.
+- **`MemberRemoved` names the right member.** When `disable_member` also removes expired members of a group, the `MemberRemoved` event for each expired member now names that member. Before, it named the member being disabled.
+
+## Removing a permissioned validator chills its stashes
+
+`Validators::remove_permissioned_validator` now **chills every stash of the identity that is still validating**. Before, the stashes kept validating after their identity was removed, and a count of the identity's running validators could be wrong if the identity was later added back.
+
+The pallet tracks each identity's validating stashes in the new `Validators::IdentityValidatorStashes` storage, filled by a storage migration (`pallet-validators` 1 → 2) at the upgrade. The call's weight now depends on the number of stashes chilled. It declares the worst case and refunds the difference.
+
+## Relayer subsidies
+
+A subsidised key can now always submit `Relayer` calls, such as `remove_subsidy`, paying for them itself. Before, the subsidy's remaining allowance was checked before the call, so a key whose allowance was exhausted could not even remove its subsidy. Calls from other pallets are unchanged: they are subsidised if eligible, and rejected otherwise.
+
+## Weights
+
+- **`Asset::redeem`, `Asset::controller_transfer` and `Asset::controller_transfer_to`** now declare a weight that includes the worst case for updating the asset's statistics, and refund the unused part. Before, statistics updates were not limited by the declared weight. The upfront fee is higher, and the final fee reflects the work done.
+- **`CapitalDistribution::claim` and `CapitalDistribution::push_benefit`** now declare the worst-case cost of the currency's transfer checks, and refund the unused part.
+- **`Pips::propose`** now includes the scheduler's reads and writes in its benchmark.
+- **`pallet-nft`, `pallet-portfolio` and `pallet-settlement`** weights are regenerated. See [NFT Freezing](./040-nft-freezing.mdx#weights).
+- **`pallet-external-agents`, `pallet-multisig`, `pallet-pips`, `pallet-sto` and `pallet-validators`** weights are updated for the checks this release adds.
+- **`pallet-confidential-assets`** weights are regenerated for the new calls and for settlement finalization.
+
+Regenerate fee estimates against v8.2.0 metadata.
+
+## Storage migrations
+
+| Pallet                       | Storage version | What runs                                                                                                                                          |
+| ---------------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `pallet-validators`          | 1 → 2           | Fills `IdentityValidatorStashes` from the current validator set                                                                                    |
+| `pallet-confidential-assets` | 0 → 1           | Closes the confidential-asset roles, converts asset keys and rejects pending settlements. See [Confidential Assets](./020-confidential-assets.mdx) |
+
+The migrations from v8.1.x (Grandpa, `pallet-portfolio` and `pallet-nft`) do not run again, and their code has been removed.
+
+## Substrate dependencies
+
+The node and runtimes stay on the same Polymesh fork of Substrate. Dependencies are refreshed with `cargo update`, and the DART cryptography libraries move to their v1.0.0 releases. This does not change the chain API beyond what this changelog describes.
+
+## What integrators need to change
+
+| If you…                                     | Do this                                                                                                                    |
+| ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Sign extrinsics with a fixed extension list | Add `CheckRelayerSubmitBatchedProofs` with empty data.                                                                     |
+| Create MultiSigs or add signers             | De-duplicate signer lists. Handle `MultiSig::DuplicateSigners`.                                                            |
+| Remove MultiSig signers                     | Expect pending authorizations to the removed key to become unusable. Re-issue any that are still needed.                   |
+| Manage asset agents                         | Handle `ExternalAgents::StaleAuthorization`. Send a new `BecomeAgent` invitation after removing an agent.                  |
+| Clean up authorizations                     | Remove outdated authorizations with `Identity::remove_authorization`.                                                      |
+| Create instructions                         | Never send an empty leg list. Handle `Settlement::InstructionHasNoLegs`.                                                   |
+| Read instruction memos                      | Take them from `InstructionCreated` events.                                                                                |
+| Affirm with explicit counts                 | Use `get_affirmation_count` to build the `AffirmationCount`.                                                               |
+| Lock asset metadata                         | Set a non-empty value before locking it.                                                                                   |
+| Run governance tooling                      | Expect motions without votes to stay open.                                                                                 |
+| Operate validators                          | Expect `remove_permissioned_validator` to chill all your identity's validating stashes.                                    |
+| Estimate fees                               | Regenerate against v8.2.0 metadata. Expect higher upfront fees, with refunds, for the calls listed in [Weights](#weights). |

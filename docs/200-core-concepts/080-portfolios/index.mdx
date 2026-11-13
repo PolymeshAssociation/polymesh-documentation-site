@@ -167,6 +167,8 @@ A **partially** frozen portfolio can move only its unfrozen tokens. The amount a
 
 The same check applies when a portfolio's tokens are locked to fund something. A frozen portfolio cannot be the offering portfolio of a new [STO](/sto) (`sto::create_fundraiser`) or the source of a new capital distribution (`capitalDistribution::distribute`), and a partially frozen one can lock only its unfrozen tokens for either. An NFT held in a frozen portfolio cannot be locked into a settlement instruction, so it cannot be committed to an instruction while the freeze holds.
 
+Individual NFTs can also be frozen for a portfolio, with `nft::set_nfts_frozen`. A frozen NFT cannot be moved out of the portfolio, including with `portfolio::move_portfolio_funds`, which fails with `portfolio::InvalidTransferNFTIsFrozen`. See [Freezing Individual NFTs](/core/assets/nft#freezing-individual-nfts).
+
 Portfolio freezing is controlled by the asset's agents, not by the portfolio's owner or custodian. See [Freezing and Unfreezing Assets](/core/assets#freezing-and-unfreezing-assets).
 
 ### Querying Portfolio Information

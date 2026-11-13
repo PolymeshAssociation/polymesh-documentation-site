@@ -158,9 +158,9 @@ The holder must exist. An account key must be linked to an active identity, and 
 
 A holder's transferable balance becomes `balance − locked − frozen`, so a partially frozen holder can still move whatever is left. Freezing restricts **sending only**: a frozen holder can still receive the asset, and anything they receive is not automatically frozen.
 
-Freezing a holder works for both fungible assets and NFT collections. Freezing **part** of a balance is fungible-only — `asset::set_frozen_tokens`, `freeze_partial_tokens` and `unfreeze_partial_tokens` fail for an NFT collection with `Asset::UnexpectedNonFungibleToken`.
+Freezing a holder works for both fungible assets and NFT collections. Freezing **part** of a balance is fungible-only — `asset::set_frozen_tokens`, `freeze_partial_tokens` and `unfreeze_partial_tokens` fail for an NFT collection with `Asset::UnexpectedNonFungibleToken`. The NFT equivalent, is to freeze **individual NFTs** for a holder with `nft::set_nfts_frozen` — see [Freezing Individual NFTs](/core/assets/nft#freezing-individual-nfts).
 
-As with asset-wide freezing, controller transfers bypass holder freezes — an agent does not need to unfreeze a holder before seizing from them.
+As with asset-wide freezing, controller transfers bypass holder freezes — an agent does not need to unfreeze a holder before seizing from them. An NFT controller transfer also removes any per-NFT freeze on the NFTs it takes.
 
 A holder freeze is enforced on every route out of the holding, including moves between portfolios of the same identity and locking an NFT into a settlement instruction. It is also reflected in the transfer reports used to pre-check a transfer, so a report that comes back clean and a transfer that then succeeds agree with one another.
 

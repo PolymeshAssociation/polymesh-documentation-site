@@ -100,6 +100,17 @@ Once the chain validates the ZKP:
 - The specific user connection remains **cryptographically obscured**
 - No observer can determine which confidential account funded the fee
 
+## Relayer Submission Rules
+
+- **Batch proofs are bound to the fee payment.** Every proof in a relayer batch, including settlement creation and nested instant-settlement proofs, is verified with context derived from the fee payment's nullifier, so a batch cannot be replayed with a different payment. Build a batch by first choosing the fee account state and noting its nullifier, then generating every batch proof with that context (`polymesh_dart::relayer_batch_proof_context`), assembling the batch, and finally generating the fee payment proof from the same fee state.
+- **Payments are bound to the relayer.** A fee payment can only be submitted by the relayer it names, unless the payment proof is marked as broadcast.
+- **The batch is checked before it enters the transaction pool.** The `CheckRelayerSubmitBatchedProofs` transaction extension rejects a spent fee nullifier, a fee below the weight-derived transaction fee, and a relayer commission above 10 POLYX (`MaxRelayerCommission`).
+- **`relayerSubmitBatchedProofs` must be the top-level call.** Wrapping it in a batch, a MultiSig proposal or `relay_tx` fails with `RelayerCallMustBeTopLevel`.
+- **Fee-account roots expire after 4 hours.** Top-ups and fee payments must use a fee-account curve-tree root from the last 4 hours. Choose asset and account roots that stay valid longer than the fee-account root, so they do not expire while the relayer holds the transaction. If a root expires before inclusion, the transaction fails and the relayer pays its fee.
+- **Pricing.** The `ConfidentialAssetsApi::relayer_submit_batched_fee_info` runtime API returns the weight and fee of a relayer transaction for a given batch, so the fee can be set before the payment proof is generated.
+
+Once the fee payment succeeds, the relayer is reimbursed even if the batch itself then fails.
+
 ## Key Differences from Off-Chain Relayer Services
 
 | Aspect                   | Off-Chain Relayer                     | Anonymous Fee Proofs                         |

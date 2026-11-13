@@ -61,7 +61,7 @@ The Polymesh governance system is designed to further decentralise over time.
 
 ### Confidentiality
 
-Confidentiality allows Polymesh users to maintain privacy over certain aspects of their securities transactions. The [Confidential Assets](/confidential-assets/) pallet is designed to allow confidentiality within asset transfers using zero-knowledge proofs, while still supporting regulated-market workflows such as receiver affirmation and asset-specific auditor/mediator compliance access. It is live on Testnet as a pre-release feature and not yet available on Mainnet.
+Confidentiality allows Polymesh users to maintain privacy over certain aspects of their securities transactions. The [Confidential Assets](/confidential-assets/) pallet is designed to allow confidentiality within asset transfers using zero-knowledge proofs, while still supporting regulated-market workflows such as receiver affirmation and asset-specific auditor/mediator compliance access. It is live on Testnet and Mainnet.
 
 ### Compliance
 

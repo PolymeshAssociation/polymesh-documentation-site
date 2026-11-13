@@ -20,7 +20,7 @@ Before you start, please read this page in full together with the program [Terms
 
 :::info Program summary
 
-- **In scope:** the [Polymesh node](https://github.com/PolymeshAssociation/Polymesh) source code and released binaries, as deployed on Mainnet, including the audited Confidential Assets functionality (`pallet_confidential_assets` and the [polymesh-dart](https://github.com/PolymeshAssociation/polymesh-dart) cryptography library), currently live on Testnet ahead of its Mainnet deployment. See [Confidential Assets scope](#confidential-assets).
+- **In scope:** the [Polymesh node](https://github.com/PolymeshAssociation/Polymesh) source code and released binaries, as deployed on Mainnet, including the audited Confidential Assets functionality (`pallet_confidential_assets` and the [polymesh-dart](https://github.com/PolymeshAssociation/polymesh-dart) cryptography library). See [Confidential Assets scope](#confidential-assets).
 - **Responsible disclosure (no reward schedule):** client libraries and off-chain tooling, including the SDK, REST API, wallet extension, and Portal. See [Responsible disclosure](#responsible-disclosure-client-libraries-and-tooling).
 - **Rewards:** up to USD 40,000 for a critical vulnerability in Mainnet code. Each reward is set case by case by the impact you demonstrate, how realistic the attack is, the real-world exposure of the affected code, and the quality of your own research. There is no set amount or minimum for any severity. See [How rewards are determined](#how-rewards-are-determined).
 - **Submissions:** by email to [bugbounty@polymesh.network](mailto:bugbounty@polymesh.network), with the report in the body of the email.
@@ -39,11 +39,11 @@ The program covers vulnerabilities in the following code:
 | Asset                                                                                                                                                | Status                     | Notes                                                                                                                                         |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Polymesh node](https://github.com/PolymeshAssociation/Polymesh) ([latest release](https://github.com/PolymeshAssociation/Polymesh/releases/latest)) | **Full scope**             | The Rust source code and released binaries for the Polymesh chain node, as deployed in the **Mainnet runtime**.                               |
-| `pallet_confidential_assets` (in the [Polymesh repository](https://github.com/PolymeshAssociation/Polymesh))                                         | **Full scope**             | Audited; currently deployed on Testnet only, ahead of its Mainnet deployment. See [Confidential Assets scope](#confidential-assets) below.    |
-| [polymesh-dart](https://github.com/PolymeshAssociation/polymesh-dart) (P-DART zero-knowledge proof library)                                          | **Full scope**             | Audited; currently deployed on Testnet only, ahead of its Mainnet deployment. See [Confidential Assets scope](#confidential-assets) below.    |
+| `pallet_confidential_assets` (in the [Polymesh repository](https://github.com/PolymeshAssociation/Polymesh))                                         | **Full scope**             | Audited. See [Confidential Assets scope](#confidential-assets) below.                                                                         |
+| [polymesh-dart](https://github.com/PolymeshAssociation/polymesh-dart) (P-DART zero-knowledge proof library)                                          | **Full scope**             | Audited. See [Confidential Assets scope](#confidential-assets) below.                                                                         |
 | Client libraries and off-chain tooling: SDK, REST API, SubQuery indexer, signing managers, Portal, wallet extension                                  | **Responsible disclosure** | No reward schedule; discretionary payouts possible. See [Responsible disclosure](#responsible-disclosure-client-libraries-and-tooling) below. |
 
-A vulnerability must be reproducible in the **latest published release** (or, for Confidential Assets, the latest code deployed to Testnet). Issues that exist only on unreleased development branches are eligible for an acknowledgement or, at most, a discretionary payout, because they do not affect a live network.
+A vulnerability must be reproducible in the **latest published release**. Issues that exist only on unreleased development branches are eligible for an acknowledgement or, at most, a discretionary payout, because they do not affect a live network.
 
 ### Confidential Assets
 
@@ -52,9 +52,9 @@ Polymesh Confidential Assets (the new P-DART-based confidential asset functional
 - `pallet_confidential_assets` in the [Polymesh repository](https://github.com/PolymeshAssociation/Polymesh); and
 - the [polymesh-dart](https://github.com/PolymeshAssociation/polymesh-dart) library, which implements the underlying zero-knowledge proof system.
 
-:::info Pre-Mainnet status
+:::info Conditions
 
-1. Confidential Assets is deployed on **Testnet only**; it is not yet deployed to Mainnet. The polymesh-dart cryptography has completed its first external security audit. All testing must be performed on Testnet or on local/private networks under the Participant's control.
+1. The polymesh-dart cryptography has completed its first external security audit.
 2. Reports that restate limitations already documented in the [Confidential Assets documentation](/confidential-assets), or that duplicate findings already identified by Polymesh's commissioned external audit, are not eligible for a Bounty Payout.
 
 :::

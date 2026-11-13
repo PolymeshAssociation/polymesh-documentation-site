@@ -1,0 +1,92 @@
+---
+title: Polymesh Chain Changelog - v8.1.3 to v8.2.0
+description: Executive summary and migration notes for upgrading integrations from Polymesh chain v8.1.3 to v8.2.0 - Confidential Assets on Mainnet with DART v1.0.0, on-chain worker modules, per-NFT freezes, full ERC-7943 support in both asset precompiles, and a set of validation and weight fixes.
+id: v8.1-to-v8.2.0-overview
+slug: /development/changelogs/v8.1-to-v8.2.0
+sidebar_label: Overview
+tags:
+  - migration
+  - changelog
+  - runtime
+---
+
+This is the entry point for the Polymesh **v8.1.3 → v8.2.0** runtime changelog. `spec_version` moves from `8_001_030` to `8_002_000`, and `transaction_version` stays at `8`.
+
+v8.2.0 has three themes:
+
+- **Confidential Assets reach Mainnet.** The pallet moves to DART v1.0.0 and gains role gating, shared encryption keys, key rotation, and an asset-level freeze.
+- **Worker protocol modules move on chain.** A new `WorkerModules` pallet lets governance upgrade proof-verification modules without a node release.
+- **Per-NFT freezes complete ERC-7943 on both asset precompiles.** An agent can now freeze individual NFTs. The fungible precompile now advertises ERC-7943 through ERC-165 and emits the events the standard requires.
+
+A further set of smaller fixes tightens validation in MultiSig, settlement, external agents, authorizations and governance, and makes several weights more accurate.
+
+## Who this is for
+
+- **Confidential Assets integrators, provers and relayers.** Read [Confidential Assets](./020-confidential-assets.mdx) first. On Testnet, this release **breaks** proof formats, error indices and some call arguments. On Mainnet, the pallet is new, and every role stays closed until governance configures it. On Testnet, governance opens the roles right after the upgrade.
+- **Node and infrastructure operators.** Read [Worker Modules and Node Changes](./030-worker-modules.mdx). Upgrade the node binary along with the runtime, so that confidential-asset proofs are verified by the native worker rather than in the runtime. Validator operators should also note the change to [removing a permissioned validator](./060-other-runtime-changes.mdx#removing-a-permissioned-validator-chills-its-stashes).
+- **NFT issuers and their agents.** [NFT Freezing](./040-nft-freezing.mdx) is new: you can now freeze individual NFTs for a holder, not just a whole holder or collection.
+- **Smart contract developers and EVM indexers.** [Precompile Changes](./050-precompile-changes.mdx) covers `supportsInterface` on the fungible precompile, the new NFT freeze methods, and the **changed event order** of `forcedTransfer` on both precompiles.
+- **Exchanges, custodians, indexers.** The pallet API changes. Two pallets are new on Mainnet, along with a new call, events, errors and storage, and a new transaction extension. See the [Full Pallet API Reference](./090-pallet-api-reference.mdx) and the [migration checklist](#migration-checklist) below.
+- **MultiSig, agent and governance tooling.** [Other Runtime Changes](./060-other-runtime-changes.mdx) lists the validation fixes that can turn a previously accepted call into an error.
+
+## Key themes
+
+### Confidential Assets on Mainnet, and DART v1.0.0
+
+The `ConfidentialAssets` pallet (index 70) was Testnet-only in v8.0 and v8.1. v8.2.0 adds it to the Mainnet runtime and moves every network to **DART v1.0.0**, the version of the protocol intended for production. Along with the protocol upgrade it adds:
+
+- **Role gating.** Governance can require a claim before an identity may create a confidential asset, act as an auditor or act as a mediator.
+- **Shared encryption keys.** One auditor or mediator encryption key can be shared with up to 5 recipient keys.
+- **Key rotation.** An issuer can replace an asset's auditor and mediator keys.
+- **An asset-level freeze.** The issuer or governance can stop new settlements of an asset.
+- **Fee binding.** Relayer batches are bound to their fee payment, and fee-account roots now expire after 4 hours instead of 2 days.
+
+On Mainnet the roles start **closed**: no one can create a confidential asset, or be named as an auditor or mediator, until governance sets the required claims. On Testnet, governance plans to open all three roles immediately after the upgrade so anyone can experiment. See [Confidential Assets](./020-confidential-assets.mdx).
+
+### Worker protocol modules on chain
+
+Proofs are verified by the Polymesh Worker, which runs protocol modules natively, in PolkaVM or in WASM. Before v8.2.0 those modules shipped inside the node binary, so upgrading them needed a node release. The new **`WorkerModules`** pallet (index 60) stores module code, context and configuration on chain under Root control. The worker loads them from chain state, so governance can upgrade a protocol without a node release. See [Worker Modules and Node Changes](./030-worker-modules.mdx).
+
+### Per-NFT freezes
+
+v8.1 added freezes for a whole holder and, for fungible assets, for part of a balance. v8.2.0 adds the NFT equivalent of a partial freeze. An agent can freeze **individual NFTs** for a holder with the new `Nft::set_nfts_frozen` call. A frozen NFT cannot be transferred, settled, moved between portfolios, locked into an instruction or redeemed. A controller transfer still takes it, and unfreezes it. See [NFT Freezing](./040-nft-freezing.mdx).
+
+### ERC-7943 on both asset precompiles
+
+With per-NFT freezes in place, the NFT precompile implements ERC-7943's `setFrozenTokens`, `getFrozenTokens` and `Frozen`, and advertises `IERC7943NonFungible` through ERC-165. The fungible precompile gains `supportsInterface`, and its `forcedTransfer` now emits the ERC-20 `Transfer` event. Every call that changes a frozen balance now emits both the ERC-3643 and the ERC-7943 event. **On both precompiles, `forcedTransfer` now emits `Transfer` before `ForcedTransfer`.** See [Precompile Changes](./050-precompile-changes.mdx).
+
+### Validation and weight fixes
+
+Among the smaller changes, each of which can reject a call that v8.1.3 accepted:
+
+- MultiSig signer lists must not contain duplicates.
+- Settlement instructions must have at least one leg.
+- An agent removed from an asset cannot be re-added through an authorization issued before the removal.
+- A committee motion needs at least one vote to pass or fail.
+- Removing a permissioned validator now chills its validating stashes.
+
+See [Other Runtime Changes](./060-other-runtime-changes.mdx).
+
+## Migration checklist
+
+1. **Re-generate metadata-derived code.** `WorkerModules` is new on every network, and `ConfidentialAssets` is new on Mainnet. Calls, events, errors and storage are added to `MultiSig`, `Validators`, `Portfolio`, `Settlement`, `ExternalAgents` and `Nft`. `transaction_version` is unchanged at `8`. See the [Full Pallet API Reference](./090-pallet-api-reference.mdx).
+2. **Register the new transaction extension if your signer hard-codes the extension list.** `CheckRelayerSubmitBatchedProofs` is added to every runtime's transaction extensions, between `CheckMetadataHash` and `SetOrigin`. It encodes no bytes in the extrinsic or the signed payload, so metadata-driven signers need no change. Signers that check the list against a fixed set must accept it. See [Other Runtime Changes](./060-other-runtime-changes.mdx#new-transaction-extension).
+3. **Upgrade nodes with the runtime.** v8.2.0 runtimes verify confidential-asset proofs in the native worker only when the node's worker is version 2 or later. Older nodes stay in consensus but fall back to slower in-runtime verification. See [Worker Modules and Node Changes](./030-worker-modules.mdx#node-operators).
+4. **On Testnet, rebuild confidential-asset clients against DART v1.0.0.** Proofs, four call argument types and the error list change, and pending settlements are rejected at the upgrade. See [Confidential Assets](./020-confidential-assets.mdx#breaking-changes-on-testnet).
+5. **If you plan to use Confidential Assets on Mainnet**, expect asset creation and auditor and mediator registration to fail with `MissingRequiredClaim` until governance configures the required claims.
+6. **If you index EVM logs from `forcedTransfer`**, update for the new event order on both precompiles, and for the `Transfer` event the fungible precompile now emits. See [Precompile Changes](./050-precompile-changes.mdx).
+7. **If you index NFT events or pre-check NFT transfers**, handle `Nft::NFTsFrozenStatusUpdated` and the new frozen-NFT errors. NFT transfer reports now return every applicable ownership error, not only the first. See [NFT Freezing](./040-nft-freezing.mdx).
+8. **If you create MultiSigs or add signers**, de-duplicate the signer list, or handle `MultiSig::DuplicateSigners`.
+9. **If you create settlement instructions programmatically**, never send an empty leg list. It now fails with `Settlement::InstructionHasNoLegs`.
+10. **If you manage asset agents**, a `BecomeAgent` authorization issued before an agent's removal can no longer re-add them. Issue a new one. See [Other Runtime Changes](./060-other-runtime-changes.mdx#external-agents-and-authorizations).
+11. **If you read `Settlement::InstructionMemos`** for old instructions, note that a memo is now removed when its instruction is pruned.
+12. **Re-estimate fees.** NFT, portfolio and settlement weights are regenerated, and external agents, MultiSig, PIPs, STO, validators and confidential assets weights are updated. `Asset::redeem`, `Asset::controller_transfer`, `Asset::controller_transfer_to`, `CapitalDistribution::claim` and `CapitalDistribution::push_benefit` now declare a worst-case weight and refund the unused part. See [Other Runtime Changes](./060-other-runtime-changes.mdx#weights).
+
+## Storage migrations
+
+Two storage migrations run at the upgrade:
+
+- **`pallet-validators` 1 → 2** fills the new `IdentityValidatorStashes` map from the current validator set.
+- **`pallet-confidential-assets` 0 → 1** closes all three confidential-asset roles (unless a spec is already present), converts stored asset keys to the v1 format, and rejects settlements still pending. On Mainnet, where the pallet is new, it only closes the roles.
+
+The confidential-assets pallet also regenerates its cached DART parameters whenever the DART protocol version changes. No other pallet's storage version changes.

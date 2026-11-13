@@ -131,3 +131,5 @@ Identities can monitor their authorizations through several methods:
 :::info
 Authorization requests that have been consumed, rejected, expired, or revoked cannot be reused. A new authorization request must be created if needed.
 :::
+
+An authorization is **outdated** when its target key has since left an identity, or been removed as a MultiSig signer. An outdated authorization can no longer be accepted. It can still be removed with `identity::remove_authorization`, by the issuer or the target, and the issuer no longer pays the fee for an attempt to accept it.

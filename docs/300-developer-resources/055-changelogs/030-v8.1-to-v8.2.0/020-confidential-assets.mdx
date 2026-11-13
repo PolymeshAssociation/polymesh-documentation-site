@@ -1,0 +1,189 @@
+---
+title: Confidential Assets Changelog - v8.1.3 to v8.2.0
+description: Polymesh chain v8.2.0 adds Confidential Assets to Mainnet and moves every network to DART v1.0.0, with claim-gated roles, shared encryption keys, asset key rotation, an asset-level freeze, fee-bound relayer batches and settlement pruning. Includes the breaking changes for Testnet integrations.
+id: v8.1-to-v8.2.0-confidential-assets
+slug: /development/changelogs/v8.1-to-v8.2.0/confidential-assets
+sidebar_label: Confidential Assets
+tags:
+  - migration
+  - changelog
+  - runtime
+  - privacy
+  - confidential
+---
+
+This page covers the `ConfidentialAssets` pallet. It is part of the [v8.1.3 → v8.2.0 changelog](./010-overview.mdx).
+
+**Audience:** anyone building on [Confidential Assets](/confidential-assets): wallets and provers, asset issuers, auditors and mediators, relayers, and indexers. If you have never used Confidential Assets, read [Network availability](#network-availability) and [Role gating](#role-gating-with-required-claims), then go to the [Confidential Assets documentation](/confidential-assets).
+
+---
+
+## Network availability
+
+| Network | v8.1.3             | v8.2.0                                                                                         |
+| ------- | ------------------ | ---------------------------------------------------------------------------------------------- |
+| Mainnet | Not present        | Present at index 70. All roles closed until governance sets required claims.                   |
+| Testnet | Present, DART v0.1 | DART v1.0.0. Roles closed by the migration, then opened by governance right after the upgrade. |
+| Develop | Present, DART v0.1 | DART v1.0.0                                                                                    |
+
+On Testnet and Mainnet, the upgrade migration closes the asset creator, auditor and mediator roles (see [Role gating](#role-gating-with-required-claims)). A chain started from a v8.2.0 development chain spec (`--dev`, `testnet-dev`) instead installs a default claim requirement for each role, trusting the first Governance Council member's identity as the claim issuer.
+
+The pallet has the same index and constants on every network. The only exception is the `ci-runtime` test build, which shortens the curve-tree root ages to minutes.
+
+## DART v1.0.0
+
+The pallet verifies proofs from DART v1.0.0, the protocol version intended for production. v0.1 proofs are **not** accepted. Provers, wallets and relayers must move to DART v1.0.0 tooling.
+
+The worker gains a new `dart-v1` protocol module (PolkaVM, WASM and native backends). The DART v0 module is kept so that historical data can still be read. See [Worker Modules and Node Changes](./030-worker-modules.mdx).
+
+## Role gating with required claims
+
+Governance (Root) can now require a claim before an identity may take one of three roles:
+
+| `RoleKind`     | Checked when                                                                                                                 |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `AssetCreator` | The issuer creates a confidential asset                                                                                      |
+| `Auditor`      | An asset is created or its keys are updated, for the identity owning each auditor key. Also when a shared key is distributed |
+| `Mediator`     | An asset is created or its keys are updated, for the identity owning each mediator account                                   |
+
+A requirement is a `Claim` (type, scope and value) and a list of at most 2 trusted claim issuers (`MaxTrustedClaimIssuers`). An identity meets it when it holds a matching claim from one of those issuers that has not expired. Expiry is checked every time, not just when the claim is first used.
+
+- `ConfidentialAssets::set_required_claim(role, claim, trusted_issuers)` installs or replaces the requirement for a role and emits `RequiredClaimSet`.
+- `ConfidentialAssets::remove_required_claim(role)` removes it and emits `RequiredClaimRemoved`. **With no requirement, the role is open to everyone.**
+- An **empty** trusted-issuer list closes the role to everyone.
+- If no `Mediator` requirement is set, mediators must meet the `Auditor` requirement instead, so one requirement can cover both roles.
+
+Identities that fail a check get `MissingRequiredClaim`.
+
+:::warning Roles start closed
+The v8.2.0 upgrade migration installs, for each role that has no requirement, the role's default claim with an **empty** issuer list: `KnowYourCustomer` with scope `Custom("DART:AssetCreator")`, `Custom("DART:Auditor")` or `Custom("DART:Mediator")`. All three roles are closed until governance replaces them with `set_required_claim`. Until then, creating a confidential asset fails with `MissingRequiredClaim`.
+
+On **Testnet**, governance plans to open all three roles immediately after the upgrade, by calling `remove_required_claim` for each, so that anyone can experiment with confidential assets. On **Mainnet**, the roles stay closed until governance configures the required claims.
+:::
+
+## Shared encryption keys
+
+`ConfidentialAssets::distribute_encryption_key(proof)` registers a new encryption key to the caller and proves that its secret has been encrypted to each of a list of recipient encryption keys. This lets several parties hold one auditor or mediator key.
+
+- The caller and every recipient key's identity must meet the `Auditor` requirement.
+- The shared key must not already be registered, so each key is distributed once.
+- There must be at least one recipient (`NoKeyRecipients`) and at most 5 (`MaxSharedKeyRecipients`, `TooManySharedKeyRecipients`).
+- Recipients are stored in `SharedKeyRecipients`. There is no call to remove a recipient yet.
+- Emits `EncryptionKeyDistributed { caller_did, encryption_key, proof }`.
+
+A mediator is named by a pair: an account key and an encryption key. The encryption key must be either the account's own key or a shared key distributed to it (`EncryptionKeyNotShared` otherwise).
+
+## Updating an asset's keys
+
+`ConfidentialAssets::update_asset_keys(asset_id, mediators, auditors)` lets the asset's issuer replace its mediator and auditor key sets. The same registration and role-claim checks as asset creation apply. The call rewrites the asset's leaf in the asset curve tree and emits `AssetStateLeafUpdated`, which is now emitted after every asset leaf write.
+
+Settlements created before the update keep the keys they were created with. Proofs built against an older asset root stay valid until that root is older than `MaxAssetCurveTreeRootAge` (24 hours).
+
+## Freezing a confidential asset
+
+`ConfidentialAssets::set_asset_frozen(asset_id, frozen)` freezes or unfreezes a confidential asset. It can be called by the asset's issuer or by Root.
+
+- **Root takes precedence.** The issuer cannot unfreeze a Root freeze, or replace it with an issuer freeze (`AssetFrozenByRoot`). Root can change either.
+- The freeze authority is stored in `AssetFrozen` as `FreezeOrigin::Issuer` or `FreezeOrigin::Root`. Unfreezing removes the entry.
+- Successful changes emit `AssetFrozen { asset_id, freeze_origin }` or `AssetUnfrozen { asset_id, unfreeze_origin }`. Repeating a call in the current state does nothing.
+
+A freeze stops **new settlements** of the asset:
+
+- Creating a settlement, or an instant settlement, that names the asset fails with `AssetIsFrozen`.
+- A settlement proof that hides the asset cannot use the frozen asset leaf. However, a proof against an asset root from before the freeze stays usable until that root expires, up to 24 hours later.
+- Settlements created before the freeze can still be affirmed, executed and finalized.
+- The issuer can still mint, register accounts and update keys. Those operations keep the frozen state.
+
+This is an **asset-level** freeze. Freezing individual confidential accounts, and forced transfers, are not yet available.
+
+## Relayer fee payments
+
+### Batches are bound to their fee payment
+
+Every proof in a `relayer_submit_batched_proofs` batch, including settlement creation and nested instant-settlement proofs, is now verified with context bytes derived from the fee payment's nullifier. A proof generated for one fee payment cannot be replayed with a different one.
+
+Clients must therefore build a relayer batch in this order:
+
+1. Choose the fee account state and note its current nullifier.
+2. Generate every batch proof with the context derived from that nullifier.
+3. Assemble the batch.
+4. Generate the fee payment proof from the same fee account state.
+
+The context is the SCALE encoding of `(b"polymesh/dart/submission/v1", 1u8, fee_nullifier)`. DART v1.0.0 exposes it as `polymesh_dart::relayer_batch_proof_context`. Proofs submitted outside a relayer batch use no context, as before.
+
+A fee payment is bound to the relayer's own key unless the payment proof is marked as broadcast, in which case anyone can submit it and receive the fee.
+
+### The batch is checked before it enters the pool
+
+The new `CheckRelayerSubmitBatchedProofs` transaction extension runs before a batch reaches the transaction pool. It checks:
+
+- that the fee nullifier has not been spent;
+- that the fee covers the weight-derived transaction fee;
+- that the relayer commission does not exceed `MaxRelayerCommission` (10 POLYX).
+
+It also tags the pool entry with the fee nullifier, so only one transaction per fee payment can be pending. `relayer_submit_batched_proofs` must be the **top-level call** of its transaction. Wrapping it in a batch, a MultiSig proposal or `relay_tx` fails with `RelayerCallMustBeTopLevel`.
+
+At dispatch, the nullifier is checked again before anything else. A batch beaten to the nullifier by a competing transaction fails cheaply, without verifying the proof. As before, once the fee payment succeeds the relayer is paid even if the batch then fails.
+
+The new `ConfidentialAssetsApi::relayer_submit_batched_fee_info(batch)` runtime API returns the `weight` and `fee` of a `relayer_submit_batched_proofs` transaction for a given batch. Relayers and wallets can use it to set the fee before building the payment proof.
+
+### Fee-account roots expire after 4 hours
+
+`MaxFeeAccountCurveTreeRootAge` drops from 2 days to **4 hours** on Testnet and Mainnet. Fee-account top-ups and relayer payments must use a root from the last 4 hours.
+
+Pick asset and account roots that stay valid for longer than the fee-account root, so they do not expire while a relayer is holding the transaction. If a root expires before the transaction is included, the call fails and the relayer pays the transaction fee.
+
+## Settlements
+
+- **Leg limit.** Settlement creation rejects a proof with more than `MaxSettlementLegs` (10) legs, with `SettlementTooManyLegs`. In a batch, `SettlementLegCountMismatch` is raised when the leg count given with a proof does not match the settlement.
+- **Rejected settlements are finalized.** Once every pending step is done, a rejected settlement is now finalized like an executed one. Before, a rejected settlement could be left unfinalized.
+- **Finalization prunes settlement storage.** Only the `SettlementState` entry (`Finalized`) is kept, permanently, so the same settlement proof cannot be replayed. The legs, memo, affirmation status, pending counters and the new `LegMediators` entries are removed. **Read leg data before a settlement is finalized** if you need it later, or keep it off chain.
+- **Mediator affirmations in instant settlements** are now processed before the sender and receiver affirmations.
+
+## Breaking changes on Testnet
+
+Mainnet has no previous version of the pallet, so this section applies to Testnet and Develop only.
+
+### Proofs and call arguments
+
+Four calls keep their index but take a different argument type:
+
+| Index | Call                            | Change                                                    |
+| ----- | ------------------------------- | --------------------------------------------------------- |
+| 8     | `mediator_affirmation`          | `MediatorAffirmationProof` changes its definition         |
+| 16    | `submit_batched_proofs`         | `BatchedProof` variants gain fields                       |
+| 17    | `relayer_submit_batched_proofs` | `FeePaymentWithBatchedProofs` gains fields                |
+| 18    | `execute_instant_settlement`    | `InstantSettlementLegAffirmations` changes its definition |
+
+All other calls keep their arguments, but every proof must now come from DART v1.0.0.
+
+### Error indices shift
+
+`InsufficientFeePaymentAmount` (index 6) is **removed**. The fee floor is now checked by the transaction extension instead. Every error from index 7 to 45 moves down by one. For example, `InvalidFeePaymentProof` moves from 7 to 6, and `InvalidAffirmationStatusTransition` from 45 to 44. Twelve new errors take indices 45 to 56.
+
+If you decode `ConfidentialAssets` errors by index, regenerate from v8.2.0 metadata. Decoding by name is unaffected, apart from the removed error. See the [Full Pallet API Reference](./090-pallet-api-reference.mdx#confidentialassets) for the new list.
+
+### Storage
+
+- `Keys` keeps its key but changes its value type. The migration converts each asset's keys and rewrites its asset leaf, unfrozen.
+- `FeeAccountRegistrations` is removed.
+- `AssetFrozen`, `CachedDartParametersVersion`, `LegMediators`, `RelayerSubmitExtensionMarker`, `RequiredClaims` and `SharedKeyRecipients` are added.
+
+### Settlements in flight at the upgrade
+
+The migration **rejects every `Pending` settlement**, through the normal reject path. A rejected settlement with no pending steps is finalized and pruned. Senders who had already affirmed must revert their affirmation to recover the funds, as for any rejected settlement. Recreate any settlement you still need after the upgrade with DART v1.0.0 proofs.
+
+## What integrators need to change
+
+| If you…                                    | Do this                                                                                                                                                |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Generate proofs (wallet, prover, SDK)      | Move to DART v1.0.0. Regenerate types from v8.2.0 metadata.                                                                                            |
+| Create confidential assets                 | Hold the `AssetCreator` claim required on your network. Make sure each auditor and mediator holds its role's claim.                                    |
+| Run a relayer                              | Submit `relayer_submit_batched_proofs` as a top-level call, keep commission within 10 POLYX, and price batches with `relayer_submit_batched_fee_info`. |
+| Build relayer batches                      | Bind every proof to the fee nullifier, in the order above. Use fee-account roots less than 4 hours old.                                                |
+| Decode errors by index (Testnet)           | Regenerate. Indices 7 to 45 move down by one.                                                                                                          |
+| Read settlement legs or memos from storage | Read them before finalization. Only the `Finalized` status survives.                                                                                   |
+| Issue an asset                             | Use `set_asset_frozen` to stop new settlements, and `update_asset_keys` to rotate auditors and mediators.                                              |
+| Govern the network                         | Set the three role requirements with `set_required_claim` before Confidential Assets can be used.                                                      |
+
+See the [Full Pallet API Reference](./090-pallet-api-reference.mdx#confidentialassets) for signatures, events, errors and constants.

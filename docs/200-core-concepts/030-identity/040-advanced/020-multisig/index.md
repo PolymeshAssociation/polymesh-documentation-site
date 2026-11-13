@@ -61,6 +61,7 @@ When a multisig is created by calling `multisig::create_multisig`:
 When selecting signing keys for a multisig consider the following requirements:
 
 - Signing keys cannot be linked to other identities or multisigs
+- A signer list cannot contain the same key twice. `create_multisig`, `add_multisig_signers` and `add_multisig_signers_via_admin` fail with `multisig::DuplicateSigners` if it does
 
 ### Administration
 
@@ -94,6 +95,8 @@ The following configuration changes are possible:
 You cannot remove signers if it would cause the total number of signers to fall below the required number of approvals
 
 :::
+
+Removing a signer also invalidates every authorization that was pending for that key, so an outstanding invitation cannot be used to rejoin. Issue a new authorization if the key should be added back.
 
 #### Changing Required Signatures
 

@@ -1,0 +1,277 @@
+---
+title: Full Pallet API Reference - v8.1.3 to v8.2.0
+description: Pallet-by-pallet reference of every added and changed call, event, error, constant, storage item, transaction extension and runtime API between Polymesh chain v8.1.3 and v8.2.0, on Mainnet, Testnet and Develop.
+id: v8.1-to-v8.2.0-pallet-api-reference
+slug: /development/changelogs/v8.1-to-v8.2.0/pallet-api-reference
+sidebar_label: Full Pallet API Reference
+tags:
+  - migration
+  - changelog
+  - runtime
+  - metadata
+---
+
+Every structural API change between Polymesh chain **v8.1.3** and **v8.2.0**. It complements the narrative pages in the [v8.1.3 → v8.2.0 changelog](./010-overview.mdx). This reference was produced by comparing the v8.1.3 metadata of the live networks with the v8.2.0 metadata snapshots.
+
+**Scope:**
+
+- `transaction_version` is unchanged at `8`. Existing signing code needs no update, apart from the [new transaction extension](#transaction-extensions) for signers that hard-code the list.
+- **Mainnet** gains two pallets, `WorkerModules` (60) and `ConfidentialAssets` (70). **Testnet** and **Develop** gain `WorkerModules`, and their existing `ConfidentialAssets` pallet changes in ways that are **not backwards compatible**.
+- In every other pallet, everything is appended, so existing call, event and error indices are unchanged. Nothing is removed or renamed outside `ConfidentialAssets`.
+- `pallet-precompiles` adds nothing to metadata. Precompile changes are in [Precompile Changes](./050-precompile-changes.mdx).
+
+## Summary
+
+| Pallet                                    | Calls                        | Events         | Errors                                       | Constants          | Storage                                 |
+| ----------------------------------------- | ---------------------------- | -------------- | -------------------------------------------- | ------------------ | --------------------------------------- |
+| [ConfidentialAssets](#confidentialassets) | 5 added, 4 changed (Testnet) | 5 added        | 12 added, 1 removed, indices shift (Testnet) | 3 added, 1 changed | 6 added, 1 changed, 1 removed (Testnet) |
+| [WorkerModules](#workermodules)           | New pallet (4)               | New pallet (4) | New pallet (8)                               | —                  | New pallet (5)                          |
+| [ExternalAgents](#externalagents)         | —                            | —              | 1 added                                      | —                  | 1 added                                 |
+| [MultiSig](#multisig)                     | —                            | —              | 1 added                                      | —                  | —                                       |
+| [Nft](#nft)                               | 1 added                      | 1 added        | 2 added                                      | —                  | 1 added                                 |
+| [Portfolio](#portfolio)                   | —                            | —              | 1 added                                      | —                  | —                                       |
+| [Settlement](#settlement)                 | —                            | —              | 1 added                                      | —                  | —                                       |
+| [Validators](#validators)                 | —                            | —              | —                                            | —                  | 1 added                                 |
+
+On Mainnet, every `ConfidentialAssets` item is new. The "changed" and "removed" entries apply to Testnet and Develop.
+
+Storage versions: `pallet-validators` 1 → 2 and `pallet-confidential-assets` 0 → 1, both migrated automatically. See the [overview](./010-overview.mdx#storage-migrations).
+
+Several calls change behaviour or cost without a signature change. See [Behaviour changes without a signature change](#behaviour-changes-without-a-signature-change).
+
+---
+
+## ConfidentialAssets
+
+Pallet index **70**. New on Mainnet. See [Confidential Assets](./020-confidential-assets.mdx) for the behaviour, and the [Confidential Assets documentation](/confidential-assets) for how the calls fit together.
+
+### Calls
+
+The complete call list, for Mainnet integrators:
+
+| Index | Call                            | v8.2.0 change (Testnet)                      |
+| ----- | ------------------------------- | -------------------------------------------- |
+| 0     | `register_accounts`             |                                              |
+| 1     | `register_encryption_keys`      |                                              |
+| 2     | `create_asset`                  | Now checks role claims                       |
+| 3     | `register_account_assets`       |                                              |
+| 4     | `mint_asset`                    |                                              |
+| 5     | `create_settlement`             | Leg limit, frozen-asset check                |
+| 6     | `sender_affirmation`            |                                              |
+| 7     | `receiver_affirmation`          |                                              |
+| 8     | `mediator_affirmation`          | **Argument type changed**                    |
+| 9     | `sender_update_counter`         |                                              |
+| 10    | `sender_revert_affirmation`     |                                              |
+| 11    | `receiver_revert_affirmation`   |                                              |
+| 12    | `receiver_claim`                |                                              |
+| 13    | `batched_settlement`            |                                              |
+| 14    | `register_fee_accounts`         |                                              |
+| 15    | `topup_fee_accounts`            |                                              |
+| 16    | `submit_batched_proofs`         | **Argument type changed**                    |
+| 17    | `relayer_submit_batched_proofs` | **Argument type changed**; must be top-level |
+| 18    | `execute_instant_settlement`    | **Argument type changed**                    |
+| 19    | `instant_sender_affirmation`    |                                              |
+| 20    | `instant_receiver_affirmation`  |                                              |
+| 21    | `set_required_claim`            | **Added**                                    |
+| 22    | `remove_required_claim`         | **Added**                                    |
+| 23    | `distribute_encryption_key`     | **Added**                                    |
+| 24    | `update_asset_keys`             | **Added**                                    |
+| 25    | `set_asset_frozen`              | **Added**                                    |
+
+All proofs must come from DART v1.0.0, so every proof-carrying call needs new client code on Testnet, whether or not its argument type changed.
+
+The added calls:
+
+| Call                        | Arguments                                                                                                                              | Origin                  |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
+| `set_required_claim`        | `role: RoleKind`, `claim: Claim`, `trusted_issuers: BoundedVec<IdentityId>`                                                            | Root                    |
+| `remove_required_claim`     | `role: RoleKind`                                                                                                                       | Root                    |
+| `distribute_encryption_key` | `proof: KeyDistributionProof`                                                                                                          | Signed, `Auditor` claim |
+| `update_asset_keys`         | `asset_id: u32`, `mediators: BoundedBTreeMap<AccountPublicKey, EncryptionPublicKey>`, `auditors: BoundedBTreeSet<EncryptionPublicKey>` | Asset issuer            |
+| `set_asset_frozen`          | `asset_id: u32`, `frozen: bool`                                                                                                        | Asset issuer or Root    |
+
+`RoleKind` is `AssetCreator`, `Auditor` or `Mediator`. `FreezeOrigin` is `Issuer` or `Root`.
+
+### Events
+
+Added at the end of the enum:
+
+| Index | Event                      | Fields                                                                                         |
+| ----- | -------------------------- | ---------------------------------------------------------------------------------------------- |
+| 26    | `RequiredClaimSet`         | `role: RoleKind`, `claim: Claim`, `trusted_issuers: BoundedVec<IdentityId>`                    |
+| 27    | `RequiredClaimRemoved`     | `role: RoleKind`                                                                               |
+| 28    | `EncryptionKeyDistributed` | `caller_did: IdentityId`, `encryption_key: EncryptionPublicKey`, `proof: KeyDistributionProof` |
+| 29    | `AssetFrozen`              | `asset_id: u32`, `freeze_origin: FreezeOrigin`                                                 |
+| 30    | `AssetUnfrozen`            | `asset_id: u32`, `unfreeze_origin: FreezeOrigin`                                               |
+
+`AssetStateLeafUpdated` is now emitted after every asset leaf write, including key updates and freezes.
+
+### Errors
+
+**Testnet and Develop:** `InsufficientFeePaymentAmount` (previously index 6) is removed, and errors previously at indices 7 to 45 move down by one. Decoders that work by index must be regenerated.
+
+New errors, at the end of the list:
+
+| Index | Error                        | Raised when                                                            |
+| ----- | ---------------------------- | ---------------------------------------------------------------------- |
+| 45    | `MissingLegMediators`        | The mediators for a settlement leg are missing                         |
+| 46    | `EncryptionKeyMismatch`      | An encryption key does not match the key registered for the account    |
+| 47    | `MissingRequiredClaim`       | An identity lacks the claim required for a role                        |
+| 48    | `NoKeyRecipients`            | `distribute_encryption_key` names no recipients                        |
+| 49    | `TooManySharedKeyRecipients` | It names more than `MaxSharedKeyRecipients`                            |
+| 50    | `EncryptionKeyNotShared`     | A mediator's encryption key is neither its own nor shared with it      |
+| 51    | `AssetIsFrozen`              | A new settlement names a frozen asset                                  |
+| 52    | `AssetFrozenByRoot`          | The issuer tries to change a Root freeze                               |
+| 53    | `AssetIdOverflow`            | No more confidential asset ids are available                           |
+| 54    | `TooManyProofs`              | A registration or proof batch exceeds its limit                        |
+| 55    | `RelayerCallMustBeTopLevel`  | `relayer_submit_batched_proofs` is nested inside another call          |
+| 56    | `SettlementLegCountMismatch` | The leg count given with a batched proof does not match the settlement |
+
+### Constants
+
+| Constant                        | Value                   | Change                      |
+| ------------------------------- | ----------------------- | --------------------------- |
+| `MaxFeeAccountCurveTreeRootAge` | 14,400,000 ms (4 hours) | Was 172,800,000 ms (2 days) |
+| `MaxRelayerCommission`          | 10 POLYX                | Added                       |
+| `MaxSharedKeyRecipients`        | 5                       | Added                       |
+| `MaxTrustedClaimIssuers`        | 2                       | Added                       |
+
+Other limits are unchanged and identical on all three networks: at most 2 auditors and 2 mediators per asset, 10 legs per settlement, 10 proofs per batch, and root ages of 24 hours (assets) and 2 days (accounts).
+
+### Storage
+
+| Item                           | Shape                                                        | Change                                               |
+| ------------------------------ | ------------------------------------------------------------ | ---------------------------------------------------- |
+| `RequiredClaims`               | `RoleKind → RequiredClaim`                                   | Added                                                |
+| `SharedKeyRecipients`          | `EncryptionPublicKey → BoundedBTreeSet<EncryptionPublicKey>` | Added                                                |
+| `AssetFrozen`                  | `u32 → FreezeOrigin`                                         | Added                                                |
+| `LegMediators`                 | `(SettlementRef, u8) → LegMediatorKeys`                      | Added                                                |
+| `CachedDartParametersVersion`  | `ProtocolVersion`                                            | Added                                                |
+| `RelayerSubmitExtensionMarker` | `()`                                                         | Added (transient, used by the transaction extension) |
+| `Keys`                         | `u32 → AssetKeys`                                            | Value type changed (Testnet)                         |
+| `FeeAccountRegistrations`      |                                                              | Removed (Testnet)                                    |
+
+After finalization, a settlement keeps only its `SettlementState` entry. Its legs, memo, affirmation status, counters and `LegMediators` entries are removed.
+
+### Runtime API
+
+`ConfidentialAssetsApi::relayer_submit_batched_fee_info(batch: BatchedProofs) → RelayerSubmitBatchedFeeInfo { weight, fee }` returns the dispatch weight, including transaction extensions, and the full transaction fee of a `relayer_submit_batched_proofs` transaction for the batch.
+
+---
+
+## WorkerModules
+
+Pallet index **60**. New on every network. All calls require Root. See [Worker Modules and Node Changes](./030-worker-modules.mdx).
+
+### Calls
+
+| Index | Call                             | Arguments                                                           |
+| ----- | -------------------------------- | ------------------------------------------------------------------- |
+| 0     | `register_protocol`              | `protocol_id: ProtocolId`, `metadata: ProtocolMetadata`             |
+| 1     | `upload_protocol_module_code`    | `protocol: Protocol`, `code: BoundedVec<u8>`, `module_version: u32` |
+| 2     | `upload_protocol_module_context` | `protocol: Protocol`, `context: BoundedVec<u8>`                     |
+| 3     | `upload_protocol_module_config`  | `config: ProtocolModuleConfig`                                      |
+
+### Events
+
+| Event                           | Fields                                                                                        |
+| ------------------------------- | --------------------------------------------------------------------------------------------- |
+| `ProtocolRegistered`            | `protocol_id: ProtocolId`, `metadata: ProtocolMetadata`                                       |
+| `ProtocolModuleCodeUploaded`    | `protocol: Protocol`, `code: BoundedVec<u8>`, `code_hash: BackendCodeHash`                    |
+| `ProtocolModuleContextUploaded` | `protocol: Protocol`, `context: BoundedVec<u8>`, `context_hash: BackendContextHash`           |
+| `ProtocolModuleConfigUploaded`  | `protocol: Protocol`, `config: ProtocolModuleConfig`, `config_hash: ProtocolModuleConfigHash` |
+
+The code and context events carry the full uploaded bytes, up to several MiB.
+
+### Errors
+
+`ProtocolAlreadyRegistered`, `ProtocolNotRegistered`, `InvalidProtocolMetadata`, `ProtocolModuleCodeAlreadyExists`, `ProtocolModuleContextAlreadyExists`, `ProtocolModuleConfigAlreadyExists`, `ModuleCodeMissing`, `ModuleContextMissing`.
+
+### Storage
+
+| Item                 | Shape                                                         |
+| -------------------- | ------------------------------------------------------------- |
+| `Metadata`           | `ProtocolId → ProtocolMetadata`                               |
+| `ProtocolConfigHash` | `Protocol → ProtocolModuleConfigHash` (the active config)     |
+| `ProtocolConfig`     | `(Protocol, ProtocolModuleConfigHash) → ProtocolModuleConfig` |
+| `ProtocolCode`       | `(Protocol, BackendCodeHash) → BoundedVec<u8>`                |
+| `ProtocolContext`    | `(Protocol, BackendContextHash) → BoundedVec<u8>`             |
+
+Limits are set in the runtime: module code up to 3 MiB, context up to 2 MiB, and up to 8 modules per configuration.
+
+---
+
+## ExternalAgents
+
+| Kind    | Item                     | Detail                                                                                                   |
+| ------- | ------------------------ | -------------------------------------------------------------------------------------------------------- |
+| Error   | `StaleAuthorization` (8) | A `BecomeAgent` authorization was issued before the target was last removed as an agent of the asset     |
+| Storage | `AgentAuthCutoff`        | `(AssetId, IdentityId) → u64`: the authorization id at the time of the agent's last removal. Default `0` |
+
+## MultiSig
+
+| Kind  | Item                    | Detail                                                                                               |
+| ----- | ----------------------- | ---------------------------------------------------------------------------------------------------- |
+| Error | `DuplicateSigners` (25) | `create_multisig`, `add_multisig_signers` or `add_multisig_signers_via_admin` lists an account twice |
+
+## Nft
+
+| Kind    | Item                                 | Detail                                                                           |
+| ------- | ------------------------------------ | -------------------------------------------------------------------------------- |
+| Call    | `set_nfts_frozen` (8)                | `holder: AssetHolder`, `nfts: NFTs`, `frozen: bool`. Agent of the collection     |
+| Event   | `NFTsFrozenStatusUpdated` (7)        | `caller_did: IdentityId`, `holder: AssetHolder`, `nfts: NFTs`, `frozen: bool`    |
+| Error   | `InvalidNFTTransferNFTIsFrozen` (32) | A transfer, settlement execution or report includes an NFT frozen for the sender |
+| Error   | `NFTIsFrozen` (33)                   | Locking (affirming) or redeeming an NFT frozen for its holder                    |
+| Storage | `FrozenNFT`                          | `(AssetId, AssetHolder, NFTId) → bool`. Default `false`                          |
+
+See [NFT Freezing](./040-nft-freezing.mdx).
+
+## Portfolio
+
+| Kind  | Item                              | Detail                                                       |
+| ----- | --------------------------------- | ------------------------------------------------------------ |
+| Error | `InvalidTransferNFTIsFrozen` (24) | `move_portfolio_funds` includes an NFT frozen for the source |
+
+## Settlement
+
+| Kind  | Item                        | Detail                                 |
+| ----- | --------------------------- | -------------------------------------- |
+| Error | `InstructionHasNoLegs` (61) | An instruction is created with no legs |
+
+## Validators
+
+| Kind    | Item                       | Detail                                                                                                            |
+| ------- | -------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Storage | `IdentityValidatorStashes` | `(IdentityId, AccountId32) → ()`: the stashes of each identity that are validating. Filled by the 1 → 2 migration |
+
+---
+
+## Transaction extensions
+
+`CheckRelayerSubmitBatchedProofs` is added after `CheckMetadataHash` and before `SetOrigin`, on every runtime. Its explicit and implicit data are `()`, so it adds no bytes to the extrinsic or the signed payload. See [Other Runtime Changes](./060-other-runtime-changes.mdx#new-transaction-extension).
+
+## Runtime APIs
+
+`ConfidentialAssetsApi` is new, with one method, [`relayer_submit_batched_fee_info`](#runtime-api). No other runtime API changes its version or signature.
+
+The NFT transfer report behind `NFTApi` and the settlement report APIs now returns every applicable ownership error, rather than only the first. See [NFT Freezing](./040-nft-freezing.mdx#nft-transfer-reports-return-every-error).
+
+## Behaviour changes without a signature change
+
+| Call                                                                                                           | Change                                                                     |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `Nft::controller_transfer`, `Nft::controller_transfer_to`                                                      | Unfreeze the NFTs they take, emitting `NFTsFrozenStatusUpdated` first      |
+| `Nft::transfer_nft`, `Nft::redeem_nft`, `Settlement::*` affirm and execute, `Portfolio::move_portfolio_funds`  | Refuse NFTs frozen for the sender                                          |
+| `MultiSig::remove_multisig_signers`, `remove_multisig_signers_via_admin`                                       | Outdate pending authorizations for the removed keys                        |
+| `ExternalAgents::remove_agent`, `abdicate`                                                                     | Record an authorization cutoff for the removed agent                       |
+| `Identity::remove_authorization`                                                                               | Accepts outdated authorizations                                            |
+| `Settlement` affirmation counts                                                                                | Count a leg on both sides when the holders include its sender and receiver |
+| Settlement NFT transfers                                                                                       | Fail if the receiving portfolio does not exist                             |
+| `Portfolio::accept_portfolio_custody`                                                                          | Fails if the portfolio does not exist                                      |
+| `Asset::set_asset_metadata`, `set_asset_metadata_details`                                                      | Refuse to lock an empty value                                              |
+| Committee voting                                                                                               | A motion needs at least one vote; removed members lose all their votes     |
+| `Validators::remove_permissioned_validator`                                                                    | Chills the identity's validating stashes                                   |
+| Relayer subsidies                                                                                              | `Relayer` calls are self-paid before the subsidy allowance is checked      |
+| `Asset::redeem`, `controller_transfer`, `controller_transfer_to`, `CapitalDistribution::claim`, `push_benefit` | Declare worst-case weight and refund the difference                        |
+
+See [Other Runtime Changes](./060-other-runtime-changes.mdx) for each.
