@@ -21,6 +21,7 @@ What you can do here:
 - A Polymesh DID and signing key to submit transactions
 - A proof service (e.g., WASM library or remote prover) with your confidential account and encryption keys loaded
 - Auditor and/or mediator encryption keys if the asset requires compliance participants
+- The claims governance requires for each role: the `AssetCreator` claim on the issuer's DID, the `Auditor` claim on each auditor key's DID, and the `Mediator` (or, if none is set, `Auditor`) claim on each mediator's DID. See [Role gating](/confidential-assets/compliance-and-regulation#role-gating)
 
 ## 1) Create a confidential asset
 
@@ -61,6 +62,17 @@ Outcomes:
 
 - Public total supply increases; the issuer's new confidential balance is committed on-chain, and the spent state is prevented from reuse via its nullifier.
 - The old balance remains hidden; only the new commitment and proof validity are public.
+
+## 4) Update auditor and mediator keys (issuer only)
+
+The issuer can replace an asset's auditor and mediator key sets with `updateAssetKeys`. The same registration and role-claim checks as asset creation apply. The asset's leaf is rewritten and `AssetStateLeafUpdated` is emitted.
+
+- Settlements created before the update keep the keys they were created with.
+- Proofs built against an older asset root stay valid until that root is older than 24 hours.
+
+## 5) Freeze the asset (issuer or governance)
+
+`setAssetFrozen` stops new settlements of the asset without affecting settlements already in progress, minting, registration or key updates. See [Freezing a confidential asset](/confidential-assets/compliance-and-regulation#freezing-a-confidential-asset).
 
 ## Operational tips
 

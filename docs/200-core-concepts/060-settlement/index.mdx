@@ -153,7 +153,7 @@ Settlement instructions are composed of one or more **legs**, each representing 
 An instruction contains:
 
 - **Settlement type**: Determines execution behavior (SettleOnAffirmation, SettleOnBlock, etc.)
-- **One or more legs**: The actual asset transfers to be executed
+- **One or more legs**: The actual asset transfers to be executed. An instruction with no legs is rejected with `settlement::InstructionHasNoLegs`
 - **Optional venue**: Organizational grouping and signatory control for off-chain legs (see [Settlement Venues](/settlement/venues))
 - **Optional mediators**: Third-party validation entities (see [Settlement Mediators](/settlement/mediators))
 - **Optional dates**: Trade date and value date metadata

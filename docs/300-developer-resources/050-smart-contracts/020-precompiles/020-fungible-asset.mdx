@@ -76,7 +76,7 @@ The address is stable, computable offline, and identical on every network where 
 
 ## Interface
 
-The Solidity interface is `IFungibleAsset`, combining OpenZeppelin's `IERC20`, `IERC20Metadata`, and `IERC20Permit` with Polymesh, ERC-3643 and ERC-7943 extensions:
+The Solidity interface is `IFungibleAsset`, combining OpenZeppelin's `IERC20`, `IERC20Metadata`, and `IERC20Permit` with ERC-165, and with Polymesh, ERC-3643 and ERC-7943 extensions:
 
 The interface below is abridged for readability. The complete source, with NatSpec, is [`FungibleAssetStub.sol`](https://github.com/PolymeshAssociation/Polymesh/blob/mainnet/precompiles/src/interfaces/FungibleAssetStub.sol) — import it to call this precompile from a contract, or compile it (`solc --abi`, `forge inspect IFungibleAsset abi`) for an ABI to use with viem, ethers or web3. The runtime bytecode the precompile serves is [`FungibleAssetStub.bin`](https://github.com/PolymeshAssociation/Polymesh/blob/mainnet/precompiles/src/interfaces/FungibleAssetStub.bin).
 
@@ -85,6 +85,7 @@ interface IFungibleAsset {
     event Transfer(address indexed from, address indexed to, uint256 value);
     event Approval(address indexed owner, address indexed spender, uint256 value);
     event ForcedTransfer(address indexed from, address indexed to, uint256 amount);
+    event Frozen(address indexed account, uint256 amount);
 
     // ERC-20
     function totalSupply() external view returns (uint256);
@@ -118,6 +119,9 @@ interface IFungibleAsset {
     function canReceive(address account) external view returns (bool);
     function setFrozenTokens(address account, uint256 amount) external returns (bool);
     function getFrozenTokens(address account) external view returns (uint256);
+
+    // ERC-165
+    function supportsInterface(bytes4 interfaceId) external view returns (bool);
 
     // ERC-3643
     function pause() external;
@@ -165,16 +169,16 @@ Unlike the `mint(to, amount)` / `burn(from, amount)` shape common in OpenZeppeli
 
 ### ERC-7943 methods
 
-[ERC-7943](https://eips.ethereum.org/EIPS/eip-7943) (uRWA) defines a minimal interface for regulated, transfer-restricted tokens. All six of its functions and both of its events are implemented here, with the deviations noted in [Standards conformance](#standards-conformance).
+[ERC-7943](https://eips.ethereum.org/EIPS/eip-7943) (uRWA) defines a minimal interface for regulated, transfer-restricted tokens. All six of its functions and both of its events are implemented here, with the deviations noted in [Standards conformance](#standards-conformance). The precompile also advertises ERC-7943 through [ERC-165](#erc-165).
 
-| Method                             | Runs                                    | Notes                                                                                                                                                                             |
-| ---------------------------------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `canTransfer(from, to, value)`     | `Asset::asset_transfer_report`          | `view`. Runs the full transfer report — compliance rules, transfer restrictions and statistics, frozen state, balances — and returns `true` if it reports no errors.              |
-| `forcedTransfer(from, to, amount)` | `Asset::controller_transfer_to`         | Moves `amount` from `from` to `to`, bypassing compliance and frozen state. Caller must be an agent with controller-transfer permission. Emits `ForcedTransfer(from, to, amount)`. |
-| `canSend(account)`                 | `Asset::transfer_is_allowed_for_holder` | `view`. Whether the account may send this asset at all — asset existence, asset freeze, holder freeze, and the sender side of compliance. Takes no amount.                        |
-| `canReceive(account)`              | `Asset::transfer_is_allowed_for_holder` | `view`. Whether the account may receive this asset at all. Does **not** consider a holder freeze, which only restricts sending.                                                   |
-| `setFrozenTokens(account, amount)` | `Asset::set_frozen_tokens`              | Sets the account's frozen balance to exactly `amount`. Agent only. Emits `Frozen`.                                                                                                |
-| `getFrozenTokens(account)`         | reads the frozen balance                | `view`. The account's currently frozen balance. `0` when nothing is frozen.                                                                                                       |
+| Method                             | Runs                                    | Notes                                                                                                                                                                                                   |
+| ---------------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `canTransfer(from, to, value)`     | `Asset::asset_transfer_report`          | `view`. Runs the full transfer report — compliance rules, transfer restrictions and statistics, frozen state, balances — and returns `true` if it reports no errors.                                    |
+| `forcedTransfer(from, to, amount)` | `Asset::controller_transfer_to`         | Moves `amount` from `from` to `to`, bypassing compliance and frozen state. Caller must be an agent with controller-transfer permission. Emits `Transfer` then `ForcedTransfer` — see [Events](#events). |
+| `canSend(account)`                 | `Asset::transfer_is_allowed_for_holder` | `view`. Whether the account may send this asset at all — asset existence, asset freeze, holder freeze, and the sender side of compliance. Takes no amount.                                              |
+| `canReceive(account)`              | `Asset::transfer_is_allowed_for_holder` | `view`. Whether the account may receive this asset at all. Does **not** consider a holder freeze, which only restricts sending.                                                                         |
+| `setFrozenTokens(account, amount)` | `Asset::set_frozen_tokens`              | Sets the account's frozen balance to exactly `amount`. Agent only. Emits `Frozen`, preceded by `TokensFrozen` or `TokensUnfrozen` when the amount changes.                                              |
+| `getFrozenTokens(account)`         | reads the frozen balance                | `view`. The account's currently frozen balance. `0` when nothing is frozen.                                                                                                                             |
 
 `canTransfer` is the useful primitive for contracts that must branch on compliance instead of absorbing a revert — an AMM, escrow, or router can test a leg before committing to it:
 
@@ -211,16 +215,16 @@ If your integration probes `DOMAIN_SEPARATOR()` to decide whether to offer gasle
 
 ERC-3643 (T-REX) describes the administrative surface of a permissioned token. The precompile implements the subset below; these methods are agent-only unless noted, and each maps onto an existing Polymesh capability. The identity-registry, compliance-contract, batch-operation and recovery parts of ERC-3643 are **not** implemented — see [Standards conformance](#standards-conformance).
 
-| Method                                   | Runs                                                                  | Notes                                                                                      |
-| ---------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `pause()`                                | `Asset::freeze`                                                       | Halts every transfer of the asset. Emits `Paused`.                                         |
-| `unpause()`                              | `Asset::unfreeze`                                                     | Resumes transfers. Emits `Unpaused`.                                                       |
-| `setName(name)`                          | `Asset::rename_asset`                                                 | Renames the asset.                                                                         |
-| `setSymbol(symbol)`                      | `Asset::register_unique_ticker` then `Asset::link_ticker_to_asset_id` | Registers a **new** ticker to the caller's identity and links it to the asset — see below. |
-| `setAddressFrozen(account, freeze)`      | `Asset::set_holder_frozen`                                            | Freezes or unfreezes the account entirely for this asset. Emits `AddressFrozen`.           |
-| `freezePartialTokens(account, amount)`   | `Asset::freeze_partial_tokens`                                        | Freezes `amount` **in addition to** what is already frozen. Emits `TokensFrozen`.          |
-| `unfreezePartialTokens(account, amount)` | `Asset::unfreeze_partial_tokens`                                      | Releases `amount` from the frozen balance. Emits `TokensUnfrozen`.                         |
-| `isAgent(account)`                       | reads external agent membership                                       | `view`. `false` for an account with no identity.                                           |
+| Method                                   | Runs                                                                  | Notes                                                                                            |
+| ---------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `pause()`                                | `Asset::freeze`                                                       | Halts every transfer of the asset. Emits `Paused`.                                               |
+| `unpause()`                              | `Asset::unfreeze`                                                     | Resumes transfers. Emits `Unpaused`.                                                             |
+| `setName(name)`                          | `Asset::rename_asset`                                                 | Renames the asset.                                                                               |
+| `setSymbol(symbol)`                      | `Asset::register_unique_ticker` then `Asset::link_ticker_to_asset_id` | Registers a **new** ticker to the caller's identity and links it to the asset — see below.       |
+| `setAddressFrozen(account, freeze)`      | `Asset::set_holder_frozen`                                            | Freezes or unfreezes the account entirely for this asset. Emits `AddressFrozen`.                 |
+| `freezePartialTokens(account, amount)`   | `Asset::freeze_partial_tokens`                                        | Freezes `amount` **in addition to** what is already frozen. Emits `TokensFrozen`, then `Frozen`. |
+| `unfreezePartialTokens(account, amount)` | `Asset::unfreeze_partial_tokens`                                      | Releases `amount` from the frozen balance. Emits `TokensUnfrozen`, then `Frozen`.                |
+| `isAgent(account)`                       | reads external agent membership                                       | `view`. `false` for an account with no identity.                                                 |
 
 #### `setSymbol` registers a ticker
 
@@ -232,6 +236,8 @@ The consequences are worth planning for:
 - Registering charges the standard **ticker registration fee**, so the call costs POLYX beyond gas.
 - The ticker is at most **12 characters**; longer input reverts with `Invalid symbol; Ticker is too long`.
 - The caller needs permission to register a ticker and to link it, not merely agent rights over the asset.
+- `setSymbol` can **replace** a symbol. If the asset already has a ticker, it is unlinked from the asset (`Asset::unlink_ticker_from_asset_id`) before the new one is linked, so the caller also needs permission to unlink.
+- Passing the asset's **current** ticker succeeds without changing anything or charging the registration fee, provided the caller has permission to link a ticker to the asset.
 
 #### Freezing: relative and absolute
 
@@ -249,37 +255,58 @@ A transfer above that fails with `InsufficientBalance`; a transfer by a fully fr
 
 Polymesh applies freezes to a **holder**, which may be an account key or a portfolio. Only the account form has an EVM address, so these methods reach account holders only; portfolios must be frozen through the Substrate API. See [Freezing an individual holder](/core/assets#freezing-an-individual-holder).
 
+### ERC-165
+
+`supportsInterface(interfaceId)` returns `true` for:
+
+| Interface          | Id           |
+| ------------------ | ------------ |
+| `IERC165`          | `0x01ffc9a7` |
+| `IERC20`           | `0x36372b07` |
+| `IERC7943Fungible` | `0x3edbb4c4` |
+
+It returns `false` for everything else, including `IERC20Metadata`, `IERC20Permit` and ERC-3643, whose methods are present but not advertised.
+
 ## Standards conformance
 
 The precompile implements the ERC-20 interface in full, plus parts of ERC-3643 and ERC-7943. The table records where it falls short of each standard, so an integrator can tell what is safe to rely on.
 
-| Standard     | Implemented                                                                                                               | Known deviations                                                                                                                                                                                                                 |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **ERC-20**   | Core interface and metadata                                                                                               | Behavioural deviations only — see [ERC-20 conformance and deviations](#erc-20-conformance-and-deviations)                                                                                                                        |
-| **EIP-2612** | Declared in the ABI                                                                                                       | Not implemented; `permit`, `nonces` and `DOMAIN_SEPARATOR` revert                                                                                                                                                                |
-| **ERC-7943** | All six functions and both events                                                                                         | Not advertised through ERC-165; the standard's four custom errors are not raised; `forcedTransfer` does not emit `Transfer`; `canTransfer` returns `false` for excluded reasons; view functions can revert on out-of-range input |
-| **ERC-3643** | `pause`, `unpause`, `setName`, `setSymbol`, `isAgent`, `setAddressFrozen`, `freezePartialTokens`, `unfreezePartialTokens` | Identity registry, compliance contract, `onchainID`, batch operations and recovery are not implemented                                                                                                                           |
+| Standard     | Implemented                                                                                                               | Known deviations                                                                                                                                      |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ERC-20**   | Core interface and metadata                                                                                               | Behavioural deviations only — see [ERC-20 conformance and deviations](#erc-20-conformance-and-deviations)                                             |
+| **EIP-2612** | Declared in the ABI                                                                                                       | Not implemented; `permit`, `nonces` and `DOMAIN_SEPARATOR` revert                                                                                     |
+| **ERC-7943** | All six functions and both events; advertised through ERC-165                                                             | The standard's four custom errors are not raised; `canTransfer` returns `false` for excluded reasons; view functions can revert on out-of-range input |
+| **ERC-3643** | `pause`, `unpause`, `setName`, `setSymbol`, `isAgent`, `setAddressFrozen`, `freezePartialTokens`, `unfreezePartialTokens` | Identity registry, compliance contract, `onchainID`, batch operations and recovery are not implemented                                                |
 
-Four ERC-7943 points are worth spelling out, because each changes how a contract should be written:
+Two ERC-7943 points are worth spelling out, because each changes how a contract should be written:
 
-- **No ERC-165.** `IFungibleAsset` declares no `supportsInterface`, so a contract cannot detect ERC-7943 — or ERC-20 — by interface id. Assume the interface from the address range instead.
 - **No typed errors.** ERC-7943 defines `ERC7943CannotSend`, `ERC7943CannotReceive`, `ERC7943CannotTransfer` and `ERC7943InsufficientUnfrozenBalance`. Failures revert with `Error(string)` instead, so a `try`/`catch` cannot discriminate on the error type — match on the revert string, or pre-check with `canTransfer`.
-- **`forcedTransfer` emits only `ForcedTransfer`**, not the ERC-20 `Transfer` that the standard also requires. An indexer tracking balances from `Transfer` logs alone will miss a seizure; read `ForcedTransfer` as well.
 - **`canTransfer` is not purely a permission check.** It returns `false` for insufficient balance, granularity and overflow — which ERC-7943 says it must not — so a `false` result does not by itself mean the parties are ineligible. It can also revert for a `value` above `2^128-1` rather than returning `false`.
 
 ## Events
 
-| Event                                                                        | Emitted by                                                                 |
-| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `Transfer(address indexed from, address indexed to, uint256 value)`          | `transfer`, `transferFrom`, `mint` (`from` = `0x0`), `burn` (`to` = `0x0`) |
-| `Approval(address indexed owner, address indexed spender, uint256 value)`    | `approve`                                                                  |
-| `ForcedTransfer(address indexed from, address indexed to, uint256 amount)`   | `forcedTransfer`                                                           |
-| `Frozen(address indexed account, uint256 amount)`                            | `setFrozenTokens`                                                          |
-| `TokensFrozen(address indexed account, uint256 amount)`                      | `freezePartialTokens`                                                      |
-| `TokensUnfrozen(address indexed account, uint256 amount)`                    | `unfreezePartialTokens`                                                    |
-| `AddressFrozen(address indexed account, bool freeze, address indexed owner)` | `setAddressFrozen`                                                         |
-| `Paused(address userAddress)`                                                | `pause`                                                                    |
-| `Unpaused(address userAddress)`                                              | `unpause`                                                                  |
+| Event                                                                        | Emitted by                                                                              |
+| ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `Transfer(address indexed from, address indexed to, uint256 value)`          | `transfer`, `transferFrom`, `mint` (`from` = `0x0`), `burn` (`to` = `0x0`)              |
+| `Approval(address indexed owner, address indexed spender, uint256 value)`    | `approve`                                                                               |
+| `ForcedTransfer(address indexed from, address indexed to, uint256 amount)`   | `forcedTransfer`                                                                        |
+| `Frozen(address indexed account, uint256 amount)`                            | Every call that changes a frozen balance — carries the **new total**                    |
+| `TokensFrozen(address indexed account, uint256 amount)`                      | `freezePartialTokens`, `setFrozenTokens` — carries the **increase**                     |
+| `TokensUnfrozen(address indexed account, uint256 amount)`                    | `unfreezePartialTokens`, `setFrozenTokens`, `forcedTransfer` — carries the **decrease** |
+| `AddressFrozen(address indexed account, bool freeze, address indexed owner)` | `setAddressFrozen`                                                                      |
+| `Paused(address userAddress)`                                                | `pause`                                                                                 |
+| `Unpaused(address userAddress)`                                              | `unpause`                                                                               |
+
+ERC-3643 reports a frozen-balance change with `TokensFrozen`/`TokensUnfrozen` and the difference; ERC-7943 reports it with `Frozen` and the new total. Every method that changes a frozen balance emits both, the ERC-3643 event first:
+
+| Method                  | Events, in order                                                                                                                                   |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `freezePartialTokens`   | `TokensFrozen(account, amount)`, `Frozen(account, newTotal)`                                                                                       |
+| `unfreezePartialTokens` | `TokensUnfrozen(account, amount)`, `Frozen(account, newTotal)`                                                                                     |
+| `setFrozenTokens`       | `TokensFrozen` or `TokensUnfrozen` with the difference, only if the amount changes; then `Frozen(account, amount)`, always                         |
+| `forcedTransfer`        | `TokensUnfrozen(from, consumed)` and `Frozen(from, newTotal)`, only if the transfer consumed frozen tokens; then `Transfer`; then `ForcedTransfer` |
+
+`freezePartialTokens` and `unfreezePartialTokens` emit their ERC-3643 event even for an amount of `0`.
 
 These are EVM logs. The underlying `Asset` and `Settlement` pallets emit their normal Substrate events at the same time, so Substrate-side indexers see these transfers exactly as they see any other and need no precompile-specific handling.
 
@@ -324,7 +351,7 @@ These arrive wrapped as `Extrinsic returned an error: <name>`. The names below a
 
 Calling a selector the interface does not define returns an ABI-encoded `Panic(0x41)` — rendered by most tooling as "memory allocation error" — rather than a plain revert. This is upstream `pallet-revive` behaviour: calldata that fails to decode against the precompile's interface is reported as a panic.
 
-It matters if you probe for optional methods by calling them and catching the failure: a `try`/`catch` on a `Panic` behaves differently from one on an `Error(string)`, and the panic code is misleading about the cause. Prefer feature-detecting from a known interface version rather than by probing.
+It matters if you probe for optional methods by calling them and catching the failure: a `try`/`catch` on a `Panic` behaves differently from one on an `Error(string)`, and the panic code is misleading about the cause. Prefer feature-detecting with [`supportsInterface`](#erc-165) rather than by probing.
 
 ## ERC-20 conformance and deviations
 
@@ -453,3 +480,4 @@ The precompile serves a stub contract (`FungibleAssetStub`) whose ABI mirrors `I
 - [Fungible Assets](/core/assets/fungible) — the native asset model, including allowances
 - [Compliance](/compliance) and [Transfer Restrictions](/compliance/transfer-restrictions) — what `canTransfer` evaluates
 - [Direct Transfers](/settlement#direct-transfers-transfer_funds) — the settlement path behind `transfer`/`transferFrom`
+- [v8.1.3 → v8.2.0 changelog](/development/changelogs/v8.1-to-v8.2.0/precompile-changes) — `supportsInterface`, the frozen-balance events and the new `forcedTransfer` event order
