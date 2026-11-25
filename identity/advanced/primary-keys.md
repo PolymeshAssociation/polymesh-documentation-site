@@ -92,7 +92,8 @@ The rotation process can be done in two ways:
 :::note
 
 - During rotation, the current primary key remains in control until the process is complete. This ensures continuity of control over the identity.
-- When an authorization request of type `RotatePrimaryKey` is enacted, the old primary key is detached from the onchain identity, preventing it from transacting. Any remaining POLYX held on that key will be locked until the key is associated with a new identity.
+- When an authorization request of type `RotatePrimaryKey` is enacted, the old primary key is detached from the onchain identity. It can no longer perform identity or asset related transactions, but it keeps its POLYX and can still transfer and stake it, because POLYX does not require a DID.
+- A key can't be detached from an identity while it holds assets directly. Move any assets held on the old primary key's account before rotating.
 
 :::
 

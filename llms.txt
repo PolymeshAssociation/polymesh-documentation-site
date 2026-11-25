@@ -60,6 +60,7 @@ This file contains links to documentation sections following the llmstxt.org sta
 - [Governance](https://polymeshassociation.github.io/polymesh-documentation-site/governance.md): Platform Governance
 - [Polymesh Private](https://polymeshassociation.github.io/polymesh-documentation-site/polymesh-private.md): Overview of Polymesh Private environment and features
 - [Developer Tooling](https://polymeshassociation.github.io/polymesh-documentation-site/polymesh-private/developer-tooling.md): Developer tooling for Polymesh Private
+- [Post-Quantum Readiness](https://polymeshassociation.github.io/polymesh-documentation-site/post-quantum.md): How Polymesh is preparing its cryptography for quantum computing
 - [Glossary](https://polymeshassociation.github.io/polymesh-documentation-site/glossary.md): Term Definitions
 - [Core Concepts](https://polymeshassociation.github.io/polymesh-documentation-site/core-concepts.md): Key concepts and features of the Polymesh blockchain
 - [Local Development Environment](https://polymeshassociation.github.io/polymesh-documentation-site/development/tooling/local-setup.md): Run a complete Polymesh stack locally with Docker Compose, including the node, indexer, REST APIs, Vault, and optional Ethereum JSON-RPC and Blocks...

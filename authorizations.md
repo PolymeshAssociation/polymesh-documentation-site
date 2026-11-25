@@ -95,7 +95,7 @@ Authorization management is critical for identity security. Always verify author
 
 ### Fee Management
 
-For some authorization types, the accepting identity may not be able to hold POLYX and hence cannot pay the transaction fee to accept the authorization request. In these cases, the primary key of the identity that initiated the authorization request (the authorizer) pays the transaction fee when the authorization is accepted by the target.
+For some authorization types, the accepting key may not hold any POLYX yet, so it cannot pay the transaction fee to accept the authorization request. In these cases, the primary key of the identity that initiated the authorization request (the authorizer) pays the transaction fee when the authorization is accepted by the target.
 
 The following acceptance methods have their transaction fees paid by the authorizer's primary key:
 
