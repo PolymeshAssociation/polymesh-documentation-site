@@ -1,8 +1,8 @@
 ---
-title: Other Runtime Changes - v8.1.3 to v8.2.0
-description: The smaller Polymesh chain v8.2.0 changes - a new transaction extension, stricter MultiSig, settlement, agent and authorization validation, committee voting fixes, permissioned validator removal, relayer subsidy ordering, metadata locking, and weight changes.
-id: v8.1-to-v8.2.0-other-runtime-changes
-slug: /development/changelogs/v8.1-to-v8.2.0/other-runtime-changes
+title: Other Runtime Changes - v8.1.3 to v8.2.1
+description: The smaller Polymesh chain v8.2 changes - a new transaction extension, stricter MultiSig, settlement, agent and authorization validation, committee voting fixes, permissioned validator removal, relayer subsidy ordering, metadata locking, and weight changes.
+id: v8.1-to-v8.2.1-other-runtime-changes
+slug: /development/changelogs/v8.1-to-v8.2.1/other-runtime-changes
 sidebar_label: Other Runtime Changes
 tags:
   - migration
@@ -10,7 +10,7 @@ tags:
   - runtime
 ---
 
-This page collects the v8.2.0 changes that are not covered by a topic page of their own. It is part of the [v8.1.3 → v8.2.0 changelog](./010-overview.mdx).
+This page collects the v8.2 changes that are not covered by a topic page of their own. It is part of the [v8.1.3 → v8.2.1 changelog](./010-overview.mdx).
 
 **Audience:** wallet and signer developers, MultiSig and agent tooling, settlement integrators, validator operators and governance participants. Several of these changes make a call fail that v8.1.3 accepted. Each says which error to expect.
 
@@ -27,7 +27,7 @@ Every runtime adds `CheckRelayerSubmitBatchedProofs` to its transaction extensio
 
 It only acts on `ConfidentialAssets::relayer_submit_batched_proofs` (see [Confidential Assets](./020-confidential-assets.mdx#the-batch-is-checked-before-it-enters-the-pool)). Its explicit and implicit data are both empty, so it adds **no bytes** to an extrinsic or to the signed payload, and `transaction_version` is unchanged.
 
-- **Metadata-driven signers** (polkadot.js, subxt, the Polymesh SDK) need no change once they load v8.2.0 metadata. Some may log a warning about an unknown extension until they are updated.
+- **Metadata-driven signers** (polkadot.js, subxt, the Polymesh SDK) need no change once they load v8.2.1 metadata. Some may log a warning about an unknown extension until they are updated.
 - **Signers that check the extension list** against a fixed set, such as some custody and offline-signing tools, must add `CheckRelayerSubmitBatchedProofs` as an extension with empty data.
 
 ## MultiSig
@@ -80,22 +80,22 @@ A subsidised key can now always submit `Relayer` calls, such as `remove_subsidy`
 - **`Pips::propose`** now includes the scheduler's reads and writes in its benchmark.
 - **`pallet-nft`, `pallet-portfolio` and `pallet-settlement`** weights are regenerated. See [NFT Freezing](./040-nft-freezing.mdx#weights).
 - **`pallet-external-agents`, `pallet-multisig`, `pallet-pips`, `pallet-sto` and `pallet-validators`** weights are updated for the checks this release adds.
-- **`pallet-confidential-assets`** weights are regenerated for the new calls and for settlement finalization.
+- **`pallet-confidential-assets`** weights are regenerated for the new calls and for settlement finalization, and re-benchmarked again for DART v1.0.1 in v8.2.1.
 
-Regenerate fee estimates against v8.2.0 metadata.
+Regenerate fee estimates against v8.2.1 metadata.
 
 ## Storage migrations
 
-| Pallet                       | Storage version | What runs                                                                                                                                          |
-| ---------------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `pallet-validators`          | 1 → 2           | Fills `IdentityValidatorStashes` from the current validator set                                                                                    |
-| `pallet-confidential-assets` | 0 → 1           | Closes the confidential-asset roles, converts asset keys and rejects pending settlements. See [Confidential Assets](./020-confidential-assets.mdx) |
+| Pallet                       | Storage version | What runs                                                                                                                                                                                                                                                                   |
+| ---------------------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `pallet-validators`          | 1 → 2           | Fills `IdentityValidatorStashes` from the current validator set                                                                                                                                                                                                             |
+| `pallet-confidential-assets` | 0 → 1           | Ran at v8.2.0 on Testnet and Develop: closed the roles, converted asset keys and rejected pending settlements. Removed in v8.2.1. On Mainnet the pallet is new, and its upgrade hook only closes the roles. See [Storage migrations](./010-overview.mdx#storage-migrations) |
 
 The migrations from v8.1.x (Grandpa, `pallet-portfolio` and `pallet-nft`) do not run again, and their code has been removed.
 
 ## Substrate dependencies
 
-The node and runtimes stay on the same Polymesh fork of Substrate. Dependencies are refreshed with `cargo update`, and the DART cryptography libraries move to their v1.0.0 releases. This does not change the chain API beyond what this changelog describes.
+The node and runtimes stay on the same Polymesh fork of Substrate. Dependencies are refreshed with `cargo update`, and the DART cryptography libraries (`polymesh-dart`, `curve-trees`, `crypto` and `arkworks-algebra`) move to their v1.0.1 releases, pinned to immutable `dart-v1.0.1` tags. This does not change the chain API beyond what this changelog describes.
 
 ## What integrators need to change
 
@@ -112,4 +112,4 @@ The node and runtimes stay on the same Polymesh fork of Substrate. Dependencies 
 | Lock asset metadata                         | Set a non-empty value before locking it.                                                                                   |
 | Run governance tooling                      | Expect motions without votes to stay open.                                                                                 |
 | Operate validators                          | Expect `remove_permissioned_validator` to chill all your identity's validating stashes.                                    |
-| Estimate fees                               | Regenerate against v8.2.0 metadata. Expect higher upfront fees, with refunds, for the calls listed in [Weights](#weights). |
+| Estimate fees                               | Regenerate against v8.2.1 metadata. Expect higher upfront fees, with refunds, for the calls listed in [Weights](#weights). |

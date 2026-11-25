@@ -1,0 +1,97 @@
+---
+title: What Changed in v8.2.1 - Polymesh Chain Changelog
+description: The changes Polymesh chain v8.2.1 applies on top of v8.2.0 - Confidential Assets on DART v1.0.1, non-relayer batch proofs bound to the signing account, AccountStateUpdated and FeeAccountStateUpdated events, zero-amount affirmations, hardened asset-leaf and registration proofs, and Polymesh Worker protocol 1.0.1.
+id: v8.1-to-v8.2.1-v8.2.1-changes
+slug: /development/changelogs/v8.1-to-v8.2.1/v8.2.1-changes
+sidebar_label: What Changed in v8.2.1
+tags:
+  - migration
+  - changelog
+  - runtime
+  - confidential
+---
+
+This page is the delta from **v8.2.0 to v8.2.1**. It is part of the [v8.1.3 → v8.2.1 changelog](./010-overview.mdx).
+
+**Audience:** anyone who already runs v8.2.0 on Testnet, Develop or a private network. If you are upgrading from v8.1.3, as Mainnet is, you do not need this page. Every change below is already folded into the topic pages, so start from the [Overview](./010-overview.mdx).
+
+`spec_version` moves from `8_002_000` to `8_002_010`. `transaction_version` stays at `8`, so signing is unaffected.
+
+:::info Confidential Assets only
+Every runtime change in v8.2.1 is in the `ConfidentialAssets` pallet and the Polymesh Worker. Two events are appended, and two existing events are deprecated but still emitted. No call, error, constant or storage item is added, removed or changed, and proof wire formats are unchanged. Proofs must now come from the DART v1.0.1 prover, though, and non-relayer batches need a new context.
+:::
+
+---
+
+## DART v1.0.1
+
+Confidential Assets moves from DART v1.0.0 to **v1.0.1**. Proof wire formats are unchanged, but proofs from the v1.0.0 prover are not accepted. Rebuild every prover, wallet and relayer against DART v1.0.1.
+
+- **Zero-amount leg affirmations are accepted.** A sender or receiver can affirm a leg that moves no funds, to refresh its account commitment without a transfer.
+- **Asset-leaf proofs are hardened.** They prove the full-width asset leaf commitment and take the curve-tree height from the root, so a leaf with unused key slots cannot be misrepresented.
+- **Account registration is bound to the device seed.** Registration randomness is derived from the device master seed and bound to the new account commitment, so a caller cannot choose randomness its seed does not produce.
+- **Nullifiers follow the update action.** The prover and verifier derive a state update's nullifier from its `update_action` (see [below](#account-state-update-events)).
+
+The DART dependencies (`polymesh-dart`, `curve-trees`, `crypto` and `arkworks-algebra`) are pinned to immutable `dart-v1.0.1` tags.
+
+## Non-relayer batch proofs are bound to the signing account
+
+In v8.2.0, only relayer batches were bound to a context. In v8.2.1, `batched_settlement`, `submit_batched_proofs` and `execute_instant_settlement` verify **every** proof in the batch under a context derived from the account that signs the extrinsic:
+
+```text
+SCALE( b"polymesh/dart/submission/v1", 2u8, signer_account_id )
+```
+
+- This includes every nested proof: settlement creation, instant settlements and affirmations. A `BatchedProof::ExecuteInstantSettlement` inside `submit_batched_proofs` is bound to the signer as well.
+- Another account cannot submit the batch, or extract one of its proofs and submit it under its own origin. An account-bound proof also cannot be replayed through a direct extrinsic.
+- Proofs built without the context, as v8.2.0 required, now fail with `InvalidProof`.
+- The new Rust helper `pallet_confidential_assets::non_relayer_batch_proof_context(account)` returns the bytes. Build the proofs for the account that will sign the extrinsic.
+
+**Unchanged:** `relayer_submit_batched_proofs` is still bound to the fee payment's one-time nullifier, with tag `1u8`, so relayer clients only need the new prover. `create_settlement`, direct affirmations, minting and registration extrinsics are still verified with no context.
+
+See [Proof submission contexts](./020-confidential-assets.mdx#proof-submission-contexts).
+
+## Account-state update events
+
+Two events are appended to the `ConfidentialAssets` event enum. Each is emitted on every account or fee-account curve-tree leaf insert, immediately after the existing leaf event:
+
+| Index | Event                    | Fields                                                                                                               |
+| ----- | ------------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| 31    | `AccountStateUpdated`    | `leaf_index: u32`, `account_commitment: AccountStateCommitment`, `update_action: AccountStateUpdateAction`           |
+| 32    | `FeeAccountStateUpdated` | `leaf_index: u32`, `fee_account_commitment: FeeAccountStateCommitment`, `update_action: FeeAccountStateUpdateAction` |
+
+- `AccountStateUpdateAction`: `AccountAssetRegistration`, `AssetMinting`, `SenderAffirmation`, `ReceiverAffirmation`, `SenderUpdateCounter`, `ReceiverClaim`, `SenderRevertAffirmation`, `ReceiverRevertAffirmation`, `InstantSenderAffirmation`, `InstantReceiverAffirmation`.
+- `FeeAccountStateUpdateAction`: `FeeAccountRegistration`, `FeeAccountTopup`, `FeePayment`.
+
+Actions that consume an earlier state carry its nullifier, and registrations carry none. Indexers get a complete append-only record of the account and fee-account trees without decoding proofs. See [Account-state update events](./020-confidential-assets.mdx#account-state-update-events) for each variant's fields.
+
+`AccountStateLeafInserted` and `FeeAccountStateLeafInserted` are **deprecated** in favour of the new events. They are still emitted unchanged, so existing integrations keep working.
+
+## Polymesh Worker protocol 1.0.1
+
+The `polymesh-worker-protocol-dart-v1` protocol is bumped to **1.0.1**. Its native, PolkaVM, WASM and testing modules are rebuilt and embedded in the v8.2.1 node.
+
+- The release configuration now lists three modules: PolkaVM (module version 2), WASM (module version 2) and native (module version 1). The uncompressed `module_version 1` entries are dropped, and the DART v0 `0.1.0` configuration drops its `module_version 1` entries too.
+- The worker host interface is unchanged at version 2.
+- A version-2 worker loads only the protocol version the runtime requests. While no 1.0.1 configuration is stored on chain, a **v8.2.0 node** has no matching module and falls back to slower in-runtime verification. It stays in consensus.
+
+**Upgrade nodes, and validators in particular, to v8.2.1 before the runtime upgrade is enacted.** See [Worker Modules and Node Changes](./030-worker-modules.mdx#node-operators).
+
+## Runtime, migration and weights
+
+- At the upgrade, the pallet regenerates its cached DART parameters, since they were generated by DART v1.0.0. In-runtime fallback verification then uses parameters that match the v1.0.1 modules. The upgrade block does more work than usual.
+- The `ConfidentialAssets` storage version stays at 1. The v8.2.0 v0 → v1 migration is **removed**. A network that still has Confidential Assets data from v8.1.x or earlier must upgrade to v8.2.0 before v8.2.1.
+- Confidential-asset weights are re-benchmarked for DART v1.0.1. Regenerate fee estimates for confidential-asset calls.
+
+## What integrators need to change
+
+| If you…                                                                              | Do this                                                                                                                                         |
+| ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Generate Confidential Assets proofs                                                  | Move to the DART v1.0.1 prover.                                                                                                                 |
+| Submit `batched_settlement`, `submit_batched_proofs` or `execute_instant_settlement` | Build every proof in the batch with `non_relayer_batch_proof_context(signer)`, for the account that will sign. Expect `InvalidProof` otherwise. |
+| Run a relayer                                                                        | Move to the DART v1.0.1 prover. Batch binding is unchanged.                                                                                     |
+| Index confidential accounts or fee accounts                                          | Decode `AccountStateUpdated` and `FeeAccountStateUpdated`. Plan to stop relying on the deprecated `*LeafInserted` events.                       |
+| Run a node or validator                                                              | Upgrade to the v8.2.1 node before the runtime upgrade.                                                                                          |
+| Estimate confidential-asset fees                                                     | Regenerate against v8.2.1 metadata.                                                                                                             |
+
+See the [Full Pallet API Reference](./090-pallet-api-reference.mdx#confidentialassets) for the complete `ConfidentialAssets` API.

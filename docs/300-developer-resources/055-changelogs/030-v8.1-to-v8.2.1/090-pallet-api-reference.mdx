@@ -1,8 +1,8 @@
 ---
-title: Full Pallet API Reference - v8.1.3 to v8.2.0
-description: Pallet-by-pallet reference of every added and changed call, event, error, constant, storage item, transaction extension and runtime API between Polymesh chain v8.1.3 and v8.2.0, on Mainnet, Testnet and Develop.
-id: v8.1-to-v8.2.0-pallet-api-reference
-slug: /development/changelogs/v8.1-to-v8.2.0/pallet-api-reference
+title: Full Pallet API Reference - v8.1.3 to v8.2.1
+description: Pallet-by-pallet reference of every added and changed call, event, error, constant, storage item, transaction extension and runtime API between Polymesh chain v8.1.3 and v8.2.1, on Mainnet, Testnet and Develop.
+id: v8.1-to-v8.2.1-pallet-api-reference
+slug: /development/changelogs/v8.1-to-v8.2.1/pallet-api-reference
 sidebar_label: Full Pallet API Reference
 tags:
   - migration
@@ -11,7 +11,7 @@ tags:
   - metadata
 ---
 
-Every structural API change between Polymesh chain **v8.1.3** and **v8.2.0**. It complements the narrative pages in the [v8.1.3 → v8.2.0 changelog](./010-overview.mdx). This reference was produced by comparing the v8.1.3 metadata of the live networks with the v8.2.0 metadata snapshots.
+Every structural API change between Polymesh chain **v8.1.3** and **v8.2.1**. It complements the narrative pages in the [v8.1.3 → v8.2.1 changelog](./010-overview.mdx). This reference was produced by comparing the v8.1.3 metadata of the live networks with the v8.2.0 metadata snapshots, then adding the v8.2.1 changes. Items new in v8.2.1 are marked **(v8.2.1)**; the v8.2.0 → v8.2.1 delta is summarized in [What Changed in v8.2.1](./080-v8.2.1-changes.mdx).
 
 **Scope:**
 
@@ -24,7 +24,7 @@ Every structural API change between Polymesh chain **v8.1.3** and **v8.2.0**. It
 
 | Pallet                                    | Calls                        | Events         | Errors                                       | Constants          | Storage                                 |
 | ----------------------------------------- | ---------------------------- | -------------- | -------------------------------------------- | ------------------ | --------------------------------------- |
-| [ConfidentialAssets](#confidentialassets) | 5 added, 4 changed (Testnet) | 5 added        | 12 added, 1 removed, indices shift (Testnet) | 3 added, 1 changed | 6 added, 1 changed, 1 removed (Testnet) |
+| [ConfidentialAssets](#confidentialassets) | 5 added, 4 changed (Testnet) | 7 added        | 12 added, 1 removed, indices shift (Testnet) | 3 added, 1 changed | 6 added, 1 changed, 1 removed (Testnet) |
 | [WorkerModules](#workermodules)           | New pallet (4)               | New pallet (4) | New pallet (8)                               | —                  | New pallet (5)                          |
 | [ExternalAgents](#externalagents)         | —                            | —              | 1 added                                      | —                  | 1 added                                 |
 | [MultiSig](#multisig)                     | —                            | —              | 1 added                                      | —                  | —                                       |
@@ -35,7 +35,7 @@ Every structural API change between Polymesh chain **v8.1.3** and **v8.2.0**. It
 
 On Mainnet, every `ConfidentialAssets` item is new. The "changed" and "removed" entries apply to Testnet and Develop.
 
-Storage versions: `pallet-validators` 1 → 2 and `pallet-confidential-assets` 0 → 1, both migrated automatically. See the [overview](./010-overview.mdx#storage-migrations).
+Storage versions: `pallet-validators` 1 → 2, migrated automatically. `pallet-confidential-assets` is at version 1: on Testnet and Develop its 0 → 1 migration ran at v8.2.0, and on Mainnet the pallet is new. See the [overview](./010-overview.mdx#storage-migrations).
 
 Several calls change behaviour or cost without a signature change. See [Behaviour changes without a signature change](#behaviour-changes-without-a-signature-change).
 
@@ -49,36 +49,36 @@ Pallet index **70**. New on Mainnet. See [Confidential Assets](./020-confidentia
 
 The complete call list, for Mainnet integrators:
 
-| Index | Call                            | v8.2.0 change (Testnet)                      |
-| ----- | ------------------------------- | -------------------------------------------- |
-| 0     | `register_accounts`             |                                              |
-| 1     | `register_encryption_keys`      |                                              |
-| 2     | `create_asset`                  | Now checks role claims                       |
-| 3     | `register_account_assets`       |                                              |
-| 4     | `mint_asset`                    |                                              |
-| 5     | `create_settlement`             | Leg limit, frozen-asset check                |
-| 6     | `sender_affirmation`            |                                              |
-| 7     | `receiver_affirmation`          |                                              |
-| 8     | `mediator_affirmation`          | **Argument type changed**                    |
-| 9     | `sender_update_counter`         |                                              |
-| 10    | `sender_revert_affirmation`     |                                              |
-| 11    | `receiver_revert_affirmation`   |                                              |
-| 12    | `receiver_claim`                |                                              |
-| 13    | `batched_settlement`            |                                              |
-| 14    | `register_fee_accounts`         |                                              |
-| 15    | `topup_fee_accounts`            |                                              |
-| 16    | `submit_batched_proofs`         | **Argument type changed**                    |
-| 17    | `relayer_submit_batched_proofs` | **Argument type changed**; must be top-level |
-| 18    | `execute_instant_settlement`    | **Argument type changed**                    |
-| 19    | `instant_sender_affirmation`    |                                              |
-| 20    | `instant_receiver_affirmation`  |                                              |
-| 21    | `set_required_claim`            | **Added**                                    |
-| 22    | `remove_required_claim`         | **Added**                                    |
-| 23    | `distribute_encryption_key`     | **Added**                                    |
-| 24    | `update_asset_keys`             | **Added**                                    |
-| 25    | `set_asset_frozen`              | **Added**                                    |
+| Index | Call                            | Change since v8.1.3 (Testnet)                                      |
+| ----- | ------------------------------- | ------------------------------------------------------------------ |
+| 0     | `register_accounts`             |                                                                    |
+| 1     | `register_encryption_keys`      |                                                                    |
+| 2     | `create_asset`                  | Now checks role claims                                             |
+| 3     | `register_account_assets`       |                                                                    |
+| 4     | `mint_asset`                    |                                                                    |
+| 5     | `create_settlement`             | Leg limit, frozen-asset check                                      |
+| 6     | `sender_affirmation`            |                                                                    |
+| 7     | `receiver_affirmation`          |                                                                    |
+| 8     | `mediator_affirmation`          | **Argument type changed**                                          |
+| 9     | `sender_update_counter`         |                                                                    |
+| 10    | `sender_revert_affirmation`     |                                                                    |
+| 11    | `receiver_revert_affirmation`   |                                                                    |
+| 12    | `receiver_claim`                |                                                                    |
+| 13    | `batched_settlement`            | Proofs bound to the signer **(v8.2.1)**                            |
+| 14    | `register_fee_accounts`         |                                                                    |
+| 15    | `topup_fee_accounts`            |                                                                    |
+| 16    | `submit_batched_proofs`         | **Argument type changed**; proofs bound to the signer **(v8.2.1)** |
+| 17    | `relayer_submit_batched_proofs` | **Argument type changed**; must be top-level                       |
+| 18    | `execute_instant_settlement`    | **Argument type changed**; proofs bound to the signer **(v8.2.1)** |
+| 19    | `instant_sender_affirmation`    |                                                                    |
+| 20    | `instant_receiver_affirmation`  |                                                                    |
+| 21    | `set_required_claim`            | **Added**                                                          |
+| 22    | `remove_required_claim`         | **Added**                                                          |
+| 23    | `distribute_encryption_key`     | **Added**                                                          |
+| 24    | `update_asset_keys`             | **Added**                                                          |
+| 25    | `set_asset_frozen`              | **Added**                                                          |
 
-All proofs must come from DART v1.0.0, so every proof-carrying call needs new client code on Testnet, whether or not its argument type changed.
+All proofs must come from DART v1.0.1, so every proof-carrying call needs new client code on Testnet, whether or not its argument type changed. Calls 13, 16 and 18 verify every proof in the batch under `non_relayer_batch_proof_context(signer)`: the SCALE encoding of `(b"polymesh/dart/submission/v1", 2u8, account_id)`. Call 17 binds to the fee nullifier, as in v8.2.0. See [Proof submission contexts](./020-confidential-assets.mdx#proof-submission-contexts).
 
 The added calls:
 
@@ -96,15 +96,19 @@ The added calls:
 
 Added at the end of the enum:
 
-| Index | Event                      | Fields                                                                                         |
-| ----- | -------------------------- | ---------------------------------------------------------------------------------------------- |
-| 26    | `RequiredClaimSet`         | `role: RoleKind`, `claim: Claim`, `trusted_issuers: BoundedVec<IdentityId>`                    |
-| 27    | `RequiredClaimRemoved`     | `role: RoleKind`                                                                               |
-| 28    | `EncryptionKeyDistributed` | `caller_did: IdentityId`, `encryption_key: EncryptionPublicKey`, `proof: KeyDistributionProof` |
-| 29    | `AssetFrozen`              | `asset_id: u32`, `freeze_origin: FreezeOrigin`                                                 |
-| 30    | `AssetUnfrozen`            | `asset_id: u32`, `unfreeze_origin: FreezeOrigin`                                               |
+| Index | Event                                 | Fields                                                                                                               |
+| ----- | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| 26    | `RequiredClaimSet`                    | `role: RoleKind`, `claim: Claim`, `trusted_issuers: BoundedVec<IdentityId>`                                          |
+| 27    | `RequiredClaimRemoved`                | `role: RoleKind`                                                                                                     |
+| 28    | `EncryptionKeyDistributed`            | `caller_did: IdentityId`, `encryption_key: EncryptionPublicKey`, `proof: KeyDistributionProof`                       |
+| 29    | `AssetFrozen`                         | `asset_id: u32`, `freeze_origin: FreezeOrigin`                                                                       |
+| 30    | `AssetUnfrozen`                       | `asset_id: u32`, `unfreeze_origin: FreezeOrigin`                                                                     |
+| 31    | `AccountStateUpdated` **(v8.2.1)**    | `leaf_index: u32`, `account_commitment: AccountStateCommitment`, `update_action: AccountStateUpdateAction`           |
+| 32    | `FeeAccountStateUpdated` **(v8.2.1)** | `leaf_index: u32`, `fee_account_commitment: FeeAccountStateCommitment`, `update_action: FeeAccountStateUpdateAction` |
 
 `AssetStateLeafUpdated` is now emitted after every asset leaf write, including key updates and freezes.
+
+`AccountStateLeafInserted` (17) and `FeeAccountStateLeafInserted` (18) are **deprecated** in favour of `AccountStateUpdated` and `FeeAccountStateUpdated`. They are still emitted, unchanged, immediately before the new events. See [Account-state update events](./020-confidential-assets.mdx#account-state-update-events) for the `update_action` variants.
 
 ### Errors
 
@@ -152,6 +156,10 @@ Other limits are unchanged and identical on all three networks: at most 2 audito
 | `FeeAccountRegistrations`      |                                                              | Removed (Testnet)                                    |
 
 After finalization, a settlement keeps only its `SettlementState` entry. Its legs, memo, affirmation status, counters and `LegMediators` entries are removed.
+
+### Client helper
+
+`pallet_confidential_assets::non_relayer_batch_proof_context(account) → Vec<u8>` **(v8.2.1)** is a Rust helper, not a runtime call. It returns the context bytes for proofs submitted through `batched_settlement`, `submit_batched_proofs` and `execute_instant_settlement` by `account`. Clients in other languages can compute the same SCALE encoding.
 
 ### Runtime API
 

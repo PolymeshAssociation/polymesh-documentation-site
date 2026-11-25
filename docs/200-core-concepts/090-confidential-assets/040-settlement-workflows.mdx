@@ -220,6 +220,8 @@ After discovering and decrypting the settlement (see [Find and decrypt a settlem
 - Proof service produces a **sender affirmation proof** that: (a) spends the old state, (b) debits amount, (c) emits a nullifier, (d) increments counter.
 - Submit the `senderAffirmation` transaction to persist the updated state (new commitment/index).
 
+A leg with a zero amount can also be affirmed. The balance is unchanged, but the account state moves to a fresh commitment, which is a way to refresh an account commitment without a transfer.
+
 In the underlying construction, the sender proves membership of their old committed state in the accumulator, reveals a nullifier for the old state, and posts a new commitment reflecting the update.
 
 ## Receiver affirmation
@@ -298,6 +300,8 @@ Applications and authorized participants can inspect settlement state via chain 
 
 These queries enable UIs and services to track lifecycle progression without revealing confidential values.
 
+To follow account state rather than settlements, index the `AccountStateUpdated` and `FeeAccountStateUpdated` events. Each one is emitted for every new leaf in the account or fee-account curve tree, with the leaf index, the new commitment and an `update_action` that names the operation (registration, mint, sender or receiver affirmation, counter update, claim, revert, instant affirmation, fee top-up or fee payment). Actions that consume an earlier state include its nullifier. They replace the deprecated `AccountStateLeafInserted` and `FeeAccountStateLeafInserted` events, which are still emitted.
+
 :::note Finalized settlements are pruned
 Once a settlement is finalized only its `Finalized` status is kept, permanently, so the settlement proof cannot be replayed. Its encrypted legs, memo, affirmation status and counters are removed. Read or store anything you need before finalization. Rejected settlements are also finalized and pruned once their pending steps (such as sender reverts) are complete.
 :::
@@ -356,6 +360,11 @@ Batching improves efficiency but introduces practical nuances you should account
 
   - Batching multiple finalized references into one update creates ephemeral linkability between the referenced items (observers can tell those references were processed together in one account update, but amounts and identities remain hidden).
   - If maximum privacy is required, perform updates sequentially; if cost and simplicity are the priority, batch them.
+
+- **Batches are bound to their submitter:**
+
+  - Every proof submitted through `batchedSettlement`, `submitBatchedProofs` or `executeInstantSettlement`, including nested settlement, instant-settlement and affirmation proofs, must be generated with a context derived from the account that will sign the transaction: the SCALE encoding of `(b"polymesh/dart/submission/v1", 2u8, signer_account_id)`, available in Rust as `pallet_confidential_assets::non_relayer_batch_proof_context`. Proofs built without it fail with `InvalidProof`.
+  - Another account therefore cannot submit your batch, or lift a proof out of it and submit it on its own. Relayer batches are bound to the fee payment instead (see [Anonymous Fees](/confidential-assets/anonymous-fees#relayer-submission-rules)). Direct, non-batched calls such as `createSettlement` or `senderAffirmation` use no context.
 
 - **Fee proof priority (relayer flow):**
 

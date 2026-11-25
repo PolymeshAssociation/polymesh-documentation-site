@@ -1,8 +1,8 @@
 ---
-title: Precompile Changes - v8.1.3 to v8.2.0
+title: Precompile Changes - v8.1.3 to v8.2.1
 description: Polymesh chain v8.2.0 completes ERC-7943 on both asset precompiles - supportsInterface and the required Transfer and Frozen events on the fungible precompile, per-token freezes on the NFT precompile - and changes the event order of forcedTransfer on both. Also covers setSymbol and NFT canTransfer fixes.
-id: v8.1-to-v8.2.0-precompile-changes
-slug: /development/changelogs/v8.1-to-v8.2.0/precompile-changes
+id: v8.1-to-v8.2.1-precompile-changes
+slug: /development/changelogs/v8.1-to-v8.2.1/precompile-changes
 sidebar_label: Precompile Changes
 tags:
   - migration
@@ -12,7 +12,7 @@ tags:
   - evm
 ---
 
-This page covers changes to the [fungible-asset](/development/smart-contracts/precompiles/fungible-asset) and [NFT](/development/smart-contracts/precompiles/non-fungible-asset) precompiles. It is part of the [v8.1.3 → v8.2.0 changelog](./010-overview.mdx).
+This page covers changes to the [fungible-asset](/development/smart-contracts/precompiles/fungible-asset) and [NFT](/development/smart-contracts/precompiles/non-fungible-asset) precompiles. It is part of the [v8.1.3 → v8.2.1 changelog](./010-overview.mdx).
 
 **Audience:** smart contract developers, EVM tooling and wallet integrators, and indexers that read EVM logs. The [Polymesh Runtime precompile](/development/smart-contracts/precompiles/polymesh-runtime) does not change.
 
@@ -42,7 +42,7 @@ and `false` for anything else. In v8.1.3 the selector was unknown, and the call 
 
 ERC-3643 and ERC-7943 report frozen-balance changes differently. ERC-3643 emits `TokensFrozen` or `TokensUnfrozen` with the **change**, and ERC-7943 emits `Frozen` with the **new total**. In v8.1.3 each method emitted only its own standard's event. Every method that changes a frozen balance now emits both, the ERC-3643 event first:
 
-| Method                                   | v8.1.3                            | v8.2.0                                                                                                            |
+| Method                                   | v8.1.3                            | v8.2.1                                                                                                            |
 | ---------------------------------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | `freezePartialTokens(account, amount)`   | `TokensFrozen(account, amount)`   | `TokensFrozen(account, amount)`, then `Frozen(account, newTotal)`                                                 |
 | `unfreezePartialTokens(account, amount)` | `TokensUnfrozen(account, amount)` | `TokensUnfrozen(account, amount)`, then `Frozen(account, newTotal)`                                               |
@@ -119,4 +119,4 @@ v8.1.3 emitted `ForcedTransfer` before `Transfer`. The new order matches the fun
 | Detect token standards with ERC-165      | Fungible assets now report ERC-165, ERC-20 and ERC-7943. NFT collections now also report ERC-7943.                                                                 |
 | Use `setSymbol`                          | Expect it to replace an existing ticker link, instead of reverting.                                                                                                |
 | Freeze NFTs from a contract              | Use `setFrozenTokens(account, tokenId, bool)` and read with `getFrozenTokens`.                                                                                     |
-| Build ABIs from the stubs                | Regenerate from the v8.2.0 `FungibleAssetStub.sol` and `NonFungibleAssetStub.sol`.                                                                                 |
+| Build ABIs from the stubs                | Regenerate from the v8.2.1 `FungibleAssetStub.sol` and `NonFungibleAssetStub.sol`.                                                                                 |

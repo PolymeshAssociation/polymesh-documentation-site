@@ -1,8 +1,8 @@
 ---
-title: NFT Freezing Changelog - v8.1.3 to v8.2.0
+title: NFT Freezing Changelog - v8.1.3 to v8.2.1
 description: Polymesh chain v8.2.0 lets asset agents freeze individual NFTs for a holder. A frozen NFT cannot leave its holder by any route except a controller transfer, which unfreezes it. Also covers the more complete NFT transfer report.
-id: v8.1-to-v8.2.0-nft-freezing
-slug: /development/changelogs/v8.1-to-v8.2.0/nft-freezing
+id: v8.1-to-v8.2.1-nft-freezing
+slug: /development/changelogs/v8.1-to-v8.2.1/nft-freezing
 sidebar_label: NFT Freezing
 tags:
   - migration
@@ -13,7 +13,7 @@ tags:
   - compliance
 ---
 
-This page covers per-NFT freezes, added in v8.2.0. It is part of the [v8.1.3 → v8.2.0 changelog](./010-overview.mdx).
+This page covers per-NFT freezes, added in v8.2.0. It is part of the [v8.1.3 → v8.2.1 changelog](./010-overview.mdx).
 
 **Audience:** NFT issuers and their agents, exchanges, custodians, indexers, and anyone whose code decides whether an NFT transfer will succeed. For the EVM side, see [Precompile Changes](./050-precompile-changes.mdx#nft-precompile).
 
@@ -97,4 +97,4 @@ All `pallet-nft`, `pallet-portfolio` and `pallet-settlement` weights are regener
 | Pre-check NFT transfers                              | Handle `InvalidNFTTransferNFTIsFrozen`, and expect a report to list several ownership errors.                        |
 | Map pallet errors to messages                        | Handle `Nft::InvalidNFTTransferNFTIsFrozen`, `Nft::NFTIsFrozen` and `Portfolio::InvalidTransferNFTIsFrozen`.         |
 | Act as an NFT issuer or agent                        | Use `set_nfts_frozen` to restrict single NFTs. Use a controller transfer to move a frozen NFT; it clears the freeze. |
-| Estimate fees for NFT, portfolio or settlement calls | Regenerate estimates against v8.2.0 metadata.                                                                        |
+| Estimate fees for NFT, portfolio or settlement calls | Regenerate estimates against v8.2.1 metadata.                                                                        |

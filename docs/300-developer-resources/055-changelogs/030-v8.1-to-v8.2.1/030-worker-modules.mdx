@@ -1,8 +1,8 @@
 ---
-title: Worker Modules and Node Changes - v8.1.3 to v8.2.0
-description: Polymesh chain v8.2.0 adds the WorkerModules pallet, which stores Polymesh Worker protocol modules on chain so governance can upgrade them without a node release, and changes how nodes run the worker. What node operators and governance need to know.
-id: v8.1-to-v8.2.0-worker-modules
-slug: /development/changelogs/v8.1-to-v8.2.0/worker-modules
+title: Worker Modules and Node Changes - v8.1.3 to v8.2.1
+description: Polymesh chain v8.2 adds the WorkerModules pallet, which stores Polymesh Worker protocol modules on chain so governance can upgrade them without a node release, and changes how nodes run the worker. What node operators and governance need to know.
+id: v8.1-to-v8.2.1-worker-modules
+slug: /development/changelogs/v8.1-to-v8.2.1/worker-modules
 sidebar_label: Worker Modules and Node Changes
 tags:
   - migration
@@ -11,7 +11,7 @@ tags:
   - node
 ---
 
-This page covers the new `WorkerModules` pallet and the node-side changes to the Polymesh Worker. It is part of the [v8.1.3 → v8.2.0 changelog](./010-overview.mdx).
+This page covers the new `WorkerModules` pallet and the node-side changes to the Polymesh Worker. It is part of the [v8.1.3 → v8.2.1 changelog](./010-overview.mdx).
 
 **Audience:** node and validator operators, and governance participants. Application developers do not call this pallet, and need only the [summary](#what-integrators-need-to-change).
 
@@ -38,7 +38,7 @@ All four calls require **Root**, so on Testnet and Mainnet they go through gover
 
 Code, context and configuration are stored by hash, and uploading the same item twice fails. A configuration may only refer to code and context that are already stored.
 
-A chain with no uploaded configuration keeps using the DART modules built into the node. That is the state of every network at the v8.2.0 upgrade.
+A chain with no uploaded configuration keeps using the DART modules built into the node. That is the state of every network at the v8.2.1 upgrade.
 
 Module code uses backend module version 2, which stores code and context as SCALE-encoded byte vectors. Version 1 is still accepted, and its code is stored under a separate key that v8.0.x and v8.1.x nodes can read.
 
@@ -50,9 +50,11 @@ See the [Full Pallet API Reference](./090-pallet-api-reference.mdx#workermodules
 
 ### Upgrade the node with the runtime
 
-A v8.2.0 runtime only hands DART proofs to the worker if the node's worker is **version 2 or later**, which v8.2.0 nodes provide. On an older node, the runtime verifies the proofs itself. The node stays in consensus, but each confidential-asset transaction costs that node more CPU time when it builds or imports a block.
+A v8.2.x runtime only hands DART proofs to the worker if the node's worker is **version 2 or later**, which v8.2.0 and v8.2.1 nodes provide. On an older node, the runtime verifies the proofs itself. The node stays in consensus, but each confidential-asset transaction costs that node more CPU time when it builds or imports a block.
 
-Validators in particular should run a v8.2.0 node before the runtime upgrade is enacted.
+The v8.2.1 runtime also requests DART protocol **1.0.1**. The v8.2.1 node embeds the 1.0.1 modules. A v8.2.0 node only embeds 1.0.0, and a version-2 worker loads only the exact protocol version requested. So while no 1.0.1 configuration is stored on chain, a v8.2.0 node falls back to in-runtime verification too.
+
+Validators in particular should run a v8.2.1 node before the runtime upgrade is enacted.
 
 At the upgrade, and at any later upgrade that changes the DART protocol version, the pallet regenerates the DART parameters it caches for in-runtime verification. This makes the upgrade block do more work than usual.
 
@@ -62,6 +64,7 @@ At the upgrade, and at any later upgrade that changes the DART protocol version,
 - **ARM64.** The native backend supports `aarch64` as well as `x86_64`. On other architectures, the worker runs modules in-process. The PolkaVM backend remains `x86_64`-only.
 - **Native modules are built with the node.** They are no longer committed as binaries.
 - **Sessions are tied to the runtime call.** The worker's session for a block is started when first needed and dropped with the runtime call. A request with an unknown session falls back to runtime verification instead of failing.
+- **DART v1 protocol 1.0.1.** The `polymesh-worker-protocol-dart-v1` protocol is version 1.0.1 in the v8.2.1 node. Its native, PolkaVM, WASM and testing modules are rebuilt for DART v1.0.1 and embedded in the node. The release configuration lists three modules: PolkaVM (module version 2), WASM (module version 2) and native (module version 1). The uncompressed `module_version 1` PolkaVM and WASM entries were dropped, from the DART v0 `0.1.0` configuration too.
 - **`polymesh worker-self-test`.** This new subcommand loads and runs the embedded DART v1 native module, and exits non-zero if it fails. It is meant for testing a build or a host, not for production use.
 
 No new flags are needed to run a node.
@@ -74,7 +77,7 @@ Worker modules are now built reproducibly in a container (`worker/rebuild.sh`), 
 
 | If you…                    | Do this                                                                                                           |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Run a node or validator    | Upgrade to the v8.2.0 node before the runtime upgrade.                                                            |
+| Run a node or validator    | Upgrade to the v8.2.1 node before the runtime upgrade.                                                            |
 | Index chain events         | Decode the four `WorkerModules` events. They are only emitted by governance actions.                              |
 | Participate in governance  | Expect proposals that call `WorkerModules`. A configuration upload switches the protocol to it in the same block. |
 | Build Polymesh from source | Expect native modules to be compiled during the build.                                                            |

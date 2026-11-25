@@ -1,8 +1,8 @@
 ---
-title: Confidential Assets Changelog - v8.1.3 to v8.2.0
-description: Polymesh chain v8.2.0 adds Confidential Assets to Mainnet and moves every network to DART v1.0.0, with claim-gated roles, shared encryption keys, asset key rotation, an asset-level freeze, fee-bound relayer batches and settlement pruning. Includes the breaking changes for Testnet integrations.
-id: v8.1-to-v8.2.0-confidential-assets
-slug: /development/changelogs/v8.1-to-v8.2.0/confidential-assets
+title: Confidential Assets Changelog - v8.1.3 to v8.2.1
+description: Polymesh chain v8.2 adds Confidential Assets to Mainnet and moves every network to DART v1.0.1, with claim-gated roles, shared encryption keys, asset key rotation, an asset-level freeze, fee-bound relayer batches, account-bound batch proofs, account-state update events and settlement pruning. Includes the breaking changes for Testnet integrations.
+id: v8.1-to-v8.2.1-confidential-assets
+slug: /development/changelogs/v8.1-to-v8.2.1/confidential-assets
 sidebar_label: Confidential Assets
 tags:
   - migration
@@ -12,7 +12,7 @@ tags:
   - confidential
 ---
 
-This page covers the `ConfidentialAssets` pallet. It is part of the [v8.1.3 → v8.2.0 changelog](./010-overview.mdx).
+This page covers the `ConfidentialAssets` pallet. It is part of the [v8.1.3 → v8.2.1 changelog](./010-overview.mdx).
 
 **Audience:** anyone building on [Confidential Assets](/confidential-assets): wallets and provers, asset issuers, auditors and mediators, relayers, and indexers. If you have never used Confidential Assets, read [Network availability](#network-availability) and [Role gating](#role-gating-with-required-claims), then go to the [Confidential Assets documentation](/confidential-assets).
 
@@ -20,21 +20,30 @@ This page covers the `ConfidentialAssets` pallet. It is part of the [v8.1.3 → 
 
 ## Network availability
 
-| Network | v8.1.3             | v8.2.0                                                                                         |
-| ------- | ------------------ | ---------------------------------------------------------------------------------------------- |
-| Mainnet | Not present        | Present at index 70. All roles closed until governance sets required claims.                   |
-| Testnet | Present, DART v0.1 | DART v1.0.0. Roles closed by the migration, then opened by governance right after the upgrade. |
-| Develop | Present, DART v0.1 | DART v1.0.0                                                                                    |
+| Network | v8.1.3             | v8.2.0                                                                 | v8.2.1                                                                                    |
+| ------- | ------------------ | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Mainnet | Not present        | Not deployed                                                           | Present at index 70, DART v1.0.1. All roles closed until governance sets required claims. |
+| Testnet | Present, DART v0.1 | DART v1.0.0. Roles closed by the migration, then opened by governance. | DART v1.0.1                                                                               |
+| Develop | Present, DART v0.1 | DART v1.0.0                                                            | DART v1.0.1                                                                               |
 
-On Testnet and Mainnet, the upgrade migration closes the asset creator, auditor and mediator roles (see [Role gating](#role-gating-with-required-claims)). A chain started from a v8.2.0 development chain spec (`--dev`, `testnet-dev`) instead installs a default claim requirement for each role, trusting the first Governance Council member's identity as the claim issuer.
+On Mainnet, the upgrade closes the asset creator, auditor and mediator roles when it activates the pallet. On Testnet, the v8.2.0 migration closed them (see [Role gating](#role-gating-with-required-claims)). A chain started from a v8.2.x development chain spec (`--dev`, `testnet-dev`) instead installs a default claim requirement for each role, trusting the first Governance Council member's identity as the claim issuer.
 
 The pallet has the same index and constants on every network. The only exception is the `ci-runtime` test build, which shortens the curve-tree root ages to minutes.
 
-## DART v1.0.0
+## DART v1.0.1
 
-The pallet verifies proofs from DART v1.0.0, the protocol version intended for production. v0.1 proofs are **not** accepted. Provers, wallets and relayers must move to DART v1.0.0 tooling.
+The pallet verifies proofs from DART v1.0.1, the protocol version intended for production. v0.1 proofs are **not** accepted, and neither are proofs from the v1.0.0 prover used by v8.2.0. Provers, wallets and relayers must move to DART v1.0.1 tooling.
 
-The worker gains a new `dart-v1` protocol module (PolkaVM, WASM and native backends). The DART v0 module is kept so that historical data can still be read. See [Worker Modules and Node Changes](./030-worker-modules.mdx).
+The worker gains a new `dart-v1` protocol module (PolkaVM, WASM and native backends), at protocol version 1.0.1. The DART v0 module is kept so that historical data can still be read. See [Worker Modules and Node Changes](./030-worker-modules.mdx).
+
+DART v1.0.1 changes these behaviours compared with v1.0.0, which v8.2.0 used. **Proof wire formats are unchanged**, so call arguments and stored types keep their encoding:
+
+- **Zero-amount affirmations are accepted.** A sender or receiver can affirm a leg that moves no funds. This lets a party refresh its account commitment without a transfer. Minting still requires a non-zero amount.
+- **Asset-leaf proofs are hardened.** They prove the full-width asset leaf commitment and take the curve-tree height from the root, so a leaf with unused key slots cannot be misrepresented.
+- **Account registration is bound to the device seed.** The registration randomness is derived from the device master seed and bound to the new account commitment, so a caller cannot choose randomness that its seed does not produce.
+- **Nullifiers follow the update action.** The prover and verifier derive a state update's nullifier from its [update action](#account-state-update-events).
+
+The pallet regenerates its cached DART parameters at the upgrade, so in-runtime fallback verification uses parameters that match the deployed v1.0.1 modules.
 
 ## Role gating with required claims
 
@@ -56,7 +65,7 @@ A requirement is a `Claim` (type, scope and value) and a list of at most 2 trust
 Identities that fail a check get `MissingRequiredClaim`.
 
 :::warning Roles start closed
-The v8.2.0 upgrade migration installs, for each role that has no requirement, the role's default claim with an **empty** issuer list: `KnowYourCustomer` with scope `Custom("DART:AssetCreator")`, `Custom("DART:Auditor")` or `Custom("DART:Mediator")`. All three roles are closed until governance replaces them with `set_required_claim`. Until then, creating a confidential asset fails with `MissingRequiredClaim`.
+The upgrade installs, for each role that has no requirement, the role's default claim with an **empty** issuer list: `KnowYourCustomer` with scope `Custom("DART:AssetCreator")`, `Custom("DART:Auditor")` or `Custom("DART:Mediator")`. All three roles are closed until governance replaces them with `set_required_claim`. Until then, creating a confidential asset fails with `MissingRequiredClaim`.
 
 On **Testnet**, governance plans to open all three roles immediately after the upgrade, by calling `remove_required_claim` for each, so that anyone can experiment with confidential assets. On **Mainnet**, the roles stay closed until governance configures the required claims.
 :::
@@ -96,20 +105,32 @@ A freeze stops **new settlements** of the asset:
 
 This is an **asset-level** freeze. Freezing individual confidential accounts, and forced transfers, are not yet available.
 
+## Proof submission contexts
+
+Every batched entry point now binds each proof in the batch to the submission, using context bytes the pallet derives itself. Callers cannot supply or override the context, and verification never falls back to a different one.
+
+| Entry point                                                                   | Context                                                             | Bound to                          |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------- | --------------------------------- |
+| `relayer_submit_batched_proofs`                                               | SCALE of `(b"polymesh/dart/submission/v1", 1u8, fee_nullifier)`     | The fee payment's nullifier       |
+| `batched_settlement`, `submit_batched_proofs`, `execute_instant_settlement`   | SCALE of `(b"polymesh/dart/submission/v1", 2u8, signer_account_id)` | The account signing the extrinsic |
+| `create_settlement`, direct affirmations, minting, registrations, other calls | None                                                                | —                                 |
+
+- **Nested proofs inherit the entry point's context.** Every proof in the batch is verified under the batch's context, including settlement creation, nested instant settlements and affirmations. A `BatchedProof::ExecuteInstantSettlement` inside `submit_batched_proofs` is bound to the signer, not given a context of its own.
+- **Account binding stops proof theft.** Another account cannot submit a non-relayer batch, or extract one of its proofs and submit it under its own origin. A bound proof also cannot be replayed through a direct, context-free extrinsic.
+- **Clients compute the bytes.** `polymesh_dart::relayer_batch_proof_context(fee_nullifier)` returns the relayer context, and `pallet_confidential_assets::non_relayer_batch_proof_context(account)` returns the account context. Build the proofs with the context for the account that will sign the extrinsic.
+
+A proof built without the context, as v8.2.0 accepted for non-relayer batches, fails with `InvalidProof`.
+
 ## Relayer fee payments
 
 ### Batches are bound to their fee payment
 
-Every proof in a `relayer_submit_batched_proofs` batch, including settlement creation and nested instant-settlement proofs, is now verified with context bytes derived from the fee payment's nullifier. A proof generated for one fee payment cannot be replayed with a different one.
-
-Clients must therefore build a relayer batch in this order:
+Because every relayer batch proof is bound to the fee payment's nullifier (see [Proof submission contexts](#proof-submission-contexts)), a proof generated for one fee payment cannot be replayed with a different one. Clients must therefore build a relayer batch in this order:
 
 1. Choose the fee account state and note its current nullifier.
 2. Generate every batch proof with the context derived from that nullifier.
 3. Assemble the batch.
 4. Generate the fee payment proof from the same fee account state.
-
-The context is the SCALE encoding of `(b"polymesh/dart/submission/v1", 1u8, fee_nullifier)`. DART v1.0.0 exposes it as `polymesh_dart::relayer_batch_proof_context`. Proofs submitted outside a relayer batch use no context, as before.
 
 A fee payment is bound to the relayer's own key unless the payment proof is marked as broadcast, in which case anyone can submit it and receive the fee.
 
@@ -133,8 +154,45 @@ The new `ConfidentialAssetsApi::relayer_submit_batched_fee_info(batch)` runtime 
 
 Pick asset and account roots that stay valid for longer than the fee-account root, so they do not expire while a relayer is holding the transaction. If a root expires before the transaction is included, the call fails and the relayer pays the transaction fee.
 
+## Account-state update events
+
+Every insert into the account or fee-account curve tree now emits a new event that says which operation produced the leaf:
+
+| Event                    | Fields                                                                                                          |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| `AccountStateUpdated`    | `leaf_index`, `account_commitment: AccountStateCommitment`, `update_action: AccountStateUpdateAction`           |
+| `FeeAccountStateUpdated` | `leaf_index`, `fee_account_commitment: FeeAccountStateCommitment`, `update_action: FeeAccountStateUpdateAction` |
+
+Each is emitted immediately after the existing `AccountStateLeafInserted` or `FeeAccountStateLeafInserted` event. Those two events are **deprecated** but still emitted unchanged, so existing integrations keep working.
+
+`AccountStateUpdateAction` variants:
+
+| Variant                      | Fields                                       |
+| ---------------------------- | -------------------------------------------- |
+| `AccountAssetRegistration`   | `account`, `asset_id`, `counter`             |
+| `AssetMinting`               | `account`, `asset_id`, `amount`, `nullifier` |
+| `SenderAffirmation`          | `nullifier`, `leg_ref`                       |
+| `ReceiverAffirmation`        | `nullifier`, `leg_ref`                       |
+| `SenderUpdateCounter`        | `nullifier`, `leg_ref`                       |
+| `ReceiverClaim`              | `nullifier`, `leg_ref`                       |
+| `SenderRevertAffirmation`    | `nullifier`, `leg_ref`                       |
+| `ReceiverRevertAffirmation`  | `nullifier`, `leg_ref`                       |
+| `InstantSenderAffirmation`   | `nullifier`, `leg_ref`                       |
+| `InstantReceiverAffirmation` | `nullifier`, `leg_ref`                       |
+
+`FeeAccountStateUpdateAction` variants:
+
+| Variant                  | Fields                                       |
+| ------------------------ | -------------------------------------------- |
+| `FeeAccountRegistration` | `account`, `asset_id`, `amount`              |
+| `FeeAccountTopup`        | `account`, `asset_id`, `amount`, `nullifier` |
+| `FeePayment`             | `asset_id`, `amount`, `nullifier`            |
+
+Actions that consume an earlier state carry that state's nullifier. Registrations create a first state, so they carry none. Together the events give indexers a complete, append-only record of the account and fee-account trees without decoding proofs.
+
 ## Settlements
 
+- **Zero-amount affirmations.** Sender and receiver affirmations of a leg that moves no funds are now accepted (DART v1.0.1). Use them to refresh an account commitment without a transfer.
 - **Leg limit.** Settlement creation rejects a proof with more than `MaxSettlementLegs` (10) legs, with `SettlementTooManyLegs`. In a batch, `SettlementLegCountMismatch` is raised when the leg count given with a proof does not match the settlement.
 - **Rejected settlements are finalized.** Once every pending step is done, a rejected settlement is now finalized like an executed one. Before, a rejected settlement could be left unfinalized.
 - **Finalization prunes settlement storage.** Only the `SettlementState` entry (`Finalized`) is kept, permanently, so the same settlement proof cannot be replayed. The legs, memo, affirmation status, pending counters and the new `LegMediators` entries are removed. **Read leg data before a settlement is finalized** if you need it later, or keep it off chain.
@@ -142,7 +200,7 @@ Pick asset and account roots that stay valid for longer than the fee-account roo
 
 ## Breaking changes on Testnet
 
-Mainnet has no previous version of the pallet, so this section applies to Testnet and Develop only.
+Mainnet has no previous version of the pallet, so this section applies to Testnet and Develop only. Most of these changes took effect at the **v8.2.0** upgrade. The v8.2.1 changes for clients already on v8.2.0 are listed in [What Changed in v8.2.1](./080-v8.2.1-changes.mdx).
 
 ### Proofs and call arguments
 
@@ -155,13 +213,13 @@ Four calls keep their index but take a different argument type:
 | 17    | `relayer_submit_batched_proofs` | `FeePaymentWithBatchedProofs` gains fields                |
 | 18    | `execute_instant_settlement`    | `InstantSettlementLegAffirmations` changes its definition |
 
-All other calls keep their arguments, but every proof must now come from DART v1.0.0.
+All other calls keep their arguments, but every proof must now come from DART v1.0.1. v8.2.1 does not change any argument type, but non-relayer batched proofs must carry the [signer context](#proof-submission-contexts).
 
 ### Error indices shift
 
 `InsufficientFeePaymentAmount` (index 6) is **removed**. The fee floor is now checked by the transaction extension instead. Every error from index 7 to 45 moves down by one. For example, `InvalidFeePaymentProof` moves from 7 to 6, and `InvalidAffirmationStatusTransition` from 45 to 44. Twelve new errors take indices 45 to 56.
 
-If you decode `ConfidentialAssets` errors by index, regenerate from v8.2.0 metadata. Decoding by name is unaffected, apart from the removed error. See the [Full Pallet API Reference](./090-pallet-api-reference.mdx#confidentialassets) for the new list.
+If you decode `ConfidentialAssets` errors by index, regenerate from v8.2.1 metadata. Decoding by name is unaffected, apart from the removed error. See the [Full Pallet API Reference](./090-pallet-api-reference.mdx#confidentialassets) for the new list.
 
 ### Storage
 
@@ -169,15 +227,19 @@ If you decode `ConfidentialAssets` errors by index, regenerate from v8.2.0 metad
 - `FeeAccountRegistrations` is removed.
 - `AssetFrozen`, `CachedDartParametersVersion`, `LegMediators`, `RelayerSubmitExtensionMarker`, `RequiredClaims` and `SharedKeyRecipients` are added.
 
-### Settlements in flight at the upgrade
+### Settlements in flight at the v8.2.0 upgrade
 
-The migration **rejects every `Pending` settlement**, through the normal reject path. A rejected settlement with no pending steps is finalized and pruned. Senders who had already affirmed must revert their affirmation to recover the funds, as for any rejected settlement. Recreate any settlement you still need after the upgrade with DART v1.0.0 proofs.
+The v8.2.0 migration **rejects every `Pending` settlement**, through the normal reject path. A rejected settlement with no pending steps is finalized and pruned. Senders who had already affirmed must revert their affirmation to recover the funds, as for any rejected settlement. Recreate any settlement you still need with DART v1.0.1 proofs.
+
+v8.2.1 removes this migration. A network with Confidential Assets data from v8.1.x or earlier must upgrade to v8.2.0 before v8.2.1.
 
 ## What integrators need to change
 
 | If you…                                    | Do this                                                                                                                                                |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Generate proofs (wallet, prover, SDK)      | Move to DART v1.0.0. Regenerate types from v8.2.0 metadata.                                                                                            |
+| Generate proofs (wallet, prover, SDK)      | Move to DART v1.0.1. Regenerate types from v8.2.1 metadata.                                                                                            |
+| Submit batched proofs yourself             | Build every proof for `batched_settlement`, `submit_batched_proofs` or `execute_instant_settlement` with `non_relayer_batch_proof_context(signer)`.    |
+| Index confidential accounts                | Decode `AccountStateUpdated` and `FeeAccountStateUpdated`. Move off the deprecated `*LeafInserted` events.                                             |
 | Create confidential assets                 | Hold the `AssetCreator` claim required on your network. Make sure each auditor and mediator holds its role's claim.                                    |
 | Run a relayer                              | Submit `relayer_submit_batched_proofs` as a top-level call, keep commission within 10 POLYX, and price batches with `relayer_submit_batched_fee_info`. |
 | Build relayer batches                      | Bind every proof to the fee nullifier, in the order above. Use fee-account roots less than 4 hours old.                                                |
