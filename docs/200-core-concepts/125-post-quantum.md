@@ -11,15 +11,15 @@ tags:
 ---
 
 :::info Last updated
-20 November 2026. We update this page whenever a stage or target changes.
+26 November 2026. We update this page whenever a stage or target changes.
 :::
 
 ## Summary
 
 - **No quantum computer today can break the cryptography Polymesh uses.** Estimates of when one might exist vary, and recent research has brought them earlier. We are preparing now so that Polymesh can move well before it matters.
 - **We are adopting post-quantum cryptography in stages.** Each stage has an indicative target date and clear criteria for moving forward. Several steps build on NIST's post-quantum standards and on the Polkadot SDK's post-quantum upgrades, which we adopt as they are released, so each stage completes when its criteria are met and the dates may move.
-- **The base layer follows Polkadot.** Polymesh is built on the Polkadot SDK, and we will adopt the post-quantum account, validator and networking upgrades developed for it.
-- **Confidential Assets need their own work, and it is under way.** We have built a proof of concept that replaces each elliptic-curve component of Confidential Assets with a post-quantum one. A first hardening step works with the current protocol; full protection against "harvest now, decrypt later" comes with the post-quantum protocol.
+- **Post-quantum signing keys come first, as an option.** Users who want post-quantum account keys can opt in early. Node operator keys, finality and networking follow the Polkadot SDK, on which Polymesh is built.
+- **Confidential Assets need their own work, and it is under way.** We are building a proof of concept that replaces each elliptic-curve component of Confidential Assets with a post-quantum one. The post-quantum protocol removes the "harvest now, decrypt later" risk.
 - **Integrators don't need to do anything today.** Existing keys and signatures will keep working throughout the transition.
 
 ## Our approach
@@ -51,9 +51,11 @@ Quantum computers mainly threaten **public-key** cryptography: signatures, key e
 | Network transport                           | Elliptic-curve key exchange                                      | Hybrid key exchange, combining elliptic-curve key exchange with ML-KEM                                             |
 | [Confidential Assets](/confidential-assets) | Elliptic-curve encryption, commitments and zero-knowledge proofs | ML-KEM encryption, ML-DSA authorization and post-quantum zero-knowledge proofs (see [below](#confidential-assets)) |
 
-## Base layer: aligned with Polkadot
+## Base layer
 
-Polymesh is built on the Polkadot SDK. Web3 Foundation has published a [post-quantum roadmap for Polkadot](https://forum.polkadot.network/t/post-quantum-cryptography-roadmap-for-polkadot-and-jam/13232) covering account signatures, validator keys, block production randomness and networking. We will adopt those upgrades as they become available, then integrate them with Polymesh's identity and compliance model.
+**User signing keys come first.** Post-quantum account keys will be offered as an opt-in, so users who want them can start using them early, alongside their existing keys.
+
+**Node operator keys, finality and networking follow Polkadot.** Polymesh is built on the Polkadot SDK. Web3 Foundation has published a [post-quantum roadmap for Polkadot](https://forum.polkadot.network/t/post-quantum-cryptography-roadmap-for-polkadot-and-jam/13232) covering validator keys, block production randomness and networking. We will adopt those upgrades as they become available.
 
 Polymesh's identity model makes key migration simpler. A Polymesh identity is not tied to a single key: [primary keys](/identity/advanced/primary-keys) can be rotated through an [authorization](/authorizations), and [secondary keys](/identity/advanced/secondary-keys) can be added and removed. We expect holders to move to post-quantum keys without changing their identity or losing their claims:
 
@@ -71,48 +73,46 @@ For **signatures**, the risk is future forgery. A quantum computer could one day
 
 For **encryption**, the risk is "harvest now, decrypt later". Confidential Assets encrypt settlement details so that only the parties, auditors and mediators can read them. Someone could store encrypted data today and decrypt it once a large quantum computer exists. For confidential data that must stay private for years, this is the risk that matters most.
 
-We are addressing the risk in two steps.
-
-**1. Hybrid encryption for counterparties.** The sender and receiver of a settlement each decrypt its details and check them before they affirm. Their copies can move to hybrid encryption, which combines today's elliptic-curve key exchange with ML-KEM-768 following [NIST SP 800-227](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-227.pdf). Those copies then stay private unless both schemes are broken. This step works with the current Confidential Assets protocol, so it does not wait for the full upgrade.
-
-Auditor copies are not part of this step. Auditors don't affirm a settlement, so the protocol itself must prove that each auditor's copy is correct, and today's elliptic-curve proofs can't prove that for ML-KEM encryption. Every settlement has at least one auditor copy, and until step 2 those copies use elliptic-curve encryption only. Step 1 therefore hardens the protocol but does not on its own remove the "harvest now, decrypt later" risk.
-
-**2. A fully post-quantum Confidential Assets protocol.** The full upgrade replaces each elliptic-curve component, and removes the "harvest now, decrypt later" risk:
+We are addressing this with a fully post-quantum Confidential Assets protocol. It replaces each elliptic-curve component, and removes the "harvest now, decrypt later" risk:
 
 - **Proofs:** hash-based or lattice-based zero-knowledge proofs, which need no elliptic curves and no trusted setup.
-- **Auditor copies:** encrypted with ML-KEM, with the proof itself guaranteeing that each auditor can decrypt exactly the settlement it attests to.
+- **Encryption:** settlement details are encrypted with ML-KEM for every party, including auditors, with the proof itself guaranteeing that each auditor can decrypt exactly the settlement it attests to.
 - **Authorization:** ML-DSA signatures, so HSMs and institutional custody can authorize confidential transactions with standard post-quantum keys.
 - **Migration:** existing confidential balances move to the new version through a one-way migration, with supply tracked per asset.
 
-We have built a proof of concept that replaces each elliptic-curve component with a post-quantum one. We are now comparing it with an alternative implementation before choosing one to take to Testnet.
+We are building a proof of concept that replaces each elliptic-curve component with a post-quantum one. It will settle the implementation we take to Testnet.
 
 ## Stages
 
-The two areas move independently. Confidential Assets work is led by Polymesh; base-layer work follows the Polkadot SDK.
+The three areas move independently. Confidential Assets and user signing keys are led by Polymesh; node and network keys follow the Polkadot SDK.
 
 ```mermaid
 flowchart LR
+  subgraph SK["User signing keys"]
+    direction LR
+    S1["Opt-in post-quantum<br/>keys on Testnet<br/>Mid 2027"] --> S2["Opt-in post-quantum<br/>keys on Mainnet<br/>End 2027"] --> S3["Retire<br/>classical keys<br/>Before 2035"]
+  end
   subgraph CA["Confidential Assets"]
     direction LR
-    C1["Choose<br/>implementation<br/><b>In progress</b><br/>Q1 2027"] --> C2["Hybrid encryption<br/>for counterparties<br/>Q3 2027"] --> C3["Post-quantum<br/>Confidential Assets<br/>on Testnet<br/>H2 2028"] --> C4["Mainnet, with<br/>one-way migration<br/>H2 2029"]
+    C1["Proof of concept<br/><b>In progress</b><br/>Q2 2027"] --> C2["Post-quantum<br/>Confidential Assets<br/>on Testnet<br/>End 2027"] --> C3["Mainnet, with<br/>one-way migration<br/>Mid 2028"]
   end
-  subgraph BL["Base layer"]
+  subgraph NK["Node and network keys"]
     direction LR
-    B1["Follow the<br/>Polkadot SDK<br/><b>Monitoring</b><br/>Ongoing"] --> B2["Opt-in post-quantum<br/>keys on Testnet<br/>H1 2029"] --> B3["Mainnet opt-in 2030,<br/>retire classical keys<br/>before 2035"]
+    N1["Follow the<br/>Polkadot SDK<br/><b>Monitoring</b><br/>Ongoing"]
   end
 ```
 
-| Area                | Stage                                       | Status      | Target\*                                | Moves forward when                                                                                                             |
-| ------------------- | ------------------------------------------- | ----------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Confidential Assets | Choose implementation                       | In progress | Q1 2027                                 | One of the two implementations is chosen for Testnet                                                                           |
-| Confidential Assets | Hybrid encryption for counterparties        | Planned     | Q3 2027                                 | Implemented and audited on the current protocol                                                                                |
-| Confidential Assets | Post-quantum Confidential Assets on Testnet | Planned     | H2 2028                                 | The full protocol is implemented and independently audited                                                                     |
-| Confidential Assets | Mainnet, with one-way migration             | Planned     | H2 2029                                 | Testnet validation is complete and integrators are ready                                                                       |
-| Base layer          | Follow the Polkadot SDK                     | Monitoring  | Ongoing                                 | Post-quantum key support is available in the Polkadot SDK                                                                      |
-| Base layer          | Opt-in post-quantum keys on Testnet         | Planned     | H1 2029                                 | Integrated with Polymesh identities and audited                                                                                |
-| Base layer          | Mainnet opt-in, then retire classical keys  | Planned     | Opt-in 2030; classical keys before 2035 | Wallets, custodians and integrators are ready. Classical keys are retired only after a long opt-in period, with advance notice |
+| Area                  | Stage                                       | Status      | Target\*    | Moves forward when                                                                           |
+| --------------------- | ------------------------------------------- | ----------- | ----------- | -------------------------------------------------------------------------------------------- |
+| User signing keys     | Opt-in post-quantum keys on Testnet         | Planned     | Mid 2027    | Integrated with Polymesh identities and audited                                              |
+| User signing keys     | Opt-in post-quantum keys on Mainnet         | Planned     | End 2027    | Testnet validation is complete                                                               |
+| User signing keys     | Retire classical keys                       | Planned     | Before 2035 | Wallets, custodians and integrators are ready, after a long opt-in period and advance notice |
+| Confidential Assets   | Proof of concept                            | In progress | Q2 2027     | The proof of concept is complete and an implementation is chosen for Testnet                 |
+| Confidential Assets   | Post-quantum Confidential Assets on Testnet | Planned     | End 2027    | The full protocol is implemented and independently audited                                   |
+| Confidential Assets   | Mainnet, with one-way migration             | Planned     | Mid 2028    | Testnet validation is complete and integrators are ready                                     |
+| Node and network keys | Follow the Polkadot SDK                     | Monitoring  | Ongoing     | Post-quantum support is available in the Polkadot SDK                                        |
 
-\* Target dates are indicative and subject to change without notice. They reflect our current planning and are not a commitment. Base-layer dates depend on the Polkadot SDK and on standards bodies, and move with them. We will update this page whenever a stage or target changes.
+\* Target dates are indicative and subject to change without notice. They reflect our current planning and are not a commitment. Node and network key timing depends on the Polkadot SDK and on standards bodies, and moves with them. We will update this page whenever a stage or target changes.
 
 ## Trade-offs
 
