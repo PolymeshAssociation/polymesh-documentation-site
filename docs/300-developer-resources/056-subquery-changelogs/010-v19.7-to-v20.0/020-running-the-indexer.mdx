@@ -1,0 +1,85 @@
+---
+title: SubQuery v20.0.0 - Running the Indexer
+description: What operators of the Polymesh SubQuery indexer must change for v20.0.0 - a new Postgres 18 database, new indexer and query images, no SQL migrations, and starting an index from genesis or a seeded start block.
+id: subquery-v20-running-the-indexer
+slug: /development/subquery-changelogs/v19.7-to-v20.0/running-the-indexer
+sidebar_label: Running the Indexer
+tags:
+  - migration
+  - changelog
+  - subquery
+  - indexer
+  - operations
+---
+
+This page is for operators who run their own Polymesh SubQuery indexer. If you only query someone else's, see [Schema Changes](./030-schema-changes.mdx) instead.
+
+## Summary
+
+| Area | v19.7.1 | v20.0.0 |
+| --- | --- | --- |
+| Database | Postgres 12, volume at `/var/lib/postgresql/data` | **Postgres 18**, volume at `/var/lib/postgresql` |
+| Upgrade path | SQL migrations in `db/migrations` | **None.** Create a new database and index again |
+| Indexer image | Based on `onfinality/subql-node:v6.4.6` | `@subql/node` 6.5.0 (node-core 19.4.0) on a `node:24.22.1-alpine` base, built from `docker/sq-Dockerfile` |
+| Query image | `onfinality/subql-query:v2.25.0` | `@subql/query` 2.25.0 on a `node:24.22.1-alpine` base, built from `docker/query-Dockerfile` |
+| Starting point | Genesis; a later `START_BLOCK` started empty | Genesis, or **any block, seeded from chain storage** |
+| Runtimes decoded | Positional decoding | Events, calls and storage read by name, checked against every runtime from 3.x to 8.1 |
+
+## A new database is required
+
+v20.0.0 cannot reuse or migrate a database built by an earlier release, for two reasons:
+
+- **The database is a new Postgres major version.** Postgres 18 images keep their data in a subdirectory per major version, so the volume is now mounted at `/var/lib/postgresql`, not `/var/lib/postgresql/data` ([docker-library/postgres#1259](https://github.com/docker-library/postgres/pull/1259)). An existing data volume has to be recreated.
+- **There are no SQL migrations.** `db/migrations` is gone. The node builds the schema from `schema.graphql`, and the indexer applies `db/compat.sql` on top of it.
+
+Plan the upgrade as a new deployment that runs next to the old one: index it from genesis, or seed it from a recent block, and move consumers over once it has reached the chain head. Keep the old deployment serving until then, because consumers need the new query shapes anyway.
+
+## Images and the entrypoint
+
+The upstream `onfinality/subql-node` and `onfinality/subql-query` images fall behind Node.js security releases. Both services now copy the SubQuery install out of the upstream image onto a patched Node.js base. `docker-compose.yml` builds both images from the repository: the indexer from `docker/sq-Dockerfile` and the query service from `docker/query-Dockerfile`. Each Dockerfile takes two build arguments, `NODE_IMAGE` to update Node.js and `SUBQL_NODE_IMAGE` or `SUBQL_QUERY_IMAGE` to update SubQuery.
+
+@subql/node-core 19.4.0 fixes three faults in the 19.0.0 that earlier releases ran:
+
+- It no longer keeps a fork block whose successor came from the canonical chain.
+- It rewinds an unfinalised block found to be on a fork, instead of exiting.
+- It no longer keeps every parsed dictionary query in memory. Before, a long sync through the dictionary kept growing until it crashed.
+
+The entrypoint now waits for the `db/compat.sql` step instead of racing it:
+
+- `db/compat.sql` runs once the node has built the schema. It adds generated columns and the indexes that `@index` cannot express, and it drops the indexes that neither the indexer nor any known consumer query reads. On a large database this step can take a while.
+- If the step fails, the container stops with an error instead of running without those indexes.
+- `docker stop` during this step stops both the SQL step and the node, and the container exits with code 143.
+
+## Starting an index
+
+The start block is still set with `START_BLOCK`.
+
+### From genesis
+
+`START_BLOCK=1`, or leave it unset. The genesis state is read from the chain's genesis config, including its identities, balances, claims and validators, and indexing continues from block 1. This gives the full history.
+
+### From a later block (seeded start)
+
+Set `START_BLOCK` to any later block. Before that block is indexed, the indexer seeds its entities from chain storage at the start block: identities and keys, accounts and POLYX balances, assets and their configuration, claims, authorizations and compliance, holdings, NFTs, allowances and approvals, venues and instructions in flight, corporate actions, distributions, ballots and offerings, multisigs, PIPs, subsidies and staking, and confidential assets. Balances and holdings are correct from the first indexed block, where an earlier release would have started from zero.
+
+What a seeded index cannot know:
+
+- **History before the start block.** Events, extrinsics, transfers and ledger entries begin at the start block.
+- **Totals that need that history.** Lifetime totals such as `AccountBalance.totalReceived`, and facts the chain doesn't keep, such as who created a row, are counted from the start block or left empty on seeded rows.
+
+The `IndexOrigin` entity, a single row with id `origin`, records the start block, its hash, the runtime that ran it, and a `relativeFields` list naming each `Entity.field` whose value depends on history before the start. Consumers of a seeded index should read it. Handlers that build up a value over time refuse to run over anything the seed did not cover, so the indexer stops rather than writing a total that looks complete but isn't.
+
+The RPC endpoint must be able to serve state at the start block. For anything older than the node's pruning window, that means an archive node.
+
+The seed stops if it reads a storage value its types can't decode, rather than seeding it wrong.
+
+## Checking an index
+
+The repository includes scripts that check an index against chain state on an archive node. Run them from a checkout of the release:
+
+- `scripts/check-state.ts` compares every POLYX balance, lock and hold, and every asset holding, with chain state at one block. An index is signed off when it reports nothing.
+- `scripts/reconcile-polyx.ts`, `scripts/verify-fee-payer.ts` and `scripts/inspect-account.ts` check POLYX balances and fee payers account by account.
+- `yarn verify-seed` compares a seeded index with a full index, matching rows by natural key.
+- `scripts/check-blocks.ts`, `scripts/bisect-divergence.ts` and `scripts/slow-blocks.ts` find where an index first differs from the chain, and which block ranges index slowly.
+
+While it runs, the indexer records anything it could not read or reconcile as an `IndexerAnomaly` row, with a kind, the event it came from and a detail. On a healthy index this table stays small. Look at it before you sign an index off.

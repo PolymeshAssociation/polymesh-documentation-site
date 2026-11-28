@@ -1,0 +1,506 @@
+---
+title: SubQuery v20.0.0 - Query Migration
+description: Before-and-after GraphQL queries for moving common Polymesh SubQuery lookups from v19.7.1 to v20.0.0 - provenance, POLYX history and balances, identity keys, holdings, NFTs, portfolio movements, events, agents, claims and settlement.
+id: subquery-v20-query-migration
+slug: /development/subquery-changelogs/v19.7-to-v20.0/query-migration
+sidebar_label: Query Migration
+tags:
+  - migration
+  - changelog
+  - subquery
+  - indexer
+  - graphql
+---
+
+Each section shows a common v19.7.1 query and its v20.0.0 replacement. Every v20.0.0 query on this page has been run against a v20.0.0 index of Testnet. For the full list of changes, see [Schema Changes](./030-schema-changes.mdx).
+
+## When a row was created
+
+v19.7.1 copied the block, time and event index onto each entity. v20.0.0 links to the event instead.
+
+```graphql title="v19.7.1"
+query AssetCreated($assetId: String!) {
+  assets(filter: { id: { equalTo: $assetId } }) {
+    nodes {
+      ticker
+      eventIdx
+      createdBlock {
+        blockId
+        datetime
+      }
+    }
+  }
+}
+```
+
+```graphql title="v20.0.0"
+query AssetCreated($assetId: String!) {
+  assets(filter: { id: { equalTo: $assetId } }) {
+    nodes {
+      ticker
+      createdEvent {
+        eventIdx
+        block {
+          blockId
+          datetime
+        }
+        extrinsic {
+          extrinsicIdx
+        }
+      }
+    }
+  }
+}
+```
+
+Order chronologically with `orderBy: [CREATED_EVENT_ID_ASC]` or `[CREATED_EVENT_ID_DESC]` where you used `CREATED_BLOCK_ID_*`. To find the rows created in a block, filter through the event: `createdEvent: { block: { blockId: { equalTo: 123 } } }`.
+
+## POLYX history of an account
+
+A `PolyxTransaction` row had a sender and a receiver, so an account's history needed an `or` across both. A `PolyxEntry` belongs to one account, and its sign gives the direction.
+
+```graphql title="v19.7.1"
+query PolyxHistory($address: String!) {
+  polyxTransactions(
+    filter: { or: [{ address: { equalTo: $address } }, { toAddress: { equalTo: $address } }] }
+    orderBy: [CREATED_BLOCK_ID_DESC]
+    first: 10
+  ) {
+    nodes {
+      address
+      toAddress
+      amount
+      type
+      callId
+      memo
+      datetime
+    }
+  }
+}
+```
+
+```graphql title="v20.0.0"
+query PolyxHistory($address: String!) {
+  polyxEntries(
+    filter: { accountId: { equalTo: $address } }
+    orderBy: [CREATED_EVENT_ID_DESC]
+    first: 10
+  ) {
+    nodes {
+      movementId
+      kind
+      direction
+      pool
+      amount
+      counterpartyAddress
+      freeAfter
+      memo
+      callId
+      createdEvent {
+        block {
+          blockId
+          datetime
+        }
+      }
+    }
+  }
+}
+```
+
+- `amount` is signed: negative for a debit and positive for a credit. Use `amountAbs` for the unsigned value.
+- `kind` (`Transfer`, `Fee`, `StakingReward`, `Slash`, `Hold`, `Release` and others), `direction` and `pool` replace `type: BalanceTypeEnum`.
+- Entries of one movement share `movementId`. A transfer writes a debit on the sender and a credit on the receiver.
+- Fees are entries with `kind: Fee`, charged to the account that actually paid, which may be a subsidiser.
+
+## POLYX balance of an account
+
+v19.7.1 had no balance entity. v20.0.0 keeps one per account, matched to chain balances:
+
+```graphql title="v20.0.0"
+query Balance($address: String!) {
+  accountBalance(id: $address) {
+    free
+    reserved
+    frozen
+    transferable
+    bonded
+    total
+    locks
+    holds
+  }
+}
+```
+
+`locks` and `holds` are JSON lists (`[{ lockId, amount, reasons }]` and `[{ reason, amount }]`). Add `blockHeight: "<block>"` to read the balance as it was at a past block.
+
+## Secondary keys of an identity
+
+```graphql title="v19.7.1"
+query SecondaryKeys($did: String!) {
+  identity(id: $did) {
+    secondaryAccounts {
+      nodes {
+        address
+        permissions {
+          assets
+          portfolios
+          transactions
+          transactionGroups
+        }
+      }
+    }
+  }
+}
+```
+
+```graphql title="v20.0.0"
+query SecondaryKeys($did: String!) {
+  identityKeys(
+    filter: {
+      identityId: { equalTo: $did }
+      role: { equalTo: SecondaryKey }
+      validToBlockId: { isNull: true }
+    }
+  ) {
+    nodes {
+      accountId
+      permissions
+      validFromBlock {
+        blockId
+      }
+    }
+  }
+}
+```
+
+Leave out the `validToBlockId` filter to include keys that have been removed. Leave out the `role` filter to include the primary key.
+
+## Identity history of a key
+
+`AccountHistory` is replaced by the key's `IdentityKey` rows, one per membership:
+
+```graphql title="v19.7.1"
+query KeyHistory($address: String!) {
+  accountHistories(filter: { account: { equalTo: $address } }) {
+    nodes {
+      identity
+      eventId
+      permissions
+      datetime
+    }
+  }
+}
+```
+
+```graphql title="v20.0.0"
+query KeyHistory($address: String!) {
+  identityKeys(filter: { accountId: { equalTo: $address } }, orderBy: [CREATED_EVENT_ID_ASC]) {
+    nodes {
+      identityId
+      role
+      addedReason
+      removedReason
+      validFromBlock {
+        blockId
+      }
+      validToBlock {
+        blockId
+      }
+    }
+  }
+}
+```
+
+For just the current role, read `Account.keyRole`.
+
+## Asset balances by portfolio and account
+
+`AssetHolder` is still the per-identity total, and the `assetHolders` queries keep working. `Holding` is new and gives the balance per portfolio, or per account for v8 account-level holders:
+
+```graphql title="v20.0.0"
+query PortfolioBalances($did: String!) {
+  holdings(filter: { identityId: { equalTo: $did }, amount: { greaterThan: "0" } }) {
+    nodes {
+      assetId
+      holderKind
+      portfolioId
+      accountId
+      amount
+      frozen
+    }
+  }
+}
+```
+
+## NFTs held by an identity
+
+`NftHolder` kept an array of ids per identity. v20.0.0 has one `Nft` row per token, linked to the holding it sits in:
+
+```graphql title="v19.7.1"
+query HeldNfts($did: String!, $assetId: String!) {
+  nftHolders(filter: { identityId: { equalTo: $did }, assetId: { equalTo: $assetId } }) {
+    nodes {
+      nftIds
+    }
+  }
+}
+```
+
+```graphql title="v20.0.0"
+query HeldNfts($did: String!, $assetId: String!) {
+  nfts(
+    filter: { assetId: { equalTo: $assetId }, holding: { identityId: { equalTo: $did } } }
+    orderBy: [NFT_ID_ASC]
+  ) {
+    nodes {
+      nftId
+      holding {
+        portfolioId
+        accountId
+      }
+    }
+  }
+}
+```
+
+For a count per collection, read `AssetHolder.nftCount` or `Holding.nftCount`.
+
+## Movements between an identity's own portfolios
+
+```graphql title="v19.7.1"
+query PortfolioMovements($portfolioId: String!) {
+  portfolioMovements(
+    filter: { or: [{ fromId: { equalTo: $portfolioId } }, { toId: { equalTo: $portfolioId } }] }
+    orderBy: [CREATED_BLOCK_ID_DESC]
+  ) {
+    nodes {
+      assetId
+      fromId
+      toId
+      amount
+      nftIds
+      memo
+      type
+    }
+  }
+}
+```
+
+```graphql title="v20.0.0"
+query PortfolioMovements($portfolioId: String!) {
+  assetTransactions(
+    filter: {
+      isInternalTransfer: { equalTo: true }
+      or: [{ fromPortfolioId: { equalTo: $portfolioId } }, { toPortfolioId: { equalTo: $portfolioId } }]
+    }
+    orderBy: [CREATED_EVENT_ID_DESC]
+  ) {
+    nodes {
+      assetId
+      fromPortfolioId
+      toPortfolioId
+      amount
+      nftIds
+      memo
+      createdEvent {
+        block {
+          datetime
+        }
+      }
+    }
+  }
+}
+```
+
+A fungible movement has `amount` set and `nftIds` null. An NFT movement has the opposite. This replaces `PortfolioMovementTypeEnum`.
+
+## Events that involve an asset, identity or account
+
+v19.7.1 matched on positional argument columns such as `eventArg_0`, and the column holding a given value differed from event to event. v20.0.0 files every event under what it involves, at any depth of its arguments:
+
+```graphql title="v20.0.0"
+query AssetEvents($refs: JSON!) {
+  events(filter: { refs: { contains: $refs } }, orderBy: [ID_DESC], first: 10) {
+    nodes {
+      moduleId
+      eventId
+      args
+      block {
+        blockId
+        datetime
+      }
+    }
+  }
+}
+```
+
+```json title="Variables"
+{ "refs": ["asset:0x286ee1bf0f808ac19e26f00cd35b3e33"] }
+```
+
+A ref is `kind:value`: `identity:0x…`, `account:5…`, `asset:0x…`, `ticker:ABC` or `portfolio:<did>/<number>`. Declare the variable as `JSON`, because `refs` is a JSON column.
+
+## Filtering on an event argument
+
+To match a particular argument value, filter `args` with `contains`. `args` is not indexed, so an `args` filter must come with `moduleId` and `eventId` filters, which limit the scan to that event's rows:
+
+```graphql title="v20.0.0"
+query AssetBalanceUpdates($assetId: String!) {
+  events(
+    filter: {
+      moduleId: { equalTo: asset }
+      eventId: { equalTo: AssetBalanceUpdated }
+      args: { contains: { assetId: $assetId } }
+    }
+    orderBy: [ID_DESC]
+    first: 10
+  ) {
+    nodes {
+      specVersionId
+      args
+    }
+  }
+}
+```
+
+The keys in `args` are the event's field names in the runtime that emitted it, so an event whose fields were renamed between runtimes has different keys before and after the upgrade. See [Event and call arguments](./050-data-changes.mdx#event-and-call-arguments).
+
+## Agents of an asset
+
+```graphql title="v19.7.1"
+query AgentOf($did: String!) {
+  tickerExternalAgents(filter: { callerId: { equalTo: $did } }) {
+    nodes {
+      assetId
+      datetime
+    }
+  }
+}
+```
+
+```graphql title="v20.0.0"
+query AgentOf($did: String!) {
+  assetAgents(filter: { identityId: { equalTo: $did } }) {
+    nodes {
+      assetId
+      createdEvent {
+        block {
+          datetime
+        }
+      }
+    }
+  }
+}
+```
+
+## An identity's claims
+
+```graphql title="v19.7.1"
+query Claims($did: String!) {
+  identity(id: $did) {
+    primaryAccount
+    claimsByTargetId(filter: { revokeDate: { isNull: true } }) {
+      nodes {
+        type
+        issuerId
+        scope
+        expiry
+      }
+    }
+    claimsByIssuerId {
+      totalCount
+    }
+  }
+}
+```
+
+```graphql title="v20.0.0"
+query Claims($did: String!) {
+  identity(id: $did) {
+    primaryAccountId
+    claims(filter: { revokeDate: { isNull: true } }) {
+      nodes {
+        type
+        issuerId
+        scope
+        expiry
+      }
+    }
+    claimsIssued {
+      totalCount
+    }
+  }
+}
+```
+
+`primaryAccount` is now an `Account` relation, so the address is `primaryAccountId`. The claim counts can be higher than in v19.7.1, because claims from different issuers are no longer merged. See [Claims](./050-data-changes.mdx#claims).
+
+## A settlement instruction
+
+Instruction ids are zero-padded to 10 digits, and parties, legs and affirmations link to identities, portfolios and accounts:
+
+```graphql title="v19.7.1"
+query Instruction($id: String!) {
+  instruction(id: $id) {
+    status
+    legs {
+      nodes {
+        legIndex
+        assetId
+        from
+        fromPortfolio
+        to
+        toPortfolio
+        amount
+      }
+    }
+    affirmations {
+      nodes {
+        identity
+        portfolios
+        isMediator
+        status
+      }
+    }
+  }
+}
+```
+
+```graphql title="v20.0.0"
+query Instruction($id: String!) {
+  instruction(id: $id) {
+    status
+    rejectedById
+    legs {
+      nodes {
+        legIndex
+        assetId
+        ticker
+        fromId
+        fromPortfolioId
+        toId
+        toPortfolioId
+        amount
+      }
+    }
+    affirmations {
+      nodes {
+        identityId
+        portfolioId
+        accountId
+        isMediator
+        status
+        isAutomaticallyAffirmed
+      }
+    }
+  }
+}
+```
+
+```json title="Variables"
+{ "id": "0000014958" }
+```
+
+- An affirmation is one row per holder. It is created `Pending` with the instruction, and a withdrawal sets it back to `Pending`.
+- A rejection doesn't write an affirmation. It sets `Instruction.rejectedBy` and `rejectedBySigner`.
+- An off-chain leg has a null `assetId` and its ticker in `ticker`.

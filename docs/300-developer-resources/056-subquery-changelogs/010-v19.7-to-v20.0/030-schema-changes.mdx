@@ -1,0 +1,188 @@
+---
+title: SubQuery v20.0.0 - Schema Changes
+description: Reference of every GraphQL schema change in the Polymesh SubQuery indexer from v19.7.1 to v20.0.0 - removed, renamed and new entities, field changes per entity, enum changes and renamed collections.
+id: subquery-v20-schema-changes
+slug: /development/subquery-changelogs/v19.7-to-v20.0/schema-changes
+sidebar_label: Schema Changes
+tags:
+  - migration
+  - changelog
+  - subquery
+  - indexer
+  - graphql
+---
+
+This page lists every change to the GraphQL schema between v19.7.1 and v20.0.0. For worked examples, see [Query Migration](./040-query-migration.mdx). For values that keep their field but change meaning, see [Data Changes](./050-data-changes.mdx).
+
+## How relation changes appear in GraphQL
+
+Many columns that held an id as a plain string are now relations. In the generated API, a relation field `x` returns the related entity, and its id is exposed as the scalar `xId`. Whether a query breaks depends on the column's name:
+
+- **A column that was already named `…Id` keeps working.** `Leg.assetId`, `Authorization.toId`, `Sto.raisingAssetId`, `TransferComplianceExemption.exemptedEntityId` and `AssetMandatoryMediator.identityId` are still there as scalars. The relation (`asset`, `to`, `raisingAsset`, `exemptedEntity`, `identity`) is new.
+- **A column that wasn't named `…Id` now returns an object.** For example `Leg.from`, `Identity.primaryAccount`, `TrustedClaimIssuer.issuer` and `AssetTransaction.fromAccount`. Select and filter on `fromId`, `primaryAccountId`, `issuerId` or `fromAccountId`, or select fields through the relation: `from { did }`.
+
+## Changes to every entity
+
+| Removed | Replacement |
+| --- | --- |
+| `createdBlock`, `updatedBlock` | `createdEvent { block { … } }`, `updatedEvent { block { … } }`. Append-only entities have `createdEvent` only. |
+| `datetime`, where an entity copied it | `createdEvent { block { datetime } }` |
+| `eventIdx`, where an entity copied it | `createdEvent { eventIdx }` |
+| `extrinsicIdx`, where an entity copied it | `createdEvent { extrinsic { extrinsicIdx } }` |
+| `orderBy: CREATED_BLOCK_ID_*` | `orderBy: CREATED_EVENT_ID_*`. Event ids are zero-padded `block/eventIdx`, so they sort chronologically. |
+| `Block.<entities>ByCreatedBlockId`, `Block.<entities>ByUpdatedBlockId` | Filter the entity through its event, for example `assets(filter: { createdEvent: { block: { blockId: { equalTo: 123 } } } })`. `Block.id` is the zero-padded block number, so filter on the numeric `blockId`. |
+
+Every entity that is updated in place now has both `createdEvent` and `updatedEvent`. Rows written before block 1, and rows seeded at a later start block, link to a synthetic `Event` with module `seeding` and event `Seeded`.
+
+## Removed entities
+
+| Entity | Replacement |
+| --- | --- |
+| `PolyxTransaction` | `PolyxEntry`: one signed entry per account side of each movement. Running balances are in `AccountBalance`. |
+| `PortfolioMovement` | `AssetTransaction` with `isInternalTransfer: { equalTo: true }`. Fungible and NFT movements differ in which of `amount` and `nftIds` is null. |
+| `NftHolder` | `AssetHolder` (per identity, with `nftCount`) and `Nft` (one row per token, linked to its `holding`) |
+| `AccountHistory` | `IdentityKey`: each key's membership of an identity over a block range |
+| `Permissions` | `IdentityKey.permissions` for the interval. A key's current permissions are on its active `IdentityKey` row (`validToBlockId` is null). |
+| `ChildIdentity` | None. Child identities are retired at the v8 boundary. |
+| `ClaimScope` | `Claim.scope`, filtered with `{ contains: … }` |
+| `TransferManager` | `TransferCompliance`. 5.0's transfer managers are recorded as transfer conditions. |
+| `AssetPreApproval` | `InstructionAffirmation.isAutomaticallyAffirmed` for what an instruction did. Whether a receiver must affirm is the runtime API `settlementApi.getReceiverAffirmationRequirement(receiver, assetId)`, and a pre-approval alone is the chain storage `asset.preApprovedAsset(did, assetId)`. |
+| `EvmAccountMapping` | `accounts(filter: { evmAddress: { equalTo: $h160 } })`. Whether an address is mapped is the chain storage `revive.originalAccount(h160)`. |
+| `FoundType`, `Debug` | None. Internal entities. |
+| `MediatorKey` (type) | `ConfidentialAsset.keys`, which are `ConfidentialAssetKey` rows by role |
+
+## Renamed entities
+
+| v19.7.1 | v20.0.0 | Notes |
+| --- | --- | --- |
+| `TickerExternalAgent` | `AssetAgent` | `caller` is renamed `identity`. Filter on `identityId`, not `callerId`. |
+| `TickerExternalAgentHistory` | `AssetAgentHistory` | `type` is the `AgentHistoryType` enum instead of a string. No `updatedEvent`. |
+| `TickerExternalAgentAction` | `AssetAgentAction` | `caller` is renamed `identity` |
+
+The collection queries follow: `tickerExternalAgents`, `tickerExternalAgentHistories` and `tickerExternalAgentActions` become `assetAgents`, `assetAgentHistories` and `assetAgentActions`.
+
+## New entities
+
+| Entity | What it records |
+| --- | --- |
+| `PolyxEntry` | One row per account side of each POLYX movement: signed `amount`, `amountAbs`, `pool` (`Free` or `Reserved`), `kind`, `direction`, the counterparty, and the account's free, reserved and frozen balances after it. Entries of one movement share `movementId`. |
+| `AccountBalance` | Each account's current POLYX balance (`free`, `reserved`, `frozen`, `total`, `transferable`, `bonded`), its locks and holds, and lifetime totals. Keyed by address. Query at a past block with `blockHeight`. |
+| `IdentityKey` | A key's membership of an identity: `role` (`PrimaryKey` or `SecondaryKey`), `permissions`, `validFromBlock`, `validToBlock`, and why it started and ended |
+| `Holding` | One holder's balance of one asset, at portfolio level or, for v8 account-level holders, account level (`holderKind`). Includes `frozen` and `nftCount`. |
+| `Nft` | One row per NFT, with its current `holding`, approvals, and the events that minted and burned it |
+| `NftApproval`, `NftOperatorApproval` | v8 per-token and per-collection NFT approvals |
+| `AssetAllowance` | v8 ERC-20-style spending allowances between accounts |
+| `AssetAgent`, `AssetAgentHistory`, `AssetAgentAction` | Renamed from `TickerExternalAgent*` (see above) |
+| `AssetMetadata`, `GlobalMetadataKey` | Asset metadata keys and their current values, and the chain-wide global key registry |
+| `CustomAssetType` | Registered custom asset types: id and name |
+| `CorporateAction` | Corporate actions, with record date, targets, default withholding tax and per-identity tax overrides |
+| `CorporateBallot`, `CorporateBallotVote` | Shareholder ballots and their votes |
+| `Checkpoint`, `CheckpointSchedule` | Asset checkpoints, and the schedules that create them |
+| `Era`, `ValidatorEra` | Staking eras, and each elected validator's stake, commission, blocked flag and points per era |
+| `Slash` | A stash slashed, placed against its offending validator and era |
+| `Subsidy` | Relayer subsidies (paying keys before v8), with the allowance remaining after the fees they paid |
+| `ConfidentialAssetKey` | A confidential asset's auditor and mediator keys, by role |
+| `ChainUpgrade` | Each runtime upgrade the index saw, one row per spec version |
+| `IndexOrigin` | The single row `origin`: start block, its hash and runtime, and which fields depend on history before it. See [seeded starts](./020-running-the-indexer.mdx#from-a-later-block-seeded-start). |
+| `IndexerAnomaly` | Something the indexer could not read or reconcile, with its kind, event and detail |
+
+## Field changes on existing entities
+
+The table leaves out the changes to every entity listed [above](#changes-to-every-entity), and new collections, which are listed [below](#new-collections). "Relation" means the field returns an entity. Its id is the scalar `…Id`. See [How relation changes appear in GraphQL](#how-relation-changes-appear-in-graphql).
+
+| Entity | Change |
+| --- | --- |
+| `Account` | `permissions` removed: read the active `IdentityKey`'s `permissions`. `eventId` removed. `keyRole` added (`PrimaryKey`, `SecondaryKey`, `MultiSigSigner`, `Unlinked`). |
+| `AgentGroup` | `asset` relation added |
+| `AgentGroupMembership` | `member` is an `Identity` relation: read `memberId` |
+| `Asset` | `isUniquenessRequired` removed. `assetId` and `holderCount` added. `holderCount` counts NFT collection holders too. |
+| `AssetHolder` | `nftCount` added. `AssetHolder` is now the per-identity total for fungible and NFT assets alike. |
+| `AssetMandatoryMediator` | `identity` relation added (`identityId` unchanged). `addedBy` is nullable. |
+| `AssetTransaction` | `fromAccount` and `toAccount` are `Account` relations: read `fromAccountId` and `toAccountId`. `isInternalTransfer`, `memo` and `address` added, absorbing `PortfolioMovement`. A scheduled transaction, which had a null `extrinsicIdx`, now has a null `createdEvent { extrinsic }`. |
+| `Authorization` | `to` (`Identity`) and `toAccount` (`Account`) relations. `toId` unchanged. `toKey` removed: a key's authorization is `toAccountId`, an SS58 address. |
+| `BridgeEvent` | `recipient` is an `Account` relation: read `recipientId` |
+| `Claim` | `updatedEvent` added. The id includes the issuer. See [Data Changes](./050-data-changes.mdx#claims). |
+| `ConfidentialAccount` | `account` renamed `publicKey`. `encryptionKey` is a relation: read `encryptionKeyId`. |
+| `ConfidentialAsset` | `auditors` and `mediators` removed: read `keys { role encryptionKeyId accountId }` |
+| `ConfidentialSettlement` | `assetRootBlock` is nullable |
+| `Distribution` | `corporateAction` relation added. `payments` lists its payments. |
+| `DistributionPayment` | `eventId` removed |
+| `Event` | `attributesTxt`, `eventArg_0`–`eventArg_3`, `claimType`, `claimScope`, `claimIssuer`, `claimExpiry`, `corporateActionTicker`, `fundraiserOfferingAsset` and `transferTo` removed. `args` and `refs` added. See [Data Changes](./050-data-changes.mdx#event-and-call-arguments). |
+| `EvmTransaction` | `fromAddress` removed: `fromAccount` is an `Account` relation, so read `fromAccountId` |
+| `Extrinsic` | `paramsTxt` removed. `args`, `batchFailed` and `events` added. |
+| `FundraiserTierJson` | `price`, `remaining` and `total` are decimal strings (`"123"`, not `"123n"`) |
+| `Identity` | `primaryAccount` is an `Account` relation: read `primaryAccountId`. `secondaryAccounts`, `heldNfts`, `children` and `eventId` removed. |
+| `Instruction` | `legCount`, `rejectedBy` and `rejectedBySigner` added |
+| `InstructionAffirmation` | `identity` and `account` are relations: read `identityId` and `accountId`. `portfolios` removed: one row per holder, with `portfolioId` or `accountId`. `affirmedBy` and `signer` added. |
+| `InstructionEvent` | `identity`, `portfolio` and `account` are relations: read `identityId`, `portfolioId` and `accountId`. `signer` added. |
+| `InstructionParty` | `identity` is a relation: read `identityId`. `portfolios` removed. |
+| `Investment` | `sto` relation, so `stoId` is the offering's id (`asset/number`) instead of its number. `offeringAsset` and `raisingAsset` relations (`offeringAssetId`, `raisingAssetId` unchanged). `raisingAsset` is null for an off-chain raising asset. |
+| `Leg` | `asset` is a relation and nullable: `assetId` is null for an off-chain leg, whose ticker is in `ticker`. `from` and `to` are `Identity` relations: read `fromId` and `toId`. `fromAccount`, `toAccount`, `fromPortfolio` and `toPortfolio` are relations: read their `…Id`. |
+| `MultiSig` | `address` removed: `account` is an `Account` relation, so read `accountId`. `creator` and `creatorAccount` are nullable. |
+| `MultiSigAdmin` | `identityId` removed: `admin` is an `Identity` relation, so read `adminId` |
+| `MultiSigProposal` | `creatorAccount` is an `Account` relation: read `creatorAccountId` |
+| `MultiSigSigner` | `signerAccount` relation added |
+| `OffChainReceipt` | `signer` is an `Account` relation: read `signerId` |
+| `Portfolio` | No field changes apart from the common ones |
+| `Proposal` | `balance` removed: read the chain storage `pips.deposits(pipId, proposer)`. `owner` is nullable. `snapshotId`, `skippedCount`, `executionScheduledAt`, `expiresAt` and `closedEvent` added. |
+| `ProposalVote` | `account` is an `Account` relation: read `accountId` |
+| `StakingEvent` | `stashAccount` removed: `stash` is an `Account` relation, so read `stashId`. `rewardDestinationAccount` is an `Account` relation: read `rewardDestinationAccountId`. `eraIndex` and `validator` added. |
+| `Sto` | `raisingAsset` relation (`raisingAssetId` unchanged), null for an off-chain raising asset. `tiers` amounts are decimal strings. |
+| `TransferComplianceExemption` | `exemptedEntity` relation (`exemptedEntityId` unchanged) |
+| `TrustedClaimIssuer` | `issuer` is an `Identity` relation: read `issuerId` |
+
+## Enum changes
+
+| Enum | Change |
+| --- | --- |
+| `BalanceTypeEnum` | Removed. Use `PolyxEntry.pool`, `kind` and `direction`. |
+| `PortfolioMovementTypeEnum` | Removed with `PortfolioMovement` |
+| `TransferRestrictionTypeEnum` | Removed with `TransferManager` |
+| `AffirmStatusEnum` | `Rejected` removed, `Pending` added. A rejection is `Instruction.rejectedBy`. |
+| `ClaimTypeEnum` | `InvestorUniqueness`, `InvestorUniquenessV2` and `NoData` removed. The v6.0 upgrade deleted these claims. |
+| `AuthorizationStatusEnum` | `RetryLimitReached` added |
+| `EventIdEnum`, `CallIdEnum`, `ModuleIdEnum` | Values added for v8.1 events and calls, and `seeding` / `Seeded` for the synthetic seed event |
+| New | `AccountKeyRole`, `AgentHistoryType`, `AnomalyKind`, `ConfidentialKeyRole`, `CorporateActionKind`, `EntryDirection`, `HoldReason`, `HolderKind`, `IdentityKeyRole`, `MetadataScope`, `MovementKind`, `PolyxPool`, `TargetTreatment` |
+
+## Renamed collections
+
+Collections that point at an entity used to get names generated from the column, such as `claimsByTargetId`. Where v20 declares a collection, the declared name replaces the generated one. Collections of removed entities are gone.
+
+| Entity | v19.7.1 | v20.0.0 |
+| --- | --- | --- |
+| `Identity` | `claimsByTargetId` | `claims` |
+| `Identity` | `claimsByIssuerId` | `claimsIssued` |
+| `Identity` | `assetsByOwnerId` | `assetsOwned` |
+| `Identity` | `venuesByOwnerId` | `venues` |
+| `Identity` | `portfoliosByCustodianId` | `custodiedPortfolios` |
+| `Identity` | `assetTransactionsByFromIdentityId` | `transfersOut` |
+| `Identity` | `assetTransactionsByToIdentityId` | `transfersIn` |
+| `Identity` | `distributionPaymentsByTargetId` | `distributionPayments` |
+| `Identity` | `investmentsByInvestorId` | `investments` |
+| `Identity` | `stosByCreatorId` | `offeringsCreated` |
+| `Identity` | `confidentialAccountsByCreatorId` | `confidentialAccounts` |
+| `Identity` | `confidentialAssetsByCreatorId` | `confidentialAssets` |
+| `Identity` | `secondaryAccounts` | `keys`, filtered to `role: SecondaryKey` and `validToBlockId: { isNull: true }` |
+| `Identity` | `tickerExternalAgentsByCallerId` | `agentOf` |
+| `Asset` | `assetTransactions` | `transactions` |
+| `Asset` | `stosByOfferingAssetId` | `offerings` |
+| `Asset` | `tickerExternalAgents`, `tickerExternalAgentHistories`, `tickerExternalAgentActions` | `agents`, `agentHistory`, `agentActions` |
+| `Portfolio` | `assetTransactionsByFromPortfolioId` | `transfersOut` |
+| `Portfolio` | `assetTransactionsByToPortfolioId` | `transfersIn` |
+| `Instruction` | `assetTransactions` | `transfers` |
+| `Distribution` | `distributionPayments` | `payments` |
+| `Venue` | `stos` | `offerings` |
+
+## New collections
+
+- **`Account`:** `keyAssignments`, `holdings`, `legsOut`, `legsIn`, `transfersOut`, `transfersIn`, `polyxEntries`, `stakingEvents`, `validatorEras`, `validatorSlashes`, `authorizationsReceived`, `signerOf`, `subsidiesPaid`, `subsidiesReceived`, `allowancesGranted`, `allowancesReceived`, `nftApprovalsGranted`, `nftApprovalsReceived`, `nftOperatorApprovalsGranted`, `nftOperatorApprovalsReceived`
+- **`Identity`:** `keys`, `holdings`, `instructionParties`, `authorizationsReceived`, `agentGroups`, `polyxEntries`, `distributions`
+- **`Asset`:** `holdings`, `nfts`, `metadata`, `distributions`, `corporateActions`, `checkpoints`, `checkpointSchedules`, `ballots`, `statTypes`, `transferCompliances`, `transferComplianceExemptions`, `agentGroups`, `fundings`, `allowances`, `nftApprovals`, `nftOperatorApprovals`
+- **`Portfolio`:** `holdings`, `legsOut`, `legsIn`
+- **`AssetHolder`:** `holdings`
+- **`Leg`:** `offChainReceipts`
+- **`Sto`:** `investments`
+- **`Extrinsic`:** `events`
+- **`ConfidentialAccount`:** `mediatorOf`
+- **`ConfidentialAsset`:** `keys`
+- **`ConfidentialEncryptionKey`:** `accounts`, `assetRoles`

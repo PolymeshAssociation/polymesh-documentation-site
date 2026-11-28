@@ -1,0 +1,24 @@
+---
+title: SubQuery Changelogs
+description: Changelogs for the Polymesh SubQuery indexer, covering GraphQL schema changes, data changes, and upgrade guidance for consumers and operators.
+id: subquery-changelogs-index
+slug: /development/subquery-changelogs
+sidebar_label: SubQuery Changelogs
+tags:
+  - changelog
+  - migration
+  - subquery
+  - indexer
+---
+
+# SubQuery Changelogs
+
+These changelogs document changes to the [Polymesh SubQuery indexer](/development/tooling/subquery) that its users have to act on: entities and fields that are renamed or removed, values whose meaning or encoding changes, and what an operator must do to upgrade a deployment. They are written for anyone who queries the indexer's GraphQL API directly and for anyone who runs their own indexer.
+
+If you only reach the indexer through the [Polymesh SDK](/sdk-docs/) or the [REST API](/development/tooling/rest-api), upgrade them to a release that supports the indexer version you connect to. Their own changelogs cover any change to their API.
+
+Routine releases, such as bug fixes and new chain support that leave the schema compatible, are described only in the [GitHub release notes](https://github.com/PolymeshAssociation/polymesh-subquery/releases). A release gets a page here when it breaks the schema or needs operators to do something.
+
+## Releases
+
+- **[v19.7.1 → v20.0.0](./v19.7-to-v20.0/)**: the indexer redesign. Every entity records the event that created and last updated it. POLYX is a double-entry ledger matched to chain balances. Asset holdings are kept at portfolio and account level, with one row per NFT. Identity keys are time-bounded memberships. Corporate actions, checkpoints, ballots, eras, validators and slashes are newly indexed. An index can start from any block. This release breaks the schema in many places and needs a new database, indexed again from genesis or seeded at a start block.

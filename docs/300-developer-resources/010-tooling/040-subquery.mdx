@@ -59,6 +59,10 @@ query holdersByAsset {
 
 _Note: The actual query structure depends on the specific schema version deployed._
 
+## Changelogs
+
+Breaking changes to the GraphQL schema, and what operators must do to upgrade, are documented in the [SubQuery Changelogs](/development/subquery-changelogs). Indexer v20.0.0 is a redesign that changes the schema in many places. If you query the indexer directly, read [v19.7.1 → v20.0.0](/development/subquery-changelogs/v19.7-to-v20.0) before upgrading.
+
 ## Running Locally
 
 The SubQuery indexer and its GraphQL endpoint are included in the [**Polymesh Local Development Environment**](/development/tooling/local-setup). Follow that guide to easily run the complete stack, including the indexer service (`subquery-node`) and the GraphQL server (`subquery-graphql`), typically available at `http://localhost:3000`.
